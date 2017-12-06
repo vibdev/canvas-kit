@@ -1,6 +1,6 @@
-# Canvas Kit CSS
+# Canvas Kit React
 
-This project provides css files to style canvas-kit HTML components.
+This project provides Canvas-styled React components.
 
 ## Getting Started
 
@@ -15,15 +15,11 @@ This project provides css files to style canvas-kit HTML components.
 
 1. Run `npm run create-module`
 2. Enter in a module name, description and author
-3. (optional) Add any required dependencies on other modules (comes with `canvas-kit-core` by default)
+3. (optional) Add any required dependencies on other modules
 4. (optional) If you added any extra dependencies, run `lerna bootstrap`
 5. Start Storybook `npm start`
 6. Navigate to [http://localhost:9001/](http://localhost:9001/) and find your new module's story
-5. Begin adding your SCSS in `modules/canvas-kit-<NAME>/lib/<NAME>.scss`
-
-**Note:** You can add additional SCSS files in lib - just add an extra import for each one in `modules/canvas-kit-<NAME>/index.scss`
-
-**Note:** If you need to add assets, simply add an assets folder to `modules/canvas-kit-<NAME>` and put them there. You can then reference them there and they'll load in storybook automatically
+5. Begin editing your new React componenet in `modules/canvas-kit-<NAME>/index.js`!
 
 
 ## Building modules
