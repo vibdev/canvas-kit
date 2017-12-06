@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "main": "./modules/canvas-kit/build/build.js",
+  "devDependencies": {
+    "@storybook/react": "^3.2.13",
+    "@workday/canvas-kit-build": "^1.3.0",
+    "commitizen": "^2.9.6",
+    "css-loader": "^0.28.7",
+    "cz-conventional-changelog": "^2.1.0",
+    "file-loader": "^1.1.5",
+    "lerna": "^2.4.0",
+    "node-fetch": "^1.7.3",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.8",
+    "raw-loader": "^0.5.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-svg": "^2.1.22",
+    "sass-loader": "^6.0.6",
+    "storybook-readme": "^3.0.6",
+    "style-loader": "^0.19.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "publish": "npm run build-storybook && npm run lerna-publish",
+    "create-module": "./create-module.sh",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "lerna-publish": "lerna publish --exact --skip-npm --conventional-commits",
+    "build-storybook": "build-storybook -c .storybook -o docs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
