@@ -24,9 +24,8 @@ This project provides Canvas-styled React components.
 
 ## Building modules
 
-1. Ensure [https://ghe.megaleo.com/design/canvas-kit-build](canvas-kit-build) is installed (`npm link @workday/canvas-kit-build`)
-2. Lerna bootstrap `npm run bootstrap`
-3. Lerna build `npm run build`
+1. Lerna bootstrap `npm run bootstrap`
+2. Lerna build `npm run build`
 
 
 ## Building kit
