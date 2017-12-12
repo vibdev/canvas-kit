@@ -3,6 +3,9 @@
   "main": "./modules/canvas-kit/build/build.js",
   "devDependencies": {
     "@storybook/react": "^3.2.13",
+    "@types/node": "^8.0.58",
+    "@types/react": "^16.0.29",
+    "@types/react-dom": "^16.0.3",
     "@workday/canvas-kit-build": "^1.3.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
@@ -19,6 +22,8 @@
     "sass-loader": "^6.0.6",
     "storybook-readme": "^3.0.6",
     "style-loader": "^0.19.0",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
     "validate-commit-msg": "^2.14.0"
   },
   "scripts": {
