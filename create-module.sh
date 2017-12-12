@@ -40,7 +40,7 @@ packageJson="$path/package.json"
 echo -e "Creating ${CYAN}$packageJson${NC}"
 cat > $packageJson << EOF
 {
-  "name": "canvas-kit-$name",
+  "name": "@workday/canvas-kit-react-$name",
   "version": "1.0.0",
   "description": "$description",
   "homepage": "https://workdaydesign.com",
@@ -51,9 +51,6 @@ cat > $packageJson << EOF
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
-  },
-  "dependencies": {
-    "canvas-kit-core": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
