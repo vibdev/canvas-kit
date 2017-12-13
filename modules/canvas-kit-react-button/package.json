@@ -5,8 +5,7 @@
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
-  "style": "build/build.js",
-  "main": "build/index.js",
+  "main": "index.tsx",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button"
@@ -15,5 +14,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "primer-module-build index.scss"
   },
-  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"]
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
+  "dependencies": {
+    "@workday/canvas-kit-react-core": "^1.0.0",
+    "glamorous": "^4.11.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }

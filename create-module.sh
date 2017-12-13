@@ -46,8 +46,7 @@ cat > $packageJson << EOF
   "homepage": "https://workdaydesign.com",
   "author": "$author",
   "license": "Apache-2.0",
-  "style": "build/build.js",
-  "main": "build/index.js",
+  "main": "index.tsx",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
