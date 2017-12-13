@@ -63,7 +63,12 @@ cat > $packageJson << EOF
     "components",
     "workday",
     "$name"
-  ]
+  ],
+  "dependencies": {
+    "glamorous": "^4.11.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
 EOF
 
@@ -71,7 +76,7 @@ EOF
 indexTsx="$path/index.tsx"
 echo -e "Creating ${CYAN}$indexTsx${NC}"
 cat > $indexTsx << EOF
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class MyComponent extends Component<{}, {}> {
   public render() {
