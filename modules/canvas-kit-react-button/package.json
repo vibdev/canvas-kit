@@ -6,6 +6,7 @@
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
   "main": "index.tsx",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button"
