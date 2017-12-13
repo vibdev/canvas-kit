@@ -17,9 +17,9 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Get module name
-read -p "Module name (canvas-kit-<NAME>): " name
+read -p "Module name (@workday/canvas-kit-react-<NAME>): " name
 
-path="./modules/canvas-kit-$name"
+path="./modules/canvas-kit-react-$name"
 
 if [ -d "$path" ]; then
 	echo -e "${RED}Module with name 'canvas-kit-$name' already exists."
@@ -40,7 +40,7 @@ packageJson="$path/package.json"
 echo -e "Creating ${CYAN}$packageJson${NC}"
 cat > $packageJson << EOF
 {
-  "name": "canvas-kit-$name",
+  "name": "@workday/canvas-kit-react-$name",
   "version": "1.0.0",
   "description": "$description",
   "homepage": "https://workdaydesign.com",
@@ -51,9 +51,6 @@ cat > $packageJson << EOF
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
-  },
-  "dependencies": {
-    "canvas-kit-core": "^1.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -70,16 +67,33 @@ cat > $packageJson << EOF
 }
 EOF
 
-# TODO: Add react files
+# Create index.tsx
+indexTsx="$path/index.tsx"
+echo -e "Creating ${CYAN}$indexTsx${NC}"
+cat > $indexTsx << EOF
+import React, { Component } from 'react';
 
-# Create stories.js
-storiesJs="$path/stories.js"
+export default class MyComponent extends Component<{}, {}> {
+  public render() {
+    return (
+      <div>
+        MyComponent
+      </div>
+    );
+  }
+}
+
+EOF
+
+# Create stories.tsx
+storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
+
+import MyComponent from './index.tsx'
 import README from './README.md';
 
 storiesOf('Canvas Kit/$upperName', module)
@@ -87,6 +101,7 @@ storiesOf('Canvas Kit/$upperName', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">$upperName</h1>
+			<MyComponent></MyComponent>
     </div>
   ));
 

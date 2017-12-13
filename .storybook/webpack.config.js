@@ -1,10 +1,16 @@
-const path = require('path');
+const path = require('path')
 
 const modulesPath = path.resolve(__dirname, "../modules")
 
 module.exports = {
   module: {
     rules: [{
+      test: /\.tsx?$/,
+      exclude: /node_modules/,
+      include: modulesPath,
+      loader: 'ts-loader'
+    },
+    {
       test: /\.scss$/,
       include: modulesPath,
       use: [{
