@@ -1,4 +1,4 @@
-const colors = {
+var colors = {
   "cinnamon600": "#a31c12",
   "cinnamon500": "#de2e21",
   "cinnamon400": "#ff5447",
@@ -155,12 +155,39 @@ const colors = {
   "frenchVanilla300": "#d4d4d4",
   "frenchVanilla200": "#ebebeb",
   "frenchVanilla100": "#ffffff",
-  "blackPepper600": "#000000",
-  "blackPepper500": "#1f1f1f",
-  "blackPepper400": "#333333",
-  "blackPepper300": "#4a4a4a",
-  "blackPepper200": "#616161",
-  "blackPepper100": "#787878",
+  "black-pepper600": "#000000",
+  "black-pepper500": "#1f1f1f",
+  "black-pepper400": "#333333",
+  "black-pepper300": "#4a4a4a",
+  "black-pepper200": "#616161",
+  "black-pepper100": "#787878",
+
+  "gradients": {
+    "cinnamon": "linear-gradient(to bottom right,#de2e21,#ff5447);",
+    "peach": "linear-gradient(to bottom right,#de4721,#ff643d);",
+    "chiliMango": "linear-gradient(to bottom right,#e86915,#ff8b3d);",
+    "cantaloupe": "linear-gradient(to bottom right,#f28900,#ffa126);",
+    "sourLemon": "linear-gradient(to bottom right,#e6b000,#f7c41b);",
+    "juicyPear": "linear-gradient(to bottom right,#8ea619,#a8c225);",
+    "kiwi": "linear-gradient(to bottom right,#569633,#71c246);",
+    "greenApple": "linear-gradient(to bottom right,#329c4c,#43c463);",
+    "watermelon": "linear-gradient(to bottom right,#0c7a5b,#12a67c);",
+    "jewel": "linear-gradient(to bottom right,#1b818c,#1ea4b3);",
+    "toothpaste": "linear-gradient(to bottom right,#028fba,#0da9d9);",
+    "blueberry": "linear-gradient(to bottom right,#005dba,#0b77e3);",
+    "plum": "linear-gradient(to bottom right,#3266ab,#3881e0);",
+    "berrySmoothie": "linear-gradient(to bottom right,#4b5eb3,#5e77e6);",
+    "blackberry": "linear-gradient(to bottom right,#423fcc,#5c5ae6);",
+    "islandPunch": "linear-gradient(to bottom right,#6445a1,#8660d1);",
+    "grapeSoda": "linear-gradient(to bottom right,#97499e,#c860d1);",
+    "pomegranate": "linear-gradient(to bottom right,#c70650,#f21167);",
+    "fruitPunch": "linear-gradient(to bottom right,#e02f2f,#ff4c4c);",
+    "rootBeer": "linear-gradient(to bottom right,#664d42,#8c7266);",
+    "toastedMarshmallow": "linear-gradient(to bottom right,#b37f10,#cc9e3b);",
+    "cappuccino": "linear-gradient(to bottom right,#4a4242,#5e5757);",
+    "licorice": "linear-gradient(to bottom right,#3f4e59,#53636e);",
+    "blackPepper": "linear-gradient(to bottom right,#333333,#4a4a4a);",
+  }
 }
 
 export default colors
