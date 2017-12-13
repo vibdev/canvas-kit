@@ -52,8 +52,7 @@ cat > $packageJson << EOF
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "primer-module-build index.scss"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "canvas",
