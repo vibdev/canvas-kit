@@ -15,12 +15,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "primer-module-build index.scss"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "button"
-  ]
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"]
 }
