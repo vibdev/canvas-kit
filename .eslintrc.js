@@ -1,3 +1,4 @@
+const path = require('path')
 const pkgJson = require(__dirname + '/package.json')
 
 function getCoreModules() {
@@ -8,12 +9,18 @@ function getCoreModules() {
 
 module.exports = {
   parser: 'typescript-eslint-parser',
-  extends: 'airbnb',
-  plugins: ['import', 'jsx-a11y', 'react'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  extends: ['airbnb'],
+  plugins: ['jsx-a11y', 'react'],
   rules: {
     quotes: ['error', 'single'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
     semi: ['error', 'never'],
+    'import/extensions': ['never', { tsx: 'never', ts: 'never' }],
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
@@ -23,7 +30,9 @@ module.exports = {
     },
     'import/resolver': {
       node: true,
-      'eslint-import-resolver-typescript': true,
+      [require.resolve('eslint-import-resolver-typescript')]: {
+        extensions: ['.ts', '.tsx'],
+      },
     },
   },
 }

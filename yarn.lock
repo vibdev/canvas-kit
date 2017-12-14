@@ -2962,6 +2962,12 @@ eslint-import-resolver-node@^0.3.1:
     debug "^2.6.8"
     resolve "^1.2.0"
 
+eslint-import-resolver-typescript@^1.0.2:
+  version "1.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-1.0.2.tgz#d910270459668c92c4673d0cf74c08d763ad5c98"
+  dependencies:
+    resolve "^1.4.0"
+
 eslint-loader@^1.9.0:
   version "1.9.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/eslint-loader/-/eslint-loader-1.9.0.tgz#7e1be9feddca328d3dcfaef1ad49d5beffe83a13"
@@ -6669,7 +6675,7 @@ resolve-from@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/resolve-from/-/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
 
-resolve@^1.1.6, resolve@^1.2.0:
+resolve@^1.1.6, resolve@^1.2.0, resolve@^1.4.0:
   version "1.5.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:

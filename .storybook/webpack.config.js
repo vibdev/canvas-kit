@@ -3,11 +3,15 @@ const path = require('path')
 const modulesPath = path.resolve(__dirname, '../modules')
 
 module.exports = {
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   module: {
     rules: [
       {
         enforce: 'pre',
-        test: /\.(js?x|ts?x)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         include: modulesPath,
         loader: 'eslint-loader',
