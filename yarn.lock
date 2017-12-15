@@ -3634,7 +3634,7 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.9.7:
+glamorous@^4.11.0, glamorous@^4.9.7:
   version "4.11.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.11.0.tgz#cb846dda1450c895c59a34060fb19e3251ed619f"
   dependencies:
