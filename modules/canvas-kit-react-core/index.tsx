@@ -1,4 +1,4 @@
-import colors from './lib/colors.tsx'
+import colors from './lib/colors'
 
 const canvas = {
   colors,
