@@ -44,3 +44,31 @@ This project provides Canvas-styled React components.
 6. Create a new git commit and tag for the new version.
 
 For more information on lerna publishing, please see the [lerna publish docs](https://github.com/lerna/lerna#publish).
+
+
+## Code Style Guide
+This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), with a few exceptions. Rules are enforced using [ESLint](https://eslint.org) and code formatting is provided through [Prettier](prettier.io). [prettier-eslint](https://github.com/prettier/prettier-eslint) is used to integrate ESLint and Prettier.
+
+To lint using ESLint, use `npm run lint`. To format and lint your code (careful - this can rewrite files), use `npm run format`.
+
+Code formatting will occur automatically before `git commit` for files staged using `git add`.
+
+### Editors
+Install the Prettier/ESLint plugins for your respective editors for quicker and easier formatting.
+
+**Note:** Ensure that the package has support for `prettier-eslint`
+
+#### Visual Studio Code
+Download [prettier-vscode]((https://github.com/prettier/prettier-vscode))
+
+Add the following options:
+- [prettier-eslint integration](https://github.com/prettier/prettier-vscode#prettiereslintintegration-default-false---javascript-and-typescript-only)
+
+Consider adding the following options:
+- [Format on save](https://github.com/prettier/prettier-vscode#format-on-save)
+
+#### Atom
+Download [prettier-atom](https://github.com/prettier/prettier-atom))
+
+#### Other Editors
+Check [Prettier documentation](https://prettier.io/docs/en/editors.html) for additional editors.

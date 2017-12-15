@@ -10,11 +10,21 @@
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-typescript": "^1.0.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.5",
+    "husky": "^0.14.3",
     "lerna": "^2.4.0",
+    "lint-staged": "^6.0.0",
     "node-fetch": "^1.7.3",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.8",
+    "prettier-eslint": "^8.3.1",
+    "prettier-eslint-cli": "^4.6.1",
     "raw-loader": "^0.5.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -24,22 +34,34 @@
     "style-loader": "^0.19.0",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",
+    "typescript-eslint-parser": "^11.0.0",
     "validate-commit-msg": "^2.14.0"
   },
+  "dependencies": {},
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "publish": "npm run build-storybook && npm run lerna-publish",
     "create-module": "./create-module.sh",
+    "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
     "lerna-publish": "lerna publish --exact --skip-npm --conventional-commits",
-    "build-storybook": "build-storybook -c .storybook -o docs"
+    "build-storybook": "build-storybook -c .storybook -o docs",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier-eslint \"**/*.{js,jsx,json,ts,tsx,css,scss}\" --write"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,ts,tsx,css,scss}": ["prettier-eslint --write", "git add"]
   }
 }
