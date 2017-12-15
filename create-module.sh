@@ -46,15 +46,13 @@ cat > $packageJson << EOF
   "homepage": "https://workdaydesign.com",
   "author": "$author",
   "license": "Apache-2.0",
-  "style": "build/build.js",
-  "main": "build/index.js",
+  "main": "index.tsx",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "primer-module-build index.scss"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "canvas",
@@ -63,7 +61,12 @@ cat > $packageJson << EOF
     "components",
     "workday",
     "$name"
-  ]
+  ],
+  "dependencies": {
+    "glamorous": "^4.11.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
 EOF
 
@@ -71,7 +74,7 @@ EOF
 indexTsx="$path/index.tsx"
 echo -e "Creating ${CYAN}$indexTsx${NC}"
 cat > $indexTsx << EOF
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class MyComponent extends Component<{}, {}> {
   public render() {
