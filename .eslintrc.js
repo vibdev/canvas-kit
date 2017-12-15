@@ -15,12 +15,12 @@ module.exports = {
     },
   },
   extends: ['airbnb'],
-  plugins: ['jsx-a11y', 'react'],
+  plugins: ['jsx-a11y', 'react', 'import'],
   rules: {
     quotes: ['error', 'single'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.tsx'] }],
     semi: ['error', 'never'],
-    'import/extensions': ['never', { tsx: 'never', ts: 'never' }],
+    'import/extensions': ['error', 'never', { tsx: 'never', ts: 'never' }],
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
