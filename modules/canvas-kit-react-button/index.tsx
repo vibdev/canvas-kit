@@ -7,6 +7,4 @@ const MyButton = glamorous.button({
   color: canvas.colors.frenchVanilla100,
 })
 
-export default function () {
-  return <MyButton>Hello World</MyButton>
-}
+export default () => <MyButton>Hello World</MyButton>
