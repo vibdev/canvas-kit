@@ -164,30 +164,30 @@ const colors = {
 }
 
 const gradients = {
-  cinnamon: 'linear-gradient(to bottom right,#de2e21,#ff5447);',
-  peach: 'linear-gradient(to bottom right,#de4721,#ff643d);',
-  chiliMango: 'linear-gradient(to bottom right,#e86915,#ff8b3d);',
-  cantaloupe: 'linear-gradient(to bottom right,#f28900,#ffa126);',
-  sourLemon: 'linear-gradient(to bottom right,#e6b000,#f7c41b);',
-  juicyPear: 'linear-gradient(to bottom right,#8ea619,#a8c225);',
-  kiwi: 'linear-gradient(to bottom right,#569633,#71c246);',
-  greenApple: 'linear-gradient(to bottom right,#329c4c,#43c463);',
-  watermelon: 'linear-gradient(to bottom right,#0c7a5b,#12a67c);',
-  jewel: 'linear-gradient(to bottom right,#1b818c,#1ea4b3);',
-  toothpaste: 'linear-gradient(to bottom right,#028fba,#0da9d9);',
-  blueberry: 'linear-gradient(to bottom right,#005dba,#0b77e3);',
-  plum: 'linear-gradient(to bottom right,#3266ab,#3881e0);',
-  berrySmoothie: 'linear-gradient(to bottom right,#4b5eb3,#5e77e6);',
-  blackberry: 'linear-gradient(to bottom right,#423fcc,#5c5ae6);',
-  islandPunch: 'linear-gradient(to bottom right,#6445a1,#8660d1);',
-  grapeSoda: 'linear-gradient(to bottom right,#97499e,#c860d1);',
-  pomegranate: 'linear-gradient(to bottom right,#c70650,#f21167);',
-  fruitPunch: 'linear-gradient(to bottom right,#e02f2f,#ff4c4c);',
-  rootBeer: 'linear-gradient(to bottom right,#664d42,#8c7266);',
-  toastedMarshmallow: 'linear-gradient(to bottom right,#b37f10,#cc9e3b);',
-  cappuccino: 'linear-gradient(to bottom right,#4a4242,#5e5757);',
-  licorice: 'linear-gradient(to bottom right,#3f4e59,#53636e);',
-  blackPepper: 'linear-gradient(to bottom right,#333333,#4a4a4a);',
+  cinnamon: `linear-gradient(to bottom right,${colors.cinnamon500},${colors.cinnamon400})`,
+  peach: `linear-gradient(to bottom right,${colors.peach500},${colors.peach400})`,
+  chiliMango: `linear-gradient(to bottom right,${colors.chiliMango500},${colors.chiliMango400})`,
+  cantaloupe: `linear-gradient(to bottom right,${colors.cantaloupe500},${colors.cantaloupe400})`,
+  sourLemon: `linear-gradient(to bottom right,${colors.sourLemon500},${colors.sourLemon400})`,
+  juicyPear: `linear-gradient(to bottom right,${colors.juicyPear500},${colors.juicyPear400})`,
+  kiwi: `linear-gradient(to bottom right,${colors.kiwi500},${colors.kiwi400})`,
+  greenApple: `linear-gradient(to bottom right,${colors.greenApple500},${colors.greenApple400})`,
+  watermelon: `linear-gradient(to bottom right,${colors.watermelon500},${colors.watermelon400})`,
+  jewel: `linear-gradient(to bottom right,${colors.jewel500},${colors.jewel400})`,
+  toothpaste: `linear-gradient(to bottom right,${colors.toothpaste500},${colors.toothpaste400})`,
+  blueberry: `linear-gradient(to bottom right,${colors.blueberry500},${colors.blueberry400})`,
+  plum: `linear-gradient(to bottom right,${colors.plum500},${colors.plum400})`,
+  berrySmoothie: `linear-gradient(to bottom right,${colors.berrySmoothie500},${colors.berrySmoothie400})`,
+  blackberry: `linear-gradient(to bottom right,${colors.blackberry500},${colors.blackberry400})`,
+  islandPunch: `linear-gradient(to bottom right,${colors.islandPunch500},${colors.islandPunch400})`,
+  grapeSoda: `linear-gradient(to bottom right,${colors.grapeSoda500},${colors.grapeSoda400})`,
+  pomegranate: `linear-gradient(to bottom right,${colors.pomegranate500},${colors.pomegranate400})`,
+  fruitPunch: `linear-gradient(to bottom right,${colors.fruitPunch500},${colors.fruitPunch400})`,
+  rootBeer: `linear-gradient(to bottom right,${colors.rootBeer600},${colors.rootBeer500})`,
+  toastedMarshmallow: `linear-gradient(to bottom right,${colors.toastedMarshmallow500},${colors.toastedMarshmallow400})`,
+  cappuccino: `linear-gradient(to bottom right,${colors.cappuccino400},${colors.cappuccino300})`,
+  licorice: `linear-gradient(to bottom right,${colors.licorice500},${colors.licorice400})`,
+  blackPepper: `linear-gradient(to bottom right,${colors.blackPepper400},${colors.blackPepper300})`,
 }
 
 const primary = {
@@ -214,4 +214,7 @@ const primary = {
   error: colors.cinnamon500,
 }
 
-export default Object.assign(colors, { primary, gradients })
+export default Object.assign(colors, {
+  gradients,
+  primary,
+})

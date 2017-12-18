@@ -10,12 +10,5 @@
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "core"
-  ]
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "core"]
 }
