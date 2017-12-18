@@ -6,7 +6,7 @@
     "@types/node": "^8.0.58",
     "@types/react": "^16.0.29",
     "@types/react-dom": "^16.0.3",
-    "@workday/canvas-kit-build": "^1.3.0",
+    "@workday/canvas-kit-build": "^2.1.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",

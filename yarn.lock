@@ -164,14 +164,15 @@
   version "16.0.18"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.18.tgz#c08eea79ada55bf10b5353e18c21797dd17afa23"
 
-"@workday/canvas-kit-build@^1.3.0":
-  version "1.3.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-1.3.0.tgz#c45e6b70ca3c92eeb1eeff1501163485decdb22c"
+"@workday/canvas-kit-build@^2.1.0":
+  version "2.0.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.0.3.tgz#0e92c3707ca9b8d5907b21f4c36a00c4eba7a218"
   dependencies:
     autoprefixer "^7.1.5"
     css-mqpacker "^6.0.1"
     cssstats "^3.1.0"
     meow "^3.7.0"
+    node-run-cmd "^1.0.1"
     node-sass "^4.5.3"
     postcss "^6.0.13"
     postcss-banner "^3.0.0"
@@ -5280,6 +5281,10 @@ node-pre-gyp@^0.6.36:
     semver "^5.3.0"
     tar "^2.2.1"
     tar-pack "^3.4.0"
+
+node-run-cmd@^1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-run-cmd/-/node-run-cmd-1.0.1.tgz#1755c12624bdff920d8f45242d6642e214a3d400"
 
 node-sass@^4.5.3:
   version "4.5.3"

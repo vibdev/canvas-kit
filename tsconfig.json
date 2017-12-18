@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "target": "es2015",
+    "module": "AMD",
+    "target": "es5",
     "noImplicitAny": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "moduleResolution": "node",
     "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["es2015", "es2016", "dom"]
-  }
+  },
+  "exclude": ["node_modules"]
 }
