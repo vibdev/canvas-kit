@@ -117,6 +117,15 @@ cat > $readme << EOF
 # Canvas Kit $upperName
 EOF
 
+# Create tsconfig.json
+tsconfig="$path/tsconfig.json"
+echo -e "Creating ${CYAN}$readme${NC}"
+cat > $readme << EOF
+{
+  "extends": "../../tsconfig.json"
+}
+EOF
+
 # Bootstrap Lerna
 echo -e "\nInstalling dependencies\n"
 `lerna bootstrap`
