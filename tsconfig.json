@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "module": "AMD",
+    "module": "es2015",
     "target": "es5",
     "noImplicitAny": false,
-    "sourceMap": true,
     "moduleResolution": "node",
     "jsx": "react",
     "allowJs": true,
