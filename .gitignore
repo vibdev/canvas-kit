@@ -11,3 +11,4 @@ lerna-debug.log*
 
 # build
 modules/*/build
+modules/*/ts-tmp
