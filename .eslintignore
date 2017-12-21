@@ -1,1 +1,2 @@
-modules/**/build/*
+modules/**/dist/*
+modules/**/ts-tmp/*

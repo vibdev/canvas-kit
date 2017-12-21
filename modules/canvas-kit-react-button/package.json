@@ -5,7 +5,7 @@
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
-  "main": "index.tsx",
+  "main": "dist/index.js",
   "private": true,
   "repository": {
     "type": "git",
