@@ -5,14 +5,15 @@
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
-  "main": "index.tsx",
+  "main": "dist/index.js",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "canvas-kit-build build-ts index.tsx"
   },
   "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
   "dependencies": {
