@@ -134,7 +134,7 @@ timestamps {
           stage('Build Storybook') {
             dir(repoBaseDir) {
               try{
-                sh('git rm -rf docs/')
+               //sh('git rm -rf docs/')
                 sh ('yarn run build-storybook')
                 withCredentials([file(credentialsId: 'ux-infra-jenkins-ssh', variable: 'SSH_KEY')]) {
                   sh('mkdir -p ~/.ssh; mv $SSH_KEY ~/.ssh/id_rsa; chmod 600 ~/.ssh/id_rsa; ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub')
