@@ -9,5 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "lib": ["es2015", "es2016", "dom"]
   },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
   "exclude": ["node_modules", "modules/**/build/*", "modules/**/ts-tmp/*"]
 }
