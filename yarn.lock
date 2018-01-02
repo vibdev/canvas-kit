@@ -164,15 +164,14 @@
   version "16.0.18"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.18.tgz#c08eea79ada55bf10b5353e18c21797dd17afa23"
 
-"@workday/canvas-kit-build@^2.1.0":
-  version "2.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.1.0.tgz#9345d003bc66f03b5836ec850fa5395f18b144eb"
+"@workday/canvas-kit-build@^2.1.6":
+  version "2.1.6"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.1.6.tgz#0fd5b6e94e8bc35239587cc516419fb9f3449c91"
   dependencies:
     autoprefixer "^7.1.5"
     css-mqpacker "^6.0.1"
     cssstats "^3.1.0"
     meow "^3.7.0"
-    node-run-cmd "^1.0.1"
     node-sass "^4.5.3"
     node-walkup "^1.1.1"
     postcss "^6.0.13"
@@ -180,6 +179,9 @@
     postcss-discard-duplicates "^2.1.0"
     postcss-inline-svg "^3.0.0"
     postcss-url "^7.1.2"
+    rimraf "^2.6.2"
+    rollup "^0.52.3"
+    shelljs "^0.7.8"
     typescript "^2.6.2"
     uglify-js "^3.2.2"
 
@@ -5289,10 +5291,6 @@ node-pre-gyp@^0.6.36:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-run-cmd@^1.0.1:
-  version "1.0.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-run-cmd/-/node-run-cmd-1.0.1.tgz#1755c12624bdff920d8f45242d6642e214a3d400"
-
 node-sass@^4.5.3:
   version "4.5.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
@@ -6733,7 +6731,7 @@ right-pad@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/right-pad/-/right-pad-1.0.1.tgz#8ca08c2cbb5b55e74dafa96bf7fd1a27d568c8d0"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
@@ -6745,6 +6743,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^2.0.0"
     inherits "^2.0.1"
+
+rollup@^0.52.3:
+  version "0.52.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/rollup/-/rollup-0.52.3.tgz#020d99fffe9619351e47b3894fd397c26f5e1bf6"
 
 run-async@^2.2.0:
   version "2.3.0"
