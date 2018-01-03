@@ -76,19 +76,7 @@ timestamps {
 
       // Tasks only for master branch
       if (branchName == 'master') {
-       stage('Commit Storybook') {
-         dir(repoBaseDir) {
-          try {
-           sh('git add docs')
-           sh('git diff --quiet && git diff --staged --quiet || git commit -m "docs(storybook): Build Storybook [ci skip]"')
-          } catch (Exception e) {
-           //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-           sleep(1800)
-           throw e
-          }
-         }
-        } //END OF STAGE Commit Storybook
-
+	      
        stage('Build Storybook') {
          dir(repoBaseDir) {
           try {
@@ -105,13 +93,27 @@ timestamps {
           }
          }
         } //END OF STAGE Build Storybook
+	      
+       stage('Commit Storybook') {
+         dir(repoBaseDir) {
+          try {
+           sh('git add docs')
+           sh('git diff --quiet && git diff --staged --quiet || git commit -m "docs(storybook): Build Storybook [ci skip]"')
+          } catch (Exception e) {
+           //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+           sleep(1800)
+           throw e
+          }
+         }
+        } //END OF STAGE Commit Storybook
+	      
        stage('NPM Publish') {
          dir(repoBaseDir) {
           try {
            echo 'NPM publish'
            sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
             //publishing here.
-											sh('git push origin master') 
+	   sh('git push origin master') 
           } catch (Exception e) {
            //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
            sleep(1800)

@@ -41,7 +41,7 @@ echo -e "Creating ${CYAN}$packageJson${NC}"
 cat > $packageJson << EOF
 {
   "name": "@workday/canvas-kit-react-$name",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "$description",
   "homepage": "https://workdaydesign.com",
   "author": "$author",
