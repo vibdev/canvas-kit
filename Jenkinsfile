@@ -146,11 +146,11 @@ timestamps {
 
       } else {
           //do stuff for other branches to upload storybook to s3, etc.
-       stage('Lerna Dry Run') {
+       stage('Build Storybook') {
         dir(repoBaseDir) {
          try {
-          echo "other branch"
-          sh('yarn run lerna-dryrun')
+          echo "Building Storybook."
+          sh('yarn run build-storybook')
           //since there's no S3 Stage yet, setting the success status here...
           setGheStatusChecks('ci/jenkins/storybook', 'Storybook SUCCESS!', 'SUCCESS')
          } catch (Exception e) {
