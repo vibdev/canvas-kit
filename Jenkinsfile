@@ -111,6 +111,7 @@ timestamps {
            echo 'NPM publish'
            sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
             //publishing here.
+											sh('git push origin master') 
           } catch (Exception e) {
            //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
            sleep(1800)
