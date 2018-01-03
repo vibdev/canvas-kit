@@ -21,6 +21,9 @@ module.exports = {
         exclude: /node_modules/,
         include: modulesPath,
         loader: 'ts-loader',
+        options: {
+          configFile: '../../.storybook/tsconfig.json',
+        },
       },
       {
         test: /\.scss$/,
