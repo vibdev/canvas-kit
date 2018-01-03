@@ -42,9 +42,9 @@
   },
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap && yarn run build",
     "build": "lerna run build",
-    "publish": "npm run build-storybook && npm run lerna-publish",
+    "publish": "yarn run build-storybook && yarn run lerna-publish",
     "create-module": "./create-module.sh",
     "precommit": "lint-staged",
     "commit": "git-cz",

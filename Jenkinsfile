@@ -58,10 +58,8 @@ timestamps {
       stage('Build') {
         dir(repoBaseDir) {
          try {
-          echo 'running lerna bootstrap'
+          echo 'bootstrapping & building'
           sh('yarn run bootstrap')
-          echo 'running build'
-          sh('yarn run build')
           echo 'built.'
           setGheStatusChecks('ci/jenkins/build', 'Build SUCCESS!', 'SUCCESS')
          } catch (Exception e) {
@@ -76,7 +74,7 @@ timestamps {
 
       // Tasks only for master branch
       if (branchName == 'master') {
-	      
+
        stage('Build Storybook') {
          dir(repoBaseDir) {
           try {
@@ -93,7 +91,7 @@ timestamps {
           }
          }
         } //END OF STAGE Build Storybook
-	      
+
        stage('Commit Storybook') {
          dir(repoBaseDir) {
           try {
@@ -106,14 +104,14 @@ timestamps {
           }
          }
         } //END OF STAGE Commit Storybook
-	      
+
        stage('NPM Publish') {
          dir(repoBaseDir) {
           try {
            echo 'NPM publish'
            sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
             //publishing here.
-	   sh('git push origin master') 
+	   sh('git push origin master')
           } catch (Exception e) {
            //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
            sleep(1800)
