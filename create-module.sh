@@ -122,8 +122,10 @@ tsconfig="$path/tsconfig.json"
 echo -e "Creating ${CYAN}$readme${NC}"
 cat > $readme << EOF
 {
-  "extends": "../../tsconfig.json"
+  "extends": "../../tsconfig.json",
+  "exclude": ["node_modules", "ts-tmp", "stories.tsx"]
 }
+
 EOF
 
 # Bootstrap Lerna
