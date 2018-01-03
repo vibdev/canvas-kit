@@ -23,7 +23,7 @@ timestamps {
          if (branchName == 'master') {
           echo "We're on $branchName! Building $branchName"
          } else {
-          initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/envConfig', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
+          initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
          }
         }
        } //END OF STAGE CODECHECKOUT
