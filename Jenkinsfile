@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+
 @Library('design-ops-shared-library') _
 def nodeLabel = getNames()
 
@@ -11,7 +12,7 @@ timestamps {
  provisionPod(dockerTag: 'node8') {
   node(nodeLabel) {
 
-     ws(workspaceDir) {
+    ws(workspaceDir) {
       def branchName = ''
       echo 'code checkout....'
       stage('Code-checkout') {
@@ -27,14 +28,13 @@ timestamps {
         }
        } //END OF STAGE CODECHECKOUT
 
-       stage('Configure npmrc, env, and aws') {
+      stage('Configure npmrc, env, and aws') {
         dir(repoBaseDir) {
          try {
           setupNpmrc()
            // Setup AWS goes here
-          setGheStatusChecks('ci/jenkins/envConfig', 'Env Config SUCCESS!', 'SUCCESS')
          } catch (Exception e) {
-          setGheStatusChecks('ci/jenkins/envConfig', 'Env Config FAILED!', 'FAIL')
+          setGheStatusChecks('ci/jenkins/ciProgress', 'CI FAILED!', 'FAIL')
           sleep(1800)
           throw e
          }
@@ -46,7 +46,7 @@ timestamps {
          try {
           echo 'running yarn'
           sh('yarn')
-          echo 'npm modules installed'                             
+          echo 'npm modules installed'
          } catch (Exception e) {
           setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
           sleep(1800)
@@ -72,7 +72,7 @@ timestamps {
          }
         }
        } //END OF Lerna Bootstrap
-          
+
 
       // Tasks only for master branch
       if (branchName == 'master') {
@@ -89,22 +89,22 @@ timestamps {
          }
         } //END OF STAGE Commit Storybook
 
-      stage('Build Storybook') {
-        dir(repoBaseDir) {
-         try {
-          sh('git rm -rf docs/')
-          sh('yarn run build-storybook')
-          gitConfig()
-          setGheStatusChecks('ci/jenkins/storybook', 'Storybook SUCCESS!', 'SUCCESS')
+       stage('Build Storybook') {
+         dir(repoBaseDir) {
+          try {
+           sh('git rm -rf docs/')
+           sh('yarn run build-storybook')
+           gitConfig()
+           setGheStatusChecks('ci/jenkins/storybook', 'Storybook SUCCESS!', 'SUCCESS')
 
-         } catch (Exception e) {
-          setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
-          setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-          sleep(1800)
-          throw e
+          } catch (Exception e) {
+           setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
+           setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+           sleep(1800)
+           throw e
+          }
          }
-        }
-       } //END OF STAGE Build Storybook
+        } //END OF STAGE Build Storybook
        stage('NPM Publish') {
          dir(repoBaseDir) {
           try {
@@ -134,26 +134,27 @@ timestamps {
         } //END OF STAGE NPM Publish
 
        stage('Cleanup') {
-          try {
-           echo 'Cleanup'
-           postCleanup()
-          } catch (Exception e) {
-           //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-           sleep(1800)
-           throw e
-          }
+         try {
+          echo 'Cleanup'
+          postCleanup()
+         } catch (Exception e) {
+          //setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+          sleep(1800)
+          throw e
+         }
         } //END OF STAGE CLEANUP
 
       } else {
-          //do stuff for other branches to upload storybook to s3, etc.
+       //do stuff for other branches to upload storybook to s3, etc.
        stage('Build Storybook') {
         dir(repoBaseDir) {
          try {
           echo "Building Storybook."
           sh('yarn run build-storybook')
-          //since there's no S3 Stage yet, setting the success status here...
+           //since there's no S3 Stage yet, setting the success status here...
           setGheStatusChecks('ci/jenkins/storybook', 'Storybook SUCCESS!', 'SUCCESS')
          } catch (Exception e) {
+          setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
           setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
           sleep(1800)
           throw e
