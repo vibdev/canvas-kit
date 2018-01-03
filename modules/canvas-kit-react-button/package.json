@@ -17,6 +17,6 @@
   },
   "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
   "dependencies": {
-    "@workday/canvas-kit-react-core": "^1.0.0"
+    "@workday/canvas-kit-react-core": "^0.0.1"
   }
 }
