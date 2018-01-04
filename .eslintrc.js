@@ -4,7 +4,7 @@ const pkgJson = require(__dirname + '/package.json')
 function getCoreModules() {
   const devPackages = Object.keys(pkgJson.devDependencies)
   const packages = Object.keys(pkgJson.dependencies)
-  return Object.assign(devPackages, packages)
+  return devPackages.concat(packages)
 }
 
 module.exports = {
