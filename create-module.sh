@@ -22,8 +22,8 @@ read -p "Module name (@workday/canvas-kit-react-<NAME>): " name
 path="./modules/canvas-kit-react-$name"
 
 if [ -d "$path" ]; then
-	echo -e "${RED}Module with name 'canvas-kit-$name' already exists."
-	exit 1
+  echo -e "${RED}Module with name 'canvas-kit-$name' already exists."
+  exit 1
 fi
 
 # Get module info
@@ -46,7 +46,8 @@ cat > $packageJson << EOF
   "homepage": "https://workdaydesign.com",
   "author": "$author",
   "license": "Apache-2.0",
-  "main": "index.tsx",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
@@ -61,12 +62,7 @@ cat > $packageJson << EOF
     "components",
     "workday",
     "$name"
-  ],
-  "dependencies": {
-    "glamorous": "^4.11.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  }
+  ]
 }
 EOF
 
@@ -92,19 +88,19 @@ EOF
 storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import withReadme from 'storybook-readme/with-readme';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
 
 import MyComponent from './index.tsx'
-import README from './README.md';
+import README from './README.md'
 
 storiesOf('Canvas Kit/$upperName', module)
-	.addDecorator(withReadme(README))
+  .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">$upperName</h1>
-			<MyComponent></MyComponent>
+      <MyComponent></MyComponent>
     </div>
   ));
 
