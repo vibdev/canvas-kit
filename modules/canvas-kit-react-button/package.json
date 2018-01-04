@@ -6,6 +6,7 @@
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "private": true,
   "repository": {
     "type": "git",
@@ -15,14 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "button"
-  ],
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
   "dependencies": {
     "@workday/canvas-kit-react-core": "0.1.1"
   }
