@@ -1,4 +1,4 @@
-const colors = {
+const colors: { [x: string]: string } = {
   cinnamon600: '#a31c12',
   cinnamon500: '#de2e21',
   cinnamon400: '#ff5447',
@@ -163,7 +163,7 @@ const colors = {
   blackPepper100: '#787878',
 }
 
-const gradients = {
+const gradients: { [x: string]: string } = {
   cinnamon: `linear-gradient(to bottom right,${colors.cinnamon500},${colors.cinnamon400})`,
   peach: `linear-gradient(to bottom right,${colors.peach500},${colors.peach400})`,
   chiliMango: `linear-gradient(to bottom right,${colors.chiliMango500},${colors.chiliMango400})`,
@@ -190,7 +190,7 @@ const gradients = {
   blackPepper: `linear-gradient(to bottom right,${colors.blackPepper400},${colors.blackPepper300})`,
 }
 
-const primary = {
+const primary: { [x: string]: string } = {
   background: colors.soap100,
   headers: colors.blackPepper100,
   dataViz: colors.blackPepper100,

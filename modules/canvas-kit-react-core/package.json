@@ -6,6 +6,7 @@
   "author": "Alex Nicholls",
   "license": "Apache-2.0",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core"
@@ -14,12 +15,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.ts"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "core"
-  ]
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "core"]
 }
