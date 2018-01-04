@@ -192,9 +192,9 @@
   version "16.0.31"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
-"@workday/canvas-kit-build@^2.1.7":
-  version "2.1.7"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.1.7.tgz#f0cdb967653050c75bd1078794b328b48a34ff9c"
+"@workday/canvas-kit-build@^2.2.0":
+  version "2.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.2.0.tgz#7cef493a43c6dedfbdd08a2fecabbba599e54692"
   dependencies:
     autoprefixer "^7.1.5"
     css-mqpacker "^6.0.1"
