@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/compare/@workday/canvas-kit-react-core@0.2.0...@workday/canvas-kit-react-core@0.3.0) (2018-01-05)
+
+
+### Bug Fixes
+
+* **stories.tsx:** added index import ([857fc1a](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/857fc1a))
+
+
+### Features
+
+* **depth:** added depth to core ([016154e](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/016154e))
+* **spacing:** added spacing to core ([fdd1c91](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/fdd1c91))
+
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/compare/@workday/canvas-kit-react-core@0.1.1...@workday/canvas-kit-react-core@0.2.0) (2018-01-04)
 
