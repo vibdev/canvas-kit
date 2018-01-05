@@ -1,4 +1,4 @@
-const spacing = {
+const spacing: { [x: string]: string } = {
   xxxs: '4px',
   xxs: '8px',
   xs: '12px',
