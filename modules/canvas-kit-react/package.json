@@ -1,0 +1,23 @@
+{
+  "name": "@workday/canvas-kit-react",
+  "version": "0.1.0",
+  "description": "The parent module that contains all Workday Canvas Kit React components",
+  "homepage": "https://workdaydesign.com",
+  "author": "Alex Nicholls",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "canvas-kit-build build-ts index.ts"
+  },
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday"],
+  "dependencies": {
+    "@workday/canvas-kit-react-button": "0.2.1",
+    "@workday/canvas-kit-react-core": "0.3.0"
+  }
+}
