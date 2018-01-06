@@ -53,7 +53,8 @@ cat > $packageJson << EOF
     "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-$name"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "canvas-kit-build build-ts index.tsx"
   },
   "keywords": [
     "canvas",
@@ -92,7 +93,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
-import MyComponent from './index.tsx'
+import MyComponent from './index'
 import README from './README.md'
 
 storiesOf('Canvas Kit/$upperName', module)
@@ -115,8 +116,8 @@ EOF
 
 # Create tsconfig.json
 tsconfig="$path/tsconfig.json"
-echo -e "Creating ${CYAN}$readme${NC}"
-cat > $readme << EOF
+echo -e "Creating ${CYAN}$tsconfig${NC}"
+cat > $tsconfig << EOF
 {
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "ts-tmp", "stories.tsx"]
