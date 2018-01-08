@@ -110,7 +110,7 @@ const type: { [key: string]: CSSProperties } = {
 }
 
 Object.keys(type).forEach((key) => {
-  type[key].fontFamily = fontFamily
+  type[key] = Object.assign({}, type[key], { fontFamily })
 })
 
 export default type
