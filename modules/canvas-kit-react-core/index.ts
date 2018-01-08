@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { CSSProperties } from 'glamorous' // Required for declaration file
 import colors from './lib/colors'
 import depth from './lib/depth'
 import spacing from './lib/spacing'
