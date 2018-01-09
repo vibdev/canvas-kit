@@ -1,4 +1,4 @@
-import CSSProperties from '../typings/css-properties'
+import CSSProperties from '../typings/css-properties' // eslint-disable-line no-unused-vars
 import colors from './colors'
 
 const shadow: { [x: string]: string } = {
