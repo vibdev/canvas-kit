@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react"
   },
+  "files": ["dist/", "index.tsx"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.ts"

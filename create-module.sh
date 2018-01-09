@@ -52,6 +52,11 @@ cat > $packageJson << EOF
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-$name"
   },
+  "files": [
+    "dist/",
+    "lib/",
+    "index.tsx"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx"
@@ -122,6 +127,14 @@ cat > $tsconfig << EOF
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "ts-tmp", "stories.tsx"]
 }
+
+EOF
+# Create .npmignore
+npmignore="$path/.npmignore"
+echo -e "Creating ${CYAN}$npmignore${NC}"
+cat > $npmignore << EOF
+tsconfig.json
+yarn.lock
 
 EOF
 
