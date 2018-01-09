@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button/compare/@workday/canvas-kit-react-button@0.2.2...@workday/canvas-kit-react-button@0.3.0) (2018-01-09)
+
+
+### Features
+
+* **type:** Add type styles ([f4ab9d8](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button/commits/f4ab9d8))
+
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button/compare/@workday/canvas-kit-react-button@0.2.1...@workday/canvas-kit-react-button@0.2.2) (2018-01-08)
 

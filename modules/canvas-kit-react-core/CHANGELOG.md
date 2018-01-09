@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/compare/@workday/canvas-kit-react-core@0.3.1...@workday/canvas-kit-react-core@0.4.0) (2018-01-09)
+
+
+### Bug Fixes
+
+* **core:** Add missing type import ([c6b6bde](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/c6b6bde))
+* **depth:** Add CSSProperties type ([3e07337](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/3e07337))
+* **depth:** disable no-unused-vars error from eslint ([f623ae1](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/f623ae1))
+* **type:** Add custom CSSProperties type ([4735c7f](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/4735c7f))
+* **type:** Fix fontFamily property ([c09c2ea](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/c09c2ea))
+
+
+### Features
+
+* **fonts:** Add fonts ([934f833](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/934f833))
+* **type:** Add story ([7b6ca35](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/7b6ca35))
+* **type:** Add type styles ([f4ab9d8](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/commits/f4ab9d8))
+
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/compare/@workday/canvas-kit-react-core@0.3.0...@workday/canvas-kit-react-core@0.3.1) (2018-01-08)
 
