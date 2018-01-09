@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.1"></a>
+## [0.4.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.4.0...@workday/canvas-kit-react-core@0.4.1) (2018-01-09)
+
+
+### Bug Fixes
+
+* **git-urls:** fix some more git urls ([dc56e6d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/dc56e6d))
+
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-core/compare/@workday/canvas-kit-react-core@0.3.1...@workday/canvas-kit-react-core@0.4.0) (2018-01-09)
 
