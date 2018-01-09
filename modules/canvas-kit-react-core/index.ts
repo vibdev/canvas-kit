@@ -1,5 +1,7 @@
-// eslint-disable-next-line no-unused-vars
-import { CSSProperties } from 'glamorous' // Required for declaration file
+/* eslint-disable no-unused-vars */
+import { CSSProperties as CP1 } from 'react'
+import { CSSProperties as CP2 } from 'glamorous'
+/* eslint-enable no-unused-vars */
 import colors from './lib/colors'
 import depth from './lib/depth'
 import spacing from './lib/spacing'

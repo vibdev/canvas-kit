@@ -1,4 +1,4 @@
-import { CSSProperties } from 'glamorous' // eslint-disable-line no-unused-vars
+import CSSProperties from '../typings/css-properties' // eslint-disable-line no-unused-vars
 import colors from './colors'
 import fonts from './fonts'
 
