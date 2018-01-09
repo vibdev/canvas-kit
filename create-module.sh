@@ -50,7 +50,7 @@ cat > $packageJson << EOF
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-$name"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-$name"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
