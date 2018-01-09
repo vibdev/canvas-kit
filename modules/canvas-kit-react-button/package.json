@@ -10,20 +10,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-button"
+    "url":
+      "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "button"
-  ],
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
   "dependencies": {
     "@workday/canvas-kit-react-core": "0.4.0"
   }
