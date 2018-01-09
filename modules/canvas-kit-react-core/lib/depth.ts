@@ -1,3 +1,4 @@
+import CSSProperties from '../typings/css-properties' // eslint-disable-line no-unused-vars
 import colors from './colors'
 
 const shadow: { [x: string]: string } = {
@@ -10,7 +11,7 @@ const sizing: { [x: string]: number } = {
   baseBlurRadius: 4,
 }
 
-const depth: { [x: string]: Object } = {
+const depth: { [x: string]: CSSProperties } = {
   inset: {
     boxShadow: `inset 0 0 ${sizing.baseBlurRadius * 2}px ${shadow.shadowColorLight}`,
   },

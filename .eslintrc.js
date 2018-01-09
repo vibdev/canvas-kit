@@ -23,15 +23,15 @@ module.exports = {
     'import/extensions': ['error', 'never', { tsx: 'never', ts: 'never' }],
   },
   settings: {
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
     'import/core-modules': getCoreModules(),
     'import/parsers': {
-      'typescript-eslint-parser': ['.ts', '.tsx'],
+      'typescript-eslint-parser': ['.ts', '.tsx', '.d.ts'],
     },
     'import/resolver': {
       node: true,
       [require.resolve('eslint-import-resolver-typescript')]: {
-        extensions: ['.ts', '.tsx'],
+        extensions: ['.ts', '.tsx', '.d.ts'],
       },
     },
   },
