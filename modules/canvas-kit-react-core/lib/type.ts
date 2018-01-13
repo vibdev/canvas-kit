@@ -2,6 +2,12 @@ import CSSProperties from '../typings/css-properties' // eslint-disable-line no-
 import colors from './colors'
 import fonts from './fonts'
 
+/* eslint-disable no-undef, no-use-before-define */
+export interface CanvasType {
+  [x: string]: CSSProperties
+}
+/* eslint-enable no-undef, no-use-before-define */
+
 const { fontFamily } = fonts
 
 const body: CSSProperties = {
@@ -93,7 +99,7 @@ const hint: CSSProperties = {
   color: colors.licorice100,
 }
 
-const type: { [key: string]: CSSProperties } = {
+const type: CanvasType = {
   body,
   body2,
   h1,

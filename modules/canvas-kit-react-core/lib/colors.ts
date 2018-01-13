@@ -1,4 +1,15 @@
-const colors: { [x: string]: string } = {
+/* eslint-disable no-undef, no-use-before-define */
+export declare interface Colors {
+  [x: string]: string
+}
+
+export declare type CanvasColors = Colors & {
+  gradients: Colors
+  primary: Colors
+}
+/* eslint-enable no-undef, no-use-before-define */
+
+const colors: Colors = {
   cinnamon600: '#a31c12',
   cinnamon500: '#de2e21',
   cinnamon400: '#ff5447',
@@ -163,7 +174,7 @@ const colors: { [x: string]: string } = {
   blackPepper100: '#787878',
 }
 
-const gradients: { [x: string]: string } = {
+const gradients: Colors = {
   cinnamon: `linear-gradient(to bottom right,${colors.cinnamon500},${colors.cinnamon400})`,
   peach: `linear-gradient(to bottom right,${colors.peach500},${colors.peach400})`,
   chiliMango: `linear-gradient(to bottom right,${colors.chiliMango500},${colors.chiliMango400})`,
@@ -190,7 +201,7 @@ const gradients: { [x: string]: string } = {
   blackPepper: `linear-gradient(to bottom right,${colors.blackPepper400},${colors.blackPepper300})`,
 }
 
-const primary: { [x: string]: string } = {
+const primary: Colors = {
   background: colors.soap100,
   headers: colors.blackPepper100,
   dataViz: colors.blackPepper100,
@@ -214,7 +225,9 @@ const primary: { [x: string]: string } = {
   error: colors.cinnamon500,
 }
 
-export default Object.assign(colors, {
+const canvasColors: CanvasColors = Object.assign({}, colors, {
   gradients,
   primary,
 })
+
+export default canvasColors
