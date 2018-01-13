@@ -1,4 +1,4 @@
-import CSSProperties from '../typings/css-properties' // eslint-disable-line no-unused-vars
+import { CSSProperties } from './types' // eslint-disable-line no-unused-vars
 import colors from './colors'
 
 /* eslint-disable no-undef, no-use-before-define */
