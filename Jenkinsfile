@@ -77,7 +77,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              sh('yarn run build')
+							sh('yarn run bootstrap') //Bootstrap is the bootstrap + build command for canvas-kit-react
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
@@ -87,11 +87,10 @@ timestamps {
           }
         }
 
-        stage('Yarn Storybook') {
+        stage('Storybook') {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              echo 'This is where yarn storybook goes'
               sh('git rm -rf docs/')
               sh('yarn run build-storybook')
               ifBranch.isMaster {
