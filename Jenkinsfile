@@ -65,7 +65,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              sh('yarn')
+              sh('yarn install --production=false')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               throw e
