@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('design-ops-shared-library@develop') _
+@Library('design-ops-shared-library@stable') _
 
 // Make sure to fill this out with the project name
 setEnv.app('canvas-kit-react')
@@ -22,7 +22,7 @@ timestamps {
 
         stage('Code Checkout') {
           echo env.STAGE_NAME
-          echo 'Setting up npm, installing aws cli'
+          echo 'Checking out repo'
           dir(repoBaseDir) {
             getGit.start()
           }
@@ -77,7 +77,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-							sh('yarn run bootstrap') //Bootstrap is the bootstrap + build command for canvas-kit-react
+	      sh('yarn run bootstrap')
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
@@ -117,36 +117,14 @@ timestamps {
           stage('Release') {
             echo env.STAGE_NAME
             dir(repoBaseDir) {
+              echo "still ${env.STAGE_NAME}"
               try {
-                // NPM
-                echo 'NPM publish'
-                //sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
-                //Git Release
-                sh('git push origin master')
-                //Upload to CDN
-                echo 'Upload to S3'
-                // nothing for now...
-                //
-                echo "still ${env.STAGE_NAME}"
-                echo 'This is where yarn publish/release could go'
+                echo 'npm publish & uploading to s3'
+                sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
+                sh('git push origin master') //Git Release
                 sh('yarn run publish')
-                sh('ls') //verify there is a tar file
               } catch (Exception e) {
-                setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-                throw e
-              }
-            }
-          }
-
-          stage('Master Only') {
-            echo env.STAGE_NAME
-            dir(repoBaseDir) {
-              try {
-                echo "still ${env.STAGE_NAME}"
-                echo 'This is where yarn publish/release could go'
-                sh('yarn run publish')
-                sh('ls') //verify there is a tar file
-              } catch (Exception e) {
+                // should have a fallback/unpublish/lerna "undo"
                 setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
                 throw e
               }
@@ -154,23 +132,6 @@ timestamps {
           }
 
         } // End of master stages
-
-        //Following stages only occur on non-master branches
-        ifBranch.isNotMaster {
-
-          stage('Not Master Only') {
-            echo env.STAGE_NAME
-            dir(repoBaseDir) {
-              try {
-                echo "still ${env.STAGE_NAME}"
-              } catch (Exception e) {
-                setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-                throw e
-              }
-            }
-          }
-
-        } //End of non-master stages
 
         stage('Cleanup') {
           echo env.STAGE_NAME
