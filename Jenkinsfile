@@ -12,7 +12,6 @@ setEnv.ci()
 setEnv.cdn('beta')
 
 //AWS Profiles Required:
-def awsProfileCdn = "iamadummy"
 def awsProfileStorybook = "jenkinsprs"
 
 timestamps {
@@ -43,11 +42,6 @@ timestamps {
                     npmrc: { setupNpmrc() },
                     awscli: {
                       installAwsCli()
-                      ifBranch.isMaster {
-                        setupAwsProfile(
-                                profile: awsProfileCdn,
-                        )
-                      }
                       ifBranch.isNotMaster {
                         setupAwsProfile(
                                 profile: awsProfileStorybook,
@@ -77,7 +71,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-	      sh('yarn run bootstrap')
+              sh('yarn run bootstrap')
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
