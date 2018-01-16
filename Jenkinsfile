@@ -111,12 +111,10 @@ timestamps {
           stage('Release') {
             echo env.STAGE_NAME
             dir(repoBaseDir) {
-              echo "still ${env.STAGE_NAME}"
               try {
                 echo 'npm publish & uploading to s3'
                 sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
                 sh('git push origin master') //Git Release
-                sh('yarn run publish')
               } catch (Exception e) {
                 // should have a fallback/unpublish/lerna "undo"
                 setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
