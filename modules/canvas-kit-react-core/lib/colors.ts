@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars  */
 import { CanvasExtendedColorPalette, CanvasGradients, CanvasPrimaryPalette, CanvasColors } from './colors.types'
-/* eslint-enable no-unused-vars  */
 
 const colors: CanvasExtendedColorPalette = {
   cinnamon600: '#a31c12',

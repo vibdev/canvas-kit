@@ -1,8 +1,7 @@
-import { CSSProperties } from './types' // eslint-disable-line no-unused-vars
+import { CSSProperties } from './types'
 import colors from './colors'
 import fonts from './fonts'
 
-/* eslint-disable no-undef, no-use-before-define */
 export interface CanvasType {
   body: CSSProperties
   body2: CSSProperties
@@ -18,7 +17,6 @@ export interface CanvasType {
   button: CSSProperties
   hint: CSSProperties
 }
-/* eslint-enable no-undef, no-use-before-define */
 
 const { fontFamily } = fonts
 

@@ -56,20 +56,16 @@ storiesOf('Canvas Kit/Core', module)
         denim, thundercats salvia intelligentsia jean shorts officia. Heirloom craft beer put a bird
         on it occaecat
       </p>
-      {/* eslint-disable jsx-a11y/anchor-is-valid */}
       <a href="#" style={canvas.type.link}>
         Link Text
       </a>{' '}
-      {/* eslint-enable jsx-a11y/anchor-is-valid */}
       <br />
       <span style={canvas.type.hint}>Hint Text</span>
       <br />
-      {/* eslint-disable jsx-a11y/label-has-for */}
       <label style={canvas.type.label1}>Label 1</label>
       <br />
       <label style={canvas.type.label2}>Label 2</label>
       <br />
       <label style={canvas.type.label3}>Label 3</label>
-      {/* eslint-enable jsx-a11y/label-has-for */}
     </div>
   ))
