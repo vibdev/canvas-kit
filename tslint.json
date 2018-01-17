@@ -1,0 +1,24 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-react", "tslint-config-airbnb", "tslint-config-prettier"],
+  "exclude": [
+    "node_modules",
+    "modules/**/node_modules",
+    "modules/**/dist/*",
+    "modules/**/ts-tmp/*",
+    "docs/**/*"
+  ],
+  "rules": {
+    "import-name": [
+      true,
+      {
+        "react": "React",
+        "canvasKitReactCore": "canvas",
+        "canvasKitReactButton": "Button",
+        "READMEMd": "README"
+      }
+    ],
+    "semicolon": [true, "never"],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"]
+  }
+}
