@@ -4,7 +4,19 @@ import fonts from './fonts'
 
 /* eslint-disable no-undef, no-use-before-define */
 export interface CanvasType {
-  [x: string]: CSSProperties
+  body: CSSProperties
+  body2: CSSProperties
+  h1: CSSProperties
+  h2: CSSProperties
+  h3: CSSProperties
+  h4: CSSProperties
+  h5: CSSProperties
+  label1: CSSProperties
+  label2: CSSProperties
+  label3: CSSProperties
+  link: CSSProperties
+  button: CSSProperties
+  hint: CSSProperties
 }
 /* eslint-enable no-undef, no-use-before-define */
 

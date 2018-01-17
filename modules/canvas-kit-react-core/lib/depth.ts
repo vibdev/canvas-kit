@@ -3,7 +3,11 @@ import colors from './colors'
 
 /* eslint-disable no-undef, no-use-before-define */
 export interface CanvasDepth {
-  [x: string]: CSSProperties
+  inset: CSSProperties
+  1: CSSProperties
+  2: CSSProperties
+  3: CSSProperties
+  4: CSSProperties
 }
 /* eslint-enable no-undef, no-use-before-define */
 
