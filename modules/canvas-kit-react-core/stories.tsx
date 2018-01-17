@@ -3,8 +3,7 @@ import glamorous from 'glamorous'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
-import canvas from './index'
-
+import canvas from './index' // tslint:disable-line:import-name
 import README from './README.md'
 
 storiesOf('Canvas Kit/Core', module)
