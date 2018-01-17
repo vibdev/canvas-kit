@@ -1,6 +1,6 @@
 {
   "private": true,
-  "main": "./modules/canvas-kit/build/build.js",
+  "name": "canvas-kit-react",
   "devDependencies": {
     "@storybook/react": "^3.2.13",
     "@types/node": "^8.0.58",
