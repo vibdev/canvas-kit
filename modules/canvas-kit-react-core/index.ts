@@ -1,14 +1,21 @@
-/* eslint-disable no-unused-vars */
-import { CSSProperties as CP1 } from 'react'
-import { CSSProperties as CP2 } from 'glamorous'
-/* eslint-enable no-unused-vars */
 import colors from './lib/colors'
-import depth from './lib/depth'
-import spacing from './lib/spacing'
-import fonts from './lib/fonts'
-import type from './lib/type'
+import { CanvasColors } from './lib/colors.types'
+import depth, { CanvasDepth } from './lib/depth'
+import spacing, { CanvasSpacing } from './lib/spacing'
+import fonts, { CanvasFonts } from './lib/fonts'
+import type, { CanvasType } from './lib/type'
 
-const canvas = {
+/* eslint-disable no-undef, no-use-before-define */
+export interface CanvasCore {
+  colors: CanvasColors
+  depth: CanvasDepth
+  spacing: CanvasSpacing
+  fonts: CanvasFonts
+  type: CanvasType
+}
+/* eslint-enable no-undef, no-use-before-define */
+
+const canvas: CanvasCore = {
   colors,
   depth,
   spacing,

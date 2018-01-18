@@ -39,7 +39,7 @@
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
-    "@workday/canvas-kit-build": "^2.2.0"
+    "@workday/canvas-kit-build": "^2.4.0"
   },
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",

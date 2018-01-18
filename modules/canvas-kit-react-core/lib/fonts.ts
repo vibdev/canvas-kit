@@ -1,5 +1,12 @@
 import { fontFace } from 'glamor'
 
+/* eslint-disable no-undef, no-use-before-define */
+export interface CanvasFonts {
+  fontFamily: string
+  monoFontFamily: string
+}
+/* eslint-enable no-undef, no-use-before-define */
+
 const fontsPath = 'https://design.workdaycdn.com/beta/assets/fonts@1.0.0/roboto/ttf'
 const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif'
 const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace'
@@ -36,4 +43,7 @@ const fonts = [
   },
 ]
 fonts.forEach(font => fontFace(font))
-export default { fontFamily, monoFontFamily }
+
+const canvasFonts: CanvasFonts = { fontFamily, monoFontFamily }
+
+export default canvasFonts

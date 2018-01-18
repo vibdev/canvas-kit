@@ -1,5 +1,15 @@
-import CSSProperties from '../typings/css-properties' // eslint-disable-line no-unused-vars
+import { CSSProperties } from './types' // eslint-disable-line no-unused-vars
 import colors from './colors'
+
+/* eslint-disable no-undef, no-use-before-define */
+export interface CanvasDepth {
+  inset: CSSProperties
+  1: CSSProperties
+  2: CSSProperties
+  3: CSSProperties
+  4: CSSProperties
+}
+/* eslint-enable no-undef, no-use-before-define */
 
 const shadow: { [x: string]: string } = {
   shadowColorLight: 'rgba(82, 97, 115, 0.14)',
@@ -11,7 +21,7 @@ const sizing: { [x: string]: number } = {
   baseBlurRadius: 4,
 }
 
-const depth: { [x: string]: CSSProperties } = {
+const depth: CanvasDepth = {
   inset: {
     boxShadow: `inset 0 0 ${sizing.baseBlurRadius * 2}px ${shadow.shadowColorLight}`,
   },
