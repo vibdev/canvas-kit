@@ -18,7 +18,7 @@ This project provides Canvas-styled React components.
 4. (optional) If you added any extra dependencies, run `lerna bootstrap`
 5. Start Storybook `npm start`
 6. Navigate to [http://localhost:9001/](http://localhost:9001/) and find your new module's story
-7. Begin editing your new React componenet in `modules/canvas-kit-<NAME>/index.js`!
+7. Begin editing your new React component in `modules/canvas-kit-react-<NAME>/index.js`!
 
 ## Building modules
 
