@@ -2,7 +2,7 @@ import { CSSProperties } from './types'
 import colors from './colors'
 import fonts from './fonts'
 
-interface CanvasTypeVariations {
+export interface CanvasTypeVariations {
   body: CSSProperties
   body2: CSSProperties
   h1: CSSProperties
