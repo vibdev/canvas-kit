@@ -2,7 +2,7 @@ import { CSSProperties } from './types'
 import colors from './colors'
 import fonts from './fonts'
 
-export interface CanvasType {
+interface CanvasTypeVariations {
   body: CSSProperties
   body2: CSSProperties
   h1: CSSProperties
@@ -16,6 +16,10 @@ export interface CanvasType {
   link: CSSProperties
   button: CSSProperties
   hint: CSSProperties
+}
+
+export interface CanvasType extends CanvasTypeVariations {
+  mono: CanvasTypeVariations
 }
 
 const { fontFamily } = fonts
@@ -109,6 +113,61 @@ const hint: CSSProperties = {
   color: colors.licorice100,
 }
 
+const mono: CanvasTypeVariations = {
+  body: {
+    ...body,
+    fontFamily: fonts.monoFontFamily,
+  },
+  body2: {
+    ...body2,
+    fontFamily: fonts.monoFontFamily,
+  },
+  h1: {
+    ...h1,
+    fontFamily: fonts.monoFontFamily,
+  },
+  h2: {
+    ...h2,
+    fontFamily: fonts.monoFontFamily,
+  },
+  h3: {
+    ...h3,
+    fontFamily: fonts.monoFontFamily,
+  },
+  h4: {
+    ...h4,
+    fontFamily: fonts.monoFontFamily,
+  },
+  h5: {
+    ...h5,
+    fontFamily: fonts.monoFontFamily,
+  },
+  label1: {
+    ...label1,
+    fontFamily: fonts.monoFontFamily,
+  },
+  label2: {
+    ...label2,
+    fontFamily: fonts.monoFontFamily,
+  },
+  label3: {
+    ...label3,
+    fontFamily: fonts.monoFontFamily,
+  },
+  link: {
+    ...link,
+    fontFamily: fonts.monoFontFamily,
+  },
+  button: {
+    ...button,
+    fontFamily: fonts.monoFontFamily,
+  },
+  hint: {
+    ...hint,
+    fontFamily: fonts.monoFontFamily,
+  },
+}
+
 const type: CanvasType = {
   body,
   body2,
@@ -123,6 +182,7 @@ const type: CanvasType = {
   link,
   button,
   hint,
+  mono,
 }
 
 Object.keys(type).forEach(key => {
