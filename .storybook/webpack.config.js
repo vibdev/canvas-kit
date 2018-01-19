@@ -14,7 +14,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         include: modulesPath,
-        loader: 'eslint-loader',
+        loader: 'tslint-loader',
       },
       {
         test: /\.tsx?$/,

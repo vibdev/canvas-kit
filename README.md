@@ -10,7 +10,6 @@ This project provides Canvas-styled React components.
 4. Run `npm start` to start [Storybook](https://storybook.js.org/)
 5. Visit [http://localhost:9001/](http://localhost:9001/)
 
-
 ## Creating a module
 
 1. Run `npm run create-module`
@@ -19,14 +18,12 @@ This project provides Canvas-styled React components.
 4. (optional) If you added any extra dependencies, run `lerna bootstrap`
 5. Start Storybook `npm start`
 6. Navigate to [http://localhost:9001/](http://localhost:9001/) and find your new module's story
-5. Begin editing your new React componenet in `modules/canvas-kit-<NAME>/index.js`!
-
+7. Begin editing your new React component in `modules/canvas-kit-react-<NAME>/index.js`!
 
 ## Building modules
 
 1. Lerna bootstrap `npm run bootstrap`
 2. Lerna build `npm run build`
-
 
 ## Building kit
 
@@ -45,30 +42,34 @@ This project provides Canvas-styled React components.
 
 For more information on lerna publishing, please see the [lerna publish docs](https://github.com/lerna/lerna#publish).
 
-
 ## Code Style Guide
-This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), with a few exceptions. Rules are enforced using [ESLint](https://eslint.org) and code formatting is provided through [Prettier](prettier.io). [prettier-eslint](https://github.com/prettier/prettier-eslint) is used to integrate ESLint and Prettier.
 
-To lint using ESLint, use `npm run lint`. To format and lint your code (careful - this can rewrite files), use `npm run format`.
+This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), with a few exceptions. Rules are enforced using [TSLint](https://palantir.github.io/tslint/) and code formatting is provided through [Prettier](prettier.io).
+
+To lint using TSLint, use `npm run lint`. To format and lint your code (careful - this can rewrite files), use `npm run format`.
 
 Code formatting will occur automatically before `git commit` for files staged using `git add`.
 
 ### Editors
-Install the Prettier/ESLint plugins for your respective editors for quicker and easier formatting.
 
-**Note:** Ensure that the package has support for `prettier-eslint`
+Install the Prettier and TSLint plugins for your respective editors for quicker and easier formatting.
 
 #### Visual Studio Code
-Download [prettier-vscode]((https://github.com/prettier/prettier-vscode))
 
-Add the following options:
-- [prettier-eslint integration](https://github.com/prettier/prettier-vscode#prettiereslintintegration-default-false---javascript-and-typescript-only)
+Install [prettier-vscode](https://github.com/prettier/prettier-vscode) and [vscode-tslint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 
 Consider adding the following options:
-- [Format on save](https://github.com/prettier/prettier-vscode#format-on-save)
+
+* [Format on save](https://github.com/prettier/prettier-vscode#format-on-save)
 
 #### Atom
-Download [prettier-atom](https://github.com/prettier/prettier-atom))
+
+Install [prettier-atom](https://github.com/prettier/prettier-atom) and [linter-tslint](https://github.com/AtomLinter/linter-tslint)
+
+#### Emacs
+
+Install [prettier-emacs](https://github.com/prettier/prettier-emacs) and [Flycheck](http://www.flycheck.org/)
 
 #### Other Editors
-Check [Prettier documentation](https://prettier.io/docs/en/editors.html) for additional editors.
+
+Check [Prettier](https://prettier.io/docs/en/editors.html) and [TSLint](https://palantir.github.io/tslint/usage/third-party-tools/) documentation for additional editor plugins.

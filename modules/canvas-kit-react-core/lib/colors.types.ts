@@ -1,5 +1,3 @@
-/* eslint-disable no-undef, no-use-before-define */
-
 export interface CanvasExtendedColorPalette {
   cinnamon600: string
   cinnamon500: string

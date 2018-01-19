@@ -1,4 +1,3 @@
-/* eslint-disable no-undef, no-use-before-define */
 export interface CanvasSpacing {
   xxxs: string
   xxs: string
@@ -10,7 +9,6 @@ export interface CanvasSpacing {
   xxl: string
   xxxl: string
 }
-/* eslint-enable no-undef, no-use-before-define */
 
 const spacing: CanvasSpacing = {
   xxxs: '4px',

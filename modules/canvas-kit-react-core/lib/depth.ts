@@ -1,7 +1,6 @@
-import { CSSProperties } from './types' // eslint-disable-line no-unused-vars
+import { CSSProperties } from './types'
 import colors from './colors'
 
-/* eslint-disable no-undef, no-use-before-define */
 export interface CanvasDepth {
   inset: CSSProperties
   1: CSSProperties
@@ -9,7 +8,6 @@ export interface CanvasDepth {
   3: CSSProperties
   4: CSSProperties
 }
-/* eslint-enable no-undef, no-use-before-define */
 
 const shadow: { [x: string]: string } = {
   shadowColorLight: 'rgba(82, 97, 115, 0.14)',
