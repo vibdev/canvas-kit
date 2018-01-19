@@ -113,62 +113,7 @@ const hint: CSSProperties = {
   color: colors.licorice100,
 }
 
-const mono: CanvasTypeVariations = {
-  body: {
-    ...body,
-    fontFamily: fonts.monoFontFamily,
-  },
-  body2: {
-    ...body2,
-    fontFamily: fonts.monoFontFamily,
-  },
-  h1: {
-    ...h1,
-    fontFamily: fonts.monoFontFamily,
-  },
-  h2: {
-    ...h2,
-    fontFamily: fonts.monoFontFamily,
-  },
-  h3: {
-    ...h3,
-    fontFamily: fonts.monoFontFamily,
-  },
-  h4: {
-    ...h4,
-    fontFamily: fonts.monoFontFamily,
-  },
-  h5: {
-    ...h5,
-    fontFamily: fonts.monoFontFamily,
-  },
-  label1: {
-    ...label1,
-    fontFamily: fonts.monoFontFamily,
-  },
-  label2: {
-    ...label2,
-    fontFamily: fonts.monoFontFamily,
-  },
-  label3: {
-    ...label3,
-    fontFamily: fonts.monoFontFamily,
-  },
-  link: {
-    ...link,
-    fontFamily: fonts.monoFontFamily,
-  },
-  button: {
-    ...button,
-    fontFamily: fonts.monoFontFamily,
-  },
-  hint: {
-    ...hint,
-    fontFamily: fonts.monoFontFamily,
-  },
-}
-
-const type: CanvasType = {
+const typeVariations: CanvasTypeVariations = {
   body,
   body2,
   h1,
@@ -182,6 +127,16 @@ const type: CanvasType = {
   link,
   button,
   hint,
+}
+
+// Override font family for mono type
+const mono: CanvasTypeVariations = typeVariations
+for (const variation in mono) {
+  mono[variation]['fontFamily'] = fonts.monoFontFamily
+}
+
+const type: CanvasType = {
+  ...typeVariations,
   mono,
 }
 
