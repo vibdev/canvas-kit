@@ -2,7 +2,7 @@ import { CSSProperties } from './types'
 import colors from './colors'
 import fonts from './fonts'
 
-export interface CanvasType {
+export interface CanvasTypeVariations {
   body: CSSProperties
   body2: CSSProperties
   h1: CSSProperties
@@ -16,6 +16,10 @@ export interface CanvasType {
   link: CSSProperties
   button: CSSProperties
   hint: CSSProperties
+}
+
+export interface CanvasType extends CanvasTypeVariations {
+  mono: CanvasTypeVariations
 }
 
 const { fontFamily } = fonts
@@ -109,7 +113,7 @@ const hint: CSSProperties = {
   color: colors.licorice100,
 }
 
-const type: CanvasType = {
+const typeVariations: CanvasTypeVariations = {
   body,
   body2,
   h1,
@@ -123,6 +127,17 @@ const type: CanvasType = {
   link,
   button,
   hint,
+}
+
+// Override font family for mono type
+const mono: CanvasTypeVariations = typeVariations
+for (const variation in mono) {
+  mono[variation]['fontFamily'] = fonts.monoFontFamily
+}
+
+const type: CanvasType = {
+  ...typeVariations,
+  mono,
 }
 
 Object.keys(type).forEach(key => {
