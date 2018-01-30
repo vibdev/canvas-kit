@@ -192,9 +192,9 @@
   version "16.0.31"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
-"@workday/canvas-kit-build@^2.4.0":
-  version "2.4.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.4.0.tgz#73bc0f7f718105900ce79cc5bff4df3fe63e4267"
+"@workday/canvas-kit-build@^2.5.0":
+  version "2.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.5.0.tgz#fdd72000980c9c0d6e56f50ab5bcb43314ddcd46"
   dependencies:
     autoprefixer "^7.1.5"
     aws-sdk "^2.176.0"

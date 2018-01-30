@@ -46,8 +46,9 @@ cat > $packageJson << EOF
   "homepage": "https://workdaydesign.com",
   "author": "$author",
   "license": "Apache-2.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es6/index.js",
+  "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-$name"
@@ -59,7 +60,7 @@ cat > $packageJson << EOF
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "canvas-kit-build build-ts index.tsx"
+    "build": "canvas-kit-build build-ts index.tsx --commonjs"
   },
   "keywords": [
     "canvas",

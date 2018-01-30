@@ -6,6 +6,7 @@
     "@types/node": "^8.0.58",
     "@types/react": "^16.0.29",
     "@types/react-dom": "^16.0.3",
+    "@workday/canvas-kit-build": "^2.5.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
@@ -35,9 +36,7 @@
     "typescript": "^2.6.2",
     "validate-commit-msg": "^2.14.0"
   },
-  "dependencies": {
-    "@workday/canvas-kit-build": "^2.4.0"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook",
     "bootstrap": "lerna bootstrap && yarn run build",
