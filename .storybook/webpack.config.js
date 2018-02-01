@@ -2,7 +2,7 @@ const path = require('path')
 
 const modulesPath = path.resolve(__dirname, '../modules')
 
-module.exports = {
+const customConfig = {
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -70,4 +70,10 @@ module.exports = {
       },
     ],
   },
+}
+
+module.exports = (baseConfig, env) => {
+  // Exclude node_modules from js/babel loader
+  baseConfig.module.rules[0].exclude = /node_modules/
+  return Object.assign({}, baseConfig, customConfig)
 }
