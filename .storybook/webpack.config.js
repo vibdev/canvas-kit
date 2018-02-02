@@ -58,15 +58,14 @@ const customRules = [
       },
     ],
   },
-  {
-    test: /\.md$/,
-    use: 'raw-loader',
-  },
 ]
 
 module.exports = (baseConfig, env) => {
   // Exclude node_modules from js/babel loader
   baseConfig.module.rules[0].exclude = /node_modules/
+
+  // Workaround for markdown until storybook-readme is updated
+  baseConfig.module.rules[1].use = 'raw-loader'
 
   // Custom rules
   baseConfig.module.rules = baseConfig.module.rules.concat(customRules)
