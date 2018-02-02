@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-button",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A canvas-styled react button",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -31,6 +31,6 @@
     "button"
   ],
   "dependencies": {
-    "@workday/canvas-kit-react-core": "0.9.0"
+    "@workday/canvas-kit-react-core": "0.10.0"
   }
 }
