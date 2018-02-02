@@ -2,72 +2,76 @@ const path = require('path')
 
 const modulesPath = path.resolve(__dirname, '../modules')
 
-module.exports = {
-  resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+const customRules = [
+  {
+    enforce: 'pre',
+    test: /\.tsx?$/,
+    exclude: /node_modules/,
+    include: modulesPath,
+    loader: 'tslint-loader',
   },
-  module: {
-    rules: [
+  {
+    test: /\.tsx?$/,
+    exclude: /node_modules/,
+    include: modulesPath,
+    loader: 'ts-loader',
+    options: {
+      configFile: '../../.storybook/tsconfig.json',
+    },
+  },
+  {
+    test: /\.scss$/,
+    include: modulesPath,
+    use: [
       {
-        enforce: 'pre',
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        include: modulesPath,
-        loader: 'tslint-loader',
+        loader: 'style-loader', // creates style nodes from JS strings
       },
       {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        include: modulesPath,
-        loader: 'ts-loader',
+        loader: 'css-loader',
+      },
+      {
+        loader: 'postcss-loader',
         options: {
-          configFile: '../../.storybook/tsconfig.json',
+          config: {
+            path: require.resolve('./postcss.config.js'),
+          },
+          sourceMap: true,
         },
       },
       {
-        test: /\.scss$/,
-        include: modulesPath,
-        use: [
-          {
-            loader: 'style-loader', // creates style nodes from JS strings
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                path: require.resolve('./postcss.config.js'),
-              },
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader', // compiles Sass to CSS
-            options: {
-              includePaths: [modulesPath],
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg|ttf)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.md$/,
-        use: 'raw-loader',
+        loader: 'sass-loader', // compiles Sass to CSS
+        options: {
+          includePaths: [modulesPath],
+          sourceMap: true,
+        },
       },
     ],
   },
+  {
+    test: /\.(jpe?g|png|gif|svg|ttf)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+    ],
+  },
+]
+
+module.exports = (baseConfig, env) => {
+  // Exclude node_modules from js/babel loader
+  baseConfig.module.rules[0].exclude = /node_modules/
+
+  // Workaround for markdown until storybook-readme is updated
+  baseConfig.module.rules[1].use = 'raw-loader'
+
+  // Custom rules
+  baseConfig.module.rules = baseConfig.module.rules.concat(customRules)
+
+  // Add `.ts` and `.tsx` as a resolvable extension.
+  baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx']
+
+  return baseConfig
 }
