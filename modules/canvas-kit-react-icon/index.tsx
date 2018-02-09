@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import glamorous from 'glamorous'
-import { colors } from '@workday/canvas-kit-react-core'
+import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import accentIcons, { CanvasAccentIcons as AccentIcons } from '@workday/canvas-accent-icons-web'
 import appletIcons, { CanvasAppletIcons as AppletIcons } from '@workday/canvas-applet-icons-web'
 import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
@@ -22,10 +22,15 @@ const accentIconStyles = ({ color = colors.blueberry500 }) => ({
   },
 })
 
-const appletIconStyles = ({ color = 'blueberry' }) => {
+const appletIconStyles = ({ color = BrandingColors.Blueberry }) => {
+  // Check if valid color
+  if (!(`${color}100` in colors)) {
+    throw Error(`Color "${color}" not found`)
+  }
+
   return {
     '& .color-100': {
-      fill: colors[`${color}100`],
+      fill: colors.frenchVanilla100,
     },
     '& .color-200': {
       fill: colors[`${color}200`],
@@ -34,6 +39,9 @@ const appletIconStyles = ({ color = 'blueberry' }) => {
       fill: colors[`${color}300`],
     },
     '& .color-400': {
+      fill: colors[`${color}400`],
+    },
+    '& .color-400-alpha-20': {
       fill: colors[`${color}400`],
     },
     '& .color-500': {
