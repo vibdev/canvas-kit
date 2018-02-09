@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 
-import Icon, { AccentIcons, AppletIcons, SystemIcons, IconSets } from './index' // tslint:disable-line:import-name
+import { AccentIcon, AccentIcons, AppletIcon, AppletIcons, SystemIcon, SystemIcons } from './index'
 import README from './README.md'
 
 storiesOf('Canvas Kit/Icon', module)
@@ -12,17 +12,17 @@ storiesOf('Canvas Kit/Icon', module)
     <div className="story">
       <h1 className="section-label">Icon</h1>
       <h2>Accent Icon</h2>
-      <Icon name={AccentIcons.Shield} set={IconSets.Accent} />
-      <Icon name={AccentIcons.Shield} set={IconSets.Accent} color={colors.pomegranate500} />
+      <AccentIcon name={AccentIcons.Shield} />
+      <AccentIcon name={AccentIcons.Shield} color={colors.pomegranate500} />
 
       <h2>Applet Icon</h2>
-      <Icon name={AppletIcons.Benefits} set={IconSets.Applet} />
-      <Icon name={AppletIcons.Benefits} set={IconSets.Applet} color={BrandingColors.Pomegranate} />
+      <AppletIcon name={AppletIcons.Benefits} />
+      <AppletIcon name={AppletIcons.Benefits} color={BrandingColors.Pomegranate} />
 
       <h2>System Icon</h2>
-      <Icon name={SystemIcons.ActivityStream} />
-      <Icon name={SystemIcons.ActivityStream} color={colors.blueberry500} />
-      <Icon
+      <SystemIcon name={SystemIcons.ActivityStream} />
+      <SystemIcon name={SystemIcons.ActivityStream} color={colors.blueberry500} />
+      <SystemIcon
         name={SystemIcons.ActivityStream}
         accent={colors.frenchVanilla100}
         fill={colors.blueberry500}
