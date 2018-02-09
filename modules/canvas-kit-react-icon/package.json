@@ -18,5 +18,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx --commonjs"
   },
-  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "icon"]
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "icon"],
+  "dependencies": {
+    "@workday/canvas-accent-icons-web": "^0.2.0",
+    "@workday/canvas-applet-icons-web": "^0.2.0",
+    "@workday/canvas-system-icons-web": "^0.2.0"
+  }
 }
