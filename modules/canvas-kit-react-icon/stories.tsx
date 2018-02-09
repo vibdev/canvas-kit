@@ -13,6 +13,7 @@ storiesOf('Canvas Kit/Icon', module)
       <h1 className="section-label">Icon</h1>
       <h2>Accent Icon</h2>
       <Icon name={AccentIcons.Shield} set={IconSets.Accent} />
+      <Icon name={AccentIcons.Shield} set={IconSets.Accent} color={colors.pomegranate500} />
 
       <h2>Applet Icon</h2>
       <Icon name={AppletIcons.Benefits} set={IconSets.Applet} />
