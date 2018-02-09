@@ -21,4 +21,5 @@ const canvas: CanvasCore = {
   type,
 }
 
+export { colors, depth, spacing, fonts, type }
 export default canvas
