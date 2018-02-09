@@ -13,16 +13,28 @@ export enum IconSets {
 
 export { AccentIcons, AppletIcons, SystemIcons }
 
+type ContainerProps = {
+  accent?: string
+  accentHover?: string
+  background?: string
+  backgroundHover?: string
+  color?: string
+  colorHover?: string
+  fill?: string
+  fillHover?: string
+}
+
 type Props = {
   name: string
   set?: IconSets
-}
+} & ContainerProps
 
 export default class Icon extends Component<Props, {}> {
   public render() {
+    const { name, set } = this.props
     let iconSet
 
-    switch (this.props.set) {
+    switch (set) {
       case IconSets.Accent:
         iconSet = accentIcons
         break
@@ -34,29 +46,43 @@ export default class Icon extends Component<Props, {}> {
         iconSet = systemIcons
     }
 
-    if (!(this.props.name in iconSet)) {
-      throw Error(`Icon "${this.props.name}" not found in "${IconSets[this.props.set]}" icon set`)
+    if (!(name in iconSet)) {
+      throw Error(`Icon "${name}" not found in "${IconSets[set]}" icon set`)
     }
 
-    const icon = iconSet[this.props.name]
+    const icon = iconSet[name]
 
-    const IconContainer = glamorous.span({
-      '& .wd-icon-fill': {
-        fill: colors.primary.iconStandard,
-      },
-      ':hover .wd-icon-fill': {
-        fill: colors.primary.iconHover,
-      },
-      '& .wd-icon-accent': {
-        fill: colors.primary.iconStandard,
-      },
-      ':hover .wd-icon-accent': {
-        fill: colors.primary.iconHover,
-      },
-      '& .wd-icon-background': {
-        fill: 'transparent',
-      },
-    })
+    const IconContainer = glamorous.span<ContainerProps>(
+      ({
+        accent,
+        accentHover,
+        background = 'transparent',
+        backgroundHover = 'transparent',
+        color = colors.primary.iconStandard,
+        colorHover = colors.primary.iconHover,
+        fill,
+        fillHover,
+      }) => ({
+        '& .wd-icon-fill': {
+          fill: fill || color,
+        },
+        ':hover .wd-icon-fill': {
+          fill: fillHover || colorHover,
+        },
+        '& .wd-icon-accent': {
+          fill: accent || color,
+        },
+        ':hover .wd-icon-accent': {
+          fill: accentHover || colorHover,
+        },
+        '& .wd-icon-background': {
+          fill: background,
+        },
+        ':hover .wd-icon-background': {
+          fill: backgroundHover,
+        },
+      })
+    )
 
     return <IconContainer dangerouslySetInnerHTML={{ __html: icon }} {...this.props} />
   }

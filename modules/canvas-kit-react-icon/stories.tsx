@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
+import { colors } from '@workday/canvas-kit-react-core'
 
 import Icon, { AccentIcons, AppletIcons, SystemIcons, IconSets } from './index' // tslint:disable-line:import-name
 import README from './README.md'
@@ -18,5 +19,12 @@ storiesOf('Canvas Kit/Icon', module)
 
       <h2>System Icon</h2>
       <Icon name={SystemIcons.ActivityStream} />
+      <Icon name={SystemIcons.ActivityStream} color={colors.blueberry500} />
+      <Icon
+        name={SystemIcons.ActivityStream}
+        accent={colors.frenchVanilla100}
+        fill={colors.blueberry500}
+        background={colors.blueberry500}
+      />
     </div>
   ))
