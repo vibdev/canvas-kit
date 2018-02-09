@@ -218,3 +218,30 @@ export type CanvasColors = CanvasExtendedColorPalette & {
   gradients: CanvasGradients
   primary: CanvasPrimaryPalette
 }
+
+export const enum BrandingColors {
+  Cinnamon = 'cinnamon',
+  Peach = 'peach',
+  ChiliMango = 'chiliMango',
+  Cantaloupe = 'cantaloupe',
+  SourLemon = 'sourLemon',
+  JuicyPear = 'juicyPear',
+  Kiwi = 'kiwi',
+  GreenApple = 'greenApple',
+  Watermelon = 'watermelon',
+  Jewel = 'jewel',
+  Toothpaste = 'toothpaste',
+  Blueberry = 'blueberry',
+  Plum = 'plum',
+  BerrySmoothie = 'berrySmoothie',
+  Blackberry = 'blackberry',
+  IslandPunch = 'islandPunch',
+  GrapeSoda = 'grapeSoda',
+  Pomegranate = 'pomegranate',
+  FruitPunch = 'fruitPunch',
+  RootBeer = 'rootBeer',
+  ToastedMarshmallow = 'toastedMarshmallow',
+  Cappuccino = 'cappuccino',
+  Licorice = 'licorice',
+  BlackPepper = 'blackPepper',
+}
