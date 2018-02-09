@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import glamorous from 'glamorous'
 import { colors } from '@workday/canvas-kit-react-core'
-import canvasAccentIconsWeb, {
-  CanvasAccentIcons as AccentIcons,
-} from '@workday/canvas-accent-icons-web'
-import canvasAppletIconsWeb, {
-  CanvasAppletIcons as AppletIcons,
-} from '@workday/canvas-applet-icons-web'
-import canvasSystemIconsWeb, {
-  CanvasSystemIcons as SystemIcons,
-} from '@workday/canvas-system-icons-web'
+import accentIcons, { CanvasAccentIcons as AccentIcons } from '@workday/canvas-accent-icons-web'
+import appletIcons, { CanvasAppletIcons as AppletIcons } from '@workday/canvas-applet-icons-web'
+import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
 
 export enum IconSets {
   Accent,
@@ -30,14 +24,14 @@ export default class Icon extends Component<Props, {}> {
 
     switch (this.props.set) {
       case IconSets.Accent:
-        iconSet = canvasAccentIconsWeb
+        iconSet = accentIcons
         break
       case IconSets.Applet:
-        iconSet = canvasAppletIconsWeb
+        iconSet = appletIcons
         break
       case IconSets.System:
       default:
-        iconSet = canvasSystemIconsWeb
+        iconSet = systemIcons
     }
 
     if (!(this.props.name in iconSet)) {

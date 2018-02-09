@@ -15,7 +15,10 @@
         "react": "React",
         "canvasKitReactCore": "canvas",
         "canvasKitReactButton": "Button",
-        "READMEMd": "README"
+        "READMEMd": "README",
+        "canvasAccentIconsWeb": "accentIcons",
+        "canvasAppletIconsWeb": "appletIcons",
+        "canvasSystemIconsWeb": "systemIcons"
       }
     ],
     "semicolon": [true, "never"],
