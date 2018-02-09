@@ -17,6 +17,6 @@ storiesOf('Canvas Kit/Icon', module)
       <Icon name={AppletIcons.Benefits} set={IconSets.Applet} />
 
       <h2>System Icon</h2>
-      <Icon name={SystemIcons.Audio} />
+      <Icon name={SystemIcons.ActivityStream} />
     </div>
   ))

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import glamorous from 'glamorous'
+import { colors } from '@workday/canvas-kit-react-core'
 import canvasAccentIconsWeb, {
   CanvasAccentIcons as AccentIcons,
 } from '@workday/canvas-accent-icons-web'
@@ -44,6 +46,24 @@ export default class Icon extends Component<Props, {}> {
 
     const icon = iconSet[this.props.name]
 
-    return <span dangerouslySetInnerHTML={{ __html: icon }} {...this.props} />
+    const IconContainer = glamorous.span({
+      '& .wd-icon-fill': {
+        fill: colors.primary.iconStandard,
+      },
+      ':hover .wd-icon-fill': {
+        fill: colors.primary.iconHover,
+      },
+      '& .wd-icon-accent': {
+        fill: colors.primary.iconStandard,
+      },
+      ':hover .wd-icon-accent': {
+        fill: colors.primary.iconHover,
+      },
+      '& .wd-icon-background': {
+        fill: 'transparent',
+      },
+    })
+
+    return <IconContainer dangerouslySetInnerHTML={{ __html: icon }} {...this.props} />
   }
 }
