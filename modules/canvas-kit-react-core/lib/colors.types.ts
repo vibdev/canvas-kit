@@ -219,7 +219,7 @@ export type CanvasColors = CanvasExtendedColorPalette & {
   primary: CanvasPrimaryPalette
 }
 
-export const enum BrandingColors {
+export enum BrandingColors {
   Cinnamon = 'cinnamon',
   Peach = 'peach',
   ChiliMango = 'chiliMango',

@@ -1,3 +1,3 @@
-export { default as AccentIcon, AccentIcons } from './lib/AccentIcon'
-export { default as AppletIcon, AppletIcons } from './lib/AppletIcon'
-export { default as SystemIcon, SystemIcons } from './lib/SystemIcon'
+export { default as AccentIcon } from './lib/AccentIcon'
+export { default as AppletIcon } from './lib/AppletIcon'
+export { default as SystemIcon } from './lib/SystemIcon'

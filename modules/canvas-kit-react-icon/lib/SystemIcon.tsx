@@ -4,8 +4,6 @@ import { colors } from '@workday/canvas-kit-react-core'
 import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
 import Icon from './Icon'
 
-export { SystemIcons }
-
 const styles = ({
   accent,
   accentHover,
@@ -37,7 +35,7 @@ const styles = ({
 })
 
 export type Props = {
-  name: string
+  name: SystemIcons
   accent?: string
   accentHover?: string
   background?: string
@@ -49,6 +47,8 @@ export type Props = {
 }
 
 export default class SystemIcon extends Icon<Props, {}> {
+  public static Icons = SystemIcons
+
   constructor(props) {
     super(props, systemIcons, styles)
   }

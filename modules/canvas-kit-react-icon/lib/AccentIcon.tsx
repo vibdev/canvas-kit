@@ -4,8 +4,6 @@ import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import accentIcons, { CanvasAccentIcons as AccentIcons } from '@workday/canvas-accent-icons-web'
 import Icon from './Icon'
 
-export { AccentIcons }
-
 const styles = ({ color = colors.blueberry500 }): CSSProperties => ({
   '& .color-500': {
     fill: color,
@@ -16,11 +14,13 @@ const styles = ({ color = colors.blueberry500 }): CSSProperties => ({
 })
 
 export type Props = {
-  name: string
+  name: AccentIcons
   color?: string
 }
 
 export default class AccentIcon extends Icon<Props, {}> {
+  public static Icons = AccentIcons
+
   constructor(props) {
     super(props, accentIcons, styles)
   }

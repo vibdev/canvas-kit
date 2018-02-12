@@ -4,8 +4,6 @@ import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import appletIcons, { CanvasAppletIcons as AppletIcons } from '@workday/canvas-applet-icons-web'
 import Icon from './Icon'
 
-export { AppletIcons }
-
 const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
   // Check if valid color
   if (!(`${color}100` in colors)) {
@@ -35,11 +33,14 @@ const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
 }
 
 export type Props = {
-  name: string
-  color?: string
+  name: AppletIcons
+  color?: BrandingColors
 }
 
 export default class AppletIcon extends Icon<Props, {}> {
+  public static Icons = AppletIcons
+  public static Colors = BrandingColors
+
   constructor(props) {
     super(props, appletIcons, styles)
   }
