@@ -12,6 +12,7 @@ import { AccentIcon } from '@workday/canvas-kit-react-icon'
 
 <AccentIcon name={AccentIcon.Icons.Shield} />
 <AccentIcon name={AccentIcon.Icons.Shield} color={colors.pomegranate500} />
+<AccentIcon name={AccentIcon.Icons.Shield} size={80} />
 ```
 
 #### Properties
@@ -27,6 +28,10 @@ Name of the icon. Must be a member of the `AccentIcon.Icons` static enum.
 Default: `colors.blueberry500`  
 Icon color.
 
+**`size`**  
+Default: `56`  
+Icon size in `px`.
+
 ### Applet Icons
 
 ```jsx
@@ -34,6 +39,7 @@ import { AppletIcon } from '@workday/canvas-kit-react-icon'
 
 <AppletIcon name={AppletIcon.Icons.Benefits} />
 <AppletIcon name={AppletIcon.Icons.Benefits} color={AppletIcon.Colors.Pomegranate} />
+<AppletIcon name={AppletIcon.Icons.Benefits} size={60} />
 ```
 
 #### Properties
@@ -49,6 +55,10 @@ Name of the icon. Must be a member of the `AppletIcon.Icons` static enum.
 Default: `AppletIcon.Colors.Blueberry`  
 Icon color. Must use a member of the `AppletIcon.Colors` enum.
 
+**`size`**  
+Default: `92`  
+Icon size in `px`.
+
 ### System Icons
 
 ```jsx
@@ -63,6 +73,7 @@ import { SystemIcon } from '@workday/canvas-kit-react-icon'
   fill={colors.blueberry500}
   background={colors.blueberry500}
 />
+<SystemIcon name={SystemIcon.Icons.ActivityStream} size={48} />
 ```
 
 #### Properties
@@ -73,6 +84,10 @@ import { SystemIcon } from '@workday/canvas-kit-react-icon'
 Name of the icon. Must be a member of the `SystemIcon.Icons` static enum.
 
 **Optional**
+
+**`size`**  
+Default: `24`  
+Icon size in `px`.
 
 **`color`**  
 Default: `colors.primary.iconStandard`  
