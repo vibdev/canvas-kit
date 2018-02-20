@@ -14,6 +14,13 @@ storiesOf('Canvas Kit/Icon', module)
       <h2>Accent Icon</h2>
       <AccentIcon name={AccentIcon.Icons.Shield} />
       <AccentIcon name={AccentIcon.Icons.Shield} color={colors.pomegranate500} />
+      <div style={{ backgroundColor: colors.blueberry500, display: 'inline-block' }}>
+        <AccentIcon
+          name={AccentIcon.Icons.Shield}
+          color={colors.frenchVanilla100}
+          transparent={true}
+        />
+      </div>
       <br />
       <AccentIcon name={AccentIcon.Icons.Shield} size={80} />
 

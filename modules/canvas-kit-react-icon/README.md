@@ -32,6 +32,10 @@ Icon color.
 Default: `56`  
 Icon size in `px`.
 
+**`transparent`**  
+Default: `false`  
+Toggle for transparent accent icon background. If false, the background fill will be white.
+
 ### Applet Icons
 
 ```jsx
