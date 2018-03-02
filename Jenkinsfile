@@ -24,6 +24,7 @@ timestamps {
           echo 'Checking out repo'
           dir(repoBaseDir) {
             getGit.start()
+            sh('git fetch --tags')
           }
         }
 
