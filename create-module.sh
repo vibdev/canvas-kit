@@ -69,7 +69,10 @@ cat > $packageJson << EOF
     "components",
     "workday",
     "$name"
-  ]
+  ],
+	"peerDependencies": {
+    "react": ">= 15 < 16"
+  }
 }
 EOF
 
