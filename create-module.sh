@@ -70,7 +70,7 @@ cat > $packageJson << EOF
     "workday",
     "$name"
   ],
-	"peerDependencies": {
+  "peerDependencies": {
     "react": ">= 15 < 16"
   }
 }
