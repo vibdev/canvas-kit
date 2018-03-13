@@ -3,6 +3,7 @@
   "packages": ["modules/*"],
   "version": "independent",
   "npmClient": "yarn",
+  "useWorkspaces": true,
   "command": {
     "publish": {
       "message": "chore(release): Publish"

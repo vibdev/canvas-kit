@@ -202,6 +202,22 @@
   version "16.0.36"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
 
+"@workday/canvas-accent-icons-web@^0.5.0":
+  version "0.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-accent-icons-web/-/@workday/canvas-accent-icons-web-0.5.0.tgz#7958219fe51c0fb223ca39e2ae9bcb031c375e22"
+
+"@workday/canvas-applet-icons-web@^0.5.0":
+  version "0.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-applet-icons-web/-/@workday/canvas-applet-icons-web-0.5.0.tgz#2516d0a1ccd3b583bf0d5aa90169db3967b8e3f9"
+
+"@workday/canvas-colors-web@^0.1.3":
+  version "0.1.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.1.3.tgz#e9efbe82e81a236d185b22547d190c28219fcdaa"
+
+"@workday/canvas-depth-web@^0.5.0":
+  version "0.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.5.0.tgz#2162f43e8f1e9e03b2b3786d7cb634a9f2345e4a"
+
 "@workday/canvas-kit-build@^2.5.0":
   version "2.5.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-2.5.0.tgz#fdd72000980c9c0d6e56f50ab5bcb43314ddcd46"
@@ -222,6 +238,14 @@
     rimraf "^2.6.2"
     shelljs "^0.7.8"
     typescript "^2.6.2"
+
+"@workday/canvas-space-web@^0.1.2":
+  version "0.1.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.1.2.tgz#ddf171287396dfab4c12c924432fcf48bf1dc501"
+
+"@workday/canvas-system-icons-web@^0.5.0":
+  version "0.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.5.0.tgz#6c6a5e22f6cef64d9f5f64a8ed4bb7ccd5a0a650"
 
 JSONStream@^1.0.4:
   version "1.3.2"
@@ -3569,9 +3593,9 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.11.0:
-  version "4.11.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.11.0.tgz#cb846dda1450c895c59a34060fb19e3251ed619f"
+glamorous@^4.11.2:
+  version "4.11.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.11.4.tgz#61b333e1ec552abbe48e2fea48fea89fc0026149"
   dependencies:
     brcast "^3.0.0"
     fast-memoize "^2.2.7"
@@ -3581,9 +3605,9 @@ glamorous@^4.11.0:
     react-html-attributes "^1.3.0"
     svg-tag-names "^1.1.0"
 
-glamorous@^4.11.2:
-  version "4.11.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.11.4.tgz#61b333e1ec552abbe48e2fea48fea89fc0026149"
+glamorous@^4.12.0:
+  version "4.12.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.12.0.tgz#47b864326ca37e1f1ea6d523b3d23402f6657af1"
   dependencies:
     brcast "^3.0.0"
     fast-memoize "^2.2.7"
@@ -6347,12 +6371,6 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-svg@^2.1.22:
-  version "2.2.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-svg/-/react-svg-2.2.5.tgz#8bc31cac72c0a24199fce66e66fcbc1d1bebb75b"
-  dependencies:
-    svg-injector "^1.1.3"
-
 react-transition-group@^1.1.2:
   version "1.2.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-transition-group/-/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"
@@ -7291,10 +7309,6 @@ supports-color@^5.1.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/supports-color/-/supports-color-5.1.0.tgz#058a021d1b619f7ddf3980d712ea3590ce7de3d5"
   dependencies:
     has-flag "^2.0.0"
-
-svg-injector@^1.1.3:
-  version "1.1.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svg-injector/-/svg-injector-1.1.3.tgz#8fba18d7419e5f818e712c4f82d83ee357610e61"
 
 svg-tag-names@^1.1.0:
   version "1.1.1"

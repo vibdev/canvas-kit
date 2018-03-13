@@ -11,26 +11,21 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button"
+    "url":
+      "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button"
   },
-  "files": [
-    "dist/",
-    "lib/",
-    "index.tsx"
-  ],
+  "files": ["dist/", "lib/", "index.tsx"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx --commonjs"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "button"
-  ],
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
+  "peerDependencies": {
+    "react": ">= 15 < 16"
+  },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "0.12.0"
+    "@workday/canvas-kit-react-core": "0.12.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.12.0"
   }
 }
