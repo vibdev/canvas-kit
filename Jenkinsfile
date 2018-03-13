@@ -15,7 +15,7 @@ setEnv.cdn('beta')
 def awsProfileStorybook = "jenkinsprs"
 
 timestamps {
-  provisionPod(dockerTag: 'node8') {
+  provisionPod(dockerTag: 'node8-awscli') {
     node(getNames()) {
       ws(workspaceDir) {
 
