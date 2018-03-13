@@ -42,7 +42,6 @@ timestamps {
             parallel(
                     npmrc: { setupNpmrc() },
                     awscli: {
-                      installAwsCli()
                       ifBranch.isNotMaster {
                         setupAwsProfile(
                                 profile: awsProfileStorybook,
