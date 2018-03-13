@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.10.1"></a>
+## [0.10.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.10.0...@workday/canvas-kit-react@0.10.1) (2018-03-13)
+
+
+### Bug Fixes
+
+* **dependencies:** add missing dependencies and peerDeps ([7201f93](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/7201f93))
+
+
+
+
 <a name="0.10.0"></a>
 # 0.10.0 (2018-02-20)
 

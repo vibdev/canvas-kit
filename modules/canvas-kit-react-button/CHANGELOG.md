@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.11.1"></a>
+## [0.11.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.11.0...@workday/canvas-kit-react-button@0.11.1) (2018-03-13)
+
+
+### Bug Fixes
+
+* **dependencies:** add missing dependencies and peerDeps ([7201f93](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/7201f93))
+
+
+
+
 <a name="0.11.0"></a>
 # 0.11.0 (2018-02-20)
 
