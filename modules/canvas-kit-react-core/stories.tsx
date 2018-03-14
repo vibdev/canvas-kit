@@ -1,3 +1,4 @@
+/// <reference path="../../typings.d.ts" />
 import React from 'react'
 import glamorous from 'glamorous'
 import { storiesOf } from '@storybook/react'
