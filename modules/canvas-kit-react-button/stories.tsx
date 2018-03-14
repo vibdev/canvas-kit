@@ -3,7 +3,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
-import { Button } from './index' // tslint:disable-line:import-name
+import { Button, ButtonTypes, ButtonSizes } from './index' // tslint:disable-line:import-name
 import README from './README.md'
 
 storiesOf('Canvas Kit/Button', module)
@@ -11,6 +11,22 @@ storiesOf('Canvas Kit/Button', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Button</h1>
+      <Button buttonType={ButtonTypes.Primary}>Primary Button</Button>
       <Button>Secondary Button</Button>
+      <Button buttonType={ButtonTypes.Delete}>Delete Button</Button>
+
+      <br />
+
+      <Button buttonType={ButtonTypes.Primary} buttonSize={ButtonSizes.Medium}>
+        Primary Button
+      </Button>
+      <Button buttonSize={ButtonSizes.Medium}>Secondary Button</Button>
+      <Button buttonType={ButtonTypes.Delete} buttonSize={ButtonSizes.Medium}>
+        Delete Button
+      </Button>
+
+      <br />
+
+      <Button buttonSize={ButtonSizes.Small}>Secondary Button</Button>
     </div>
   ))

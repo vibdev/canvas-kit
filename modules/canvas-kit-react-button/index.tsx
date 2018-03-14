@@ -1,1 +1,1 @@
-export { default as Button } from './lib/Button'
+export { default as Button, ButtonSizes, ButtonTypes } from './lib/Button'

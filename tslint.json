@@ -18,7 +18,8 @@
         "READMEMd": "README",
         "canvasAccentIconsWeb": "accentIcons",
         "canvasAppletIconsWeb": "appletIcons",
-        "canvasSystemIconsWeb": "systemIcons"
+        "canvasSystemIconsWeb": "systemIcons",
+        "classnames": "classNames"
       }
     ],
     "semicolon": [true, "never"],
