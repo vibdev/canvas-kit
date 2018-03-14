@@ -10,6 +10,6 @@ storiesOf('Canvas Kit/Button', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Button</h1>
-      <Button />
+      <Button>Secondary Button</Button>
     </div>
   ))
