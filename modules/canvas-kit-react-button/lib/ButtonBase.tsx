@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
 import classNames from 'classnames'
-import canvas from '@workday/canvas-kit-react-core'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
 import { ClassNameProperties } from './types'
 
