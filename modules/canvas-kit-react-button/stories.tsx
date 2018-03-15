@@ -2,8 +2,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
+import { SystemIcon } from '@workday/canvas-kit-react-icon'
 
-import { Button, ButtonTypes, ButtonSizes } from './index' // tslint:disable-line:import-name
+import { Button, ButtonTypes, ButtonSizes, IconButton } from './index' // tslint:disable-line:import-name
 import README from './README.md'
 
 storiesOf('Canvas Kit/Button', module)
@@ -28,5 +29,11 @@ storiesOf('Canvas Kit/Button', module)
       <br />
 
       <Button buttonSize={ButtonSizes.Small}>Secondary Button</Button>
+
+      <br />
+
+      <IconButton buttonType={ButtonTypes.Primary}>
+        <SystemIcon name={SystemIcon.Icons.Edit} />
+      </IconButton>
     </div>
   ))

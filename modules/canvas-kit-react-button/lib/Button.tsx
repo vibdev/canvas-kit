@@ -16,22 +16,43 @@ export enum ButtonSizes {
   Large,
 }
 
-export type Props = {
+export interface ButtonProps {
   buttonType?: ButtonTypes
   buttonSize?: ButtonSizes
 }
 
-class Button extends Component<Props, {}> {
-  public render() {
-    const classes = classNames({
-      'wdc-btn': true,
-      'wdc-btn-primary': this.props.buttonType === ButtonTypes.Primary,
-      'wdc-btn-delete': this.props.buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': this.props.buttonSize === ButtonSizes.Small,
-      'wdc-btn-medium': this.props.buttonSize === ButtonSizes.Medium,
-    })
+export interface ClassNameProperties {
+  [key: string]: boolean
+}
 
-    return <button className={classes}>{this.props.children}</button>
+class Button<Props = ButtonProps, State = {}> extends Component<Props, State> {
+  protected classes: ClassNameProperties
+
+  public constructor(props) {
+    super(props)
+
+    this.classes = {
+      'wdc-btn': true,
+      'wdc-btn-primary': props.buttonType === ButtonTypes.Primary,
+      'wdc-btn-delete': props.buttonType === ButtonTypes.Delete,
+      'wdc-btn-small': props.buttonSize === ButtonSizes.Small,
+      'wdc-btn-medium': props.buttonSize === ButtonSizes.Medium,
+    }
+  }
+
+  protected addClasses(classObj: ClassNameProperties) {
+    this.classes = {
+      ...this.classes,
+      ...classObj,
+    }
+  }
+
+  protected removeClasses(classes) {
+    classes.forEach(className => delete this.classes[className])
+  }
+
+  public render() {
+    return <button className={classNames(this.classes)}>{this.props.children}</button>
   }
 }
 
