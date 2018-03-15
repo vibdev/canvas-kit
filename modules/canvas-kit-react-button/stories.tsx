@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
 
-import { Button, ButtonTypes, ButtonSizes, IconButton } from './index' // tslint:disable-line:import-name
+import { Button, IconButton } from './index' // tslint:disable-line:import-name
 import README from './README.md'
 
 storiesOf('Canvas Kit/Button', module)
@@ -12,27 +12,27 @@ storiesOf('Canvas Kit/Button', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Button</h1>
-      <Button buttonType={ButtonTypes.Primary}>Primary Button</Button>
+      <Button buttonType={Button.Types.Primary}>Primary Button</Button>
       <Button>Secondary Button</Button>
-      <Button buttonType={ButtonTypes.Delete}>Delete Button</Button>
+      <Button buttonType={Button.Types.Delete}>Delete Button</Button>
 
       <br />
 
-      <Button buttonType={ButtonTypes.Primary} buttonSize={ButtonSizes.Medium}>
+      <Button buttonType={Button.Types.Primary} buttonSize={Button.Sizes.Medium}>
         Primary Button
       </Button>
-      <Button buttonSize={ButtonSizes.Medium}>Secondary Button</Button>
-      <Button buttonType={ButtonTypes.Delete} buttonSize={ButtonSizes.Medium}>
+      <Button buttonSize={Button.Sizes.Medium}>Secondary Button</Button>
+      <Button buttonType={Button.Types.Delete} buttonSize={Button.Sizes.Medium}>
         Delete Button
       </Button>
 
       <br />
 
-      <Button buttonSize={ButtonSizes.Small}>Secondary Button</Button>
+      <Button buttonSize={Button.Sizes.Small}>Secondary Button</Button>
 
       <br />
 
-      <IconButton buttonType={ButtonTypes.Primary}>
+      <IconButton>
         <SystemIcon name={SystemIcon.Icons.Edit} />
       </IconButton>
     </div>

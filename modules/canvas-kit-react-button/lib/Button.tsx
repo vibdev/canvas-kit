@@ -3,52 +3,27 @@ import glamorous from 'glamorous'
 import classNames from 'classnames'
 import canvas from '@workday/canvas-kit-react-core'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
-
-export enum ButtonTypes {
-  Primary,
-  Secondary,
-  Delete,
-}
-
-export enum ButtonSizes {
-  Small,
-  Medium,
-  Large,
-}
+import ButtonBase from './ButtonBase'
+import { ClassNameProperties, ButtonTypes, ButtonSizes } from './types'
 
 export interface ButtonProps {
   buttonType?: ButtonTypes
   buttonSize?: ButtonSizes
 }
 
-export interface ClassNameProperties {
-  [key: string]: boolean
-}
-
-class Button<Props = ButtonProps, State = {}> extends Component<Props, State> {
-  protected classes: ClassNameProperties
+class Button<Props = ButtonProps, State = {}> extends ButtonBase<Props, State> {
+  public static Types = ButtonTypes
+  public static Sizes = ButtonSizes
 
   public constructor(props) {
     super(props)
 
-    this.classes = {
-      'wdc-btn': true,
+    this.addClasses({
       'wdc-btn-primary': props.buttonType === ButtonTypes.Primary,
       'wdc-btn-delete': props.buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': props.buttonSize === ButtonSizes.Small,
-      'wdc-btn-medium': props.buttonSize === ButtonSizes.Medium,
-    }
-  }
-
-  protected addClasses(classObj: ClassNameProperties) {
-    this.classes = {
-      ...this.classes,
-      ...classObj,
-    }
-  }
-
-  protected removeClasses(classes) {
-    classes.forEach(className => delete this.classes[className])
+      'wdc-btn-small': props.buttonSize === Button.Sizes.Small,
+      'wdc-btn-medium': props.buttonSize === Button.Sizes.Medium,
+    })
   }
 
   public render() {
