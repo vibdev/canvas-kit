@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
-import { ClassNameProperties } from './types'
+import { ReactButton, ClassNameProperties } from './types'
 
-class ButtonBase<Props = {}, State = {}> extends Component<Props, State> {
+class ButtonBase<Props = {}, State = {}> extends Component<ReactButton & Props, State> {
   protected classes: ClassNameProperties
 
   protected constructor(props) {
@@ -26,7 +26,12 @@ class ButtonBase<Props = {}, State = {}> extends Component<Props, State> {
   }
 
   public render() {
-    return <button className={classNames(this.classes)}>{this.props.children}</button>
+    const classes = classNames(this.classes, this.props.className)
+    return (
+      <button {...this.props} className={classes}>
+        {this.props.children}
+      </button>
+    )
   }
 }
 

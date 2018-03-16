@@ -32,6 +32,16 @@ storiesOf('Canvas Kit/Button', module)
 
       <br />
 
+      <Button buttonType={Button.Types.Primary} disabled={true}>
+        Primary Button
+      </Button>
+      <Button disabled={true}>Secondary Button</Button>
+      <Button buttonType={Button.Types.Delete} disabled={true}>
+        Delete Button
+      </Button>
+
+      <br />
+
       <IconButton>
         <SystemIcon name={SystemIcon.Icons.Edit} />
       </IconButton>
