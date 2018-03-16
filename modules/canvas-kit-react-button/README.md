@@ -1,6 +1,6 @@
 # Canvas Kit Button
 
-Components implementing Canvas accent, applet, and system icons.
+Components implementing Canvas buttons.
 
 ## Usage
 
