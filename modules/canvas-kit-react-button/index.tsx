@@ -1,7 +1,4 @@
-import React from 'react'
-import glamorous from 'glamorous'
-import canvas from '@workday/canvas-kit-react-core'
-
-const MyButton = glamorous.button(canvas.type.button)
-
-export default () => <MyButton>Hello World</MyButton>
+export { default as ButtonBase } from './lib/ButtonBase'
+export { default as Button, ButtonProps } from './lib/Button'
+export { default as IconButton } from './lib/IconButton'
+export * from './lib/types'

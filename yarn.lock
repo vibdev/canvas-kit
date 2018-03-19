@@ -239,6 +239,19 @@
     shelljs "^0.7.8"
     typescript "^2.6.2"
 
+"@workday/canvas-kit-css-button@^1.0.6":
+  version "1.0.6"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-button/-/@workday/canvas-kit-css-button-1.0.6.tgz#525a29560a92bb3400b5a3211e9706b55def7397"
+  dependencies:
+    "@workday/canvas-kit-css-core" "1.5.0"
+
+"@workday/canvas-kit-css-core@1.5.0":
+  version "1.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-core/-/@workday/canvas-kit-css-core-1.5.0.tgz#7833d4206c4a75804359a6adb84a5bf9d5d0572f"
+  dependencies:
+    "@workday/canvas-colors-web" "^0.1.3"
+    "@workday/canvas-depth-web" "^0.5.0"
+
 "@workday/canvas-space-web@^0.1.2":
   version "0.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.1.2.tgz#ddf171287396dfab4c12c924432fcf48bf1dc501"
