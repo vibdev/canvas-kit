@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-button",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "A canvas-styled react button",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -11,15 +11,25 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url":
-      "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button"
   },
-  "files": ["dist/", "lib/", "index.tsx"],
+  "files": [
+    "dist/",
+    "lib/",
+    "index.tsx"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx --commonjs"
   },
-  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "button"],
+  "keywords": [
+    "canvas",
+    "canvas-kit",
+    "react",
+    "components",
+    "workday",
+    "button"
+  ],
   "peerDependencies": {
     "react": ">= 15 < 16"
   },
@@ -27,6 +37,6 @@
     "@workday/canvas-kit-css-button": "^1.0.6"
   },
   "devDependencies": {
-    "@workday/canvas-kit-react-icon": "^0.2.1"
+    "@workday/canvas-kit-react-icon": "0.2.2"
   }
 }

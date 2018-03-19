@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.11.1...@workday/canvas-kit-react-button@0.12.0) (2018-03-19)
+
+
+### Features
+
+* **button:** add base button styling ([7899705](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/7899705))
+* **ButtonBase:** add base button class ([c15ded8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/c15ded8))
+* **ButtonBase:** add support for all button props ([efc185e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/efc185e))
+* **IconButton:** add component ([ccc5c3a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/ccc5c3a))
+* **styling:** add secondary button styling ([e2cdd3e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e2cdd3e))
+
+
+
+
 <a name="0.11.1"></a>
 ## [0.11.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.11.0...@workday/canvas-kit-react-button@0.11.1) (2018-03-13)
 

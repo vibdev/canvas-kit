@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.12.2"></a>
+## [0.12.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.12.1...@workday/canvas-kit-react-core@0.12.2) (2018-03-19)
+
+
+
+
+**Note:** Version bump only for package @workday/canvas-kit-react-core
+
 <a name="0.12.1"></a>
 ## [0.12.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.12.0...@workday/canvas-kit-react-core@0.12.1) (2018-03-13)
 
