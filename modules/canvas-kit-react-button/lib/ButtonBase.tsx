@@ -3,39 +3,25 @@ import classNames from 'classnames'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
 import { ReactButton, ClassNameProperties } from './types'
 
-class ButtonBase<Props = {}, State = {}> extends Component<ReactButton & Props, State> {
-  protected classes: ClassNameProperties
-  protected buttonProps: ReactButton
+export interface ButtonBaseProps {
+  btnClasses?: ClassNameProperties
+  btnProps?: ReactButton
+}
 
-  protected constructor(props) {
-    super(props)
-
-    this.classes = {
-      'wdc-btn': true,
-    }
-  }
-
-  protected addClasses(classObj: ClassNameProperties) {
-    this.classes = {
-      ...this.classes,
-      ...classObj,
-    }
-  }
-
-  protected removeClasses(classes: [string]) {
-    classes.forEach(className => delete this.classes[className])
-  }
-
-  protected setComponentProps(props) {
-    this.buttonProps = props
+class ButtonBase extends Component<ButtonBaseProps, {}> {
+  protected static classes: ClassNameProperties = {
+    'wdc-btn': true,
   }
 
   public render() {
-    const classes = classNames(this.classes, this.props.className)
-    const props = this.buttonProps || this.props
+    const classes = classNames(
+      ButtonBase.classes,
+      this.props.btnClasses,
+      this.props.btnProps.className
+    )
     return (
-      <button {...props} className={classes}>
-        {this.props.children}
+      <button {...this.props.btnProps} className={classes}>
+        {this.props.btnProps.children}
       </button>
     )
   }
