@@ -5,6 +5,7 @@ import { ReactButton, ClassNameProperties } from './types'
 
 class ButtonBase<Props = {}, State = {}> extends Component<ReactButton & Props, State> {
   protected classes: ClassNameProperties
+  protected buttonProps: ReactButton
 
   protected constructor(props) {
     super(props)
@@ -25,10 +26,15 @@ class ButtonBase<Props = {}, State = {}> extends Component<ReactButton & Props, 
     classes.forEach(className => delete this.classes[className])
   }
 
+  protected setComponentProps(props) {
+    this.buttonProps = props
+  }
+
   public render() {
     const classes = classNames(this.classes, this.props.className)
+    const props = this.buttonProps || this.props
     return (
-      <button {...this.props} className={classes}>
+      <button {...props} className={classes}>
         {this.props.children}
       </button>
     )

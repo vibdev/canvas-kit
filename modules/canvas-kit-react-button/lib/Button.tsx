@@ -15,12 +15,16 @@ class Button<Props = ButtonProps, State = {}> extends ButtonBase<Props, State> {
   public constructor(props) {
     super(props)
 
+    const { buttonType, buttonSize, ...buttonProps } = props
+
     this.addClasses({
-      'wdc-btn-primary': props.buttonType === ButtonTypes.Primary,
-      'wdc-btn-delete': props.buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': props.buttonSize === Button.Sizes.Small,
-      'wdc-btn-medium': props.buttonSize === Button.Sizes.Medium,
+      'wdc-btn-primary': buttonType === ButtonTypes.Primary,
+      'wdc-btn-delete': buttonType === ButtonTypes.Delete,
+      'wdc-btn-small': buttonSize === Button.Sizes.Small,
+      'wdc-btn-medium': buttonSize === Button.Sizes.Medium,
     })
+
+    this.setComponentProps(buttonProps)
   }
 }
 
