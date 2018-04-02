@@ -24,6 +24,6 @@
     ],
     "semicolon": [true, "never"],
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
-    "strict-boolean-expressions": [true, "allow-string"]
+    "strict-boolean-expressions": [true, "allow-string", "allow-null-union"]
   }
 }
