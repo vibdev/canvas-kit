@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import accentIcons, { CanvasAccentIcons as AccentIcons } from '@workday/canvas-accent-icons-web'
-import Icon from './Icon'
+import Icon, { IconProps } from './Icon'
 
 const styles = ({ color = colors.blueberry500, transparent = false }): CSSProperties => ({
   '& .color-500': {
@@ -13,16 +13,23 @@ const styles = ({ color = colors.blueberry500, transparent = false }): CSSProper
   },
 })
 
-export type Props = {
+export type AccentIconProps = {
   name: AccentIcons
   color?: string
   transparent?: boolean
+  size?: number
 }
 
-export default class AccentIcon extends Icon<Props, {}> {
+export default class AccentIcon extends Component<AccentIconProps, {}> {
   public static Icons = AccentIcons
 
-  constructor(props) {
-    super(props, accentIcons, styles)
+  render() {
+    if (!(this.props.name in accentIcons)) {
+      throw Error(`Icon "${this.props.name}" not found in icon set`)
+    }
+
+    const icon: string = accentIcons[name]
+
+    return <Icon icon={icon} styles={styles} size={this.props.size} />
   }
 }

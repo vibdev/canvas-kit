@@ -1,44 +1,29 @@
 import React, { Component } from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
 
-export type IconProps = {
-  name: string
+export type CSSPropertiesFunction = (...args: any[]) => CSSProperties
+
+export interface IconProps {
+  icon: string
+  styles: CSSProperties | CSSPropertiesFunction
   size?: number
 }
 
-export default class Icon<Props = {}, State = {}> extends Component<IconProps & Props, State> {
-  public name: string
-  public size: string
-  public icon: string
-  public styles: [CSSProperties]
+export default class Icon extends Component<IconProps, {}> {
+  public render() {
+    const styles = [this.props.styles]
 
-  constructor(props, iconSet, styles) {
-    super(props)
-
-    const { name, size } = props
-
-    if (!(name in iconSet)) {
-      throw Error(`Icon "${name}" not found in icon set`)
-    }
-
-    this.name = name
-    this.size = size
-    this.icon = iconSet[name]
-    this.styles = [styles]
-
-    if (this.size) {
-      this.styles.push({
+    if ('size' in this.props) {
+      styles.push({
         '& svg': {
-          width: `${this.size}px`,
-          height: `${this.size}px`,
+          width: `${this.props.size}px`,
+          height: `${this.props.size}px`,
         },
       })
     }
-  }
 
-  public render() {
-    const IconContainer = glamorous.span<Props>(this.styles)
+    const IconContainer = glamorous.span<IconProps>(styles)
 
-    return <IconContainer dangerouslySetInnerHTML={{ __html: this.icon }} {...this.props} />
+    return <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon }} {...this.props} />
   }
 }
