@@ -10,27 +10,17 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon"
+    "url":
+      "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon"
   },
-  "files": [
-    "dist/",
-    "lib/",
-    "index.tsx"
-  ],
+  "files": ["dist/", "lib/", "index.tsx"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.tsx --commonjs"
   },
-  "keywords": [
-    "canvas",
-    "canvas-kit",
-    "react",
-    "components",
-    "workday",
-    "icon"
-  ],
+  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "icon"],
   "peerDependencies": {
-    "react": ">= 15 < 16"
+    "react": ">= 15 < 17"
   },
   "dependencies": {
     "@workday/canvas-accent-icons-web": "^0.5.0",
