@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.12.2"></a>
+## [0.12.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.12.1...@workday/canvas-kit-react-button@0.12.2) (2018-04-06)
+
+
+### Bug Fixes
+
+* **button:** fix button prop warnings ([20bb1dc](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/20bb1dc))
+
+
+
+
 <a name="0.12.1"></a>
 ## [0.12.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.12.0...@workday/canvas-kit-react-button@0.12.1) (2018-03-29)
 
