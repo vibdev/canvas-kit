@@ -187,20 +187,26 @@
   version "8.5.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/node/-/node-8.5.2.tgz#83b8103fa9a2c2e83d78f701a9aa7c9539739aa5"
 
-"@types/react-dom@^16.0.3":
-  version "16.0.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react-dom/-/react-dom-16.0.3.tgz#8accad7eabdab4cca3e1a56f5ccb57de2da0ff64"
+"@types/react-dom@^16.0.4":
+  version "16.0.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react-dom/-/react-dom-16.0.4.tgz#2e8fd45f5443780ed49bf2cdd9809e6091177a7d"
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.0.29":
+"@types/react@*":
   version "16.0.31"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
 "@types/react@^16.0.18":
   version "16.0.36"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.0.36.tgz#ceb5639013bdb92a94147883052e69bb2c22c69b"
+
+"@types/react@^16.3.5":
+  version "16.3.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.3.5.tgz#bd3b21285602ea7cadb4b9e0d9711d96fd5692cc"
+  dependencies:
+    csstype "^2.0.0"
 
 "@workday/canvas-accent-icons-web@^0.5.0":
   version "0.5.0"
@@ -2339,14 +2345,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.0:
-  version "15.6.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/create-react-class/-/create-react-class-15.6.2.tgz#cf1ed15f12aad7f14ef5f2dfe05e6c42f91ef02a"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 create-react-class@^15.6.2:
   version "15.6.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
@@ -2581,6 +2579,10 @@ cssstats@^3.1.0:
     postcss "^5.2.5"
     postcss-safe-parser "^2.0.0"
     specificity "^0.3.0"
+
+csstype@^2.0.0:
+  version "2.1.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/csstype/-/csstype-2.1.1.tgz#37b01a7a9958ef0b88167ff6678deccd732e0ae2"
 
 cuint@latest:
   version "0.2.2"
@@ -6313,14 +6315,14 @@ react-docgen@^2.20.0:
     node-dir "^0.1.10"
     recast "^0.12.6"
 
-react-dom@^15.6.1:
-  version "15.6.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
+react-dom@^16.3.1:
+  version "16.3.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-dom/-/react-dom-16.3.1.tgz#6a3c90a4fb62f915bdbcf6204422d93a7d4ca573"
   dependencies:
-    fbjs "^0.8.9"
+    fbjs "^0.8.16"
     loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-fuzzy@^0.5.1:
   version "0.5.1"
@@ -6405,15 +6407,14 @@ react-treebeard@^2.1.0:
     shallowequal "^0.2.2"
     velocity-react "^1.3.1"
 
-react@^15.6.1:
-  version "15.6.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+react@^16.3.1:
+  version "16.3.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
   dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.9"
+    fbjs "^0.8.16"
     loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-cmd-shim@^1.0.1:
   version "1.0.1"
