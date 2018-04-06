@@ -1,26 +1,28 @@
 import React, { Component } from 'react'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
 import ButtonBase from './ButtonBase'
-import { ClassNameProperties, ButtonTypes, ButtonSizes } from './types'
+import { ReactButton, ClassNameProperties, ButtonTypes, ButtonSizes } from './types'
 
 export interface ButtonProps {
   buttonType?: ButtonTypes
   buttonSize?: ButtonSizes
 }
 
-class Button<Props = ButtonProps, State = {}> extends ButtonBase<Props, State> {
+class Button extends Component<ReactButton & ButtonProps, {}> {
   public static Types = ButtonTypes
   public static Sizes = ButtonSizes
 
-  public constructor(props) {
-    super(props)
+  public render() {
+    const { buttonType, buttonSize, ...elemProps } = this.props
 
-    this.addClasses({
-      'wdc-btn-primary': props.buttonType === ButtonTypes.Primary,
-      'wdc-btn-delete': props.buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': props.buttonSize === Button.Sizes.Small,
-      'wdc-btn-medium': props.buttonSize === Button.Sizes.Medium,
-    })
+    const classes: ClassNameProperties = {
+      'wdc-btn-primary': buttonType === ButtonTypes.Primary,
+      'wdc-btn-delete': buttonType === ButtonTypes.Delete,
+      'wdc-btn-small': buttonSize === Button.Sizes.Small,
+      'wdc-btn-medium': buttonSize === Button.Sizes.Medium,
+    }
+
+    return <ButtonBase btnClasses={classes} btnProps={elemProps} />
   }
 }
 
