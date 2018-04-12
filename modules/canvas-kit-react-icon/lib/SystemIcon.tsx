@@ -57,6 +57,6 @@ export default class SystemIcon extends Component<SystemIconProps, {}> {
 
     const icon: string = systemIcons[this.props.name]
 
-    return <Icon icon={icon} styles={styles} />
+    return <Icon icon={icon} styles={styles} {...this.props} />
   }
 }

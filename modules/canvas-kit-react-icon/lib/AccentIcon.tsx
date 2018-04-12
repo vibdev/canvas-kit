@@ -30,6 +30,6 @@ export default class AccentIcon extends Component<AccentIconProps, {}> {
 
     const icon: string = accentIcons[this.props.name]
 
-    return <Icon icon={icon} styles={styles} size={this.props.size} />
+    return <Icon icon={icon} styles={styles} size={this.props.size} {...this.props} />
   }
 }

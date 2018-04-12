@@ -49,6 +49,6 @@ export default class AppletIcon extends Component<AppletIconProps, {}> {
 
     const icon: string = appletIcons[this.props.name]
 
-    return <Icon icon={icon} styles={styles} />
+    return <Icon icon={icon} styles={styles} {...this.props} />
   }
 }
