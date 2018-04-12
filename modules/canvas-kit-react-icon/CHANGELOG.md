@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.3"></a>
+## [0.2.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.2.2...@workday/canvas-kit-react-icon@0.2.3) (2018-04-12)
+
+
+### Bug Fixes
+
+* **icon:** pass props to Icon component ([680c705](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/680c705))
+* **icon:** use name prop ([281f938](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/281f938))
+
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.2.1...@workday/canvas-kit-react-icon@0.2.2) (2018-03-19)
 
