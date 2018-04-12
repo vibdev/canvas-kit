@@ -28,7 +28,7 @@ export default class AccentIcon extends Component<AccentIconProps, {}> {
       throw Error(`Icon "${this.props.name}" not found in icon set`)
     }
 
-    const icon: string = accentIcons[name]
+    const icon: string = accentIcons[this.props.name]
 
     return <Icon icon={icon} styles={styles} size={this.props.size} />
   }

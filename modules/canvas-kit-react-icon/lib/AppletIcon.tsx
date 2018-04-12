@@ -47,7 +47,7 @@ export default class AppletIcon extends Component<AppletIconProps, {}> {
       throw Error(`Icon "${this.props.name}" not found in icon set`)
     }
 
-    const icon: string = appletIcons[name]
+    const icon: string = appletIcons[this.props.name]
 
     return <Icon icon={icon} styles={styles} />
   }

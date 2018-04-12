@@ -55,7 +55,7 @@ export default class SystemIcon extends Component<SystemIconProps, {}> {
       throw Error(`Icon "${this.props.name}" not found in icon set`)
     }
 
-    const icon: string = systemIcons[name]
+    const icon: string = systemIcons[this.props.name]
 
     return <Icon icon={icon} styles={styles} />
   }
