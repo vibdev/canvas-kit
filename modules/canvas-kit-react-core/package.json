@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-core",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "A group of core primitives (i.e. colors, text, etc.)",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -10,15 +10,25 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url":
-      "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core"
   },
-  "files": ["dist/", "lib/", "index.tsx"],
+  "files": [
+    "dist/",
+    "lib/",
+    "index.tsx"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "canvas-kit-build build-ts index.ts --commonjs"
   },
-  "keywords": ["canvas", "canvas-kit", "react", "components", "workday", "core"],
+  "keywords": [
+    "canvas",
+    "canvas-kit",
+    "react",
+    "components",
+    "workday",
+    "core"
+  ],
   "peerDependencies": {
     "react": ">= 15 < 17"
   },
