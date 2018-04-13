@@ -61,6 +61,8 @@ timestamps {
             try {
               sh('yarn install --production=false')
             } catch (Exception e) {
+              setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
+              setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               throw e
             }
@@ -75,6 +77,7 @@ timestamps {
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
+              setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               throw e
             }
