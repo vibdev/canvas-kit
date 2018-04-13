@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.11.0"></a>
+# [0.11.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.10.5...@workday/canvas-kit-react@0.11.0) (2018-04-13)
+
+
+### Features
+
+* **react-16:** support React 16 peerDependency ([003a78e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/003a78e))
+
+
+
+
 <a name="0.10.5"></a>
 ## [0.10.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.10.4...@workday/canvas-kit-react@0.10.5) (2018-04-12)
 
