@@ -5749,7 +5749,7 @@ node-sass-tilde-importer@^1.0.1:
   dependencies:
     find-parent-dir "^0.3.0"
 
-node-sass@^4.5.3, node-sass@^4.7.2:
+node-sass@4.8.3, node-sass@^4.5.3:
   version "4.8.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-sass/-/node-sass-4.8.3.tgz#d077cc20a08ac06f661ca44fb6f19cd2ed41debb"
   dependencies:
