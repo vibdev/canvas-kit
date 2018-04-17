@@ -2,30 +2,31 @@
   "private": true,
   "name": "canvas-kit-react",
   "devDependencies": {
-    "@storybook/react": "^3.3.11",
+    "@storybook/react": "^3.4.1",
     "@types/node": "^8.0.58",
-    "@types/react": "^16.3.5",
-    "@types/react-dom": "^16.0.4",
-    "@workday/canvas-kit-build": "^2.5.0",
+    "@types/react": "^16.3.11",
+    "@types/react-dom": "^16.0.5",
+    "@workday/canvas-kit-build": "^3.4.3",
     "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
     "file-loader": "^1.1.5",
     "husky": "^0.14.3",
-    "lerna": "^2.4.0",
-    "lint-staged": "^6.0.0",
-    "node-fetch": "^1.7.3",
+    "lerna": "^2.10.2",
+    "lint-staged": "^7.0.4",
+    "node-fetch": "^2.1.2",
     "node-sass": "4.8.3",
-    "postcss-loader": "^2.0.8",
-    "prettier": "^1.10.2",
+    "postcss-loader": "^2.1.4",
+    "prettier": "^1.12.1",
     "raw-loader": "^0.5.1",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "sass-loader": "^6.0.6",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sass-loader": "^7.0.1",
     "storybook-readme": "^3.0.6",
-    "style-loader": "^0.19.0",
-    "ts-loader": "^3.2.0",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^3.5.0",
     "tslint": "^5.9.1",
     "tslint-config-airbnb": "^5.4.2",
     "tslint-config-prettier": "^1.6.0",
@@ -64,9 +65,21 @@
     "semi": false
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["prettier --write", "tslint --project tsconfig.json --fix", "git add"],
-    "*.{js,jsx}": ["prettier --write", "git add"],
-    "*.{json,md}": ["prettier --write", "git add"]
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "tslint --project tsconfig.json --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "workspaces": ["modules/*"]
+  "workspaces": [
+    "modules/*"
+  ]
 }
