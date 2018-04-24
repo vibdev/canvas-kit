@@ -232,6 +232,10 @@
     react-split-pane "^0.1.77"
     react-treebeard "^2.1.0"
 
+"@types/classnames@^2.2.3":
+  version "2.2.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/classnames/-/classnames-2.2.3.tgz#3f0ff6873da793870e20a260cada55982f38a9e5"
+
 "@types/node@*":
   version "9.6.5"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/node/-/node-9.6.5.tgz#ee700810fdf49ac1c399fc5980b7559b3e5a381d"
