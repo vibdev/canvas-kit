@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-icon",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Canvas icons",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@workday/canvas-accent-icons-web": "^0.11.10",
     "@workday/canvas-applet-icons-web": "^0.11.13",
-    "@workday/canvas-kit-react-core": "0.13.2",
+    "@workday/canvas-kit-react-core": "0.13.3",
     "@workday/canvas-system-icons-web": "^0.11.14",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.3"
