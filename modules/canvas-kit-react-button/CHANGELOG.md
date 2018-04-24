@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.13.4"></a>
+## [0.13.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.13.3...@workday/canvas-kit-react-button@0.13.4) (2018-04-24)
+
+
+### Bug Fixes
+
+* **button:** add classnames package ([2bdc89a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/2bdc89a))
+
+
+
+
 <a name="0.13.3"></a>
 ## [0.13.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.13.2...@workday/canvas-kit-react-button@0.13.3) (2018-04-24)
 
