@@ -31,5 +31,11 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-css-fat": "^1.3.6"
+  },
+  "devDependencies": {
+    "@workday/canvas-kit-react-button": "0.13.4"
   }
 }
