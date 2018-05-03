@@ -3,6 +3,7 @@ import { CSSProperties } from 'glamorous'
 import { colors } from '@workday/canvas-kit-react-core'
 import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
 import Icon, { IconProps } from './Icon'
+import { SpanProps } from './types'
 
 const styles = ({
   accent,
@@ -47,16 +48,41 @@ export interface SystemIconProps {
   size?: number
 }
 
-export default class SystemIcon extends Component<SystemIconProps, {}> {
+export default class SystemIcon extends Component<SpanProps & SystemIconProps, {}> {
   public static Icons = SystemIcons
 
   render() {
-    if (!(this.props.name in systemIcons)) {
-      throw Error(`Icon "${this.props.name}" not found in icon set`)
+    const {
+      name,
+      accent,
+      accentHover,
+      background,
+      backgroundHover,
+      color,
+      colorHover,
+      fill,
+      fillHover,
+      size,
+      ...elemProps
+    } = this.props
+
+    if (!(name in systemIcons)) {
+      throw Error(`Icon "${name}" not found in icon set`)
     }
 
-    const icon: string = systemIcons[this.props.name]
+    const icon: string = systemIcons[name]
 
-    return <Icon icon={icon} styles={styles} {...this.props} />
+    const style = styles({
+      accent,
+      accentHover,
+      background,
+      backgroundHover,
+      color,
+      colorHover,
+      fill,
+      fillHover,
+    })
+
+    return <Icon icon={icon} size={size} styles={style} elemProps={elemProps} />
   }
 }
