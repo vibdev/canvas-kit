@@ -1,0 +1,16 @@
+/// <reference path="../../typings.d.ts" />
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import withReadme from 'storybook-readme/with-readme'
+
+import { FloatingActionToolbar } from './index'
+import README from './README.md'
+
+storiesOf('Canvas Kit/Floating Action Toolbar', module)
+  .addDecorator(withReadme(README))
+  .add('All', () => (
+    <div className="story">
+      <h1 className="section-label">Floating Action Toolbar</h1>
+      <FloatingActionToolbar />
+    </div>
+  ))
