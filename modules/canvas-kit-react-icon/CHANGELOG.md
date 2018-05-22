@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.3.3...@workday/canvas-kit-react-icon@0.4.0) (2018-05-22)
+
+
+### Features
+
+* **html-props:** allow span props on icons ([22ac745](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/22ac745))
+
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.3.2...@workday/canvas-kit-react-icon@0.3.3) (2018-04-24)
 
