@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
+import { SpanProps } from './types'
 
 export type CSSPropertiesFunction = (...args: any[]) => CSSProperties
 
@@ -7,6 +8,7 @@ export interface IconProps {
   icon: string
   styles: CSSProperties | CSSPropertiesFunction
   size?: number
+  elemProps?: SpanProps
 }
 
 export default class Icon extends Component<IconProps, {}> {
@@ -22,8 +24,12 @@ export default class Icon extends Component<IconProps, {}> {
       })
     }
 
-    const IconContainer = glamorous.span<IconProps>(styles)
+    const IconContainer = glamorous.span<{}>(styles)
 
-    return <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon }} {...this.props} />
+    return (
+      <span {...this.props.elemProps}>
+        <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon }} />
+      </span>
+    )
   }
 }

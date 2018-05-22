@@ -3,6 +3,7 @@ import { CSSProperties } from 'glamorous'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import appletIcons, { CanvasAppletIcons as AppletIcons } from '@workday/canvas-applet-icons-web'
 import Icon, { IconProps } from './Icon'
+import { SpanProps } from './types'
 
 const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
   // Check if valid color
@@ -38,17 +39,19 @@ export interface AppletIconProps {
   size?: number
 }
 
-export default class AppletIcon extends Component<AppletIconProps, {}> {
+export default class AppletIcon extends Component<SpanProps & AppletIconProps, {}> {
   public static Icons = AppletIcons
   public static Colors = BrandingColors
 
   public render() {
-    if (!(this.props.name in appletIcons)) {
-      throw Error(`Icon "${this.props.name}" not found in icon set`)
+    const { name, color, size, ...elemProps } = this.props
+
+    if (!(name in appletIcons)) {
+      throw Error(`Icon "${name}" not found in icon set`)
     }
 
-    const icon: string = appletIcons[this.props.name]
+    const icon: string = appletIcons[name]
 
-    return <Icon icon={icon} styles={styles} {...this.props} />
+    return <Icon icon={icon} styles={styles({ color })} elemProps={elemProps} />
   }
 }
