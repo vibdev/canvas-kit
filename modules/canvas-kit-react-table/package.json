@@ -1,0 +1,39 @@
+{
+  "name": "@workday/canvas-kit-react-table",
+  "version": "0.1.0",
+  "description": "Canvas data grids",
+  "homepage": "https://workdaydesign.com",
+  "author": "Joseph Le <joseph.le@workday.com>",
+  "license": "Apache-2.0",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es6/index.js",
+  "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table"
+  },
+  "files": [
+    "dist/",
+    "lib/",
+    "index.tsx"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "canvas-kit-build build-ts index.tsx --commonjs"
+  },
+  "keywords": [
+    "canvas",
+    "canvas-kit",
+    "react",
+    "components",
+    "workday",
+    "table"
+  ],
+  "peerDependencies": {
+    "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-css-table": "^1.1.0",
+    "classnames": "^2.2.5"
+  }
+}
