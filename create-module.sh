@@ -80,9 +80,9 @@ EOF
 indexTsx="$path/index.tsx"
 echo -e "Creating ${CYAN}$indexTsx${NC}"
 cat > $indexTsx << EOF
-import React, { Component } from 'react'
+import * as React from 'react'
 
-export default class MyComponent extends Component<{}, {}> {
+export default class MyComponent extends React.Component<{}, {}> {
   public render() {
     return (
       <div>
@@ -99,7 +99,7 @@ storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 /// <reference path="../../typings.d.ts" />
-import React from 'react'
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 

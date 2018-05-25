@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
 import appletIcons, { CanvasAppletIcons as AppletIcons } from '@workday/canvas-applet-icons-web'
@@ -39,7 +39,7 @@ export interface AppletIconProps {
   size?: number
 }
 
-export default class AppletIcon extends Component<SpanProps & AppletIconProps, {}> {
+export default class AppletIcon extends React.Component<SpanProps & AppletIconProps, {}> {
   public static Icons = AppletIcons
   public static Colors = BrandingColors
 

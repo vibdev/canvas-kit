@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
 import ButtonBase from './ButtonBase'
 import { ReactButton, ClassNameProperties, ButtonTypes, ButtonSizes } from './types'
@@ -8,7 +8,7 @@ export interface ButtonProps {
   buttonSize?: ButtonSizes
 }
 
-class Button extends Component<ReactButton & ButtonProps, {}> {
+class Button extends React.Component<ReactButton & ButtonProps, {}> {
   public static Types = ButtonTypes
   public static Sizes = ButtonSizes
 

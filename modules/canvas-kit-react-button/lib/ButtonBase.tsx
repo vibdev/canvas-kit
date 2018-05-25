@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import classNames from 'classnames'
 import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css'
 import { ReactButton, ClassNameProperties } from './types'
@@ -8,7 +8,7 @@ export interface ButtonBaseProps {
   btnProps?: ReactButton
 }
 
-class ButtonBase extends Component<ButtonBaseProps, {}> {
+class ButtonBase extends React.Component<ButtonBaseProps, {}> {
   protected static classes: ClassNameProperties = {
     'wdc-btn': true,
   }
