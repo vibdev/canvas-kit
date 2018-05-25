@@ -99,7 +99,7 @@ storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react'
+import * as React from 'react' # DO NOT MODIFY - resolves implicit synthetic default import issues.
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
