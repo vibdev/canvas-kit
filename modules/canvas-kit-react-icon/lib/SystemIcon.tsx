@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors } from '@workday/canvas-kit-react-core'
 import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
@@ -48,7 +48,7 @@ export interface SystemIconProps {
   size?: number
 }
 
-export default class SystemIcon extends Component<SpanProps & SystemIconProps, {}> {
+export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
   public static Icons = SystemIcons
 
   render() {

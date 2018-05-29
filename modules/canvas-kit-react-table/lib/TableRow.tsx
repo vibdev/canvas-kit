@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import * as React from 'react'
+import * as classNames from 'classnames'
 import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css'
 
 export enum TableRowStates {
@@ -15,7 +15,7 @@ export interface TableRowProps {
   state?: TableRowStates
 }
 
-export default class TableRow extends Component<JSX.IntrinsicElements['tr'] & TableRowProps, {}> {
+export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'] & TableRowProps> {
   public static States = TableRowStates
 
   public render() {

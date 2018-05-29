@@ -15,6 +15,7 @@
         "react": "React",
         "canvasKitReactCore": "canvas",
         "canvasKitReactButton": "Button",
+        "canvasKitReactTable": "Table",
         "READMEMd": "README",
         "canvasAccentIconsWeb": "accentIcons",
         "canvasAppletIconsWeb": "appletIcons",

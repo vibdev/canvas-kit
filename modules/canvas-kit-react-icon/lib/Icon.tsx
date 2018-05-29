@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
 import { SpanProps } from './types'
 
@@ -11,7 +11,7 @@ export interface IconProps {
   elemProps?: SpanProps
 }
 
-export default class Icon extends Component<IconProps, {}> {
+export default class Icon extends React.Component<IconProps> {
   public render() {
     const styles = [this.props.styles]
 

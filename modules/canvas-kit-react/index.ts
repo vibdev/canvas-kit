@@ -1,5 +1,6 @@
 import canvas from '@workday/canvas-kit-react-core'
-import Button from '@workday/canvas-kit-react-button'
 
 export { canvas }
-export { Button }
+export * from '@workday/canvas-kit-react-button'
+export * from '@workday/canvas-kit-react-icon'
+export * from '@workday/canvas-kit-react-table'
