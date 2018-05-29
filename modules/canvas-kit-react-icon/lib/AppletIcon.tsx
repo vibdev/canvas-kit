@@ -39,7 +39,7 @@ export interface AppletIconProps {
   size?: number
 }
 
-export default class AppletIcon extends React.Component<SpanProps & AppletIconProps, {}> {
+export default class AppletIcon extends React.Component<SpanProps & AppletIconProps> {
   public static Icons = AppletIcons
   public static Colors = BrandingColors
 

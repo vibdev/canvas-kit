@@ -21,7 +21,7 @@ export interface AccentIconProps extends React.HTMLProps<HTMLSpanElement> {
   size?: number
 }
 
-export default class AccentIcon extends React.Component<SpanProps & AccentIconProps, {}> {
+export default class AccentIcon extends React.Component<SpanProps & AccentIconProps> {
   public static Icons = AccentIcons
 
   render() {

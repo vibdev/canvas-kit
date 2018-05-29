@@ -15,10 +15,7 @@ export interface TableRowProps {
   state?: TableRowStates
 }
 
-export default class TableRow extends React.Component<
-  JSX.IntrinsicElements['tr'] & TableRowProps,
-  {}
-> {
+export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'] & TableRowProps> {
   public static States = TableRowStates
 
   public render() {

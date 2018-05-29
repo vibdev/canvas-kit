@@ -11,7 +11,7 @@ export interface IconProps {
   elemProps?: SpanProps
 }
 
-export default class Icon extends React.Component<IconProps, {}> {
+export default class Icon extends React.Component<IconProps> {
   public render() {
     const styles = [this.props.styles]
 

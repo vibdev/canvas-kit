@@ -8,7 +8,7 @@ export interface ButtonBaseProps {
   btnProps?: ReactButton
 }
 
-class ButtonBase extends React.Component<ButtonBaseProps, {}> {
+class ButtonBase extends React.Component<ButtonBaseProps> {
   protected static classes: ClassNameProperties = {
     'wdc-btn': true,
   }

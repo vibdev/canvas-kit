@@ -48,7 +48,7 @@ export interface SystemIconProps {
   size?: number
 }
 
-export default class SystemIcon extends React.Component<SpanProps & SystemIconProps, {}> {
+export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
   public static Icons = SystemIcons
 
   render() {

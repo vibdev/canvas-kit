@@ -8,7 +8,7 @@ export interface ButtonProps {
   buttonSize?: ButtonSizes
 }
 
-class Button extends React.Component<ReactButton & ButtonProps, {}> {
+class Button extends React.Component<ReactButton & ButtonProps> {
   public static Types = ButtonTypes
   public static Sizes = ButtonSizes
 
