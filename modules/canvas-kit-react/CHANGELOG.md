@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.12.0"></a>
+# [0.12.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.11.5...@workday/canvas-kit-react@0.12.0) (2018-05-29)
+
+
+### Features
+
+* **icon:** add icon to canvas-kit-react exports ([4c0a6bf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/4c0a6bf))
+* **table:** add table to canvas-kit-react exports ([e26adfa](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/e26adfa))
+
+
+
+
 <a name="0.11.5"></a>
 ## [0.11.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.11.4...@workday/canvas-kit-react@0.11.5) (2018-05-22)
 

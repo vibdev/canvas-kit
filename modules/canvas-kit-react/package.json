@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react",
-  "version": "0.11.5",
+  "version": "0.12.0",
   "description": "The parent module that contains all Workday Canvas Kit React components",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -31,9 +31,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-button": "0.13.5",
-    "@workday/canvas-kit-react-core": "0.13.3",
-    "@workday/canvas-kit-react-icon": "0.4.0",
-    "@workday/canvas-kit-react-table": "0.2.0"
+    "@workday/canvas-kit-react-button": "0.13.6",
+    "@workday/canvas-kit-react-core": "0.13.4",
+    "@workday/canvas-kit-react-icon": "0.4.1",
+    "@workday/canvas-kit-react-table": "0.2.1"
   }
 }
