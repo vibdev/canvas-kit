@@ -56,11 +56,11 @@ cat > $packageJson << EOF
   "files": [
     "dist/",
     "lib/",
-    "index.tsx"
+    "index.ts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "canvas-kit-build build-ts index.tsx --commonjs"
+    "build": "canvas-kit-build build-ts index.ts --commonjs"
   },
   "keywords": [
     "canvas",
@@ -71,16 +71,17 @@ cat > $packageJson << EOF
     "$name"
   ],
   "peerDependencies": {
-    "react": ">= 15 < 16"
+    "react": ">= 15 < 17"
   }
 }
 EOF
 
-# Create index.tsx
-indexTsx="$path/index.tsx"
-echo -e "Creating ${CYAN}$indexTsx${NC}"
-cat > $indexTsx << EOF
-import * as React from 'react'
+# Create lib/MyComponent.tsx
+mkdir "$path/lib"
+componentTsx="$path/lib/MyComponent.tsx"
+echo -e "Creating ${CYAN}$componentTsx${NC}"
+cat > $componentTsx << EOF
+import * as React from 'react' // DO NOT MODIFY - resolves synthetic import issues
 
 export default class MyComponent extends React.Component {
   public render() {
@@ -88,9 +89,19 @@ export default class MyComponent extends React.Component {
       <div>
         MyComponent
       </div>
-    );
+    )
   }
 }
+
+EOF
+
+# Create index.ts
+indexTs="$path/index.ts"
+echo -e "Creating ${CYAN}$indexTs${NC}"
+cat > $indexTs << EOF
+import MyComponent from './lib/MyComponent'
+
+export default MyComponent
 
 EOF
 
@@ -99,11 +110,11 @@ storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react' // DO NOT MODIFY - resolves implicit synthetic default import issues.
+import * as React from 'react' // DO NOT MODIFY - resolves implicit synthetic import issues
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
-import MyComponent from './index'
+import MyComponent from './index' // tslint:disable-line:import-name
 import README from './README.md'
 
 storiesOf('Canvas Kit/$upperName', module)
@@ -111,9 +122,9 @@ storiesOf('Canvas Kit/$upperName', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">$upperName</h1>
-      <MyComponent></MyComponent>
+      <MyComponent />
     </div>
-  ));
+  ))
 
 EOF
 
