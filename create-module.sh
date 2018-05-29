@@ -82,7 +82,7 @@ echo -e "Creating ${CYAN}$indexTsx${NC}"
 cat > $indexTsx << EOF
 import * as React from 'react'
 
-export default class MyComponent extends React.Component<{}, {}> {
+export default class MyComponent extends React.Component {
   public render() {
     return (
       <div>
