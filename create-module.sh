@@ -81,7 +81,7 @@ mkdir "$path/lib"
 componentTsx="$path/lib/MyComponent.tsx"
 echo -e "Creating ${CYAN}$componentTsx${NC}"
 cat > $componentTsx << EOF
-import * as React from 'react' // DO NOT MODIFY - resolves synthetic import issues
+import * as React from 'react'
 
 export default class MyComponent extends React.Component {
   public render() {
@@ -110,7 +110,7 @@ storiesJs="$path/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react' // DO NOT MODIFY - resolves implicit synthetic import issues
+import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
