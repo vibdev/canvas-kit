@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import * as React from 'react'
+import * as classNames from 'classnames'
 import '@workday/canvas-kit-css-fat/dist/canvas-kit-css-fat.css'
 
 export interface FloatingActionToolbarProps {
   fixed?: boolean
 }
 
-export default class FloatingActionToolbar extends Component<
-  JSX.IntrinsicElements['div'] & FloatingActionToolbarProps,
-  {}
+export default class FloatingActionToolbar extends React.Component<
+  JSX.IntrinsicElements['div'] & FloatingActionToolbarProps
 > {
   render() {
     const classes = {
