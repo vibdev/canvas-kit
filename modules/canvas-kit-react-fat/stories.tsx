@@ -9,7 +9,7 @@ import README from './README.md'
 
 storiesOf('Canvas Kit/Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Floating Action Toolbar</h1>
       <FloatingActionToolbar>
@@ -17,7 +17,11 @@ storiesOf('Canvas Kit/Floating Action Toolbar', module)
         <Button>Button</Button>
         <Button>Button</Button>
       </FloatingActionToolbar>
-
+    </div>
+  ))
+  .add('Fixed', () => (
+    <div className="story">
+      <h1 className="section-label">Floating Action Toolbar - Fixed</h1>
       <FloatingActionToolbar fixed={true}>
         <Button buttonType={ButtonTypes.Primary}>Fixed</Button>
         <Button>Action</Button>
