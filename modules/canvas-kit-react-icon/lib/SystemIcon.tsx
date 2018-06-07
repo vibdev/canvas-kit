@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
-import { colors } from '@workday/canvas-kit-react-core'
+import { iconColors } from '@workday/canvas-kit-react-core'
 import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
 import Icon, { IconProps } from './Icon'
 import { SpanProps } from './types'
@@ -10,8 +10,8 @@ const styles = ({
   accentHover,
   background = 'transparent',
   backgroundHover = 'transparent',
-  color = colors.primary.iconStandard,
-  colorHover = colors.primary.iconHover,
+  color = iconColors.standard,
+  colorHover = iconColors.hover,
   fill,
   fillHover,
 }): CSSProperties => ({
