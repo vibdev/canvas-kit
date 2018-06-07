@@ -33,7 +33,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-colors-web": "^0.12.4",
+    "@workday/canvas-colors-web": "^0.13.1",
     "@workday/canvas-depth-web": "^0.12.1",
     "@workday/canvas-space-web": "^0.12.1",
     "glamor": "^2.20.40",

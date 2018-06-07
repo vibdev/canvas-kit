@@ -1,5 +1,5 @@
+import canvasColorsWeb from '@workday/canvas-colors-web'
 import { CSSProperties } from './types'
-import colors from './colors'
 import fonts from './fonts'
 
 export interface CanvasTypeVariations {
@@ -26,7 +26,7 @@ const { fontFamily } = fonts
 
 const body: CSSProperties = {
   fontSize: '14px',
-  color: colors.blackPepper300,
+  color: canvasColorsWeb.blackPepper300,
   fontWeight: 400,
   lineHeight: '16px',
 }
@@ -40,35 +40,35 @@ const h1: CSSProperties = {
   fontWeight: 500,
   fontSize: '28px',
   lineHeight: '36px',
-  color: colors.blackPepper400,
+  color: canvasColorsWeb.blackPepper400,
 }
 
 const h2: CSSProperties = {
   fontWeight: 600,
   fontSize: '24px',
   lineHeight: '32px',
-  color: colors.blackPepper400,
+  color: canvasColorsWeb.blackPepper400,
 }
 
 const h3: CSSProperties = {
   fontWeight: 600,
   fontSize: '20px',
   lineHeight: '24px',
-  color: colors.blackPepper400,
+  color: canvasColorsWeb.blackPepper400,
 }
 
 const h4: CSSProperties = {
   fontWeight: 600,
   fontSize: '16px',
   lineHeight: '20px',
-  color: colors.blackPepper400,
+  color: canvasColorsWeb.blackPepper400,
 }
 
 const h5: CSSProperties = {
   fontWeight: 400,
   fontSize: '16px',
   lineHeight: '20px',
-  color: colors.blackPepper400,
+  color: canvasColorsWeb.blackPepper400,
 }
 
 const label1: CSSProperties = {
@@ -88,13 +88,13 @@ const label3: CSSProperties = {
 
 const link: CSSProperties = {
   textDecoration: 'none',
-  color: colors.blueberry500,
+  color: canvasColorsWeb.blueberry500,
   '&:hover, &:active': {
     textDecoration: 'underline',
-    color: colors.blueberry500,
+    color: canvasColorsWeb.blueberry500,
   },
   '&:focus': {
-    background: colors.blueberry100,
+    background: canvasColorsWeb.blueberry100,
     textDecoration: 'underline',
     outline: 'none',
   },
@@ -110,7 +110,7 @@ const button: CSSProperties = {
 const hint: CSSProperties = {
   fontSize: '13px',
   fontWeight: 400,
-  color: colors.licorice100,
+  color: canvasColorsWeb.licorice100,
 }
 
 const typeVariations: CanvasTypeVariations = {
