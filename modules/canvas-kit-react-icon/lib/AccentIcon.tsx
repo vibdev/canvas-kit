@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
-import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
-import accentIcons, { CanvasAccentIcons as AccentIcons } from '@workday/canvas-accent-icons-web'
+import { colors } from '@workday/canvas-kit-react-core'
 import CanvasIcon from '@workday/icon-utils/types/icon'
 import Icon, { IconProps } from './Icon'
 import { SpanProps } from './types'
@@ -23,8 +22,6 @@ export interface AccentIconProps extends React.HTMLProps<HTMLSpanElement> {
 }
 
 export default class AccentIcon extends React.Component<SpanProps & AccentIconProps> {
-  public static Icons = AccentIcons
-
   render() {
     const { icon, color, transparent, size, ...elemProps } = this.props
 

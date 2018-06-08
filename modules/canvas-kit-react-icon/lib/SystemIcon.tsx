@@ -2,7 +2,7 @@ import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { iconColors } from '@workday/canvas-kit-react-core'
 import CanvasIcon from '@workday/icon-utils/types/icon'
-import Icon, { IconProps } from './Icon'
+import Icon from './Icon'
 import { SpanProps } from './types'
 
 const styles = ({
