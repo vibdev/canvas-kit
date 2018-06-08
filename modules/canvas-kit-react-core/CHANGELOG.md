@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.14.0"></a>
+# [0.14.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.13.4...@workday/canvas-kit-react-core@0.14.0) (2018-06-08)
+
+
+### Features
+
+* **colors:** add semantic color exports ([40cf23a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/40cf23a))
+
+
+
+
 <a name="0.13.4"></a>
 ## [0.13.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.13.3...@workday/canvas-kit-react-core@0.13.4) (2018-05-29)
 
