@@ -1,26 +1,31 @@
 # Canvas Kit Icon
 
-Components implementing Canvas accent, applet, and system icons.
+Components assisting the rendering of Canvas accent, applet, and system icons.
+
+Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets) must be used with these components. No icons are bundled with this package.
 
 ## Usage
 
 ### Accent Icons
 
+Use with `@workday/canvas-accent-icons-web`.
+
 ```jsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { AccentIcon } from '@workday/canvas-kit-react-icon'
+import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
 
-<AccentIcon name={AccentIcon.Icons.Shield} />
-<AccentIcon name={AccentIcon.Icons.Shield} color={colors.pomegranate500} />
-<AccentIcon name={AccentIcon.Icons.Shield} size={80} />
+<AccentIcon icon={shieldIcon} />
+<AccentIcon icon={shieldIcon} color={colors.pomegranate500} />
+<AccentIcon icon={shieldIcon} size={80} />
 ```
 
 #### Properties
 
 **Required**
 
-**`name`**  
-Name of the icon. Must be a member of the `AccentIcon.Icons` static enum.
+**`icon`:** `CanvasIcon`  
+Icon imported from `@workday/canvas-accent-icons-web/dist/es6`
 
 **Optional**
 
@@ -38,20 +43,23 @@ Toggle for transparent accent icon background. If false, the background fill wil
 
 ### Applet Icons
 
+Use with `@workday/canvas-applet-icons-web`.
+
 ```jsx
 import { AppletIcon } from '@workday/canvas-kit-react-icon'
+import benefitsIcon from '@workday/canvas-applet-icons-web/dist/es6/benefits'
 
-<AppletIcon name={AppletIcon.Icons.Benefits} />
-<AppletIcon name={AppletIcon.Icons.Benefits} color={AppletIcon.Colors.Pomegranate} />
-<AppletIcon name={AppletIcon.Icons.Benefits} size={60} />
+<AppletIcon icon={benefitsIcon} />
+<AppletIcon icon={benefitsIcon} color={AppletIcon.Colors.Pomegranate} />
+<AppletIcon icon={benefitsIcon} size={60} />
 ```
 
 #### Properties
 
 **Required**
 
-**`name`**  
-Name of the icon. Must be a member of the `AppletIcon.Icons` static enum.
+**`icon`:** `CanvasIcon`  
+Icon imported from `@workday/canvas-applet-icons-web/dist/es6`
 
 **Optional**
 
@@ -65,27 +73,30 @@ Icon size in `px`.
 
 ### System Icons
 
+Use with `@workday/canvas-system-icons-web`.
+
 ```jsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
+import activityStreamIcon from '@workday/canvas-system-icons-web/dist/es6/activityStream'
 
-<SystemIcon name={SystemIcon.Icons.ActivityStream} />
-<SystemIcon name={SystemIcon.Icons.ActivityStream} color={colors.blueberry500} />
+<SystemIcon icon={activityStreamIcon} />
+<SystemIcon icon={activityStreamIcon} color={colors.blueberry500} />
 <SystemIcon
-  name={SystemIcon.Icons.ActivityStream}
+  icon={activityStreamIcon}
   accent={colors.frenchVanilla100}
   fill={colors.blueberry500}
   background={colors.blueberry500}
 />
-<SystemIcon name={SystemIcon.Icons.ActivityStream} size={48} />
+<SystemIcon icon={activityStreamIcon} size={48} />
 ```
 
 #### Properties
 
 **Required**
 
-**`name`**  
-Name of the icon. Must be a member of the `SystemIcon.Icons` static enum.
+**`icon`:** `CanvasIcon`  
+Icon imported from `@workday/canvas-system-icons-web/dist/es6`
 
 **Optional**
 
