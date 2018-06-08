@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors } from '@workday/canvas-kit-react-core'
-import CanvasIcon, { IconTypes } from '@workday/icon-utils/types/icon'
+import { CanvasAccentIcon, IconTypes } from '@workday/icon-utils/types/icon'
 import Icon, { IconProps } from './Icon'
 import { SpanProps } from './types'
 
@@ -15,7 +15,7 @@ const styles = ({ color = colors.blueberry500, transparent = false }): CSSProper
 })
 
 export interface AccentIconProps extends React.HTMLProps<HTMLSpanElement> {
-  icon: CanvasIcon
+  icon: CanvasAccentIcon
   color?: string
   transparent?: boolean
   size?: number

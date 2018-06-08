@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
-import CanvasIcon, { IconTypes } from '@workday/icon-utils/types/icon'
+import { CanvasAppletIcon, IconTypes } from '@workday/icon-utils/types/icon'
 import Icon from './Icon'
 import { SpanProps } from './types'
 
@@ -34,7 +34,7 @@ const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
 }
 
 export interface AppletIconProps {
-  icon: CanvasIcon
+  icon: CanvasAppletIcon
   color?: BrandingColors
   size?: number
 }

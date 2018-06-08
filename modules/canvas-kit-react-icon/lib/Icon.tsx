@@ -16,6 +16,7 @@ export interface IconProps {
 
 export default class Icon extends React.Component<IconProps> {
   public render() {
+    // Validation for JS
     try {
       validateIconType(this.props.icon, this.props.type)
     } catch (e) {
