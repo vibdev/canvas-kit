@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors } from '@workday/canvas-kit-react-core'
-import CanvasIcon from '@workday/icon-utils/types/icon'
+import CanvasIcon, { IconTypes } from '@workday/icon-utils/types/icon'
 import Icon, { IconProps } from './Icon'
 import { SpanProps } from './types'
 
@@ -26,7 +26,13 @@ export default class AccentIcon extends React.Component<SpanProps & AccentIconPr
     const { icon, color, transparent, size, ...elemProps } = this.props
 
     return (
-      <Icon icon={icon} styles={styles({ color, transparent })} size={size} elemProps={elemProps} />
+      <Icon
+        icon={icon}
+        type={IconTypes.Accent}
+        styles={styles({ color, transparent })}
+        size={size}
+        elemProps={elemProps}
+      />
     )
   }
 }
