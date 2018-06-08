@@ -33,11 +33,14 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-accent-icons-web": "^0.13.0",
-    "@workday/canvas-applet-icons-web": "^0.13.2",
-    "@workday/canvas-kit-react-core": "0.14.0",
-    "@workday/canvas-system-icons-web": "^0.12.2",
+    "@workday/canvas-kit-react-core": "0.13.4",
+    "@workday/icon-utils": "^0.19.2",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.3"
+  },
+  "devDependencies": {
+    "@workday/canvas-accent-icons-web": "^0.13.0",
+    "@workday/canvas-applet-icons-web": "^0.13.2",
+    "@workday/canvas-system-icons-web": "^0.12.2"
   }
 }

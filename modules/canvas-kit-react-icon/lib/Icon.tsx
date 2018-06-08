@@ -1,11 +1,12 @@
 import * as React from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
+import CanvasIcon from '@workday/icon-utils/types/icon'
 import { SpanProps } from './types'
 
 export type CSSPropertiesFunction = (...args: any[]) => CSSProperties
 
 export interface IconProps {
-  icon: string
+  icon: CanvasIcon
   styles: CSSProperties | CSSPropertiesFunction
   size?: number
   elemProps?: SpanProps
@@ -28,7 +29,7 @@ export default class Icon extends React.Component<IconProps> {
 
     return (
       <span {...this.props.elemProps}>
-        <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon }} />
+        <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon.svg }} />
       </span>
     )
   }

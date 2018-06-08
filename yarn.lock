@@ -420,9 +420,9 @@
   version "0.11.13"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.11.13.tgz#89b0af5fbcceb0bc615e1aca26ab1e4105322829"
 
-"@workday/icon-utils@0.19.2":
-  version "0.19.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/icon-utils/-/@workday/icon-utils-0.19.2.tgz#cc0c7c00c30f930680f1541a0a0104a466f4d4e7"
+"@workday/icon-utils@0.19.1":
+  version "0.19.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/icon-utils/-/@workday/icon-utils-0.19.1.tgz#f3fb16263645caf65c1513c270e2a9baf258d3b7"
   dependencies:
     "@workday/canvas-colors-web" "0.13.1"
     "@workday/canvas-depth-web" "0.12.2"
