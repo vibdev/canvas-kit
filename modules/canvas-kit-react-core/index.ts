@@ -1,25 +1,31 @@
-import colors from './lib/colors'
-import { CanvasColors, BrandingColors } from './lib/colors.types'
+import * as canvasColorsWeb from '@workday/canvas-colors-web'
+import { BrandingColors } from './lib/colors.types'
 import depth, { CanvasDepth } from './lib/depth'
 import spacing, { CanvasSpacing } from './lib/spacing'
 import fonts, { CanvasFonts } from './lib/fonts'
 import type, { CanvasType } from './lib/type'
 
-export interface CanvasCore {
-  colors: CanvasColors
-  depth: CanvasDepth
-  spacing: CanvasSpacing
-  fonts: CanvasFonts
-  type: CanvasType
-}
-
-const canvas: CanvasCore = {
+const { default: colors, ...semanticColors } = canvasColorsWeb
+const canvas = {
   colors,
   depth,
   spacing,
   fonts,
   type,
+  ...semanticColors,
 }
 
-export { colors, depth, spacing, fonts, type, BrandingColors }
+export * from '@workday/canvas-colors-web'
+export {
+  colors,
+  depth,
+  spacing,
+  fonts,
+  type,
+  BrandingColors,
+  CanvasDepth,
+  CanvasSpacing,
+  CanvasFonts,
+  CanvasType,
+}
 export default canvas
