@@ -33,8 +33,8 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "0.13.4",
-    "@workday/icon-utils": "^0.19.2",
+    "@workday/canvas-kit-react-core": "0.14.0",
+    "@workday/icon-utils": "^0.20.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.3"
   },
