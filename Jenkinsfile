@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('design-ops-shared-library@beta') _
+@Library('design-ops-shared-library@stable') _
 
 // Make sure to fill this out with the project name
 setEnv.app('canvas-kit-react')
