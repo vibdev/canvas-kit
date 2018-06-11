@@ -43,7 +43,7 @@ timestamps {
                     npmrc: { setupNpmrc() },
                     awscli: {
                       ifBranch.isNotMaster {
-                        setupAwsProfile(
+                        awsProfile.init(
                                 profile: awsProfileStorybook,
                         )
                       }
@@ -96,9 +96,9 @@ timestamps {
                 setGheStatusChecks('ci/jenkins/storybook', 'Storybook SUCCESS!', 'SUCCESS')
               }
               ifBranch.isNotMaster {
-                setAwsProfile(awsProfileStorybook)
-                s3Upload.prPage('docs') //give it a directory to upload
-                setGheStatusChecks.withDetailsUrl('ci/jenkins/storybook', 'Click `Details` to view test page', 'SUCCESS')
+                awsProfile.set(awsProfileStorybook)
+                testPageUpload.prPage('docs') //give it a directory to upload
+                setGheStatusChecks.withDetailsUrl('ci/jenkins/storybook', 'Click `Details` to view test page', 'SUCCESS', env.S3_PR_PAGE)
               }
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
