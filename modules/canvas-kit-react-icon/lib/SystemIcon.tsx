@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { iconColors } from '@workday/canvas-kit-react-core'
-import { CanvasSystemIcon, IconTypes } from '@workday/icon-utils/types/icon'
+import { CanvasSystemIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import Icon from './Icon'
 import { SpanProps } from './types'
 
@@ -76,7 +76,13 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
     })
 
     return (
-      <Icon icon={icon} type={IconTypes.System} size={size} styles={style} elemProps={elemProps} />
+      <Icon
+        icon={icon}
+        type={CanvasIconTypes.System}
+        size={size}
+        styles={style}
+        elemProps={elemProps}
+      />
     )
   }
 }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { colors, BrandingColors } from '@workday/canvas-kit-react-core'
-import { CanvasAppletIcon, IconTypes } from '@workday/icon-utils/types/icon'
+import { CanvasAppletIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import Icon from './Icon'
 import { SpanProps } from './types'
 
@@ -46,7 +46,12 @@ export default class AppletIcon extends React.Component<SpanProps & AppletIconPr
     const { icon, color, size, ...elemProps } = this.props
 
     return (
-      <Icon icon={icon} type={IconTypes.Applet} styles={styles({ color })} elemProps={elemProps} />
+      <Icon
+        icon={icon}
+        type={CanvasIconTypes.Applet}
+        styles={styles({ color })}
+        elemProps={elemProps}
+      />
     )
   }
 }
