@@ -1,6 +1,6 @@
 import * as React from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
-import CanvasIcon, { IconTypes } from '@workday/icon-utils/types/icon'
+import { CanvasIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import { SpanProps } from './types'
 import { validateIconType } from './utils'
 
@@ -11,7 +11,7 @@ export interface IconProps {
   styles: CSSProperties | CSSPropertiesFunction
   size?: number
   elemProps?: SpanProps
-  type: IconTypes
+  type: CanvasIconTypes
 }
 
 export default class Icon extends React.Component<IconProps> {
