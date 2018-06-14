@@ -39,6 +39,6 @@
   "devDependencies": {
     "@types/classnames": "^2.2.3",
     "@workday/canvas-kit-react-icon": "0.4.2",
-    "@workday/canvas-system-icons-web": "^0.14.1"
+    "@workday/canvas-system-icons-web": "^0.14.2"
   }
 }
