@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { CSSProperties } from 'glamorous'
 import { iconColors } from '@workday/canvas-kit-react-core'
-import systemIcons, { CanvasSystemIcons as SystemIcons } from '@workday/canvas-system-icons-web'
-import Icon, { IconProps } from './Icon'
+import { CanvasSystemIcon, CanvasIconTypes } from '@workday/design-assets-types'
+import Icon from './Icon'
 import { SpanProps } from './types'
 
 const styles = ({
@@ -36,7 +36,7 @@ const styles = ({
 })
 
 export interface SystemIconProps {
-  name: SystemIcons
+  icon: CanvasSystemIcon
   accent?: string
   accentHover?: string
   background?: string
@@ -49,11 +49,9 @@ export interface SystemIconProps {
 }
 
 export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
-  public static Icons = SystemIcons
-
   render() {
     const {
-      name,
+      icon,
       accent,
       accentHover,
       background,
@@ -66,12 +64,6 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       ...elemProps
     } = this.props
 
-    if (!(name in systemIcons)) {
-      throw Error(`Icon "${name}" not found in icon set`)
-    }
-
-    const icon: string = systemIcons[name]
-
     const style = styles({
       accent,
       accentHover,
@@ -83,6 +75,14 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       fillHover,
     })
 
-    return <Icon icon={icon} size={size} styles={style} elemProps={elemProps} />
+    return (
+      <Icon
+        icon={icon}
+        type={CanvasIconTypes.System}
+        size={size}
+        styles={style}
+        elemProps={elemProps}
+      />
+    )
   }
 }

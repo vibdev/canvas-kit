@@ -20,7 +20,8 @@
         "canvasAccentIconsWeb": "accentIcons",
         "canvasAppletIconsWeb": "appletIcons",
         "canvasSystemIconsWeb": "systemIcons",
-        "classnames": "classNames"
+        "classnames": "classNames",
+        "icon": "CanvasIcon"
       }
     ],
     "semicolon": [true, "never"],

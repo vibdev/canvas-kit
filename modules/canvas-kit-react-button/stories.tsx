@@ -3,6 +3,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
+import edit from '@workday/canvas-system-icons-web/dist/es6/edit'
 
 import { Button, IconButton } from './index' // tslint:disable-line:import-name
 import README from './README.md'
@@ -43,7 +44,7 @@ storiesOf('Canvas Kit/Button', module)
       <br />
 
       <IconButton>
-        <SystemIcon name={SystemIcon.Icons.Edit} />
+        <SystemIcon icon={edit} />
       </IconButton>
     </div>
   ))

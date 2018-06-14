@@ -1,18 +1,29 @@
 import * as React from 'react'
 import glamorous, { CSSProperties } from 'glamorous'
+import { CanvasIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import { SpanProps } from './types'
+import { validateIconType } from './utils'
 
 export type CSSPropertiesFunction = (...args: any[]) => CSSProperties
 
 export interface IconProps {
-  icon: string
+  icon: CanvasIcon
   styles: CSSProperties | CSSPropertiesFunction
   size?: number
   elemProps?: SpanProps
+  type: CanvasIconTypes
 }
 
 export default class Icon extends React.Component<IconProps> {
   public render() {
+    // Validation for JS
+    try {
+      validateIconType(this.props.icon, this.props.type)
+    } catch (e) {
+      console.error(e)
+      return null
+    }
+
     const styles = [this.props.styles]
 
     if ('size' in this.props) {
@@ -28,7 +39,7 @@ export default class Icon extends React.Component<IconProps> {
 
     return (
       <span {...this.props.elemProps}>
-        <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon }} />
+        <IconContainer dangerouslySetInnerHTML={{ __html: this.props.icon.svg }} />
       </span>
     )
   }
