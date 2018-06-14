@@ -6,6 +6,23 @@ Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets)
 
 ## Usage
 
+### Icon Packages
+
+When using an icon package, you have the option of using named exports or using an individual icon module. If using named exports, you should ensure that you have configured [tree shaking](https://webpack.js.org/guides/tree-shaking/) correctly to prevent bundle bloat.
+
+```jsx
+# Named Export
+import { shieldIcon } from '@workday/canvas-accent-icons-web'
+<AccentIcon icon={shieldIcon} />
+
+import * as AccentIcons from '@workday/canvas-accent-icons-web'
+<AccentIcon icon={AccentIcons.shieldIcon} />
+
+# Module Import
+import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
+<AccentIcon icon={shieldIcon} />
+```
+
 ### Accent Icons
 
 Use with `@workday/canvas-accent-icons-web`.
@@ -13,7 +30,7 @@ Use with `@workday/canvas-accent-icons-web`.
 ```jsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { AccentIcon } from '@workday/canvas-kit-react-icon'
-import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
+import { shieldIcon } from '@workday/canvas-accent-icons-web'
 
 <AccentIcon icon={shieldIcon} />
 <AccentIcon icon={shieldIcon} color={colors.pomegranate500} />
@@ -25,7 +42,7 @@ import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
 **Required**
 
 **`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-accent-icons-web/dist/es6`
+Icon imported from `@workday/canvas-accent-icons-web`
 
 **Optional**
 
@@ -47,7 +64,7 @@ Use with `@workday/canvas-applet-icons-web`.
 
 ```jsx
 import { AppletIcon } from '@workday/canvas-kit-react-icon'
-import benefitsIcon from '@workday/canvas-applet-icons-web/dist/es6/benefits'
+import { benefitsIcon } from '@workday/canvas-applet-icons-web'
 
 <AppletIcon icon={benefitsIcon} />
 <AppletIcon icon={benefitsIcon} color={AppletIcon.Colors.Pomegranate} />
@@ -59,7 +76,7 @@ import benefitsIcon from '@workday/canvas-applet-icons-web/dist/es6/benefits'
 **Required**
 
 **`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-applet-icons-web/dist/es6`
+Icon imported from `@workday/canvas-applet-icons-web`
 
 **Optional**
 
@@ -78,7 +95,7 @@ Use with `@workday/canvas-system-icons-web`.
 ```jsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
-import activityStreamIcon from '@workday/canvas-system-icons-web/dist/es6/activityStream'
+import { activityStreamIcon } from '@workday/canvas-system-icons-web
 
 <SystemIcon icon={activityStreamIcon} />
 <SystemIcon icon={activityStreamIcon} color={colors.blueberry500} />
@@ -96,7 +113,7 @@ import activityStreamIcon from '@workday/canvas-system-icons-web/dist/es6/activi
 **Required**
 
 **`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-system-icons-web/dist/es6`
+Icon imported from `@workday/canvas-system-icons-web`
 
 **Optional**
 
