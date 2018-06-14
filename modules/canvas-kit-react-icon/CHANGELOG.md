@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.4.2...@workday/canvas-kit-react-icon@1.0.0) (2018-06-14)
+
+
+### Features
+
+* **icon:** add type validation ([754d8c5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/754d8c5))
+* **icon:** use design-assets-types and remove icon-utils ([11f2175](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/11f2175))
+* **icon:** use icon sets independently ([1ce75a1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/1ce75a1))
+
+
+### BREAKING CHANGES
+
+* **icon:** Icons are no longer bundled. Props have changed to including an icon from a Design
+Assets package rather than passing an icon name. This saves on bundle size.
+
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.4.1...@workday/canvas-kit-react-icon@0.4.2) (2018-06-08)
 
