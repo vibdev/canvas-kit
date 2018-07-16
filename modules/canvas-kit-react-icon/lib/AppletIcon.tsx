@@ -50,6 +50,7 @@ export default class AppletIcon extends React.Component<SpanProps & AppletIconPr
         icon={icon}
         type={CanvasIconTypes.Applet}
         styles={styles({ color })}
+        size={size}
         elemProps={elemProps}
       />
     )
