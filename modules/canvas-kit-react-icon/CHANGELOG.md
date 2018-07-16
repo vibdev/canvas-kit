@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.1"></a>
+## [1.0.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.0.0...@workday/canvas-kit-react-icon@1.0.1) (2018-07-16)
+
+
+### Bug Fixes
+
+* **AppletIcon:** add size prop ([249b23d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/249b23d))
+
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@0.4.2...@workday/canvas-kit-react-icon@1.0.0) (2018-06-14)
 
