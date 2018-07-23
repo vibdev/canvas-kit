@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.13.0"></a>
+# [0.13.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.12.4...@workday/canvas-kit-react@0.13.0) (2018-07-23)
+
+
+### Features
+
+* **package.json:** Add "sideEffects": false to existing modules' package.json ([909a343](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/909a343))
+
+
+
+
 <a name="0.12.4"></a>
 ## [0.12.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.12.3...@workday/canvas-kit-react@0.12.4) (2018-07-23)
 
