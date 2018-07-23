@@ -44,21 +44,21 @@ const h1: CSSProperties = {
 }
 
 const h2: CSSProperties = {
-  fontWeight: 600,
+  fontWeight: 700,
   fontSize: '24px',
   lineHeight: '32px',
   color: canvasColorsWeb.blackPepper400,
 }
 
 const h3: CSSProperties = {
-  fontWeight: 600,
+  fontWeight: 700,
   fontSize: '20px',
   lineHeight: '24px',
   color: canvasColorsWeb.blackPepper400,
 }
 
 const h4: CSSProperties = {
-  fontWeight: 600,
+  fontWeight: 700,
   fontSize: '16px',
   lineHeight: '20px',
   color: canvasColorsWeb.blackPepper400,
