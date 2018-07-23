@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@workday/canvas-kit-react-core": "0.15.0",
-    "@workday/design-assets-types": "^0.1.2",
+    "@workday/design-assets-types": "0.2.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.3"
   },
