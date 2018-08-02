@@ -283,9 +283,9 @@
   version "0.12.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
 
-"@workday/canvas-colors-web@^0.13.1":
-  version "0.13.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.13.1.tgz#940d92681c45fd277567f679dc74a7b7db013187"
+"@workday/canvas-colors-web@~0.14.1":
+  version "0.14.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.14.1.tgz#f6e92590b54d298f0f72b3c30d3c90ff381c15aa"
   dependencies:
     "@types/depd" "^1.1.32"
     depd "^1.1.2"
