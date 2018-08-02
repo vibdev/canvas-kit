@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.15.2"></a>
+## [0.15.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.15.1...@workday/canvas-kit-react-core@0.15.2) (2018-08-02)
+
+
+### Bug Fixes
+
+* **colors:** lock colors to 0.14.x ([c214307](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c214307))
+
+
+
+
+<a name="0.15.1"></a>
+## [0.15.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.15.0...@workday/canvas-kit-react-core@0.15.1) (2018-08-01)
+
+
+### Bug Fixes
+
+* **core:** enable esModuleInterop flag ([d780e7f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/d780e7f))
+* **core-module:** Enable esModuleInterop flag on builds to fix undefined exports ([1165b3a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/1165b3a))
+
+
+
+
 <a name="0.15.0"></a>
 # [0.15.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.14.2...@workday/canvas-kit-react-core@0.15.0) (2018-07-23)
 

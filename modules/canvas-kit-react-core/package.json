@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-core",
-  "version": "0.15.0",
+  "version": "0.15.2",
   "description": "A group of core primitives (i.e. colors, text, etc.)",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -34,9 +34,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-colors-web": "^0.13.1",
-    "@workday/canvas-depth-web": "^0.12.2",
-    "@workday/canvas-space-web": "^0.12.2",
+    "@workday/canvas-colors-web": "~0.14.1",
+    "@workday/canvas-depth-web": "^0.14.0",
+    "@workday/canvas-space-web": "^0.14.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.3"
   }

@@ -283,9 +283,9 @@
   version "0.12.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
 
-"@workday/canvas-colors-web@^0.13.1":
-  version "0.13.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.13.1.tgz#940d92681c45fd277567f679dc74a7b7db013187"
+"@workday/canvas-colors-web@~0.14.1":
+  version "0.14.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.14.1.tgz#f6e92590b54d298f0f72b3c30d3c90ff381c15aa"
   dependencies:
     "@types/depd" "^1.1.32"
     depd "^1.1.2"
@@ -294,9 +294,9 @@
   version "0.12.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.12.1.tgz#790f67ead85ef673055325f7eebdd005f9aee13a"
 
-"@workday/canvas-depth-web@^0.12.2":
-  version "0.12.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.12.2.tgz#0c471b272737b324da54e4cfedf168ac54ee5353"
+"@workday/canvas-depth-web@^0.14.0":
+  version "0.14.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.14.0.tgz#0442265ddaedc228aa4c016a3591d92d4e271096"
 
 "@workday/canvas-depth-web@^0.5.0":
   version "0.5.0"
@@ -372,9 +372,9 @@
     "@workday/canvas-kit-css-button" "^1.0.6"
     classnames "^2.2.5"
 
-"@workday/canvas-space-web@^0.12.2":
-  version "0.12.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.12.2.tgz#e81aee38fc8c1fb6974bd628722188886f2973ed"
+"@workday/canvas-space-web@^0.14.0":
+  version "0.14.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.14.0.tgz#6ff245dd21809c2c2225f1d5aa601b3cbcc5ef5a"
 
 "@workday/canvas-system-icons-web@^0.11.14":
   version "0.11.14"
