@@ -4,6 +4,7 @@ import depth, { CanvasDepth } from './lib/depth'
 import spacing, { CanvasSpacing } from './lib/spacing'
 import fonts, { CanvasFonts } from './lib/fonts'
 import type, { CanvasType } from './lib/type'
+import { CSSProperties } from './lib/types'
 
 const { default: colors, ...semanticColors } = canvasColorsWeb
 const canvas = {
@@ -27,5 +28,6 @@ export {
   CanvasSpacing,
   CanvasFonts,
   CanvasType,
+  CSSProperties,
 }
 export default canvas
