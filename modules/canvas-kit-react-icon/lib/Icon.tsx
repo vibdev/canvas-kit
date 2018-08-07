@@ -1,5 +1,6 @@
 import * as React from 'react'
-import glamorous, { CSSProperties } from 'glamorous'
+import styled from 'react-emotion'
+import { CSSProperties } from '@workday/canvas-kit-react-core'
 import { CanvasIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import { SpanProps } from './types'
 import { validateIconType } from './utils'
@@ -35,7 +36,7 @@ export default class Icon extends React.Component<IconProps> {
       })
     }
 
-    const IconContainer = glamorous.span<{}>(styles)
+    const IconContainer = styled('span')(styles)
 
     return (
       <span {...this.props.elemProps}>
