@@ -31,9 +31,10 @@ const body: CSSProperties = {
   lineHeight: '16px',
 }
 
-const body2: CSSProperties = Object.assign({}, body, {
+const body2: CSSProperties = {
+  ...body,
   fontSize: '13px',
-})
+} as CSSProperties
 
 const h1: CSSProperties = {
   fontWeight: 500,
@@ -70,17 +71,20 @@ const h5: CSSProperties = {
   color: canvasColorsWeb.blackPepper400,
 }
 
-const label1: CSSProperties = Object.assign({}, body, {
+const label1: CSSProperties = {
+  ...body,
   fontWeight: 500,
-})
+} as CSSProperties
 
-const label2: CSSProperties = Object.assign({}, label1, {
+const label2: CSSProperties = {
+  ...label1,
   fontSize: '13px',
-})
+} as CSSProperties
 
-const label3: CSSProperties = Object.assign({}, label1, {
+const label3: CSSProperties = {
+  ...label1,
   fontSize: '10px',
-})
+} as CSSProperties
 
 const link: CSSProperties = {
   textDecoration: 'none',
