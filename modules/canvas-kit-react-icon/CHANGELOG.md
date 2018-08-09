@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.1.3...@workday/canvas-kit-react-icon@1.2.0) (2018-08-09)
+
+
+### Features
+
+* **emotion:** switch to emotion in icon ([051e2fe](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/051e2fe))
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.1.2...@workday/canvas-kit-react-icon@1.1.3) (2018-08-06)
 

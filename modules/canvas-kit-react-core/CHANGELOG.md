@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.16.0"></a>
+# [0.16.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.15.2...@workday/canvas-kit-react-core@0.16.0) (2018-08-09)
+
+
+### Bug Fixes
+
+* **emotion:** fix type errors ([e99b59b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/e99b59b))
+
+
+### Features
+
+* **emotion:** add emotion support to core ([25e796b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/25e796b))
+
+
+
+
 <a name="0.15.2"></a>
 ## [0.15.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.15.1...@workday/canvas-kit-react-core@0.15.2) (2018-08-02)
 
