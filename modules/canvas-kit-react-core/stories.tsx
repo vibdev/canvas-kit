@@ -1,6 +1,6 @@
 /// <reference path="../../typings.d.ts" />
 import * as React from 'react'
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 import { storiesOf } from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
@@ -10,7 +10,7 @@ import README from './README.md'
 storiesOf('Canvas Kit/Core', module)
   .addDecorator(withReadme(README))
   .add('Depth', () => {
-    const Card = glamorous.div({
+    const Card = styled('div')({
       width: 200,
       height: 200,
       margin: 20,

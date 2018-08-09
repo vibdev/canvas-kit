@@ -21,7 +21,8 @@
         "canvasAppletIconsWeb": "appletIcons",
         "canvasSystemIconsWeb": "systemIcons",
         "classnames": "classNames",
-        "icon": "CanvasIcon"
+        "icon": "CanvasIcon",
+        "reactEmotion": "styled"
       }
     ],
     "semicolon": [true, "never"],

@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { CSSProperties } from 'glamorous'
-import { iconColors } from '@workday/canvas-kit-react-core'
+import { iconColors, CSSProperties } from '@workday/canvas-kit-react-core'
 import { CanvasSystemIcon, CanvasIconTypes } from '@workday/design-assets-types'
 import Icon from './Icon'
 import { SpanProps } from './types'

@@ -1,8 +1,15 @@
-import { fontFace } from 'glamor'
+import { injectGlobal } from 'emotion'
+import { CSSObject } from 'create-emotion'
 
 export interface CanvasFonts {
   fontFamily: string
   monoFontFamily: string
+}
+
+function createFontFace(font): CSSObject {
+  return {
+    '@font-face': font,
+  }
 }
 
 const fontsPath = 'https://design.workdaycdn.com/beta/assets/fonts@1.0.0/roboto/ttf'
@@ -40,7 +47,7 @@ const fonts = [
     src: `local('Roboto Mono'), local('RobotoMono-Regular'), url(${fontsPath}/RobotoMono-Regular.ttf) format('ttf')`,
   },
 ]
-fonts.forEach(font => fontFace(font))
+injectGlobal(fonts.map(font => createFontFace(font)))
 
 const canvasFonts: CanvasFonts = { fontFamily, monoFontFamily }
 
