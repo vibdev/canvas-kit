@@ -19,6 +19,7 @@ export interface CanvasType {
   button: CSSProperties;
   caps: CSSProperties;
   hint: CSSProperties;
+  error: CSSProperties;
   inverse: CSSProperties;
   mono: CSSProperties;
   link: CSSProperties;
@@ -115,6 +116,10 @@ const caps: CSSProperties = {
 
 const hint: CSSProperties = {
   color: canvasColorsWeb.licorice300,
+} as CSSProperties;
+
+const error: CSSProperties = {
+  color: canvasColorsWeb.peach500,
 } as CSSProperties;
 
 const inverse: CSSProperties = {

@@ -75,7 +75,11 @@ storiesOf('Canvas Kit/Core', module)
         <br />
         <span className={css({ ...canvas.type.body, ...canvas.type.caps })}>Caps Text</span>
         <br />
-        <label className={css({ ...canvas.type.body, ...canvas.type.hint })}>Hint Text</label>
+        <label className={css({ ...canvas.type.body, ...canvas.type.label })}>Label Text</label>
+        <br />
+        <span className={css({ ...canvas.type.body, ...canvas.type.hint })}>Hint Text</span>
+        <br />
+        <span className={css({ ...canvas.type.body, ...canvas.type.error })}>Error Text</span>
         <br />
         <span
           className={css({
