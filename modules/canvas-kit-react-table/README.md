@@ -20,8 +20,10 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
 
 <Table>
   <thead>
-    <tr>ID</tr>
-    <tr>Name</tr>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
   </thead>
   <tbody>
     <TableRow>
