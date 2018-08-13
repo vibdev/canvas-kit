@@ -4,20 +4,24 @@ import {CSSProperties} from './types';
 export const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif';
 export const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace';
 
-export interface CanvasTypeVariations {
-  body: CSSProperties;
-  body2: CSSProperties;
+export interface CanvasType {
+  dataViz1: CSSProperties;
+  dataViz2: CSSProperties;
   h1: CSSProperties;
   h2: CSSProperties;
   h3: CSSProperties;
   h4: CSSProperties;
   h5: CSSProperties;
-  label1: CSSProperties;
-  label2: CSSProperties;
-  label3: CSSProperties;
-  link: CSSProperties;
+  body: CSSProperties;
+  body2: CSSProperties;
+  small: CSSProperties;
+  label: CSSProperties;
   button: CSSProperties;
+  caps: CSSProperties;
   hint: CSSProperties;
+  inverse: CSSProperties;
+  mono: CSSProperties;
+  link: CSSProperties;
   [key: string]: CSSProperties;
 }
 
@@ -33,11 +37,14 @@ const body: CSSProperties = {
   lineHeight: '16px',
 };
 
-const body2: CSSProperties = {
-  ...body,
-  fontSize: '13px',
-} as CSSProperties;
+const dataViz2: CSSProperties = {
+  fontSize: '34px',
+  color: canvasColorsWeb.blackPepper400,
+  fontWeight: 300,
+  lineHeight: '40px',
+};
 
+// Headers
 const h1: CSSProperties = {
   fontWeight: 500,
   fontSize: '28px',
@@ -55,42 +62,73 @@ const h2: CSSProperties = {
 const h3: CSSProperties = {
   fontWeight: 700,
   fontSize: '20px',
-  lineHeight: '24px',
+  lineHeight: '28px',
   color: canvasColorsWeb.blackPepper400,
 };
 
 const h4: CSSProperties = {
   fontWeight: 700,
   fontSize: '16px',
-  lineHeight: '20px',
+  lineHeight: '23px',
   color: canvasColorsWeb.blackPepper400,
 };
 
 const h5: CSSProperties = {
   fontWeight: 400,
   fontSize: '16px',
-  lineHeight: '20px',
+  lineHeight: '23px',
   color: canvasColorsWeb.blackPepper400,
 };
 
-const label1: CSSProperties = {
-  ...body,
-  fontWeight: 500,
-} as CSSProperties;
+// Body
+const body: CSSProperties = {
+  fontSize: '14px',
+  color: canvasColorsWeb.blackPepper300,
+  fontWeight: 400,
+  lineHeight: '20px',
+};
 
-const label2: CSSProperties = {
-  ...label1,
+const body2: CSSProperties = {
+  ...body,
   fontSize: '13px',
 } as CSSProperties;
 
-const label3: CSSProperties = {
-  ...label1,
-  fontSize: '10px',
+const small: CSSProperties = {
+  ...body,
+  fontSize: '12px',
+  lineHeight: '16px',
 } as CSSProperties;
+
+// Variations
+const label: CSSProperties = {
+  fontWeight: 500,
+} as CSSProperties;
+
+const button: CSSProperties = {
+  fontWeight: 500,
+} as CSSProperties;
+
+const caps: CSSProperties = {
+  fontWeight: 500,
+  textTransform: 'uppercase',
+} as CSSProperties;
+
+const hint: CSSProperties = {
+  color: canvasColorsWeb.licorice300,
+} as CSSProperties;
+
+const inverse: CSSProperties = {
+  color: canvasColorsWeb.frenchVanilla100,
+};
+
+const mono: CSSProperties = {
+  fontFamily: fonts.monoFontFamily,
+};
 
 const link: CSSProperties = {
   textDecoration: 'none',
   color: canvasColorsWeb.blueberry500,
+  cursor: 'pointer',
   '&:hover, &:active': {
     textDecoration: 'underline',
     color: canvasColorsWeb.blueberry500,
@@ -102,32 +140,20 @@ const link: CSSProperties = {
   },
 };
 
-const button: CSSProperties = {
-  margin: 0,
-  fontWeight: 500,
-  fontSize: '14px',
-  letterSpacing: '0.5px',
-};
-
-const hint: CSSProperties = {
-  fontSize: '13px',
-  fontWeight: 400,
-  color: canvasColorsWeb.licorice100,
-};
-
-const typeVariations: CanvasTypeVariations = {
-  body,
-  body2,
+const type: CanvasType = {
+  dataViz1,
+  dataViz2,
   h1,
   h2,
   h3,
   h4,
   h5,
-  label1,
-  label2,
-  label3,
-  link,
+  body,
+  body2,
+  small,
+  label,
   button,
+  caps,
   hint,
 };
 
@@ -140,6 +166,7 @@ Object.keys(mono).forEach(variation => {
 const type: CanvasType = {
   ...typeVariations,
   mono,
+  link,
 };
 
 Object.keys(type).forEach(key => {
