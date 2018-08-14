@@ -308,15 +308,26 @@
   dependencies:
     csstype "^2.2.0"
 
+"@types/storybook__react@^3.0.9":
+  version "3.0.9"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/storybook__react/-/storybook__react-3.0.9.tgz#aac193f0c037ddfc2342bd027d720553ac089a56"
+  dependencies:
+    "@types/react" "*"
+    "@types/webpack-env" "*"
+
+"@types/webpack-env@*":
+  version "1.13.6"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/webpack-env/-/webpack-env-1.13.6.tgz#128d1685a7c34d31ed17010fc87d6a12c1de6976"
+
 "@workday/canvas-accent-icons-web@^0.14.2":
-  version "0.14.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-accent-icons-web/-/@workday/canvas-accent-icons-web-0.14.2.tgz#27657fedabd1e7dc10ab50a04bf2b4f7e558eabc"
+  version "0.14.7"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-accent-icons-web/-/@workday/canvas-accent-icons-web-0.14.7.tgz#c076f55b9fbe9ed911b8aa99246b281da9c22cfa"
   dependencies:
     "@workday/design-assets-types" "0.1.2"
 
 "@workday/canvas-applet-icons-web@^0.15.2":
-  version "0.15.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-applet-icons-web/-/@workday/canvas-applet-icons-web-0.15.2.tgz#e4e7d12f35af7042db0006ad3c4ae89236b13c52"
+  version "0.15.8"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-applet-icons-web/-/@workday/canvas-applet-icons-web-0.15.8.tgz#20882f280bc28c8923c9b743b25af5f66787da30"
   dependencies:
     "@workday/design-assets-types" "0.1.2"
 
@@ -430,8 +441,8 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.11.13.tgz#89b0af5fbcceb0bc615e1aca26ab1e4105322829"
 
 "@workday/canvas-system-icons-web@^0.14.2":
-  version "0.14.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.14.2.tgz#1f8a83460f42fbf798a79900d7abf3b0053c1eba"
+  version "0.14.7"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.14.7.tgz#49bd12dd06f26a96795cf9182501c1472a79b952"
   dependencies:
     "@workday/design-assets-types" "0.1.2"
 
