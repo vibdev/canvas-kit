@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { iconColors, CSSProperties } from '@workday/canvas-kit-react-core'
-import { CanvasSystemIcon, CanvasIconTypes } from '@workday/design-assets-types'
-import Icon from './Icon'
-import { SpanProps } from './types'
+import * as React from 'react';
+import {iconColors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {CanvasSystemIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import Icon from './Icon';
+import {SpanProps} from './types';
 
 const styles = ({
   accent,
@@ -15,16 +15,16 @@ const styles = ({
   fillHover,
 }): CSSProperties => ({
   '& .wd-icon-fill': {
-    fill: fill || color,
+    fill: fill != null ? fill : color,
   },
   ':hover .wd-icon-fill': {
-    fill: fillHover || colorHover,
+    fill: fillHover != null ? fillHover : colorHover,
   },
   '& .wd-icon-accent': {
-    fill: accent || color,
+    fill: accent != null ? accent : color,
   },
   ':hover .wd-icon-accent': {
-    fill: accentHover || colorHover,
+    fill: accentHover != null ? accentHover : colorHover,
   },
   '& .wd-icon-background': {
     fill: background,
@@ -32,19 +32,19 @@ const styles = ({
   ':hover .wd-icon-background': {
     fill: backgroundHover,
   },
-})
+});
 
 export interface SystemIconProps {
-  icon: CanvasSystemIcon
-  accent?: string
-  accentHover?: string
-  background?: string
-  backgroundHover?: string
-  color?: string
-  colorHover?: string
-  fill?: string
-  fillHover?: string
-  size?: number
+  icon: CanvasSystemIcon;
+  accent?: string;
+  accentHover?: string;
+  background?: string;
+  backgroundHover?: string;
+  color?: string;
+  colorHover?: string;
+  fill?: string;
+  fillHover?: string;
+  size?: number;
 }
 
 export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
@@ -61,7 +61,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       fillHover,
       size,
       ...elemProps
-    } = this.props
+    } = this.props;
 
     const style = styles({
       accent,
@@ -72,7 +72,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       colorHover,
       fill,
       fillHover,
-    })
+    });
 
     return (
       <Icon
@@ -82,6 +82,6 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
         styles={style}
         elemProps={elemProps}
       />
-    )
+    );
   }
 }

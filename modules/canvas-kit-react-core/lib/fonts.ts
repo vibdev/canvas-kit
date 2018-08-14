@@ -1,20 +1,20 @@
-import { injectGlobal } from 'emotion'
-import { CSSObject } from 'create-emotion'
+import {injectGlobal} from 'emotion';
+import {CSSObject} from 'create-emotion';
 
 export interface CanvasFonts {
-  fontFamily: string
-  monoFontFamily: string
+  fontFamily: string;
+  monoFontFamily: string;
 }
 
-function createFontFace(font): CSSObject {
+function createFontFace(font: CSSObject): CSSObject {
   return {
     '@font-face': font,
-  }
+  };
 }
 
-const fontsPath = 'https://design.workdaycdn.com/beta/assets/fonts@1.0.0/roboto/ttf'
-const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif'
-const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace'
+const fontsPath = 'https://design.workdaycdn.com/beta/assets/fonts@1.0.0/roboto/ttf';
+const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif';
+const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace';
 const fonts = [
   {
     fontFamily: 'Roboto',
@@ -46,9 +46,9 @@ const fonts = [
     fontWeight: 400,
     src: `local('Roboto Mono'), local('RobotoMono-Regular'), url(${fontsPath}/RobotoMono-Regular.ttf) format('ttf')`,
   },
-]
-injectGlobal(fonts.map(font => createFontFace(font)))
+];
+injectGlobal(fonts.map(font => createFontFace(font)));
 
-const canvasFonts: CanvasFonts = { fontFamily, monoFontFamily }
+const canvasFonts: CanvasFonts = {fontFamily, monoFontFamily};
 
-export default canvasFonts
+export default canvasFonts;
