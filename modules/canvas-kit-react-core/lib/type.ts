@@ -31,16 +31,17 @@ export interface CanvasType extends CanvasTypeVariations {
   [key: string]: CanvasTypeVariations | CSSProperties;
 }
 
-const body: CSSProperties = {
-  fontSize: '14px',
-  color: canvasColorsWeb.blackPepper300,
-  fontWeight: 400,
-  lineHeight: '16px',
+// Data Viz
+const dataViz1: CSSProperties = {
+  fontSize: '56px',
+  color: typeColors.heading,
+  fontWeight: 300,
+  lineHeight: '68px',
 };
 
 const dataViz2: CSSProperties = {
   fontSize: '34px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
   fontWeight: 300,
   lineHeight: '40px',
 };
@@ -50,41 +51,41 @@ const h1: CSSProperties = {
   fontWeight: 500,
   fontSize: '28px',
   lineHeight: '36px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
 };
 
 const h2: CSSProperties = {
   fontWeight: 700,
   fontSize: '24px',
   lineHeight: '32px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
 };
 
 const h3: CSSProperties = {
   fontWeight: 700,
   fontSize: '20px',
   lineHeight: '28px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
 };
 
 const h4: CSSProperties = {
   fontWeight: 700,
   fontSize: '16px',
   lineHeight: '23px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
 };
 
 const h5: CSSProperties = {
   fontWeight: 400,
   fontSize: '16px',
   lineHeight: '23px',
-  color: canvasColorsWeb.blackPepper400,
+  color: typeColors.heading,
 };
 
 // Body
 const body: CSSProperties = {
   fontSize: '14px',
-  color: canvasColorsWeb.blackPepper300,
+  color: typeColors.body,
   fontWeight: 400,
   lineHeight: '20px',
 };
@@ -115,15 +116,15 @@ const caps: CSSProperties = {
 } as CSSProperties;
 
 const hint: CSSProperties = {
-  color: canvasColorsWeb.licorice300,
+  color: typeColors.hint,
 } as CSSProperties;
 
 const error: CSSProperties = {
-  color: canvasColorsWeb.peach500,
+  color: statusColors.error,
 } as CSSProperties;
 
 const inverse: CSSProperties = {
-  color: canvasColorsWeb.frenchVanilla100,
+  color: typeColors.inverse,
 };
 
 const mono: CSSProperties = {
@@ -132,14 +133,14 @@ const mono: CSSProperties = {
 
 const link: CSSProperties = {
   textDecoration: 'none',
-  color: canvasColorsWeb.blueberry500,
+  color: typeColors.link,
   cursor: 'pointer',
   '&:hover, &:active': {
     textDecoration: 'underline',
-    color: canvasColorsWeb.blueberry500,
+    color: typeColors.link,
   },
   '&:focus': {
-    background: canvasColorsWeb.blueberry100,
+    background: typeColors.link,
     textDecoration: 'underline',
     outline: 'none',
   },
