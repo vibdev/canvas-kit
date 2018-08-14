@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-const modulesPath = path.resolve(__dirname, '../modules')
+const modulesPath = path.resolve(__dirname, '../modules');
 
 const customRules = [
   {
@@ -62,17 +62,17 @@ const customRules = [
       },
     ],
   },
-]
+];
 
 module.exports = (baseConfig, env) => {
   // Exclude node_modules from js/babel loader
-  baseConfig.module.rules[0].exclude = /node_modules/
+  baseConfig.module.rules[0].exclude = /node_modules/;
 
   // Custom rules
-  baseConfig.module.rules = baseConfig.module.rules.concat(customRules)
+  baseConfig.module.rules = baseConfig.module.rules.concat(customRules);
 
   // Add `.ts` and `.tsx` as a resolvable extension.
-  baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx']
+  baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];
 
-  return baseConfig
-}
+  return baseConfig;
+};

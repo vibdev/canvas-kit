@@ -1,37 +1,37 @@
-import * as React from 'react'
-import { colors, CSSProperties } from '@workday/canvas-kit-react-core'
-import { CanvasAccentIcon, CanvasIconTypes } from '@workday/design-assets-types'
-import Icon, { IconProps } from './Icon'
-import { SpanProps } from './types'
+import * as React from 'react';
+import {colors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {CanvasAccentIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import Icon, {IconProps} from './Icon';
+import {SpanProps} from './types';
 
-const styles = ({ color = colors.blueberry500, transparent = false }): CSSProperties => ({
+const styles = ({color = colors.blueberry500, transparent = false}): CSSProperties => ({
   '& .color-500': {
     fill: color,
   },
   '& .french-vanilla-100': {
     fill: transparent ? 'transparent' : colors.frenchVanilla100,
   },
-})
+});
 
 export interface AccentIconProps extends React.HTMLProps<HTMLSpanElement> {
-  icon: CanvasAccentIcon
-  color?: string
-  transparent?: boolean
-  size?: number
+  icon: CanvasAccentIcon;
+  color?: string;
+  transparent?: boolean;
+  size?: number;
 }
 
 export default class AccentIcon extends React.Component<SpanProps & AccentIconProps> {
   render() {
-    const { icon, color, transparent, size, ...elemProps } = this.props
+    const {icon, color, transparent, size, ...elemProps} = this.props;
 
     return (
       <Icon
         icon={icon}
         type={CanvasIconTypes.Accent}
-        styles={styles({ color, transparent })}
+        styles={styles({color, transparent})}
         size={size}
         elemProps={elemProps}
       />
-    )
+    );
   }
 }

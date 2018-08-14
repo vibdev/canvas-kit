@@ -1,12 +1,12 @@
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react'
-import { storiesOf } from '@storybook/react'
-import withReadme from 'storybook-readme/with-readme'
-import { SystemIcon } from '@workday/canvas-kit-react-icon'
-import edit from '@workday/canvas-system-icons-web/dist/es6/edit'
+import * as React from 'react';
+import {storiesOf} from '@storybook/react';
+import withReadme from 'storybook-readme/with-readme';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import edit from '@workday/canvas-system-icons-web/dist/es6/edit';
 
-import { Button, IconButton } from './index' // tslint:disable-line:import-name
-import README from './README.md'
+import {Button, IconButton} from './index'; // tslint:disable-line:import-name
+import README from './README.md';
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
@@ -47,4 +47,4 @@ storiesOf('Canvas Kit/Button', module)
         <SystemIcon icon={edit} />
       </IconButton>
     </div>
-  ))
+  ));

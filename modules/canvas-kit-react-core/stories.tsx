@@ -1,11 +1,11 @@
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react'
-import styled from 'react-emotion'
-import { storiesOf } from '@storybook/react'
-import withReadme from 'storybook-readme/with-readme'
+import * as React from 'react';
+import styled from 'react-emotion';
+import {storiesOf} from '@storybook/react';
+import withReadme from 'storybook-readme/with-readme';
 
-import canvas from './index' // tslint:disable-line:import-name
-import README from './README.md'
+import canvas from './index'; // tslint:disable-line:import-name
+import README from './README.md';
 
 storiesOf('Canvas Kit/Core', module)
   .addDecorator(withReadme(README))
@@ -18,12 +18,12 @@ storiesOf('Canvas Kit/Core', module)
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-    })
+    });
 
     return (
       <div className="story">
         <h1 className="section-label">Depth</h1>
-        <div style={{ display: 'flex' }}>
+        <div style={{display: 'flex'}}>
           <Card style={canvas.depth.inset}>Depth -1</Card>
           <Card style={canvas.depth['1']}>Depth 1</Card>
           <Card style={canvas.depth['2']}>Depth 2</Card>
@@ -31,7 +31,7 @@ storiesOf('Canvas Kit/Core', module)
           <Card style={canvas.depth['4']}>Depth 4</Card>
         </div>
       </div>
-    )
+    );
   })
   .add('Type', () => (
     <div className="story">
@@ -109,4 +109,4 @@ storiesOf('Canvas Kit/Core', module)
         <label style={canvas.type.mono.label3}>Label 3</label>
       </section>
     </div>
-  ))
+  ));

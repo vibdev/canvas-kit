@@ -1,11 +1,11 @@
 /// <reference path="../../typings.d.ts" />
-import * as React from 'react'
-import { storiesOf } from '@storybook/react'
-import withReadme from 'storybook-readme/with-readme'
-import { Button, ButtonTypes } from '@workday/canvas-kit-react-button'
+import * as React from 'react';
+import {storiesOf} from '@storybook/react';
+import withReadme from 'storybook-readme/with-readme';
+import {Button, ButtonTypes} from '@workday/canvas-kit-react-button';
 
-import { FloatingActionToolbar } from './index'
-import README from './README.md'
+import {FloatingActionToolbar} from './index';
+import README from './README.md';
 
 storiesOf('Canvas Kit/Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
@@ -28,4 +28,4 @@ storiesOf('Canvas Kit/Floating Action Toolbar', module)
         <Button>Toolbar</Button>
       </FloatingActionToolbar>
     </div>
-  ))
+  ));

@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { colors, BrandingColors, CSSProperties } from '@workday/canvas-kit-react-core'
-import { CanvasAppletIcon, CanvasIconTypes } from '@workday/design-assets-types'
-import Icon from './Icon'
-import { SpanProps } from './types'
+import * as React from 'react';
+import {colors, BrandingColors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {CanvasAppletIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import Icon from './Icon';
+import {SpanProps} from './types';
 
-const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
+const styles = ({color = BrandingColors.Blueberry}): CSSProperties => {
   // Check if valid color
   if (!(`${color}100` in colors)) {
-    throw Error(`Color "${color}" not found`)
+    throw Error(`Color "${color}" not found`);
   }
 
   return {
@@ -29,29 +29,29 @@ const styles = ({ color = BrandingColors.Blueberry }): CSSProperties => {
     '& .color-500': {
       fill: colors[`${color}500`],
     },
-  }
-}
+  };
+};
 
 export interface AppletIconProps {
-  icon: CanvasAppletIcon
-  color?: BrandingColors
-  size?: number
+  icon: CanvasAppletIcon;
+  color?: BrandingColors;
+  size?: number;
 }
 
 export default class AppletIcon extends React.Component<SpanProps & AppletIconProps> {
-  public static Colors = BrandingColors
+  public static Colors = BrandingColors;
 
   public render() {
-    const { icon, color, size, ...elemProps } = this.props
+    const {icon, color, size, ...elemProps} = this.props;
 
     return (
       <Icon
         icon={icon}
         type={CanvasIconTypes.Applet}
-        styles={styles({ color })}
+        styles={styles({color})}
         size={size}
         elemProps={elemProps}
       />
-    )
+    );
   }
 }

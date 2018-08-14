@@ -1,7 +1,7 @@
-import { DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
+import {DetailedHTMLProps, ButtonHTMLAttributes} from 'react';
 
 export interface ClassNameProperties {
-  [key: string]: boolean
+  [key: string]: boolean;
 }
 
 export enum ButtonTypes {
@@ -19,4 +19,4 @@ export enum ButtonSizes {
 export type ReactButton = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
->
+>;
