@@ -35,37 +35,37 @@ You can modify any of the type hierarchy with the below variations:
 **Label**
 
 ```jsx
-<label className={css({ ...canvas.type.body, ...canvas.type.label })}>Label Text</label>
+<label className={css(canvas.type.body, canvas.type.label)}>Label Text</label>
 ```
 
 **Button**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.button })}>Button Text</span>
+<span className={css(canvas.type.body, canvas.type.button)}>Button Text</span>
 ```
 
 **Caps**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.caps })}>Caps Text</span>
+<span className={css(canvas.type.body, canvas.type.caps)}>Caps Text</span>
 ```
 
 **Hint**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.hint })}>Hint Text</span>
+<span className={css(canvas.type.body, canvas.type.hint)}>Hint Text</span>
 ```
 
 **Error**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.error })}>Error Text</span>
+<span className={css(canvas.type.body, canvas.type.error)}>Error Text</span>
 ```
 
 **Link**
 
 ```jsx
-<a href="#" className={css({ ...canvas.type.body, ...canvas.type.link })}>
+<a href="#" className={css(canvas.type.body, canvas.type.link)}>
   Link Text
 </a>
 ```
@@ -73,11 +73,11 @@ You can modify any of the type hierarchy with the below variations:
 **Mono**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.mono })}>Mono Text</span>
+<span className={css(canvas.type.body, canvas.type.mono)}>Mono Text</span>
 ```
 
 **Inverse**
 
 ```jsx
-<span className={css({ ...canvas.type.body, ...canvas.type.inverse })}>Inverse Text</span>
+<span className={css(canvas.type.body, canvas.type.inverse)}>Inverse Text</span>
 ```
