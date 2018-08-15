@@ -14,14 +14,18 @@ class ButtonBase extends React.Component<ButtonBaseProps> {
   };
 
   public render() {
-    const classes = classNames(
+    const classes: (string | ClassNameProperties | undefined | null)[] = [
       ButtonBase.classes,
       this.props.btnClasses,
-      this.props.btnProps.className
-    );
+    ];
+
+    if ('btnProps' in this.props) {
+      classes.push(this.props.btnProps!.className);
+    }
+
     return (
-      <button {...this.props.btnProps} className={classes}>
-        {this.props.btnProps.children}
+      <button {...this.props.btnProps} className={classNames(classes)}>
+        {'btnProps' in this.props ? this.props.btnProps!.children : undefined}
       </button>
     );
   }

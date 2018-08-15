@@ -13,7 +13,7 @@ storiesOf('Canvas Kit/Table', module)
     const data = [
       {
         data: [1, 'Aidan Brown', 'Product Manager', 'San Francisco, CA'],
-        state: null,
+        state: undefined,
       },
       {
         data: [2, 'Betty Chen', 'Product Designer', 'San Francisco, CA'],

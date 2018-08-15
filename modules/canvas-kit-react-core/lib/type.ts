@@ -16,10 +16,12 @@ export interface CanvasTypeVariations {
   link: CSSProperties;
   button: CSSProperties;
   hint: CSSProperties;
+  [key: string]: CSSProperties;
 }
 
 export interface CanvasType extends CanvasTypeVariations {
   mono: CanvasTypeVariations;
+  [key: string]: CanvasTypeVariations | CSSProperties;
 }
 
 const {fontFamily} = fonts;

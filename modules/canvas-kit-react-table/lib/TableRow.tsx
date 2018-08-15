@@ -30,7 +30,7 @@ export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'
     };
 
     return (
-      <tr {...this.props} className={classNames(classes)}>
+      <tr {...elemProps} className={classNames(classes)}>
         {this.props.children}
       </tr>
     );

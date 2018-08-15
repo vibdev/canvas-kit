@@ -1,10 +1,18 @@
 import * as React from 'react';
 import {colors, CSSProperties} from '@workday/canvas-kit-react-core';
 import {CanvasAccentIcon, CanvasIconTypes} from '@workday/design-assets-types';
-import Icon, {IconProps} from './Icon';
+import Icon from './Icon';
 import {SpanProps} from './types';
 
-const styles = ({color = colors.blueberry500, transparent = false}): CSSProperties => ({
+export interface AccentIconStyles {
+  color?: string;
+  transparent?: boolean;
+}
+
+const styles = ({
+  color = colors.blueberry500,
+  transparent = false,
+}: AccentIconStyles): CSSProperties => ({
   '& .color-500': {
     fill: color,
   },
@@ -13,10 +21,8 @@ const styles = ({color = colors.blueberry500, transparent = false}): CSSProperti
   },
 });
 
-export interface AccentIconProps extends React.HTMLProps<HTMLSpanElement> {
+export interface AccentIconProps extends AccentIconStyles {
   icon: CanvasAccentIcon;
-  color?: string;
-  transparent?: boolean;
   size?: number;
 }
 

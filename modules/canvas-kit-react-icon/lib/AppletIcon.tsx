@@ -4,37 +4,48 @@ import {CanvasAppletIcon, CanvasIconTypes} from '@workday/design-assets-types';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
-const styles = ({color = BrandingColors.Blueberry}): CSSProperties => {
+export interface AppletIconStyles {
+  color?: BrandingColors;
+}
+
+const styles = ({color = BrandingColors.Blueberry}: AppletIconStyles): CSSProperties => {
   // Check if valid color
-  if (!(`${color}100` in colors)) {
+  const colorNames = {
+    100: `${color}100`,
+    200: `${color}200`,
+    300: `${color}300`,
+    400: `${color}400`,
+    500: `${color}500`,
+  };
+
+  if (!(colorNames[100] in colors)) {
     throw Error(`Color "${color}" not found`);
   }
 
   return {
     '& .color-100': {
-      fill: colors.frenchVanilla100,
+      fill: colors.frenchVanilla100 as string,
     },
     '& .color-200': {
-      fill: colors[`${color}200`],
+      fill: colors[colorNames[200]] as string,
     },
     '& .color-300': {
-      fill: colors[`${color}300`],
+      fill: colors[colorNames[300]] as string,
     },
     '& .color-400': {
-      fill: colors[`${color}400`],
+      fill: colors[colorNames[400]] as string,
     },
     '& .color-400-alpha-20': {
-      fill: colors[`${color}400`],
+      fill: colors[colorNames[400]] as string,
     },
     '& .color-500': {
-      fill: colors[`${color}500`],
+      fill: colors[colorNames[500]] as string,
     },
   };
 };
 
-export interface AppletIconProps {
+export interface AppletIconProps extends AppletIconStyles {
   icon: CanvasAppletIcon;
-  color?: BrandingColors;
   size?: number;
 }
 

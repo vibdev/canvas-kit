@@ -4,6 +4,17 @@ import {CanvasSystemIcon, CanvasIconTypes} from '@workday/design-assets-types';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
+export interface SystemIconStyles {
+  accent?: string;
+  accentHover?: string;
+  background?: string;
+  backgroundHover?: string;
+  color?: string;
+  colorHover?: string;
+  fill?: string;
+  fillHover?: string;
+}
+
 const styles = ({
   accent,
   accentHover,
@@ -13,7 +24,7 @@ const styles = ({
   colorHover = iconColors.hover,
   fill,
   fillHover,
-}): CSSProperties => ({
+}: SystemIconStyles): CSSProperties => ({
   '& .wd-icon-fill': {
     fill: fill != null ? fill : color,
   },
@@ -34,16 +45,8 @@ const styles = ({
   },
 });
 
-export interface SystemIconProps {
+export interface SystemIconProps extends SystemIconStyles {
   icon: CanvasSystemIcon;
-  accent?: string;
-  accentHover?: string;
-  background?: string;
-  backgroundHover?: string;
-  color?: string;
-  colorHover?: string;
-  fill?: string;
-  fillHover?: string;
   size?: number;
 }
 
