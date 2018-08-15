@@ -4,7 +4,7 @@ import {CSSProperties} from './types';
 export const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif';
 export const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace';
 
-export interface CanvasType {
+export interface CanvasTypeHierarchy {
   dataViz1: CSSProperties;
   dataViz2: CSSProperties;
   h1: CSSProperties;
@@ -15,6 +15,9 @@ export interface CanvasType {
   body: CSSProperties;
   body2: CSSProperties;
   small: CSSProperties;
+}
+
+export interface CanvasTypeVariant {
   label: CSSProperties;
   button: CSSProperties;
   caps: CSSProperties;
@@ -23,6 +26,10 @@ export interface CanvasType {
   inverse: CSSProperties;
   mono: CSSProperties;
   link: CSSProperties;
+}
+
+export interface CanvasType extends CanvasTypeHierarchy {
+  variant: CanvasTypeVariant;
   [key: string]: CSSProperties;
 }
 
@@ -157,22 +164,16 @@ const type: CanvasType = {
   body,
   body2,
   small,
-  label,
-  button,
-  caps,
-  hint,
-};
-
-// Override font family for mono type
-const mono: CanvasTypeVariations = typeVariations;
-Object.keys(mono).forEach(variation => {
-  mono[variation].fontFamily = monoFontFamily;
-});
-
-const type: CanvasType = {
-  ...typeVariations,
-  mono,
-  link,
+  variant: {
+    label,
+    button,
+    caps,
+    hint,
+    error,
+    inverse,
+    mono,
+    link,
+  },
 };
 
 Object.keys(type).forEach(key => {

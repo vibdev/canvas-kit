@@ -75,25 +75,25 @@ storiesOf('Canvas Kit/Core', module)
             try-hard raw denim, thundercats salvia intelligentsia jean shorts officia. Heirloom
             craft beer put a bird on it occaecat
           </p>
-          <a href="#" className={css(canvas.type.body, canvas.type.link)}>
+          <a href="#" className={css(canvas.type.body, canvas.type.variant.link)}>
             Link Text
           </a>
           <br />
-          <span className={css(canvas.type.body, canvas.type.button)}>Button Text</span>
+          <span className={css(canvas.type.body, canvas.type.variant.button)}>Button Text</span>
           <br />
-          <span className={css(canvas.type.body, canvas.type.caps)}>Caps Text</span>
+          <span className={css(canvas.type.body, canvas.type.variant.caps)}>Caps Text</span>
           <br />
-          <label className={css(canvas.type.body, canvas.type.label)}>Label Text</label>
+          <label className={css(canvas.type.body, canvas.type.variant.label)}>Label Text</label>
           <br />
-          <span className={css(canvas.type.body, canvas.type.hint)}>Hint Text</span>
+          <span className={css(canvas.type.body, canvas.type.variant.hint)}>Hint Text</span>
           <br />
-          <span className={css(canvas.type.body, canvas.type.error)}>Error Text</span>
+          <span className={css(canvas.type.body, canvas.type.variant.error)}>Error Text</span>
           <br />
-          <span className={css(canvas.type.body, canvas.type.inverse, inverseStyle)}>
+          <span className={css(canvas.type.body, canvas.type.variant.inverse, inverseStyle)}>
             Inverse Text
           </span>
           <br />
-          <span className={css(canvas.type.body, canvas.type.mono)}>Mono Text</span>
+          <span className={css(canvas.type.body, canvas.type.variant.mono)}>Mono Text</span>
         </section>
       </div>
     )
