@@ -37,7 +37,7 @@
     "one-line": [true, "check-catch", "check-open-brace", "check-whitespace"],
     "prefer-const": true,
     "radix": true,
-    "strict-boolean-expressions": true,
+    "strict-boolean-expressions": false,
     "switch-default": true,
     "triple-equals": [true, "allow-null-check"],
     "typedef": [true, "parameter", "property-declaration"],

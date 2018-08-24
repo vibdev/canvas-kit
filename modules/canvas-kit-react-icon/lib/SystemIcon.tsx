@@ -26,16 +26,16 @@ const styles = ({
   fillHover,
 }: SystemIconStyles): CSSProperties => ({
   '& .wd-icon-fill': {
-    fill: fill != null ? fill : color,
+    fill: fill || color,
   },
   ':hover .wd-icon-fill': {
-    fill: fillHover != null ? fillHover : colorHover,
+    fill: fillHover || colorHover,
   },
   '& .wd-icon-accent': {
-    fill: accent != null ? accent : color,
+    fill: accent || color,
   },
   ':hover .wd-icon-accent': {
-    fill: accentHover != null ? accentHover : colorHover,
+    fill: accentHover || colorHover,
   },
   '& .wd-icon-background': {
     fill: background,
