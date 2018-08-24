@@ -5,6 +5,7 @@
     "allowJs": false,
     "declaration": true,
     "jsx": "react",
+    "lib": ["es2015", "es2017", "dom"],
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
