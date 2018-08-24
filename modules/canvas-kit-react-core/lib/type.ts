@@ -143,7 +143,7 @@ const type: CanvasType = {
 };
 
 Object.keys(type).forEach(key => {
-  type[key] = Object.assign({}, type[key], {fontFamily});
+  type[key] = {...type[key], fontFamily} as CSSProperties;
 });
 
 export default type;
