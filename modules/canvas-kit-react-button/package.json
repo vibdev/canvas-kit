@@ -38,8 +38,8 @@
     "classnames": "^2.2.5"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.3",
+    "@types/classnames": "^2.2.6",
     "@workday/canvas-kit-react-icon": "1.2.0",
-    "@workday/canvas-system-icons-web": "^0.14.2"
+    "@workday/canvas-system-icons-web": "^0.16.7"
   }
 }

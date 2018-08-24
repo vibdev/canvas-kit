@@ -2,7 +2,9 @@
 
 Components implementing Canvas data table styling.
 
-Refer to [canvas-kit-css-table](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-css-table) for additional details.
+Refer to
+[canvas-kit-css-table](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-css-table)
+for additional details.
 
 ## Usage
 
@@ -11,9 +13,11 @@ If you're using webpack, you must enable a CSS loader.
 
 ### Table
 
-Extends `<table>` with Canvas data table styling. Use with native `<thead>` and `<tbody>` elements for respective styling.
+Extends `<table>` with Canvas data table styling. Use with native `<thead>` and `<tbody>` elements
+for respective styling.
 
-Use `<TableRow>` component to enable state styling. The `<Table>` component is also compatible with native `<tr>` components.
+Use `<TableRow>` component to enable state styling. The `<Table>` component is also compatible with
+native `<tr>` components.
 
 ```jsx
 import { Table, TableRow } from '@workday/canvas-kit-react-table'
@@ -68,4 +72,5 @@ Type: `TableRowStates.States = { Error, Alert, InputError, InputAlert, Hover, Se
 Default: `null`  
 Button state.
 
-> `InputError` and `InputAlert` are used for cases when the error is on the input-level rather than the entire row. This style produces a colored row without a darkened border.
+> `InputError` and `InputAlert` are used for cases when the error is on the input-level rather than
+> the entire row. This style produces a colored row without a darkened border.

@@ -1,1 +1,1 @@
-export { default as FloatingActionToolbar } from './lib/FloatingActionToolbar'
+export {default as FloatingActionToolbar} from './lib/FloatingActionToolbar';

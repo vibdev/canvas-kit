@@ -2,13 +2,16 @@
 
 Components assisting the rendering of Canvas accent, applet, and system icons.
 
-Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets) must be used with these components. No icons are bundled with this package.
+Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets) must be used with
+these components. No icons are bundled with this package.
 
 ## Usage
 
 ### Icon Packages
 
-When using an icon package, you have the option of using named exports or using an individual icon module. If using named exports, you should ensure that you have configured [tree shaking](https://webpack.js.org/guides/tree-shaking/) correctly to prevent bundle bloat.
+When using an icon package, you have the option of using named exports or using an individual icon
+module. If using named exports, you should ensure that you have configured
+[tree shaking](https://webpack.js.org/guides/tree-shaking/) correctly to prevent bundle bloat.
 
 ```jsx
 # Named Export
@@ -123,11 +126,13 @@ Icon size in `px`.
 
 **`color`**  
 Default: `colors.primary.iconStandard`  
-Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property if defined.
+Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property if
+defined.
 
 **`colorHover`**  
 Default: `colors.primary.iconHover`  
-Icon hover color. This will define `accentHover` and `fillHover`. `accentHover` and `fillHover` will override this property if defined.
+Icon hover color. This will define `accentHover` and `fillHover`. `accentHover` and `fillHover` will
+override this property if defined.
 
 **`accent`**  
 `.wd-icon-accent` color.

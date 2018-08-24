@@ -1,8 +1,19 @@
-import * as React from 'react'
-import { iconColors, CSSProperties } from '@workday/canvas-kit-react-core'
-import { CanvasSystemIcon, CanvasIconTypes } from '@workday/design-assets-types'
-import Icon from './Icon'
-import { SpanProps } from './types'
+import * as React from 'react';
+import {iconColors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {CanvasSystemIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import Icon from './Icon';
+import {SpanProps} from './types';
+
+export interface SystemIconStyles {
+  accent?: string;
+  accentHover?: string;
+  background?: string;
+  backgroundHover?: string;
+  color?: string;
+  colorHover?: string;
+  fill?: string;
+  fillHover?: string;
+}
 
 const styles = ({
   accent,
@@ -13,7 +24,7 @@ const styles = ({
   colorHover = iconColors.hover,
   fill,
   fillHover,
-}): CSSProperties => ({
+}: SystemIconStyles): CSSProperties => ({
   '& .wd-icon-fill': {
     fill: fill || color,
   },
@@ -32,19 +43,11 @@ const styles = ({
   ':hover .wd-icon-background': {
     fill: backgroundHover,
   },
-})
+});
 
-export interface SystemIconProps {
-  icon: CanvasSystemIcon
-  accent?: string
-  accentHover?: string
-  background?: string
-  backgroundHover?: string
-  color?: string
-  colorHover?: string
-  fill?: string
-  fillHover?: string
-  size?: number
+export interface SystemIconProps extends SystemIconStyles {
+  icon: CanvasSystemIcon;
+  size?: number;
 }
 
 export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
@@ -61,7 +64,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       fillHover,
       size,
       ...elemProps
-    } = this.props
+    } = this.props;
 
     const style = styles({
       accent,
@@ -72,7 +75,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       colorHover,
       fill,
       fillHover,
-    })
+    });
 
     return (
       <Icon
@@ -82,6 +85,6 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
         styles={style}
         elemProps={elemProps}
       />
-    )
+    );
   }
 }

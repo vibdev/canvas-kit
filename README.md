@@ -27,19 +27,25 @@ This will build all modules' CSS and JS.
 
 ## Code Style Guide
 
-This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript), with a few exceptions. Rules are enforced using [TSLint](https://palantir.github.io/tslint/) and code formatting is provided through [Prettier](prettier.io).
+This project follows UIC's
+[WD-components Style Guide](https://ghe.megaleo.com/UIC/wd-components/blob/master/docs/STYLEGUIDE.md).
+Rules are enforced using [TSLint](https://palantir.github.io/tslint/) and code formatting is
+provided through [Prettier](prettier.io).
 
-To lint using TSLint, use `yarn lint`. To format and lint your code (careful - this can rewrite files), use `yarn format`.
+To lint using TSLint, use `yarn lint`. To format and lint your code (careful - this can rewrite
+files), use `yarn format`.
 
 Code formatting will occur automatically before `git commit` for files staged using `git add`.
 
 ### Editors
 
-Install the Prettier and TSLint plugins for your respective editors for quicker and easier formatting.
+Install the Prettier and TSLint plugins for your respective editors for quicker and easier
+formatting.
 
 #### Visual Studio Code
 
-Install [prettier-vscode](https://github.com/prettier/prettier-vscode) and [vscode-tslint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+Install [prettier-vscode](https://github.com/prettier/prettier-vscode) and
+[vscode-tslint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 
 Consider adding the following options:
 
@@ -47,12 +53,16 @@ Consider adding the following options:
 
 #### Atom
 
-Install [prettier-atom](https://github.com/prettier/prettier-atom) and [linter-tslint](https://github.com/AtomLinter/linter-tslint)
+Install [prettier-atom](https://github.com/prettier/prettier-atom) and
+[linter-tslint](https://github.com/AtomLinter/linter-tslint)
 
 #### Emacs
 
-Install [prettier-emacs](https://github.com/prettier/prettier-emacs) and [Flycheck](http://www.flycheck.org/)
+Install [prettier-emacs](https://github.com/prettier/prettier-emacs) and
+[Flycheck](http://www.flycheck.org/)
 
 #### Other Editors
 
-Check [Prettier](https://prettier.io/docs/en/editors.html) and [TSLint](https://palantir.github.io/tslint/usage/third-party-tools/) documentation for additional editor plugins.
+Check [Prettier](https://prettier.io/docs/en/editors.html) and
+[TSLint](https://palantir.github.io/tslint/usage/third-party-tools/) documentation for additional
+editor plugins.

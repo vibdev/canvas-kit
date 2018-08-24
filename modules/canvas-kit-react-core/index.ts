@@ -1,12 +1,12 @@
-import * as canvasColorsWeb from '@workday/canvas-colors-web'
-import { BrandingColors } from './lib/colors.types'
-import depth, { CanvasDepth } from './lib/depth'
-import spacing, { CanvasSpacing } from './lib/spacing'
-import fonts, { CanvasFonts } from './lib/fonts'
-import type, { CanvasType } from './lib/type'
-import { CSSProperties } from './lib/types'
+import * as canvasColorsWeb from '@workday/canvas-colors-web';
+import {BrandingColors} from './lib/colors.types';
+import depth, {CanvasDepth} from './lib/depth';
+import spacing, {CanvasSpacing} from './lib/spacing';
+import fonts, {CanvasFonts} from './lib/fonts';
+import type, {CanvasType} from './lib/type';
+import {CSSProperties} from './lib/types';
 
-const { default: colors, ...semanticColors } = canvasColorsWeb
+const {default: colors, ...semanticColors} = canvasColorsWeb;
 const canvas = {
   colors,
   depth,
@@ -14,9 +14,9 @@ const canvas = {
   fonts,
   type,
   ...semanticColors,
-}
+};
 
-export * from '@workday/canvas-colors-web'
+export * from '@workday/canvas-colors-web';
 export {
   colors,
   depth,
@@ -29,5 +29,5 @@ export {
   CanvasFonts,
   CanvasType,
   CSSProperties,
-}
-export default canvas
+};
+export default canvas;

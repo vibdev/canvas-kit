@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as classNames from 'classnames'
-import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css'
+import * as React from 'react';
+import * as classNames from 'classnames';
+import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css';
 
 export enum TableRowStates {
   Error,
@@ -12,14 +12,14 @@ export enum TableRowStates {
 }
 
 export interface TableRowProps {
-  state?: TableRowStates
+  state?: TableRowStates;
 }
 
 export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'] & TableRowProps> {
-  public static States = TableRowStates
+  public static States = TableRowStates;
 
   public render() {
-    const { state, ...elemProps } = this.props
+    const {state, ...elemProps} = this.props;
     const classes = {
       'wdc-table-row-error': state === TableRowStates.Error,
       'wdc-table-row-alert': state === TableRowStates.Alert,
@@ -27,12 +27,12 @@ export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'
       'wdc-table-row-alert-borderless': state === TableRowStates.InputAlert,
       'wdc-table-row-hover': state === TableRowStates.Hover,
       'wdc-table-row-selected': state === TableRowStates.Selected,
-    }
+    };
 
     return (
-      <tr {...this.props} className={classNames(classes)}>
+      <tr {...elemProps} className={classNames(classes)}>
         {this.props.children}
       </tr>
-    )
+    );
   }
 }

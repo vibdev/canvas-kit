@@ -38,7 +38,8 @@ Button size.
 
 ### Icon Button
 
-Button containing an icon. Icon may be a component from [`canvas-kit-react-icon`](../canvas-kit-react-icon).
+Button containing an icon. Icon may be a component from
+[`canvas-kit-react-icon`](../canvas-kit-react-icon).
 
 ```jsx
 import { IconButton } from '@workday/canvas-kit-react-button'

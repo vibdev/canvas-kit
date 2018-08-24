@@ -1,11 +1,21 @@
 {
   "compilerOptions": {
-    "module": "es2015",
+    "module": "es6",
     "target": "es5",
-    "noImplicitAny": false,
-    "moduleResolution": "node",
+    "allowJs": false,
+    "declaration": true,
     "jsx": "react",
-    "lib": ["es2015", "es2016", "dom"]
+    "lib": ["es2015", "es2017", "dom"],
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "preserveConstEnums": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true
   },
   "exclude": ["node_modules", "modules/**/dist/*", "modules/**/ts-tmp/*"]
 }

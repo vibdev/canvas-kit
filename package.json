@@ -6,6 +6,7 @@
     "@types/node": "^8.0.58",
     "@types/react": "^16.3.11",
     "@types/react-dom": "^16.0.5",
+    "@types/storybook__react": "^3.0.9",
     "@workday/canvas-kit-build": "^3.4.3",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
@@ -26,11 +27,10 @@
     "storybook-readme": "^3.0.6",
     "style-loader": "^0.20.3",
     "ts-loader": "^3.5.0",
-    "tslint": "^5.9.1",
-    "tslint-config-airbnb": "^5.4.2",
-    "tslint-config-prettier": "^1.6.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
     "tslint-loader": "^3.5.3",
-    "tslint-react": "^3.4.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^2.6.2",
     "validate-commit-msg": "^2.14.0"
   },
@@ -47,7 +47,7 @@
     "lerna-publish": "lerna publish --exact --skip-npm --conventional-commits",
     "build-storybook": "build-storybook -c .storybook -o docs",
     "lint": "tslint --project tsconfig.json",
-    "format:prettier": "prettier \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
+    "format:prettier": "prettier --config=./.prettierrc --ignore-path=./.prettierignore \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
     "format:tslint": "tslint --project tsconfig.json --fix",
     "format": "yarn format:prettier && yarn format:tslint"
   },
@@ -56,25 +56,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "prettier": {
-    "trailingComma": "es5",
-    "jsxBracketSameLine": true,
-    "singleQuote": true,
-    "printWidth": 100,
-    "semi": false
-  },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write",
+      "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
       "tslint --project tsconfig.json --fix",
       "git add"
     ],
-    "*.{js,jsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{json,md}": [
-      "prettier --write",
+    "*.{js,jsx,json,md}": [
+      "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
       "git add"
     ]
   },
