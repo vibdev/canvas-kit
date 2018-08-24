@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-fat",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Canvas floating action toolbar component",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
