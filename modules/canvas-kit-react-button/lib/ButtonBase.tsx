@@ -19,13 +19,13 @@ class ButtonBase extends React.Component<ButtonBaseProps> {
       this.props.btnClasses,
     ];
 
-    if ('btnProps' in this.props) {
-      classes.push(this.props.btnProps!.className);
+    if (this.props.btnProps) {
+      classes.push(this.props.btnProps.className);
     }
 
     return (
       <button {...this.props.btnProps} className={classNames(classes)}>
-        {'btnProps' in this.props ? this.props.btnProps!.children : undefined}
+        {this.props.btnProps && this.props.btnProps.children}
       </button>
     );
   }
