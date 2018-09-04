@@ -12,10 +12,8 @@ export const enum HeaderTheme {
   light = 'light',
 }
 
-export interface HeaderThemePropType {
-  theme: keyof typeof HeaderTheme;
-}
+export type HeaderThemeType = keyof typeof HeaderTheme;
 
-export interface HeaderPartPropType {
-  last?: boolean;
+export interface HeaderThemePropType {
+  theme: HeaderThemeType;
 }

@@ -222,7 +222,6 @@ storiesOf('Canvas Kit/Header', module)
             </a>
           </HeaderSection>
         </SmallHeader>
-        <br />
       </div>
       <br />
       <h3>Translucent</h3>
