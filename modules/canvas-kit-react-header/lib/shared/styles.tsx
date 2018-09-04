@@ -8,7 +8,7 @@ export const logoTitleStyle = css(fontFamily, {
   display: 'inline-block',
   fontSize: '20px',
   fontWeight: 400,
-  paddingRight: spacing.s,
+  paddingRight: spacing.l,
 });
 
 export const verticalCenterStyle = css({

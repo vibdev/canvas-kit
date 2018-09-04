@@ -10,6 +10,7 @@ export type SmallHeaderProps = {
   title: string;
   opacity?: number;
   dubUrl?: string;
+  brand?: React.ReactNode;
 } & Partial<HeaderThemePropType>;
 
 export default class SmallHeader extends React.Component<SmallHeaderProps> {
@@ -58,7 +59,7 @@ export default class SmallHeader extends React.Component<SmallHeaderProps> {
     return (
       <div className={cx(fontFamily, headerStyle)}>
         <a href={this.props.dubUrl}>
-          <DubLogoTitle title={this.props.title} theme={this.props.theme} />
+          {this.props.brand || <DubLogoTitle title={this.props.title} theme={this.props.theme} />}
         </a>
         <div className={toolbarStyle}>{this.props.children}</div>
       </div>

@@ -161,6 +161,68 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
         </SmallHeader>
         <br />
+        <SmallHeader title="Avatar Only" theme={HeaderTheme.light}>
+          <HeaderSection last={true}>
+            <a href="#">
+              <Avatar />
+            </a>
+          </HeaderSection>
+        </SmallHeader>
+        <br />
+        <SmallHeader title="Avatars and Icons (Dark)" theme={HeaderTheme.dark}>
+          <HeaderSection>
+            <a href="#">
+              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.dark} />
+            </a>
+          </HeaderSection>
+          <HeaderSection>
+            <a href="#">
+              <HeaderIcon icon={inboxLargeIcon} theme={HeaderTheme.dark} />
+            </a>
+          </HeaderSection>
+          <HeaderSection last={true}>
+            <a href="#">
+              <Avatar />
+            </a>
+          </HeaderSection>
+        </SmallHeader>
+        <br />
+        <SmallHeader
+          title="Contained Lockup"
+          theme={HeaderTheme.light}
+          brand={
+            <DubLogoTitle
+              title="Contained Lockup"
+              theme={HeaderTheme.dark}
+              bgColor={canvas.colors.blueberry600}
+            />
+          }
+        >
+          <HeaderSection>
+            <MenuItems>
+              <ul>
+                <li>
+                  <a href="#">Discover</a>
+                </li>
+                <li>
+                  <a href="#">Library</a>
+                </li>
+                <li>
+                  <a href="#">Create</a>
+                </li>
+                <li>
+                  <a href="#">Manage</a>
+                </li>
+              </ul>
+            </MenuItems>
+          </HeaderSection>
+          <HeaderSection last={true}>
+            <a href="#">
+              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.light} />
+            </a>
+          </HeaderSection>
+        </SmallHeader>
+        <br />
       </div>
       <br />
       <h3>Translucent</h3>
