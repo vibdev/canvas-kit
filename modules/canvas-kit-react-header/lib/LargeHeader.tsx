@@ -1,6 +1,6 @@
 import * as React from 'react';
-import WorkdayLogoTitle from '@workday/canvas-kit-react-header/lib/WorkdayLogoTitle';
-
+import {WorkdayLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
+import {depth} from '@workday/canvas-kit-react-core';
 import {cx, css} from 'emotion';
 
 export interface LargeHeaderProps {
@@ -23,15 +23,15 @@ export default class LargeHeader extends React.Component<LargeHeaderProps> {
       alignItems: 'center',
       height: '80px',
       boxSizing: 'border-box',
-      boxShadow: '0 8px 24px rgba(0,0,0,.16)',
       background: this.props.bgColor ? this.props.bgColor : 'white',
+      ...depth['1'],
     });
 
     return (
-      <header className={cx(headerHeight)}>
+      <div className={cx(headerHeight)}>
         <WorkdayLogoTitle mode={this.props.mode} title={this.props.title} />
         {this.props.children}
-      </header>
+      </div>
     );
   }
 }
