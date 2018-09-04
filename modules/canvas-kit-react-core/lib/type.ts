@@ -147,9 +147,9 @@ const link: CSSProperties = {
     color: typeColors.link,
   },
   '&:focus': {
-    background: typeColors.link,
+    background: canvasColors.blueberry100,
     textDecoration: 'underline',
-    outline: 'none',
+    outline: `2px solid ${canvasColors.blueberry100}`,
   },
 };
 
