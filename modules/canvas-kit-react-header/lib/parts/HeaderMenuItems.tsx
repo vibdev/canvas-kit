@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {css} from 'emotion';
 import {spacing} from '@workday/canvas-kit-react-core';
+import {verticalCenterStyle} from '@workday/canvas-kit-react-header/lib/shared/styles';
 
 export const HeaderMenuItems: React.SFC = props => {
   const navStyle = css({
@@ -8,14 +9,14 @@ export const HeaderMenuItems: React.SFC = props => {
     justifyContent: 'center',
 
     '& ul': {
-      display: 'flex',
-      alignItems: 'center',
+      ...verticalCenterStyle,
       justifyContent: 'center',
       listStyleType: 'none',
       padding: 0,
       margin: 0,
 
       '& li': {
+        ...verticalCenterStyle,
         margin: `0 ${spacing.m}`,
         color: 'inherit',
         fontSize: '14px',

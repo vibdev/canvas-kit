@@ -13,6 +13,8 @@ export class HeaderSection extends React.Component<HeaderSectionProps> {
       padding: this.props.last ? `0 0 0 ${spacing.s}` : `0 ${spacing.s}`,
     });
 
-    return <div className={cx(verticalCenterStyle, sectionPadding)}>{this.props.children}</div>;
+    return (
+      <div className={cx(css(verticalCenterStyle), sectionPadding)}>{this.props.children}</div>
+    );
   }
 }

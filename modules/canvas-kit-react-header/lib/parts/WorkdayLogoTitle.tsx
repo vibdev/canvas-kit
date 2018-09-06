@@ -51,14 +51,14 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
 
     return (
       <div className={lockupContainerStyle}>
-        <div className={cx(lockupStyle, verticalCenterStyle)}>
+        <div className={cx(lockupStyle, css(verticalCenterStyle))}>
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{
               __html: this.props.theme === HeaderTheme.white ? wdayLogoBlue : wdayLogoWhite,
             }}
           />
-          <h3 className={cx(logoTitleStyle, titleStyle)}>{this.props.title}</h3>
+          <h3 className={cx(css(logoTitleStyle), titleStyle)}>{this.props.title}</h3>
         </div>
       </div>
     );

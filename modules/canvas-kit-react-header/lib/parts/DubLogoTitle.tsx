@@ -51,14 +51,14 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
 
     return (
       <div className={lockupContainerStyle}>
-        <div className={cx(lockupStyle, verticalCenterStyle)}>
+        <div className={cx(lockupStyle, css(verticalCenterStyle))}>
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{
               __html: this.props.theme === HeaderTheme.white ? dubLogoBlue : dubLogoWhite,
             }}
           />
-          <h3 className={cx(logoTitleStyle, titleStyle)}>{this.props.title}</h3>
+          <h3 className={cx(css(logoTitleStyle), titleStyle)}>{this.props.title}</h3>
         </div>
       </div>
     );
