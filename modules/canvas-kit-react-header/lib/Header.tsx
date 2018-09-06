@@ -39,6 +39,7 @@ export class Header extends React.Component<HeaderProps> {
     let headerDepth;
     const headerPadding = this.props.variant === HeaderVariant.dub ? spacing.s : spacing.l;
     const headerStyle = css({
+      label: 'header-style',
       display: 'flex',
       alignItems: 'center',
       boxSizing: 'border-box',
@@ -52,10 +53,13 @@ export class Header extends React.Component<HeaderProps> {
     });
 
     const brandSlot = css({
+      label: 'brand-slot-style',
+      height: '100%',
       flexGrow: this.props.centered ? 'unset' : 1,
     });
 
     const childrenSlot = css({
+      label: 'children-slot-style',
       display: 'flex',
       alignItems: 'center',
       flexGrow: this.props.centered ? 1 : 'unset',
@@ -69,6 +73,7 @@ export class Header extends React.Component<HeaderProps> {
     });
 
     const brandAnchor = css({
+      label: 'brand-anchor-style',
       ...type.link,
 
       '&:hover': {
