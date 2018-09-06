@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, SmallHeader, ProductHeader, DubLogoTitle} from './index'; // tslint:disable-line:import-name
-import {MenuItems, HeaderSection, Avatar, HeaderIcon} from './lib/parts';
+import {HeaderMenuItems, HeaderSection, Avatar, HeaderIcon} from './lib/parts';
 import {HeaderTheme, HeaderVariant} from '@workday/canvas-kit-react-header/lib/shared/types';
 // import { SystemIcon } from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
@@ -83,7 +83,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.dub} title="Design Assets" theme={HeaderTheme.blue}>
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -98,7 +98,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -116,7 +116,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           theme={HeaderTheme.white}
           centered={true}
         >
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -131,7 +131,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
@@ -156,7 +156,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             />
           }
         >
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -171,7 +171,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
@@ -188,7 +188,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <h1 className="section-label">"Full" Header</h1>
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="Design" theme={HeaderTheme.white}>
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -203,13 +203,13 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
         </Header>
       </div>
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="Kitchen Sink" theme={HeaderTheme.blue}>
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -224,7 +224,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -237,7 +237,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.white} centered={true}>
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -252,7 +252,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
@@ -276,7 +276,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           transparent={false}
           centered={true}
         >
-          <MenuItems>
+          <HeaderMenuItems>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -291,7 +291,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </MenuItems>
+          </HeaderMenuItems>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} />
           </a>
@@ -305,7 +305,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <div className={containerStyle}>
         <SmallHeader title="Light Theme">
           <HeaderSection>
-            <MenuItems>
+            <HeaderMenuItems>
               <ul>
                 <li>
                   <a href="#">Discover</a>
@@ -320,7 +320,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                   <a href="#">Manage</a>
                 </li>
               </ul>
-            </MenuItems>
+            </HeaderMenuItems>
           </HeaderSection>
           <HeaderSection>
             <a href="#">
@@ -339,7 +339,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <br />
         <SmallHeader title="Dark Theme" theme={HeaderTheme.blue}>
           <HeaderSection>
-            <MenuItems>
+            <HeaderMenuItems>
               <ul>
                 <li>
                   <a href="#">Discover</a>
@@ -354,7 +354,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                   <a href="#">Manage</a>
                 </li>
               </ul>
-            </MenuItems>
+            </HeaderMenuItems>
           </HeaderSection>
           <HeaderSection>
             <a href="#">
@@ -445,7 +445,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           }
         >
           <HeaderSection>
-            <MenuItems>
+            <HeaderMenuItems>
               <ul>
                 <li>
                   <a href="#">Discover</a>
@@ -460,7 +460,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                   <a href="#">Manage</a>
                 </li>
               </ul>
-            </MenuItems>
+            </HeaderMenuItems>
           </HeaderSection>
           <HeaderSection last={true}>
             <a href="#">
@@ -474,7 +474,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <div className={cx(containerStyle, backgroundStyle)}>
         <SmallHeader theme={HeaderTheme.blue} title="Transparent" opacity={0.0}>
           <HeaderSection>
-            <MenuItems>
+            <HeaderMenuItems>
               <ul>
                 <li>
                   <a href="#">Discover</a>
@@ -489,7 +489,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                   <a href="#">Manage</a>
                 </li>
               </ul>
-            </MenuItems>
+            </HeaderMenuItems>
           </HeaderSection>
           <HeaderSection>
             <a href="#">

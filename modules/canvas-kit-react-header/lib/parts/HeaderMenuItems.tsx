@@ -2,7 +2,7 @@ import * as React from 'react';
 import {css} from 'emotion';
 import {spacing} from '@workday/canvas-kit-react-core';
 
-export const MenuItems: React.SFC = props => {
+export const HeaderMenuItems: React.SFC = props => {
   const navStyle = css({
     flexGrow: 1,
     justifyContent: 'center',
