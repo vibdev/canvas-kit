@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('design-ops-shared-library@stable') _
+@Library('design-ops-shared-library@beta') _
 
 // Make sure to fill this out with the project name
 setEnv.app('canvas-kit-react')
@@ -15,12 +15,13 @@ setEnv.cdn('beta')
 def awsProfileStorybook = "jenkinsprs"
 
 timestamps {
-  provisionPod(dockerTag: 'node8-awscli') {
+  provisionPod(dockerImage: 'docker-dev-artifactory.workday.com/design/jenkins-slaves/node8-awscli') {
     node(getNames()) {
       ws(workspaceDir) {
 
         stage('Code Checkout') {
           echo env.STAGE_NAME
+          slack.notifyStart()
           echo 'Checking out repo'
           dir(repoBaseDir) {
             getGit.start()
@@ -30,6 +31,7 @@ timestamps {
 
         ciSkip()
         if (env.CI_SKIP == "true") {
+          slack.notifySuccess()
           return
         } else {
           initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
@@ -51,6 +53,7 @@ timestamps {
             )
           } catch (Exception e) {
             setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+            slack.notifyFail()
             throw e
           }
         }
@@ -64,6 +67,7 @@ timestamps {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+              slack.notifyFail()
               throw e
             }
           }
@@ -79,6 +83,7 @@ timestamps {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+              slack.notifyFail()
               throw e
             }
           }
@@ -103,6 +108,7 @@ timestamps {
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+              slack.notifyFail()
               throw e
             }
           }
@@ -121,6 +127,7 @@ timestamps {
               } catch (Exception e) {
                 // should have a fallback/unpublish/lerna "undo"
                 setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+                slack.notifyFail()
                 throw e
               }
             }
@@ -131,6 +138,7 @@ timestamps {
         stage('Cleanup') {
           echo env.STAGE_NAME
           setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress DONE!', 'SUCCESS')
+          slack.notifySuccess()
           postCleanup()
         }
 
