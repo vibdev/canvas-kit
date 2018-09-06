@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {css, cx} from 'emotion';
-import {HeaderMode} from '@workday/canvas-kit-react-header/lib/shared/types';
+import {HeaderTheme, HeaderThemePropType} from '@workday/canvas-kit-react-header/lib/shared/types';
 import {
   logoTitleStyle,
   verticalCenterStyle,
@@ -10,7 +10,7 @@ import * as chroma from 'chroma-js';
 
 export type WorkdayLogoTitleProps = {
   title: string;
-} & Partial<HeaderMode>;
+} & Partial<HeaderThemePropType>;
 
 export const logoSvg = ``;
 
@@ -28,17 +28,19 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
     const logoStyle = css({
       padding: '0 32px',
       marginRight: '24px',
-      borderRight: `1px solid ${
-        this.props.mode === 'primary'
-          ? colors.soap400
-          : chroma(colors.soap400)
-              .alpha(0.4)
-              .css()
-      }`,
+      borderRight: this.props.title.length
+        ? `1px solid ${
+            this.props.theme === HeaderTheme.white
+              ? colors.soap400
+              : chroma(colors.soap400)
+                  .alpha(0.4)
+                  .css()
+          }`
+        : 'none',
     });
 
     const titleColor = css({
-      color: this.props.mode === 'primary' ? colors.blueberry500 : 'white',
+      color: this.props.theme === HeaderTheme.white ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
     return (
@@ -47,10 +49,12 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
           className={logoStyle}
           dangerouslySetInnerHTML={{
             __html:
-              this.props.mode === 'primary' ? _makeLogo(colors.blueberry500) : _makeLogo('white'),
+              this.props.theme === HeaderTheme.white
+                ? _makeLogo(colors.blueberry500)
+                : _makeLogo(colors.frenchVanilla100),
           }}
         />
-        <h2 className={cx(logoTitleStyle, titleColor)}>{this.props.title}</h2>
+        <h3 className={cx(logoTitleStyle, titleColor)}>{this.props.title}</h3>
       </span>
     );
   }

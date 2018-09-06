@@ -15,7 +15,7 @@ export type DubTitleProps = {
 
 export class DubLogoTitle extends React.Component<DubTitleProps> {
   static defaultProps = {
-    theme: HeaderTheme.light,
+    theme: HeaderTheme.white,
   };
 
   render() {
@@ -23,7 +23,7 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
       padding: '0 16px',
       marginRight: '16px',
       borderRight: `1px solid ${
-        this.props.theme === HeaderTheme.light
+        this.props.theme === HeaderTheme.white
           ? colors.soap400
           : chroma(colors.frenchVanilla100)
               .alpha(0.3)
@@ -32,7 +32,7 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
     });
 
     const titleColor = css({
-      color: this.props.theme === HeaderTheme.light ? colors.blueberry500 : 'white',
+      color: this.props.theme === HeaderTheme.white ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
     const bgColor = css({
@@ -67,7 +67,11 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
                   <path
                     d="M20.7399021,13.6005435 L18.8677779,13.6005435 C18.6025632,13.6005435 18.3721293,13.7835385 18.311457,14.0424726 L15.7948948,24.4756038 C15.7602865,24.4760348 13.0219209,14.0508337 13.0219209,14.0508337 C12.9522729,13.785521 12.7123455,13.6005435 12.4379824,13.6005435 L9.53796785,13.6005435 C9.27758621,13.6005435 9.04991409,13.7760394 8.98371829,14.0278192 L6.22541622,24.5202536 C6.12340392,24.4543133 3.68822709,14.0424726 3.68822709,14.0424726 C3.6274685,13.7835385 3.39712093,13.6005435 3.13190622,13.6005435 L1.26116292,13.6005435 C0.885736948,13.6005435 0.611546532,13.955328 0.70639553,14.3184736 L4.13882456,27.4704992 C4.20407101,27.7208137 4.42854985,27.8963096 4.68651495,27.8985507 L7.5177446,27.8940685 C7.77752211,27.8936375 8.00407227,27.7204689 8.07061329,27.4693786 C8.55443811,25.6466687 10.9397308,16.4285626 10.9397308,16.4285626 C10.9397308,16.4285626 13.445246,25.6464101 13.9289845,27.4693786 C13.9956119,27.7204689 14.222162,27.8936375 14.4818532,27.8940685 L17.3131692,27.8985507 C17.5711343,27.8963096 17.7956131,27.7208137 17.8609459,27.4704992 L21.2936338,14.3170945 C21.3883102,13.9545523 21.1147239,13.6005435 20.7399021,13.6005435"
                     id="Fill-4"
-                    fill={this.props.theme === HeaderTheme.light ? colors.blueberry500 : 'white'}
+                    fill={
+                      this.props.theme === HeaderTheme.white
+                        ? colors.blueberry500
+                        : colors.frenchVanilla100
+                    }
                   />
                 </g>
               </g>

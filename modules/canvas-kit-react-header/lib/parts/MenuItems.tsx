@@ -4,18 +4,22 @@ import {spacing} from '@workday/canvas-kit-react-core';
 
 export const MenuItems: React.SFC = props => {
   const navStyle = css({
+    flexGrow: 1,
+    justifyContent: 'center',
+
     '& ul': {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       listStyleType: 'none',
       padding: 0,
       margin: 0,
 
       '& li': {
-        margin: `0 ${spacing.s}`,
+        margin: `0 ${spacing.m}`,
         color: 'inherit',
         fontSize: '14px',
+        fontWeight: 700,
       },
       '& li:first-child': {
         marginLeft: 0,

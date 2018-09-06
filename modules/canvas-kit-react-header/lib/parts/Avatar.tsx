@@ -15,14 +15,15 @@ export const Avatar: React.SFC<AvatarProps> = props => {
     justifyContent: 'center',
     height: avatarSize,
     width: avatarSize,
-    backgroundColor: props.theme === HeaderTheme.light ? colors.blueberry400 : colors.soap400,
+    backgroundColor: props.theme === HeaderTheme.white ? colors.blueberry400 : colors.soap400,
     borderRadius: '9999px',
     boxSizing: 'border-box',
     paddingTop: '2px',
   });
   const iconColor =
-    props.theme === HeaderTheme.light ? colors.frenchVanilla100 : colors.licorice500;
+    props.theme === HeaderTheme.white ? colors.frenchVanilla100 : colors.licorice500;
 
+  // TODO: Soap 300 bg colorrrrr
   return (
     <div className={avatarStyle}>
       <SystemIcon icon={userIcon} color={iconColor} size={20} />

@@ -3,7 +3,6 @@ import {depth, spacing, colors} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
 import {cx, css} from 'emotion';
 import {HeaderTheme, HeaderThemePropType} from '@workday/canvas-kit-react-header/lib/shared/types';
-import {fontFamily} from '@workday/canvas-kit-react-header/lib/shared/styles';
 import * as chroma from 'chroma-js';
 
 export type SmallHeaderProps = {
@@ -15,15 +14,16 @@ export type SmallHeaderProps = {
 
 export default class SmallHeader extends React.Component<SmallHeaderProps> {
   static defaultProps = {
-    theme: HeaderTheme.light,
+    theme: HeaderTheme.white,
     dubUrl: '#',
     opacity: 1,
   };
 
   public render() {
     const color =
-      this.props.theme === HeaderTheme.light ? colors.licorice400 : colors.frenchVanilla100;
-    const headerDepth = this.props.theme === HeaderTheme.light ? depth['1'] : depth['3'];
+      this.props.theme === HeaderTheme.white ? colors.licorice400 : colors.frenchVanilla100;
+    const headerDepth = this.props.theme === HeaderTheme.white ? depth['1'] : depth['3'];
+    // TODO: turn off header depth when opacity is 0
     const blueberryGradient = `linear-gradient(to bottom right,
       ${chroma(colors.blueberry500)
         .alpha(this.props.opacity)
@@ -39,8 +39,8 @@ export default class SmallHeader extends React.Component<SmallHeaderProps> {
       height: '64px',
       boxSizing: 'border-box',
       background:
-        this.props.theme === HeaderTheme.light
-          ? chroma('white')
+        this.props.theme === HeaderTheme.white
+          ? chroma(colors.frenchVanilla100)
               .alpha(1)
               .css()
           : blueberryGradient,
@@ -57,7 +57,7 @@ export default class SmallHeader extends React.Component<SmallHeaderProps> {
     });
 
     return (
-      <div className={cx(fontFamily, headerStyle)}>
+      <div className={cx(headerStyle)}>
         <a href={this.props.dubUrl}>
           {this.props.brand || <DubLogoTitle title={this.props.title} theme={this.props.theme} />}
         </a>

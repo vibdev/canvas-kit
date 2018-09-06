@@ -10,14 +10,14 @@ export type HeaderIconProps = {
 
 export class HeaderIcon extends React.Component<HeaderIconProps> {
   static defaultProps = {
-    theme: HeaderTheme.light,
+    theme: HeaderTheme.white,
   };
 
   render() {
     const color =
-      this.props.theme === HeaderTheme.light ? colors.licorice200 : colors.frenchVanilla100;
+      this.props.theme === HeaderTheme.white ? colors.licorice200 : colors.frenchVanilla100;
     const colorHover =
-      this.props.theme === HeaderTheme.light ? colors.licorice500 : colors.frenchVanilla400;
+      this.props.theme === HeaderTheme.white ? colors.licorice500 : colors.frenchVanilla400;
     return <SystemIcon icon={this.props.icon} color={color} colorHover={colorHover} />;
   }
 }

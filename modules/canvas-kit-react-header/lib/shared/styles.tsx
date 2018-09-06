@@ -1,10 +1,7 @@
 import {css} from 'emotion';
 import {spacing} from '@workday/canvas-kit-react-core';
 
-export const fontFamily = css({
-  fontFamily: "'IBM Plex Sans', 'Roboto', sans-serif",
-});
-export const logoTitleStyle = css(fontFamily, {
+export const logoTitleStyle = css({
   display: 'inline-block',
   fontSize: '20px',
   fontWeight: 400,

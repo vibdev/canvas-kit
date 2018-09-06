@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {DubLogoProduct} from '@workday/canvas-kit-react-header/lib/parts';
-import {depth} from '@workday/canvas-kit-react-core';
+import {colors, depth} from '@workday/canvas-kit-react-core';
 import {cx, css} from 'emotion';
 
 export default class ProductHeader extends React.Component {
@@ -10,7 +10,7 @@ export default class ProductHeader extends React.Component {
       alignItems: 'center',
       height: '64px',
       boxSizing: 'border-box',
-      backgroundColor: 'white',
+      backgroundColor: colors.frenchVanilla100,
       ...depth['1'],
     });
 

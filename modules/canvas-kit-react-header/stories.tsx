@@ -3,28 +3,29 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
-import {fontFamily} from './lib/shared/styles';
-import {SmallHeader, LargeHeader, ProductHeader, DubLogoTitle} from './index'; // tslint:disable-line:import-name
+import {Header, SmallHeader, ProductHeader, DubLogoTitle} from './index'; // tslint:disable-line:import-name
 import {MenuItems, HeaderSection, Avatar, HeaderIcon} from './lib/parts';
-import {HeaderTheme} from '@workday/canvas-kit-react-header/lib/shared/types';
+import {HeaderTheme, HeaderVariant} from '@workday/canvas-kit-react-header/lib/shared/types';
 // import { SystemIcon } from '@workday/canvas-kit-react-icon';
-import {notificationsLargeIcon, inboxLargeIcon} from '@workday/canvas-system-icons-web';
+import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import canvas from '@workday/canvas-kit-react-core';
 import {Button} from '@workday/canvas-kit-react-button';
-
+import * as chroma from 'chroma-js';
+import {bgImg} from './static';
 import README from './README.md';
 
 const containerStyle = css({
   backgroundColor: canvas.colors.soap100,
-  padding: canvas.spacing.s,
+  padding: canvas.spacing.m,
 });
 
-const pinStripes = css({
-  background: `repeating-linear-gradient(45deg,
-    ${canvas.colors.soap100},
-    ${canvas.colors.soap100} 2px,
-    ${canvas.colors.soap400} 2px,
-    ${canvas.colors.soap400} 4px)`,
+const backgroundStyle = css({
+  background: `linear-gradient(${chroma(canvas.colors.blueberry400)
+    .alpha(0.8)
+    .css()}, ${chroma(canvas.colors.blueberry400)
+    .alpha(0.8)
+    .css()}), url(${bgImg})`,
+  backgroundPosition: `0 50%`,
 });
 
 const buttonStyle = css({
@@ -50,11 +51,256 @@ const buttonStyleReversed = css({
   },
 });
 
-storiesOf('Canvas Kit/Header', module)
+storiesOf('Canvas Kit/Header/App', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('App', () => (
+    <div className="story">
+      <h1 className="section-label">App Header</h1>
+      <div className={containerStyle}>
+        <ProductHeader />
+      </div>
+    </div>
+  ));
+storiesOf('Canvas Kit/Header/Marketing', module)
+  .addDecorator(withReadme(README))
+  .add('Dub', () => (
+    <div className="story">
+      <h1 className="section-label">"Dub" Header</h1>
+      <div className={containerStyle}>
+        <Header variant={HeaderVariant.dub} title="Research" theme={HeaderTheme.white}>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+          </a>
+          <a href="#">
+            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+          </a>
+          <a href="#">
+            <Avatar />
+          </a>
+          <Button className={cx(buttonStyle)}>Register</Button>
+        </Header>
+      </div>
+      <br />
+      <div className={containerStyle}>
+        <Header variant={HeaderVariant.dub} title="Design Assets" theme={HeaderTheme.blue}>
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+          </a>
+          <a href="#">
+            <Avatar />
+          </a>
+          <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+        </Header>
+      </div>
+      <br />
+      <div className={containerStyle}>
+        <Header
+          variant={HeaderVariant.dub}
+          title="Centered Menu"
+          theme={HeaderTheme.white}
+          centered={true}
+        >
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+          </a>
+          <a href="#">
+            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+          </a>
+          <Button className={cx(buttonStyle)}>Logout</Button>
+        </Header>
+      </div>
+      <br />
+      <div className={containerStyle}>
+        <Header
+          variant={HeaderVariant.dub}
+          title="Ignored when brand prop exists..."
+          theme={HeaderTheme.white}
+          centered={true}
+          brand={
+            <DubLogoTitle
+              title="Contained Lockup"
+              theme={HeaderTheme.blue}
+              bgColor={canvas.colors.gradients.blueberry}
+            />
+          }
+        >
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+          </a>
+          <a href="#">
+            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+          </a>
+          <Button className={cx(buttonStyle)}>Logout</Button>
+        </Header>
+      </div>
+    </div>
+  ))
+  .add('Full', () => (
+    <div className="story">
+      <h1 className="section-label">"Full" Header</h1>
+      <div className={containerStyle}>
+        <Header variant={HeaderVariant.full} title="Design" theme={HeaderTheme.white}>
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+        </Header>
+      </div>
+      <br />
+      <div className={containerStyle}>
+        <Header variant={HeaderVariant.full} title="Kitchen Sink" theme={HeaderTheme.blue}>
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+          </a>
+          <a href="#">
+            <Avatar />
+          </a>
+          <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+        </Header>
+      </div>
+      <br />
+      <div className={containerStyle}>
+        <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.white} centered={true}>
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+          </a>
+          <a href="#">
+            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+          </a>
+          <Button className={cx(buttonStyle)}>Logout</Button>
+        </Header>
+      </div>
+    </div>
+  ))
+  .add('Old', () => (
     <div className="story">
       <h1 className="section-label">Header</h1>
+      <h2>Header</h2>
+      <div className={containerStyle}>
+        <Header
+          title=""
+          variant={HeaderVariant.full}
+          theme={HeaderTheme.white}
+          transparent={false}
+          centered={true}
+        >
+          <MenuItems>
+            <ul>
+              <li>
+                <a href="#">Discover</a>
+              </li>
+              <li>
+                <a href="#">Library</a>
+              </li>
+              <li>
+                <a href="#">Create</a>
+              </li>
+              <li>
+                <a href="#">Manage</a>
+              </li>
+            </ul>
+          </MenuItems>
+          <a href="#">
+            <HeaderIcon icon={notificationsIcon} />
+          </a>
+          <a href="#">
+            <Avatar />
+          </a>
+          <Button className={cx(buttonStyle)}>Download</Button>
+        </Header>
+      </div>
       <h2>Small Header</h2>
       <div className={containerStyle}>
         <SmallHeader title="Light Theme">
@@ -78,7 +324,7 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} />
+              <HeaderIcon icon={notificationsIcon} />
             </a>
           </HeaderSection>
           <HeaderSection>
@@ -87,11 +333,11 @@ storiesOf('Canvas Kit/Header', module)
             </a>
           </HeaderSection>
           <HeaderSection last={true}>
-            <Button className={cx(buttonStyle, fontFamily)}>Download</Button>
+            <Button className={cx(buttonStyle)}>Download</Button>
           </HeaderSection>
         </SmallHeader>
         <br />
-        <SmallHeader title="Dark Theme" theme={HeaderTheme.dark}>
+        <SmallHeader title="Dark Theme" theme={HeaderTheme.blue}>
           <HeaderSection>
             <MenuItems>
               <ul>
@@ -112,12 +358,12 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.dark} />
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
             </a>
           </HeaderSection>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={inboxLargeIcon} theme={HeaderTheme.dark} />
+              <HeaderIcon icon={inboxIcon} theme={HeaderTheme.blue} />
             </a>
           </HeaderSection>
           <HeaderSection last={true}>
@@ -127,33 +373,15 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
         </SmallHeader>
         <br />
-        <SmallHeader title="Icon Only" theme={HeaderTheme.light}>
+        <SmallHeader title="Icon Only" theme={HeaderTheme.white}>
           <HeaderSection last={true}>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.light} />
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
             </a>
           </HeaderSection>
         </SmallHeader>
         <br />
-        <SmallHeader title="Avatar Only" theme={HeaderTheme.light}>
-          <HeaderSection last={true}>
-            <a href="#">
-              <Avatar />
-            </a>
-          </HeaderSection>
-        </SmallHeader>
-        <br />
-        <SmallHeader title="Avatars and Icons (Dark)" theme={HeaderTheme.dark}>
-          <HeaderSection>
-            <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.dark} />
-            </a>
-          </HeaderSection>
-          <HeaderSection>
-            <a href="#">
-              <HeaderIcon icon={inboxLargeIcon} theme={HeaderTheme.dark} />
-            </a>
-          </HeaderSection>
+        <SmallHeader title="Avatar Only" theme={HeaderTheme.white}>
           <HeaderSection last={true}>
             <a href="#">
               <Avatar />
@@ -161,7 +389,17 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
         </SmallHeader>
         <br />
-        <SmallHeader title="Avatar Only" theme={HeaderTheme.light}>
+        <SmallHeader title="Avatars and Icons (Dark)" theme={HeaderTheme.blue}>
+          <HeaderSection>
+            <a href="#">
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            </a>
+          </HeaderSection>
+          <HeaderSection>
+            <a href="#">
+              <HeaderIcon icon={inboxIcon} theme={HeaderTheme.blue} />
+            </a>
+          </HeaderSection>
           <HeaderSection last={true}>
             <a href="#">
               <Avatar />
@@ -169,15 +407,23 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
         </SmallHeader>
         <br />
-        <SmallHeader title="Avatars and Icons (Dark)" theme={HeaderTheme.dark}>
+        <SmallHeader title="Avatar Only" theme={HeaderTheme.white}>
+          <HeaderSection last={true}>
+            <a href="#">
+              <Avatar />
+            </a>
+          </HeaderSection>
+        </SmallHeader>
+        <br />
+        <SmallHeader title="Avatars and Icons (Dark)" theme={HeaderTheme.blue}>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.dark} />
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
             </a>
           </HeaderSection>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={inboxLargeIcon} theme={HeaderTheme.dark} />
+              <HeaderIcon icon={inboxIcon} theme={HeaderTheme.blue} />
             </a>
           </HeaderSection>
           <HeaderSection last={true}>
@@ -189,11 +435,11 @@ storiesOf('Canvas Kit/Header', module)
         <br />
         <SmallHeader
           title="Contained Lockup"
-          theme={HeaderTheme.light}
+          theme={HeaderTheme.white}
           brand={
             <DubLogoTitle
               title="Contained Lockup"
-              theme={HeaderTheme.dark}
+              theme={HeaderTheme.blue}
               bgColor={canvas.colors.blueberry600}
             />
           }
@@ -218,15 +464,15 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
           <HeaderSection last={true}>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.light} />
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
             </a>
           </HeaderSection>
         </SmallHeader>
       </div>
       <br />
       <h3>Translucent</h3>
-      <div className={cx(containerStyle, pinStripes)}>
-        <SmallHeader theme={HeaderTheme.dark} title="Translucent Header (80%)" opacity={0.8}>
+      <div className={cx(containerStyle, backgroundStyle)}>
+        <SmallHeader theme={HeaderTheme.blue} title="Transparent" opacity={0.0}>
           <HeaderSection>
             <MenuItems>
               <ul>
@@ -247,7 +493,7 @@ storiesOf('Canvas Kit/Header', module)
           </HeaderSection>
           <HeaderSection>
             <a href="#">
-              <HeaderIcon icon={notificationsLargeIcon} theme={HeaderTheme.dark} />
+              <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
             </a>
           </HeaderSection>
           <HeaderSection>
@@ -256,7 +502,7 @@ storiesOf('Canvas Kit/Header', module)
             </a>
           </HeaderSection>
           <HeaderSection last={true}>
-            <Button className={cx(buttonStyle, buttonStyleReversed, fontFamily)}>Download</Button>
+            <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
           </HeaderSection>
         </SmallHeader>
       </div>
@@ -265,17 +511,17 @@ storiesOf('Canvas Kit/Header', module)
       <div className={containerStyle}>
         <DubLogoTitle
           title="Light Lockup"
-          theme={HeaderTheme.light}
+          theme={HeaderTheme.white}
           bgColor={canvas.colors.frenchVanilla100}
         />&nbsp;
         <DubLogoTitle
           title="Dark Lockup"
-          theme={HeaderTheme.dark}
+          theme={HeaderTheme.blue}
           bgColor={canvas.colors.blueberry600}
         />&nbsp;
         <DubLogoTitle
           title="Dark Lockup"
-          theme={HeaderTheme.dark}
+          theme={HeaderTheme.blue}
           bgColor={canvas.colors.gradients.blueberry}
         />&nbsp;
       </div>
@@ -287,15 +533,5 @@ storiesOf('Canvas Kit/Header', module)
       </div>
       <br />
       <h2>Large Header</h2>
-      <div className={containerStyle}>
-        <LargeHeader title="Light Theme" mode="primary" />
-        <br />
-        <LargeHeader
-          title="Dark Theme"
-          mode="secondary"
-          bgColor={canvas.colors.gradients.blueberry}
-        />
-      </div>
-      <br />
     </div>
   ));
