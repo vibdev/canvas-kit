@@ -7,6 +7,7 @@ export const HeaderMenuItems: React.SFC = props => {
   const navStyle = css({
     flexGrow: 1,
     justifyContent: 'center',
+    height: 'inherit',
 
     '& ul': {
       ...verticalCenterStyle,
@@ -14,13 +15,15 @@ export const HeaderMenuItems: React.SFC = props => {
       listStyleType: 'none',
       padding: 0,
       margin: 0,
+      height: 'inherit',
 
       '& li': {
         ...verticalCenterStyle,
-        margin: `0 ${spacing.m}`,
+        margin: `0 ${spacing.s}`,
         color: 'inherit',
         fontSize: '14px',
         fontWeight: 700,
+        height: 'inherit',
       },
       '& li:first-child': {
         marginLeft: 0,
@@ -30,8 +33,13 @@ export const HeaderMenuItems: React.SFC = props => {
       },
 
       '& li a': {
+        boxSizing: 'border-box',
+        display: 'flex',
+        alignItems: 'center',
         color: 'inherit',
         textDecoration: 'none',
+        height: 'inherit',
+        padding: `0px ${spacing.xxs}`,
       },
     },
   });

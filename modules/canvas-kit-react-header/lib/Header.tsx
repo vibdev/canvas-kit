@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
-  HeaderThemePropType,
   HeaderTheme,
+  HeaderThemePropType,
   HeaderVariant,
   HeaderVariantType,
 } from '@workday/canvas-kit-react-header/lib/shared/types';
@@ -9,13 +9,13 @@ import {cx, css} from 'emotion';
 import {colors, depth, type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
 
-export type HeaderProps = {
+export interface HeaderProps extends Partial<HeaderThemePropType> {
   variant: HeaderVariantType;
   title: string;
   brand?: React.ReactNode;
   brandUrl?: string;
   centered?: boolean;
-} & Partial<HeaderThemePropType>;
+}
 
 export enum HeaderHeight {
   Small = '64px',
@@ -30,10 +30,24 @@ export class Header extends React.Component<HeaderProps> {
     transparent: false,
   };
 
-  private _headerDepthMap = {
+  private headerDepthMap = {
     [HeaderTheme.white]: depth['1'],
     [HeaderTheme.blue]: depth['3'],
   };
+
+  // Figure out background object given prop variations
+  private getBackgroundStyle(props: HeaderProps) {
+    if (props.transparent) {
+      return {background: 'rgba(0,0,0,0)'};
+    } else {
+      return {
+        background:
+          this.props.theme === HeaderTheme.white
+            ? colors.frenchVanilla100
+            : colors.gradients.blueberry,
+      };
+    }
+  }
 
   render() {
     let headerDepth;
@@ -46,10 +60,7 @@ export class Header extends React.Component<HeaderProps> {
       ...type.body,
       height: this.props.variant === HeaderVariant.dub ? HeaderHeight.Small : HeaderHeight.Large,
       color: this.props.theme === HeaderTheme.white ? colors.licorice400 : colors.frenchVanilla100,
-      background:
-        this.props.theme === HeaderTheme.white
-          ? colors.frenchVanilla100
-          : colors.gradients.blueberry,
+      ...this.getBackgroundStyle(this.props),
     });
 
     const brandSlot = css({
@@ -64,6 +75,7 @@ export class Header extends React.Component<HeaderProps> {
       alignItems: 'center',
       flexGrow: this.props.centered ? 1 : 'unset',
       justifyContent: 'flex-end',
+      height: '100%',
       '> *': {
         margin: `0 ${spacing.s}`,
       },
@@ -85,9 +97,9 @@ export class Header extends React.Component<HeaderProps> {
       },
     });
 
-    // Only set the header depth if we are not transparent (&& this.props.theme is to appease TS)
-    if (!this.props.transparent && this.props.theme) {
-      headerDepth = css(this._headerDepthMap[this.props.theme]);
+    // Only set the header depth if we are not transparent
+    if (!this.props.transparent) {
+      headerDepth = css(this.headerDepthMap[this.props.theme!]);
     } else {
       headerDepth = css({boxShadow: 'none'});
     }
