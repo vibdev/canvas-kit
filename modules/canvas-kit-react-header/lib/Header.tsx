@@ -8,13 +8,14 @@ import {
 import {cx, css} from 'emotion';
 import {colors, depth, type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
+import {verticalCenterStyle} from '@workday/canvas-kit-react-header/lib/shared/styles';
 
 export interface HeaderProps extends Partial<HeaderThemePropType> {
   variant: HeaderVariantType;
   title: string;
   brand?: React.ReactNode;
   brandUrl?: string;
-  centered?: boolean;
+  centeredNav?: boolean;
 }
 
 export enum HeaderHeight {
@@ -54,8 +55,7 @@ export class Header extends React.Component<HeaderProps> {
     const headerPadding = this.props.variant === HeaderVariant.dub ? spacing.s : spacing.l;
     const headerStyle = css({
       label: 'header-style',
-      display: 'flex',
-      alignItems: 'center',
+      ...verticalCenterStyle,
       boxSizing: 'border-box',
       ...type.body,
       height: this.props.variant === HeaderVariant.dub ? HeaderHeight.Small : HeaderHeight.Large,
@@ -66,14 +66,14 @@ export class Header extends React.Component<HeaderProps> {
     const brandSlot = css({
       label: 'brand-slot-style',
       height: '100%',
-      flexGrow: this.props.centered ? 'unset' : 1,
+      flexGrow: this.props.centeredNav ? 'unset' : 1,
     });
 
     const childrenSlot = css({
       label: 'children-slot-style',
       display: 'flex',
       alignItems: 'center',
-      flexGrow: this.props.centered ? 1 : 'unset',
+      flexGrow: this.props.centeredNav ? 1 : 'unset',
       justifyContent: 'flex-end',
       height: '100%',
       '> *': {
@@ -94,6 +94,48 @@ export class Header extends React.Component<HeaderProps> {
 
       '&:focus': {
         textDecoration: 'none',
+      },
+    });
+
+    const navStyle = css({
+      nav: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        height: 'inherit',
+
+        '& ul': {
+          ...verticalCenterStyle,
+          justifyContent: 'center',
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          height: 'inherit',
+
+          '& li': {
+            ...verticalCenterStyle,
+            margin: `0 ${spacing.s}`,
+            color: 'inherit',
+            fontSize: '14px',
+            fontWeight: 700,
+            height: 'inherit',
+          },
+          '& li:first-child': {
+            marginLeft: 0,
+          },
+          '& li:last-child': {
+            marginRight: 0,
+          },
+
+          '& li a': {
+            boxSizing: 'border-box',
+            display: 'flex',
+            alignItems: 'center',
+            color: 'inherit',
+            textDecoration: 'none',
+            height: 'inherit',
+            padding: `0px ${spacing.xxs}`,
+          },
+        },
       },
     });
 
@@ -118,7 +160,7 @@ export class Header extends React.Component<HeaderProps> {
               ))}
           </a>
         </div>
-        <div className={childrenSlot}>{this.props.children}</div>
+        <div className={cx(childrenSlot, navStyle)}>{this.props.children}</div>
       </div>
     );
   }

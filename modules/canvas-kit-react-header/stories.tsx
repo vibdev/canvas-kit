@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, ProductHeader, DubLogoTitle} from './index';
-import {HeaderMenuItems, Avatar, HeaderIcon} from './lib/parts';
+import {Avatar, HeaderIcon} from './lib/parts';
 import {HeaderTheme, HeaderVariant} from '@workday/canvas-kit-react-header/lib/shared/types';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import canvas from '@workday/canvas-kit-react-core';
@@ -83,7 +83,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.dub} title="Kitchen Sink" theme={HeaderTheme.blue}>
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -98,7 +98,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -122,7 +122,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             />
           }
         >
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -137,7 +137,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
@@ -153,9 +153,9 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           variant={HeaderVariant.dub}
           title="Centered Menu"
           theme={HeaderTheme.white}
-          centered={true}
+          centeredNav={true}
         >
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -170,7 +170,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
@@ -188,7 +188,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           theme={HeaderTheme.blue}
           transparent={true}
         >
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -203,7 +203,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -220,7 +220,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <h1 className="section-label">"Full" Header</h1>
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="Design" theme={HeaderTheme.white}>
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -235,13 +235,13 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
         </Header>
       </div>
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="Kitchen Sink" theme={HeaderTheme.blue}>
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -256,7 +256,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -269,7 +269,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.blue}>
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -284,7 +284,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -301,7 +301,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           theme={HeaderTheme.blue}
           transparent={true}
         >
-          <HeaderMenuItems>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -316,7 +316,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
           </a>
@@ -327,8 +327,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.white} centered={true}>
-          <HeaderMenuItems>
+        <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.white} centeredNav={true}>
+          <nav>
             <ul>
               <li>
                 <a href="#">Discover</a>
@@ -343,7 +343,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
                 <a href="#">Manage</a>
               </li>
             </ul>
-          </HeaderMenuItems>
+          </nav>
           <a href="#">
             <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
           </a>
