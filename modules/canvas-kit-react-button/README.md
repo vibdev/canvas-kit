@@ -4,9 +4,6 @@ Components implementing Canvas buttons.
 
 ## Usage
 
-**This package uses CSS.**  
-If you're using webpack, you must enable a CSS loader.
-
 ### Button
 
 Extends `<button>` with Canvas button styling.
@@ -35,6 +32,11 @@ Button type.
 Type: `Button.Sizes = { Small, Medium, Large }`  
 Default: `Button.Sizes.Large`  
 Button size.
+
+**`growthBehavior`**  
+Type: `Button.GrowthBehavior = { Squish, Stretch }`  
+Default: `Button.GrowthBehavior.Squish`  
+Squish to the button's content or stretch to the button's container.
 
 ### Icon Button
 

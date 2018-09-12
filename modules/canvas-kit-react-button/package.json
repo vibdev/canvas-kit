@@ -34,11 +34,11 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-css-button": "^1.0.6",
-    "classnames": "^2.2.5"
+    "@workday/canvas-kit-react-core": "0.16.1",
+    "emotion": "^9.2.6",
+    "react-emotion": "^9.2.6"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.6",
     "@workday/canvas-kit-react-icon": "1.2.1",
     "@workday/canvas-system-icons-web": "^0.16.7"
   }

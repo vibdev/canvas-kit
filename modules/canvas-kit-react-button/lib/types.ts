@@ -1,22 +1,25 @@
-import {DetailedHTMLProps, ButtonHTMLAttributes} from 'react';
-
-export interface ClassNameProperties {
-  [key: string]: boolean;
-}
-
-export enum ButtonTypes {
-  Primary,
-  Secondary,
-  Delete,
-}
-
+/**
+ * The different button sizes.
+ */
 export enum ButtonSizes {
   Small,
   Medium,
   Large,
 }
 
-export type ReactButton = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+/**
+ * The different button types.
+ */
+export enum ButtonTypes {
+  Primary,
+  Secondary,
+  Delete,
+}
+
+/**
+ * The growth behavior of a component. i.e. should it squish to its content or stretch to its container.
+ */
+export enum GrowthBehavior {
+  Squish,
+  Stretch,
+}

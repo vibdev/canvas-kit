@@ -1,29 +1,50 @@
 import * as React from 'react';
-import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css';
-import ButtonBase from './ButtonBase';
-import {ReactButton, ClassNameProperties, ButtonTypes, ButtonSizes} from './types';
+import {ButtonBaseCon, ButtonBaseLabel} from './ButtonBase';
+import {ButtonTypes, ButtonSizes, GrowthBehavior} from './types';
 
 export interface ButtonProps {
+  /**
+   * Label of the button.
+   */
+  children: string;
+  /**
+   * Type of button.
+   */
   buttonType?: ButtonTypes;
+  /**
+   * Size of button.
+   */
   buttonSize?: ButtonSizes;
+  /**
+   * The growth behavior of the button, i.e. should it squish to its content or stretch to its container.
+   */
+  growthBehavior?: GrowthBehavior;
 }
 
-class Button extends React.Component<ReactButton & ButtonProps> {
+export default class Button extends React.Component<JSX.IntrinsicElements['button'] & ButtonProps> {
   public static Types = ButtonTypes;
   public static Sizes = ButtonSizes;
+  public static GrowthBehavior = GrowthBehavior;
+
+  static defaultProps: Partial<ButtonProps> = {
+    buttonSize: ButtonSizes.Large,
+    buttonType: ButtonTypes.Secondary,
+  };
 
   public render() {
-    const {buttonType, buttonSize, ...elemProps} = this.props;
+    const {buttonType, buttonSize, children, growthBehavior, ...elemProps} = this.props;
+    const {ref, ...elemPropsWithoutRef} = elemProps;
 
-    const classes: ClassNameProperties = {
-      'wdc-btn-primary': buttonType === ButtonTypes.Primary,
-      'wdc-btn-delete': buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': buttonSize === Button.Sizes.Small,
-      'wdc-btn-medium': buttonSize === Button.Sizes.Medium,
-    };
-
-    return <ButtonBase btnClasses={classes} btnProps={elemProps} />;
+    return (
+      <ButtonBaseCon
+        buttonType={buttonType}
+        buttonSize={buttonSize}
+        growthBehavior={growthBehavior}
+        innerRef={ref}
+        {...elemPropsWithoutRef}
+      >
+        <ButtonBaseLabel buttonSize={buttonSize}>{children}</ButtonBaseLabel>
+      </ButtonBaseCon>
+    );
   }
 }
-
-export default Button;

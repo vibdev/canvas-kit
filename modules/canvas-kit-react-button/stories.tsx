@@ -7,18 +7,24 @@ import {editIcon} from '@workday/canvas-system-icons-web';
 
 import {Button, IconButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
+import {css} from 'emotion';
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Button</h1>
-      <Button buttonType={Button.Types.Primary}>Primary Button</Button>
+      <Button
+        buttonType={Button.Types.Primary}
+        onClick={() => {
+          window.alert('Primary Button selected');
+        }}
+      >
+        Primary Button
+      </Button>
       <Button>Secondary Button</Button>
       <Button buttonType={Button.Types.Delete}>Delete Button</Button>
-
       <br />
-
       <Button buttonType={Button.Types.Primary} buttonSize={Button.Sizes.Medium}>
         Primary Button
       </Button>
@@ -26,13 +32,9 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonType={Button.Types.Delete} buttonSize={Button.Sizes.Medium}>
         Delete Button
       </Button>
-
       <br />
-
       <Button buttonSize={Button.Sizes.Small}>Secondary Button</Button>
-
       <br />
-
       <Button buttonType={Button.Types.Primary} disabled={true}>
         Primary Button
       </Button>
@@ -40,11 +42,38 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonType={Button.Types.Delete} disabled={true}>
         Delete Button
       </Button>
-
       <br />
-
       <IconButton>
         <SystemIcon icon={editIcon} />
       </IconButton>
+      <br />
+      <h1 className="section-label">Stretched Button</h1>
+      <div
+        className={css({
+          display: 'flex',
+          '& button + button': {
+            marginLeft: 10,
+          },
+        })}
+      >
+        <Button
+          buttonType={Button.Types.Primary}
+          growthBehavior={Button.GrowthBehavior.Stretch}
+          onClick={() => {
+            window.alert('Stretched Primary Button selected');
+          }}
+        >
+          Stretched Primary Button
+        </Button>
+        <Button
+          buttonType={Button.Types.Secondary}
+          growthBehavior={Button.GrowthBehavior.Stretch}
+          onClick={() => {
+            window.alert('Stretched Secondary Button selected');
+          }}
+        >
+          Stretched Secondary Button
+        </Button>
+      </div>
     </div>
   ));
