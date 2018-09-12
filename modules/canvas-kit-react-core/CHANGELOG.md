@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.16.2"></a>
+## [0.16.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.16.1...@workday/canvas-kit-react-core@0.16.2) (2018-09-10)
+
+
+### Bug Fixes
+
+* **fonts:** updated ttf -> truetype in src format ([3cc08ea](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/3cc08ea))
+
+
+
+
 <a name="0.16.1"></a>
 ## [0.16.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.16.0...@workday/canvas-kit-react-core@0.16.1) (2018-08-24)
 
