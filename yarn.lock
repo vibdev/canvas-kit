@@ -331,7 +331,7 @@
   version "0.12.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
 
-"@workday/canvas-colors-web@~0.15.3":
+"@workday/canvas-colors-web@~0.15.2", "@workday/canvas-colors-web@~0.15.3":
   version "0.15.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.15.3.tgz#9f6ad6014b6774cb290babdcc8db0d86112026e1"
   dependencies:
@@ -419,6 +419,17 @@
   dependencies:
     "@workday/canvas-kit-css-button" "^1.0.6"
     classnames "^2.2.5"
+
+"@workday/canvas-kit-react-core@0.16.1":
+  version "0.16.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-core/-/@workday/canvas-kit-react-core-0.16.1.tgz#ea9b64a267a37cb07b89957482667d5d43691cbc"
+  dependencies:
+    "@workday/canvas-colors-web" "~0.15.2"
+    "@workday/canvas-depth-web" "^0.14.0"
+    "@workday/canvas-space-web" "^0.14.0"
+    emotion "^9.2.6"
+    glamorous "^4.12.3"
+    react-emotion "^9.2.6"
 
 "@workday/canvas-space-web@^0.14.0":
   version "0.14.0"
