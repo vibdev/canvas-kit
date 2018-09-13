@@ -89,7 +89,7 @@ export const ButtonBaseCon: StyledOtherComponent<
     disabled?: boolean;
     growthBehavior?: GrowthBehavior;
   },
-  object,
+  JSX.IntrinsicElements['button'],
   object
 > = styled('button')<{
   buttonType?: ButtonTypes;
@@ -178,10 +178,7 @@ export const ButtonBaseCon: StyledOtherComponent<
         maxWidth: '120px',
       };
     } else {
-      return {
-        height: `${BUTTON_HEIGHT_LARGE}px`,
-        padding: 0,
-      };
+      return {height: `${BUTTON_HEIGHT_LARGE}px`, padding: 0};
     }
   },
   ({growthBehavior}) => {
@@ -194,7 +191,7 @@ export const ButtonBaseCon: StyledOtherComponent<
 
 export const ButtonBaseLabel: StyledOtherComponent<
   {buttonSize?: ButtonSizes},
-  object,
+  JSX.IntrinsicElements['span'],
   object
 > = styled('span')<{buttonSize?: ButtonSizes}>(
   {
