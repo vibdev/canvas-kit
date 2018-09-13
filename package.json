@@ -53,7 +53,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook",
+    "start": "node --max_old_space_size=2048 node_modules/.bin/start-storybook -p 9001 -c .storybook",
     "bootstrap": "lerna bootstrap && yarn run build",
     "build": "lerna run build",
     "publish": "yarn run build-storybook && yarn run lerna-publish",
