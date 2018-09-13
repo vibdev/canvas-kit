@@ -6,9 +6,17 @@ import {
   HeaderVariantType,
 } from '@workday/canvas-kit-react-header/lib/shared/types';
 import {cx, css} from 'emotion';
-import {colors, depth, type, spacing} from '@workday/canvas-kit-react-core';
+import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
 import {verticalCenterStyle} from '@workday/canvas-kit-react-header/lib/shared/styles';
+import {themes} from '@workday/canvas-kit-react-header/lib/shared/themes';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
+
+export enum HeaderHeight {
+  Small = '64px',
+  Large = '80px',
+}
 
 export interface HeaderProps extends Partial<HeaderThemePropType> {
   variant: HeaderVariantType;
@@ -18,49 +26,68 @@ export interface HeaderProps extends Partial<HeaderThemePropType> {
   centeredNav?: boolean;
 }
 
-export enum HeaderHeight {
-  Small = '64px',
-  Large = '80px',
-}
-
 export class Header extends React.Component<HeaderProps> {
-  static defaultProps = {
-    type: HeaderVariant.dub,
+  static defaultProps: Partial<HeaderProps> = {
     theme: HeaderTheme.white,
     brandUrl: '#',
-    transparent: false,
   };
 
-  private headerDepthMap = {
-    [HeaderTheme.white]: depth['1'],
-    [HeaderTheme.blue]: depth['3'],
-  };
+  /**
+   * Helper that recursively maps ReactNodes to their theme-based equivalent.
+   * Any children that are included in a Header may need to undergo transformation
+   * before stamped out in render().
+   *
+   * E.g. <SystemIcon> components need to have the appropriate `color` and `colorHover`
+   * props set based on the theme.
+   *
+   * @param children From props.children of a React component
+   *
+   * @returns {React.ReactNode} The child/children to be rendered
+   */
+  renderChildren(children: React.ReactNode): React.ReactNode {
+    return React.Children.map(children, child => {
+      // We can take advantage of isValidElement's return type here, the rest of
+      // the callback will infer child as a ReactElement if this check fails
+      if (!React.isValidElement(child)) {
+        return child;
+      }
 
-  // Figure out background object given prop variations
-  private getBackgroundStyle(props: HeaderProps) {
-    if (props.transparent) {
-      return {background: 'rgba(0,0,0,0)'};
-    } else {
-      return {
-        background:
-          this.props.theme === HeaderTheme.white
-            ? colors.frenchVanilla100
-            : colors.gradients.blueberry,
-      };
-    }
+      type Props = {children: React.ReactNode};
+      const propsChildren = (child as React.ReactElement<Props>).props.children;
+      const hasChildren = React.Children.count(propsChildren) ? true : false;
+
+      if (hasChildren) {
+        return React.cloneElement(child as React.ReactElement<Props>, {
+          children: this.renderChildren(propsChildren),
+        });
+      }
+
+      if (child.type === SystemIcon) {
+        return React.cloneElement(child as React.ReactElement<SystemIconProps>, {
+          color: themes[this.props.theme!].systemIcon.color,
+          colorHover: themes[this.props.theme!].systemIcon.colorHover,
+        });
+      }
+
+      return child;
+    });
   }
 
   render() {
-    let headerDepth;
+    const headerTheme = themes[this.props.theme!];
     const headerPadding = this.props.variant === HeaderVariant.dub ? spacing.s : spacing.l;
     const headerStyle = css({
       label: 'header-style',
       ...verticalCenterStyle,
       boxSizing: 'border-box',
-      ...type.body,
       height: this.props.variant === HeaderVariant.dub ? HeaderHeight.Small : HeaderHeight.Large,
-      color: this.props.theme === HeaderTheme.white ? colors.licorice400 : colors.frenchVanilla100,
-      ...this.getBackgroundStyle(this.props),
+      // TODO: Type styles should probably be moved to something for all Canvas Kit React components
+      ...type.body,
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale',
+      background: headerTheme.background,
+      ...headerTheme.depth,
+      color: headerTheme.color,
     });
 
     const brandSlot = css({
@@ -71,8 +98,7 @@ export class Header extends React.Component<HeaderProps> {
 
     const childrenSlot = css({
       label: 'children-slot-style',
-      display: 'flex',
-      alignItems: 'center',
+      ...verticalCenterStyle,
       flexGrow: this.props.centeredNav ? 1 : 'unset',
       justifyContent: 'flex-end',
       height: '100%',
@@ -114,7 +140,6 @@ export class Header extends React.Component<HeaderProps> {
           '& li': {
             ...verticalCenterStyle,
             margin: `0 ${spacing.s}`,
-            color: 'inherit',
             fontSize: '14px',
             fontWeight: 700,
             height: 'inherit',
@@ -128,8 +153,7 @@ export class Header extends React.Component<HeaderProps> {
 
           '& li a': {
             boxSizing: 'border-box',
-            display: 'flex',
-            alignItems: 'center',
+            ...verticalCenterStyle,
             color: 'inherit',
             textDecoration: 'none',
             height: 'inherit',
@@ -139,15 +163,8 @@ export class Header extends React.Component<HeaderProps> {
       },
     });
 
-    // Only set the header depth if we are not transparent
-    if (!this.props.transparent) {
-      headerDepth = css(this.headerDepthMap[this.props.theme!]);
-    } else {
-      headerDepth = css({boxShadow: 'none'});
-    }
-
     return (
-      <div className={cx(headerStyle, headerDepth)}>
+      <div className={cx(headerStyle)}>
         <div className={brandSlot}>
           <a className={brandAnchor} href={this.props.brandUrl}>
             {this.props.variant === HeaderVariant.dub &&
@@ -160,7 +177,7 @@ export class Header extends React.Component<HeaderProps> {
               ))}
           </a>
         </div>
-        <div className={cx(childrenSlot, navStyle)}>{this.props.children}</div>
+        <div className={cx(childrenSlot, navStyle)}>{this.renderChildren(this.props.children)}</div>
       </div>
     );
   }

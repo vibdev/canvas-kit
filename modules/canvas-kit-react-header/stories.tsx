@@ -4,8 +4,9 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, ProductHeader, DubLogoTitle} from './index';
-import {Avatar, HeaderIcon} from './lib/parts';
+import {Avatar} from './lib/parts';
 import {HeaderTheme, HeaderVariant} from '@workday/canvas-kit-react-header/lib/shared/types';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import canvas from '@workday/canvas-kit-react-core';
 import {Button} from '@workday/canvas-kit-react-button';
@@ -68,12 +69,12 @@ storiesOf('Canvas Kit/Header/Marketing', module)
     <div className="story">
       <h1 className="section-label">"Dub" Header</h1>
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.dub} title="Icons Only" theme={HeaderTheme.white}>
+        <Header variant={HeaderVariant.dub} title="Icons Only">
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
-            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={inboxIcon} />
           </a>
           <a href="#">
             <Avatar />
@@ -100,7 +101,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
             <Avatar />
@@ -139,10 +140,10 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
-            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={inboxIcon} />
           </a>
           <Button className={cx(buttonStyle)}>Logout</Button>
         </Header>
@@ -172,22 +173,17 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
-            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={inboxIcon} />
           </a>
           <Button className={cx(buttonStyle)}>Logout</Button>
         </Header>
       </div>
       <br />
       <div className={cx(containerStyle, backgroundStyle)}>
-        <Header
-          variant={HeaderVariant.dub}
-          title="Transparent"
-          theme={HeaderTheme.blue}
-          transparent={true}
-        >
+        <Header variant={HeaderVariant.dub} title="Transparent" theme={HeaderTheme.transparent}>
           <nav>
             <ul>
               <li>
@@ -205,10 +201,10 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
-            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={inboxIcon} />
           </a>
           <Button className={cx(buttonStyle, buttonStyleReversed)}>Logout</Button>
         </Header>
@@ -258,7 +254,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
             <Avatar />
@@ -286,7 +282,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
             <Avatar />
@@ -295,12 +291,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={cx(containerStyle, backgroundStyle)}>
-        <Header
-          variant={HeaderVariant.full}
-          title="Transparent"
-          theme={HeaderTheme.blue}
-          transparent={true}
-        >
+        <Header variant={HeaderVariant.full} title="Transparent" theme={HeaderTheme.transparent}>
           <nav>
             <ul>
               <li>
@@ -318,7 +309,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.blue} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
             <Avatar />
@@ -345,10 +336,10 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             </ul>
           </nav>
           <a href="#">
-            <HeaderIcon icon={notificationsIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={notificationsIcon} />
           </a>
           <a href="#">
-            <HeaderIcon icon={inboxIcon} theme={HeaderTheme.white} />
+            <SystemIcon icon={inboxIcon} />
           </a>
           <Button className={cx(buttonStyle)}>Logout</Button>
         </Header>
