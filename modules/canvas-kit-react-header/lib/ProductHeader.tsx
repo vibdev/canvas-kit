@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DubLogoProduct} from '@workday/canvas-kit-react-header/lib/parts';
+import {DubLogoProduct} from './parts';
 import {colors, depth} from '@workday/canvas-kit-react-core';
 import {cx, css} from 'emotion';
 

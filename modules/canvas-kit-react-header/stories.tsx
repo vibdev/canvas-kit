@@ -5,49 +5,49 @@ import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, ProductHeader, DubLogoTitle} from './index';
 import {Avatar} from './lib/parts';
-import {HeaderTheme, HeaderVariant} from '@workday/canvas-kit-react-header/lib/shared/types';
+import {HeaderTheme, HeaderVariant} from './lib/shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
-import canvas from '@workday/canvas-kit-react-core';
+import {colors, spacing} from '@workday/canvas-kit-react-core';
 import {Button} from '@workday/canvas-kit-react-button';
 import * as chroma from 'chroma-js';
-import {bgImg} from './static';
 import README from './README.md';
+import bgImg from './static/workday-bg.jpg';
 
 const containerStyle = css({
-  backgroundColor: canvas.colors.soap100,
-  padding: canvas.spacing.m,
+  backgroundColor: colors.soap100,
+  padding: spacing.m,
 });
 
 const backgroundStyle = css({
   padding: `0 0 64px 0`,
-  background: `linear-gradient(${chroma(canvas.colors.blueberry400)
+  background: `linear-gradient(${chroma(colors.blueberry400)
     .alpha(0.8)
-    .css()}, ${chroma(canvas.colors.blueberry500)
+    .css()}, ${chroma(colors.blueberry500)
     .alpha(0.8)
     .css()}), url(${bgImg})`,
   backgroundPosition: `0 50%`,
 });
 
 const buttonStyle = css({
-  boxShadow: `0 0 0 2px ${canvas.colors.blueberry400}`,
+  boxShadow: `0 0 0 2px ${colors.blueberry400}`,
   backgroundColor: `rgba(1,1,1,0)`,
-  color: canvas.colors.blueberry400,
-  padding: `0 ${canvas.spacing.s}`,
+  color: colors.blueberry400,
+  padding: `0 ${spacing.s}`,
   fontWeight: 700,
 
   '&:hover': {
-    backgroundColor: canvas.colors.frenchVanilla100,
-    boxShadow: `0 0 0 1px ${canvas.colors.blueberry400}`,
+    backgroundColor: colors.frenchVanilla100,
+    boxShadow: `0 0 0 1px ${colors.blueberry400}`,
   },
 });
 
 const buttonStyleReversed = css({
-  boxShadow: `0 0 0 2px ${canvas.colors.frenchVanilla100}`,
-  color: canvas.colors.frenchVanilla100,
+  boxShadow: `0 0 0 2px ${colors.frenchVanilla100}`,
+  color: colors.frenchVanilla100,
 
   '&:hover': {
-    boxShadow: `0 0 0 1px ${canvas.colors.frenchVanilla100}`,
+    boxShadow: `0 0 0 1px ${colors.frenchVanilla100}`,
     backgroundColor: `rgba(1,1,1,0.1)`,
   },
 });
@@ -119,7 +119,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             <DubLogoTitle
               title="Contained Lockup"
               theme={HeaderTheme.blue}
-              bgColor={canvas.colors.gradients.blueberry}
+              bgColor={colors.gradients.blueberry}
             />
           }
         >

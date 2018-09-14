@@ -1,15 +1,10 @@
 import * as React from 'react';
-import {
-  HeaderTheme,
-  HeaderThemePropType,
-  HeaderVariant,
-  HeaderVariantType,
-} from '@workday/canvas-kit-react-header/lib/shared/types';
 import {cx, css} from 'emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
-import {DubLogoTitle, WorkdayLogoTitle} from '@workday/canvas-kit-react-header/lib/parts';
-import {verticalCenterStyle} from '@workday/canvas-kit-react-header/lib/shared/styles';
-import {themes} from '@workday/canvas-kit-react-header/lib/shared/themes';
+import {DubLogoTitle, WorkdayLogoTitle} from './parts';
+import {verticalCenterStyle} from './shared/styles';
+import {themes} from './shared/themes';
+import {HeaderTheme, HeaderThemePropType, HeaderVariant, HeaderVariantType} from './shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
 

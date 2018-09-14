@@ -1,11 +1,8 @@
 import * as React from 'react';
 import {css, cx} from 'emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {HeaderTheme, HeaderThemePropType} from '@workday/canvas-kit-react-header/lib/shared/types';
-import {
-  logoTitleStyle,
-  verticalCenterStyle,
-} from '@workday/canvas-kit-react-header/lib/shared/styles';
+import {HeaderTheme, HeaderThemePropType} from '../shared/types';
+import {logoTitleStyle, verticalCenterStyle} from '../shared/styles';
 import * as chroma from 'chroma-js';
 import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';

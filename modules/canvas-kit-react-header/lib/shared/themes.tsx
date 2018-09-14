@@ -1,5 +1,5 @@
 import {colors, depth, CSSProperties} from '@workday/canvas-kit-react-core';
-import {HeaderTheme} from '@workday/canvas-kit-react-header/lib/shared/types';
+import {HeaderTheme} from './types';
 
 // TODO: Relocate to a theme file
 export interface ThemeAttributes {
