@@ -1,18 +1,10 @@
-export const enum HeaderTheme {
+export enum HeaderTheme {
   white = 'white',
   blue = 'blue',
   transparent = 'transparent',
 }
 
-export type HeaderThemeType = keyof typeof HeaderTheme;
-
-export interface HeaderThemePropType {
-  theme: HeaderThemeType;
-}
-
-export const enum HeaderVariant {
+export enum HeaderVariant {
   full = 'full',
   dub = 'dub',
 }
-
-export type HeaderVariantType = keyof typeof HeaderVariant;

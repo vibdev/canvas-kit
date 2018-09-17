@@ -1,19 +1,20 @@
 import * as React from 'react';
 import {css, cx} from 'emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {HeaderTheme, HeaderThemePropType} from '../shared/types';
+import {HeaderTheme} from '../shared/types';
 import {logoTitleStyle, verticalCenterStyle} from '../shared/styles';
 import * as chroma from 'chroma-js';
 import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';
 
 export type DubTitleProps = {
+  theme?: HeaderTheme;
   title: string;
   bgColor?: string;
-} & Partial<HeaderThemePropType>;
+};
 
 export class DubLogoTitle extends React.Component<DubTitleProps> {
-  static defaultProps = {
+  static defaultProps: Partial<DubTitleProps> = {
     theme: HeaderTheme.white,
   };
 

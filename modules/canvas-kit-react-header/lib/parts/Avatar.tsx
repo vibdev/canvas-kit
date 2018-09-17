@@ -4,15 +4,17 @@
  * @alex.nicholls no need to review unless it's for show/tell
  */
 import * as React from 'react';
-import {HeaderTheme, HeaderThemePropType} from '../shared/types';
+import {HeaderTheme} from '../shared/types';
 import {css} from 'emotion';
 import {colors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {userIcon} from '@workday/canvas-system-icons-web';
 
-export type AvatarProps = Partial<HeaderThemePropType>;
+export type AvatarProps = {
+  theme?: HeaderTheme;
+};
 
-const defaultProps: AvatarProps = {
+const defaultProps: Partial<AvatarProps> = {
   theme: HeaderTheme.white,
 };
 

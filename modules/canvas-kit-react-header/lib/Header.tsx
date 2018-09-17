@@ -4,7 +4,7 @@ import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from './parts';
 import {verticalCenterStyle} from './shared/styles';
 import {themes} from './shared/themes';
-import {HeaderTheme, HeaderThemePropType, HeaderVariant, HeaderVariantType} from './shared/types';
+import {HeaderTheme, HeaderVariant} from './shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
 
@@ -13,17 +13,22 @@ export enum HeaderHeight {
   Large = '80px',
 }
 
-export interface HeaderProps extends Partial<HeaderThemePropType> {
-  variant: HeaderVariantType;
-  title: string;
+export interface HeaderProps {
+  theme?: HeaderTheme;
+  variant?: HeaderVariant;
+  title?: string;
   brand?: React.ReactNode;
   brandUrl?: string;
   centeredNav?: boolean;
 }
 
 export class Header extends React.Component<HeaderProps> {
+  static Theme = HeaderTheme;
+  static Variant = HeaderVariant;
   static defaultProps: Partial<HeaderProps> = {
     theme: HeaderTheme.white,
+    variant: HeaderVariant.dub,
+    title: '',
     brandUrl: '#',
   };
 
@@ -39,7 +44,7 @@ export class Header extends React.Component<HeaderProps> {
    *
    * @returns {React.ReactNode} The child/children to be rendered
    */
-  renderChildren(children: React.ReactNode): React.ReactNode {
+  private renderChildren(children: React.ReactNode): React.ReactNode {
     return React.Children.map(children, child => {
       // We can take advantage of isValidElement's return type here, the rest of
       // the callback will infer child as a ReactElement if this check fails
@@ -164,11 +169,11 @@ export class Header extends React.Component<HeaderProps> {
           <a className={brandAnchor} href={this.props.brandUrl}>
             {this.props.variant === HeaderVariant.dub &&
               (this.props.brand || (
-                <DubLogoTitle title={this.props.title} theme={this.props.theme} />
+                <DubLogoTitle title={this.props.title!} theme={this.props.theme} />
               ))}
             {this.props.variant === HeaderVariant.full &&
               (this.props.brand || (
-                <WorkdayLogoTitle title={this.props.title} theme={this.props.theme} />
+                <WorkdayLogoTitle title={this.props.title!} theme={this.props.theme} />
               ))}
           </a>
         </div>

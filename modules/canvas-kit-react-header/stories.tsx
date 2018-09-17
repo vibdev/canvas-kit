@@ -5,7 +5,6 @@ import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, ProductHeader, DubLogoTitle} from './index';
 import {Avatar} from './lib/parts';
-import {HeaderTheme, HeaderVariant} from './lib/shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
@@ -69,7 +68,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
     <div className="story">
       <h1 className="section-label">"Dub" Header</h1>
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.dub} title="Icons Only">
+        <Header variant={Header.Variant.dub} title="Icons Only">
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -83,7 +82,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.dub} title="Kitchen Sink" theme={HeaderTheme.blue}>
+        <Header variant={Header.Variant.dub} title="Kitchen Sink" theme={Header.Theme.blue}>
           <nav>
             <ul>
               <li>
@@ -112,13 +111,13 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header
-          variant={HeaderVariant.dub}
+          variant={Header.Variant.dub}
           title="Ignored when brand prop exists..."
-          theme={HeaderTheme.white}
+          theme={Header.Theme.white}
           brand={
             <DubLogoTitle
               title="Contained Lockup"
-              theme={HeaderTheme.blue}
+              theme={Header.Theme.blue}
               bgColor={colors.gradients.blueberry}
             />
           }
@@ -151,9 +150,9 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header
-          variant={HeaderVariant.dub}
+          variant={Header.Variant.dub}
           title="Centered Menu"
-          theme={HeaderTheme.white}
+          theme={Header.Theme.white}
           centeredNav={true}
         >
           <nav>
@@ -183,7 +182,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={cx(containerStyle, backgroundStyle)}>
-        <Header variant={HeaderVariant.dub} title="Transparent" theme={HeaderTheme.transparent}>
+        <Header variant={Header.Variant.dub} title="Transparent" theme={Header.Theme.transparent}>
           <nav>
             <ul>
               <li>
@@ -215,7 +214,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
     <div className="story">
       <h1 className="section-label">"Full" Header</h1>
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.full} title="Design" theme={HeaderTheme.white}>
+        <Header variant={Header.Variant.full} title="Design" theme={Header.Theme.white}>
           <nav>
             <ul>
               <li>
@@ -236,7 +235,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.full} title="Kitchen Sink" theme={HeaderTheme.blue}>
+        <Header variant={Header.Variant.full} title="Kitchen Sink" theme={Header.Theme.blue}>
           <nav>
             <ul>
               <li>
@@ -264,7 +263,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.blue}>
+        <Header variant={Header.Variant.full} title="" theme={Header.Theme.blue}>
           <nav>
             <ul>
               <li>
@@ -291,7 +290,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={cx(containerStyle, backgroundStyle)}>
-        <Header variant={HeaderVariant.full} title="Transparent" theme={HeaderTheme.transparent}>
+        <Header variant={Header.Variant.full} title="Transparent" theme={Header.Theme.transparent}>
           <nav>
             <ul>
               <li>
@@ -318,7 +317,12 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={HeaderVariant.full} title="" theme={HeaderTheme.white} centeredNav={true}>
+        <Header
+          variant={Header.Variant.full}
+          title=""
+          theme={Header.Theme.white}
+          centeredNav={true}
+        >
           <nav>
             <ul>
               <li>

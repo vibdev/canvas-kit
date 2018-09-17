@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {css, cx} from 'emotion';
-import {HeaderTheme, HeaderThemePropType} from '../shared/types';
+import {HeaderTheme} from '../shared/types';
 import {logoTitleStyle, verticalCenterStyle} from '../shared/styles';
 import {wdayLogoWhite, wdayLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';
@@ -8,12 +8,14 @@ import {colors, spacing} from '@workday/canvas-kit-react-core';
 import * as chroma from 'chroma-js';
 
 export type WorkdayLogoTitleProps = {
-  title: string;
-} & Partial<HeaderThemePropType>;
+  theme?: HeaderTheme;
+  title?: string;
+};
 
 export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
-  static defaultProps = {
-    mode: 'primary',
+  static defaultProps: Partial<WorkdayLogoTitleProps> = {
+    theme: HeaderTheme.white,
+    title: '',
   };
 
   render() {
@@ -29,8 +31,8 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
 
     const logoStyle = css({
       padding: `0 ${spacing.l}`,
-      marginRight: this.props.title.length ? spacing.m : '0px',
-      borderRight: this.props.title.length
+      marginRight: this.props.title!.length ? spacing.m : '0px',
+      borderRight: this.props.title!.length
         ? `1px solid ${
             this.props.theme === HeaderTheme.white
               ? colors.soap400
@@ -42,7 +44,7 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
     });
 
     const titleStyle = css({
-      display: this.props.title.length ? 'initial' : 'none',
+      display: this.props.title!.length ? 'initial' : 'none',
       color: this.props.theme === HeaderTheme.white ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
