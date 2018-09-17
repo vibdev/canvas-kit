@@ -14,7 +14,7 @@ export type WorkdayLogoTitleProps = {
 
 export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
   static defaultProps: Partial<WorkdayLogoTitleProps> = {
-    theme: HeaderTheme.white,
+    theme: HeaderTheme.White,
     title: '',
   };
 
@@ -31,21 +31,22 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
 
     const logoStyle = css({
       padding: `0 ${spacing.l}`,
-      marginRight: this.props.title!.length ? spacing.m : '0px',
-      borderRight: this.props.title!.length
-        ? `1px solid ${
-            this.props.theme === HeaderTheme.white
-              ? colors.soap400
-              : chroma(colors.soap400)
-                  .alpha(0.4)
-                  .css()
-          }`
-        : 'none',
+      marginRight: this.props.title && this.props.title.length ? spacing.m : '0px',
+      borderRight:
+        this.props.title && this.props.title.length
+          ? `1px solid ${
+              this.props.theme === HeaderTheme.White
+                ? colors.soap400
+                : chroma(colors.soap400)
+                    .alpha(0.4)
+                    .css()
+            }`
+          : 'none',
     });
 
     const titleStyle = css({
-      display: this.props.title!.length ? 'initial' : 'none',
-      color: this.props.theme === HeaderTheme.white ? colors.blueberry500 : colors.frenchVanilla100,
+      display: this.props.title && this.props.title.length ? 'initial' : 'none',
+      color: this.props.theme === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
     return (
@@ -54,7 +55,7 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{
-              __html: this.props.theme === HeaderTheme.white ? wdayLogoBlue : wdayLogoWhite,
+              __html: this.props.theme === HeaderTheme.White ? wdayLogoBlue : wdayLogoWhite,
             }}
           />
           <h3 className={cx(css(logoTitleStyle), titleStyle)}>{this.props.title}</h3>

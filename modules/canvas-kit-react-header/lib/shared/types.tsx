@@ -1,10 +1,10 @@
 export enum HeaderTheme {
-  white = 'white',
-  blue = 'blue',
-  transparent = 'transparent',
+  White,
+  Blue,
+  Transparent,
 }
 
 export enum HeaderVariant {
-  full = 'full',
-  dub = 'dub',
+  Full,
+  Dub,
 }

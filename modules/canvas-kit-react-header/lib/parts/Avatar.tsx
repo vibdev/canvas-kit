@@ -15,7 +15,7 @@ export type AvatarProps = {
 };
 
 const defaultProps: Partial<AvatarProps> = {
-  theme: HeaderTheme.white,
+  theme: HeaderTheme.White,
 };
 
 export const Avatar: React.SFC<AvatarProps> = props => {
@@ -26,13 +26,13 @@ export const Avatar: React.SFC<AvatarProps> = props => {
     justifyContent: 'center',
     height: avatarSize,
     width: avatarSize,
-    backgroundColor: props.theme === HeaderTheme.white ? colors.soap300 : colors.blueberry400,
+    backgroundColor: props.theme === HeaderTheme.White ? colors.soap300 : colors.blueberry400,
     borderRadius: '9999px',
     boxSizing: 'border-box',
     paddingTop: '2px',
   });
   const iconColor =
-    props.theme === HeaderTheme.white ? colors.licorice500 : colors.frenchVanilla100;
+    props.theme === HeaderTheme.White ? colors.licorice500 : colors.frenchVanilla100;
 
   return (
     <div className={avatarStyle}>

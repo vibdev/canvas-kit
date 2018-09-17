@@ -17,7 +17,7 @@ export interface Themes {
 }
 
 export const themes: Themes = {
-  [HeaderTheme.white]: {
+  [HeaderTheme.White]: {
     color: colors.licorice400,
     background: colors.frenchVanilla100,
     depth: depth['1'],
@@ -26,7 +26,7 @@ export const themes: Themes = {
       colorHover: colors.licorice500,
     },
   },
-  [HeaderTheme.blue]: {
+  [HeaderTheme.Blue]: {
     color: colors.frenchVanilla100,
     background: colors.gradients.blueberry,
     depth: depth['3'],
@@ -35,7 +35,7 @@ export const themes: Themes = {
       colorHover: colors.frenchVanilla400,
     },
   },
-  [HeaderTheme.transparent]: {
+  [HeaderTheme.Transparent]: {
     color: colors.frenchVanilla100,
     background: 'rgba(0,0,0,0)',
     depth: {boxShadow: 'none'},

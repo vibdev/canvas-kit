@@ -26,10 +26,8 @@ export class Header extends React.Component<HeaderProps> {
   static Theme = HeaderTheme;
   static Variant = HeaderVariant;
   static defaultProps: Partial<HeaderProps> = {
-    theme: HeaderTheme.white,
-    variant: HeaderVariant.dub,
-    title: '',
-    brandUrl: '#',
+    theme: HeaderTheme.White,
+    variant: HeaderVariant.Dub,
   };
 
   /**
@@ -38,7 +36,7 @@ export class Header extends React.Component<HeaderProps> {
    * before stamped out in render().
    *
    * E.g. <SystemIcon> components need to have the appropriate `color` and `colorHover`
-   * props set based on the theme.
+   * props set based on the theme.cu
    *
    * @param children From props.children of a React component
    *
@@ -73,14 +71,32 @@ export class Header extends React.Component<HeaderProps> {
     });
   }
 
+  private defaultBrand(): React.ReactNode {
+    return (
+      <span>
+        {this.props.variant === HeaderVariant.Dub &&
+          (this.props.brand || (
+            <DubLogoTitle
+              title={this.props.title ? this.props.title : ''}
+              theme={this.props.theme}
+            />
+          ))}
+        {this.props.variant === HeaderVariant.Full &&
+          (this.props.brand || (
+            <WorkdayLogoTitle title={this.props.title} theme={this.props.theme} />
+          ))}
+      </span>
+    );
+  }
+
   render() {
     const headerTheme = themes[this.props.theme!];
-    const headerPadding = this.props.variant === HeaderVariant.dub ? spacing.s : spacing.l;
+    const headerPadding = this.props.variant === HeaderVariant.Dub ? spacing.s : spacing.l;
     const headerStyle = css({
       label: 'header-style',
       ...verticalCenterStyle,
       boxSizing: 'border-box',
-      height: this.props.variant === HeaderVariant.dub ? HeaderHeight.Small : HeaderHeight.Large,
+      height: this.props.variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
       // TODO: Type styles should probably be moved to something for all Canvas Kit React components
       ...type.body,
       WebkitFontSmoothing: 'antialiased',
@@ -166,16 +182,13 @@ export class Header extends React.Component<HeaderProps> {
     return (
       <div className={cx(headerStyle)}>
         <div className={brandSlot}>
-          <a className={brandAnchor} href={this.props.brandUrl}>
-            {this.props.variant === HeaderVariant.dub &&
-              (this.props.brand || (
-                <DubLogoTitle title={this.props.title!} theme={this.props.theme} />
-              ))}
-            {this.props.variant === HeaderVariant.full &&
-              (this.props.brand || (
-                <WorkdayLogoTitle title={this.props.title!} theme={this.props.theme} />
-              ))}
-          </a>
+          {this.props.brandUrl ? (
+            <a className={brandAnchor} href={this.props.brandUrl}>
+              {this.defaultBrand()}
+            </a>
+          ) : (
+            this.defaultBrand()
+          )}
         </div>
         <div className={cx(childrenSlot, navStyle)}>{this.renderChildren(this.props.children)}</div>
       </div>
