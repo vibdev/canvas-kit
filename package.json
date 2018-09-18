@@ -16,6 +16,8 @@
     "@workday/canvas-kit-build": "^3.4.3",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.6.0",
+    "babel-loader": "7",
+    "babel-plugin-emotion": "^9.2.9",
     "babel-runtime": "^6.26.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",

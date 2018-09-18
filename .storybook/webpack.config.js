@@ -4,12 +4,27 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const modulesPath = path.resolve(__dirname, '../modules');
 
+const babelLoader = {
+  loader: 'babel-loader',
+  options: {
+    plugins: [
+      [
+        'emotion',
+        {
+          autoLabel: true,
+          labelFormat: '[filename]__[local]',
+        },
+      ],
+    ],
+  },
+};
+
 const customRules = [
   {
     test: /\.tsx?$/,
     exclude: /node_modules/,
     include: modulesPath,
-    loader: 'happypack/loader?id=ts',
+    loader: 'happypack/loader?id=ts'
   },
   {
     test: /\.scss$/,
@@ -71,6 +86,7 @@ module.exports = (baseConfig, env) => {
       id: 'ts',
       threads: 2,
       loaders: [
+        babelLoader,
         {
           path: 'ts-loader',
           query: {
