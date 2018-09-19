@@ -15,11 +15,3 @@ export enum ButtonTypes {
   Secondary,
   Delete,
 }
-
-/**
- * The growth behavior of a component. i.e. should it squish to its content or stretch to its container.
- */
-export enum GrowthBehavior {
-  Squish,
-  Stretch,
-}

@@ -33,10 +33,10 @@ Type: `Button.Sizes = { Small, Medium, Large }`
 Default: `Button.Sizes.Large`  
 Button size.
 
-**`growthBehavior`**  
-Type: `Button.GrowthBehavior = { Squish, Stretch }`  
-Default: `Button.GrowthBehavior.Squish`  
-Squish to the button's content or stretch to the button's container.
+**`grow`**  
+Type: `{true , false}`  
+Default: `false`  
+If true, the button's will grow to its container's width.
 
 ### Icon Button
 

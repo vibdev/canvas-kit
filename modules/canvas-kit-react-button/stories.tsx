@@ -47,7 +47,7 @@ storiesOf('Canvas Kit/Button', module)
         <SystemIcon icon={editIcon} />
       </IconButton>
       <br />
-      <h1 className="section-label">Stretched Button</h1>
+      <h1 className="section-label">Growing Button</h1>
       <div
         className={css({
           display: 'flex',
@@ -58,21 +58,21 @@ storiesOf('Canvas Kit/Button', module)
       >
         <Button
           buttonType={Button.Types.Primary}
-          growthBehavior={Button.GrowthBehavior.Stretch}
+          grow={true}
           onClick={() => {
-            window.alert('Stretched Primary Button selected');
+            window.alert('Growing Primary Button selected');
           }}
         >
-          Stretched Primary Button
+          Growing Primary Button
         </Button>
         <Button
           buttonType={Button.Types.Secondary}
-          growthBehavior={Button.GrowthBehavior.Stretch}
+          grow={true}
           onClick={() => {
-            window.alert('Stretched Secondary Button selected');
+            window.alert('Growing Secondary Button selected');
           }}
         >
-          Stretched Secondary Button
+          Growing Secondary Button
         </Button>
       </div>
     </div>
