@@ -3,7 +3,7 @@ import {ButtonBaseCon, ButtonBaseLabel} from './ButtonBase';
 import {ButtonTypes, ButtonSizes} from './types';
 import {GrowthBehavior} from '../../common/types';
 
-export interface ButtonProps extends GrowthBehavior {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
   /**
    * Button cannot be empty.
    */
@@ -18,7 +18,7 @@ export interface ButtonProps extends GrowthBehavior {
   buttonSize?: ButtonSizes;
 }
 
-export default class Button extends React.Component<JSX.IntrinsicElements['button'] & ButtonProps> {
+export default class Button extends React.Component<ButtonProps> {
   public static Types = ButtonTypes;
   public static Sizes = ButtonSizes;
 
@@ -29,16 +29,10 @@ export default class Button extends React.Component<JSX.IntrinsicElements['butto
   };
 
   public render() {
-    const {buttonType, buttonSize, children, grow, ...elemProps} = this.props;
-    const {ref, ...elemPropsWithoutRef} = elemProps;
+    const {buttonSize, children} = this.props;
 
     return (
-      <ButtonBaseCon
-        buttonType={buttonType}
-        buttonSize={buttonSize}
-        grow={grow}
-        {...elemPropsWithoutRef}
-      >
+      <ButtonBaseCon {...this.props}>
         <ButtonBaseLabel buttonSize={buttonSize}>{children}</ButtonBaseLabel>
       </ButtonBaseCon>
     );

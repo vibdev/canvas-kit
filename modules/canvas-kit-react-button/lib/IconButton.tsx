@@ -2,7 +2,8 @@ import * as React from 'react';
 import {ButtonBaseCon} from './ButtonBase';
 import styled from 'react-emotion';
 import canvas from '@workday/canvas-kit-react-core';
-import {ButtonTypes} from '..';
+import {ButtonTypes} from './types';
+import {ButtonProps} from './Button';
 
 const IconButtonCon = styled(ButtonBaseCon)(
   // TODO: Support data-whatinput='input' css
@@ -24,9 +25,8 @@ const IconButtonCon = styled(ButtonBaseCon)(
   }
 );
 
-export default class IconButton extends React.Component<JSX.IntrinsicElements['button']> {
+export default class IconButton extends React.Component<ButtonProps> {
   public render() {
-    const {ref, ...elemPropsWithoutRef} = this.props;
-    return <IconButtonCon buttonType={ButtonTypes.Secondary!} {...elemPropsWithoutRef} />;
+    return <IconButtonCon buttonType={ButtonTypes.Secondary!} {...this.props} />;
   }
 }
