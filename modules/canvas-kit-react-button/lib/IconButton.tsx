@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import canvas from '@workday/canvas-kit-react-core';
 import {ButtonTypes} from '..';
 
-const IconButtonCon = styled(ButtonBaseCon)<{disabled?: boolean}>(
+const IconButtonCon = styled(ButtonBaseCon)(
   // TODO: Support data-whatinput='input' css
   {
     borderRadius: '3px',
@@ -14,25 +14,19 @@ const IconButtonCon = styled(ButtonBaseCon)<{disabled?: boolean}>(
       display: 'inline-block',
       verticalAlign: 'middle',
     },
-  },
-  ({disabled}) => {
-    return disabled
-      ? {
-          // Double parent selectors to ensure specificity to override original fill
-          ['&& .wd-icon-fill, &&:hover .wd-icon-fill']: {fill: canvas.iconColors.disabled},
-        }
-      : {
-          // Double parent selectors to ensure specificity to override original fill
-          ['&& .wd-icon-fill, &&:hover .wd-icon-fill']: {fill: canvas.iconColors.standard},
-        };
+    // Double parent selectors to ensure specificity to override original fill
+    ['&&:disabled']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.disabled},
+    },
+    ['&&:not([disabled])']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
+    },
   }
 );
 
 export default class IconButton extends React.Component<JSX.IntrinsicElements['button']> {
   public render() {
     const {ref, ...elemPropsWithoutRef} = this.props;
-    return (
-      <IconButtonCon buttonType={ButtonTypes.Secondary!} innerRef={ref} {...elemPropsWithoutRef} />
-    );
+    return <IconButtonCon buttonType={ButtonTypes.Secondary!} {...elemPropsWithoutRef} />;
   }
 }

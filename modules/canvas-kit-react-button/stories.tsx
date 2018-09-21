@@ -47,6 +47,10 @@ storiesOf('Canvas Kit/Button', module)
         <SystemIcon icon={editIcon} />
       </IconButton>
       <br />
+      <IconButton disabled={true}>
+        <SystemIcon icon={editIcon} />
+      </IconButton>
+      <br />
       <h1 className="section-label">Growing Button</h1>
       <div
         className={css({
