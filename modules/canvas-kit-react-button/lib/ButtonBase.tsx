@@ -1,7 +1,7 @@
 import styled from 'react-emotion';
 import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
-import {StyledOtherComponent} from 'create-emotion-styled';
+import {StyledComponent} from 'create-emotion-styled';
 import focusRing from '../../common/styles/focus_ring';
 import {ButtonProps} from './Button';
 
@@ -9,47 +9,13 @@ export const BUTTON_HEIGHT_LARGE: number = 40;
 export const BUTTON_HEIGHT_MEDIUM: number = 24;
 export const BUTTON_HEIGHT_SMALL: number = 18;
 
-// TODO: Return type should be changed to object type of `buttonColors` once that gets a type added
-function getButtonColors(
-  buttonType: ButtonTypes
-): {
-  background: string;
-  border: string;
-  text: string;
-  activeBackground: string;
-  activeBorder: string;
-  activeText: string;
-  disabledBackground: string;
-  disabledBorder: string;
-  disabledText: string;
-  focusBackground: string;
-  focusBorder: string;
-  focusText: string;
-  hoverBackground: string;
-  hoverBorder: string;
-  hoverText: string;
-} {
-  switch (buttonType) {
-    case ButtonTypes.Primary:
-    default:
-      return canvas.buttonColors.primary;
-    case ButtonTypes.Secondary:
-      return canvas.buttonColors.secondary;
-    case ButtonTypes.Delete:
-      return canvas.buttonColors.delete;
-  }
-}
+export type ButtonBaseConProps = Pick<ButtonProps, 'buttonType' | 'buttonSize' | 'grow'>;
 
-export type ButtonBaseConProps = Pick<
-  ButtonProps & JSX.IntrinsicElements['button'],
-  'buttonType' | 'buttonSize' | 'grow'
->;
-
-export const ButtonBaseCon: StyledOtherComponent<
+export const ButtonBaseCon: StyledComponent<
   ButtonBaseConProps,
   JSX.IntrinsicElements['button'],
   object
-> = styled('button')<ButtonBaseConProps>(
+> = styled('button')(
   // TODO: Support data-whatinput='input'
   {
     boxSizing: 'border-box',
@@ -64,7 +30,7 @@ export const ButtonBaseCon: StyledOtherComponent<
     cursor: 'pointer',
     outline: 'none',
     transition: 'all 120ms ease-in',
-    '&:hover:active': {transitionDuration: '40ms'},
+    '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
     '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
     '&:not([disabled])': {
       '&:focus, &:active': {...focusRing(1)},
@@ -136,16 +102,13 @@ export const ButtonBaseCon: StyledOtherComponent<
   }
 );
 
-export type ButtonBaseLabelProps = Pick<
-  ButtonProps & JSX.IntrinsicElements['button'],
-  'buttonSize'
->;
+export type ButtonBaseLabelProps = Pick<ButtonProps, 'buttonSize'>;
 
-export const ButtonBaseLabel: StyledOtherComponent<
+export const ButtonBaseLabel: StyledComponent<
   ButtonBaseLabelProps,
   JSX.IntrinsicElements['span'],
   object
-> = styled('span')<ButtonBaseLabelProps>(
+> = styled('span')(
   {
     position: 'relative', // Fixes an IE issue with text within button moving on click
     ':hover:active': {
@@ -173,3 +136,15 @@ export const ButtonBaseLabel: StyledOtherComponent<
     }
   }
 );
+
+function getButtonColors(buttonType: ButtonTypes) {
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    default:
+      return canvas.buttonColors.primary;
+    case ButtonTypes.Secondary:
+      return canvas.buttonColors.secondary;
+    case ButtonTypes.Delete:
+      return canvas.buttonColors.delete;
+  }
+}

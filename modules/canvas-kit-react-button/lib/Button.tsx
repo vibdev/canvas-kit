@@ -5,9 +5,9 @@ import {GrowthBehavior} from '../../common/types';
 
 export interface ButtonProps extends GrowthBehavior {
   /**
-   * The text or a single ReactElement to be used as the label of the button.
+   * Button cannot be empty.
    */
-  children: React.ReactChild;
+  children: React.ReactNode;
   /**
    * Type of button.
    */
@@ -37,7 +37,6 @@ export default class Button extends React.Component<JSX.IntrinsicElements['butto
         buttonType={buttonType}
         buttonSize={buttonSize}
         grow={grow}
-        innerRef={ref}
         {...elemPropsWithoutRef}
       >
         <ButtonBaseLabel buttonSize={buttonSize}>{children}</ButtonBaseLabel>
