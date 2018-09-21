@@ -1,21 +1,18 @@
 import styled from 'react-emotion';
 import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
-import {StyledComponent} from 'create-emotion-styled';
 import focusRing from '../../common/styles/focus_ring';
 import {ButtonProps} from './Button';
+// @ts-ignore: To appease the TS god
+import {ButtonHTMLAttributes, ClassAttributes, HTMLAttributes} from 'react';
+// @ts-ignore: To appease the TS god
+import {StyledOtherComponent} from 'create-emotion-styled';
 
 export const BUTTON_HEIGHT_LARGE: number = 40;
 export const BUTTON_HEIGHT_MEDIUM: number = 24;
 export const BUTTON_HEIGHT_SMALL: number = 18;
 
-export type ButtonBaseConProps = Pick<ButtonProps, 'buttonType' | 'buttonSize' | 'grow'>;
-
-export const ButtonBaseCon: StyledComponent<
-  ButtonBaseConProps,
-  JSX.IntrinsicElements['button'],
-  object
-> = styled('button')(
+export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
   {
     boxSizing: 'border-box',
@@ -102,13 +99,7 @@ export const ButtonBaseCon: StyledComponent<
   }
 );
 
-export type ButtonBaseLabelProps = Pick<ButtonProps, 'buttonSize'>;
-
-export const ButtonBaseLabel: StyledComponent<
-  ButtonBaseLabelProps,
-  JSX.IntrinsicElements['span'],
-  object
-> = styled('span')(
+export const ButtonBaseLabel = styled('span')<ButtonProps>(
   {
     position: 'relative', // Fixes an IE issue with text within button moving on click
     ':hover:active': {
