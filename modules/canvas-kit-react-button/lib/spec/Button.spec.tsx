@@ -42,7 +42,7 @@ describe('Button Accessibility', () => {
   });
 
   test('button should be using HTML5 <button> tag', () => {
-    const component = mount(<Button />);
+    const component = mount(<Button>Button</Button>);
     expect(component.getDOMNode().tagName.toLowerCase()).toEqual('button');
     component.unmount();
   });
@@ -60,7 +60,7 @@ describe('Button Accessibility', () => {
   });
 
   test('enabled button should NOT have disabled attribute set', () => {
-    const component = mount(<Button disabled={false} />);
+    const component = mount(<Button disabled={false}>Button</Button>);
     expect(
       component
         .find('button')
@@ -71,7 +71,7 @@ describe('Button Accessibility', () => {
   });
 
   test('disabled button should have disabled attribute set', () => {
-    const component = mount(<Button disabled={true} />);
+    const component = mount(<Button disabled={true}>Button</Button>);
     expect(
       component
         .find('button')
