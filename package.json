@@ -3,18 +3,27 @@
   "name": "canvas-kit-react",
   "devDependencies": {
     "@storybook/react": "^3.4.1",
+    "@types/enzyme": "^3.1.14",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/node": "^8.0.58",
     "@types/react": "^16.3.11",
     "@types/react-dom": "^16.0.5",
+    "@types/react-test-renderer": "^16.0.2",
     "@types/storybook__react": "^3.0.9",
     "@workday/canvas-kit-build": "^3.4.3",
     "babel-core": "^6.26.0",
+    "babel-jest": "^23.6.0",
     "babel-runtime": "^6.26.0",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.7",
     "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "file-loader": "^1.1.5",
     "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "jest-emotion": "^9.2.7",
+    "jest-junit": "^5.1.0",
     "lerna": "^2.10.2",
     "lint-staged": "^7.1.0",
     "node-fetch": "^2.1.2",
@@ -23,15 +32,17 @@
     "prettier": "^1.12.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-test-renderer": "^16.5.2",
     "sass-loader": "^7.0.1",
     "storybook-readme": "^3.0.6",
     "style-loader": "^0.20.3",
+    "ts-jest": "^23.10.0",
     "ts-loader": "^3.5.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
     "tslint-loader": "^3.5.3",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.6.2",
+    "typescript": "^2.9.0",
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {},
@@ -49,7 +60,9 @@
     "lint": "tslint --project tsconfig.json",
     "format:prettier": "prettier --config=./.prettierrc --ignore-path=./.prettierignore \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
     "format:tslint": "tslint --project tsconfig.json --fix",
-    "format": "yarn format:prettier && yarn format:tslint"
+    "format": "yarn format:prettier && yarn format:tslint",
+    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest --config jest/jest-config.js",
+    "updateSnaps": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest --config jest/jest-config.js -u"
   },
   "config": {
     "commitizen": {
@@ -57,15 +70,18 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
-      "tslint --project tsconfig.json --fix",
-      "git add"
-    ],
-    "*.{js,jsx,json,md}": [
-      "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
-      "git add"
-    ]
+    "linters": {
+      "*.{ts,tsx}": [
+        "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
+        "tslint --project tsconfig.json --fix",
+        "git add"
+      ],
+      "*.{js,jsx,json,md}": [
+        "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
+        "git add"
+      ]
+    },
+    "ignore": ["jest/setupTests.ts"]
   },
   "workspaces": [
     "modules/*"

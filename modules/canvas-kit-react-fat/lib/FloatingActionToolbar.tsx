@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as classNames from 'classnames';
+import React from 'react';
+import classNames from 'classnames';
 import '@workday/canvas-kit-css-fat/dist/canvas-kit-css-fat.css';
 
 export interface FloatingActionToolbarProps {

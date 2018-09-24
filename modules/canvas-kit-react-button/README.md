@@ -46,9 +46,10 @@ Button containing an icon. Icon may be a component from
 ```jsx
 import { IconButton } from '@workday/canvas-kit-react-button'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
+import { activityStreamIcon } from '@workday/canvas-system-icons-web';
 
 <IconButton>
-  <SystemIcon name={SystemIcon.Icons.Edit} />
+  <SystemIcon icon={activityStreamIcon} />
 </IconButton>
 
 <IconButton>

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Button Snapshots renders as expected 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms ease-in;
+  transition: all 120ms ease-in;
+  background-color: #f0f1f2;
+  border-color: #ced3d9;
+  color: #323232;
+  height: 40px;
+  padding: 0;
+  border-radius: 3px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-0:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-0:not([disabled]):focus,
+.emotion-0:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
+.emotion-0:active,
+.emotion-0:hover:active {
+  background-color: #f0f1f2;
+  border-color: #ced3d9;
+  color: #323232;
+}
+
+.emotion-0:focus,
+.emotion-0:hover:focus {
+  background-color: #f0f1f2;
+  border-color: #005cb9;
+  color: #323232;
+}
+
+.emotion-0:hover {
+  background-color: #ced3d9;
+  border-color: #a1aab3;
+  color: #323232;
+}
+
+.emotion-0:disabled,
+.emotion-0:active:disabled,
+.emotion-0:focus:disabled,
+.emotion-0:hover:disabled {
+  background-color: #ffffff;
+  border-color: #ced3d9;
+  color: #ced3d9;
+}
+
+.emotion-0 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-0.emotion-0:disabled .wd-icon-fill,
+.emotion-0.emotion-0:disabled:hover .wd-icon-fill {
+  fill: #f0f1f2;
+}
+
+.emotion-0.emotion-0:not([disabled]) .wd-icon-fill,
+.emotion-0.emotion-0:not([disabled]):hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+<button
+  className="emotion-0"
+>
+  <svg>
+    Hello
+  </svg>
+</button>
+`;

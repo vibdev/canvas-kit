@@ -34,6 +34,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
     },
   },
   ({buttonType}) => {
+    /* istanbul ignore next line for coverage */
     if (buttonType === undefined) {
       return {};
     }
