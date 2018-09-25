@@ -1,4 +1,3 @@
-/// <reference path="../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
@@ -11,6 +10,8 @@ storiesOf('Canvas Kit/Cookie Banner', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Cookie Banner</h1>
-      <CookieBanner />
+      <div style={{backgroundColor: '#eff0f2', padding: 24}}>
+        <CookieBanner />
+      </div>
     </div>
   ));
