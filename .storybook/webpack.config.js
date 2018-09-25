@@ -1,4 +1,5 @@
 const path = require('path');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const modulesPath = path.resolve(__dirname, '../modules');
 
@@ -17,6 +18,7 @@ const customRules = [
     loader: 'ts-loader',
     options: {
       configFile: '../../.storybook/tsconfig.json',
+      transpileOnly: true,
     },
   },
   {
@@ -73,6 +75,13 @@ module.exports = (baseConfig, env) => {
 
   // Add `.ts` and `.tsx` as a resolvable extension.
   baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];
+
+  baseConfig.plugins.push(
+    new ForkTsCheckerWebpackPlugin({
+      tsconfig: path.join(__dirname, 'tsconfig.json'),
+      tslint: path.join(__dirname, '../tslint.json'),
+    })
+  );
 
   return baseConfig;
 };
