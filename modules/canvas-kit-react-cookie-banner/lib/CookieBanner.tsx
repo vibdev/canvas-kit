@@ -25,8 +25,29 @@ const CookieSettingsLink = styled('a')({
 
 const Link = styled('a')(type.link);
 
-export default class CookieBanner extends React.Component {
+interface State {
+  acceptCookies: boolean;
+}
+
+export default class CookieBanner extends React.Component<{}, State> {
+  public constructor(props: {}) {
+    super(props);
+    this.state = {
+      acceptCookies: false,
+    };
+  }
+
+  private onAcceptCookies = (event: React.MouseEvent<HTMLButtonElement>): void => {
+    this.setState({
+      acceptCookies: true,
+    });
+  };
+
   public render() {
+    if (this.state.acceptCookies) {
+      return null;
+    }
+
     return (
       <Banner>
         <BannerItem>
@@ -38,7 +59,7 @@ export default class CookieBanner extends React.Component {
           <CookieSettingsLink href="#">Cookie Settings</CookieSettingsLink>
         </BannerItem>
         <BannerItem>
-          <Button>Continue</Button>
+          <Button onClick={this.onAcceptCookies}>Continue</Button>
         </BannerItem>
       </Banner>
     );
