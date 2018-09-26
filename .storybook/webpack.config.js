@@ -1,23 +1,15 @@
 const path = require('path');
+const HappyPack = require('happypack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const modulesPath = path.resolve(__dirname, '../modules');
 
 const customRules = [
   {
-    enforce: 'pre',
     test: /\.tsx?$/,
     exclude: /node_modules/,
     include: modulesPath,
-    loader: 'tslint-loader',
-  },
-  {
-    test: /\.tsx?$/,
-    exclude: /node_modules/,
-    include: modulesPath,
-    loader: 'ts-loader',
-    options: {
-      configFile: '../../.storybook/tsconfig.json',
-    },
+    loader: 'happypack/loader?id=ts',
   },
   {
     test: /\.scss$/,
@@ -73,6 +65,27 @@ module.exports = (baseConfig, env) => {
 
   // Add `.ts` and `.tsx` as a resolvable extension.
   baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];
+
+  baseConfig.plugins.push(
+    new HappyPack({
+      id: 'ts',
+      threads: 2,
+      loaders: [
+        {
+          path: 'ts-loader',
+          query: {
+            happyPackMode: true,
+            configFile: path.join(__dirname, './tsconfig.json'),
+          },
+        },
+      ],
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      checkSyntacticErrors: true,
+      tsconfig: path.join(__dirname, 'tsconfig.json'),
+      tslint: path.join(__dirname, '../tslint.json'),
+    })
+  );
 
   return baseConfig;
 };
