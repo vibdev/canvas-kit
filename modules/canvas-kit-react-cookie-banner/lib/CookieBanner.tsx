@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, {css} from 'react-emotion';
-import {commonColors, type, spacing} from '@workday/canvas-kit-react-core';
+import {colors, commonColors, type, spacing} from '@workday/canvas-kit-react-core';
 import Button from '@workday/canvas-kit-react-button';
 
 interface BannerProps {
@@ -31,6 +31,7 @@ const Banner = styled('div')(
   type.body2,
   {
     backgroundColor: commonColors.background,
+    borderTop: `1px solid ${colors.soap400}`,
     display: 'flex',
     padding: spacing.m,
     alignItems: 'center',
