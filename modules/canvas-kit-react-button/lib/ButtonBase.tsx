@@ -1,7 +1,7 @@
 import styled from 'react-emotion';
 import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
-import focusRing from '../../common/styles/focus_ring';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {ButtonProps} from './Button';
 // @ts-ignore: To appease the TS god
 import {ButtonHTMLAttributes, ClassAttributes, HTMLAttributes} from 'react';

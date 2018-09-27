@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ButtonBaseCon, ButtonBaseLabel} from './ButtonBase';
 import {ButtonTypes, ButtonSizes} from './types';
-import {GrowthBehavior} from '../../common/types';
+import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
   /**
