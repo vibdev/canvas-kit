@@ -3,8 +3,7 @@ import styled from 'react-emotion';
 import {commonColors, type, spacing} from '@workday/canvas-kit-react-core';
 import Button from '@workday/canvas-kit-react-button';
 
-const Banner = styled('div')({
-  ...type.body,
+const Banner = styled('div')(type.body, {
   backgroundColor: commonColors.background,
   display: 'flex',
   padding: spacing.m,
@@ -25,26 +24,34 @@ const CookieSettingsLink = styled('a')({
 
 const Link = styled('a')(type.link);
 
-interface State {
-  acceptCookies: boolean;
+interface Props {
+  onAccept?: ((e: React.MouseEvent<HTMLButtonElement>) => void);
 }
 
-export default class CookieBanner extends React.Component<{}, State> {
-  public constructor(props: {}) {
+interface State {
+  acceptedCookies: boolean;
+}
+
+export default class CookieBanner extends React.Component<Props, State> {
+  public constructor(props: Props) {
     super(props);
     this.state = {
-      acceptCookies: false,
+      acceptedCookies: false,
     };
   }
 
-  private onAcceptCookies = (event: React.MouseEvent<HTMLButtonElement>): void => {
+  private onAccept = (event: React.MouseEvent<HTMLButtonElement>): void => {
     this.setState({
-      acceptCookies: true,
+      acceptedCookies: true,
     });
+
+    if (this.props.onAccept) {
+      this.props.onAccept(event);
+    }
   };
 
   public render() {
-    if (this.state.acceptCookies) {
+    if (this.state.acceptedCookies) {
       return null;
     }
 
@@ -59,7 +66,7 @@ export default class CookieBanner extends React.Component<{}, State> {
           <CookieSettingsLink href="#">Cookie Settings</CookieSettingsLink>
         </BannerItem>
         <BannerItem>
-          <Button onClick={this.onAcceptCookies}>Continue</Button>
+          <Button onClick={this.onAccept}>Continue</Button>
         </BannerItem>
       </Banner>
     );
