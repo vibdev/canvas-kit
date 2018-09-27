@@ -48,5 +48,8 @@
       "allow-leading-underscore",
       "allow-pascal-case"
     ]
+  },
+  "linterOptions": {
+    "exclude": ["docs"]
   }
 }
