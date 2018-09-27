@@ -4,17 +4,27 @@ import {commonColors, type, spacing} from '@workday/canvas-kit-react-core';
 import Button from '@workday/canvas-kit-react-button';
 
 interface BannerProps {
+  /**
+   * If the banner is currently closed
+   */
   isClosed?: boolean;
 }
 
 export interface CookieBannerProps extends BannerProps {
+  /**
+   * Callback for Continue button, should set isClosed to true
+   */
   onAccept: ((e: React.MouseEvent<HTMLButtonElement>) => void);
-  onClickSettings?: ((e: React.MouseEvent<HTMLButtonElement>) => void);
-  onClickPrivacyPolicy?: string | ((e: React.MouseEvent<HTMLAnchorElement>) => void);
-}
 
-interface State {
-  acceptedCookies: boolean;
+  /**
+   * Callback for Cookie Settings button
+   */
+  onClickSettings?: ((e: React.MouseEvent<HTMLButtonElement>) => void);
+
+  /**
+   * Callback or URL for Privacy Policy link. If URL, link opens in a new window.
+   */
+  onClickPrivacyPolicy?: string | ((e: React.MouseEvent<HTMLAnchorElement>) => void);
 }
 
 const Banner = styled('div')(
@@ -63,8 +73,8 @@ const GrowButton = css({
   maxWidth: 'auto',
 });
 
-export default class CookieBanner extends React.Component<CookieBannerProps, State> {
-  public render() {
+export default class CookieBanner extends React.Component<CookieBannerProps> {
+  public render(): React.ReactNode {
     const {isClosed, onAccept, onClickSettings, onClickPrivacyPolicy} = this.props;
 
     let PrivacyPolicy = null;
