@@ -42,17 +42,35 @@ const CookieSettings = styled('button')(type.body, type.link, {
   padding: 0,
 });
 
-const Link = styled('a')(type.link);
+const Link = styled('a')(type.link, {
+  cursor: 'pointer',
+});
 
 export default class CookieBanner extends React.Component<CookieBannerProps, State> {
   public render() {
-    const {isClosed, onAccept, onClickSettings} = this.props;
+    const {isClosed, onAccept, onClickSettings, onClickPrivacyPolicy} = this.props;
+
+    let PrivacyPolicy = null;
+
+    if (onClickPrivacyPolicy) {
+      const linkProps =
+        typeof onClickPrivacyPolicy === 'string'
+          ? {href: onClickPrivacyPolicy, target: '__blank'}
+          : {onClick: onClickPrivacyPolicy};
+
+      PrivacyPolicy = (
+        <React.Fragment>
+          You can read more in our <Link {...linkProps}>Privacy Policy</Link>.
+        </React.Fragment>
+      );
+    }
+
     return (
       <Banner isClosed={isClosed}>
         <BannerItem>
           We use cookies to ensure that we give you the best experience on our website. If you
           continue without changing your settings, we’ll assume that you are willing to receive
-          cookies. You can read more in our <Link href="#">Privacy Policy</Link>.
+          cookies. {PrivacyPolicy}
         </BannerItem>
         {onClickSettings && (
           <BannerItem>

@@ -25,8 +25,8 @@ class BannerContainer extends React.Component<Props, State> {
     };
   }
 
-  private onAccept = (): void => {
-    action('accept-cookies');
+  private onAccept = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    action('accept-cookies')(e);
     this.setState({
       acceptedCookies: true,
     });
@@ -69,16 +69,26 @@ storiesOf('Canvas Kit/Cookie Banner', module)
       <h1 className="section-label">Cookie Banner</h1>
       <BannerContainer
         bannerProps={{
-          onClickSettings: () => {
-            action('click-settings');
-          },
+          onClickSettings: action('click-settings'),
+          onClickPrivacyPolicy: action('click-privacy-policy'),
         }}
       />
     </div>
   ))
-  .add('No Settings', () => (
+  .add('Privacy Policy URL', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner with no settings</h1>
+      <h1 className="section-label">Cookie Banner with privacy policy URL</h1>
+      <BannerContainer
+        bannerProps={{
+          onClickSettings: action('click-settings'),
+          onClickPrivacyPolicy: 'https://www.workday.com/en-us/privacy.html',
+        }}
+      />
+    </div>
+  ))
+  .add('Simple', () => (
+    <div className="story">
+      <h1 className="section-label">Cookie Banner with no privacy policy or settings</h1>
       <BannerContainer />
     </div>
   ));
