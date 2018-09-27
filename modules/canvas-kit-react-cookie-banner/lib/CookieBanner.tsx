@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled, {css} from 'react-emotion';
 import {commonColors, type, spacing} from '@workday/canvas-kit-react-core';
 import Button from '@workday/canvas-kit-react-button';
 
@@ -18,23 +18,35 @@ interface State {
 }
 
 const Banner = styled('div')(
-  type.body,
+  type.body2,
   {
     backgroundColor: commonColors.background,
     display: 'flex',
     padding: spacing.m,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    '@media (max-width: 450px)': {
+      flexDirection: 'column',
+      alignItems: 'stretch',
+      textAlign: 'center',
+      padding: `${spacing.s} 0`,
+      minHeight: 168,
+    },
   },
   ({isClosed}: BannerProps) => (isClosed ? {visibility: 'hidden'} : null)
 );
 
 const BannerItem = styled('div')({
-  paddingLeft: spacing.s,
-  paddingRight: spacing.s,
+  marginLeft: spacing.s,
+  marginRight: spacing.s,
+  '@media (max-width: 450px)': {
+    '&:not(:first-child)': {
+      marginTop: spacing.s,
+    },
+  },
 });
 
-const CookieSettings = styled('button')(type.body, type.link, {
+const CookieSettings = styled('button')(type.body2, type.link, {
   border: 0,
   fontWeight: 500,
   whiteSpace: 'nowrap',
@@ -44,6 +56,11 @@ const CookieSettings = styled('button')(type.body, type.link, {
 
 const Link = styled('a')(type.link, {
   cursor: 'pointer',
+});
+
+const GrowButton = css({
+  width: '100%',
+  maxWidth: 'auto',
 });
 
 export default class CookieBanner extends React.Component<CookieBannerProps, State> {
@@ -78,7 +95,7 @@ export default class CookieBanner extends React.Component<CookieBannerProps, Sta
           </BannerItem>
         )}
         <BannerItem>
-          <Button onClick={onAccept} buttonType={Button.Types.Primary}>
+          <Button onClick={onAccept} buttonType={Button.Types.Primary} className={GrowButton}>
             Continue
           </Button>
         </BannerItem>
