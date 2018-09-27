@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button';
+import Button from '../lib/Button';
 import {mount} from 'enzyme';
 
 describe('Button', () => {

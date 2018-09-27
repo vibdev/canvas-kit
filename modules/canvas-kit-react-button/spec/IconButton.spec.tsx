@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import IconButton from '../IconButton';
+import IconButton from '../lib/IconButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 

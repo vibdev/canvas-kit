@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import IconButton from '../IconButton';
+import IconButton from '../lib/IconButton';
 import React from 'react';
 
 describe('Icon Button Snapshots', () => {

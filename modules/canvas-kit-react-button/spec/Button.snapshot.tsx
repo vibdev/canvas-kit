@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../Button';
+import Button from '../lib/Button';
 import renderer from 'react-test-renderer';
-import {ButtonTypes, ButtonSizes} from '../types';
+import {ButtonTypes, ButtonSizes} from '../lib/types';
 
 describe('Button Snapshots', () => {
   test('renders as expected', () => {
