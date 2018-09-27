@@ -62,7 +62,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       },
       '&:not([disabled])': {
         '&:focus, &:active': {
-          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 1) : focusRing(1)),
+          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
         },
       },
     };
