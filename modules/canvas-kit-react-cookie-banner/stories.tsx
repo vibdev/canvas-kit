@@ -39,13 +39,7 @@ class BannerContainer extends React.Component<Props, State> {
   };
 
   public render() {
-    const Container = styled('div')({
-      backgroundColor: '#eff0f2',
-      padding: 24,
-      '& > *': {
-        marginBottom: 24,
-      },
-    });
+    const Container = styled('div')();
 
     const {bannerProps} = this.props;
 

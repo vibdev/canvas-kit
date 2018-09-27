@@ -36,12 +36,15 @@ const Banner = styled('div')(
     padding: spacing.m,
     alignItems: 'center',
     justifyContent: 'space-between',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    width: `calc(100% - ${spacing.m} - ${spacing.m})`,
     '@media (max-width: 450px)': {
       flexDirection: 'column',
       alignItems: 'stretch',
       textAlign: 'center',
       padding: `${spacing.s} 0`,
-      minHeight: 168,
     },
   },
   ({isClosed}: BannerProps) => (isClosed ? {visibility: 'hidden'} : null)
