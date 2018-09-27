@@ -29,9 +29,6 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
     transition: 'all 120ms ease-in',
     '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
     '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
-    '&:not([disabled])': {
-      '&:focus, &:active': {...focusRing(1)},
-    },
   },
   ({buttonType}) => {
     /* istanbul ignore next line for coverage */
@@ -62,6 +59,11 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
         backgroundColor: buttonColors.disabledBackground,
         borderColor: buttonColors.disabledBorder,
         color: buttonColors.disabledText,
+      },
+      '&:not([disabled])': {
+        '&:focus, &:active': {
+          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 1) : focusRing(1)),
+        },
       },
     };
   },
@@ -109,6 +111,10 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+    fontWeight: 500,
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
   },
   ({buttonSize}) => {
     if (buttonSize === ButtonSizes.Medium) {
@@ -117,12 +123,10 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
       };
     } else if (buttonSize === ButtonSizes.Small) {
       return {
-        fontWeight: 500,
         fontSize: '10px',
       };
     } else {
       return {
-        fontWeight: 500,
         fontSize: '14px',
       };
     }
