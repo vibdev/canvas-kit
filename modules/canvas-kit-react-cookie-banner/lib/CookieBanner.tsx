@@ -83,7 +83,13 @@ export default class CookieBanner extends React.Component<CookieBannerProps> {
       const linkProps =
         typeof onClickPrivacyPolicy === 'string'
           ? {href: onClickPrivacyPolicy, target: '__blank'}
-          : {onClick: onClickPrivacyPolicy};
+          : {
+              href: '#',
+              onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                onClickPrivacyPolicy(e);
+              },
+            };
 
       PrivacyPolicy = (
         <React.Fragment>
