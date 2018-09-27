@@ -78,7 +78,9 @@ export default class CookieBanner extends React.Component<CookieBannerProps, Sta
           </BannerItem>
         )}
         <BannerItem>
-          <Button onClick={onAccept}>Continue</Button>
+          <Button onClick={onAccept} buttonType={Button.Types.Primary}>
+            Continue
+          </Button>
         </BannerItem>
       </Banner>
     );
