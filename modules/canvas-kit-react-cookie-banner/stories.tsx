@@ -9,12 +9,16 @@ import {Button} from '@workday/canvas-kit-react-button';
 import CookieBanner from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
+interface Props {
+  bannerProps?: any;
+}
+
 interface State {
   acceptedCookies: boolean;
 }
 
-class BannerContainer extends React.Component<{}, State> {
-  public constructor(props: {}) {
+class BannerContainer extends React.Component<Props, State> {
+  public constructor(props: Props) {
     super(props);
     this.state = {
       acceptedCookies: false,
@@ -42,10 +46,17 @@ class BannerContainer extends React.Component<{}, State> {
         marginBottom: 24,
       },
     });
+
+    const {bannerProps} = this.props;
+
     return (
       <Container>
         <Button onClick={this.reset}>Reset Banner</Button>
-        <CookieBanner onAccept={this.onAccept} isClosed={this.state.acceptedCookies} />
+        <CookieBanner
+          onAccept={this.onAccept}
+          isClosed={this.state.acceptedCookies}
+          {...bannerProps}
+        />
       </Container>
     );
   }
@@ -53,9 +64,21 @@ class BannerContainer extends React.Component<{}, State> {
 
 storiesOf('Canvas Kit/Cookie Banner', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Full', () => (
     <div className="story">
       <h1 className="section-label">Cookie Banner</h1>
+      <BannerContainer
+        bannerProps={{
+          onClickSettings: () => {
+            action('click-settings');
+          },
+        }}
+      />
+    </div>
+  ))
+  .add('No Settings', () => (
+    <div className="story">
+      <h1 className="section-label">Cookie Banner with no settings</h1>
       <BannerContainer />
     </div>
   ));

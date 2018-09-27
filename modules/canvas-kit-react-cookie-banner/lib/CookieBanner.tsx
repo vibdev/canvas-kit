@@ -7,8 +7,10 @@ interface BannerProps {
   isClosed?: boolean;
 }
 
-interface Props extends BannerProps {
-  onAccept?: ((e: React.MouseEvent<HTMLButtonElement>) => void);
+export interface CookieBannerProps extends BannerProps {
+  onAccept: ((e: React.MouseEvent<HTMLButtonElement>) => void);
+  onClickSettings?: ((e: React.MouseEvent<HTMLButtonElement>) => void);
+  onClickPrivacyPolicy?: string | ((e: React.MouseEvent<HTMLAnchorElement>) => void);
 }
 
 interface State {
@@ -32,16 +34,19 @@ const BannerItem = styled('div')({
   paddingRight: spacing.s,
 });
 
-const CookieSettingsLink = styled('a')(type.link, {
+const CookieSettings = styled('button')(type.body, type.link, {
+  border: 0,
   fontWeight: 500,
   whiteSpace: 'nowrap',
+  cursor: 'pointer',
+  padding: 0,
 });
 
 const Link = styled('a')(type.link);
 
-export default class CookieBanner extends React.Component<Props, State> {
+export default class CookieBanner extends React.Component<CookieBannerProps, State> {
   public render() {
-    const {isClosed, onAccept} = this.props;
+    const {isClosed, onAccept, onClickSettings} = this.props;
     return (
       <Banner isClosed={isClosed}>
         <BannerItem>
@@ -49,9 +54,11 @@ export default class CookieBanner extends React.Component<Props, State> {
           continue without changing your settings, we’ll assume that you are willing to receive
           cookies. You can read more in our <Link href="#">Privacy Policy</Link>.
         </BannerItem>
-        <BannerItem>
-          <CookieSettingsLink href="#">Cookie Settings</CookieSettingsLink>
-        </BannerItem>
+        {onClickSettings && (
+          <BannerItem>
+            <CookieSettings onClick={onClickSettings}>Cookie Settings</CookieSettings>
+          </BannerItem>
+        )}
         <BannerItem>
           <Button onClick={onAccept}>Continue</Button>
         </BannerItem>
