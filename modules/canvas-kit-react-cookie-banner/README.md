@@ -9,6 +9,8 @@ Cookie banner component.
 Fixes a cookie banner to the bottom of the web page. Can be configured with a "Cookie Settings"
 element and a custom notice.
 
+A static constant is available with the default notice text: `CookieBanner.DefaultNotice`
+
 ```jsx
 import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 
@@ -24,6 +26,12 @@ import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
   notice="Custom notice"
 />
 
+<CookieBanner
+  onAccept={this.onAccept}
+  isClosed={this.state.acceptedCookies}
+  onClickSettings={() => {}},
+  notice={`${CookieBanner.DefaultNotice} This is appended.`}
+/>
 
 <CookieBanner
   onAccept={this.onAccept}
