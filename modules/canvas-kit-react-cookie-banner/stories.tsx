@@ -3,8 +3,9 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {action} from '@storybook/addon-actions';
-import styled from 'react-emotion';
+import styled, {css} from 'react-emotion';
 import {Button} from '@workday/canvas-kit-react-button';
+import {type} from '@workday/canvas-kit-react-core';
 
 import CookieBanner from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -64,25 +65,36 @@ storiesOf('Canvas Kit/Cookie Banner', module)
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
-          onClickPrivacyPolicy: action('click-privacy-policy'),
         }}
       />
     </div>
   ))
   .add('Privacy Policy URL', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner with privacy policy URL</h1>
+      <h1 className="section-label">Cookie Banner with custom notice</h1>
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
-          onClickPrivacyPolicy: 'https://www.workday.com/en-us/privacy.html',
+          notice: (
+            <React.Fragment>
+              {CookieBanner.DefaultNotice} Please review our{' '}
+              <a
+                href="https://www.workday.com/en-us/privacy.html"
+                target="__blank"
+                className={css(type.link)}
+              >
+                Privacy Policy
+              </a>
+              .
+            </React.Fragment>
+          ),
         }}
       />
     </div>
   ))
   .add('Simple', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner with no privacy policy or settings</h1>
+      <h1 className="section-label">Cookie Banner with no settings</h1>
       <BannerContainer />
     </div>
   ));
