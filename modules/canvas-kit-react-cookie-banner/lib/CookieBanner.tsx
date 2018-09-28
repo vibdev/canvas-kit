@@ -3,7 +3,7 @@ import styled, {css} from 'react-emotion';
 import {colors, commonColors, type, spacing} from '@workday/canvas-kit-react-core';
 import Button from '@workday/canvas-kit-react-button';
 
-interface BannerProps {
+export interface BannerProps {
   /**
    * If the banner is currently closed
    */
