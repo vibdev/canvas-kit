@@ -5,12 +5,6 @@ import withReadme from 'storybook-readme/with-readme';
 
 import README from './README.md';
 
-import {injectGlobal} from 'emotion';
-import fonts from './index';
-
-// Anyone got a better idea where this should go in Storybook?
-injectGlobal(...fonts);
-
 storiesOf('Canvas Kit/Fonts', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
