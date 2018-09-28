@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.1.0...@workday/canvas-kit-react-cookie-banner@0.2.0) (2018-09-28)
+
+
+### Bug Fixes
+
+* **CookieBanner:** fix spacing cookie settings spacing ([9d8cd87](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/9d8cd87))
+
+
+### Features
+
+* **CookieBanner:** add animation and zIndex ([7c1dcde](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/7c1dcde))
+
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2018-09-28)
 
