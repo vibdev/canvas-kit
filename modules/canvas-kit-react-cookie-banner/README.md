@@ -65,7 +65,7 @@ Type: `string | React.ReactNode`
 Default:
 
 ```
-We use cookies to understand what visitors find useful on the site. Any data we collect is anonymous and only used to enhance the user experience. If you are ok with us using cookies for this purpose, please accept this notice.
+We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we’ll assume that you are willing to receive cookies.
 ```
 
 Customize notice with string or element.
