@@ -32,5 +32,8 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "emotion": "^9.2.10"
   }
 }
