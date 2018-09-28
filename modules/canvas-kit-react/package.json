@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@workday/canvas-kit-react-button": "0.14.6",
+    "@workday/canvas-kit-react-cookie-banner": "0.1.0",
     "@workday/canvas-kit-react-core": "0.16.2",
     "@workday/canvas-kit-react-icon": "1.2.2",
     "@workday/canvas-kit-react-table": "0.3.2"
