@@ -18,6 +18,10 @@ interface State {
   acceptedCookies: boolean;
 }
 
+const Container = styled('div')({
+  height: '110vh', // So we can scroll
+});
+
 class BannerContainer extends React.Component<Props, State> {
   public constructor(props: Props) {
     super(props);
@@ -40,8 +44,6 @@ class BannerContainer extends React.Component<Props, State> {
   };
 
   public render() {
-    const Container = styled('div')();
-
     const {bannerProps} = this.props;
 
     return (
