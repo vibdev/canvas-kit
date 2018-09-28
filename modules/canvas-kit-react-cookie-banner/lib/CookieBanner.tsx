@@ -40,6 +40,8 @@ const Banner = styled('div')(
     bottom: 0,
     left: 0,
     right: 0,
+    zIndex: 99,
+    transition: '0.3s transform',
     '@media (max-width: 450px)': {
       flexDirection: 'column',
       alignItems: 'stretch',
@@ -47,7 +49,7 @@ const Banner = styled('div')(
       padding: `${spacing.s} 0`,
     },
   },
-  ({isClosed}: BannerProps) => (isClosed ? {visibility: 'hidden'} : null)
+  ({isClosed}: BannerProps) => (isClosed ? {transform: 'translateY(100%)'} : null)
 );
 
 const BannerItem = styled('div')({
