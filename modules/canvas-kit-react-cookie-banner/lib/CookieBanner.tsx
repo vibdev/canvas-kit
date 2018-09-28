@@ -62,15 +62,22 @@ const BannerItem = styled('div')({
   },
 });
 
+const rowStyle = css({
+  display: 'flex',
+});
+
 const CookieSettings = styled('button')(type.body2, type.link, {
+  marginRight: spacing.s,
   border: 0,
   fontWeight: 500,
   whiteSpace: 'nowrap',
   cursor: 'pointer',
   padding: 0,
+  height: '0%',
+  alignSelf: 'center',
 });
 
-const GrowButton = css({
+const continueButtonStyle = css({
   width: '100%',
   maxWidth: 'auto',
 });
@@ -85,13 +92,15 @@ export default class CookieBanner extends React.Component<CookieBannerProps> {
     return (
       <Banner isClosed={isClosed}>
         <BannerItem>{notice || CookieBanner.DefaultNotice}</BannerItem>
-        {onClickSettings && (
-          <BannerItem>
+        <BannerItem className={rowStyle}>
+          {onClickSettings && (
             <CookieSettings onClick={onClickSettings}>Cookie Settings</CookieSettings>
-          </BannerItem>
-        )}
-        <BannerItem>
-          <Button onClick={onAccept} buttonType={Button.Types.Primary} className={GrowButton}>
+          )}
+          <Button
+            onClick={onAccept}
+            buttonType={Button.Types.Primary}
+            className={continueButtonStyle}
+          >
             Continue
           </Button>
         </BannerItem>
