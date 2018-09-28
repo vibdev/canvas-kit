@@ -1,7 +1,8 @@
 # Canvas Kit Fonts
 
 By default, no fonts are included with Canvas Kit modules. To use official Canvas Kit fonts, install
-and import the `@workday/canvas-kit-react-fonts` module.
+and import the `@workday/canvas-kit-react-fonts` module. Note that this module sources fonts from
+the Workday CDN.
 
 ```sh
 yarn add @workday/canvas-kit-react-fonts
@@ -28,30 +29,36 @@ import fonts from '@workday/canvas-kit-react-fonts';
 injectGlobal(...fonts);
 ```
 
-Finally, use one of our official typography styles from the `canvas-kit-react-core` module or add
-`"Roboto"` (or `"Roboto Mono"` for monospace fonts) as one of the `font-family` names in your CSS.
+Finally, use one of our official typography styles from the `canvas-kit-react-core` module. If you
+need to build your own typography styles use `fontFamily` or `monoFontFamily` font lists from the
+same module.
 
 Examples:
 
 ```jsx
+import {css} from 'react-emotion';
 import {type} from '@workday/canvas-kit-react-core';
 
 ...
 
 render(
+  // Uses the official 'body' style from Canvas' typography styles
   return <p className={css(type.body)}>Lorem Ipsum...</p>
 )
 ```
 
 or
 
-```css
-p {
-  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  ...;
-}
-pre {
-  font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
-  ...;
-}
+```jsx
+import styled from 'react-emotion';
+import {fontFamily, monoFontFamily} from '@workday/canvas-kit-react-core';
+
+// Custom typography using the official Canvas font list
+const customParagraph = styled('p')({
+  fontFamily: fontFamily, // "Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif
+});
+
+const customPre = styled('pre')({
+  fontFamily: monoFontFamily, // "Roboto Mono", "Courier New", Courier, monospace
+});
 ```
