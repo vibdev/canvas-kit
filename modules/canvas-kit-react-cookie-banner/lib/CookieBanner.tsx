@@ -39,7 +39,7 @@ const Banner = styled('div')(
     position: 'fixed',
     bottom: 0,
     left: 0,
-    width: `calc(100% - ${spacing.m} - ${spacing.m})`,
+    right: 0,
     '@media (max-width: 450px)': {
       flexDirection: 'column',
       alignItems: 'stretch',
