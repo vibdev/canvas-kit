@@ -27,7 +27,7 @@ export default class Icon extends React.Component<IconProps> {
 
     const styles = [this.props.styles];
 
-    if ('size' in this.props) {
+    if (this.props.size) {
       styles.push({
         '& svg': {
           width: `${this.props.size}px`,
