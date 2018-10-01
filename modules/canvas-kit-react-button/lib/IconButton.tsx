@@ -1,16 +1,32 @@
-import * as React from 'react';
-import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css';
-import ButtonBase from './ButtonBase';
-import {ReactButton, ClassNameProperties} from './types';
+import React from 'react';
+import {ButtonBaseCon} from './ButtonBase';
+import styled from 'react-emotion';
+import canvas from '@workday/canvas-kit-react-core';
+import {ButtonTypes} from './types';
+import {ButtonProps} from './Button';
 
-class IconButton extends React.Component<ReactButton> {
-  protected static classes: ClassNameProperties = {
-    'wdc-btn-icon': true,
-  };
+const IconButtonCon = styled(ButtonBaseCon)(
+  // TODO: Support data-whatinput='input' css
+  {
+    borderRadius: '3px',
+    width: '32px',
+    height: '32px',
+    ['& .wd-icon']: {
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    },
+    // Double parent selectors to ensure specificity to override original fill
+    ['&&:disabled']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.disabled},
+    },
+    ['&&:not([disabled])']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
+    },
+  }
+);
 
+export default class IconButton extends React.Component<ButtonProps> {
   public render() {
-    return <ButtonBase btnClasses={IconButton.classes} btnProps={this.props} />;
+    return <IconButtonCon buttonType={ButtonTypes.Secondary!} {...this.props} />;
   }
 }
-
-export default IconButton;

@@ -12,3 +12,8 @@ lerna-debug.log*
 # build
 modules/*/dist
 modules/*/ts-tmp
+build/*
+
+# intellij
+.idea
+junit.xml

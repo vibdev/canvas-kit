@@ -1,29 +1,40 @@
 import * as React from 'react';
-import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css';
-import ButtonBase from './ButtonBase';
-import {ReactButton, ClassNameProperties, ButtonTypes, ButtonSizes} from './types';
+import {ButtonBaseCon, ButtonBaseLabel} from './ButtonBase';
+import {ButtonTypes, ButtonSizes} from './types';
+import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
+  /**
+   * Button cannot be empty.
+   */
+  children: React.ReactNode;
+  /**
+   * Type of button.
+   */
   buttonType?: ButtonTypes;
+  /**
+   * Size of button.
+   */
   buttonSize?: ButtonSizes;
 }
 
-class Button extends React.Component<ReactButton & ButtonProps> {
+export default class Button extends React.Component<ButtonProps> {
   public static Types = ButtonTypes;
   public static Sizes = ButtonSizes;
 
+  static defaultProps: Partial<ButtonProps> = {
+    buttonSize: ButtonSizes.Large,
+    buttonType: ButtonTypes.Secondary,
+    grow: false,
+  };
+
   public render() {
-    const {buttonType, buttonSize, ...elemProps} = this.props;
+    const {buttonSize, children} = this.props;
 
-    const classes: ClassNameProperties = {
-      'wdc-btn-primary': buttonType === ButtonTypes.Primary,
-      'wdc-btn-delete': buttonType === ButtonTypes.Delete,
-      'wdc-btn-small': buttonSize === Button.Sizes.Small,
-      'wdc-btn-medium': buttonSize === Button.Sizes.Medium,
-    };
-
-    return <ButtonBase btnClasses={classes} btnProps={elemProps} />;
+    return (
+      <ButtonBaseCon {...this.props}>
+        <ButtonBaseLabel buttonSize={buttonSize}>{children}</ButtonBaseLabel>
+      </ButtonBaseCon>
+    );
   }
 }
-
-export default Button;

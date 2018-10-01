@@ -4,9 +4,6 @@ Components implementing Canvas buttons.
 
 ## Usage
 
-**This package uses CSS.**  
-If you're using webpack, you must enable a CSS loader.
-
 ### Button
 
 Extends `<button>` with Canvas button styling.
@@ -36,6 +33,11 @@ Type: `Button.Sizes = { Small, Medium, Large }`
 Default: `Button.Sizes.Large`  
 Button size.
 
+**`grow`**  
+Type: `{true , false}`  
+Default: `false`  
+If true, the button's will grow to its container's width.
+
 ### Icon Button
 
 Button containing an icon. Icon may be a component from
@@ -44,9 +46,10 @@ Button containing an icon. Icon may be a component from
 ```jsx
 import { IconButton } from '@workday/canvas-kit-react-button'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
+import { activityStreamIcon } from '@workday/canvas-system-icons-web';
 
 <IconButton>
-  <SystemIcon name={SystemIcon.Icons.Edit} />
+  <SystemIcon icon={activityStreamIcon} />
 </IconButton>
 
 <IconButton>

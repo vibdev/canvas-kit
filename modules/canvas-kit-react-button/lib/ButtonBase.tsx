@@ -1,34 +1,146 @@
-import * as React from 'react';
-import * as classNames from 'classnames';
-import '@workday/canvas-kit-css-button/dist/canvas-kit-css-button.css';
-import {ReactButton, ClassNameProperties} from './types';
+import styled from 'react-emotion';
+import {ButtonSizes, ButtonTypes} from './types';
+import canvas from '@workday/canvas-kit-react-core';
+import {focusRing} from '@workday/canvas-kit-react-common';
+import {ButtonProps} from './Button';
+// @ts-ignore: To appease the TS god
+import {ButtonHTMLAttributes, ClassAttributes, HTMLAttributes} from 'react';
+// @ts-ignore: To appease the TS god
+import {StyledOtherComponent} from 'create-emotion-styled';
 
-export interface ButtonBaseProps {
-  btnClasses?: ClassNameProperties;
-  btnProps?: ReactButton;
-}
+export const BUTTON_HEIGHT_LARGE: number = 40;
+export const BUTTON_HEIGHT_MEDIUM: number = 24;
+export const BUTTON_HEIGHT_SMALL: number = 18;
 
-class ButtonBase extends React.Component<ButtonBaseProps> {
-  protected static classes: ClassNameProperties = {
-    'wdc-btn': true,
-  };
-
-  public render() {
-    const classes: (string | ClassNameProperties | undefined | null)[] = [
-      ButtonBase.classes,
-      this.props.btnClasses,
-    ];
-
-    if (this.props.btnProps) {
-      classes.push(this.props.btnProps.className);
+export const ButtonBaseCon = styled('button')<ButtonProps>(
+  // TODO: Support data-whatinput='input'
+  {
+    boxSizing: 'border-box',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    borderRadius: '999px',
+    border: '1px solid transparent',
+    boxShadow: 'none',
+    position: 'relative',
+    cursor: 'pointer',
+    outline: 'none',
+    transition: 'all 120ms ease-in',
+    '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
+    '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
+  },
+  ({buttonType}) => {
+    /* istanbul ignore next line for coverage */
+    if (buttonType === undefined) {
+      return {};
     }
+    const buttonColors = getButtonColors(buttonType);
+    return {
+      backgroundColor: buttonColors.background,
+      borderColor: buttonColors.border,
+      color: buttonColors.text,
+      ':active, :hover:active': {
+        backgroundColor: buttonColors.activeBackground,
+        borderColor: buttonColors.activeBorder,
+        color: buttonColors.activeText,
+      },
+      ':focus, :hover:focus': {
+        backgroundColor: buttonColors.focusBackground,
+        borderColor: buttonColors.focusBorder,
+        color: buttonColors.focusText,
+      },
+      ':hover': {
+        backgroundColor: buttonColors.hoverBackground,
+        borderColor: buttonColors.hoverBorder,
+        color: buttonColors.hoverText,
+      },
+      ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
+        backgroundColor: buttonColors.disabledBackground,
+        borderColor: buttonColors.disabledBorder,
+        color: buttonColors.disabledText,
+      },
+      '&:not([disabled])': {
+        '&:focus, &:active': {
+          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
+        },
+      },
+    };
+  },
+  ({buttonSize}) => {
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+        return {
+          height: `${BUTTON_HEIGHT_LARGE}px`,
+          padding: `0 ${canvas.spacing.l}`,
+          minWidth: '112px',
+          maxWidth: '288px',
+        };
+      case ButtonSizes.Medium:
+        return {
+          height: `${BUTTON_HEIGHT_MEDIUM}px`,
+          padding: `0 ${canvas.spacing.m}`,
+          minWidth: '80px',
+          maxWidth: '200px',
+        };
+      case ButtonSizes.Small:
+        return {
+          height: `${BUTTON_HEIGHT_SMALL}px`,
+          padding: `0 ${canvas.spacing.xxs}`,
+          minWidth: '56px',
+          maxWidth: '120px',
+        };
+      default:
+        return {height: `${BUTTON_HEIGHT_LARGE}px`, padding: 0};
+    }
+  },
+  ({grow}) => {
+    if (grow) {
+      return {width: '100%', maxWidth: '100%'};
+    }
+    return {};
+  }
+);
 
-    return (
-      <button {...this.props.btnProps} className={classNames(classes)}>
-        {this.props.btnProps && this.props.btnProps.children}
-      </button>
-    );
+export const ButtonBaseLabel = styled('span')<ButtonProps>(
+  {
+    position: 'relative', // Fixes an IE issue with text within button moving on click
+    ':hover:active': {
+      backgroundColor: 'transparent',
+    },
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    fontWeight: 500,
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  },
+  ({buttonSize}) => {
+    if (buttonSize === ButtonSizes.Medium) {
+      return {
+        fontSize: '13px',
+      };
+    } else if (buttonSize === ButtonSizes.Small) {
+      return {
+        fontSize: '10px',
+      };
+    } else {
+      return {
+        fontSize: '14px',
+      };
+    }
+  }
+);
+
+function getButtonColors(buttonType: ButtonTypes) {
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    default:
+      return canvas.buttonColors.primary;
+    case ButtonTypes.Secondary:
+      return canvas.buttonColors.secondary;
+    case ButtonTypes.Delete:
+      return canvas.buttonColors.delete;
   }
 }
-
-export default ButtonBase;

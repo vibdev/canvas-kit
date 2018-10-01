@@ -142,7 +142,7 @@ echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "ts-tmp", "stories.tsx"]
+  "exclude": ["node_modules", "ts-tmp", "stories.tsx", "spec"]
 }
 
 EOF
