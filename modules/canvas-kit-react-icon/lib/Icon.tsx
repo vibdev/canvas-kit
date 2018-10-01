@@ -25,7 +25,7 @@ export default class Icon extends React.Component<IconProps> {
       return null;
     }
 
-    const styles = [this.props.styles];
+    const styles = [{display: 'inline-block'}, this.props.styles];
 
     if (this.props.size) {
       styles.push({
