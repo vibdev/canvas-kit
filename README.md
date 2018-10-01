@@ -19,6 +19,13 @@ This project provides Canvas-styled React components.
 6.  Navigate to [http://localhost:9001/](http://localhost:9001/) and find your new module's story
 7.  Begin editing your new React component in `modules/canvas-kit-react-<NAME>/index.js`!
 
+## Exporting your module
+
+1. If your module's `index.ts` has a default export, make sure it is available as a named export as
+   well. This allows for greater flexibility in how developers consume your module.
+2. Add `export * from '@workday/canvas-kit-react-<NAME>'` to `modules/canvas-kit-react/index.ts` so
+   that consumers of our bundle module (`@workday/canvas-kit-react`) can use your module too.
+
 ## Building modules
 
 **`yarn build`**
@@ -49,7 +56,7 @@ Install [prettier-vscode](https://github.com/prettier/prettier-vscode) and
 
 Consider adding the following options:
 
-* [Format on save](https://github.com/prettier/prettier-vscode#format-on-save)
+- [Format on save](https://github.com/prettier/prettier-vscode#format-on-save)
 
 #### Atom
 
