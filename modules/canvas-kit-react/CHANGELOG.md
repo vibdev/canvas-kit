@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.14.2...@workday/canvas-kit-react@1.0.0) (2018-10-01)
+
+
+### Chores
+
+* **bundle:** Trigger a breaking change on the bundle repo ([2ff839c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/2ff839c))
+
+
+### BREAKING CHANGES
+
+* **bundle:** Updated canvas-kit-react-core to a new breaking version. Need to major bump the
+bundle module
+
+
+
+
 <a name="0.14.2"></a>
 ## [0.14.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.14.1...@workday/canvas-kit-react@0.14.2) (2018-10-01)
 
