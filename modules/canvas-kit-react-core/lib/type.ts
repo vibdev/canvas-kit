@@ -1,4 +1,4 @@
-import canvasColorsWeb from '@workday/canvas-colors-web';
+import canvasColors, {typeColors, statusColors} from '@workday/canvas-colors-web';
 import {CSSProperties} from './types';
 
 export const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif';
@@ -15,6 +15,7 @@ export interface CanvasTypeHierarchy {
   body: CSSProperties;
   body2: CSSProperties;
   small: CSSProperties;
+  [key: string]: CSSProperties;
 }
 
 export interface CanvasTypeVariant {
@@ -26,16 +27,12 @@ export interface CanvasTypeVariant {
   inverse: CSSProperties;
   mono: CSSProperties;
   link: CSSProperties;
+  [key: string]: CSSProperties;
 }
 
 export interface CanvasType extends CanvasTypeHierarchy {
   variant: CanvasTypeVariant;
-  [key: string]: CSSProperties;
-}
-
-export interface CanvasType extends CanvasTypeVariations {
-  mono: CanvasTypeVariations;
-  [key: string]: CanvasTypeVariations | CSSProperties;
+  [key: string]: CanvasTypeHierarchy | CSSProperties;
 }
 
 // Data Viz
@@ -135,7 +132,7 @@ const inverse: CSSProperties = {
 };
 
 const mono: CSSProperties = {
-  fontFamily: fonts.monoFontFamily,
+  fontFamily: monoFontFamily,
 };
 
 const link: CSSProperties = {
@@ -177,7 +174,7 @@ const type: CanvasType = {
 };
 
 Object.keys(type).forEach(key => {
-  if (key === 'mono') {
+  if (key === 'variant') {
     return;
   }
   type[key] = {...type[key], fontFamily} as CSSProperties;
