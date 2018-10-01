@@ -1,9 +1,9 @@
 {
-  "name": "@workday/canvas-kit-react",
-  "version": "0.14.0",
-  "description": "The parent module that contains all Workday Canvas Kit React components",
+  "name": "@workday/canvas-kit-react-cookie-banner",
+  "version": "0.2.0",
+  "description": "Canvas styled cookie banner",
   "homepage": "https://workdaydesign.com",
-  "author": "Alex Nicholls",
+  "author": "Joseph Le <joseph.le@workday.com>",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -11,11 +11,12 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner"
   },
   "files": [
     "dist/",
-    "index.tsx"
+    "lib/",
+    "index.ts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,16 +27,17 @@
     "canvas-kit",
     "react",
     "components",
-    "workday"
+    "workday",
+    "cookie-banner"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-button": "0.14.6",
-    "@workday/canvas-kit-react-cookie-banner": "0.2.0",
-    "@workday/canvas-kit-react-core": "0.16.2",
-    "@workday/canvas-kit-react-icon": "1.2.2",
-    "@workday/canvas-kit-react-table": "0.3.2"
+    "@workday/canvas-kit-react-button": "^0.14.6",
+    "@workday/canvas-kit-react-core": "^0.16.2",
+    "emotion": "^9.2.10",
+    "prop-types": "^15.6.2",
+    "react-emotion": "^9.2.10"
   }
 }
