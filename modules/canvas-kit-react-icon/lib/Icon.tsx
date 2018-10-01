@@ -25,13 +25,13 @@ export default class Icon extends React.Component<IconProps> {
       return null;
     }
 
-    const styles = [{display: 'inline-block'}, this.props.styles];
+    const styles = [{display: 'inline-block', '& svg': {display: 'block'}}, this.props.styles];
 
     if (this.props.size) {
       styles.push({
         '& svg': {
-          width: `${this.props.size}px`,
-          height: `${this.props.size}px`,
+          width: this.props.size,
+          height: this.props.size,
         },
       });
     }
