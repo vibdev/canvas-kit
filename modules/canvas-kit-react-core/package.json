@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-core",
-  "version": "0.16.2",
+  "version": "1.0.0",
   "description": "A group of core primitives (i.e. colors, text, etc.)",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -38,8 +38,7 @@
     "@workday/canvas-depth-web": "^0.14.0",
     "@workday/canvas-space-web": "^0.14.0",
     "emotion": "^9.2.6",
-    "glamorous": "^4.12.3",
-    "react-emotion": "^9.2.6"
+    "glamorous": "^4.12.3"
   },
   "devDependencies": {
     "react-emotion": "^9.2.6"

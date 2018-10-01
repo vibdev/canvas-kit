@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.16.2...@workday/canvas-kit-react-core@1.0.0) (2018-10-01)
+
+
+### Bug Fixes
+
+* **core-type:** Fix issues from rebase ([9432e8a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/9432e8a))
+* **deps:** add deps for fonts, clean up deps for core ([1306eaf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/1306eaf))
+* **root:** add all modules to root module ([e7f1d0f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/e7f1d0f))
+* **type:** Updates after rebase ([2cc1d8c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/2cc1d8c))
+
+
+### Code Refactoring
+
+* **core:** remove fonts from core, relocate families to type ([68fbbdb](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/68fbbdb)), closes [#89](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/issues/89)
+
+
+### Features
+
+* **core-type:** Add error text ([12f9746](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/12f9746))
+* **core-type:** Explicitly add 'variant' to type variations ([2aba2e5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/2aba2e5))
+* **core-type:** Update core type to use new type guide ([c2dafab](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c2dafab))
+* **core-type:** Use new semantic color groupings ([de3a46d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/de3a46d))
+
+
+### BREAKING CHANGES
+
+* **core-type:** Any reference that has become a variant now needs two styles applied (labels,
+buttons, hints, mono, & links). These variants must be combined with another level of text.
+* **core:** core/fonts no longer provides font declarations automatically, font family variables are relocated to core/type
+
+
+
+
 <a name="0.16.2"></a>
 ## [0.16.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.16.1...@workday/canvas-kit-react-core@0.16.2) (2018-09-10)
 

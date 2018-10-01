@@ -1,9 +1,9 @@
 {
-  "name": "@workday/canvas-kit-react-cookie-banner",
-  "version": "0.2.2",
-  "description": "Canvas styled cookie banner",
+  "name": "@workday/canvas-kit-react-fonts",
+  "version": "0.1.0",
+  "description": "Fonts for canvas-kit-react",
   "homepage": "https://workdaydesign.com",
-  "author": "Joseph Le <joseph.le@workday.com>",
+  "author": "Lynn Chyi",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -11,7 +11,7 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts"
   },
   "files": [
     "dist/",
@@ -28,16 +28,12 @@
     "react",
     "components",
     "workday",
-    "cookie-banner"
+    "fonts"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-button": "0.14.7",
-    "@workday/canvas-kit-react-core": "1.0.0",
-    "emotion": "^9.2.10",
-    "prop-types": "^15.6.2",
-    "react-emotion": "^9.2.10"
+    "emotion": "^9.2.10"
   }
 }

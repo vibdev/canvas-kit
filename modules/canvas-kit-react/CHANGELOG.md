@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.14.2"></a>
+## [0.14.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.14.1...@workday/canvas-kit-react@0.14.2) (2018-10-01)
+
+
+### Bug Fixes
+
+* **root:** add all modules to root module ([e7f1d0f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/e7f1d0f))
+
+
+
+
+<a name="0.14.1"></a>
+## [0.14.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.14.0...@workday/canvas-kit-react@0.14.1) (2018-10-01)
+
+
+
+
+**Note:** Version bump only for package @workday/canvas-kit-react
+
 <a name="0.14.0"></a>
 # [0.14.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@0.13.7...@workday/canvas-kit-react@0.14.0) (2018-09-28)
 

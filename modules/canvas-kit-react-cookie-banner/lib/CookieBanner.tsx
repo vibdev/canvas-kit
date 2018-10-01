@@ -41,7 +41,7 @@ const Banner = styled('div')(
     left: 0,
     right: 0,
     zIndex: 99,
-    transition: '0.3s transform',
+    transition: 'transform 0.2s ease-out',
     '@media (max-width: 450px)': {
       flexDirection: 'column',
       alignItems: 'stretch',
