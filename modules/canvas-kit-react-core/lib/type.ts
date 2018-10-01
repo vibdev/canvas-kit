@@ -1,6 +1,8 @@
 import canvasColorsWeb from '@workday/canvas-colors-web';
 import {CSSProperties} from './types';
-import fonts from './fonts';
+
+export const fontFamily = '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif';
+export const monoFontFamily = '"Roboto Mono", "Courier New", Courier, monospace';
 
 export interface CanvasTypeVariations {
   body: CSSProperties;
@@ -23,8 +25,6 @@ export interface CanvasType extends CanvasTypeVariations {
   mono: CanvasTypeVariations;
   [key: string]: CanvasTypeVariations | CSSProperties;
 }
-
-const {fontFamily} = fonts;
 
 const body: CSSProperties = {
   fontSize: '14px',
@@ -134,7 +134,7 @@ const typeVariations: CanvasTypeVariations = {
 // Override font family for mono type
 const mono: CanvasTypeVariations = typeVariations;
 Object.keys(mono).forEach(variation => {
-  mono[variation].fontFamily = fonts.monoFontFamily;
+  mono[variation].fontFamily = monoFontFamily;
 });
 
 const type: CanvasType = {
@@ -143,6 +143,9 @@ const type: CanvasType = {
 };
 
 Object.keys(type).forEach(key => {
+  if (key === 'mono') {
+    return;
+  }
   type[key] = {...type[key], fontFamily} as CSSProperties;
 });
 
