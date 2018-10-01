@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.0.0...@workday/canvas-kit-react-core@1.1.0) (2018-10-01)
+
+
+### Features
+
+* **buttons:** emotionify Button/IconButton ([8ebe6f3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/8ebe6f3))
+
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@0.16.2...@workday/canvas-kit-react-core@1.0.0) (2018-10-01)
 
