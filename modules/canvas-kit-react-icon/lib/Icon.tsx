@@ -5,8 +5,6 @@ import {CanvasIcon, CanvasIconTypes} from '@workday/design-assets-types';
 import {SpanProps} from './types';
 import {validateIconType} from './utils';
 
-export type CSSPropertiesFunction = (args: any) => CSSProperties;
-
 export interface IconProps {
   icon: CanvasIcon;
   styles: CSSProperties;
