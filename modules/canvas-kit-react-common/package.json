@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "A module of common utilities shared across canvas components",
   "homepage": "https://workdaydesign.com",
-  "author": "Phuoc Huynh",
+  "author": "Phuoc Huynh <phuoc.huynh@workday.com>",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -32,5 +32,10 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-react-core": "^1.1.1",
+    "emotion": "^9.2.12",
+    "react-emotion": "^9.2.12"
   }
 }
