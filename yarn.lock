@@ -515,10 +515,10 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.5.0.tgz#2162f43e8f1e9e03b2b3786d7cb634a9f2345e4a"
   integrity sha1-IWL0Po8engOys3htfLY0qfI0Xko=
 
-"@workday/canvas-kit-build@^3.4.3":
-  version "3.5.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-3.5.3.tgz#99fd3bf12adc78f69baca27c7a01f1b735537ae1"
-  integrity sha1-mf078SrcePabrKJ8egHxtzVTeuE=
+"@workday/canvas-kit-build@^3.5.4":
+  version "3.5.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-3.5.4.tgz#c2692fce65943b3a1c349cdcf63f59cfd19b186c"
+  integrity sha1-wmkvzmWUOzocNJzc9j9Zz9GbGGw=
   dependencies:
     autoprefixer "^7.1.5"
     aws-sdk "^2.176.0"

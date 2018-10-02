@@ -61,7 +61,7 @@ cat > $packageJson << EOF
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "canvas-kit-build build-ts index.ts --commonjs"
+    "build": "canvas-kit-build build-ts --commonjs"
   },
   "keywords": [
     "canvas",
