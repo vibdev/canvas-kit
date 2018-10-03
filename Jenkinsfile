@@ -32,6 +32,8 @@ timestamps {
         ciSkip()
         if (env.CI_SKIP == "true") {
           slack.notifySuccess()
+          initGheStatusChecks(['ci/jenkins/ciSkip'] as String[])
+          setGheStatusChecks('ci/jenkins/ciSkip', 'ci Skipped.', 'SUCCESS')
           return
         } else {
           initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
