@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.6"></a>
+## [1.2.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.5...@workday/canvas-kit-react-icon@1.2.6) (2018-10-03)
+
+
+### Bug Fixes
+
+* **extra-span:** remove extra span in icon injection ([11d2612](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/11d2612))
+* **icon-sizing:** correct conditional for size style insertion ([5fee1b8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/5fee1b8))
+* **span:** make span envelop svg ([8bcaadf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/8bcaadf))
+* **span:** remove extra spacing from enclosing span ([5e5d9da](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/5e5d9da))
+
+
+
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.4...@workday/canvas-kit-react-icon@1.2.5) (2018-10-02)
 
