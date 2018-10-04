@@ -100,9 +100,11 @@ EOF
 indexTs="$path/index.ts"
 echo -e "Creating ${CYAN}$indexTs${NC}"
 cat > $indexTs << EOF
-import MyComponent from './lib/MyComponent'
+import MyComponent from './lib/MyComponent';
 
-export default MyComponent
+export default MyComponent;
+export {MyComponent};
+export * from './lib/MyComponent';
 
 EOF
 
