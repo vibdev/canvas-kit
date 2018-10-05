@@ -86,10 +86,7 @@
         "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
         "git add"
       ]
-    },
-    "ignore": [
-      "jest/setupTests.ts"
-    ]
+    }
   },
   "workspaces": [
     "modules/*"

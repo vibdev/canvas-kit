@@ -2,17 +2,10 @@ module.exports = {
   rootDir: '..',
   setupTestFrameworkScriptFile: './jest/setupTests.ts',
   verbose: true,
-  bail: false,
   collectCoverage: true,
   collectCoverageFrom: [
     '**/canvas-kit-react-button/**/*.{tsx}',
-    '!**/build/**',
-    '!**/spec/**',
-    '!**/jest/*',
-    '!**/common/**',
     '!**/index.{ts,tsx,js,jsx}',
-    '!**/node_modules/**',
-    '!**/*.d.ts',
     '!**/stories.{ts,tsx,js,jsx}',
   ],
   coverageDirectory: './build/reports/jest',
@@ -26,15 +19,15 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
   transform: {
-    '^.+\\.js?$': 'babel-jest',
+    '^.+\\.js$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest',
   },
-  transformIgnorePatterns: ['/node_modules/(?!@workday/canvas-kit-react-core)'],
-  moduleDirectories: ['node_modules'],
+  // TODO: when jest-emotion goes to next patch version ^9.2.12
+  // this line changes => snapshotSerializers: ['jest-emotion']
+  // see README for 9.2.12: https://github.com/emotion-js/emotion/tree/v9.2.12/packages/jest-emotion#snapshot-serializer
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
   clearMocks: true,
   reporters: ['default', 'jest-junit'],
   testURL: 'http://localhost',
-  preset: 'ts-jest',
 };
