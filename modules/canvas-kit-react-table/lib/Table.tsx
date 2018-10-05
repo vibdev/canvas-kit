@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css';
 

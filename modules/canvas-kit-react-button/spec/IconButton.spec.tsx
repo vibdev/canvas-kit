@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {mount} from 'enzyme';
 import IconButton from '../lib/IconButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
