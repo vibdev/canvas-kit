@@ -24,11 +24,6 @@ module.exports = {
       statements: 97,
     },
   },
-  globals: {
-    'ts-jest': {
-      babelConfig: true,
-    },
-  },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
   transform: {
     '^.+\\.js?$': 'babel-jest',
@@ -39,7 +34,7 @@ module.exports = {
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
   clearMocks: true,
-  reporters: ['jest-junit'],
+  reporters: ['default', 'jest-junit'],
   testURL: 'http://localhost',
   preset: 'ts-jest',
 };
