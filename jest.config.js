@@ -19,7 +19,8 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
   },
   // TODO: when jest-emotion goes to next patch version ^9.2.12
   // this line changes => snapshotSerializers: ['jest-emotion']
