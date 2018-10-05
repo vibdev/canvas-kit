@@ -1,14 +1,14 @@
 module.exports = {
-  rootDir: '..',
-  setupTestFrameworkScriptFile: './jest/setupTests.ts',
+  rootDir: '.',
+  setupTestFrameworkScriptFile: '<rootDir>/jest/setupTests.ts',
   verbose: true,
   collectCoverage: true,
   collectCoverageFrom: [
-    '**/canvas-kit-react-button/**/*.{tsx}',
+    '**/canvas-kit-react-button/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories.{ts,tsx,js,jsx}',
   ],
-  coverageDirectory: './build/reports/jest',
+  coverageDirectory: '<rootDir>/build/reports/jest',
   coverageThreshold: {
     global: {
       branches: 97,
@@ -19,8 +19,7 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.[tj]sx?$': 'ts-jest',
   },
   // TODO: when jest-emotion goes to next patch version ^9.2.12
   // this line changes => snapshotSerializers: ['jest-emotion']

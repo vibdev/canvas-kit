@@ -32,6 +32,17 @@ This project provides Canvas-styled React components.
 
 This will build all modules' CSS and JS.
 
+## Testing modules
+
+**`yarn test`**
+
+This will start the unit tests and run code coverage.
+
+**`yarn updateSnaps`**
+
+If you know you've made a breaking visual change, use this command to update your snapshot tests.
+This will add files to your workspace that you'll need to commit.
+
 ## Code Style Guide
 
 This project follows UIC's
