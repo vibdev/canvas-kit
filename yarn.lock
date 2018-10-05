@@ -6653,6 +6653,15 @@ jest-each@^23.6.0:
     chalk "^2.0.1"
     pretty-format "^23.6.0"
 
+jest-emotion@^9.2.11:
+  version "9.2.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-emotion/-/jest-emotion-9.2.11.tgz#de1e5974f1a6e636fa87c631dd58f988ed8311f9"
+  integrity sha1-3h5ZdPGm5jb6h8Yx3Vj5iO2DEfk=
+  dependencies:
+    "@types/jest" "^23.0.2"
+    chalk "^2.4.1"
+    css "^2.2.1"
+
 jest-emotion@^9.2.7:
   version "9.2.7"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-emotion/-/jest-emotion-9.2.7.tgz#7a854156d1d5ceb95d8f36095a3f81d04109f125"
@@ -6716,11 +6725,12 @@ jest-jasmine2@^23.6.0:
     jest-util "^23.4.0"
     pretty-format "^23.6.0"
 
-jest-junit@^5.1.0:
-  version "5.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-junit/-/jest-junit-5.1.0.tgz#e8e497d810a829bf02783125aab74b5df6caa8fe"
-  integrity sha1-6OSX2BCoKb8CeDElqrdLXfbKqP4=
+jest-junit@^5.2.0:
+  version "5.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-junit/-/jest-junit-5.2.0.tgz#980401db7aa69999cf117c6d740a8135c22ae379"
+  integrity sha1-mAQB23qmmZnPEXxtdAqBNcIq43k=
   dependencies:
+    jest-config "^23.6.0"
     jest-validate "^23.0.1"
     mkdirp "^0.5.1"
     strip-ansi "^4.0.0"
