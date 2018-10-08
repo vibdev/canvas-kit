@@ -29,8 +29,8 @@
     "happypack": "^5.0.0",
     "husky": "^0.14.3",
     "jest": "^23.6.0",
-    "jest-emotion": "^9.2.7",
-    "jest-junit": "^5.1.0",
+    "jest-emotion": "^9.2.11",
+    "jest-junit": "^5.2.0",
     "lerna": "^2.10.2",
     "lint-staged": "^7.1.0",
     "node-fetch": "^2.1.2",
@@ -43,7 +43,7 @@
     "sass-loader": "^7.0.1",
     "storybook-readme": "^3.0.6",
     "style-loader": "^0.20.3",
-    "ts-jest": "^23.10.0",
+    "ts-jest": "23.10.4",
     "ts-loader": "^3.5.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
@@ -67,8 +67,8 @@
     "format:prettier": "prettier --config=./.prettierrc --ignore-path=./.prettierignore \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
     "format:tslint": "tslint --project tsconfig.json --fix",
     "format": "yarn format:prettier && yarn format:tslint",
-    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest --config jest/jest-config.js",
-    "updateSnaps": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest --config jest/jest-config.js -u"
+    "test": "TZ=UTC jest",
+    "updateSnaps": "TZ=UTC jest -u"
   },
   "config": {
     "commitizen": {
@@ -86,10 +86,7 @@
         "prettier --config=./.prettierrc --ignore-path=./.prettierignore --write",
         "git add"
       ]
-    },
-    "ignore": [
-      "jest/setupTests.ts"
-    ]
+    }
   },
   "workspaces": [
     "modules/*"

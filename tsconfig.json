@@ -15,8 +15,7 @@
     "allowUnreachableCode": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true
+    "noUnusedLocals": true
   },
   "exclude": ["node_modules", "modules/**/dist/*", "modules/**/ts-tmp/*", "docs"]
 }

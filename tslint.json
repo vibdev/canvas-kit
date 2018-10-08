@@ -50,6 +50,6 @@
     ]
   },
   "linterOptions": {
-    "exclude": ["docs"]
+    "exclude": ["docs", "jest"]
   }
 }
