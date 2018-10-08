@@ -32,6 +32,6 @@ module.exports = {
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
   clearMocks: true,
-  reporters: ['default', 'jest-junit'],
+  reporters: ['default', ['jest-junit', {suiteName: 'Canvas Kit React tests'}]],
   testURL: 'http://localhost',
 };
