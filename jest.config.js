@@ -17,6 +17,13 @@ module.exports = {
       statements: 97,
     },
   },
+  globals: {
+    'ts-jest': {
+      diagnostics: {
+        ignoreCodes: [151001],
+      },
+    },
+  },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
   preset: 'ts-jest/presets/js-with-babel', // Processes JS with babel-jest and TS with ts-jest
   // TODO: when jest-emotion goes to next patch version ^9.2.12
