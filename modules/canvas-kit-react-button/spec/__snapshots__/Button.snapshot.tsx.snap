@@ -44,13 +44,6 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -80,12 +73,22 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   color: #ced3d9;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
@@ -111,6 +114,9 @@ exports[`Button Snapshots renders a growing button 1`] = `
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
@@ -163,13 +169,6 @@ exports[`Button Snapshots renders a growing button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -199,6 +198,13 @@ exports[`Button Snapshots renders a growing button 1`] = `
   color: #ced3d9;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 <button
   className="emotion-1"
 >
@@ -217,6 +223,9 @@ exports[`Button Snapshots renders a large, delete button 1`] = `
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
@@ -265,13 +274,6 @@ exports[`Button Snapshots renders a large, delete button 1`] = `
 .emotion-1:disabled:active {
   cursor: default;
   box-shadow: none;
-}
-
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
 }
 
 .emotion-1:active,
@@ -303,6 +305,13 @@ exports[`Button Snapshots renders a large, delete button 1`] = `
   color: #ff867d;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 <button
   className="emotion-1"
 >
@@ -321,6 +330,9 @@ exports[`Button Snapshots renders a large, primary button 1`] = `
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
@@ -371,13 +383,6 @@ exports[`Button Snapshots renders a large, primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #ffa126;
@@ -405,6 +410,13 @@ exports[`Button Snapshots renders a large, primary button 1`] = `
   background-color: #fcd49f;
   border-color: #ffa126;
   color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
 }
 
 <button
@@ -462,13 +474,6 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -498,12 +503,22 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
   color: #ced3d9;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
@@ -528,6 +543,10 @@ exports[`Button Snapshots renders a medium, delete button 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 13px;
 }
 
@@ -578,13 +597,6 @@ exports[`Button Snapshots renders a medium, delete button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #ffefee;
@@ -612,6 +624,13 @@ exports[`Button Snapshots renders a medium, delete button 1`] = `
   background-color: #ffefee;
   border-color: #fcc9c5;
   color: #ff867d;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
 <button
@@ -669,13 +688,6 @@ exports[`Button Snapshots renders a medium, primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #ffa126;
@@ -705,11 +717,22 @@ exports[`Button Snapshots renders a medium, primary button 1`] = `
   color: #ffffff;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 13px;
 }
 
@@ -734,6 +757,10 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 13px;
 }
 
@@ -784,13 +811,6 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -820,6 +840,13 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   color: #ced3d9;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 <button
   className="emotion-1"
 >
@@ -838,6 +865,9 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
 }
 
@@ -888,13 +918,6 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #ffefee;
@@ -922,6 +945,13 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   background-color: #ffefee;
   border-color: #fcc9c5;
   color: #ff867d;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
 <button
@@ -979,13 +1009,6 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #ffa126;
@@ -1015,12 +1038,22 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   color: #ffffff;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
 }
 
@@ -1046,6 +1079,9 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
 }
 
@@ -1096,13 +1132,6 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -1130,6 +1159,13 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   background-color: #ffffff;
   border-color: #ced3d9;
   color: #ced3d9;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
 }
 
 <button
@@ -1187,13 +1223,6 @@ exports[`Button Snapshots renders as expected 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-}
-
 .emotion-1:active,
 .emotion-1:hover:active {
   background-color: #f0f1f2;
@@ -1223,12 +1252,22 @@ exports[`Button Snapshots renders as expected 1`] = `
   color: #ced3d9;
 }
 
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  -webkit-animation: animation-1lvxwzr 100ms;
+  animation: animation-1lvxwzr 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 500;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
 }
 
