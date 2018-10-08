@@ -18,10 +18,7 @@ module.exports = {
     },
   },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  preset: 'ts-jest/presets/js-with-babel', // Processes JS with babel-jest and TS with ts-jest
   // TODO: when jest-emotion goes to next patch version ^9.2.12
   // this line changes => snapshotSerializers: ['jest-emotion']
   // see README for 9.2.12: https://github.com/emotion-js/emotion/tree/v9.2.12/packages/jest-emotion#snapshot-serializer
