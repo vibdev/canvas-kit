@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.2"></a>
+## [0.4.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.4.1...@workday/canvas-kit-react-fat@0.4.2) (2018-10-08)
+
+
+### Bug Fixes
+
+* **imports:** disallow synthetic default imports ([0354b0f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/0354b0f))
+
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.4.0...@workday/canvas-kit-react-fat@0.4.1) (2018-10-02)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.15.5"></a>
+## [0.15.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.4...@workday/canvas-kit-react-button@0.15.5) (2018-10-08)
+
+
+### Bug Fixes
+
+* **imports:** disallow synthetic default imports ([0354b0f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/0354b0f))
+
+
+
+
 <a name="0.15.4"></a>
 ## [0.15.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.3...@workday/canvas-kit-react-button@0.15.4) (2018-10-03)
 
