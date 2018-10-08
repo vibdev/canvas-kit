@@ -108,14 +108,14 @@ timestamps {
 						}
 						finally {
 							junit 'junit.xml'
-							// step([
-							// 	$class              : 'CloverPublisher',
-							// 	cloverReportDir     : 'build/reports/jest',
-							// 	cloverReportFileName: 'clover.xml',
-							// 	healthyTarget       : [methodCoverage: 97, conditionalCoverage: 97, statementCoverage: 97],
-							// 	unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
-							// 	failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
-							// ])
+							step([
+								$class              : 'CloverPublisher',
+								cloverReportDir     : 'build/reports/jest',
+								cloverReportFileName: 'clover.xml',
+								healthyTarget       : [methodCoverage: 97, conditionalCoverage: 97, statementCoverage: 97],
+								unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
+								failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
+							])
 
 							if (error) {
 								throw error
