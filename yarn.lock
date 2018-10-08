@@ -11502,7 +11502,7 @@ trim-right@^1.0.1:
   dependencies:
     glob "^7.1.2"
 
-ts-jest@^23.10.4:
+ts-jest@23.10.4:
   version "23.10.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/ts-jest/-/ts-jest-23.10.4.tgz#a7a953f55c9165bcaa90ff91014a178e87fe0df8"
   integrity sha1-p6lT9VyRZbyqkP+RAUoXjof+Dfg=
