@@ -101,10 +101,10 @@ timestamps {
 							sh('yarn run test')
 							setGheStatusChecks('ci/jenkins/tests', 'tests SUCCESS!', 'SUCCESS')
 						} catch (Exception e) {
-							error = e
 							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+							throw error
 						}
 						finally {
 							junit 'junit.xml'
@@ -116,10 +116,6 @@ timestamps {
 								unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
 								failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
 							])
-
-							if (error) {
-								throw error
-							}
 						}
 					}
 				}
