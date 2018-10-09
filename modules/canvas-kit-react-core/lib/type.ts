@@ -75,14 +75,14 @@ const h3: CSSProperties = {
 const h4: CSSProperties = {
   fontWeight: 700,
   fontSize: '16px',
-  lineHeight: '23px',
+  lineHeight: '24px',
   color: typeColors.heading,
 };
 
 const h5: CSSProperties = {
   fontWeight: 400,
   fontSize: '16px',
-  lineHeight: '23px',
+  lineHeight: '24px',
   color: typeColors.heading,
 };
 
