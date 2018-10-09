@@ -95,7 +95,6 @@ timestamps {
 
 				stage('Test') {
 					echo env.STAGE_NAME
-					def error = null
 					dir(repoBaseDir) {
 						try {
 							sh('yarn run test')
@@ -104,7 +103,7 @@ timestamps {
 							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-							throw error
+							throw e
 						}
 						finally {
 							junit 'junit.xml'
