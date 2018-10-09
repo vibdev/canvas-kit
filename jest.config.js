@@ -8,6 +8,7 @@ module.exports = {
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories.{ts,tsx,js,jsx}',
   ],
+  coverageReporters: ['text', 'clover', 'html'],
   coverageDirectory: '<rootDir>/build/reports/jest',
   coverageThreshold: {
     global: {
@@ -32,6 +33,6 @@ module.exports = {
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
   clearMocks: true,
-  reporters: ['default', 'jest-junit'],
+  reporters: ['default', ['jest-junit', {suiteName: 'Canvas Kit React tests'}]],
   testURL: 'http://localhost',
 };

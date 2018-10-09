@@ -36,7 +36,7 @@ timestamps {
           setGheStatusChecks('ci/jenkins/ciSkip', 'ci Skipped.', 'SUCCESS')
           return
         } else {
-          initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
+          initGheStatusChecks(['ci/jenkins/ciProgress', 'ci/jenkins/tests', 'ci/jenkins/storybook', 'ci/jenkins/build'] as String[])
         }
 
         stage('Setup') {
@@ -67,6 +67,7 @@ timestamps {
               sh('yarn install --production=false')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
+							setGheStatusChecks('ci/jenkins/tests', 'tests were not run.', 'FAIL')
               setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               slack.notifyFail()
@@ -83,6 +84,7 @@ timestamps {
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
+							setGheStatusChecks('ci/jenkins/tests', 'tests were not run.', 'FAIL')
               setGheStatusChecks('ci/jenkins/storybook', 'Storybook FAILED!', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               slack.notifyFail()
@@ -90,6 +92,32 @@ timestamps {
             }
           }
         }
+
+				stage('Test') {
+					echo env.STAGE_NAME
+					dir(repoBaseDir) {
+						try {
+							sh('yarn run test')
+							setGheStatusChecks('ci/jenkins/tests', 'tests SUCCESS!', 'SUCCESS')
+						} catch (Exception e) {
+							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
+							setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
+							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+							throw e
+						}
+						finally {
+							junit 'junit.xml'
+							step([
+								$class              : 'CloverPublisher',
+								cloverReportDir     : 'build/reports/jest',
+								cloverReportFileName: 'clover.xml',
+								healthyTarget       : [methodCoverage: 97, conditionalCoverage: 97, statementCoverage: 97],
+								unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
+								failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
+							])
+						}
+					}
+				}
 
         stage('Storybook') {
           echo env.STAGE_NAME
