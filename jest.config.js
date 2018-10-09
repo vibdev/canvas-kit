@@ -8,6 +8,7 @@ module.exports = {
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories.{ts,tsx,js,jsx}',
   ],
+  coverageReporters: ['text', 'clover'],
   coverageDirectory: '<rootDir>/build/reports/jest',
   coverageThreshold: {
     global: {
