@@ -103,6 +103,7 @@ timestamps {
 							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+              slack.notifyFail()
 							throw e
 						}
 						finally {
