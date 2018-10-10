@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.4.2...@workday/canvas-kit-react-fat@0.5.0) (2018-10-10)
+
+
+### Bug Fixes
+
+* **emotion:** fix right edge positioning ([7813849](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/7813849))
+* **fat:** Add missing button to story ([b090a89](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/b090a89))
+* **fat:** Use correct box shadow color ([7d8c254](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/7d8c254))
+
+
+### Features
+
+* **emotion:** convert styles to emotion ([776c3b0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/776c3b0))
+* **exports:** add named, default, and all exports ([1b67a70](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/1b67a70))
+
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.4.1...@workday/canvas-kit-react-fat@0.4.2) (2018-10-08)
 
