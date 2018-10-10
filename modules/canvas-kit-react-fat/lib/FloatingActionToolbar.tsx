@@ -14,7 +14,7 @@ const Toolbar = styled('div')(
     borderTop: `solid 1px ${colors.soap400}`,
     background: commonColors.background,
     padding: spacing.s,
-    boxShadow: '0 -2px 4px rgba(82, 97, 115, 0.14)',
+    boxShadow: '0 -2px 4px rgba(0, 0, 0, 0.08)',
     '@media (max-width: 575px)': {
       padding: spacing.xxs,
     },
