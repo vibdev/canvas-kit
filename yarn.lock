@@ -498,6 +498,14 @@
     shelljs "^0.7.8"
     typescript "^2.6.2"
 
+"@workday/canvas-kit-css-button@^1.0.6":
+  version "1.4.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-button/-/@workday/canvas-kit-css-button-1.4.0.tgz#16472213afff2c0edd10a0aab8f7da5cd9b1bfc0"
+  integrity sha1-FkciE6//LA7dEKCquPfaXNmxv8A=
+  dependencies:
+    "@workday/canvas-kit-css-core" "2.0.0"
+    "@workday/canvas-system-icons-web" "^0.11.14"
+
 "@workday/canvas-kit-css-core@2.0.0":
   version "2.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-core/-/@workday/canvas-kit-css-core-2.0.0.tgz#6525a6519ac165e7cee815acbc5baf04b980a688"
@@ -523,6 +531,14 @@
     emotion "^9.2.6"
     react-emotion "^9.2.6"
 
+"@workday/canvas-kit-react-button@^0.14.5":
+  version "0.14.7"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-button/-/@workday/canvas-kit-react-button-0.14.7.tgz#dae31a53861c773b0a97f9bea2451bd611cace19"
+  integrity sha1-2uMaU4YcdzsKl/m+okUb1hHKzhk=
+  dependencies:
+    "@workday/canvas-kit-css-button" "^1.0.6"
+    classnames "^2.2.5"
+
 "@workday/canvas-kit-react-common@0.0.3":
   version "0.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-common/-/@workday/canvas-kit-react-common-0.0.3.tgz#907251289896de11cbec8f4c0cd147701aec8e86"
@@ -531,25 +547,6 @@
     "@workday/canvas-kit-react-core" "^1.1.1"
     emotion "^9.2.12"
     react-emotion "^9.2.12"
-
-"@workday/canvas-kit-react-core@1.1.1":
-  version "1.1.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-core/-/@workday/canvas-kit-react-core-1.1.1.tgz#8144a02b79f7b241ccb4eb48fc08f0347d95d88b"
-  integrity sha1-gUSgK3n3skHMtOtI/AjwNH2V2Is=
-  dependencies:
-    "@workday/canvas-colors-web" "~0.15.3"
-    "@workday/canvas-depth-web" "^0.14.0"
-    "@workday/canvas-space-web" "^0.14.0"
-    emotion "^9.2.6"
-    glamorous "^4.12.3"
-
-"@workday/canvas-kit-react-button@^0.14.5":
-  version "0.14.7"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-button/-/@workday/canvas-kit-react-button-0.14.7.tgz#dae31a53861c773b0a97f9bea2451bd611cace19"
-  integrity sha1-2uMaU4YcdzsKl/m+okUb1hHKzhk=
-  dependencies:
-    "@workday/canvas-kit-css-button" "^1.0.6"
-    classnames "^2.2.5"
 
 "@workday/canvas-kit-react-core@0.16.1":
   version "0.16.1"
@@ -562,6 +559,17 @@
     emotion "^9.2.6"
     glamorous "^4.12.3"
     react-emotion "^9.2.6"
+
+"@workday/canvas-kit-react-core@1.1.1":
+  version "1.1.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-core/-/@workday/canvas-kit-react-core-1.1.1.tgz#8144a02b79f7b241ccb4eb48fc08f0347d95d88b"
+  integrity sha1-gUSgK3n3skHMtOtI/AjwNH2V2Is=
+  dependencies:
+    "@workday/canvas-colors-web" "~0.15.3"
+    "@workday/canvas-depth-web" "^0.14.0"
+    "@workday/canvas-space-web" "^0.14.0"
+    emotion "^9.2.6"
+    glamorous "^4.12.3"
 
 "@workday/canvas-kit-react-icon@1.2.1":
   version "1.2.1"
@@ -590,7 +598,7 @@
   dependencies:
     "@workday/design-assets-types" "0.2.0"
 
-"@workday/canvas-system-icons-web@^0.16.8":
+"@workday/canvas-system-icons-web@^0.16.7", "@workday/canvas-system-icons-web@^0.16.8":
   version "0.16.13"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.13.tgz#149a845b5bc9e902c2bf9cd3500c385c17a0e4fb"
   integrity sha1-FJqEW1vJ6QLCv5zTUAw4XBeg5Ps=

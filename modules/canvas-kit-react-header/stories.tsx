@@ -85,7 +85,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header title="Kitchen Sink" theme={Header.Theme.Blue} brandUrl="#">
+        <Header title="Kitchen Sink" themeColor={Header.Theme.Blue} brandUrl="#">
           <nav>
             <ul>
               <li>
@@ -116,11 +116,11 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Dub}
           title="Ignored when brand prop exists..."
-          theme={Header.Theme.White}
+          themeColor={Header.Theme.White}
           brand={
             <DubLogoTitle
               title="Contained Lockup"
-              theme={Header.Theme.Blue}
+              themeColor={Header.Theme.Blue}
               bgColor={colors.gradients.blueberry}
             />
           }
@@ -156,7 +156,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Dub}
           title="Centered Menu"
-          theme={Header.Theme.White}
+          themeColor={Header.Theme.White}
           centeredNav={true}
           brandUrl="#"
         >
@@ -190,7 +190,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Dub}
           title="Transparent"
-          theme={Header.Theme.Transparent}
+          themeColor={Header.Theme.Transparent}
           brandUrl="#"
         >
           <nav>
@@ -230,7 +230,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Full}
           title="Design"
-          theme={Header.Theme.White}
+          themeColor={Header.Theme.White}
           brandUrl="#"
         >
           <nav>
@@ -256,7 +256,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Full}
           title="Kitchen Sink"
-          theme={Header.Theme.Blue}
+          themeColor={Header.Theme.Blue}
           brandUrl="#"
         >
           <nav>
@@ -286,7 +286,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header variant={Header.Variant.Full} title="" theme={Header.Theme.Blue} brandUrl="#">
+        <Header variant={Header.Variant.Full} title="" themeColor={Header.Theme.Blue} brandUrl="#">
           <nav>
             <ul>
               <li>
@@ -316,7 +316,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Full}
           title="Transparent"
-          theme={Header.Theme.Transparent}
+          themeColor={Header.Theme.Transparent}
           brandUrl="#"
         >
           <nav>
@@ -348,7 +348,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header
           variant={Header.Variant.Full}
           title=""
-          theme={Header.Theme.White}
+          themeColor={Header.Theme.White}
           centeredNav={true}
           brandUrl="#"
         >

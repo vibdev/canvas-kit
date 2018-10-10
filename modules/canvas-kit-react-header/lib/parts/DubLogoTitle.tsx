@@ -8,14 +8,14 @@ import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';
 
 export type DubTitleProps = {
-  theme?: HeaderTheme;
+  themeColor: HeaderTheme;
   title: string;
   bgColor?: string;
 };
 
 export class DubLogoTitle extends React.Component<DubTitleProps> {
-  static defaultProps: Partial<DubTitleProps> = {
-    theme: HeaderTheme.White,
+  static defaultProps = {
+    themeColor: HeaderTheme.White,
   };
 
   render() {
@@ -35,7 +35,7 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
       padding: `0 ${spacing.s}`,
       marginRight: spacing.s,
       borderRight: `1px solid ${
-        this.props.theme === HeaderTheme.White
+        this.props.themeColor === HeaderTheme.White
           ? colors.soap400
           : chroma(colors.frenchVanilla100)
               .alpha(0.3)
@@ -44,7 +44,8 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
     });
 
     const titleStyle = css({
-      color: this.props.theme === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
+      color:
+        this.props.themeColor === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
     return (
@@ -53,7 +54,7 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{
-              __html: this.props.theme === HeaderTheme.White ? dubLogoBlue : dubLogoWhite,
+              __html: this.props.themeColor === HeaderTheme.White ? dubLogoBlue : dubLogoWhite,
             }}
           />
           <h3 className={cx(css(logoTitleStyle), titleStyle)}>{this.props.title}</h3>

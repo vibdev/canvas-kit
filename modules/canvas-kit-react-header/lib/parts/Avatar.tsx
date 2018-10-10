@@ -11,14 +11,10 @@ import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {userIcon} from '@workday/canvas-system-icons-web';
 
 export type AvatarProps = {
-  theme?: HeaderTheme;
+  themeColor?: HeaderTheme;
 };
 
-const defaultProps: Partial<AvatarProps> = {
-  theme: HeaderTheme.White,
-};
-
-export const Avatar: React.SFC<AvatarProps> = props => {
+export const Avatar: React.SFC<AvatarProps> = ({themeColor = HeaderTheme.White}: AvatarProps) => {
   const avatarSize = '32px';
   const avatarStyle = css({
     display: 'flex',
@@ -26,13 +22,12 @@ export const Avatar: React.SFC<AvatarProps> = props => {
     justifyContent: 'center',
     height: avatarSize,
     width: avatarSize,
-    backgroundColor: props.theme === HeaderTheme.White ? colors.soap300 : colors.blueberry400,
+    backgroundColor: themeColor === HeaderTheme.White ? colors.soap300 : colors.blueberry400,
     borderRadius: '9999px',
     boxSizing: 'border-box',
     paddingTop: '2px',
   });
-  const iconColor =
-    props.theme === HeaderTheme.White ? colors.licorice500 : colors.frenchVanilla100;
+  const iconColor = themeColor === HeaderTheme.White ? colors.licorice500 : colors.frenchVanilla100;
 
   return (
     <div className={avatarStyle}>
@@ -40,5 +35,3 @@ export const Avatar: React.SFC<AvatarProps> = props => {
     </div>
   );
 };
-
-Avatar.defaultProps = defaultProps;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {cx, css} from 'emotion';
+import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from './parts';
 import {verticalCenterStyle} from './shared/styles';
@@ -14,19 +15,36 @@ export enum HeaderHeight {
 }
 
 export interface HeaderProps {
-  theme?: HeaderTheme;
-  variant?: HeaderVariant;
+  themeColor: HeaderTheme;
+  variant: HeaderVariant;
   title?: string;
   brand?: React.ReactNode;
   brandUrl?: string;
   centeredNav?: boolean;
 }
 
+const HeaderShell = styled('div')<HeaderProps>(
+  {
+    label: 'header-style',
+    ...verticalCenterStyle,
+    boxSizing: 'border-box',
+    ...type.body,
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  },
+  (props: HeaderProps) => ({
+    height: props.variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
+    background: themes[props.themeColor].background,
+    ...themes[props.themeColor].depth,
+    color: themes[props.themeColor].color,
+  })
+);
+
 export class Header extends React.Component<HeaderProps> {
   static Theme = HeaderTheme;
   static Variant = HeaderVariant;
-  static defaultProps: Partial<HeaderProps> = {
-    theme: HeaderTheme.White,
+  static defaultProps = {
+    themeColor: HeaderTheme.White,
     variant: HeaderVariant.Dub,
   };
 
@@ -62,8 +80,8 @@ export class Header extends React.Component<HeaderProps> {
 
       if (child.type === SystemIcon) {
         return React.cloneElement(child as React.ReactElement<SystemIconProps>, {
-          color: themes[this.props.theme!].systemIcon.color,
-          colorHover: themes[this.props.theme!].systemIcon.colorHover,
+          color: themes[this.props.themeColor].systemIcon.color,
+          colorHover: themes[this.props.themeColor].systemIcon.colorHover,
         });
       }
 
@@ -78,33 +96,19 @@ export class Header extends React.Component<HeaderProps> {
           (this.props.brand || (
             <DubLogoTitle
               title={this.props.title ? this.props.title : ''}
-              theme={this.props.theme}
+              themeColor={this.props.themeColor}
             />
           ))}
         {this.props.variant === HeaderVariant.Full &&
           (this.props.brand || (
-            <WorkdayLogoTitle title={this.props.title} theme={this.props.theme} />
+            <WorkdayLogoTitle title={this.props.title} themeColor={this.props.themeColor} />
           ))}
       </span>
     );
   }
 
   render() {
-    const headerTheme = themes[this.props.theme!];
     const headerPadding = this.props.variant === HeaderVariant.Dub ? spacing.s : spacing.l;
-    const headerStyle = css({
-      label: 'header-style',
-      ...verticalCenterStyle,
-      boxSizing: 'border-box',
-      height: this.props.variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
-      // TODO: Type styles should probably be moved to something for all Canvas Kit React components
-      ...type.body,
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
-      background: headerTheme.background,
-      ...headerTheme.depth,
-      color: headerTheme.color,
-    });
 
     const brandSlot = css({
       label: 'brand-slot-style',
@@ -180,7 +184,7 @@ export class Header extends React.Component<HeaderProps> {
     });
 
     return (
-      <div className={cx(headerStyle)}>
+      <HeaderShell themeColor={this.props.themeColor} variant={this.props.variant}>
         <div className={brandSlot}>
           {this.props.brandUrl ? (
             <a className={brandAnchor} href={this.props.brandUrl}>
@@ -191,7 +195,7 @@ export class Header extends React.Component<HeaderProps> {
           )}
         </div>
         <div className={cx(childrenSlot, navStyle)}>{this.renderChildren(this.props.children)}</div>
-      </div>
+      </HeaderShell>
     );
   }
 }
