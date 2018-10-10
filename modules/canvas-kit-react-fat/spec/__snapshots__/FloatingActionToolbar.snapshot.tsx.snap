@@ -5,7 +5,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
 }
 
 @media (max-width:575px) {
@@ -170,7 +170,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
 }
 
 @media (max-width:575px) {
@@ -460,7 +460,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -629,7 +629,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -886,7 +886,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed empty FAT 1`] = `
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -913,7 +913,7 @@ exports[`Floating Action Toolbar Snapshots renders an empty FAT 1`] = `
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
-  box-shadow: 0 -2px 4px rgba(82,97,115,0.14);
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.08);
 }
 
 @media (max-width:575px) {
