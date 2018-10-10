@@ -24,6 +24,7 @@ storiesOf('Canvas Kit/Floating Action Toolbar', module)
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
+        <Button>Button</Button>
       </FloatingActionToolbar>
     </div>
   ))
