@@ -40,6 +40,7 @@ storiesOf('Canvas Kit/Icon', module)
       <SystemIcon icon={activityStreamIcon} />
       <SystemIcon icon={activityStreamIcon} color={colors.blueberry500} />
       <SystemIcon
+        className="custom-class"
         icon={activityStreamIcon}
         accent={colors.frenchVanilla100}
         fill={colors.blueberry500}
