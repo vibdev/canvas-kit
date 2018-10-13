@@ -14,5 +14,6 @@ describe('Applet Icon', () => {
         .find('span')
         .prop('className')
     ).toContain(custom);
+    component.unmount();
   });
 });

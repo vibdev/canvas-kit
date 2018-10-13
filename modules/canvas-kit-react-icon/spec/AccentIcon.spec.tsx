@@ -14,5 +14,6 @@ describe('Accent Icon', () => {
         .find('span')
         .prop('className')
     ).toContain(custom);
+    component.unmount();
   });
 });
