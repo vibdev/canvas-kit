@@ -1,19 +1,19 @@
 import * as React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import AppletIcon from '../lib/AppletIcon';
-import Icon from '../lib/Icon';
 import {benefitsIcon} from '@workday/canvas-applet-icons-web';
 
 describe('Applet Icon', () => {
-  test('Passes through className to internal Icon component', () => {
-    const custom = 'inner-icon-class';
-    const component = mount(<AppletIcon icon={benefitsIcon} className={custom} />);
-    expect(
-      component
-        .find(Icon)
-        .find('span')
-        .prop('className')
-    ).toContain(custom);
-    component.unmount();
+  test('Throws error if using unofficial color names', () => {
+    const unknownColor = 'Peach';
+
+    const iconOfUnknownColor = () => {
+      // @ts-ignore TS catches error, so we have to squelch to test the throw
+      const component = shallow(<AppletIcon icon={benefitsIcon} color={unknownColor} />);
+      // in case it doesn't throw
+      component.unmount();
+    };
+
+    expect(iconOfUnknownColor).toThrow();
   });
 });
