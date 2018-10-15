@@ -331,7 +331,7 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/cheerio/-/cheerio-0.22.9.tgz#b5990152604c2ada749b7f88cab3476f21f39d7b"
   integrity sha1-tZkBUmBMKtp0m3+IyrNHbyHznXs=
 
-"@types/chroma-js@^1.3.5":
+"@types/chroma-js@^1.4.0":
   version "1.4.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/chroma-js/-/chroma-js-1.4.0.tgz#1d215474b54e227bd0204572c0483b98593eabd0"
   integrity sha1-HSFUdLVOInvQIEVywEg7mFk+q9A=
@@ -498,14 +498,6 @@
     shelljs "^0.7.8"
     typescript "^2.6.2"
 
-"@workday/canvas-kit-css-button@^1.0.6":
-  version "1.4.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-button/-/@workday/canvas-kit-css-button-1.4.0.tgz#16472213afff2c0edd10a0aab8f7da5cd9b1bfc0"
-  integrity sha1-FkciE6//LA7dEKCquPfaXNmxv8A=
-  dependencies:
-    "@workday/canvas-kit-css-core" "2.0.0"
-    "@workday/canvas-system-icons-web" "^0.11.14"
-
 "@workday/canvas-kit-css-core@2.0.0":
   version "2.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-core/-/@workday/canvas-kit-css-core-2.0.0.tgz#6525a6519ac165e7cee815acbc5baf04b980a688"
@@ -531,14 +523,6 @@
     emotion "^9.2.6"
     react-emotion "^9.2.6"
 
-"@workday/canvas-kit-react-button@^0.14.5":
-  version "0.14.7"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-button/-/@workday/canvas-kit-react-button-0.14.7.tgz#dae31a53861c773b0a97f9bea2451bd611cace19"
-  integrity sha1-2uMaU4YcdzsKl/m+okUb1hHKzhk=
-  dependencies:
-    "@workday/canvas-kit-css-button" "^1.0.6"
-    classnames "^2.2.5"
-
 "@workday/canvas-kit-react-common@0.0.3":
   version "0.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-common/-/@workday/canvas-kit-react-common-0.0.3.tgz#907251289896de11cbec8f4c0cd147701aec8e86"
@@ -547,18 +531,6 @@
     "@workday/canvas-kit-react-core" "^1.1.1"
     emotion "^9.2.12"
     react-emotion "^9.2.12"
-
-"@workday/canvas-kit-react-core@0.16.1":
-  version "0.16.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-core/-/@workday/canvas-kit-react-core-0.16.1.tgz#ea9b64a267a37cb07b89957482667d5d43691cbc"
-  integrity sha1-6ptkomejfLB7iZV0gmZ9XUNpHLw=
-  dependencies:
-    "@workday/canvas-colors-web" "~0.15.2"
-    "@workday/canvas-depth-web" "^0.14.0"
-    "@workday/canvas-space-web" "^0.14.0"
-    emotion "^9.2.6"
-    glamorous "^4.12.3"
-    react-emotion "^9.2.6"
 
 "@workday/canvas-kit-react-core@1.1.1":
   version "1.1.1"
@@ -571,16 +543,6 @@
     emotion "^9.2.6"
     glamorous "^4.12.3"
 
-"@workday/canvas-kit-react-icon@1.2.1":
-  version "1.2.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-icon/-/@workday/canvas-kit-react-icon-1.2.1.tgz#ddcbf447b2b679d6ae8531c951b6d8f34e38436d"
-  integrity sha1-3cv0R7K2edauhTHJUbbY8044Q20=
-  dependencies:
-    "@workday/canvas-kit-react-core" "0.16.1"
-    "@workday/design-assets-types" "^0.2.0"
-    emotion "^9.2.6"
-    react-emotion "^9.2.6"
-
 "@workday/canvas-space-web@^0.14.0":
   version "0.14.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.14.0.tgz#6ff245dd21809c2c2225f1d5aa601b3cbcc5ef5a"
@@ -590,13 +552,6 @@
   version "0.15.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.0.tgz#d32d473e03556c1f7d8bc8dcd5394a4671d05e0c"
   integrity sha1-0y1HPgNVbB99i8jc1TlKRnHQXgw=
-
-"@workday/canvas-system-icons-web@^0.16.7":
-  version "0.16.13"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.13.tgz#149a845b5bc9e902c2bf9cd3500c385c17a0e4fb"
-  integrity sha1-FJqEW1vJ6QLCv5zTUAw4XBeg5Ps=
-  dependencies:
-    "@workday/design-assets-types" "0.2.0"
 
 "@workday/canvas-system-icons-web@^0.16.7", "@workday/canvas-system-icons-web@^0.16.8":
   version "0.16.13"
