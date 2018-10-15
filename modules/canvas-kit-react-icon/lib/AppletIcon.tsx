@@ -8,38 +8,40 @@ export interface AppletIconStyles {
   color?: BrandingColors;
 }
 
+type CanvasColor = Exclude<keyof typeof colors, 'gradients' | 'primary'>;
+
 const styles = ({color = BrandingColors.Blueberry}: AppletIconStyles): CSSProperties => {
   // Check if valid color
-  const colorNames = {
-    100: `${color}100`,
-    200: `${color}200`,
-    300: `${color}300`,
-    400: `${color}400`,
-    500: `${color}500`,
-  };
-
-  if (!(colorNames[100] in colors)) {
+  if (!Object.values(BrandingColors).includes(color)) {
     throw Error(`Color "${color}" not found`);
   }
 
+  const colorNames: {[key: number]: CanvasColor} = {
+    100: `${color}100` as CanvasColor,
+    200: `${color}200` as CanvasColor,
+    300: `${color}300` as CanvasColor,
+    400: `${color}400` as CanvasColor,
+    500: `${color}500` as CanvasColor,
+  };
+
   return {
     '& .color-100': {
-      fill: colors.frenchVanilla100 as string,
+      fill: colors.frenchVanilla100,
     },
     '& .color-200': {
-      fill: colors[colorNames[200]] as string,
+      fill: colors[colorNames[200]],
     },
     '& .color-300': {
-      fill: colors[colorNames[300]] as string,
+      fill: colors[colorNames[300]],
     },
     '& .color-400': {
-      fill: colors[colorNames[400]] as string,
+      fill: colors[colorNames[400]],
     },
     '& .color-400-alpha-20': {
-      fill: colors[colorNames[400]] as string,
+      fill: colors[colorNames[400]],
     },
     '& .color-500': {
-      fill: colors[colorNames[500]] as string,
+      fill: colors[colorNames[500]],
     },
   };
 };
