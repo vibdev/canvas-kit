@@ -33,6 +33,8 @@ describe('System Icon', () => {
     const componentStyle = component.find(Icon).prop('styles');
     expect(componentStyle['& .wd-icon-fill']).toHaveProperty('fill', color);
     expect(componentStyle[':hover .wd-icon-fill']).toHaveProperty('fill', colorHover);
+    expect(componentStyle['& .wd-icon-accent']).toHaveProperty('fill', color);
+    expect(componentStyle[':hover .wd-icon-accent']).toHaveProperty('fill', colorHover);
     expect(componentStyle['& .wd-icon-background']).toHaveProperty('fill', color);
     expect(componentStyle[':hover .wd-icon-background']).toHaveProperty('fill', colorHover);
     component.unmount();
