@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.8"></a>
+## [1.2.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.7...@workday/canvas-kit-react-icon@1.2.8) (2018-10-15)
+
+
+### Bug Fixes
+
+* **icon:** Fix bug that prevents className from passing thru ([6b6413d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/6b6413d)), closes [#115](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/issues/115)
+
+
+
+
 <a name="1.2.7"></a>
 ## [1.2.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.6...@workday/canvas-kit-react-icon@1.2.7) (2018-10-09)
 
