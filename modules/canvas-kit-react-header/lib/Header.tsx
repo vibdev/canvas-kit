@@ -101,7 +101,10 @@ export class Header extends React.Component<HeaderProps> {
           ))}
         {this.props.variant === HeaderVariant.Full &&
           (this.props.brand || (
-            <WorkdayLogoTitle title={this.props.title} themeColor={this.props.themeColor} />
+            <WorkdayLogoTitle
+              title={this.props.title ? this.props.title : ''}
+              themeColor={this.props.themeColor}
+            />
           ))}
       </span>
     );
