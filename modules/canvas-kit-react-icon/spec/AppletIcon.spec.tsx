@@ -5,7 +5,7 @@ import {benefitsIcon} from '@workday/canvas-applet-icons-web';
 
 describe('Applet Icon', () => {
   test('Throws error if using unofficial color names', () => {
-    const unknownColor = 'Peach';
+    const unknownColor = 'peachpuff';
 
     const iconOfUnknownColor = () => {
       // @ts-ignore TS catches error, so we have to squelch to test the throw
