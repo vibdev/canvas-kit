@@ -107,17 +107,17 @@ const navStyle = (props: HeaderProps) => {
           content: `''`,
           height: 4,
           width: `calc(100% + ${spacing.s} + ${spacing.s})`,
-          backgroundColor: theme.activeChipColor,
+          backgroundColor: theme.chipColor,
           borderRadius: '3px 3px 0 0',
         },
-        '& li a.current:after': {
-          content: `''`,
-          height: 4,
-          width: '100%',
-          backgroundColor: theme.activeChipColor,
+        '& li.current a': {
+          color: theme.currentLinkColor,
         },
-        '& li a:active, & li a:hover': {
-          color: theme.activeLinkColor,
+        '& li.current a:hover, & li.current a:active': {
+          color: theme.currentLinkColor,
+        },
+        '& li a:hover, & li a:active': {
+          color: theme.linkHoverColor,
         },
       },
     },

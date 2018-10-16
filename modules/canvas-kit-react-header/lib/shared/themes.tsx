@@ -12,8 +12,9 @@ export interface ThemeAttributes {
     colorHover: string;
   };
   linkColor: string;
-  activeChipColor: string;
-  activeLinkColor: string;
+  linkHoverColor: string;
+  currentLinkColor: string;
+  chipColor: string;
 }
 
 export interface Themes {
@@ -30,8 +31,9 @@ export const themes: Themes = {
       colorHover: colors.licorice500,
     },
     linkColor: colors.licorice300,
-    activeChipColor: colors.blueberry300,
-    activeLinkColor: colors.blackPepper400,
+    linkHoverColor: colors.blackPepper400,
+    currentLinkColor: colors.blueberry500,
+    chipColor: colors.blueberry400,
   },
   [HeaderTheme.Blue]: {
     color: colors.frenchVanilla100,
@@ -44,8 +46,9 @@ export const themes: Themes = {
     linkColor: chroma(colors.frenchVanilla100)
       .alpha(0.7)
       .css(),
-    activeChipColor: colors.blueberry300,
-    activeLinkColor: colors.frenchVanilla100,
+    linkHoverColor: colors.frenchVanilla100,
+    currentLinkColor: colors.frenchVanilla100,
+    chipColor: colors.frenchVanilla100,
   },
   [HeaderTheme.Transparent]: {
     color: colors.frenchVanilla100,
@@ -58,7 +61,8 @@ export const themes: Themes = {
     linkColor: chroma(colors.frenchVanilla100)
       .alpha(0.7)
       .css(),
-    activeChipColor: colors.blueberry300,
-    activeLinkColor: colors.frenchVanilla100,
+    linkHoverColor: colors.frenchVanilla100,
+    currentLinkColor: colors.frenchVanilla100,
+    chipColor: colors.frenchVanilla100,
   },
 };

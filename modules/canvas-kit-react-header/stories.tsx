@@ -20,9 +20,9 @@ const containerStyle = css({
 
 const backgroundStyle = css({
   padding: `0 0 64px 0`,
-  background: `linear-gradient(${chroma(colors.blueberry400)
+  background: `linear-gradient(${chroma(colors.blueberry500)
     .alpha(0.8)
-    .css()}, ${chroma(colors.blueberry500)
+    .css()}, ${chroma(colors.blueberry400)
     .alpha(0.8)
     .css()}), url(${bgImg})`,
   backgroundPosition: `0 50%`,
