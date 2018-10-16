@@ -60,45 +60,69 @@ const BrandLink = styled('a')({
   },
 });
 
-const navStyle = css({
-  nav: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    height: 'inherit',
-
-    '& ul': {
-      ...verticalCenterStyle,
+const navStyle = (props: HeaderProps) => {
+  const theme = themes[props.themeColor];
+  return css({
+    nav: {
+      flexGrow: 1,
       justifyContent: 'center',
-      listStyleType: 'none',
-      padding: 0,
-      margin: 0,
       height: 'inherit',
 
-      '& li': {
+      '& ul': {
+        color: theme.linkColor,
         ...verticalCenterStyle,
-        margin: `0 ${spacing.s}`,
-        fontSize: '14px',
-        fontWeight: 700,
+        justifyContent: 'center',
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0,
         height: 'inherit',
-      },
-      '& li:first-child': {
-        marginLeft: 0,
-      },
-      '& li:last-child': {
-        marginRight: 0,
-      },
 
-      '& li a': {
-        boxSizing: 'border-box',
-        ...verticalCenterStyle,
-        color: 'inherit',
-        textDecoration: 'none',
-        height: 'inherit',
-        padding: `0px ${spacing.xxs}`,
+        '& li': {
+          position: 'relative',
+          ...verticalCenterStyle,
+          margin: `0 ${spacing.s}`,
+          fontSize: '14px',
+          fontWeight: 700,
+          height: 'inherit',
+        },
+        '& li:first-child': {
+          marginLeft: 0,
+        },
+        '& li:last-child': {
+          marginRight: 0,
+        },
+
+        '& li a': {
+          boxSizing: 'border-box',
+          ...verticalCenterStyle,
+          color: 'inherit',
+          textDecoration: 'none',
+          height: 'inherit',
+          padding: `0px ${spacing.xxs}`,
+        },
+        '& li.current:after': {
+          position: 'absolute',
+          bottom: 0,
+          left: `-${spacing.s}`,
+          content: `''`,
+          height: 4,
+          width: `calc(100% + ${spacing.s} + ${spacing.s})`,
+          backgroundColor: theme.activeChipColor,
+          borderRadius: '3px 3px 0 0',
+        },
+        '& li a.current:after': {
+          content: `''`,
+          height: 4,
+          width: '100%',
+          backgroundColor: theme.activeChipColor,
+        },
+        '& li a:active, & li a:hover': {
+          color: theme.activeLinkColor,
+        },
       },
     },
-  },
-});
+  });
+};
 
 const ChildrenSlot = styled('div')<HeaderProps>(
   {

@@ -36,6 +36,7 @@ const buttonStyle = css({
   fontWeight: 700,
 
   '&:hover': {
+    color: colors.blueberry400,
     backgroundColor: colors.frenchVanilla100,
     boxShadow: `0 0 0 1px ${colors.blueberry400}`,
   },
@@ -46,6 +47,7 @@ const buttonStyleReversed = css({
   color: colors.frenchVanilla100,
 
   '&:hover': {
+    color: colors.frenchVanilla100,
     boxShadow: `0 0 0 1px ${colors.frenchVanilla100}`,
     backgroundColor: `rgba(1,1,1,0.1)`,
   },
@@ -88,7 +90,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header title="Kitchen Sink" themeColor={Header.Theme.Blue} brandUrl="#">
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -128,7 +130,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -162,7 +164,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -195,7 +197,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -235,7 +237,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -261,7 +263,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -289,7 +291,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Header variant={Header.Variant.Full} title="" themeColor={Header.Theme.Blue} brandUrl="#">
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -321,7 +323,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>
@@ -354,7 +356,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         >
           <nav>
             <ul>
-              <li>
+              <li className="current">
                 <a href="#">Discover</a>
               </li>
               <li>

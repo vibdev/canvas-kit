@@ -1,4 +1,5 @@
 import {colors, depth, CSSProperties} from '@workday/canvas-kit-react-core';
+import * as chroma from 'chroma-js';
 import {HeaderTheme} from './types';
 
 // TODO: Relocate to a theme file
@@ -10,6 +11,9 @@ export interface ThemeAttributes {
     color: string;
     colorHover: string;
   };
+  linkColor: string;
+  activeChipColor: string;
+  activeLinkColor: string;
 }
 
 export interface Themes {
@@ -18,13 +22,16 @@ export interface Themes {
 
 export const themes: Themes = {
   [HeaderTheme.White]: {
-    color: colors.licorice400,
+    color: colors.licorice300,
     background: colors.frenchVanilla100,
     depth: depth['1'],
     systemIcon: {
       color: colors.licorice200,
       colorHover: colors.licorice500,
     },
+    linkColor: colors.licorice300,
+    activeChipColor: colors.blueberry300,
+    activeLinkColor: colors.blackPepper400,
   },
   [HeaderTheme.Blue]: {
     color: colors.frenchVanilla100,
@@ -34,6 +41,11 @@ export const themes: Themes = {
       color: colors.frenchVanilla100,
       colorHover: colors.frenchVanilla400,
     },
+    linkColor: chroma(colors.frenchVanilla100)
+      .alpha(0.7)
+      .css(),
+    activeChipColor: colors.blueberry300,
+    activeLinkColor: colors.frenchVanilla100,
   },
   [HeaderTheme.Transparent]: {
     color: colors.frenchVanilla100,
@@ -43,5 +55,10 @@ export const themes: Themes = {
       color: colors.frenchVanilla100,
       colorHover: colors.frenchVanilla400,
     },
+    linkColor: chroma(colors.frenchVanilla100)
+      .alpha(0.7)
+      .css(),
+    activeChipColor: colors.blueberry300,
+    activeLinkColor: colors.frenchVanilla100,
   },
 };
