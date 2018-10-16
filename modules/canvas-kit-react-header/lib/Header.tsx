@@ -76,11 +76,12 @@ const navStyle = (props: HeaderProps) => {
         padding: 0,
         margin: 0,
         height: 'inherit',
+        transition: `color .2s ease-out 0s`,
 
         '& li': {
           position: 'relative',
           ...verticalCenterStyle,
-          margin: `0 ${spacing.s}`,
+          margin: `0 ${spacing.xxxs}`,
           fontSize: '14px',
           fontWeight: 700,
           height: 'inherit',
@@ -98,15 +99,14 @@ const navStyle = (props: HeaderProps) => {
           color: 'inherit',
           textDecoration: 'none',
           height: 'inherit',
-          padding: `0px ${spacing.xxs}`,
+          padding: `0px ${spacing.s}`,
         },
         '& li.current:after': {
           position: 'absolute',
           bottom: 0,
-          left: `-${spacing.s}`,
           content: `''`,
           height: 4,
-          width: `calc(100% + ${spacing.s} + ${spacing.s})`,
+          width: '100%',
           backgroundColor: theme.chipColor,
           borderRadius: '3px 3px 0 0',
         },
@@ -117,8 +117,12 @@ const navStyle = (props: HeaderProps) => {
           color: theme.currentLinkColor,
         },
         '& li a:hover, & li a:active': {
-          color: theme.linkHoverColor,
+          color: theme.linkColor,
+          transition: `color .2s ease-out 0s`,
         },
+      },
+      '& ul:hover': {
+        color: theme.linkFadeOutColor,
       },
     },
   });

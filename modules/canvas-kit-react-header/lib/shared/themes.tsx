@@ -12,7 +12,7 @@ export interface ThemeAttributes {
     colorHover: string;
   };
   linkColor: string;
-  linkHoverColor: string;
+  linkFadeOutColor: string;
   currentLinkColor: string;
   chipColor: string;
 }
@@ -23,15 +23,15 @@ export interface Themes {
 
 export const themes: Themes = {
   [HeaderTheme.White]: {
-    color: colors.licorice300,
+    color: colors.blackPepper400,
     background: colors.frenchVanilla100,
     depth: depth['1'],
     systemIcon: {
       color: colors.licorice200,
       colorHover: colors.licorice500,
     },
-    linkColor: colors.licorice300,
-    linkHoverColor: colors.blackPepper400,
+    linkColor: colors.blackPepper400,
+    linkFadeOutColor: colors.licorice200,
     currentLinkColor: colors.blueberry500,
     chipColor: colors.blueberry400,
   },
@@ -43,10 +43,10 @@ export const themes: Themes = {
       color: colors.frenchVanilla100,
       colorHover: colors.frenchVanilla400,
     },
-    linkColor: chroma(colors.frenchVanilla100)
-      .alpha(0.7)
+    linkColor: colors.frenchVanilla100,
+    linkFadeOutColor: chroma(colors.frenchVanilla100)
+      .alpha(0.5)
       .css(),
-    linkHoverColor: colors.frenchVanilla100,
     currentLinkColor: colors.frenchVanilla100,
     chipColor: colors.frenchVanilla100,
   },
@@ -58,10 +58,10 @@ export const themes: Themes = {
       color: colors.frenchVanilla100,
       colorHover: colors.frenchVanilla400,
     },
-    linkColor: chroma(colors.frenchVanilla100)
-      .alpha(0.7)
+    linkColor: colors.frenchVanilla100,
+    linkFadeOutColor: chroma(colors.frenchVanilla100)
+      .alpha(0.5)
       .css(),
-    linkHoverColor: colors.frenchVanilla100,
     currentLinkColor: colors.frenchVanilla100,
     chipColor: colors.frenchVanilla100,
   },
