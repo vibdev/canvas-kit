@@ -76,7 +76,6 @@ const navStyle = (props: HeaderProps) => {
         padding: 0,
         margin: 0,
         height: 'inherit',
-        transition: `color .2s ease-out 0s`,
 
         '& li': {
           position: 'relative',
@@ -100,6 +99,7 @@ const navStyle = (props: HeaderProps) => {
           textDecoration: 'none',
           height: 'inherit',
           padding: `0px ${spacing.s}`,
+          transition: `color .2s ease-out 0s`,
         },
         '& li.current:after': {
           position: 'absolute',
@@ -118,7 +118,6 @@ const navStyle = (props: HeaderProps) => {
         },
         '& li a:hover, & li a:active': {
           color: theme.linkColor,
-          transition: `color .2s ease-out 0s`,
         },
       },
       '& ul:hover': {
