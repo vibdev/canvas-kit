@@ -99,7 +99,7 @@ const navStyle = (props: HeaderProps) => {
           textDecoration: 'none',
           height: 'inherit',
           padding: `0px ${spacing.s}`,
-          transition: `color .2s ease-out 0s`,
+          transition: `color 150ms ease-out 0s`,
         },
         '& li.current:after': {
           position: 'absolute',
