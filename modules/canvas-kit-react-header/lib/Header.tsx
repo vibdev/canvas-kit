@@ -21,8 +21,22 @@ export interface HeaderProps {
   brand?: React.ReactNode;
   brandUrl?: string;
   centeredNav?: boolean;
+  breakpoints: {
+    [key: string]: number;
+    sm: number;
+    lg: number;
+  };
 }
 
+const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
+  const mq: {[key: string]: string} = {};
+
+  Object.keys(breakpoints).forEach(key => {
+    mq[key] = `@media (min-width: ${breakpoints[key]}px)`;
+  });
+
+  return mq;
+};
 const HeaderShell = styled('div')<HeaderProps>(
   {
     overflow: 'hidden',
@@ -63,90 +77,101 @@ const BrandLink = styled('a')({
 
 const navStyle = (props: HeaderProps) => {
   const theme = themes[props.themeColor];
+  const mq = makeMq(props.breakpoints);
+
   return css({
     nav: {
-      flexGrow: 1,
-      justifyContent: 'center',
-      height: 'inherit',
-
-      '& ul': {
-        color: theme.linkColor,
-        ...verticalCenterStyle,
+      display: 'none',
+    },
+    [mq.lg]: {
+      nav: {
+        display: 'initial',
+        flexGrow: 1,
         justifyContent: 'center',
-        listStyleType: 'none',
-        padding: 0,
-        margin: 0,
         height: 'inherit',
 
-        '& li': {
-          position: 'relative',
-          ...verticalCenterStyle,
-          margin: `0 ${spacing.xxxs}`,
-          fontSize: '14px',
-          fontWeight: 700,
-          height: 'inherit',
-        },
-        '& li:first-child': {
-          marginLeft: 0,
-        },
-        '& li:last-child': {
-          marginRight: 0,
-        },
-
-        '& li a': {
-          boxSizing: 'border-box',
-          ...verticalCenterStyle,
-          color: 'inherit',
-          textDecoration: 'none',
-          height: 'inherit',
-          padding: `0px ${spacing.s}`,
-          transition: `color 150ms ease-out 0s`,
-        },
-        '& li.current:after': {
-          position: 'absolute',
-          bottom: 0,
-          content: `''`,
-          height: 4,
-          width: '100%',
-          backgroundColor: theme.chipColor,
-          borderRadius: '3px 3px 0 0',
-        },
-        '& li.current a': {
-          color: theme.currentLinkColor,
-        },
-        '& li.current a:hover, & li.current a:active': {
-          color: theme.currentLinkColor,
-        },
-        '& li a:hover, & li a:active': {
+        '& ul': {
           color: theme.linkColor,
+          ...verticalCenterStyle,
+          justifyContent: 'center',
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          height: 'inherit',
+
+          '& li': {
+            position: 'relative',
+            ...verticalCenterStyle,
+            margin: `0 ${spacing.xxxs}`,
+            fontSize: '14px',
+            fontWeight: 700,
+            height: 'inherit',
+          },
+          '& li:first-child': {
+            marginLeft: 0,
+          },
+          '& li:last-child': {
+            marginRight: 0,
+          },
+
+          '& li a': {
+            boxSizing: 'border-box',
+            ...verticalCenterStyle,
+            color: 'inherit',
+            textDecoration: 'none',
+            height: 'inherit',
+            padding: `0px ${spacing.s}`,
+            transition: `color 150ms ease-out 0s`,
+          },
+          '& li.current:after': {
+            position: 'absolute',
+            bottom: 0,
+            content: `''`,
+            height: 4,
+            width: '100%',
+            backgroundColor: theme.chipColor,
+            borderRadius: '3px 3px 0 0',
+          },
+          '& li.current a': {
+            color: theme.currentLinkColor,
+          },
+          '& li.current a:hover, & li.current a:active': {
+            color: theme.currentLinkColor,
+          },
+          '& li a:hover, & li a:active': {
+            color: theme.linkColor,
+          },
         },
-      },
-      '& ul:hover': {
-        color: theme.linkFadeOutColor,
+        '& ul:hover': {
+          color: theme.linkFadeOutColor,
+        },
       },
     },
   });
 };
 
-const ChildrenSlot = styled('div')<HeaderProps>(
-  {
-    ...verticalCenterStyle,
-    justifyContent: 'flex-end',
-    height: '100%',
+const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, breakpoints}) => {
+  const mq = makeMq(breakpoints);
 
-    '> *': {
-      margin: `0 ${spacing.s}`,
-    },
-  },
-  ({centeredNav = false, variant}) => ({
-    flexGrow: centeredNav ? 1 : 'unset',
+  return {
+    display: 'none',
 
-    '> *:last-child': {
-      marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
+    [mq.sm]: {
+      ...verticalCenterStyle,
+      justifyContent: 'flex-end',
+      height: '100%',
+      flexGrow: centeredNav ? 1 : 'unset',
+
+      '> *': {
+        margin: `0 ${spacing.s}`,
+      },
+
+      '> *:last-child': {
+        marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
+      },
     },
-  }),
-  navStyle
-);
+  };
+},                                              navStyle);
 
 class Brand extends React.Component<HeaderProps> {
   render() {
@@ -177,6 +202,10 @@ export class Header extends React.Component<HeaderProps> {
   static defaultProps = {
     themeColor: HeaderTheme.White,
     variant: HeaderVariant.Dub,
+    breakpoints: {
+      sm: 768,
+      lg: 1120,
+    },
   };
 
   /**
@@ -221,7 +250,7 @@ export class Header extends React.Component<HeaderProps> {
 
   render() {
     return (
-      <HeaderShell themeColor={this.props.themeColor} variant={this.props.variant}>
+      <HeaderShell {...this.props}>
         <BrandSlot centered={this.props.centeredNav}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
