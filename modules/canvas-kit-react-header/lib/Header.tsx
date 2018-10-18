@@ -25,6 +25,7 @@ export interface HeaderProps {
 
 const HeaderShell = styled('div')<HeaderProps>(
   {
+    overflow: 'hidden',
     ...verticalCenterStyle,
     boxSizing: 'border-box',
     ...type.body,

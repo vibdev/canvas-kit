@@ -6,6 +6,7 @@ export const logoTitleStyle = {
   fontSize: '20px',
   fontWeight: 400,
   paddingRight: spacing.l,
+  'white-space': 'nowrap',
 };
 
 export const verticalCenterStyle = {
