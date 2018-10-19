@@ -97,7 +97,9 @@ timestamps {
 					echo env.STAGE_NAME
 					dir(repoBaseDir) {
 						try {
-							sh('yarn run test')
+							// https://jestjs.io/docs/en/troubleshooting#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server
+							sh('yarn run test -w 4')
+							// or do yarn run test -i
 							setGheStatusChecks('ci/jenkins/tests', 'tests SUCCESS!', 'SUCCESS')
 						} catch (Exception e) {
 							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
