@@ -37,8 +37,7 @@
     "@workday/canvas-colors-web": "^0.15.4",
     "@workday/canvas-depth-web": "^0.15.0",
     "@workday/canvas-space-web": "^0.15.0",
-    "emotion": "^9.2.6",
-    "glamorous": "^4.12.3"
+    "emotion": "^9.2.6"
   },
   "devDependencies": {
     "react-emotion": "^9.2.6"
