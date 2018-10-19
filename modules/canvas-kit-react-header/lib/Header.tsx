@@ -7,7 +7,9 @@ import {verticalCenterStyle} from './shared/styles';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant} from './shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {justifyIcon} from '@workday/canvas-system-icons-web';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
+import {throttle} from 'lodash';
 
 export enum HeaderHeight {
   Small = '64px',
@@ -21,11 +23,18 @@ export interface HeaderProps {
   brand?: React.ReactNode;
   brandUrl?: string;
   centeredNav?: boolean;
+  handleMenuClick?: (e: React.SyntheticEvent) => void;
+  menuButton?: React.ReactNode;
   breakpoints: {
     [key: string]: number;
     sm: number;
+    md: number;
     lg: number;
   };
+}
+
+export interface HeaderState {
+  screenSize: keyof HeaderProps['breakpoints'];
 }
 
 const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
@@ -77,74 +86,68 @@ const BrandLink = styled('a')({
 
 const navStyle = (props: HeaderProps) => {
   const theme = themes[props.themeColor];
-  const mq = makeMq(props.breakpoints);
 
   return css({
     nav: {
-      display: 'none',
-    },
-    [mq.lg]: {
-      nav: {
-        display: 'initial',
-        flexGrow: 1,
+      display: 'flex',
+      flexGrow: 1,
+      justifyContent: 'center',
+      height: 'inherit',
+
+      '& ul': {
+        color: theme.linkColor,
+        ...verticalCenterStyle,
         justifyContent: 'center',
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0,
         height: 'inherit',
 
-        '& ul': {
-          color: theme.linkColor,
+        '& li': {
+          position: 'relative',
           ...verticalCenterStyle,
-          justifyContent: 'center',
-          listStyleType: 'none',
-          padding: 0,
-          margin: 0,
+          margin: `0 ${spacing.xxxs}`,
+          fontSize: '14px',
+          fontWeight: 700,
           height: 'inherit',
-
-          '& li': {
-            position: 'relative',
-            ...verticalCenterStyle,
-            margin: `0 ${spacing.xxxs}`,
-            fontSize: '14px',
-            fontWeight: 700,
-            height: 'inherit',
-          },
-          '& li:first-child': {
-            marginLeft: 0,
-          },
-          '& li:last-child': {
-            marginRight: 0,
-          },
-
-          '& li a': {
-            boxSizing: 'border-box',
-            ...verticalCenterStyle,
-            color: 'inherit',
-            textDecoration: 'none',
-            height: 'inherit',
-            padding: `0px ${spacing.s}`,
-            transition: `color 150ms ease-out 0s`,
-          },
-          '& li.current:after': {
-            position: 'absolute',
-            bottom: 0,
-            content: `''`,
-            height: 4,
-            width: '100%',
-            backgroundColor: theme.chipColor,
-            borderRadius: '3px 3px 0 0',
-          },
-          '& li.current a': {
-            color: theme.currentLinkColor,
-          },
-          '& li.current a:hover, & li.current a:active': {
-            color: theme.currentLinkColor,
-          },
-          '& li a:hover, & li a:active': {
-            color: theme.linkColor,
-          },
         },
-        '& ul:hover': {
-          color: theme.linkFadeOutColor,
+        '& li:first-child': {
+          marginLeft: 0,
         },
+        '& li:last-child': {
+          marginRight: 0,
+        },
+
+        '& li a': {
+          boxSizing: 'border-box',
+          ...verticalCenterStyle,
+          color: 'inherit',
+          textDecoration: 'none',
+          height: 'inherit',
+          padding: `0px ${spacing.s}`,
+          transition: `color 150ms ease-out 0s`,
+        },
+        '& li.current:after': {
+          position: 'absolute',
+          bottom: 0,
+          content: `''`,
+          height: 4,
+          width: '100%',
+          backgroundColor: theme.chipColor,
+          borderRadius: '3px 3px 0 0',
+        },
+        '& li.current a': {
+          color: theme.currentLinkColor,
+        },
+        '& li.current a:hover, & li.current a:active': {
+          color: theme.currentLinkColor,
+        },
+        '& li a:hover, & li a:active': {
+          color: theme.linkColor,
+        },
+      },
+      '& ul:hover': {
+        color: theme.linkFadeOutColor,
       },
     },
   });
@@ -154,8 +157,10 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
   const mq = makeMq(breakpoints);
 
   return {
-    display: 'none',
-
+    // TODO: remove this when we get real icon buttons
+    '> .canvas-header--menu-icon': {
+      cursor: 'pointer',
+    },
     [mq.sm]: {
       ...verticalCenterStyle,
       justifyContent: 'flex-end',
@@ -168,6 +173,15 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
 
       '> *:last-child': {
         marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
+      },
+
+      '> *:not(.canvas-header--menu-icon)': {
+        display: 'none',
+      },
+    },
+    [mq.md]: {
+      '> *:not(.canvas-header--menu-icon)': {
+        display: 'flex',
       },
     },
   };
@@ -196,17 +210,57 @@ class Brand extends React.Component<HeaderProps> {
   }
 }
 
-export class Header extends React.Component<HeaderProps> {
+export class Header extends React.Component<HeaderProps, HeaderState> {
   static Theme = HeaderTheme;
   static Variant = HeaderVariant;
   static defaultProps = {
     themeColor: HeaderTheme.White,
     variant: HeaderVariant.Dub,
     breakpoints: {
-      sm: 768,
+      sm: 320,
+      md: 768,
       lg: 1120,
     },
   };
+
+  constructor(props: HeaderProps) {
+    super(props);
+    this.state = {
+      screenSize: this.getScreenSize(window.innerWidth, props.breakpoints),
+    };
+    this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 500);
+  }
+
+  getScreenSize(width: number, breakpoints: HeaderProps['breakpoints']): string {
+    const sizes = Object.keys(breakpoints);
+    let screenSize = sizes[0];
+
+    sizes.forEach(k => {
+      if (width >= breakpoints[k]) {
+        screenSize = k;
+      }
+    });
+
+    return screenSize;
+  }
+
+  updateScreenSize(): void {
+    const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
+
+    if (currentScreenSize !== this.state.screenSize) {
+      this.setState({
+        screenSize: currentScreenSize,
+      });
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateScreenSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateScreenSize);
+  }
 
   /**
    * Helper that recursively maps ReactNodes to their theme-based equivalent.
@@ -221,6 +275,7 @@ export class Header extends React.Component<HeaderProps> {
    * @returns {React.ReactNode} The child/children to be rendered
    */
   private renderChildren(children: React.ReactNode): React.ReactNode {
+    console.log('rendering children');
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
@@ -232,6 +287,21 @@ export class Header extends React.Component<HeaderProps> {
       const propsChildren = (child as React.ReactElement<Props>).props.children;
 
       if (React.Children.count(propsChildren)) {
+        if (child.type === 'nav' && this.state.screenSize !== 'lg') {
+          // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
+          const hamburgerIconProps = {
+            color: themes[this.props.themeColor].systemIcon.color,
+            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+            icon: justifyIcon,
+            onClick: this.props.handleMenuClick,
+          };
+
+          // TODO: This needs to get changed to IconButton when we get it restyled for headers
+          const defaultMenuButton = (
+            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+          );
+          return this.props.menuButton ? this.props.menuButton : defaultMenuButton;
+        }
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
         });

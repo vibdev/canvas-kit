@@ -53,6 +53,9 @@ const buttonStyleReversed = css({
   },
 });
 
+const handleClickTest = (e: React.SyntheticEvent) => {
+  alert(`Menu clicked!`);
+};
 storiesOf('Canvas Kit/Header/App', module)
   .addDecorator(withReadme(README))
   .add('App', () => (
@@ -87,7 +90,12 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <br />
       <div className={containerStyle}>
-        <Header title="Kitchen Sink" themeColor={Header.Theme.Blue} brandUrl="#">
+        <Header
+          title="Kitchen Sink"
+          themeColor={Header.Theme.Blue}
+          brandUrl="#"
+          handleMenuClick={handleClickTest}
+        >
           <nav>
             <ul>
               <li className="current">
