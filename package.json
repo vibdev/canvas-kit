@@ -67,8 +67,8 @@
     "format:prettier": "prettier --config=./.prettierrc --ignore-path=./.prettierignore \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
     "format:tslint": "tslint --project tsconfig.json --fix",
     "format": "yarn format:prettier && yarn format:tslint",
-    "test": "TZ=UTC jest",
-    "updateSnaps": "TZ=UTC jest -u"
+    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest",
+    "updateSnaps": "NODE_OPTIONS=\"--max-old-space-size=4096\" TZ=UTC jest -u"
   },
   "config": {
     "commitizen": {
