@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
-import {Header, ProductHeader, DubLogoTitle} from './index';
+import {Header, DubLogoTitle} from './index';
 import {Avatar} from './lib/parts';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
@@ -56,17 +56,7 @@ const buttonStyleReversed = css({
 const handleClickTest = (e: React.SyntheticEvent) => {
   alert(`Menu clicked!`);
 };
-storiesOf('Canvas Kit/Header/App', module)
-  .addDecorator(withReadme(README))
-  .add('App', () => (
-    <div className="story">
-      <h1 className="section-label">App Header</h1>
-      <h2>Work in progress - Not ready for review</h2>
-      <div className={containerStyle}>
-        <ProductHeader />
-      </div>
-    </div>
-  ));
+
 storiesOf('Canvas Kit/Header/Marketing', module)
   .addDecorator(withReadme(README))
   .add('Dub', () => (
