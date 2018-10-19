@@ -157,6 +157,11 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
   const mq = makeMq(breakpoints);
 
   return {
+    marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
+    '> *': {
+      marginRight: 0,
+    },
+
     // TODO: remove this when we get real icon buttons
     '> .canvas-header--menu-icon': {
       cursor: 'pointer',
@@ -167,19 +172,19 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       height: '100%',
       flexGrow: centeredNav ? 1 : 'unset',
 
-      '> *': {
-        margin: `0 ${spacing.s}`,
-      },
-
-      '> *:last-child': {
-        marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
-      },
-
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
       },
     },
     [mq.md]: {
+      '> *': {
+        margin: `0 ${spacing.s}`,
+      },
+
+      '> *:last-child': {
+        marginRight: 0,
+      },
+
       '> *:not(.canvas-header--menu-icon)': {
         display: 'flex',
       },
