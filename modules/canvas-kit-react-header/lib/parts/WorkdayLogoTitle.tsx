@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {css, cx} from 'emotion';
 import {HeaderTheme} from '../shared/types';
-import {logoTitleStyle, verticalCenterStyle} from '../shared/styles';
 import {wdayLogoWhite, wdayLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
@@ -25,7 +24,8 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
     });
 
     const lockupStyle = css({
-      display: 'inline-block',
+      display: 'flex',
+      alignItems: 'center',
       height: HeaderHeight.Large,
     });
 
@@ -44,6 +44,14 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
           : 'none',
     });
 
+    const logoTitleStyle = {
+      display: 'inline-block',
+      fontSize: '20px',
+      fontWeight: 400,
+      paddingRight: spacing.l,
+      'white-space': 'nowrap',
+    };
+
     const titleStyle = css({
       display: this.props.title && this.props.title.length ? 'initial' : 'none',
       color:
@@ -52,7 +60,7 @@ export class WorkdayLogoTitle extends React.Component<WorkdayLogoTitleProps> {
 
     return (
       <div className={lockupContainerStyle}>
-        <div className={cx(lockupStyle, css(verticalCenterStyle))}>
+        <div className={lockupStyle}>
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{

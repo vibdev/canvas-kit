@@ -3,7 +3,6 @@ import {css} from 'emotion';
 import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from './parts';
-import {verticalCenterStyle} from './shared/styles';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant} from './shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
@@ -24,7 +23,6 @@ export interface HeaderProps {
   brandUrl?: string;
   centeredNav?: boolean;
   handleMenuClick?: (e: React.SyntheticEvent) => void;
-  menuButton?: React.ReactNode;
   breakpoints: {
     [key: string]: number;
     sm: number;
@@ -49,7 +47,8 @@ const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
 const HeaderShell = styled('div')<HeaderProps>(
   {
     overflow: 'hidden',
-    ...verticalCenterStyle,
+    display: 'flex',
+    alignItems: 'center',
     boxSizing: 'border-box',
     ...type.body,
     WebkitFontSmoothing: 'antialiased',
@@ -67,8 +66,8 @@ const BrandSlot = styled('div')(
   {
     height: '100%',
   },
-  (props: {centered?: boolean}) => ({
-    flexGrow: props.centered ? 'unset' : 1,
+  (props: {grow?: boolean}) => ({
+    flexGrow: props.grow ? 'unset' : 1,
   })
 );
 
@@ -96,7 +95,8 @@ const navStyle = (props: HeaderProps) => {
 
       '& ul': {
         color: theme.linkColor,
-        ...verticalCenterStyle,
+        display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center',
         listStyleType: 'none',
         padding: 0,
@@ -105,7 +105,8 @@ const navStyle = (props: HeaderProps) => {
 
         '& li': {
           position: 'relative',
-          ...verticalCenterStyle,
+          display: 'flex',
+          alignItems: 'center',
           margin: `0 ${spacing.xxxs}`,
           fontSize: '14px',
           fontWeight: 700,
@@ -120,7 +121,8 @@ const navStyle = (props: HeaderProps) => {
 
         '& li a': {
           boxSizing: 'border-box',
-          ...verticalCenterStyle,
+          display: 'flex',
+          alignItems: 'center',
           color: 'inherit',
           textDecoration: 'none',
           height: 'inherit',
@@ -167,7 +169,8 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       cursor: 'pointer',
     },
     [mq.sm]: {
-      ...verticalCenterStyle,
+      display: 'flex',
+      alignItems: 'center',
       justifyContent: 'flex-end',
       height: '100%',
       flexGrow: centeredNav ? 1 : 'unset',
@@ -233,7 +236,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     this.state = {
       screenSize: this.getScreenSize(window.innerWidth, props.breakpoints),
     };
-    this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 500);
+    this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 300);
   }
 
   getScreenSize(width: number, breakpoints: HeaderProps['breakpoints']): string {
@@ -280,7 +283,6 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
    * @returns {React.ReactNode} The child/children to be rendered
    */
   private renderChildren(children: React.ReactNode): React.ReactNode {
-    console.log('rendering children');
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
@@ -302,10 +304,9 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
           };
 
           // TODO: This needs to get changed to IconButton when we get it restyled for headers
-          const defaultMenuButton = (
+          return (
             <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
           );
-          return this.props.menuButton ? this.props.menuButton : defaultMenuButton;
         }
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
@@ -326,7 +327,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
       <HeaderShell {...this.props}>
-        <BrandSlot centered={this.props.centeredNav}>
+        <BrandSlot grow={this.props.centeredNav}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
               <Brand {...this.props} />

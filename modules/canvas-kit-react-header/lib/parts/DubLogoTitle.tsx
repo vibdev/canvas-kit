@@ -2,7 +2,6 @@ import * as React from 'react';
 import {css, cx} from 'emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
 import {HeaderTheme} from '../shared/types';
-import {logoTitleStyle, verticalCenterStyle} from '../shared/styles';
 import * as chroma from 'chroma-js';
 import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
 import {HeaderHeight} from '../Header';
@@ -26,6 +25,8 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
 
     const lockupStyle = css({
       label: 'lockup-style',
+      display: 'flex',
+      alignItems: 'center',
       background: this.props.bgColor ? this.props.bgColor : 'none',
       height: HeaderHeight.Small,
     });
@@ -48,9 +49,17 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
         this.props.themeColor === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
     });
 
+    const logoTitleStyle = {
+      display: 'inline-block',
+      fontSize: '20px',
+      fontWeight: 400,
+      paddingRight: spacing.l,
+      'white-space': 'nowrap',
+    };
+
     return (
       <div className={lockupContainerStyle}>
-        <div className={cx(lockupStyle, css(verticalCenterStyle))}>
+        <div className={lockupStyle}>
           <span
             className={logoStyle}
             dangerouslySetInnerHTML={{

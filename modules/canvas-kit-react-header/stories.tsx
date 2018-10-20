@@ -28,6 +28,7 @@ const backgroundStyle = css({
   backgroundPosition: `0 50%`,
 });
 
+// TODO: remove buttonStyle and buttonStyleReversed when we actually launch new UDE buttons
 const buttonStyle = css({
   boxShadow: `0 0 0 2px ${colors.blueberry400}`,
   backgroundColor: `rgba(1,1,1,0)`,
