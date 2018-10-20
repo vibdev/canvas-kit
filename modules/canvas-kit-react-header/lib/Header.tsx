@@ -236,7 +236,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     this.state = {
       screenSize: this.getScreenSize(window.innerWidth, props.breakpoints),
     };
-    this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 300);
+    this.updateScreenSize = throttle(this.updateScreenSize.bind(this));
   }
 
   getScreenSize(width: number, breakpoints: HeaderProps['breakpoints']): string {
