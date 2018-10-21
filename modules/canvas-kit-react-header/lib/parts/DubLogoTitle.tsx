@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {css, cx} from 'emotion';
+import styled from 'react-emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {HeaderTheme} from '../shared/types';
+import {HeaderHeight, HeaderTheme} from '../shared/types';
 import * as chroma from 'chroma-js';
 import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
-import {HeaderHeight} from '../Header';
 
 export type DubTitleProps = {
   themeColor: HeaderTheme;
@@ -12,63 +11,68 @@ export type DubTitleProps = {
   bgColor?: string;
 };
 
+const LockupContainer = styled('div')({
+  display: 'inline-block',
+});
+
+const Lockup = styled('div')<DubTitleProps>(
+  {
+    display: 'flex',
+    alignItems: 'center',
+    height: HeaderHeight.Small,
+  },
+  ({bgColor}) => ({
+    background: bgColor ? bgColor : 'none',
+  })
+);
+
+const Title = styled('h3')<DubTitleProps>(
+  {
+    display: 'inline-block',
+    fontSize: '20px',
+    fontWeight: 400,
+    paddingRight: spacing.l,
+    'white-space': 'nowrap',
+  },
+  ({themeColor}) => ({
+    color: themeColor === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
+  })
+);
+
+const DubLogo = styled('span')<DubTitleProps>(
+  {
+    padding: `0 ${spacing.s}`,
+    marginRight: spacing.s,
+  },
+  ({themeColor}) => ({
+    borderRight: `1px solid ${
+      themeColor === HeaderTheme.White
+        ? colors.soap400
+        : chroma(colors.frenchVanilla100)
+            .alpha(0.3)
+            .css()
+    }`,
+  })
+);
+
 export class DubLogoTitle extends React.Component<DubTitleProps> {
   static defaultProps = {
     themeColor: HeaderTheme.White,
   };
 
   render() {
-    const lockupContainerStyle = css({
-      label: 'lockup-container',
-      display: 'inline-block',
-    });
-
-    const lockupStyle = css({
-      label: 'lockup-style',
-      display: 'flex',
-      alignItems: 'center',
-      background: this.props.bgColor ? this.props.bgColor : 'none',
-      height: HeaderHeight.Small,
-    });
-
-    const logoStyle = css({
-      label: 'logo-style',
-      padding: `0 ${spacing.s}`,
-      marginRight: spacing.s,
-      borderRight: `1px solid ${
-        this.props.themeColor === HeaderTheme.White
-          ? colors.soap400
-          : chroma(colors.frenchVanilla100)
-              .alpha(0.3)
-              .css()
-      }`,
-    });
-
-    const titleStyle = css({
-      color:
-        this.props.themeColor === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
-    });
-
-    const logoTitleStyle = {
-      display: 'inline-block',
-      fontSize: '20px',
-      fontWeight: 400,
-      paddingRight: spacing.l,
-      'white-space': 'nowrap',
-    };
-
     return (
-      <div className={lockupContainerStyle}>
-        <div className={lockupStyle}>
-          <span
-            className={logoStyle}
+      <LockupContainer>
+        <Lockup {...this.props}>
+          <DubLogo
+            {...this.props}
             dangerouslySetInnerHTML={{
               __html: this.props.themeColor === HeaderTheme.White ? dubLogoBlue : dubLogoWhite,
             }}
           />
-          <h3 className={cx(css(logoTitleStyle), titleStyle)}>{this.props.title}</h3>
-        </div>
-      </div>
+          <Title {...this.props}>{this.props.title}</Title>
+        </Lockup>
+      </LockupContainer>
     );
   }
 }

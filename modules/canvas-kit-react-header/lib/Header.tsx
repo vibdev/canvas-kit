@@ -4,16 +4,11 @@ import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
-import {HeaderTheme, HeaderVariant} from './shared/types';
+import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
 import {throttle} from 'lodash';
-
-export enum HeaderHeight {
-  Small = '64px',
-  Large = '80px',
-}
 
 export interface HeaderProps {
   themeColor: HeaderTheme;
