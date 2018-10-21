@@ -236,7 +236,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     this.state = {
       screenSize: this.getScreenSize(window.innerWidth, props.breakpoints),
     };
-    this.updateScreenSize = throttle(this.updateScreenSize.bind(this));
+    this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 150);
   }
 
   getScreenSize(width: number, breakpoints: HeaderProps['breakpoints']): string {
@@ -253,13 +253,15 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   updateScreenSize(): void {
-    const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
+    requestAnimationFrame(() => {
+      const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
 
-    if (currentScreenSize !== this.state.screenSize) {
-      this.setState({
-        screenSize: currentScreenSize,
-      });
-    }
+      if (currentScreenSize !== this.state.screenSize) {
+        this.setState({
+          screenSize: currentScreenSize,
+        });
+      }
+    });
   }
 
   componentDidMount() {
