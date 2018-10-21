@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
 import * as chroma from 'chroma-js';
-import {dubLogoWhite, dubLogoBlue} from './_brand-assets';
+import {dubLogoWhite, dubLogoBlue} from './_brand-assets'; // TODO: Replace with real SVGs from @workday/brand-assets
 
 export type DubTitleProps = {
   themeColor: HeaderTheme;
