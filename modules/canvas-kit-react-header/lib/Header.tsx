@@ -157,6 +157,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
     marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
     '> *': {
       marginRight: 0,
+      marginLeft: spacing.s,
     },
 
     // TODO: remove this when we get real icon buttons
