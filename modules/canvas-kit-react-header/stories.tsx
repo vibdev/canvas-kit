@@ -259,6 +259,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
+          handleMenuClick={handleClickTest}
         >
           <nav>
             <ul>
