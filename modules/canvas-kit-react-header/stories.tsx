@@ -58,6 +58,25 @@ const handleClickTest = (e: React.SyntheticEvent) => {
   alert(`Menu clicked!`);
 };
 
+const nav = (
+  <nav>
+    <ul>
+      <li className="current">
+        <a href="#">Discover</a>
+      </li>
+      <li>
+        <a href="#">Library</a>
+      </li>
+      <li>
+        <a href="#">Create</a>
+      </li>
+      <li>
+        <a href="#">Manage</a>
+      </li>
+    </ul>
+  </nav>
+);
+
 storiesOf('Canvas Kit/Header/Marketing', module)
   .addDecorator(withReadme(README))
   .add('Dub', () => (
@@ -87,22 +106,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           brandUrl="#"
           handleMenuClick={handleClickTest}
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -127,22 +131,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           }
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -161,22 +150,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           centeredNav={true}
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -194,22 +168,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.Transparent}
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -234,22 +193,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.White}
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
         </Header>
       </div>
       <br />
@@ -261,22 +205,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           brandUrl="#"
           handleMenuClick={handleClickTest}
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -289,22 +218,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <br />
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} title="" themeColor={Header.Theme.Blue} brandUrl="#">
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -321,22 +235,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.Transparent}
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -354,22 +253,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           centeredNav={true}
           brandUrl="#"
         >
-          <nav>
-            <ul>
-              <li className="current">
-                <a href="#">Discover</a>
-              </li>
-              <li>
-                <a href="#">Library</a>
-              </li>
-              <li>
-                <a href="#">Create</a>
-              </li>
-              <li>
-                <a href="#">Manage</a>
-              </li>
-            </ul>
-          </nav>
+          {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -390,22 +274,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         brandUrl="#"
         handleMenuClick={handleClickTest}
       >
-        <nav>
-          <ul>
-            <li className="current">
-              <a href="#">Discover</a>
-            </li>
-            <li>
-              <a href="#">Library</a>
-            </li>
-            <li>
-              <a href="#">Create</a>
-            </li>
-            <li>
-              <a href="#">Manage</a>
-            </li>
-          </ul>
-        </nav>
+        {nav}
         <a href="#">
           <SystemIcon icon={notificationsIcon} />
         </a>
@@ -415,46 +284,10 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
       </Header>
       <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
-        <nav>
-          <ul>
-            <li className="current">
-              <a href="#">Discover</a>
-            </li>
-            <li>
-              <a href="#">Library</a>
-            </li>
-            <li>
-              <a href="#">Create</a>
-            </li>
-            <li>
-              <a href="#">Manage</a>
-            </li>
-          </ul>
-        </nav>
+        {nav}
       </Header>
       <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>
-        <nav>
-          <ul>
-            <li className="current">
-              <a href="#">Discover</a>
-            </li>
-            <li>
-              <a href="#">Library</a>
-            </li>
-            <li>
-              <a href="#">Create</a>
-            </li>
-            <li>
-              <a href="#">Manage</a>
-            </li>
-            <li>
-              <a href="#">Contributors</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
+        {nav}
         <a href="#">
           <SystemIcon icon={notificationsIcon} />
         </a>
