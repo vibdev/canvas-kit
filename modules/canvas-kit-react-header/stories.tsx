@@ -379,4 +379,100 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         </Header>
       </div>
     </div>
+  ))
+  .add('Custom Breakpoints', () => (
+    <div className="story">
+      <h1 className="section-label">Custom Breakpoints</h1>
+      <Header
+        title="Normal Breakpoints"
+        themeColor={Header.Theme.Blue}
+        brandUrl="#"
+        handleMenuClick={handleClickTest}
+      >
+        <nav>
+          <ul>
+            <li className="current">
+              <a href="#">Discover</a>
+            </li>
+            <li>
+              <a href="#">Library</a>
+            </li>
+            <li>
+              <a href="#">Create</a>
+            </li>
+            <li>
+              <a href="#">Manage</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#">
+          <SystemIcon icon={notificationsIcon} />
+        </a>
+        <a href="#">
+          <Avatar />
+        </a>
+        <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+      </Header>
+      <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
+        <nav>
+          <ul>
+            <li className="current">
+              <a href="#">Discover</a>
+            </li>
+            <li>
+              <a href="#">Library</a>
+            </li>
+            <li>
+              <a href="#">Create</a>
+            </li>
+            <li>
+              <a href="#">Manage</a>
+            </li>
+          </ul>
+        </nav>
+      </Header>
+      <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>
+        <nav>
+          <ul>
+            <li className="current">
+              <a href="#">Discover</a>
+            </li>
+            <li>
+              <a href="#">Library</a>
+            </li>
+            <li>
+              <a href="#">Create</a>
+            </li>
+            <li>
+              <a href="#">Manage</a>
+            </li>
+            <li>
+              <a href="#">Contributors</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#">
+          <SystemIcon icon={notificationsIcon} />
+        </a>
+        <a href="#">
+          <Avatar />
+        </a>
+        <Button className={cx(buttonStyle, buttonStyle)}>Download</Button>
+      </Header>
+      <Header
+        title="Icons Drop Later"
+        breakpoints={{...Header.defaultProps.breakpoints, md: 640, lg: 1140}}
+      >
+        <a href="#">
+          <SystemIcon icon={notificationsIcon} />
+        </a>
+        <a href="#">
+          <SystemIcon icon={inboxIcon} />
+        </a>
+        <Button className={cx(buttonStyle)}>Logout</Button>
+      </Header>
+    </div>
   ));
