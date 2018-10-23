@@ -17,7 +17,7 @@ export interface HeaderProps {
   brand?: React.ReactNode;
   brandUrl?: string;
   centeredNav?: boolean;
-  handleMenuClick?: (e: React.SyntheticEvent) => void;
+  onMenuClick?: (e: React.SyntheticEvent) => void;
   breakpoints: {
     [key: string]: number;
     sm: number;
@@ -298,7 +298,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
             color: themes[this.props.themeColor].systemIcon.color,
             colorHover: themes[this.props.themeColor].systemIcon.colorHover,
             icon: justifyIcon,
-            onClick: this.props.handleMenuClick,
+            onClick: this.props.onMenuClick,
           };
 
           // TODO: This needs to get changed to IconButton when we get it restyled for headers

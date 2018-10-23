@@ -104,7 +104,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          handleMenuClick={handleClickTest}
+          onMenuClick={handleClickTest}
         >
           {nav}
           <a href="#">
@@ -203,7 +203,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          handleMenuClick={handleClickTest}
+          onMenuClick={handleClickTest}
         >
           {nav}
           <a href="#">
@@ -272,7 +272,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         title="Normal Breakpoints"
         themeColor={Header.Theme.Blue}
         brandUrl="#"
-        handleMenuClick={handleClickTest}
+        onMenuClick={handleClickTest}
       >
         {nav}
         <a href="#">
