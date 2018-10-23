@@ -25,7 +25,6 @@ export const Avatar: React.SFC<AvatarProps> = ({themeColor = HeaderTheme.White}:
     backgroundColor: themeColor === HeaderTheme.White ? colors.soap300 : colors.blueberry400,
     borderRadius: '9999px',
     boxSizing: 'border-box',
-    paddingTop: '2px',
   });
   const iconColor = themeColor === HeaderTheme.White ? colors.licorice500 : colors.frenchVanilla100;
 
