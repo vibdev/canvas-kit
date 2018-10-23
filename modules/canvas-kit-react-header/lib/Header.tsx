@@ -214,7 +214,7 @@ class Brand extends React.Component<HeaderProps> {
   }
 }
 
-export class Header extends React.Component<HeaderProps, HeaderState> {
+export default class Header extends React.Component<HeaderProps, HeaderState> {
   static Theme = HeaderTheme;
   static Variant = HeaderVariant;
   static defaultProps = {
