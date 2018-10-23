@@ -1,2 +1,2 @@
 export {Header} from './lib/Header';
-export {DubLogoTitle} from './lib/parts';
+export {Avatar, DubLogoTitle, WorkdayLogoTitle} from './lib/parts';
