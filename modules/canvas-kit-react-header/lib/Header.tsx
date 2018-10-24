@@ -68,6 +68,7 @@ const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
 
   return mq;
 };
+
 const HeaderShell = styled('div')<HeaderProps>(
   {
     overflow: 'hidden',
