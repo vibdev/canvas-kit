@@ -60,11 +60,8 @@ icon.
 ### Example
 
 ```jsx
-import {
-  Header
-  Avatar,
-  HeaderTheme,
-} from '@workday/canvas-kit-react-header';
+import {Header HeaderTheme} from '@workday/canvas-kit-react-header';
+import {Avatar} from '@workday/canvas-kit-react-avatar';
 import {notificationsLargeIcon, inboxLargeIcon} from '@workday/canvas-system-icons-web';
 
 <Header
@@ -116,19 +113,6 @@ divider. It is taller in height (80px). Indicated with `HeaderVariant.Full`.
 **Coming soon**
 
 ## Component Parts
-
-### `<Avatar />`
-
-A component that provides a default avatar for the header. **Note: This will likely be factored out
-of `canvas-kit-react-header` in the future.**
-
-#### Properties
-
-**`themeColor` (optional):** `HeaderTheme`
-
-```jsx
-<Avatar themeColor={HeaderTheme.White} />
-```
 
 ### `<DubLogoTitle />`
 

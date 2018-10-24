@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {css, cx} from 'emotion';
 import {Header, DubLogoTitle} from './index';
-import {Avatar} from './lib/parts';
+import {Avatar} from '@workday/canvas-kit-react-avatar';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
