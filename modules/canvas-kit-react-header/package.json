@@ -34,6 +34,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
+    "@workday/canvas-kit-react-core": "^1.1.4",
+    "@workday/canvas-kit-react-icon": "^1.2.9",
+    "@workday/canvas-system-icons-web": "^0.16.8",
     "chroma-js": "^1.4.0",
     "emotion": "^9.2.12",
     "lodash": "^4.17.11",
@@ -43,8 +46,6 @@
     "@types/chroma-js": "^1.4.0",
     "@types/lodash": "^4.14.117",
     "@workday/canvas-kit-react-avatar": "^0.0.0",
-    "@workday/canvas-kit-react-button": "^0.15.9",
-    "@workday/canvas-kit-react-icon": "^1.2.9",
-    "@workday/canvas-system-icons-web": "^0.16.8"
+    "@workday/canvas-kit-react-button": "^0.15.9"
   }
 }
