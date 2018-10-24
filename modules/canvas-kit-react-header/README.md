@@ -158,7 +158,6 @@ more elements next to the title with custom components or markup.
 
 ```jsx
 import {Header, WorkdayLogoTitle} from '@workday/canvas-kit-react-header';
-import canvas from '@workday/canvas-kit-react-core';
 
 <Header
   title="This won't matter"
