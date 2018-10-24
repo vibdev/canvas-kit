@@ -127,6 +127,10 @@ const navStyle = (props: HeaderProps) => {
         margin: 0,
         height: 'inherit',
 
+        '&:hover': {
+          color: theme.linkFadeOutColor,
+        },
+
         '& li': {
           position: 'relative',
           display: 'flex',
@@ -135,45 +139,45 @@ const navStyle = (props: HeaderProps) => {
           fontSize: '14px',
           fontWeight: 700,
           height: 'inherit',
-        },
-        '& li:first-child': {
-          marginLeft: 0,
-        },
-        '& li:last-child': {
-          marginRight: 0,
-        },
+          '&:first-child': {
+            marginLeft: 0,
+          },
+          '&:last-child': {
+            marginRight: 0,
+          },
 
-        '& li a': {
-          boxSizing: 'border-box',
-          display: 'flex',
-          alignItems: 'center',
-          color: 'inherit',
-          textDecoration: 'none',
-          height: 'inherit',
-          padding: `0px ${spacing.s}`,
-          transition: `color 150ms ease-out 0s`,
+          '& a': {
+            boxSizing: 'border-box',
+            display: 'flex',
+            alignItems: 'center',
+            color: 'inherit',
+            textDecoration: 'none',
+            height: 'inherit',
+            padding: `0px ${spacing.s}`,
+            transition: `color 150ms ease-out 0s`,
+            '&:hover, &:active': {
+              color: theme.linkColor,
+            },
+          },
+
+          '&.current': {
+            '& a': {
+              color: theme.currentLinkColor,
+              '&:hover, &:active': {
+                color: theme.currentLinkColor,
+              },
+            },
+            '&:after': {
+              position: 'absolute',
+              bottom: 0,
+              content: `''`,
+              height: 4,
+              width: '100%',
+              backgroundColor: theme.chipColor,
+              borderRadius: '3px 3px 0 0',
+            },
+          },
         },
-        '& li.current:after': {
-          position: 'absolute',
-          bottom: 0,
-          content: `''`,
-          height: 4,
-          width: '100%',
-          backgroundColor: theme.chipColor,
-          borderRadius: '3px 3px 0 0',
-        },
-        '& li.current a': {
-          color: theme.currentLinkColor,
-        },
-        '& li.current a:hover, & li.current a:active': {
-          color: theme.currentLinkColor,
-        },
-        '& li a:hover, & li a:active': {
-          color: theme.linkColor,
-        },
-      },
-      '& ul:hover': {
-        color: theme.linkFadeOutColor,
       },
     },
   });
