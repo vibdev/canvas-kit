@@ -1,4 +1,4 @@
-import canvas, {colors, depth, CSSProperties} from '@workday/canvas-kit-react-core';
+import {colors, iconColors, depth, CSSProperties} from '@workday/canvas-kit-react-core';
 import * as chroma from 'chroma-js';
 import {HeaderTheme} from './types';
 
@@ -26,8 +26,8 @@ export const themes: Themes = {
     background: colors.frenchVanilla100,
     depth: depth['1'],
     systemIcon: {
-      color: canvas.iconColors.standard,
-      colorHover: canvas.iconColors.hover,
+      color: iconColors.standard,
+      colorHover: iconColors.hover,
     },
     linkColor: colors.blackPepper400,
     linkFadeOutColor: colors.licorice200,
@@ -51,7 +51,7 @@ export const themes: Themes = {
   },
   [HeaderTheme.Transparent]: {
     color: colors.frenchVanilla100,
-    background: 'rgba(0,0,0,0)',
+    background: 'transparent',
     depth: {boxShadow: 'none'},
     systemIcon: {
       color: colors.frenchVanilla100,
