@@ -6,7 +6,13 @@ import {colors, spacing} from '@workday/canvas-kit-react-core';
 import * as chroma from 'chroma-js';
 
 export type WorkdayLogoTitleProps = {
+  /**
+   * A HeaderTheme enum indicating which theme to use (White, Blue or Transparent)
+   */
   themeColor: HeaderTheme;
+  /**
+   * The title to display in the header. Not used if `brand` is provided
+   */
   title: string;
 };
 

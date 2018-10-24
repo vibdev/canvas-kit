@@ -6,8 +6,17 @@ import * as chroma from 'chroma-js';
 import {dubLogoWhite, dubLogoBlue} from './_brand-assets'; // TODO: Replace with real SVGs from @workday/brand-assets
 
 export type DubTitleProps = {
+  /**
+   * A HeaderTheme enum indicating which theme to use (White, Blue or Transparent)
+   */
   themeColor: HeaderTheme;
+  /**
+   * The title to display in the header. Not used if `brand` is provided
+   */
   title: string;
+  /**
+   * The background color/gradient to be used behind the logo
+   */
   bgColor?: string;
 };
 

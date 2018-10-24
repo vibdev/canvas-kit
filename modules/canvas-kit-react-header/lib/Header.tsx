@@ -11,13 +11,37 @@ import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/Sys
 import {throttle} from 'lodash';
 
 export interface HeaderProps {
+  /**
+   * A HeaderTheme enum indicating which theme to use (White, Blue or Transparent)
+   */
   themeColor: HeaderTheme;
+  /**
+   * A HeaderVariant enum indicating whether to use the Dub (small) or Full (large) version
+   */
   variant: HeaderVariant;
+  /**
+   * The title to display in the header. Not used if `brand` is provided
+   */
   title?: string;
+  /**
+   * A React node that will replace the dub logo and title if provided.
+   */
   brand?: React.ReactNode;
+  /**
+   * The URL href of the logo link
+   */
   brandUrl?: string;
+  /**
+   * True if the nav should be centered. False if it should be aligned right
+   */
   centeredNav?: boolean;
+  /**
+   * An event handler function that gets called when the responsive menu icon is clicked
+   */
   onMenuClick?: (e: React.SyntheticEvent) => void;
+  /**
+   * An object that allows for custom specified breakpoints (sm, md, lg)
+   */
   breakpoints: {
     [key: string]: number;
     sm: number;
@@ -30,6 +54,11 @@ export interface HeaderState {
   screenSize: keyof HeaderProps['breakpoints'];
 }
 
+/**
+ * Generates a mediaquery given a breakpoint object
+ * @param {Object} breakpoints Specification of breakpoint pixel values for sm, md, lg screens
+ * @returns {Object}
+ */
 const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
   const mq: {[key: string]: string} = {};
 
@@ -235,6 +264,12 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 150);
   }
 
+  /**
+   * Returns which breakpoint size to use (sm, md, lg)
+   * @param {number} width Current screen width
+   * @param {Object} breakpoints Specification of breakpoint pixel values for sm, md, lg screens
+   * @returns {string}
+   */
   getScreenSize(width: number, breakpoints: HeaderProps['breakpoints']): string {
     const sizes = Object.keys(breakpoints);
     let screenSize = sizes[0];
@@ -248,6 +283,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     return screenSize;
   }
 
+  /**
+   * Updates the state screen size/width if it has changed (syncs w/ browser paints using RAF)
+   */
   updateScreenSize(): void {
     requestAnimationFrame(() => {
       const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
