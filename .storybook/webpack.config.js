@@ -32,6 +32,11 @@ const customRules = [
     use: [
       {
         loader: 'style-loader', // creates style nodes from JS strings
+        options: {
+          insertAt: {
+            before: '[data-emotion]',
+          },
+        },
       },
       {
         loader: 'css-loader',
@@ -56,7 +61,17 @@ const customRules = [
   },
   {
     test: /\.css$/,
-    use: ['style-loader', 'css-loader'],
+    use: [
+      {
+        loader: 'style-loader',
+        options: {
+          insertAt: {
+            before: '[data-emotion]',
+          },
+        },
+      },
+      'css-loader',
+    ],
   },
   {
     test: /\.(jpe?g|png|gif|svg|ttf)$/i,
