@@ -17,9 +17,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    */
   buttonSize?: ButtonSizes;
   /**
-   * Ref of button that the styled component renders. Support RefObject<HTMLButtonElement> and callback
+   * Ref of button that the styled component renders.
    */
-  innerRef?: React.RefObject<HTMLButtonElement> | ((button: HTMLButtonElement) => void);
+  innerRef?: React.RefObject<HTMLButtonElement>;
 }
 
 export default class Button extends React.Component<ButtonProps> {
