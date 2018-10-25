@@ -1,17 +1,33 @@
-import canvasSpaceWeb from '@workday/canvas-space-web';
+import spacing, {ICanvasSpacing as CanvasSpacing} from '@workday/canvas-space-web';
 
-export interface CanvasSpacing {
-  xxxs: string;
-  xxs: string;
-  xs: string;
-  s: string;
-  m: string;
-  l: string;
-  xl: string;
-  xxl: string;
-  xxxl: string;
+export interface CanvasSpacingNumbers {
+  xxxs: number;
+  xxs: number;
+  xs: number;
+  s: number;
+  m: number;
+  l: number;
+  xl: number;
+  xxl: number;
+  xxxl: number;
 }
 
-const spacing: CanvasSpacing = canvasSpaceWeb;
+function stripUnit(value: string): number {
+  return parseInt(value.replace('px', ''), 10);
+}
+
+export const spacingNumbers: CanvasSpacingNumbers = {
+  xxxs: stripUnit(spacing.xxxs),
+  xxs: stripUnit(spacing.xxs),
+  xs: stripUnit(spacing.xs),
+  s: stripUnit(spacing.s),
+  m: stripUnit(spacing.m),
+  l: stripUnit(spacing.l),
+  xl: stripUnit(spacing.xl),
+  xxl: stripUnit(spacing.xxl),
+  xxxl: stripUnit(spacing.xxxl),
+};
+
+export {CanvasSpacing};
 
 export default spacing;
