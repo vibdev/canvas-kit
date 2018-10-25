@@ -1,11 +1,20 @@
 # Canvas Kit Core
 
+Canvas Kit Core contains values and base styles that are shared across the kit.
+
+Includes:
+
+- [Colors](#colors)
+- [Spacing](#spacing)
+- [Depth](#depth)
+- [Type](#type)
+
 ## Colors
 
 Workday Canvas Colors are directly exported from
 [`@workday/canvas-colors-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-colors-web).
 Colors come in weights from 100 - 600. These can be used directly, but
-[semantic constants](#semantic-contstants) are preferred.
+[semantic constants](#semantic-constants) are preferred.
 
 Colors (100-600):
 
@@ -146,7 +155,7 @@ Example:
 ```js
 import {depth} from '@workday/canvas-kit-react-core';
 depth.inset;
-depth.2;
+depth.['2'];
 ```
 
 ### Type Checking
@@ -164,7 +173,7 @@ export interace MyComponent {
 }
 ```
 
-This **will allow** the spacing prop to have values of `depth.inset`, `depth.1`, `'inset'`, `1`,
+This **will allow** the spacing prop to have values of `depth.inset`, `depth.['1']`, `'inset'`, `1`,
 etc.  
 But **will not allow** `spacing.foo`, `'foo'`, `'box-shadow: 0 1px 1px rgba(0,0,0,0.1)'`, `5`, etc.
 
