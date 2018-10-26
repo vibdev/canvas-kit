@@ -18,7 +18,7 @@ export enum AvatarSize {
   xxl = '120px',
 }
 
-export interface AvatarProps {
+export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   theme?: AvatarTheme;
   size?: AvatarSize | number;
   url?: string;
