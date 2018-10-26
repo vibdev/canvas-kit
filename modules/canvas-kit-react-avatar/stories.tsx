@@ -17,5 +17,18 @@ storiesOf('Canvas Kit/Avatar', module)
       <Avatar theme={Avatar.Theme.Dark} />
       <Avatar size={Avatar.Size.l} theme={Avatar.Theme.Dark} />
       <Avatar size={48} theme={Avatar.Theme.Dark} />
+      <Avatar
+        onClick={() => {
+          window.alert('Avatar Clicked');
+        }}
+        size={Avatar.Size.l}
+      />
+      <Avatar
+        onClick={() => {
+          window.alert('Avatar Clicked');
+        }}
+        size={Avatar.Size.l}
+        theme={Avatar.Theme.Dark}
+      />
     </div>
   ));

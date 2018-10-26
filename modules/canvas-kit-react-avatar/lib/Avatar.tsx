@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {colors} from '@workday/canvas-kit-react-core';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {userIcon} from '@workday/canvas-system-icons-web';
 
@@ -18,17 +19,19 @@ export enum AvatarSize {
   xxl = '120px',
 }
 
-export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: AvatarTheme;
   size?: AvatarSize | number;
   url?: string;
+  onClick?: (e: React.SyntheticEvent) => void;
 }
 
-const Container = styled('div')<AvatarProps>(
+const Container = styled('button')<AvatarProps>(
   {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    border: 0,
     borderRadius: '100%',
     boxSizing: 'border-box',
     overflow: 'hidden',
@@ -37,10 +40,17 @@ const Container = styled('div')<AvatarProps>(
       height: '100%',
     },
   },
-  ({theme, size}) => ({
+  ({theme, size, onClick}) => ({
     height: size,
     width: size,
+    cursor: onClick ? 'pointer' : 'default',
     backgroundColor: theme === AvatarTheme.Dark ? colors.blueberry400 : colors.soap300,
+    '&:not([disabled])': {
+      '&:focus': {
+        outline: 'none',
+        ...(theme === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
+      },
+    },
   })
 );
 
@@ -65,7 +75,7 @@ export default class Avatar extends React.Component<AvatarProps> {
     iconSize = iconSize * 0.625;
 
     return (
-      <Container {...this.props}>
+      <Container {...this.props} disabled={this.props.onClick ? false : true}>
         {url ? (
           <img src={url} />
         ) : (
