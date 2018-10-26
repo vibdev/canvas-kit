@@ -10,7 +10,7 @@ export enum AvatarTheme {
 }
 
 export enum AvatarSize {
-  x = '16px',
+  xs = '16px',
   s = '24px',
   m = '32px',
   l = '40px',
