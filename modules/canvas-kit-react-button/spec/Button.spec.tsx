@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../lib/Button';
+import Button, {ButtonProps} from '../lib/Button';
 import {mount} from 'enzyme';
 
 describe('Button', () => {
@@ -79,5 +79,51 @@ describe('Button Accessibility', () => {
         .hasAttribute('disabled')
     ).toEqual(true);
     component.unmount();
+  });
+});
+
+describe('Button Focus', () => {
+  const cb = jest.fn();
+  afterEach(() => {
+    cb.mockReset();
+  });
+
+  // expected usage to manage focus via innerRef
+  class FocusableButton extends React.Component<ButtonProps> {
+    public buttonRef: React.RefObject<HTMLButtonElement>;
+
+    constructor(props: ButtonProps) {
+      super(props);
+      this.buttonRef = React.createRef<HTMLButtonElement>();
+    }
+
+    // focus on button in componentDidMount for purposes of tests
+    componentDidMount() {
+      if (!this.props.disabled && this.buttonRef && this.buttonRef.current) {
+        this.buttonRef.current.focus();
+      }
+    }
+
+    render() {
+      return (
+        <Button buttonType={Button.Types.Primary} innerRef={this.buttonRef} {...this.props}>
+          {this.props.children}
+        </Button>
+      );
+    }
+  }
+
+  test('button should not allow focus when disabled', () => {
+    const component = mount(<FocusableButton disabled={true}>Button</FocusableButton>);
+    const activeElement = document.activeElement;
+    const buttonWrapper = component.find('button');
+    expect(buttonWrapper.getDOMNode()).not.toEqual(activeElement);
+  });
+
+  test('button should allow focus', () => {
+    const component = mount(<FocusableButton>Button</FocusableButton>);
+    const activeElement = document.activeElement;
+    const buttonWrapper = component.find('button');
+    expect(buttonWrapper.getDOMNode()).toEqual(activeElement);
   });
 });
