@@ -82,7 +82,7 @@ export default class Avatar extends React.Component<AvatarProps> {
           <SystemIcon
             icon={userIcon}
             color={iconColor}
-            colorHover={iconColorHover}
+            colorHover={this.props.onClick ? iconColorHover : iconColor}
             size={iconSize}
           />
         )}
