@@ -19,8 +19,8 @@ export enum AvatarSize {
 }
 
 export interface AvatarProps {
-  theme: AvatarTheme;
-  size: AvatarSize | number;
+  theme?: AvatarTheme;
+  size?: AvatarSize | number;
 }
 
 const Container = styled('div')<AvatarProps>(
@@ -52,7 +52,7 @@ export default class Avatar extends React.Component<AvatarProps> {
     const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
     const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
 
-    let iconSize = size;
+    let iconSize = size!; // Size will always be defined due to defaultProps
     if (typeof iconSize === 'string') {
       iconSize = parseInt(iconSize.replace('px', ''), 10);
     }
