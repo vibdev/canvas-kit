@@ -21,6 +21,7 @@ export enum AvatarSize {
 export interface AvatarProps {
   theme?: AvatarTheme;
   size?: AvatarSize | number;
+  url?: string;
 }
 
 const Container = styled('div')<AvatarProps>(
@@ -30,6 +31,11 @@ const Container = styled('div')<AvatarProps>(
     justifyContent: 'center',
     borderRadius: '100%',
     boxSizing: 'border-box',
+    overflow: 'hidden',
+    '& img': {
+      width: '100%',
+      height: '100%',
+    },
   },
   ({theme, size}) => ({
     height: size,
@@ -47,7 +53,7 @@ export default class Avatar extends React.Component<AvatarProps> {
   };
 
   render() {
-    const {theme, size} = this.props;
+    const {theme, size, url} = this.props;
 
     const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
     const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
@@ -60,7 +66,16 @@ export default class Avatar extends React.Component<AvatarProps> {
 
     return (
       <Container {...this.props}>
-        <SystemIcon icon={userIcon} color={iconColor} colorHover={iconColorHover} size={iconSize} />
+        {url ? (
+          <img src={url} />
+        ) : (
+          <SystemIcon
+            icon={userIcon}
+            color={iconColor}
+            colorHover={iconColorHover}
+            size={iconSize}
+          />
+        )}
       </Container>
     );
   }

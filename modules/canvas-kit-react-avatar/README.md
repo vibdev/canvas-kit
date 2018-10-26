@@ -22,3 +22,7 @@ The px size of the avatar
 | `l`      | 40px  |
 | `xl`     | 64px  |
 | `xxl`    | 120px |
+
+**`url` (optional):** `string`
+
+The URL of the users photo. Expects a square (1:1) photo.
