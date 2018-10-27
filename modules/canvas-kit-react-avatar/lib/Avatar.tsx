@@ -31,6 +31,7 @@ const Container = styled('button')<AvatarProps>(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 0,
     border: 0,
     borderRadius: '100%',
     boxSizing: 'border-box',
@@ -40,11 +41,15 @@ const Container = styled('button')<AvatarProps>(
       height: '100%',
     },
   },
-  ({theme, size, onClick}) => ({
+  ({theme, size, url, onClick}) => ({
     height: size,
     width: size,
     cursor: onClick ? 'pointer' : 'default',
-    backgroundColor: theme === AvatarTheme.Dark ? colors.blueberry400 : colors.soap300,
+    backgroundColor: url
+      ? undefined
+      : theme === AvatarTheme.Dark
+        ? colors.blueberry400
+        : colors.soap300,
     '&:not([disabled])': {
       '&:focus': {
         outline: 'none',
