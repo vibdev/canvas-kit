@@ -6,9 +6,14 @@ import {colors} from '@workday/canvas-kit-react-core';
 import {shieldIcon} from '@workday/canvas-accent-icons-web';
 import {benefitsIcon} from '@workday/canvas-applet-icons-web';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
+import {
+  badgeAchievementGraphic,
+  emptyStateCheckmarkCircleGraphic,
+} from '@workday/canvas-graphics-web';
 
 import {AccentIcon, AppletIcon, SystemIcon} from './index';
 import README from './README.md';
+import Graphic from './lib/Graphic';
 
 storiesOf('Canvas Kit/Icon', module)
   .addDecorator(withReadme(README))
@@ -48,5 +53,11 @@ storiesOf('Canvas Kit/Icon', module)
       />
       <br />
       <SystemIcon icon={activityStreamIcon} size={48} />
+
+      <h2>Graphic</h2>
+      <Graphic icon={badgeAchievementGraphic} />
+      <Graphic icon={badgeAchievementGraphic} size={80} />
+      <br />
+      <Graphic icon={emptyStateCheckmarkCircleGraphic} />
     </div>
   ));
