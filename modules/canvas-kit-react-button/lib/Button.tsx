@@ -19,7 +19,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * Ref of button that the styled component renders.
    */
-  innerRef?: React.RefObject<HTMLButtonElement>;
+  buttonRef?: React.RefObject<HTMLButtonElement>;
 }
 
 export default class Button extends React.Component<ButtonProps> {
@@ -33,11 +33,11 @@ export default class Button extends React.Component<ButtonProps> {
   };
 
   public render() {
-    const {buttonSize, children} = this.props;
+    const {buttonRef, ...elemProps} = this.props;
 
     return (
-      <ButtonBaseCon {...this.props}>
-        <ButtonBaseLabel buttonSize={buttonSize}>{children}</ButtonBaseLabel>
+      <ButtonBaseCon {...this.props} innerRef={buttonRef}>
+        <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
       </ButtonBaseCon>
     );
   }

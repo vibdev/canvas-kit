@@ -88,9 +88,9 @@ describe('Button Focus', () => {
     cb.mockReset();
   });
 
-  // expected usage to manage focus via innerRef
+  // expected usage to manage focus via buttonRef
   class FocusableButton extends React.Component<ButtonProps> {
-    public buttonRef: React.RefObject<HTMLButtonElement>;
+    readonly buttonRef: React.RefObject<HTMLButtonElement>;
 
     constructor(props: ButtonProps) {
       super(props);
@@ -106,7 +106,7 @@ describe('Button Focus', () => {
 
     render() {
       return (
-        <Button buttonType={Button.Types.Primary} innerRef={this.buttonRef} {...this.props}>
+        <Button buttonType={Button.Types.Primary} buttonRef={this.buttonRef} {...this.props}>
           {this.props.children}
         </Button>
       );

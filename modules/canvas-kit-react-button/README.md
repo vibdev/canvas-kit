@@ -38,6 +38,10 @@ Type: `{true , false}`
 Default: `false`  
 If true, the button's will grow to its container's width.
 
+**`buttonRef`**  
+Type: `React.RefObject<HTMLButtonElement>`  
+Returns the ref to the rendered HTMLButtonElement.
+
 ### Icon Button
 
 Button containing an icon. Icon may be a component from
