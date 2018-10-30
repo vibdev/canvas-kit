@@ -36,7 +36,7 @@ export default class Button extends React.Component<ButtonProps> {
     const {buttonRef, ...elemProps} = this.props;
 
     return (
-      <ButtonBaseCon {...this.props} innerRef={buttonRef}>
+      <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
         <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
       </ButtonBaseCon>
     );
