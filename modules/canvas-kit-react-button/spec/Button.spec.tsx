@@ -113,14 +113,54 @@ describe('Button Focus', () => {
     }
   }
 
-  test('button should not allow focus when disabled', () => {
+  // expected usage to manage focus via buttonRef cb
+  class FocusableButtonCB extends React.Component<ButtonProps> {
+    private buttonElement: HTMLButtonElement;
+
+    // focus on button in componentDidMount for purposes of tests
+    componentDidMount() {
+      if (!this.props.disabled && this.buttonElement) {
+        this.buttonElement.focus();
+      }
+    }
+
+    render() {
+      return (
+        <Button
+          buttonType={Button.Types.Primary}
+          buttonRef={(buttonElement: HTMLButtonElement) => {
+            this.buttonElement = buttonElement;
+          }}
+          {...this.props}
+        >
+          {this.props.children}
+        </Button>
+      );
+    }
+  }
+
+  test('button should not allow focus when disabled via buttonRef cb', () => {
+    const component = mount(<FocusableButtonCB disabled={true}>Button</FocusableButtonCB>);
+    const activeElement = document.activeElement;
+    const buttonWrapper = component.find('button');
+    expect(buttonWrapper.getDOMNode()).not.toEqual(activeElement);
+  });
+
+  test('button should allow focus via buttonRef cb', () => {
+    const component = mount(<FocusableButtonCB>Button</FocusableButtonCB>);
+    const activeElement = document.activeElement;
+    const buttonWrapper = component.find('button');
+    expect(buttonWrapper.getDOMNode()).toEqual(activeElement);
+  });
+
+  test('button should not allow focus when disabled via buttonRef', () => {
     const component = mount(<FocusableButton disabled={true}>Button</FocusableButton>);
     const activeElement = document.activeElement;
     const buttonWrapper = component.find('button');
     expect(buttonWrapper.getDOMNode()).not.toEqual(activeElement);
   });
 
-  test('button should allow focus', () => {
+  test('button should allow focus via buttonRef', () => {
     const component = mount(<FocusableButton>Button</FocusableButton>);
     const activeElement = document.activeElement;
     const buttonWrapper = component.find('button');
