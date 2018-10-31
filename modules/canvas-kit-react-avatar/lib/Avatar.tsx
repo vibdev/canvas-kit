@@ -23,11 +23,11 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * An AvatarTheme enum indicating which theme to use for the default state (Light vs. Dark)
    */
-  theme?: AvatarTheme;
+  theme: AvatarTheme;
   /**
    * An AvatarSize enum or number value indicating the size of the avatar
    */
-  size?: AvatarSize | number;
+  size: AvatarSize | number;
   /**
    * The url of the users avatar photo
    */
@@ -89,7 +89,7 @@ export default class Avatar extends React.Component<AvatarProps> {
     const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
     const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
 
-    let iconSize = size!; // Size will always be defined due to defaultProps
+    let iconSize = size;
     if (typeof iconSize === 'string') {
       iconSize = parseInt(iconSize.replace('px', ''), 10);
     }
