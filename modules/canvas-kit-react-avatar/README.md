@@ -26,3 +26,7 @@ The px size of the avatar
 **`url` (optional):** `string`
 
 The URL of the users photo. Expects a square (1:1) photo.
+
+**`buttonRef`**  
+Type: `React.Ref<HTMLButtonElement>`  
+Returns the ref to the rendered HTMLButtonElement.

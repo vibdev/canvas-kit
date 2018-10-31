@@ -24,6 +24,10 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: AvatarSize | number;
   url?: string;
   onClick?: (e: React.SyntheticEvent) => void;
+  /**
+   * Ref of button that the styled component renders.
+   */
+  buttonRef?: React.Ref<HTMLButtonElement>;
 }
 
 const Container = styled('button')<AvatarProps>(
@@ -68,7 +72,7 @@ export default class Avatar extends React.Component<AvatarProps> {
   };
 
   render() {
-    const {theme, size, url} = this.props;
+    const {buttonRef, theme, size, url, onClick} = this.props;
 
     const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
     const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
@@ -80,14 +84,14 @@ export default class Avatar extends React.Component<AvatarProps> {
     iconSize = iconSize * 0.625;
 
     return (
-      <Container {...this.props} disabled={this.props.onClick ? false : true}>
+      <Container {...this.props} disabled={onClick ? false : true} innerRef={buttonRef}>
         {url ? (
           <img src={url} />
         ) : (
           <SystemIcon
             icon={userIcon}
             color={iconColor}
-            colorHover={this.props.onClick ? iconColorHover : iconColor}
+            colorHover={onClick ? iconColorHover : iconColor}
             size={iconSize}
           />
         )}
