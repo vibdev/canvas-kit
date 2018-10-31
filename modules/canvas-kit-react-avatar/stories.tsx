@@ -18,6 +18,10 @@ storiesOf('Canvas Kit/Avatar', module)
       <Avatar size={Avatar.Size.l} theme={Avatar.Theme.Dark} />
       <Avatar size={48} theme={Avatar.Theme.Dark} />
       <Avatar
+        size={48}
+        url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
+      />
+      <Avatar
         onClick={() => {
           window.alert('Avatar Clicked');
         }}
