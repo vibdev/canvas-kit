@@ -10,13 +10,13 @@ describe('Avatar', () => {
 
   test('render a button with id', () => {
     const component = mount(<Avatar id="myAvatar" />);
-    expect(component.find('div').props().id).toBe('myAvatar');
+    expect(component.find('button').props().id).toBe('myAvatar');
     component.unmount();
   });
 
   test('should call a callback function', () => {
     const component = mount(<Avatar onClick={cb} />);
-    const avatar = component.find('div');
+    const avatar = component.find('button');
     avatar.simulate('click');
     expect(cb.mock.calls.length).toBe(1);
     component.unmount();
