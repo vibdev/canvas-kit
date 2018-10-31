@@ -11,12 +11,12 @@ export enum AvatarTheme {
 }
 
 export enum AvatarSize {
-  xs = '16px',
-  s = '24px',
-  m = '32px',
-  l = '40px',
-  xl = '64px',
-  xxl = '120px',
+  xs = 16,
+  s = 24,
+  m = 32,
+  l = 40,
+  xl = 64,
+  xxl = 120,
 }
 
 export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -88,12 +88,7 @@ export default class Avatar extends React.Component<AvatarProps> {
 
     const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
     const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
-
-    let iconSize = size;
-    if (typeof iconSize === 'string') {
-      iconSize = parseInt(iconSize.replace('px', ''), 10);
-    }
-    iconSize = iconSize * 0.625;
+    const iconSize = size * 0.625;
 
     return (
       <Container {...this.props} disabled={onClick ? false : true} innerRef={buttonRef}>
