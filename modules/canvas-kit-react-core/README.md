@@ -13,7 +13,7 @@ Includes:
 
 Workday Canvas Colors are directly exported from
 [`@workday/canvas-colors-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-colors-web).
-Colors come in weights from 100 - 600. These can be used directly, but
+Colors come in shades from 100 (lighter) - 600 (darker). These can be used directly, but
 [semantic constants](#semantic-constants) are preferred.
 
 Colors (100-600):
@@ -89,7 +89,7 @@ iconColors.hover;
 ## Spacing
 
 Workday Canvas Spacing is directly exported from
-[`@workday/canvas-spacing-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-cspacing-web).
+[`@workday/canvas-spacing-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-space-web).
 
 Spacing variables in t-shirt size format. Spacing values are in `px` format.
 
@@ -146,9 +146,9 @@ Five levels of depth are available. They are directly exported from
 
 **Depth 2:** Increased card depth on hover
 
-**Depth 3:** Active, Pop Ups
+**Depth 3:** Active cards, popups
 
-**Depth 4:** Cards on white backgrounds, Menus
+**Depth 4:** Cards on white backgrounds, menus
 
 Example:
 
@@ -160,8 +160,8 @@ depth.['2'];
 
 ### Type Checking
 
-While it is less likely to accept a depth(box-shadow) prop than a spacing prop, in these cases, they
-should adhere to the Canvas depth system.
+Props that are used to adjust levels of depth should use `CanvasDepth` as the type to restrict it to
+only take the levels of depth Canvas provides.
 
 Example:
 
