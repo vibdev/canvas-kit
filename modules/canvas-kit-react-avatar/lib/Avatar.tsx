@@ -20,9 +20,21 @@ export enum AvatarSize {
 }
 
 export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**
+   * An AvatarTheme enum indicating which theme to use for the default state (Light vs. Dark)
+   */
   theme?: AvatarTheme;
+  /**
+   * An AvatarSize enum or number value indicating the size of the avatar
+   */
   size?: AvatarSize | number;
+  /**
+   * The url of the users avatar photo
+   */
   url?: string;
+  /**
+   * An event handler function that gets called when the avatar is clicked
+   */
   onClick?: (e: React.SyntheticEvent) => void;
   /**
    * Ref of button that the styled component renders.
