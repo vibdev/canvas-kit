@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.15.12"></a>
+## [0.15.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.11...@workday/canvas-kit-react-button@0.15.12) (2018-11-01)
+
+
+### Bug Fixes
+
+* **buttons:** adding innerRef to ButtonProps to allow access to rendered component ([f8c113f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f8c113f))
+* **buttons:** Remove ref callback type ([af8fadf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/af8fadf))
+
+
+
+
 <a name="0.15.11"></a>
 ## [0.15.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.10...@workday/canvas-kit-react-button@0.15.11) (2018-10-24)
 
