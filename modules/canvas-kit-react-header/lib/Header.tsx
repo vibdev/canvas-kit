@@ -2,7 +2,7 @@ import * as React from 'react';
 import {css} from 'emotion';
 import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
-import {DubLogoTitle, WorkdayLogoTitle} from './parts';
+import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
@@ -36,9 +36,17 @@ export interface HeaderProps {
    */
   centeredNav?: boolean;
   /**
+   * True if the search input should be left aligned with the logo. False if it should be aligned right
+   */
+  highlightSearch?: boolean;
+  /**
    * An event handler function that gets called when the responsive menu icon is clicked
    */
   onMenuClick?: (e: React.SyntheticEvent) => void;
+  /**
+   * An event handler function that gets called when the search field is submitted
+   */
+  onSearchSubmit?: (e: React.SyntheticEvent) => void;
   /**
    * An object that allows for custom specified breakpoints (sm, md, lg)
    */
@@ -360,6 +368,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <Brand {...this.props} />
           )}
         </BrandSlot>
+        {this.props.onSearchSubmit && (
+          <Search
+            onSubmit={this.props.onSearchSubmit}
+            highlight={this.props.highlightSearch}
+            themeColor={HeaderTheme.White}
+            placeholder="Search"
+          />
+        )}
         <ChildrenSlot {...this.props}>{this.renderChildren(this.props.children)}</ChildrenSlot>
       </HeaderShell>
     );

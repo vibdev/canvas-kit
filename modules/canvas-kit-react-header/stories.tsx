@@ -40,6 +40,11 @@ const handleAvatarClickTest = (e: React.SyntheticEvent) => {
   alert(`Avatar clicked!`);
 };
 
+const handleSearchSubmitTest = (e: React.SyntheticEvent) => {
+  const target = e.target as HTMLInputElement;
+  alert(`You searched for ${target.value}!`);
+};
+
 const nav = (
   <nav>
     <ul>
@@ -65,7 +70,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
     <div className="story">
       <h1 className="section-label">"Dub" Header</h1>
       <div className={containerStyle}>
-        <Header title="Required" />
+        <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
       <div className={containerStyle}>
         <Header title="Icons Only" brandUrl="#">
