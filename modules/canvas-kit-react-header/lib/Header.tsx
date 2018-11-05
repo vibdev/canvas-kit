@@ -46,7 +46,7 @@ export interface HeaderProps {
   /**
    * An event handler function that gets called when the search field is submitted
    */
-  onSearchSubmit?: (e: React.SyntheticEvent) => void;
+  onSearchSubmit?: (query: string) => void;
   /**
    * An object that allows for custom specified breakpoints (sm, md, lg)
    */

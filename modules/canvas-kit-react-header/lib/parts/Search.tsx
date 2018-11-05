@@ -26,10 +26,10 @@ export type SearchProps = {
   /**
    * An event handler function that gets called when the search input is submitted
    */
-  onSubmit?: (e: React.SyntheticEvent) => void;
+  onSubmit?: (query: string) => void;
 };
 
-const SearchContainer = styled('div')({
+const SearchContainer = styled('form')({
   position: 'relative',
 });
 
@@ -70,13 +70,30 @@ export class Search extends React.Component<SearchProps> {
     placeholder: 'Search',
   };
 
+  private inputRef: React.RefObject<HTMLInputElement>;
+
+  constructor(props: SearchProps) {
+    super(props);
+    this.inputRef = React.createRef();
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onSubmit(e: React.SyntheticEvent) {
+    e.preventDefault();
+    if (this.props.onSubmit) {
+      this.props.onSubmit(this.inputRef.current!.value);
+    }
+  }
+
   render() {
     const {themeColor, highlight, placeholder, value} = this.props;
 
     return (
-      <SearchContainer>
+      <SearchContainer onSubmit={this.onSubmit}>
         <SystemIcon icon={searchIcon} style={iconStyle} />
         <SearchInput
+          type="search"
+          innerRef={this.inputRef}
           placeholder={placeholder}
           value={value}
           themeColor={themeColor}
