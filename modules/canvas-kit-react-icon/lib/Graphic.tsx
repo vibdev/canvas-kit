@@ -1,25 +1,16 @@
 import * as React from 'react';
 import {CanvasGraphic, CanvasIconTypes} from '@workday/design-assets-types';
-import Icon from './Icon';
+import Svg from './Svg';
 import {SpanProps} from './types';
 
 export interface GraphicProps {
-  icon: CanvasGraphic;
-  size?: number;
+  src: CanvasGraphic;
 }
 
 export default class Graphic extends React.Component<SpanProps & GraphicProps> {
   render() {
-    const {icon, size, ...elemProps} = this.props;
+    const {src, ...elemProps} = this.props;
 
-    return (
-      <Icon
-        icon={icon}
-        styles={{}}
-        type={CanvasIconTypes.Graphic}
-        size={size}
-        elemProps={elemProps}
-      />
-    );
+    return <Svg src={src} styles={{}} type={CanvasIconTypes.Graphic} elemProps={elemProps} />;
   }
 }

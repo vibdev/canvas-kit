@@ -1,16 +1,11 @@
 import * as React from 'react';
-import {css, cx} from 'react-emotion';
-import {CSSProperties} from '@workday/canvas-kit-react-core';
 import {CanvasIcon, CanvasIconTypes} from '@workday/design-assets-types';
-import {SpanProps} from './types';
-import {validateIconType} from './utils';
+import Svg, {SvgProps} from './Svg';
 
-export interface IconProps {
+export interface IconProps extends SvgProps {
   icon: CanvasIcon;
-  styles: CSSProperties;
   size?: number;
-  elemProps?: SpanProps;
-  type: CanvasIconTypes;
+  type: CanvasIconTypes.Accent | CanvasIconTypes.Applet | CanvasIconTypes.System;
 }
 
 export default class Icon extends React.Component<IconProps> {
@@ -21,15 +16,11 @@ export default class Icon extends React.Component<IconProps> {
   public render() {
     const {icon, size, styles, type, elemProps} = this.props;
 
-    // Validation for JS
-    try {
-      validateIconType(icon, type);
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
+    const iconStyles = [];
 
-    const iconStyles = [{display: 'inline-block', '& svg': {display: 'block'}}, styles];
+    if (styles) {
+      iconStyles.push(styles);
+    }
 
     if (size) {
       iconStyles.push({
@@ -40,16 +31,6 @@ export default class Icon extends React.Component<IconProps> {
       });
     }
 
-    const iconStyle = css(iconStyles);
-
-    return (
-      <span
-        {...elemProps}
-        dangerouslySetInnerHTML={{__html: icon.svg}}
-        // Need to combine iconStyle with the className prop, otherwise we'll clobber it
-        // (we'll need to do something like this for each HTML <span> prop we explicitly set in this component)
-        className={cx(iconStyle, elemProps!.className)}
-      />
-    );
+    return <Svg src={icon} type={type} elemProps={elemProps} styles={iconStyles} />;
   }
 }
