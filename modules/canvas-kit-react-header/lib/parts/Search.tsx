@@ -30,9 +30,15 @@ export type SearchProps = {
   onSubmit?: (query: string) => void;
 };
 
-const SearchContainer = styled('form')({
-  position: 'relative',
-});
+const SearchContainer = styled('form')<SearchProps>(
+  {
+    position: 'relative',
+    margin: `0 ${spacing.s}`,
+  },
+  ({highlight}) => ({
+    flexGrow: highlight ? 1 : undefined,
+  })
+);
 
 const SearchInput = styled('input')<SearchProps>(
   type.body,
@@ -97,7 +103,7 @@ export class Search extends React.Component<SearchProps> {
       themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
 
     return (
-      <SearchContainer onSubmit={this.onSubmit}>
+      <SearchContainer onSubmit={this.onSubmit} highlight={highlight}>
         <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
         <SearchInput
           type="search"

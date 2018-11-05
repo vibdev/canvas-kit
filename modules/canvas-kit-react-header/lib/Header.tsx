@@ -357,11 +357,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
-    console.log(`${this.props.centeredNav}:${this.props.highlightSearch}`);
-    console.log(!this.props.centeredNav || !this.props.highlightSearch);
     return (
       <HeaderShell {...this.props}>
-        <BrandSlot grow={!this.props.centeredNav || !this.props.highlightSearch}>
+        <BrandSlot grow={!this.props.centeredNav && !this.props.highlightSearch}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
               <Brand {...this.props} />
