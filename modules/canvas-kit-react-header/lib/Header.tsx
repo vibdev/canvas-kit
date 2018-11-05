@@ -372,7 +372,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           <Search
             onSubmit={this.props.onSearchSubmit}
             highlight={this.props.highlightSearch}
-            themeColor={HeaderTheme.White}
+            themeColor={this.props.themeColor}
             placeholder="Search"
           />
         )}

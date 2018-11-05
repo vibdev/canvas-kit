@@ -5,6 +5,7 @@ import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-c
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {searchIcon} from '@workday/canvas-system-icons-web';
+import Header from '../..';
 
 export type SearchProps = {
   /**
@@ -53,6 +54,10 @@ const SearchInput = styled('input')<SearchProps>(
   ({themeColor, highlight}) => ({
     background: themeColor === HeaderTheme.White ? colors.soap200 : 'rgba(0,0,0,0.2)',
     flexGrow: highlight ? 1 : undefined,
+    color: themeColor === HeaderTheme.White ? colors.blackPepper300 : colors.frenchVanilla100,
+    '&::placeholder': {
+      color: themeColor === HeaderTheme.White ? colors.licorice300 : colors.frenchVanilla100,
+    },
   })
 );
 
@@ -88,9 +93,12 @@ export class Search extends React.Component<SearchProps> {
   render() {
     const {themeColor, highlight, placeholder, value} = this.props;
 
+    const iconColor =
+      themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
+
     return (
       <SearchContainer onSubmit={this.onSubmit}>
-        <SystemIcon icon={searchIcon} style={iconStyle} />
+        <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
         <SearchInput
           type="search"
           innerRef={this.inputRef}
