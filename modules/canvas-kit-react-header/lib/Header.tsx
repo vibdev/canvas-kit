@@ -85,7 +85,7 @@ const BrandSlot = styled('div')(
     height: '100%',
   },
   (props: {grow?: boolean}) => ({
-    flexGrow: props.grow ? 'unset' : 1,
+    flexGrow: props.grow ? 1 : 'unset',
   })
 );
 
@@ -357,9 +357,11 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    console.log(`${this.props.centeredNav}:${this.props.highlightSearch}`);
+    console.log(!this.props.centeredNav || !this.props.highlightSearch);
     return (
       <HeaderShell {...this.props}>
-        <BrandSlot grow={this.props.centeredNav}>
+        <BrandSlot grow={!this.props.centeredNav || !this.props.highlightSearch}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
               <Brand {...this.props} />
@@ -371,7 +373,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         {this.props.onSearchSubmit && (
           <Search
             onSubmit={this.props.onSearchSubmit}
-            highlight={this.props.highlightSearch}
+            highlight={this.props.highlightSearch && !this.props.centeredNav}
             themeColor={this.props.themeColor}
             placeholder="Search"
           />
