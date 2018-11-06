@@ -9,6 +9,7 @@ import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/types/lib/SystemIcon';
 import {throttle} from 'lodash';
+import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface HeaderProps {
   /**
@@ -53,21 +54,6 @@ export interface HeaderProps {
 export interface HeaderState {
   screenSize: keyof HeaderProps['breakpoints'];
 }
-
-/**
- * Generates a mediaquery given a breakpoint object
- * @param {Object} breakpoints Specification of breakpoint pixel values for sm, md, lg screens
- * @returns {Object}
- */
-const makeMq = (breakpoints: HeaderProps['breakpoints']) => {
-  const mq: {[key: string]: string} = {};
-
-  Object.keys(breakpoints).forEach(key => {
-    mq[key] = `@media (min-width: ${breakpoints[key]}px)`;
-  });
-
-  return mq;
-};
 
 const HeaderShell = styled('div')<HeaderProps>(
   {
