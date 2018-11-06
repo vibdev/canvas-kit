@@ -194,11 +194,13 @@ Default:
 
 #### `onSearchSubmit: (React.SyntheticEvent) => void`
 
-> A function that accepts a `React.SyntheticEvent` for when the user submits from the search input. A search input will not be rendered if this is not provided.
+> A function that accepts a `React.SyntheticEvent` for when the user submits from the search input.
+> A search input will not be rendered if this is not provided.
 
 #### `highlightSearch: boolean`
 
-> A flag to highlight the search on the left beside the logo. Will only work if `onSearchSubmit` is provided.
+> A flag to highlight the search on the left beside the logo. Will only work if `onSearchSubmit` is
+> provided.
 
 # "Dub" Logo and Title
 

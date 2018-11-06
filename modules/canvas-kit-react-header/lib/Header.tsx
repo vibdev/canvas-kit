@@ -36,10 +36,6 @@ export interface HeaderProps {
    */
   centeredNav?: boolean;
   /**
-   * True if the search input should be left aligned with the logo. False if it should be aligned right
-   */
-  highlightSearch?: boolean;
-  /**
    * An event handler function that gets called when the responsive menu icon is clicked
    */
   onMenuClick?: (e: React.SyntheticEvent) => void;
@@ -359,7 +355,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
       <HeaderShell {...this.props}>
-        <BrandSlot grow={!this.props.centeredNav && !this.props.highlightSearch}>
+        <BrandSlot grow={!this.props.centeredNav && !this.props.children}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
               <Brand {...this.props} />
@@ -371,8 +367,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         {this.props.onSearchSubmit && (
           <Search
             onSubmit={this.props.onSearchSubmit}
-            highlight={this.props.highlightSearch && !this.props.centeredNav}
+            grow={!!this.props.children}
             themeColor={this.props.themeColor}
+            collapse={this.state.screenSize !== 'lg'}
             placeholder="Search"
           />
         )}
