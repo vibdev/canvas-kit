@@ -20,9 +20,9 @@ export type SearchProps = {
    */
   value?: string;
   /**
-   * True if the search input should grow to left align it. False if it should go with the other children.
+   * False if the search input should grow to left align it. True if it should right align.
    */
-  grow?: boolean;
+  rightAlign?: boolean;
   /**
    * True if the search input should be collapsed into a toggle icon (for responsive).
    */
@@ -37,9 +37,11 @@ const SearchContainer = styled('form')<SearchProps>(
   {
     position: 'relative',
     margin: `0 ${spacing.s}`,
+    flexGrow: 1,
   },
-  ({grow}) => ({
-    flexGrow: grow ? 1 : undefined,
+  ({rightAlign}) => ({
+    display: rightAlign ? 'flex' : undefined,
+    maxWidth: rightAlign ? spacingNumbers.l * 10 : undefined,
   })
 );
 
@@ -49,6 +51,7 @@ const SearchInput = styled('input')<SearchProps>(
     padding: spacing.xs,
     paddingLeft: spacingNumbers.xl + spacingNumbers.xxxs,
     maxWidth: spacingNumbers.l * 10,
+    width: '100%',
     height: '40px',
     borderRadius: '3px',
     boxSizing: 'border-box',
@@ -60,7 +63,7 @@ const SearchInput = styled('input')<SearchProps>(
       },
     },
   },
-  ({themeColor, grow, collapse}) => ({
+  ({themeColor, collapse}) => ({
     display: collapse ? 'none' : 'block',
     background: themeColor === HeaderTheme.White ? colors.soap200 : 'rgba(0,0,0,0.2)',
     color: themeColor === HeaderTheme.White ? colors.blackPepper300 : colors.frenchVanilla100,
@@ -100,7 +103,7 @@ export class Search extends React.Component<SearchProps> {
   }
 
   render() {
-    const {themeColor, grow, placeholder, value, collapse} = this.props;
+    const {themeColor, rightAlign, placeholder, value, collapse} = this.props;
 
     const iconColor =
       themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
@@ -125,7 +128,7 @@ export class Search extends React.Component<SearchProps> {
     }
 
     return (
-      <SearchContainer onSubmit={this.onSubmit} grow={grow}>
+      <SearchContainer onSubmit={this.onSubmit} rightAlign={rightAlign}>
         <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
         <SearchInput
           type="search"

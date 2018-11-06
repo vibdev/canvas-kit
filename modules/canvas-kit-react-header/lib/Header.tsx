@@ -190,7 +190,6 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       alignItems: 'center',
       justifyContent: 'flex-end',
       height: '100%',
-      flexGrow: centeredNav ? 1 : 'unset',
 
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
@@ -208,6 +207,9 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       '> *:not(.canvas-header--menu-icon)': {
         display: 'flex',
       },
+    },
+    [mq.lg]: {
+      flexGrow: centeredNav ? 1 : 'unset',
     },
   };
 },                                              navStyle);
@@ -353,9 +355,12 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    const growBrand =
+      this.state.screenSize !== 'lg' || (!this.props.centeredNav && !this.props.children);
+
     return (
       <HeaderShell {...this.props}>
-        <BrandSlot grow={!this.props.centeredNav && !this.props.children}>
+        <BrandSlot grow={growBrand}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
               <Brand {...this.props} />
@@ -367,7 +372,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         {this.props.onSearchSubmit && (
           <Search
             onSubmit={this.props.onSearchSubmit}
-            grow={!!this.props.children}
+            rightAlign={!this.props.children}
             themeColor={this.props.themeColor}
             collapse={this.state.screenSize !== 'lg'}
             placeholder="Search"
