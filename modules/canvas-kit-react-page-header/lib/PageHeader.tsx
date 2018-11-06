@@ -3,11 +3,16 @@ import styled from 'react-emotion';
 import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/commonjs/lib/SystemIcon';
+import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface PageHeaderProps {
   title: string;
   marketing: boolean;
-  // add breakpoints object for responsive
+  breakpoints: {
+    sm: number;
+    md: number;
+    lg: number;
+  };
 }
 
 const Header = styled('header')({
@@ -26,15 +31,25 @@ const Container = styled('div')<PageHeaderProps>(
     height: '100%',
     overflow: 'hidden',
   },
-  ({marketing}) => {
+  ({marketing, breakpoints}) => {
+    const mq = makeMq(breakpoints);
+
     if (marketing) {
       return {
-        padding: '0 100px',
         boxSizing: 'border-box',
         margin: '0 auto',
         width: '100%',
         maxWidth: 1440,
-        // TODO: add resposive stylings
+        padding: `0 ${spacing.m}`,
+        [mq.sm]: {
+          padding: `0 ${spacing.xl}`,
+        },
+        [mq.md]: {
+          padding: `0 ${spacing.xxl}`,
+        },
+        [mq.lg]: {
+          padding: `0 100px`,
+        },
       };
     } else {
       return {
@@ -65,12 +80,28 @@ export default class PageHeader extends React.Component<PageHeaderProps> {
   static defaultProps = {
     title: '',
     marketing: false,
+    breakpoints: {
+      sm: 768,
+      md: 992,
+      lg: 1199,
+    },
   };
 
   private renderChildren(children: React.ReactNode): React.ReactNode {
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
+      }
+
+      // child is now guaranteed to be a valid ReactElement from the check above
+
+      type Props = {children: React.ReactNode};
+      const propsChildren = (child as React.ReactElement<Props>).props.children;
+
+      if (React.Children.count(propsChildren)) {
+        return React.cloneElement(child as React.ReactElement<Props>, {
+          children: this.renderChildren(propsChildren),
+        });
       }
 
       if (child.type === SystemIcon) {

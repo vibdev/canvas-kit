@@ -15,12 +15,20 @@ storiesOf('Canvas Kit/Page Header', module)
     <div className="story">
       <h1 className="section-label">Page Header</h1>
       <PageHeader title="Product Context">
-        <SystemIcon icon={exportIcon} />
-        <SystemIcon icon={fullscreenIcon} />
+        <a href="#">
+          <SystemIcon icon={exportIcon} />
+        </a>
+        <a href="#">
+          <SystemIcon icon={fullscreenIcon} />
+        </a>
       </PageHeader>
       <PageHeader title="Marketing Context" marketing={true}>
-        <SystemIcon icon={exportIcon} />
-        <SystemIcon icon={fullscreenIcon} />
+        <a href="#">
+          <SystemIcon icon={exportIcon} />
+        </a>
+        <a href="#">
+          <SystemIcon icon={fullscreenIcon} />
+        </a>
       </PageHeader>
     </div>
   ));
