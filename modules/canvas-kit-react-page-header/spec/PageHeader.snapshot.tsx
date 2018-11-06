@@ -3,8 +3,14 @@ import * as renderer from 'react-test-renderer';
 import PageHeader from '..';
 
 describe('Page Header Snapshots', () => {
-  test('renders as expected', () => {
+  test('renders a basic PageHeader as expected', () => {
     const component = renderer.create(<PageHeader title="Test Page Header" />);
+    expect(component).toMatchSnapshot();
+  });
+  test('renders a marketing context PageHeader as expected', () => {
+    const component = renderer.create(
+      <PageHeader title="Test Marketing Page Header" marketing={true} />
+    );
     expect(component).toMatchSnapshot();
   });
 });
