@@ -116,11 +116,29 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
   justify-content: space-between;
   height: 100%;
   overflow: hidden;
-  padding: 0 100px;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
+  padding: 0 24px;
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width:992px) {
+  .emotion-2 {
+    padding: 0 64px;
+  }
+}
+
+@media (min-width:1199px) {
+  .emotion-2 {
+    padding: 0 100px;
+  }
 }
 
 <header
