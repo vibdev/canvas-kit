@@ -175,7 +175,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
   const mq = makeMq(breakpoints);
 
   return {
-    marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
+    marginRight: spacing.l,
     '> *': {
       marginRight: 0,
       marginLeft: spacing.s,
@@ -313,6 +313,21 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * @returns {React.ReactNode} The child/children to be rendered
    */
   private renderChildren(children: React.ReactNode): React.ReactNode {
+    if (React.Children.count(children) && this.state.screenSize !== 'lg') {
+      // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
+      const hamburgerIconProps = {
+        color: themes[this.props.themeColor].systemIcon.color,
+        colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+        icon: justifyIcon,
+        onClick: this.props.onMenuClick,
+      };
+
+      // TODO: This needs to get changed to IconButton when we get it restyled for headers
+      return (
+        <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+      );
+    }
+
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
@@ -324,20 +339,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       const propsChildren = (child as React.ReactElement<Props>).props.children;
 
       if (React.Children.count(propsChildren)) {
-        if (child.type === 'nav' && this.state.screenSize !== 'lg') {
-          // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
-          const hamburgerIconProps = {
-            color: themes[this.props.themeColor].systemIcon.color,
-            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-            icon: justifyIcon,
-            onClick: this.props.onMenuClick,
-          };
-
-          // TODO: This needs to get changed to IconButton when we get it restyled for headers
-          return (
-            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
-          );
-        }
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
         });
@@ -358,6 +359,24 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     const growBrand =
       this.state.screenSize !== 'lg' || (!this.props.centeredNav && !this.props.children);
 
+    // Ignore centeredNav if search is enabled
+    const centeredNav = this.props.onSearchSubmit ? false : this.props.centeredNav;
+
+    // Collapse search at sm breakpoint if no children, at md breakpoint if children
+    const collapseSearch =
+      (!this.props.children && this.state.screenSize === 'sm') ||
+      (this.props.children && this.state.screenSize !== 'lg');
+
+    // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
+    // TODO: This needs to get changed to IconButton when we get it restyled for headers
+    const collapseMenu = this.props.children && this.state.screenSize !== 'lg';
+    const hamburgerIconProps = {
+      color: themes[this.props.themeColor].systemIcon.color,
+      colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+      icon: justifyIcon,
+      onClick: this.props.onMenuClick,
+    };
+
     return (
       <HeaderShell {...this.props}>
         <BrandSlot grow={growBrand}>
@@ -374,11 +393,17 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             onSubmit={this.props.onSearchSubmit}
             rightAlign={!this.props.children}
             themeColor={this.props.themeColor}
-            collapse={this.state.screenSize !== 'lg'}
+            collapse={collapseSearch}
             placeholder="Search"
           />
         )}
-        <ChildrenSlot {...this.props}>{this.renderChildren(this.props.children)}</ChildrenSlot>
+        <ChildrenSlot {...this.props} centeredNav={centeredNav}>
+          {collapseMenu ? (
+            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+          ) : (
+            this.renderChildren(this.props.children)
+          )}
+        </ChildrenSlot>
       </HeaderShell>
     );
   }
