@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import PageHeader from '..';
+import PageHeader from '../lib/PageHeader';
 
 describe('Page Header Snapshots', () => {
   test('renders a basic PageHeader as expected', () => {
