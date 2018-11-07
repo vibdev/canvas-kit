@@ -39,5 +39,8 @@
     "@workday/canvas-system-icons-web": "^0.16.8",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
+  },
+  "devDependencies": {
+    "jest-emotion": "^9.2.11"
   }
 }
