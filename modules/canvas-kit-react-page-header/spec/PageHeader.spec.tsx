@@ -76,8 +76,8 @@ describe('Page Header', () => {
     expect(component.instance().renderChildren('string')).toEqual(['string']); // tests !isValidElement branch
     // @ts-ignore
     expect(component.instance().renderChildren(null)).toEqual(null); // tests what happens when no children exist
-    // @ts-ignore
     expect(
+      // @ts-ignore
       component.instance().renderChildren(<SystemIcon className="icon2" icon={fullscreenIcon} />)
     ).toHaveLength(1); // tests handling of SystemIcons
     // @ts-ignore
