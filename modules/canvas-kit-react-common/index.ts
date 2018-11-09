@@ -1,3 +1,3 @@
-export {default as focusRing} from './lib/styles/focus_ring';
-export {makeMq} from './lib/utils/make_mq';
+export {default as focusRing} from './lib/styles/focusRing';
+export {makeMq} from './lib/utils/makeMq';
 export * from './lib/types';
