@@ -104,6 +104,7 @@ export default class PageHeader extends React.Component<PageHeaderProps> {
         });
       }
 
+      // TODO: Should be replaced with icon buttons when ready
       if (child.type === SystemIcon) {
         return React.cloneElement(child as React.ReactElement<SystemIconProps>, {
           color: colors.frenchVanilla100,
