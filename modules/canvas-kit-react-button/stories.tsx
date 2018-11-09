@@ -13,7 +13,7 @@ storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Button</h1>
+      <h1 className="section-label">Canvas Buttons</h1>
       <Button
         buttonType={Button.Types.Primary}
         onClick={() => {
@@ -78,6 +78,24 @@ storiesOf('Canvas Kit/Button', module)
         >
           Growing Secondary Button
         </Button>
+      </div>
+      <br />
+      <h1 className="section-label">UDE Buttons</h1>
+      <Button buttonType={Button.Types.Highlight}>Highlight</Button>
+      <Button buttonType={Button.Types.OutlineBlue}>Outline Blue</Button>
+      <Button buttonType={Button.Types.OutlineDark}>Outline Dark</Button>
+
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonType={Button.Types.OutlineWhite}>Outline White</Button>
       </div>
     </div>
   ));

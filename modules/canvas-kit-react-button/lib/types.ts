@@ -14,4 +14,8 @@ export enum ButtonTypes {
   Primary,
   Secondary,
   Delete,
+  Highlight,
+  OutlineBlue,
+  OutlineDark,
+  OutlineWhite,
 }

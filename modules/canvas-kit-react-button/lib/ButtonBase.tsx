@@ -12,6 +12,79 @@ export const BUTTON_HEIGHT_LARGE: number = 40;
 export const BUTTON_HEIGHT_MEDIUM: number = 24;
 export const BUTTON_HEIGHT_SMALL: number = 18;
 
+// TODO convert these to generic styles
+const highlightStyles = {
+  background: canvas.colors.soap200,
+  border: canvas.colors.soap200,
+  text: canvas.colors.blueberry500,
+  activeBackground: canvas.colors.soap500,
+  activeBorder: canvas.colors.soap500,
+  activeText: canvas.colors.blueberry500,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: canvas.colors.soap100,
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.soap200,
+  focusBorder: canvas.colors.blueberry500,
+  focusText: canvas.colors.blueberry500,
+  hoverBackground: canvas.colors.soap400,
+  hoverBorder: canvas.colors.soap400,
+  hoverText: canvas.colors.blueberry500,
+};
+
+const outlineBlue = {
+  background: 'transparent',
+  border: canvas.colors.blueberry400,
+  text: canvas.colors.blueberry400,
+  activeBackground: canvas.colors.blueberry500,
+  activeBorder: canvas.colors.blueberry500,
+  activeText: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.blueberry400,
+  focusBorder: null,
+  focusText: canvas.colors.frenchVanilla100,
+  hoverBackground: canvas.colors.blueberry400,
+  hoverBorder: canvas.colors.blueberry400,
+  hoverText: canvas.colors.frenchVanilla100,
+};
+
+const outlineDark = {
+  background: 'transparent',
+  border: canvas.colors.soap500,
+  text: canvas.colors.blackPepper400,
+  activeBackground: canvas.colors.licorice600,
+  activeBorder: null,
+  activeText: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.licorice500,
+  focusBorder: canvas.colors.blueberry500,
+  focusText: canvas.colors.frenchVanilla100,
+  hoverBackground: canvas.colors.licorice500,
+  hoverBorder: null,
+  hoverText: canvas.colors.frenchVanilla100,
+};
+
+const outlineWhite = {
+  background: 'transparent',
+  border: canvas.colors.frenchVanilla100,
+  text: canvas.colors.frenchVanilla100,
+  activeBackground: canvas.colors.soap200,
+  activeBorder: canvas.colors.frenchVanilla100,
+  activeText: canvas.colors.blackPepper400,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.frenchVanilla100,
+  focusBorder: canvas.colors.blueberry500,
+  focusText: canvas.colors.blackPepper400,
+  hoverBackground: canvas.colors.frenchVanilla100,
+  hoverBorder: null,
+  hoverText: canvas.colors.blackPepper400,
+};
+
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
   {
@@ -40,15 +113,15 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       backgroundColor: buttonColors.background,
       borderColor: buttonColors.border,
       color: buttonColors.text,
-      ':active, :hover:active': {
-        backgroundColor: buttonColors.activeBackground,
-        borderColor: buttonColors.activeBorder,
-        color: buttonColors.activeText,
-      },
       ':focus, :hover:focus': {
         backgroundColor: buttonColors.focusBackground,
         borderColor: buttonColors.focusBorder,
         color: buttonColors.focusText,
+      },
+      ':active, :focus:active, :hover:active': {
+        backgroundColor: buttonColors.activeBackground,
+        borderColor: buttonColors.activeBorder,
+        color: buttonColors.activeText,
       },
       ':hover': {
         backgroundColor: buttonColors.hoverBackground,
@@ -142,5 +215,13 @@ function getButtonColors(buttonType: ButtonTypes) {
       return canvas.buttonColors.secondary;
     case ButtonTypes.Delete:
       return canvas.buttonColors.delete;
+    case ButtonTypes.Highlight:
+      return highlightStyles;
+    case ButtonTypes.OutlineBlue:
+      return outlineBlue;
+    case ButtonTypes.OutlineDark:
+      return outlineDark;
+    case ButtonTypes.OutlineWhite:
+      return outlineWhite;
   }
 }
