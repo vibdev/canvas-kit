@@ -30,6 +30,7 @@ const Container = styled('div')<PageHeaderProps>(
     justifyContent: 'space-between',
     height: '100%',
     overflow: 'hidden',
+    padding: `0 ${spacing.s}`,
   },
   ({marketing, breakpoints}) => {
     const mq = makeMq(breakpoints);
@@ -40,7 +41,7 @@ const Container = styled('div')<PageHeaderProps>(
         margin: '0 auto',
         width: '100%',
         maxWidth: 1440,
-        padding: `0 ${spacing.m}`,
+
         [mq.sm]: {
           padding: `0 ${spacing.xl}`,
         },
@@ -53,7 +54,9 @@ const Container = styled('div')<PageHeaderProps>(
       };
     } else {
       return {
-        padding: `0 ${spacing.xl}`,
+        [mq.sm]: {
+          padding: `0 ${spacing.xl}`,
+        },
       };
     }
   }

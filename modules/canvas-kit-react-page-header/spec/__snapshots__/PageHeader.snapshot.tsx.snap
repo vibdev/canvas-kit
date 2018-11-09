@@ -24,7 +24,13 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
   justify-content: space-between;
   height: 100%;
   overflow: hidden;
-  padding: 0 40px;
+  padding: 0 16px;
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    padding: 0 40px;
+  }
 }
 
 .emotion-0 {
@@ -116,11 +122,11 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
   justify-content: space-between;
   height: 100%;
   overflow: hidden;
+  padding: 0 16px;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
   max-width: 1440px;
-  padding: 0 24px;
 }
 
 @media (min-width:768px) {
