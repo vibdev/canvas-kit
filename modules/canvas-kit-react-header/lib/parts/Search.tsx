@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import Transition from 'react-transition-group/Transition';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
@@ -36,6 +37,18 @@ export type SearchProps = {
 export interface SearchState {
   mobileToggle: boolean;
 }
+
+const mobileTransition = (duration = 300): Object => ({
+  duration,
+  defaultStyle: {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 0,
+  },
+  transitionStyles: {
+    entering: {opacity: 0},
+    entered: {opacity: 1},
+  },
+});
 
 const SearchContainer = styled('form')<SearchProps>(
   {
@@ -175,26 +188,12 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.setState({mobileToggle: false});
   }
 
-  render() {
-    const {themeColor, rightAlign, placeholder, value, collapse} = this.props;
-
-    const iconColor =
-      themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
-
-    const mobileCloseIconStyle = {
-      left: 'unset',
-      right: spacing.m,
-      cursor: 'pointer',
-    };
-
-    if (collapse && !this.state.mobileToggle) {
+  _renderCollapsed(iconColor: string, iconColorHover: string) {
+    if (!this.state.mobileToggle) {
       const collapsedIconStyle = {
         marginLeft: spacing.m,
         cursor: 'pointer',
       };
-      // TODO: Replace with UDE icon button
-      const iconColorHover =
-        themeColor === HeaderTheme.White ? colors.licorice500 : colors.blueberry100;
 
       return (
         <SystemIcon
@@ -207,33 +206,46 @@ export class Search extends React.Component<SearchProps, SearchState> {
       );
     }
 
+    const mobileCloseIconStyle = {
+      left: 'unset',
+      right: spacing.m,
+      cursor: 'pointer',
+    };
+
+    const {onSubmit, ...props} = this.props;
+
     return (
-      <SearchContainer onSubmit={this.onSubmit} rightAlign={rightAlign} collapse={collapse}>
-        {!this.state.mobileToggle && (
-          <SystemIcon
-            icon={searchIcon}
-            style={iconStyle}
-            color={iconColor}
-            colorHover={iconColor}
-          />
-        )}
-        <SearchInput
-          type="search"
-          innerRef={this.inputRef}
-          placeholder={placeholder}
-          value={value}
-          themeColor={themeColor}
-          collapse={collapse}
+      <SearchContainer onSubmit={onSubmit} rightAlign={rightAlign} collapse={collapse}>
+        <SearchInput {...props} type="search" innerRef={this.inputRef} />
+        <SystemIcon
+          icon={xIcon}
+          style={{...iconStyle, ...mobileCloseIconStyle}}
+          color={iconColor}
+          colorHover={iconColor}
+          onClick={this.closeMobileSearch}
         />
-        {this.state.mobileToggle && (
-          <SystemIcon
-            icon={xIcon}
-            style={{...iconStyle, ...mobileCloseIconStyle}}
-            color={iconColor}
-            colorHover={iconColor}
-            onClick={this.closeMobileSearch}
-          />
-        )}
+      </SearchContainer>
+    );
+  }
+
+  render() {
+    const {onSubmit, ...props} = this.props;
+
+    const iconColor =
+      props.themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
+
+    if (props.collapse) {
+      // TODO: Replace with UDE icon button
+      const iconColorHover =
+        props.themeColor === HeaderTheme.White ? colors.licorice500 : colors.blueberry100;
+
+      return this._renderCollapsed(iconColor, iconColorHover);
+    }
+
+    return (
+      <SearchContainer onSubmit={onSubmit} {...props}>
+        <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
+        <SearchInput type="search" innerRef={this.inputRef} {...props} />
       </SearchContainer>
     );
   }
