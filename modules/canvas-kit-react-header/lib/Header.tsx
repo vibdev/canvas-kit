@@ -67,6 +67,7 @@ const HeaderShell = styled('div')<HeaderProps>(
     ...type.body,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
+    position: 'relative',
   },
   ({variant, themeColor}) => ({
     height: variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
@@ -106,6 +107,7 @@ const navStyle = (props: HeaderProps) => {
       flexGrow: 1,
       justifyContent: 'center',
       height: 'inherit',
+      marginLeft: spacing.xl,
 
       '& ul': {
         color: theme.linkColor,
@@ -175,11 +177,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
   const mq = makeMq(breakpoints);
 
   return {
-    marginRight: spacing.l,
-    '> *': {
-      marginRight: 0,
-      marginLeft: spacing.s,
-    },
+    marginRight: spacing.m,
 
     // TODO: remove this when we get real icon buttons
     '> .canvas-header--menu-icon': {
@@ -191,15 +189,14 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       justifyContent: 'flex-end',
       height: '100%',
 
+      '> *': {
+        marginLeft: spacing.m,
+      },
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
       },
     },
     [mq.md]: {
-      '> *': {
-        margin: `0 ${spacing.s}`,
-      },
-
       '> *:last-child': {
         marginRight: 0,
       },

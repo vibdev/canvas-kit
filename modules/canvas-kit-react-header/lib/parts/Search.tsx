@@ -4,7 +4,7 @@ import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {searchIcon} from '@workday/canvas-system-icons-web';
+import {searchIcon, xIcon} from '@workday/canvas-system-icons-web';
 
 export type SearchProps = {
   /**
@@ -33,16 +33,49 @@ export type SearchProps = {
   onSubmit?: (query: string) => void;
 };
 
+export interface SearchState {
+  mobileToggle: boolean;
+}
+
 const SearchContainer = styled('form')<SearchProps>(
   {
     position: 'relative',
-    margin: `0 ${spacing.s}`,
+    marginLeft: spacing.m,
     flexGrow: 1,
   },
-  ({rightAlign}) => ({
-    display: rightAlign ? 'flex' : undefined,
-    maxWidth: rightAlign ? spacingNumbers.l * 10 : undefined,
-  })
+  ({rightAlign, collapse}) => {
+    const rightAlignStyles = rightAlign
+      ? {
+          display: 'flex',
+          maxWidth: spacingNumbers.l * 10,
+        }
+      : {};
+    const collapseStyles = collapse
+      ? {
+          top: 0,
+          right: 0,
+          left: 0,
+          bottom: 0,
+          margin: 0,
+          position: 'absolute',
+          background: colors.frenchVanilla100,
+          maxWidth: 'unset',
+        }
+      : {};
+    return {...rightAlignStyles, ...collapseStyles};
+    //   ({
+    //   // TODO - use same syntax from search input. Wasn't working with position for some reason
+    //   display: rightAlign ? 'flex' : undefined,
+    //   maxWidth: rightAlign && !collapse ? spacingNumbers.l * 10 : 'unset',
+    //   position: collapse ? 'absolute' : undefined,
+    //   top: collapse ? 0 : undefined,
+    //   right: collapse ? 0 : undefined,
+    //   left: collapse ? 0 : undefined,
+    //   bottom: collapse ? 0 : undefined,
+    //   margin: collapse ? 0 : `0 ${spacing.s}`,
+    //   background: collapse ? colors.frenchVanilla100 : undefined,
+    // })
+  }
 );
 
 const SearchInput = styled('input')<SearchProps>(
@@ -51,6 +84,7 @@ const SearchInput = styled('input')<SearchProps>(
     padding: spacing.xs,
     paddingLeft: spacingNumbers.xl + spacingNumbers.xxxs,
     maxWidth: spacingNumbers.l * 10,
+    minWidth: spacingNumbers.xs * 10,
     width: '100%',
     height: '40px',
     borderRadius: '3px',
@@ -63,14 +97,40 @@ const SearchInput = styled('input')<SearchProps>(
       },
     },
   },
-  ({themeColor, collapse}) => ({
-    display: collapse ? 'none' : 'block',
-    background: themeColor === HeaderTheme.White ? colors.soap200 : 'rgba(0,0,0,0.2)',
-    color: themeColor === HeaderTheme.White ? colors.blackPepper300 : colors.frenchVanilla100,
-    '&::placeholder': {
-      color: themeColor === HeaderTheme.White ? colors.licorice300 : colors.frenchVanilla100,
-    },
-  })
+  ({themeColor, collapse}) => {
+    let background;
+    if (collapse) {
+      background = 'transparent';
+    } else {
+      background = themeColor === HeaderTheme.White ? colors.soap200 : 'rgba(0,0,0,0.2)';
+    }
+
+    const collapseStyles = collapse
+      ? {
+          ...type.h3,
+          fontWeight: 400,
+          background: 'transparent',
+          padding: `${spacing.xs} 0`,
+          margin: `${spacing.xs} ${spacing.s}`,
+          maxWidth: 'unset',
+          '&:not([disabled])': {
+            '&:focus, &:active': {
+              boxShadow: 'none',
+              // TODO: Fix this from flashing on click
+            },
+          },
+        }
+      : {};
+
+    return {
+      background: background,
+      color: themeColor === HeaderTheme.White ? colors.blackPepper300 : colors.frenchVanilla100,
+      '&::placeholder': {
+        color: themeColor === HeaderTheme.White ? colors.licorice300 : colors.frenchVanilla100,
+      },
+      ...collapseStyles,
+    };
+  }
 );
 
 const iconStyle: React.CSSProperties = {
@@ -80,7 +140,7 @@ const iconStyle: React.CSSProperties = {
   left: spacing.xs,
 };
 
-export class Search extends React.Component<SearchProps> {
+export class Search extends React.Component<SearchProps, SearchState> {
   static defaultProps = {
     themeColor: HeaderTheme.White,
     headerHeight: HeaderHeight.Small,
@@ -93,6 +153,11 @@ export class Search extends React.Component<SearchProps> {
     super(props);
     this.inputRef = React.createRef();
     this.onSubmit = this.onSubmit.bind(this);
+    this.openMobileSearch = this.openMobileSearch.bind(this);
+    this.closeMobileSearch = this.closeMobileSearch.bind(this);
+    this.state = {
+      mobileToggle: false,
+    };
   }
 
   onSubmit(e: React.SyntheticEvent) {
@@ -102,15 +167,29 @@ export class Search extends React.Component<SearchProps> {
     }
   }
 
+  openMobileSearch(e: React.SyntheticEvent) {
+    this.setState({mobileToggle: true});
+  }
+
+  closeMobileSearch(e: React.SyntheticEvent) {
+    this.setState({mobileToggle: false});
+  }
+
   render() {
     const {themeColor, rightAlign, placeholder, value, collapse} = this.props;
 
     const iconColor =
       themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
 
-    if (collapse) {
+    const mobileCloseIconStyle = {
+      left: 'unset',
+      right: spacing.m,
+      cursor: 'pointer',
+    };
+
+    if (collapse && !this.state.mobileToggle) {
       const collapsedIconStyle = {
-        margin: `0 ${spacing.s}`,
+        marginLeft: spacing.m,
         cursor: 'pointer',
       };
       // TODO: Replace with UDE icon button
@@ -123,20 +202,38 @@ export class Search extends React.Component<SearchProps> {
           color={iconColor}
           colorHover={iconColorHover}
           style={collapsedIconStyle}
+          onClick={this.openMobileSearch}
         />
       );
     }
 
     return (
-      <SearchContainer onSubmit={this.onSubmit} rightAlign={rightAlign}>
-        <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
+      <SearchContainer onSubmit={this.onSubmit} rightAlign={rightAlign} collapse={collapse}>
+        {!this.state.mobileToggle && (
+          <SystemIcon
+            icon={searchIcon}
+            style={iconStyle}
+            color={iconColor}
+            colorHover={iconColor}
+          />
+        )}
         <SearchInput
           type="search"
           innerRef={this.inputRef}
           placeholder={placeholder}
           value={value}
           themeColor={themeColor}
+          collapse={collapse}
         />
+        {this.state.mobileToggle && (
+          <SystemIcon
+            icon={xIcon}
+            style={{...iconStyle, ...mobileCloseIconStyle}}
+            color={iconColor}
+            colorHover={iconColor}
+            onClick={this.closeMobileSearch}
+          />
+        )}
       </SearchContainer>
     );
   }
