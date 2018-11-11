@@ -353,8 +353,15 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    /* Push everything to the right if:
+       - on tablet and mobile screens
+       - Search isn't enabled and the nav shouldn't be centered
+       - Search is enabled, and there aren't any children
+    */
     const growBrand =
-      this.state.screenSize !== 'lg' || (!this.props.centeredNav && !this.props.children);
+      this.state.screenSize !== 'lg' ||
+      (!this.props.onSearchSubmit && !this.props.centeredNav) ||
+      (this.props.onSearchSubmit && !this.props.children);
 
     // Ignore centeredNav if search is enabled
     const centeredNav = this.props.onSearchSubmit ? false : this.props.centeredNav;
