@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Snapshots renders a tooltip positioned at the top 1`] = `
+<div>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`Tooltip Snapshots renders a tooltip with a carrot 1`] = `
+<div>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`Tooltip Snapshots renders a tooltip with a title 1`] = `
+<div>
+  <div>
+    hello
+  </div>
+</div>
+`;
