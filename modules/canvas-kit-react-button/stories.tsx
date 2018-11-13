@@ -84,7 +84,6 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonType={Button.Types.Highlight}>Highlight</Button>
       <Button buttonType={Button.Types.OutlineBlue}>Outline Blue</Button>
       <Button buttonType={Button.Types.OutlineDark}>Outline Dark</Button>
-
       <div
         className={css({
           display: 'flex',
@@ -96,6 +95,19 @@ storiesOf('Canvas Kit/Button', module)
         })}
       >
         <Button buttonType={Button.Types.OutlineWhite}>Outline White</Button>
+      </div>
+      <Button buttonType={Button.Types.Text}>Text</Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonType={Button.Types.TextDark}>Text Dark</Button>
       </div>
     </div>
   ));

@@ -31,7 +31,7 @@ const highlightStyles = {
   hoverText: canvas.colors.blueberry500,
 };
 
-const outlineBlue = {
+const outlineBlueStyles = {
   background: 'transparent',
   border: canvas.colors.blueberry400,
   text: canvas.colors.blueberry400,
@@ -49,7 +49,7 @@ const outlineBlue = {
   hoverText: canvas.colors.frenchVanilla100,
 };
 
-const outlineDark = {
+const outlineDarkStyles = {
   background: 'transparent',
   border: canvas.colors.soap500,
   text: canvas.colors.blackPepper400,
@@ -67,7 +67,7 @@ const outlineDark = {
   hoverText: canvas.colors.frenchVanilla100,
 };
 
-const outlineWhite = {
+const outlineWhiteStyles = {
   background: 'transparent',
   border: canvas.colors.frenchVanilla100,
   text: canvas.colors.frenchVanilla100,
@@ -85,23 +85,69 @@ const outlineWhite = {
   hoverText: canvas.colors.blackPepper400,
 };
 
+const textStyles = {
+  background: 'transparent',
+  border: 'transparent',
+  text: canvas.colors.blueberry400,
+  activeBackground: 'transparent',
+  activeBorder: 'transparent',
+  activeText: canvas.colors.blueberry500,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.blueberry100,
+  focusBorder: null,
+  focusText: canvas.colors.blueberry400,
+  hoverBackground: 'transparent',
+  hoverBorder: 'transparent',
+  hoverText: canvas.colors.blueberry500,
+};
+
+const textDarkStyles = {
+  background: 'transparent',
+  border: 'transparent',
+  text: canvas.colors.frenchVanilla100,
+  activeBackground: 'transparent',
+  activeBorder: 'transparent',
+  activeText: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBorder: 'transparent',
+  disabledText: canvas.colors.licorice300,
+  focusBackground: canvas.colors.frenchVanilla100,
+  focusBorder: null,
+  focusText: canvas.colors.licorice500,
+  hoverBackground: 'transparent',
+  hoverBorder: 'transparent',
+  hoverText: canvas.colors.frenchVanilla100,
+};
+
+const canvasBase = {
+  boxSizing: 'border-box',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '13px',
+  borderRadius: '999px',
+  border: '1px solid transparent',
+  boxShadow: 'none',
+  position: 'relative',
+  cursor: 'pointer',
+  outline: 'none',
+  transition: 'all 120ms ease-in',
+  '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
+  '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
+};
+
+const textBase = {
+  ...canvasBase,
+  borderRadius: '3px;',
+  '&:hover': {textDecoration: 'underline'},
+};
+
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
-  {
-    boxSizing: 'border-box',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '13px',
-    borderRadius: '999px',
-    border: '1px solid transparent',
-    boxShadow: 'none',
-    position: 'relative',
-    cursor: 'pointer',
-    outline: 'none',
-    transition: 'all 120ms ease-in',
-    '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
-    '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
+  ({buttonType}) => {
+    return getButtonBase(buttonType);
   },
   ({buttonType}) => {
     /* istanbul ignore next line for coverage */
@@ -135,7 +181,8 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       },
       '&:not([disabled])': {
         '&:focus, &:active': {
-          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
+          ...(buttonColors.focusBorder &&
+            (buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1))),
         },
       },
     };
@@ -206,6 +253,23 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
   }
 );
 
+function getButtonBase(buttonType: ButtonTypes) {
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    case ButtonTypes.Secondary:
+    case ButtonTypes.Delete:
+    case ButtonTypes.Highlight:
+    case ButtonTypes.OutlineBlue:
+    case ButtonTypes.OutlineDark:
+    case ButtonTypes.OutlineWhite:
+    default:
+      return canvasBase;
+    case ButtonTypes.Text:
+    case ButtonTypes.TextDark:
+      return textBase;
+  }
+}
+
 function getButtonColors(buttonType: ButtonTypes) {
   switch (buttonType) {
     case ButtonTypes.Primary:
@@ -218,10 +282,14 @@ function getButtonColors(buttonType: ButtonTypes) {
     case ButtonTypes.Highlight:
       return highlightStyles;
     case ButtonTypes.OutlineBlue:
-      return outlineBlue;
+      return outlineBlueStyles;
     case ButtonTypes.OutlineDark:
-      return outlineDark;
+      return outlineDarkStyles;
     case ButtonTypes.OutlineWhite:
-      return outlineWhite;
+      return outlineWhiteStyles;
+    case ButtonTypes.Text:
+      return textStyles;
+    case ButtonTypes.TextDark:
+      return textDarkStyles;
   }
 }

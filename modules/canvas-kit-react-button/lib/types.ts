@@ -18,4 +18,6 @@ export enum ButtonTypes {
   OutlineBlue,
   OutlineDark,
   OutlineWhite,
+  Text,
+  TextDark,
 }
