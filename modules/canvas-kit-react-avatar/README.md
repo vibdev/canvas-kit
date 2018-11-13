@@ -4,7 +4,7 @@ An avatar component to show a users photo with a circular crop.
 
 ### Properties
 
-**`theme` (optional):** `AvatarTheme`  
+**`themeColor` (optional):** `AvatarTheme`  
 Default: `AvatarTheme.Light`
 
 The theme of the avatar if using a default image (Light or Dark).
@@ -14,14 +14,14 @@ Default: `AvatarSize.m`
 
 The px size of the avatar
 
-| Variable | Size  |
-| -------- | ----- |
-| `xs`     | 16px  |
-| `s`      | 24px  |
-| `m`      | 32px  |
-| `l`      | 40px  |
-| `xl`     | 64px  |
-| `xxl`    | 120px |
+| Variable | Size |
+| -------- | ---- |
+| `xs`     | 16   |
+| `s`      | 24   |
+| `m`      | 32   |
+| `l`      | 40   |
+| `xl`     | 64   |
+| `xxl`    | 120  |
 
 **`url` (optional):** `string`
 

@@ -14,9 +14,9 @@ storiesOf('Canvas Kit/Avatar', module)
       <Avatar />
       <Avatar size={Avatar.Size.l} />
       <Avatar size={48} />
-      <Avatar theme={Avatar.Theme.Dark} />
-      <Avatar size={Avatar.Size.l} theme={Avatar.Theme.Dark} />
-      <Avatar size={48} theme={Avatar.Theme.Dark} />
+      <Avatar themeColor={Avatar.ThemeColor.Dark} />
+      <Avatar size={Avatar.Size.l} themeColor={Avatar.ThemeColor.Dark} />
+      <Avatar size={48} themeColor={Avatar.ThemeColor.Dark} />
       <Avatar
         size={48}
         url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
@@ -32,7 +32,7 @@ storiesOf('Canvas Kit/Avatar', module)
           window.alert('Avatar Clicked');
         }}
         size={Avatar.Size.l}
-        theme={Avatar.Theme.Dark}
+        themeColor={Avatar.ThemeColor.Dark}
       />
     </div>
   ));

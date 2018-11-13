@@ -23,7 +23,7 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * An AvatarTheme enum indicating which theme to use for the default state (Light vs. Dark)
    */
-  theme: AvatarTheme;
+  themeColor: AvatarTheme;
   /**
    * An AvatarSize enum or number value indicating the size of the avatar
    */
@@ -57,37 +57,39 @@ const Container = styled('button')<AvatarProps>(
       height: '100%',
     },
   },
-  ({theme, size, url, onClick}) => ({
+  ({themeColor, size, url, onClick}) => ({
     height: size,
     width: size,
     cursor: onClick ? 'pointer' : 'default',
     backgroundColor: url
       ? undefined
-      : theme === AvatarTheme.Dark
+      : themeColor === AvatarTheme.Dark
         ? colors.blueberry400
         : colors.soap300,
     '&:not([disabled])': {
       '&:focus': {
         outline: 'none',
-        ...(theme === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
+        ...(themeColor === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
       },
     },
   })
 );
 
 export default class Avatar extends React.Component<AvatarProps> {
-  static Theme = AvatarTheme;
+  static ThemeColor = AvatarTheme;
   static Size = AvatarSize;
   static defaultProps = {
-    theme: AvatarTheme.Light,
+    themeColor: AvatarTheme.Light,
     size: AvatarSize.m,
   };
 
   render() {
-    const {buttonRef, theme, size, url, onClick} = this.props;
+    const {buttonRef, themeColor, size, url, onClick} = this.props;
 
-    const iconColor = theme === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
-    const iconColorHover = theme === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
+    const iconColor =
+      themeColor === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
+    const iconColorHover =
+      themeColor === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
     const iconSize = size * 0.625;
 
     return (

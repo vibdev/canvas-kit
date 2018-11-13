@@ -12,7 +12,9 @@ describe('Button Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
   test('renders a large, dark Avatar', () => {
-    const component = renderer.create(<Avatar size={Avatar.Size.xl} theme={Avatar.Theme.Dark} />);
+    const component = renderer.create(
+      <Avatar size={Avatar.Size.xl} themeColor={Avatar.ThemeColor.Dark} />
+    );
     expect(component).toMatchSnapshot();
   });
   test('renders an avatar with a photo', () => {
