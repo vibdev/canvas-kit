@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Applet Icon Snapshots renders as expected 1`] = `
+exports[`Graphic Snapshots renders as expected 1`] = `
 .emotion-0 {
   display: inline-block;
 }
