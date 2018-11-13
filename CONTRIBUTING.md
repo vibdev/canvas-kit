@@ -4,15 +4,15 @@ On behalf of the Canvas team, thank you so much for your contribution to this pr
 part of the community. Before you contribute, please take a moment and look through the following
 guidelines:
 
-- Code of Conduct
-- How to Contribute
-- Getting Started
-- Have a Question?
-- First Time Contributing?
-- Pull Request Guidelines
-- Styleguide
-- Signing the CLA
-- Roadmap
+- [Code of Conduct](code-of-conduct)
+- [How to Contribute](how-to-contribute)
+- [Getting Started](getting-started)
+- [Have a Question?](have-a-question)
+- [First Time Contributing?](first-time-contributing)
+- [Pull Request Guidelines](pull-request-guidelines)
+- [Styleguide](styleguide)
+- [Signing the CLA](signing-the-cla)
+- [Roadmap](roadmap)
 
 ## Code of Conduct
 
