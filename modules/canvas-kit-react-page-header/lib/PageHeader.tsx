@@ -86,7 +86,7 @@ export default class PageHeader extends React.Component<PageHeaderProps> {
     breakpoints: {
       sm: 768,
       md: 992,
-      lg: 1199,
+      lg: 1200,
     },
   };
 

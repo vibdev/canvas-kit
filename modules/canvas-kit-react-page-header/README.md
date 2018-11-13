@@ -52,10 +52,10 @@ responsive in all three breakpoints.
 
 **`breakpoints`**  
 Type: `{ sm: number, md: number, lg: number }`  
-Default: `{ sm: 768, md: 992, lg: 1199 }`  
+Default: `{ sm: 768, md: 992, lg: 1200 }`  
 An prop that specifies where each size's minimum window width begins for width-specific spacing
 styles. For example, by default a mobile screen size would be from 0 to 767 pixels, a 'sm' screen is
-from 768 to 991, a 'md' screen is from 992 to 1198 pixels, and a 'lg' screen is 1199 pixels and
+from 768 to 991, a 'md' screen is from 992 to 1198 pixels, and a 'lg' screen is 1200 pixels and
 beyond.
 
 For a non-marketing (default) context, the Page Header only adjusts its spacing styles up until the
