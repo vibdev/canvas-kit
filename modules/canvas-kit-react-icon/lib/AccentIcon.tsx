@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {colors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {colors} from '@workday/canvas-kit-react-core';
 import {CanvasAccentIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import {Interpolation} from 'emotion';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
@@ -12,7 +13,7 @@ export interface AccentIconStyles {
 const styles = ({
   color = colors.blueberry500,
   transparent = false,
-}: AccentIconStyles): CSSProperties => ({
+}: AccentIconStyles): Interpolation => ({
   '& .color-500': {
     fill: color,
   },

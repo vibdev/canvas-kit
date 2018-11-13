@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {iconColors, CSSProperties} from '@workday/canvas-kit-react-core';
+import {iconColors} from '@workday/canvas-kit-react-core';
 import {CanvasSystemIcon, CanvasIconTypes} from '@workday/design-assets-types';
+import {Interpolation} from 'emotion';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
@@ -24,7 +25,7 @@ const styles = ({
   colorHover = iconColors.hover,
   fill,
   fillHover,
-}: SystemIconStyles): CSSProperties => ({
+}: SystemIconStyles): Interpolation => ({
   '& .wd-icon-fill': {
     fill: fill || color,
   },
