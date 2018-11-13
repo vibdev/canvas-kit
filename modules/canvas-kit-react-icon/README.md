@@ -163,19 +163,25 @@ import { colors } from '@workday/canvas-kit-react-core'
 import { Graphic } from '@workday/canvas-kit-react-icon'
 import { badgeAchievementGraphic } from '@workday/canvas-graphics-web
 
-<Graphic icon={badgeAchievementGraphic} />
-<Graphic icon={badgeAchievementGraphic} size={80}/>
+<Graphic src={badgeAchievementGraphic} />
+<Graphic src={badgeAchievementGraphic} width={80}/>
+<Graphic src={badgeAchievementGraphic} height={80}/>
 ```
 
 #### Properties
 
 **Required**
 
-**`icon`:** `CanvasGraphic`  
+**`src`:** `CanvasGraphic`  
 Icon imported from `@workday/canvas-graphics-web`
 
 **Optional**
 
-**`size`**  
-Default: `default sizes vary for each graphic`  
-Graphic size in `px`.
+**`width`**  
+Default: `width of graphic`  
+Graphic width in `px`. Only `width` or `height` may be used to preserve the graphic's ratio. `width`
+takes precedence over `height`.
+
+**`height`**  
+Default: `height of graphic`  
+Graphic height in `px`. If set, `width` will be set to `100%`.
