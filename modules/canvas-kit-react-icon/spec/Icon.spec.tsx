@@ -11,7 +11,7 @@ expect.extend(createMatchers(emotion)); // TODO: This syntax changes in jest-emo
 describe('Icon component', () => {
   test('Mismatched icon types catches error and returns null', () => {
     const consoleErrorSpy = spyOn(global.console, 'error');
-    const component = shallow(<Icon icon={shieldIcon} type={CanvasIconTypes.System} styles={{}} />);
+    const component = shallow(<Icon src={shieldIcon} type={CanvasIconTypes.System} styles={{}} />);
 
     expect(consoleErrorSpy).toHaveBeenCalled();
     expect(component.type()).toBeNull();
@@ -21,7 +21,7 @@ describe('Icon component', () => {
   test('Sets size correctly', () => {
     const size = 14;
     const component = shallow(
-      <Icon icon={shieldIcon} size={size} type={CanvasIconTypes.Accent} styles={{}} />
+      <Icon src={shieldIcon} size={size} type={CanvasIconTypes.Accent} styles={{}} />
     );
     expect(component).toHaveStyleRule('height', size + 'px');
     expect(component).toHaveStyleRule('width', size + 'px');
@@ -29,7 +29,7 @@ describe('Icon component', () => {
   });
 
   test('SVG is set in innerHTML', () => {
-    const component = render(<Icon icon={shieldIcon} type={CanvasIconTypes.Accent} styles={{}} />);
+    const component = render(<Icon src={shieldIcon} type={CanvasIconTypes.Accent} styles={{}} />);
     expect(component.find('svg')).toHaveLength(1);
   });
 
@@ -39,7 +39,7 @@ describe('Icon component', () => {
       className: customClassName,
     };
     const component = shallow(
-      <Icon icon={shieldIcon} elemProps={testProps} type={CanvasIconTypes.Accent} styles={{}} />
+      <Icon src={shieldIcon} elemProps={testProps} type={CanvasIconTypes.Accent} styles={{}} />
     );
     const classNames = component.props().className.split(' ');
 

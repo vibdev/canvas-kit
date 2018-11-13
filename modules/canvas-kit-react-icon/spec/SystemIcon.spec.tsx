@@ -4,11 +4,12 @@ import SystemIcon from '../lib/SystemIcon';
 import Icon from '../lib/Icon';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 import {colors, iconColors} from '@workday/canvas-kit-react-core';
+import {CSSObject} from 'create-emotion';
 
 describe('System Icon', () => {
   test('Defaults styles are set correctly', () => {
     const component = shallow(<SystemIcon icon={activityStreamIcon} />);
-    const componentStyle = component.find(Icon).prop('styles');
+    const componentStyle: any = component.find(Icon).prop('styles');
     expect(componentStyle['& .wd-icon-fill']).toHaveProperty('fill', iconColors.standard);
     expect(componentStyle[':hover .wd-icon-fill']).toHaveProperty('fill', iconColors.hover);
     expect(componentStyle['& .wd-icon-background']).toHaveProperty('fill', 'transparent');
@@ -30,7 +31,7 @@ describe('System Icon', () => {
         backgroundHover={backgroundHover}
       />
     );
-    const componentStyle = component.find(Icon).prop('styles');
+    const componentStyle = component.find(Icon).prop('styles') as CSSObject;
     expect(componentStyle['& .wd-icon-fill']).toHaveProperty('fill', color);
     expect(componentStyle[':hover .wd-icon-fill']).toHaveProperty('fill', colorHover);
     expect(componentStyle['& .wd-icon-accent']).toHaveProperty('fill', color);
@@ -58,7 +59,7 @@ describe('System Icon', () => {
         fillHover={fillHover}
       />
     );
-    const componentStyle = component.find(Icon).prop('styles');
+    const componentStyle = component.find(Icon).prop('styles') as CSSObject;
     expect(componentStyle['& .wd-icon-fill']).toHaveProperty('fill', fill);
     expect(componentStyle[':hover .wd-icon-fill']).toHaveProperty('fill', fillHover);
     expect(componentStyle['& .wd-icon-accent']).toHaveProperty('fill', accent);

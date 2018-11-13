@@ -5,7 +5,7 @@ import {badgeAchievementGraphic} from '@workday/canvas-graphics-web';
 
 describe('Applet Icon Snapshots', () => {
   test('renders as expected', () => {
-    const component = renderer.create(<Graphic icon={badgeAchievementGraphic} />);
+    const component = renderer.create(<Graphic src={badgeAchievementGraphic} />);
     expect(component).toMatchSnapshot();
   });
 });
