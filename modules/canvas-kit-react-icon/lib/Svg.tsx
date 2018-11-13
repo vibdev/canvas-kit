@@ -7,15 +7,14 @@ import {validateIconType} from './utils';
 
 export interface SvgProps {
   src: CanvasIcon;
-  styles?: Array<Interpolation> | Interpolation;
-  elemProps?: SpanProps;
+  styles?: Interpolation;
+  elemProps: SpanProps;
   type: CanvasIconTypes;
 }
 
 export default class Svg extends React.Component<SvgProps> {
   static defaultProps = {
     elemProps: {},
-    styles: {},
   };
 
   public render() {
