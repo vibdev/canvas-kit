@@ -1,7 +1,7 @@
 {
-  "name": "@workday/canvas-kit-react-header",
-  "version": "0.1.2",
-  "description": "A Canvas-styled application header",
+  "name": "@workday/canvas-kit-react-page-header",
+  "version": "0.0.0",
+  "description": "Canvas page header component",
   "homepage": "https://workdaydesign.com",
   "author": "Lynn Chyi <lynn.chyi@workday.com>",
   "license": "Apache-2.0",
@@ -11,7 +11,7 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header"
   },
   "files": [
     "dist/",
@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "canvas-kit-build build-ts index.ts --commonjs"
+    "build": "canvas-kit-build build-ts --commonjs"
   },
   "keywords": [
     "canvas",
@@ -28,25 +28,19 @@
     "react",
     "components",
     "workday",
-    "header"
+    "page-header"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "0.0.8",
     "@workday/canvas-kit-react-core": "1.2.1",
     "@workday/canvas-kit-react-icon": "1.2.12",
     "@workday/canvas-system-icons-web": "^0.16.8",
-    "chroma-js": "^1.4.0",
     "emotion": "^9.2.12",
-    "lodash": "^4.17.11",
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {
-    "@types/chroma-js": "^1.4.0",
-    "@types/lodash": "^4.14.117",
-    "@workday/canvas-kit-react-avatar": "0.1.1",
-    "@workday/canvas-kit-react-button": "0.15.13"
+    "jest-emotion": "^9.2.11"
   }
 }
