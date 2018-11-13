@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {colors} from '@workday/canvas-kit-react-core';
 import {CanvasAccentIcon, CanvasIconTypes} from '@workday/design-assets-types';
-import {Interpolation} from 'emotion';
+import {CSSObject} from 'create-emotion';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
@@ -10,10 +10,10 @@ export interface AccentIconStyles {
   transparent?: boolean;
 }
 
-const styles = ({
+export const accentIconStyles = ({
   color = colors.blueberry500,
   transparent = false,
-}: AccentIconStyles): Interpolation => ({
+}: AccentIconStyles): CSSObject => ({
   '& .color-500': {
     fill: color,
   },
@@ -35,7 +35,7 @@ export default class AccentIcon extends React.Component<SpanProps & AccentIconPr
       <Icon
         src={icon}
         type={CanvasIconTypes.Accent}
-        styles={styles({color, transparent})}
+        styles={accentIconStyles({color, transparent})}
         size={size}
         elemProps={elemProps}
       />

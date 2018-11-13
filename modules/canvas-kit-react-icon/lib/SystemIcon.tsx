@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {iconColors} from '@workday/canvas-kit-react-core';
 import {CanvasSystemIcon, CanvasIconTypes} from '@workday/design-assets-types';
-import {Interpolation} from 'emotion';
+import {CSSObject} from 'create-emotion';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
@@ -16,7 +16,7 @@ export interface SystemIconStyles {
   fillHover?: string;
 }
 
-const styles = ({
+export const systemIconStyles = ({
   accent,
   accentHover,
   background = 'transparent',
@@ -25,7 +25,7 @@ const styles = ({
   colorHover = iconColors.hover,
   fill,
   fillHover,
-}: SystemIconStyles): Interpolation => ({
+}: SystemIconStyles): CSSObject => ({
   '& .wd-icon-fill': {
     fill: fill || color,
   },
@@ -67,7 +67,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
       ...elemProps
     } = this.props;
 
-    const style = styles({
+    const style = systemIconStyles({
       accent,
       accentHover,
       background,

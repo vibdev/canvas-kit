@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {colors, BrandingColors} from '@workday/canvas-kit-react-core';
 import {CanvasAppletIcon, CanvasIconTypes} from '@workday/design-assets-types';
-import {Interpolation} from 'emotion';
+import {CSSObject} from 'create-emotion';
 import Icon from './Icon';
 import {SpanProps} from './types';
 
@@ -11,7 +11,9 @@ export interface AppletIconStyles {
 
 type CanvasColor = Exclude<keyof typeof colors, 'gradients' | 'primary'>;
 
-const styles = ({color = BrandingColors.Blueberry}: AppletIconStyles): Interpolation => {
+export const appletIconStyles = ({
+  color = BrandingColors.Blueberry,
+}: AppletIconStyles): CSSObject => {
   // Check if valid color
   if (!Object.values(BrandingColors).includes(color)) {
     throw Error(`Color "${color}" not found`);
@@ -62,7 +64,7 @@ export default class AppletIcon extends React.Component<SpanProps & AppletIconPr
       <Icon
         src={icon}
         type={CanvasIconTypes.Applet}
-        styles={styles({color})}
+        styles={appletIconStyles({color})}
         size={size}
         elemProps={elemProps}
       />
