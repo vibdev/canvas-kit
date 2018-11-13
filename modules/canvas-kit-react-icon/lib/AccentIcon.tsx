@@ -32,7 +32,7 @@ export default class AccentIcon extends React.Component<SpanProps & AccentIconPr
 
     return (
       <Icon
-        icon={icon}
+        src={icon}
         type={CanvasIconTypes.Accent}
         styles={styles({color, transparent})}
         size={size}

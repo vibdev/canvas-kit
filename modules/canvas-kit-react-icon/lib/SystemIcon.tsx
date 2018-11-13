@@ -79,7 +79,7 @@ export default class SystemIcon extends React.Component<SpanProps & SystemIconPr
 
     return (
       <Icon
-        icon={icon}
+        src={icon}
         type={CanvasIconTypes.System}
         size={size}
         styles={style}

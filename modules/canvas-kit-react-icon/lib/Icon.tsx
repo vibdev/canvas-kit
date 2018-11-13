@@ -3,7 +3,7 @@ import {CanvasIcon, CanvasIconTypes} from '@workday/design-assets-types';
 import Svg, {SvgProps} from './Svg';
 
 export interface IconProps extends SvgProps {
-  icon: CanvasIcon;
+  src: CanvasIcon;
   size?: number;
   type: CanvasIconTypes.Accent | CanvasIconTypes.Applet | CanvasIconTypes.System;
 }
@@ -14,7 +14,7 @@ export default class Icon extends React.Component<IconProps> {
   };
 
   public render() {
-    const {icon, size, styles, type, elemProps} = this.props;
+    const {src, size, styles, type, elemProps} = this.props;
 
     const iconStyles = [];
 
@@ -31,6 +31,6 @@ export default class Icon extends React.Component<IconProps> {
       });
     }
 
-    return <Svg src={icon} type={type} elemProps={elemProps} styles={iconStyles} />;
+    return <Svg src={src} type={type} elemProps={elemProps} styles={iconStyles} />;
   }
 }

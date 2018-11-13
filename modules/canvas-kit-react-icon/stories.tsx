@@ -55,9 +55,8 @@ storiesOf('Canvas Kit/Icon', module)
       <SystemIcon icon={activityStreamIcon} size={48} />
 
       <h2>Graphic</h2>
-      <Graphic icon={badgeAchievementGraphic} />
-      <Graphic icon={badgeAchievementGraphic} size={80} />
+      <Graphic src={badgeAchievementGraphic} />
       <br />
-      <Graphic icon={emptyStateCheckmarkCircleGraphic} />
+      <Graphic src={emptyStateCheckmarkCircleGraphic} />
     </div>
   ));
