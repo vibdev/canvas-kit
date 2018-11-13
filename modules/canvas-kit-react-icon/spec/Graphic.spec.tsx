@@ -5,7 +5,7 @@ import Svg from '../lib/Svg';
 import {badgeAchievementGraphic} from '@workday/canvas-graphics-web';
 
 describe('Graphic', () => {
-  test('Icon is of type graphic and respects size', () => {
+  test('Icon is of type graphic', () => {
     const component = shallow(<Graphic src={badgeAchievementGraphic} />);
     expect(component.find(Svg).prop('type')).toEqual('graphic');
     component.unmount();

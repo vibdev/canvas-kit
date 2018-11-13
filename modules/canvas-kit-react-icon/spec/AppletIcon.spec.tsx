@@ -1,7 +1,4 @@
-import * as React from 'react';
-import {shallow} from 'enzyme';
-import AppletIcon from '../lib/AppletIcon';
-import {benefitsIcon} from '@workday/canvas-applet-icons-web';
+import {appletIconStyles} from '../lib/AppletIcon';
 
 describe('Applet Icon', () => {
   test('Throws error if using unofficial color names', () => {
@@ -9,9 +6,8 @@ describe('Applet Icon', () => {
 
     const iconOfUnknownColor = () => {
       // @ts-ignore TS catches error, so we have to squelch to test the throw
-      const component = shallow(<AppletIcon icon={benefitsIcon} color={unknownColor} />);
+      appletIconStyles({color: unknownColor});
       // in case it doesn't throw
-      component.unmount();
     };
 
     expect(iconOfUnknownColor).toThrow();
