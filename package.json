@@ -61,7 +61,7 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
-    "lerna-publish": "lerna publish --exact --skip-npm --conventional-commits",
+    "lerna-publish": "lerna publish --skip-npm --conventional-commits",
     "build-storybook": "build-storybook -c .storybook -o docs",
     "lint": "tslint --project tsconfig.json",
     "format:prettier": "prettier --config=./.prettierrc --ignore-path=./.prettierignore \"**/*.{js,jsx,json,ts,tsx,md}\" --write",
