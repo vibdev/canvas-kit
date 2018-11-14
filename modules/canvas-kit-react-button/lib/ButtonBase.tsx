@@ -253,6 +253,24 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
   }
 );
 
+export const ButtonDataLabel = styled('span')<ButtonProps>(({buttonType}) => {
+  return {
+    position: 'relative',
+    ':hover:active': {
+      backgroundColor: 'transparent',
+    },
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    fontWeight: 200,
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    paddingLeft: '12px',
+    fontSize: '10px',
+  };
+});
+
 function getButtonBase(buttonType: ButtonTypes) {
   switch (buttonType) {
     case ButtonTypes.Primary:
