@@ -453,7 +453,7 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
   integrity sha1-hTIeql0/I00kMNyz5Fv30vCfVtA=
 
-"@workday/canvas-colors-web@^0.15.4", "@workday/canvas-colors-web@~0.15.3":
+"@workday/canvas-colors-web@^0.15.4":
   version "0.15.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.15.4.tgz#6bb91eebe2385ba8541b4648d1e5bb400c709b81"
   integrity sha1-a7ke6+I4W6hUG0ZI0eW7QAxwm4E=
@@ -465,11 +465,6 @@
   version "0.12.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.12.2.tgz#0c471b272737b324da54e4cfedf168ac54ee5353"
   integrity sha1-DEcbJyc3syTaVOTP7fForFTuU1M=
-
-"@workday/canvas-depth-web@^0.14.0":
-  version "0.14.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.14.0.tgz#0442265ddaedc228aa4c016a3591d92d4e271096"
-  integrity sha1-BEImXdrtwiiqTAFqNZHZLU4nEJY=
 
 "@workday/canvas-depth-web@^0.15.0":
   version "0.15.0"
@@ -517,41 +512,6 @@
   integrity sha1-nO7jIjW/XoSxjVKTQJlT0rk9ce4=
   dependencies:
     "@workday/canvas-kit-css-core" "2.0.0"
-
-"@workday/canvas-kit-react-button@0.15.5":
-  version "0.15.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-button/-/@workday/canvas-kit-react-button-0.15.5.tgz#fcffd61108fdd5da7aa585f7af4ad6bff9cf84be"
-  integrity sha1-/P/WEQj91dp6pYX3r0rWv/nPhL4=
-  dependencies:
-    "@workday/canvas-kit-react-common" "0.0.3"
-    "@workday/canvas-kit-react-core" "1.1.1"
-    emotion "^9.2.6"
-    react-emotion "^9.2.6"
-
-"@workday/canvas-kit-react-common@0.0.3":
-  version "0.0.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-common/-/@workday/canvas-kit-react-common-0.0.3.tgz#907251289896de11cbec8f4c0cd147701aec8e86"
-  integrity sha1-kHJRKJiW3hHL7I9MDNFHcBrsjoY=
-  dependencies:
-    "@workday/canvas-kit-react-core" "^1.1.1"
-    emotion "^9.2.12"
-    react-emotion "^9.2.12"
-
-"@workday/canvas-kit-react-core@1.1.1":
-  version "1.1.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-core/-/@workday/canvas-kit-react-core-1.1.1.tgz#8144a02b79f7b241ccb4eb48fc08f0347d95d88b"
-  integrity sha1-gUSgK3n3skHMtOtI/AjwNH2V2Is=
-  dependencies:
-    "@workday/canvas-colors-web" "~0.15.3"
-    "@workday/canvas-depth-web" "^0.14.0"
-    "@workday/canvas-space-web" "^0.14.0"
-    emotion "^9.2.6"
-    glamorous "^4.12.3"
-
-"@workday/canvas-space-web@^0.14.0":
-  version "0.14.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.14.0.tgz#6ff245dd21809c2c2225f1d5aa601b3cbcc5ef5a"
-  integrity sha1-b/JF3SGAnCwiJfHVqmAbPLzF71o=
 
 "@workday/canvas-space-web@^0.15.0":
   version "0.15.0"
@@ -5017,7 +4977,7 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.12.1, glamorous@^4.12.3:
+glamorous@^4.12.1:
   version "4.13.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/glamorous/-/glamorous-4.13.1.tgz#8909afcbc7f09133c6eb26bedcc1250c1f774312"
   integrity sha1-iQmvy8fwkTPG6ya+3MElDB93QxI=
