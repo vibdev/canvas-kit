@@ -32,5 +32,10 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-css-core": "^1.2.1",
+    "emotion": "^9.2.12",
+    "react-emotion": "^9.2.12"
   }
 }

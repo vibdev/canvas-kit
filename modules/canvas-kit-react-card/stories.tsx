@@ -11,6 +11,6 @@ storiesOf('Canvas Kit/Card', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Card</h1>
-      <Card />
+      <Card title="Card Title">Card</Card>
     </div>
   ));
