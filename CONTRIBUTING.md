@@ -24,6 +24,18 @@ uphold this [code of conduct](./CODE_OF_CONDUCT.md).
 
 ### Open Development
 
+All work on the Canvas Kit happens directly on
+[GitHub](https://ghe.megaleo.com/design/canvas-kit-react). Both core team members and external
+contributors send pull requests which go through the same review process. Any and all issues are
+public and available for discussion.
+
+### Versioning
+
+The Canvas Kit follows [semantic versioning](http://semver.org/) and is enforced automatically by
+[conventional commits](https://www.conventionalcommits.org/). All commit messages must follow the
+
+Each module is independently versioned using [Lerna](https://github.com/lerna/lerna).
+
 ### Getting Started
 
 ### Have a Question?
