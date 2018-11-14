@@ -109,5 +109,29 @@ storiesOf('Canvas Kit/Button', module)
       >
         <Button buttonType={Button.Types.TextDark}>Text Dark</Button>
       </div>
+      <h1 className="section-label">UDE Data Labels</h1>
+      <Button buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
+        Highlight
+      </Button>
+      <Button buttonType={Button.Types.OutlineBlue} dataLabel={'2:00'}>
+        Outline Blue
+      </Button>
+      <Button buttonType={Button.Types.OutlineDark} dataLabel={'5:00'}>
+        Outline Dark
+      </Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonType={Button.Types.OutlineWhite} dataLabel={'3:00'}>
+          Outline White
+        </Button>
+      </div>
     </div>
   ));
