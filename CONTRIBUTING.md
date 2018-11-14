@@ -18,7 +18,7 @@ guidelines:
 
 At Workday, we are committed to a culture of integrity, innovation, and fun. That culture extends to
 the community that we are building here through Canvas. By participating in it, you are expected to
-uphold this [code of conduct]().
+uphold this [code of conduct](./CODE_OF_CONDUCT.md).
 
 ## How to Contribute
 
