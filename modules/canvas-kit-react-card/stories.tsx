@@ -12,9 +12,15 @@ const cards = Array.from(Array(12).keys()).map(size => (
 
 storiesOf('Canvas Kit/Card', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Card</h1>
       {cards}
+    </div>
+  ))
+  .add('No Padding', () => (
+    <div className="story">
+      <h1 className="section-label">Card</h1>
+      <Card title="Title" size={4} padding={0} />
     </div>
   ));
