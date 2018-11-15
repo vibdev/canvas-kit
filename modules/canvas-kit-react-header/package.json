@@ -34,6 +34,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
+    "@types/react-transition-group": "^2.0.14",
     "@workday/canvas-kit-react-common": "0.1.1",
     "@workday/canvas-kit-react-core": "1.4.0",
     "@workday/canvas-kit-react-icon": "1.4.4",
@@ -41,7 +42,8 @@
     "chroma-js": "^1.4.0",
     "emotion": "^9.2.12",
     "lodash-es": "^4.17.11",
-    "react-emotion": "^9.2.12"
+    "react-emotion": "^9.2.12",
+    "react-transition-group": "^2.5.0"
   },
   "devDependencies": {
     "@types/chroma-js": "^1.4.0",

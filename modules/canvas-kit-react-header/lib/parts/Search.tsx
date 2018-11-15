@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import Transition from 'react-transition-group/Transition';
+import {CSSTransition} from 'react-transition-group';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
@@ -38,17 +38,7 @@ export interface SearchState {
   mobileToggle: boolean;
 }
 
-const mobileTransition = (duration = 300): Object => ({
-  duration,
-  defaultStyle: {
-    transition: `opacity ${duration}ms ease-in-out`,
-    opacity: 0,
-  },
-  transitionStyles: {
-    entering: {opacity: 0},
-    entered: {opacity: 1},
-  },
-});
+const mobileTransitionDuration = 250;
 
 const SearchContainer = styled('form')<SearchProps>(
   {
@@ -73,6 +63,24 @@ const SearchContainer = styled('form')<SearchProps>(
           position: 'absolute',
           background: colors.frenchVanilla100,
           maxWidth: 'unset',
+          '&.search-enter': {
+            opacity: 0,
+            transform: 'translateY(-4px)',
+          },
+          '&.search-enter-active': {
+            opacity: 1,
+            transform: 'translateY(0)',
+            transition: `all ${mobileTransitionDuration}ms`,
+          },
+          '&.search-exit': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+          '&.search-exit-active': {
+            opacity: 0,
+            transform: 'translateY(-4px)',
+            transition: `all ${mobileTransitionDuration}ms`,
+          },
         }
       : {};
     return {...rightAlignStyles, ...collapseStyles};
@@ -189,24 +197,12 @@ export class Search extends React.Component<SearchProps, SearchState> {
   }
 
   _renderCollapsed(iconColor: string, iconColorHover: string) {
-    if (!this.state.mobileToggle) {
-      const collapsedIconStyle = {
-        marginLeft: spacing.m,
-        cursor: 'pointer',
-      };
+    const collapsedIconStyle = {
+      marginLeft: spacing.m,
+      cursor: 'pointer',
+    };
 
-      return (
-        <SystemIcon
-          icon={searchIcon}
-          color={iconColor}
-          colorHover={iconColorHover}
-          style={collapsedIconStyle}
-          onClick={this.openMobileSearch}
-        />
-      );
-    }
-
-    const mobileCloseIconStyle = {
+    const closeIconStyle = {
       left: 'unset',
       right: spacing.m,
       cursor: 'pointer',
@@ -215,16 +211,34 @@ export class Search extends React.Component<SearchProps, SearchState> {
     const {onSubmit, ...props} = this.props;
 
     return (
-      <SearchContainer onSubmit={onSubmit} rightAlign={rightAlign} collapse={collapse}>
-        <SearchInput {...props} type="search" innerRef={this.inputRef} />
+      <React.Fragment>
         <SystemIcon
-          icon={xIcon}
-          style={{...iconStyle, ...mobileCloseIconStyle}}
+          icon={searchIcon}
           color={iconColor}
-          colorHover={iconColor}
-          onClick={this.closeMobileSearch}
+          colorHover={iconColorHover}
+          style={collapsedIconStyle}
+          onClick={this.openMobileSearch}
         />
-      </SearchContainer>
+        <CSSTransition
+          in={this.state.mobileToggle}
+          classNames="search"
+          timeout={mobileTransitionDuration}
+          appear={true}
+          mountOnEnter={true}
+          unmountOnExit={true}
+        >
+          <SearchContainer onSubmit={onSubmit} {...props}>
+            <SearchInput {...props} type="search" innerRef={this.inputRef} />
+            <SystemIcon
+              icon={xIcon}
+              style={{...iconStyle, ...closeIconStyle}}
+              color={iconColor}
+              colorHover={iconColor}
+              onClick={this.closeMobileSearch}
+            />
+          </SearchContainer>
+        </CSSTransition>
+      </React.Fragment>
     );
   }
 
