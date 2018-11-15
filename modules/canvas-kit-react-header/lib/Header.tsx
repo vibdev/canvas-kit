@@ -353,6 +353,8 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    const {onMenuClick, onSearchSubmit, ...props} = this.props;
+
     /* Push everything to the right if:
        - on tablet and mobile screens
        - Search isn't enabled and the nav shouldn't be centered
@@ -360,11 +362,11 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     */
     const growBrand =
       this.state.screenSize !== 'lg' ||
-      (!this.props.onSearchSubmit && !this.props.centeredNav) ||
-      (this.props.onSearchSubmit && !this.props.children);
+      (!onSearchSubmit && !this.props.centeredNav) ||
+      (onSearchSubmit && !this.props.children);
 
     // Ignore centeredNav if search is enabled
-    const centeredNav = this.props.onSearchSubmit ? false : this.props.centeredNav;
+    const centeredNav = onSearchSubmit ? false : this.props.centeredNav;
 
     // Collapse search at sm breakpoint if no children, at md breakpoint if children
     const collapseSearch =
@@ -382,26 +384,26 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     };
 
     return (
-      <HeaderShell {...this.props}>
+      <HeaderShell {...props}>
         <BrandSlot grow={growBrand}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
-              <Brand {...this.props} />
+              <Brand {...props} />
             </BrandLink>
           ) : (
-            <Brand {...this.props} />
+            <Brand {...props} />
           )}
         </BrandSlot>
-        {this.props.onSearchSubmit && (
+        {onSearchSubmit && (
           <Search
-            onSubmit={this.props.onSearchSubmit}
+            onSubmit={onSearchSubmit}
             rightAlign={!this.props.children}
             themeColor={this.props.themeColor}
             collapse={collapseSearch}
             placeholder="Search"
           />
         )}
-        <ChildrenSlot {...this.props} centeredNav={centeredNav}>
+        <ChildrenSlot {...props} centeredNav={centeredNav}>
           {collapseMenu ? (
             <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
           ) : (
