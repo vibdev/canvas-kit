@@ -37,7 +37,7 @@ export default class Svg extends React.Component<SvgProps> {
         dangerouslySetInnerHTML={{__html: src.svg}}
         // Need to combine iconStyle with the className prop, otherwise we'll clobber it
         // (we'll need to do something like this for each HTML <span> prop we explicitly set in this component)
-        className={cx(assetStyle, elemProps!.className)}
+        className={cx(assetStyle, elemProps.className)}
       />
     );
   }
