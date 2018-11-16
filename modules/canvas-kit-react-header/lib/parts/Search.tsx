@@ -253,7 +253,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
     }
 
     return (
-      <SearchContainer onSubmit={onSubmit} {...props}>
+      <SearchContainer onSubmit={this.onSubmit} {...props}>
         <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
         <SearchInput type="search" innerRef={this.inputRef} {...props} />
       </SearchContainer>
