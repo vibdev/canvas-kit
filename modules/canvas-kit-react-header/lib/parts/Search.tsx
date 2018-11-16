@@ -80,18 +80,6 @@ const SearchContainer = styled('form')<SearchProps>(
         }
       : {};
     return {...rightAlignStyles, ...collapseStyles};
-    //   ({
-    //   // TODO - use same syntax from search input. Wasn't working with position for some reason
-    //   display: rightAlign ? 'flex' : undefined,
-    //   maxWidth: rightAlign && !collapse ? spacingNumbers.l * 10 : 'unset',
-    //   position: collapse ? 'absolute' : undefined,
-    //   top: collapse ? 0 : undefined,
-    //   right: collapse ? 0 : undefined,
-    //   left: collapse ? 0 : undefined,
-    //   bottom: collapse ? 0 : undefined,
-    //   margin: collapse ? 0 : `0 ${spacing.s}`,
-    //   background: collapse ? colors.frenchVanilla100 : undefined,
-    // })
   }
 );
 
@@ -108,15 +96,18 @@ const SearchInput = styled('input')<SearchProps>(
     boxSizing: 'border-box',
     border: 'none',
     WebkitAppearance: 'none',
-    '&:not([disabled])': {
-      '&:focus, &:active': {
-        outline: 'none',
-        ...focusRing(),
-      },
-    },
   },
   ({themeColor, collapse}) => {
     const inputColors = getInputColors(themeColor, collapse!);
+
+    const focusStyles = {
+      '&:not([disabled])': {
+        '&:focus, &:active': {
+          outline: 'none',
+          boxShadow: collapse ? undefined : focusRing().boxShadow,
+        },
+      },
+    };
 
     const collapseStyles = collapse
       ? {
@@ -130,12 +121,6 @@ const SearchInput = styled('input')<SearchProps>(
           '&::-webkit-search-cancel-button': {
             display: 'none',
           },
-          '&:not([disabled])': {
-            '&:focus, &:active': {
-              boxShadow: 'none',
-              // TODO: Fix this from flashing on click
-            },
-          },
         }
       : {};
 
@@ -145,6 +130,7 @@ const SearchInput = styled('input')<SearchProps>(
       '&::placeholder': {
         color: inputColors.placeholderColor,
       },
+      ...focusStyles,
       ...collapseStyles,
     };
   }
