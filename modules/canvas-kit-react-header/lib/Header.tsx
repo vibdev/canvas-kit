@@ -369,9 +369,10 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     const centeredNav = onSearchSubmit ? false : this.props.centeredNav;
 
     // Collapse search at sm breakpoint if no children, at md breakpoint if children
-    const collapseSearch =
+    const collapseSearch = Boolean(
       (!this.props.children && this.state.screenSize === 'sm') ||
-      (this.props.children && this.state.screenSize !== 'lg');
+        (this.props.children && this.state.screenSize !== 'lg')
+    );
 
     // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
     // TODO: This needs to get changed to IconButton when we get it restyled for headers
@@ -396,7 +397,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         </BrandSlot>
         {onSearchSubmit && (
           <Search
-            onSubmit={onSearchSubmit}
+            onSearchSubmit={onSearchSubmit}
             rightAlign={!this.props.children}
             themeColor={this.props.themeColor}
             collapse={collapseSearch}

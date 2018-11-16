@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import {CSSObject} from 'create-emotion';
 import {CSSTransition} from 'react-transition-group';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
@@ -29,9 +30,9 @@ export type SearchProps = {
    */
   collapse?: boolean;
   /**
-   * An event handler function that gets called when the search input is submitted
+   * An function that gets called and passed the current input value when the search form is submitted
    */
-  onSubmit?: (query: string) => void;
+  onSearchSubmit?: (query: string) => void;
 };
 
 export interface SearchState {
@@ -47,13 +48,13 @@ const SearchContainer = styled('form')<SearchProps>(
     flexGrow: 1,
   },
   ({rightAlign, collapse}) => {
-    const rightAlignStyles = rightAlign
+    const rightAlignStyles: CSSObject = rightAlign
       ? {
           display: 'flex',
           maxWidth: spacingNumbers.l * 10,
         }
       : {};
-    const collapseStyles = collapse
+    const collapseStyles: CSSObject = collapse
       ? {
           top: 0,
           right: 0,
@@ -155,7 +156,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
   constructor(props: SearchProps) {
     super(props);
     this.inputRef = React.createRef();
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSearchSubmit = this.onSearchSubmit.bind(this);
     this.openMobileSearch = this.openMobileSearch.bind(this);
     this.closeMobileSearch = this.closeMobileSearch.bind(this);
     this.state = {
@@ -163,10 +164,10 @@ export class Search extends React.Component<SearchProps, SearchState> {
     };
   }
 
-  onSubmit(e: React.SyntheticEvent) {
+  onSearchSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
-    if (this.props.onSubmit) {
-      this.props.onSubmit(this.inputRef.current!.value);
+    if (this.props.onSearchSubmit) {
+      this.props.onSearchSubmit(this.inputRef.current!.value);
     }
   }
 
@@ -190,7 +191,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
       cursor: 'pointer',
     };
 
-    const {onSubmit, ...props} = this.props;
+    const {onSearchSubmit, ...props} = this.props;
 
     return (
       <React.Fragment>
@@ -209,7 +210,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
           mountOnEnter={true}
           unmountOnExit={true}
         >
-          <SearchContainer onSubmit={onSubmit} {...props}>
+          <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
             <SearchInput {...props} type="search" innerRef={this.inputRef} />
             <SystemIcon
               icon={xIcon}
@@ -225,7 +226,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
   }
 
   render() {
-    const {onSubmit, ...props} = this.props;
+    const {onSearchSubmit, ...props} = this.props;
 
     const iconColor =
       props.themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
@@ -239,7 +240,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
     }
 
     return (
-      <SearchContainer onSubmit={this.onSubmit} {...props}>
+      <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
         <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
         <SearchInput type="search" innerRef={this.inputRef} {...props} />
       </SearchContainer>
