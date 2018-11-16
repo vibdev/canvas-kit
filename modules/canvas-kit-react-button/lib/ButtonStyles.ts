@@ -16,6 +16,12 @@ export const highlightColors = {
   hoverBackground: canvas.colors.soap400,
   hoverBorder: canvas.colors.soap400,
   hoverText: canvas.colors.blueberry500,
+  iconColors: {
+    color: canvas.colors.blueberry500,
+    colorHover: canvas.colors.blueberry500,
+    colorActive: canvas.colors.blueberry500,
+    colorFocus: canvas.colors.blueberry500,
+  },
 };
 
 export const outlineBlueColors = {
@@ -34,6 +40,12 @@ export const outlineBlueColors = {
   hoverBackground: canvas.colors.blueberry400,
   hoverBorder: canvas.colors.blueberry400,
   hoverText: canvas.colors.frenchVanilla100,
+  iconColors: {
+    color: canvas.colors.blueberry400,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.frenchVanilla100,
+  },
 };
 
 export const outlineDarkColors = {
@@ -52,6 +64,12 @@ export const outlineDarkColors = {
   hoverBackground: canvas.colors.licorice500,
   hoverBorder: null,
   hoverText: canvas.colors.frenchVanilla100,
+  iconColors: {
+    color: canvas.colors.licorice200,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.frenchVanilla100,
+  },
 };
 
 export const outlineWhiteColors = {
@@ -70,6 +88,12 @@ export const outlineWhiteColors = {
   hoverBackground: canvas.colors.frenchVanilla100,
   hoverBorder: null,
   hoverText: canvas.colors.blackPepper400,
+  iconColors: {
+    color: canvas.colors.frenchVanilla100,
+    colorHover: canvas.colors.licorice500,
+    colorActive: canvas.colors.licorice500,
+    colorFocus: canvas.colors.licorice500,
+  },
 };
 
 export const textColors = {
@@ -88,6 +112,12 @@ export const textColors = {
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
+  iconColors: {
+    color: canvas.colors.blueberry400,
+    colorHover: canvas.colors.blueberry500,
+    colorActive: canvas.colors.blueberry500,
+    colorFocus: canvas.colors.blueberry400,
+  },
 };
 
 export const textDarkColors = {
@@ -106,6 +136,12 @@ export const textDarkColors = {
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
+  iconColors: {
+    color: canvas.colors.frenchVanilla100,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.licorice500,
+  },
 };
 
 export const canvasBaseStyles = {
@@ -149,4 +185,8 @@ export const dataLabelBaseStyles = {
   ...labelBaseStyles,
   paddingLeft: '12px',
   fontWeight: 'initial',
+};
+
+export const iconBaseStyles = {
+  padding: '0 8px',
 };

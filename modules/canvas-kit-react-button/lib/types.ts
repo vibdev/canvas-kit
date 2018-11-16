@@ -21,3 +21,11 @@ export enum ButtonTypes {
   Text,
   TextDark,
 }
+
+/**
+ * The different button position types.
+ */
+export enum ButtonPositions {
+  Left,
+  Right,
+}

@@ -1,12 +1,11 @@
+import * as React from 'react';
 import styled from 'react-emotion';
+import {css} from 'emotion';
 import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {ButtonProps} from './Button';
-// @ts-ignore: To appease the TS god
-import {ButtonHTMLAttributes, ClassAttributes, HTMLAttributes} from 'react';
-// @ts-ignore: To appease the TS god
-import {StyledOtherComponent} from 'create-emotion-styled';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
 
 export const BUTTON_HEIGHT_LARGE: number = 40;
@@ -28,20 +27,41 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       backgroundColor: buttonColors.background,
       borderColor: buttonColors.border,
       color: buttonColors.text,
+      ...(buttonColors.iconColors && {
+        '.wd-icon': {...ButtonStyles.iconBaseStyles},
+        '.wd-icon-fill': {
+          fill: buttonColors.iconColors.color,
+        },
+      }),
       ':focus, :hover:focus': {
         backgroundColor: buttonColors.focusBackground,
         borderColor: buttonColors.focusBorder,
         color: buttonColors.focusText,
+        ...(buttonColors.iconColors && {
+          '.wd-icon-fill': {
+            fill: buttonColors.iconColors.colorFocus,
+          },
+        }),
       },
       ':active, :focus:active, :hover:active': {
         backgroundColor: buttonColors.activeBackground,
         borderColor: buttonColors.activeBorder,
         color: buttonColors.activeText,
+        ...(buttonColors.iconColors && {
+          '.wd-icon-fill': {
+            fill: buttonColors.iconColors.colorActive,
+          },
+        }),
       },
       ':hover': {
         backgroundColor: buttonColors.hoverBackground,
         borderColor: buttonColors.hoverBorder,
         color: buttonColors.hoverText,
+        ...(buttonColors.iconColors && {
+          '.wd-icon-fill': {
+            fill: buttonColors.iconColors.colorHover,
+          },
+        }),
       },
       ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
         backgroundColor: buttonColors.disabledBackground,
@@ -113,6 +133,12 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
 export const ButtonDataLabel = styled('span')<ButtonProps>(({buttonType}) => {
   return ButtonStyles.dataLabelBaseStyles;
 });
+
+export class ButtonIcon extends React.Component<ButtonProps> {
+  render() {
+    return <SystemIcon icon={this.props.icon} />;
+  }
+}
 
 function getButtonBase(buttonType: ButtonTypes) {
   switch (buttonType) {

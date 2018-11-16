@@ -133,5 +133,32 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
+      <h1 className="section-label">UDE Button Icons</h1>
+      <Button buttonType={Button.Types.Highlight} leftIcon={editIcon}>
+        Highlight
+      </Button>
+      <Button buttonType={Button.Types.OutlineBlue} leftIcon={editIcon}>
+        Outline Blue
+      </Button>
+      <Button buttonType={Button.Types.OutlineDark} rightIcon={editIcon}>
+        Outline Dark
+      </Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button rightIcon={editIcon} buttonType={Button.Types.TextDark}>
+          Text Dark
+        </Button>
+      </div>
+      <Button leftIcon={editIcon} buttonType={Button.Types.Text}>
+        Text
+      </Button>
     </div>
   ));
