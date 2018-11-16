@@ -159,6 +159,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.onSearchSubmit = this.onSearchSubmit.bind(this);
     this.openMobileSearch = this.openMobileSearch.bind(this);
     this.closeMobileSearch = this.closeMobileSearch.bind(this);
+    this.focusInput = this.focusInput.bind(this);
     this.state = {
       mobileToggle: false,
     };
@@ -177,6 +178,10 @@ export class Search extends React.Component<SearchProps, SearchState> {
 
   closeMobileSearch(e: React.SyntheticEvent) {
     this.setState({mobileToggle: false});
+  }
+
+  focusInput() {
+    this.inputRef.current!.focus();
   }
 
   _renderCollapsed(iconColor: string, iconColorHover: string) {
@@ -206,6 +211,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
           in={this.state.mobileToggle}
           classNames="search"
           timeout={mobileTransitionDuration}
+          onEntering={this.focusInput}
           appear={true}
           mountOnEnter={true}
           unmountOnExit={true}
