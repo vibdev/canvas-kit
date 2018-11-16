@@ -65,21 +65,17 @@ const SearchContainer = styled('form')<SearchProps>(
           maxWidth: 'unset',
           '&.search-enter': {
             opacity: 0,
-            transform: 'translateY(-4px)',
           },
           '&.search-enter-active': {
             opacity: 1,
-            transform: 'translateY(0)',
-            transition: `all ${mobileTransitionDuration}ms`,
+            transition: `opacity ${mobileTransitionDuration}ms`,
           },
           '&.search-exit': {
             opacity: 1,
-            transform: 'translateY(0)',
           },
           '&.search-exit-active': {
             opacity: 0,
-            transform: 'translateY(-4px)',
-            transition: `all ${mobileTransitionDuration}ms`,
+            transition: `opacity ${mobileTransitionDuration}ms`,
           },
         }
       : {};
@@ -111,6 +107,7 @@ const SearchInput = styled('input')<SearchProps>(
     borderRadius: '3px',
     boxSizing: 'border-box',
     border: 'none',
+    WebkitAppearance: 'none',
     '&:not([disabled])': {
       '&:focus, &:active': {
         outline: 'none',
@@ -119,12 +116,7 @@ const SearchInput = styled('input')<SearchProps>(
     },
   },
   ({themeColor, collapse}) => {
-    let background;
-    if (collapse) {
-      background = 'transparent';
-    } else {
-      background = themeColor === HeaderTheme.White ? colors.soap200 : 'rgba(0,0,0,0.2)';
-    }
+    const inputColors = getInputColors(themeColor, collapse!);
 
     const collapseStyles = collapse
       ? {
@@ -134,6 +126,10 @@ const SearchInput = styled('input')<SearchProps>(
           padding: `${spacing.xs} 0`,
           margin: `${spacing.xs} ${spacing.s}`,
           maxWidth: 'unset',
+          width: `calc(100% - ${spacing.l} - ${spacing.xl})`,
+          '&::-webkit-search-cancel-button': {
+            display: 'none',
+          },
           '&:not([disabled])': {
             '&:focus, &:active': {
               boxShadow: 'none',
@@ -144,10 +140,10 @@ const SearchInput = styled('input')<SearchProps>(
       : {};
 
     return {
-      background: background,
-      color: themeColor === HeaderTheme.White ? colors.blackPepper300 : colors.frenchVanilla100,
+      background: inputColors.background,
+      color: inputColors.color,
       '&::placeholder': {
-        color: themeColor === HeaderTheme.White ? colors.licorice300 : colors.frenchVanilla100,
+        color: inputColors.placeholderColor,
       },
       ...collapseStyles,
     };
@@ -198,7 +194,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
 
   _renderCollapsed(iconColor: string, iconColorHover: string) {
     const collapsedIconStyle = {
-      marginLeft: spacing.m,
+      marginLeft: spacing.s,
       cursor: 'pointer',
     };
 
@@ -232,8 +228,8 @@ export class Search extends React.Component<SearchProps, SearchState> {
             <SystemIcon
               icon={xIcon}
               style={{...iconStyle, ...closeIconStyle}}
-              color={iconColor}
-              colorHover={iconColor}
+              color={colors.licorice200}
+              colorHover={colors.licorice500}
               onClick={this.closeMobileSearch}
             />
           </SearchContainer>
@@ -262,5 +258,27 @@ export class Search extends React.Component<SearchProps, SearchState> {
         <SearchInput type="search" innerRef={this.inputRef} {...props} />
       </SearchContainer>
     );
+  }
+}
+
+function getInputColors(themeColor: HeaderTheme, collapsed: boolean) {
+  if (collapsed) {
+    return {
+      background: 'transparent',
+      color: colors.blackPepper300,
+      placeholderColor: colors.licorice300,
+    };
+  } else if (themeColor === HeaderTheme.White) {
+    return {
+      background: colors.soap200,
+      color: colors.blackPepper300,
+      placeholderColor: colors.licorice300,
+    };
+  } else {
+    return {
+      background: 'rgba(0,0,0,0.2)',
+      color: colors.frenchVanilla100,
+      placeholderColor: colors.frenchVanilla100,
+    };
   }
 }
