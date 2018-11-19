@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.12...@workday/canvas-kit-react-icon@1.3.0) (2018-11-19)
+
+
+### Bug Fixes
+
+* **icon:** remove unncessary non-null assertion ([badb775](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/badb775))
+* **icons:** fix exports ([624cc87](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/624cc87))
+* **icons:** fix src prop ([001005d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/001005d))
+
+
+### Features
+
+* **graphic:** add graphics to story ([cabb554](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/cabb554))
+* **graphic:** add skeleton graphic component ([8418213](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/8418213))
+* **graphic:** update README for graphic ([8eee8b1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/8eee8b1))
+* **Graphic:** add sizing ([3b97d8d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/3b97d8d))
+
+
+
+
 <a name="1.2.12"></a>
 ## [1.2.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.2.11...@workday/canvas-kit-react-icon@1.2.12) (2018-11-05)
 
