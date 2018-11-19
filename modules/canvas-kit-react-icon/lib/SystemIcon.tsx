@@ -16,6 +16,11 @@ export interface SystemIconStyles {
   fillHover?: string;
 }
 
+export interface SystemIconProps extends SystemIconStyles {
+  icon: CanvasSystemIcon;
+  size?: number;
+}
+
 export const systemIconStyles = ({
   accent,
   accentHover,
@@ -45,11 +50,6 @@ export const systemIconStyles = ({
     fill: backgroundHover,
   },
 });
-
-export interface SystemIconProps extends SystemIconStyles {
-  icon: CanvasSystemIcon;
-  size?: number;
-}
 
 export default class SystemIcon extends React.Component<SpanProps & SystemIconProps> {
   render() {

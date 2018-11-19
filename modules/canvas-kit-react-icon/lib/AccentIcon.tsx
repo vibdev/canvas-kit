@@ -10,6 +10,11 @@ export interface AccentIconStyles {
   transparent?: boolean;
 }
 
+export interface AccentIconProps extends AccentIconStyles {
+  icon: CanvasAccentIcon;
+  size?: number;
+}
+
 export const accentIconStyles = ({
   color = colors.blueberry500,
   transparent = false,
@@ -21,11 +26,6 @@ export const accentIconStyles = ({
     fill: transparent ? 'transparent' : colors.frenchVanilla100,
   },
 });
-
-export interface AccentIconProps extends AccentIconStyles {
-  icon: CanvasAccentIcon;
-  size?: number;
-}
 
 export default class AccentIcon extends React.Component<SpanProps & AccentIconProps> {
   render() {
