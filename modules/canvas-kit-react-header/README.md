@@ -30,7 +30,8 @@ Header `themeColor`.
 
 ### A Note About Buttons
 
-Please use `Primary` Canvas buttons for this component's call-to-action buttons (see example below).
+Please use `Primary` Canvas buttons for this component's call-to-action buttons (see the
+[usage example](#usage) below).
 
 ### Properties
 
@@ -50,7 +51,7 @@ The theme of the header (White, Blue, or Transparent).
 Default: `HeaderVariant.Dub`
 
 The variant of the header (Dub logo vs. Full logo) - this will impact the height of the header as
-well (Full is taller).
+well (Full is taller). See [Variations](#variations) for more details.
 
 **`brandUrl` (optional):** `string`  
 Default: `'#'`
@@ -58,7 +59,7 @@ Default: `'#'`
 The href attribute when clicking on the title logo.
 
 **`brand` (optional):** `ReactNode`  
-JSX that replaces the contents of the Dub logo and title. Used for replacing Dub + Title with a
+JSX that replaces the contents of the Dub logo and title. Used for replacing Dub + title with a
 `contained lockup` and/or for adding design elements next to the Dub + title lockup.
 
 **`breakpoints` (optional):** `Object`  
@@ -86,7 +87,7 @@ icon.
 
 **`centeredNav` (optional):** `boolean` A flag to center the nav in the middle of the header.
 
-### Example
+### Usage
 
 ```jsx
 import * as React from 'react';
@@ -127,16 +128,17 @@ import {Button} from '@workday/canvas-kit-react-button';
 
 ### Variations
 
-#### Small (Dub)
+#### Dub Variant (shorter)
 
-Small headers have a singular 'Dub' logo and a title at minimum, separated by a equivalent-height
+"Dub" headers have a singular "Dub" logo and a title at minimum, separated by a equivalent-height
 divider. It is shorter in height (64px). This is the default behaviour, but it can be explicitly
 indicated with `HeaderVariant.Dub`.
 
-#### Large (Full)
+#### Full Variant (taller)
 
-Large headers have the full Workday logo and a title at minimum, separated by an equivalent-height
-divider. It is taller in height (80px). Indicated with `HeaderVariant.Full`.
+"Full" headers have the full Workday logo and an optional title at minimum, separated by an
+equivalent-height divider (when a title exists). It is taller in height (80px). Indicated with
+`HeaderVariant.Full`.
 
 #### Product
 
