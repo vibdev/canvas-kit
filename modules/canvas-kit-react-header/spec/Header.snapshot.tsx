@@ -1,0 +1,79 @@
+import * as React from 'react';
+import * as renderer from 'react-test-renderer';
+import Header from '../lib/Header';
+// import {SystemIcon} from '@workday/canvas-kit-react';
+// import {inboxIcon} from '@workday/canvas-system-icons-web';
+
+describe('Dub Header Snapshots', () => {
+  const nav = (
+    <nav>
+      <ul>
+        <li className="current">
+          <a href="#">One</a>
+        </li>
+        <li>
+          <a href="#">Two</a>
+        </li>
+        <li>
+          <a href="#">Three</a>
+        </li>
+      </ul>
+    </nav>
+  );
+
+  test('renders a default header', () => {
+    const tree = renderer.create(<Header />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('renders a default header with title', () => {
+    const tree = renderer.create(<Header title="Header Title" />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('renders themed headers', () => {
+    const tree = {
+      blue: renderer.create(<Header themeColor={Header.Theme.Blue} />).toJSON(),
+      transparent: renderer.create(<Header themeColor={Header.Theme.Transparent} />).toJSON(),
+      white: renderer.create(<Header themeColor={Header.Theme.White} />).toJSON(),
+    };
+    expect(tree.blue).toMatchSnapshot('<Header /> with blue theme applied');
+    expect(tree.transparent).toMatchSnapshot('<Header /> with transparent theme applied');
+    expect(tree.white).toMatchSnapshot('<Header /> with white theme applied');
+  });
+  test('renders a header with custom breakpoints', () => {
+    const breakpoints = {
+      sm: 1,
+      md: 2,
+      lg: 3,
+    };
+
+    const tree = renderer.create(<Header breakpoints={breakpoints} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('renders a header with a custom brand element', () => {
+    const brand = <div>Brand</div>;
+
+    const tree = renderer.create(<Header brand={brand} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('renders a header with nav elements', () => {
+    const tree = {
+      default: renderer.create(<Header>{nav}</Header>).toJSON(),
+      centered: renderer.create(<Header centeredNav={true}>{nav}</Header>).toJSON(),
+    };
+
+    expect(tree.default).toMatchSnapshot();
+    expect(tree.centered).toMatchSnapshot();
+  });
+
+  // TODO: Headers with SystemIcon children
+  // TODO: w/ Search Snaps
+});
+
+describe('Full Header Snapshots', () => {
+  test('renders a default header', () => {
+    const component = renderer.create(<Header variant={Header.Variant.Full} />);
+    expect(component).toMatchSnapshot();
+  });
+
+  // TODO: The rest of Full Header Snapshots
+});

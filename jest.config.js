@@ -11,12 +11,15 @@ module.exports = {
     '**/canvas-kit-react-cookie-banner/**/*.{tsx}',
     '**/canvas-kit-react-fat/**/*.{tsx}',
     // '**/canvas-kit-react-fonts/**/*.{tsx}',
-    // '**/canvas-kit-react-header/**/*.{tsx}',
     '**/canvas-kit-react-icon/**/*.{tsx}',
     '**/canvas-kit-react-page-header/**/*.{tsx}',
     '**/canvas-kit-react-table/**/*.{tsx}',
     '**/canvas-kit-react-toggle/**/*.{tsx}',
     '**/canvas-kit-react-loading-animation/**/*.{tsx}',
+    '**/canvas-kit-react-page-header/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
+    '**/canvas-kit-react-header/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
+    '**/canvas-kit-react-icon/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
+    '**/canvas-kit-react-button/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories*.{ts,tsx,js,jsx}',
   ],
