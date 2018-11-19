@@ -179,8 +179,8 @@ Icon imported from `@workday/canvas-graphics-web`
 
 **`width`**  
 Default: `width of graphic`  
-Graphic width in `px`. Only `width` or `height` may be used to preserve the graphic's ratio. `width`
-takes precedence over `height`.
+Graphic width in `px`. `width` takes precedence over `height` in order to preserve the graphic's
+ratio.
 
 **`height`**  
 Default: `height of graphic`  
