@@ -27,6 +27,7 @@ const backgroundStyle = css({
     .alpha(0.8)
     .css()}), url(${bgImg})`,
   backgroundPosition: `0 50%`,
+  backgroundSize: 'cover',
 });
 
 // Simulate a React Router link
@@ -89,6 +90,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.Blue}
           brandUrl="#"
           onMenuClick={handleMenuClickTest}
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -112,6 +114,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             />
           }
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -131,6 +134,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.White}
           centeredNav={true}
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -149,6 +153,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Transparent"
           themeColor={Header.Theme.Transparent}
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
