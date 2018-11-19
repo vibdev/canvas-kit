@@ -73,11 +73,11 @@ Default:
 }
 ```
 
-The breakpoints at which to collapse the special children of the nav.
+The breakpoints at which to collapse the children of the header.
 
 Special children collapse in this order:
 
-- `<nav>` collapses into a hamburger icon menu after the the screen width falls below the `lg`
+- `<nav>` collapses into a hamburger icon menu after the screen width falls below the `lg`
   breakpoint
 - Any `<SystemIcon>` collapses after the screen width falls below the `md` breakpoint
 
