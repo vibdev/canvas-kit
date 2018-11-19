@@ -37,6 +37,7 @@ export type SearchProps = {
 
 export interface SearchState {
   mobileToggle: boolean;
+  focused: boolean;
 }
 
 const mobileTransitionDuration = 250;
@@ -97,6 +98,7 @@ const SearchInput = styled('input')<SearchProps>(
     boxSizing: 'border-box',
     border: 'none',
     WebkitAppearance: 'none',
+    transition: 'background 150ms',
   },
   ({themeColor, collapse}) => {
     const inputColors = getInputColors(themeColor, collapse!);
@@ -105,7 +107,12 @@ const SearchInput = styled('input')<SearchProps>(
       '&:not([disabled])': {
         '&:focus, &:active': {
           outline: 'none',
-          boxShadow: collapse ? undefined : focusRing().boxShadow,
+          boxShadow: inputColors.focusBoxShadow,
+          background: inputColors.focusBackground,
+          color: colors.blackPepper300,
+          '&::placeholder': {
+            color: colors.licorice300,
+          },
         },
       },
     };
@@ -162,6 +169,7 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.focusInput = this.focusInput.bind(this);
     this.state = {
       mobileToggle: false,
+      focused: false,
     };
   }
 
@@ -184,7 +192,14 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.inputRef.current!.focus();
   }
 
-  _renderCollapsed(iconColor: string, iconColorHover: string) {
+  setFocused(focus: boolean) {
+    this.setState({focused: focus});
+  }
+
+  _renderCollapsed(iconColor: string) {
+    const iconColorHover =
+      this.props.themeColor === HeaderTheme.White ? colors.licorice500 : colors.blueberry100;
+
     const collapsedIconStyle = {
       marginLeft: spacing.s,
       cursor: 'pointer',
@@ -217,7 +232,13 @@ export class Search extends React.Component<SearchProps, SearchState> {
           unmountOnExit={true}
         >
           <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
-            <SearchInput {...props} type="search" innerRef={this.inputRef} />
+            <SearchInput
+              {...props}
+              type="search"
+              innerRef={this.inputRef}
+              onFocus={this.setFocused.bind(this, true)}
+              onBlur={this.setFocused.bind(this, false)}
+            />
             <SystemIcon
               icon={xIcon}
               style={{...iconStyle, ...closeIconStyle}}
@@ -235,20 +256,24 @@ export class Search extends React.Component<SearchProps, SearchState> {
     const {onSearchSubmit, ...props} = this.props;
 
     const iconColor =
-      props.themeColor === HeaderTheme.White ? colors.licorice200 : colors.frenchVanilla100;
+      props.themeColor === HeaderTheme.White || this.state.focused
+        ? colors.licorice200
+        : colors.frenchVanilla100;
 
     if (props.collapse) {
-      // TODO: Replace with UDE icon button
-      const iconColorHover =
-        props.themeColor === HeaderTheme.White ? colors.licorice500 : colors.blueberry100;
-
-      return this._renderCollapsed(iconColor, iconColorHover);
+      return this._renderCollapsed(iconColor);
     }
 
     return (
       <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
         <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
-        <SearchInput type="search" innerRef={this.inputRef} {...props} />
+        <SearchInput
+          {...props}
+          type="search"
+          innerRef={this.inputRef}
+          onFocus={this.setFocused.bind(this, true)}
+          onBlur={this.setFocused.bind(this, false)}
+        />
       </SearchContainer>
     );
   }
@@ -266,12 +291,15 @@ function getInputColors(themeColor: HeaderTheme, collapsed: boolean) {
       background: colors.soap200,
       color: colors.blackPepper300,
       placeholderColor: colors.licorice300,
+      focusBackground: colors.soap200,
+      focusBoxShadow: focusRing().boxShadow,
     };
   } else {
     return {
       background: 'rgba(0,0,0,0.2)',
       color: colors.frenchVanilla100,
       placeholderColor: colors.frenchVanilla100,
+      focusBackground: colors.frenchVanilla100,
     };
   }
 }
