@@ -28,34 +28,12 @@ const backgroundStyle = css({
   backgroundPosition: `0 50%`,
 });
 
-// TODO: remove buttonStyle and buttonStyleReversed when we actually launch new UDE buttons
-const buttonStyle = css({
-  boxShadow: `0 0 0 2px ${colors.blueberry400}`,
-  backgroundColor: `rgba(1,1,1,0)`,
-  color: colors.blueberry400,
-  padding: `0 ${spacing.s}`,
-  fontWeight: 700,
-
-  '&:hover': {
-    color: colors.blueberry400,
-    backgroundColor: colors.frenchVanilla100,
-    boxShadow: `0 0 0 1px ${colors.blueberry400}`,
-  },
-});
-
-const buttonStyleReversed = css({
-  boxShadow: `0 0 0 2px ${colors.frenchVanilla100}`,
-  color: colors.frenchVanilla100,
-
-  '&:hover': {
-    color: colors.frenchVanilla100,
-    boxShadow: `0 0 0 1px ${colors.frenchVanilla100}`,
-    backgroundColor: `rgba(1,1,1,0.1)`,
-  },
-});
-
-const handleClickTest = (e: React.SyntheticEvent) => {
+const handleMenuClickTest = (e: React.SyntheticEvent) => {
   alert(`Menu clicked!`);
+};
+
+const handleAvatarClickTest = (e: React.SyntheticEvent) => {
+  alert(`Avatar clicked!`);
 };
 
 const nav = (
@@ -93,9 +71,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={inboxIcon} />
           </a>
-          <a href="#">
-            <Avatar />
-          </a>
+          <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
       <br />
@@ -104,16 +80,14 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          onMenuClick={handleClickTest}
+          onMenuClick={handleMenuClickTest}
         >
           {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
-          <a href="#">
-            <Avatar />
-          </a>
-          <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+          <Avatar onClick={handleAvatarClickTest} />
+          <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
       </div>
       <br />
@@ -138,7 +112,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={inboxIcon} />
           </a>
-          <Button className={cx(buttonStyle)}>Logout</Button>
+          <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
       <br />
@@ -157,7 +131,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={inboxIcon} />
           </a>
-          <Button className={cx(buttonStyle)}>Logout</Button>
+          <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
       <br />
@@ -175,7 +149,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={inboxIcon} />
           </a>
-          <Button className={cx(buttonStyle, buttonStyleReversed)}>Logout</Button>
+          <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
     </div>
@@ -203,16 +177,14 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          onMenuClick={handleClickTest}
+          onMenuClick={handleMenuClickTest}
         >
           {nav}
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
-          <a href="#">
-            <Avatar />
-          </a>
-          <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+          <Avatar onClick={handleAvatarClickTest} />
+          <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
       </div>
       <br />
@@ -222,9 +194,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
-          <a href="#">
-            <Avatar />
-          </a>
+          <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
       <br />
@@ -239,9 +209,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
-          <a href="#">
-            <Avatar />
-          </a>
+          <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
       <br />
@@ -260,7 +228,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           <a href="#">
             <SystemIcon icon={inboxIcon} />
           </a>
-          <Button className={cx(buttonStyle)}>Logout</Button>
+          <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
     </div>
@@ -272,16 +240,14 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         title="Normal Breakpoints"
         themeColor={Header.Theme.Blue}
         brandUrl="#"
-        onMenuClick={handleClickTest}
+        onMenuClick={handleMenuClickTest}
       >
         {nav}
         <a href="#">
           <SystemIcon icon={notificationsIcon} />
         </a>
-        <a href="#">
-          <Avatar />
-        </a>
-        <Button className={cx(buttonStyle, buttonStyleReversed)}>Download</Button>
+        <Avatar onClick={handleAvatarClickTest} />
+        <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
       <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
         {nav}
@@ -291,10 +257,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <a href="#">
           <SystemIcon icon={notificationsIcon} />
         </a>
-        <a href="#">
-          <Avatar />
-        </a>
-        <Button className={cx(buttonStyle, buttonStyle)}>Download</Button>
+        <Avatar onClick={handleAvatarClickTest} />
+        <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
       <Header
         title="Icons Drop Later"
@@ -306,7 +270,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         <a href="#">
           <SystemIcon icon={inboxIcon} />
         </a>
-        <Button className={cx(buttonStyle)}>Logout</Button>
+        <Button buttonType={Button.Types.Primary}>Logout</Button>
       </Header>
     </div>
   ));
