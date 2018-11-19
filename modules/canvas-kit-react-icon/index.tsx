@@ -1,3 +1,13 @@
-export {default as AccentIcon} from './lib/AccentIcon';
-export {default as AppletIcon} from './lib/AppletIcon';
-export {default as SystemIcon} from './lib/SystemIcon';
+import AccentIcon from './lib/AccentIcon';
+import AppletIcon from './lib/AppletIcon';
+import SystemIcon from './lib/SystemIcon';
+import Graphic from './lib/Graphic';
+import Svg from './lib/Svg';
+
+export {AccentIcon, AppletIcon, SystemIcon, Graphic, Svg};
+
+export * from './lib/AccentIcon';
+export * from './lib/AppletIcon';
+export * from './lib/SystemIcon';
+export * from './lib/Graphic';
+export * from './lib/Svg';

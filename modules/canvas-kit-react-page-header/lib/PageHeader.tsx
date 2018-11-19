@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {colors, spacing, type} from '@workday/canvas-kit-react-core';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {SystemIconProps} from '@workday/canvas-kit-react-icon/dist/commonjs/lib/SystemIcon';
+import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface PageHeaderProps {

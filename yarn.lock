@@ -471,6 +471,13 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.15.0.tgz#7db172369e7c1f69b409277a5d5ebfedc1d0875c"
   integrity sha1-fbFyNp58H2m0CSd6XV6/7cHQh1w=
 
+"@workday/canvas-graphics-web@^0.16.20":
+  version "0.16.21"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-graphics-web/-/@workday/canvas-graphics-web-0.16.21.tgz#c0dd8fe354b9dd8a298f8e73d0c3721e607cbec0"
+  integrity sha1-wN2P41S53Yopj45z0MNyHmB8vsA=
+  dependencies:
+    "@workday/design-assets-types" "0.2.0"
+
 "@workday/canvas-kit-build@^3.5.4":
   version "3.5.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-build/-/@workday/canvas-kit-build-3.5.4.tgz#c2692fce65943b3a1c349cdcf63f59cfd19b186c"

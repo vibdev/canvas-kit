@@ -153,3 +153,35 @@ Default: `'transparent'`
 
 **`fillHover`**  
 `.wd-icon-fill` color on hover.
+
+### Graphics
+
+Use with `@workday/canvas-graphics-web`.
+
+```jsx
+import { colors } from '@workday/canvas-kit-react-core'
+import { Graphic } from '@workday/canvas-kit-react-icon'
+import { badgeAchievementGraphic } from '@workday/canvas-graphics-web
+
+<Graphic src={badgeAchievementGraphic} />
+<Graphic src={badgeAchievementGraphic} width={80}/>
+<Graphic src={badgeAchievementGraphic} height={80}/>
+```
+
+#### Properties
+
+**Required**
+
+**`src`:** `CanvasGraphic`  
+Icon imported from `@workday/canvas-graphics-web`
+
+**Optional**
+
+**`width`**  
+Default: `width of graphic`  
+Graphic width in `px`. `width` takes precedence over `height` in order to preserve the graphic's
+ratio.
+
+**`height`**  
+Default: `height of graphic`  
+Graphic height in `px`. If set, `width` will be set to `100%`.
