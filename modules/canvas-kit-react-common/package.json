@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-common",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A module of common utilities shared across canvas components",
   "homepage": "https://workdaydesign.com",
   "author": "Phuoc Huynh <phuoc.huynh@workday.com>",
@@ -34,7 +34,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "^1.2.1",
+    "@workday/canvas-kit-react-core": "1.2.2",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   }
