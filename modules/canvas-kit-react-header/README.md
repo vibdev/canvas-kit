@@ -11,12 +11,36 @@ Component to create various types of headers for Workday applications and sites.
 ## Header
 
 The header component can be configured using the properties below. Each of it's direct children are
-aligned to the right, with `<nav>` elements getting a special treatment.
+aligned to the right, with the following children getting a special treatment.
+
+### Special Children
+
+#### `<nav>, <ul>, <li>`
+
+For a semantic navigation menu, this component will style a child `<nav>` element with an un-ordered
+list inside (`<ul>`). This list can contain any number of `<li>` elements. You can visually
+distinguish the link that your page is currently on by adding the class name: `"current"` to the
+`<li>` element containing the current page link.
+
+#### `<SystemIcon>`
+
+The Header also looks for Canvas `<SystemIcon>` components and augments them with the correct
+`color` and `colorHover` props so you won't have to worry about the contrast in relation to the
+Header `themeColor`.
+
+### A Note About Buttons
+
+Please use `Primary` Canvas buttons for this component's call-to-action buttons (see the
+[usage example](#usage) below).
 
 ### Properties
 
-**`title` (required):** `string`  
-Title displayed on the header next to the logo.
+**`title` (optional):** `string`  
+Default: `''`
+
+The title displayed on the header next to the logo.
+
+**Note**: this is optional but is _stylistically_ required if it is the `Dub` (default) variant.
 
 **`themeColor` (optional):** `HeaderTheme`  
 Default: `HeaderTheme.White`
@@ -27,12 +51,16 @@ The theme of the header (White, Blue, or Transparent).
 Default: `HeaderVariant.Dub`
 
 The variant of the header (Dub logo vs. Full logo) - this will impact the height of the header as
-well (Full is taller).
+well (Full is taller). See [Variations](#variations) for more details.
 
 **`brandUrl` (optional):** `string`  
 Default: `'#'`
 
-Link when clicking on the dub/title.
+The href attribute when clicking on the title logo.
+
+**`brand` (optional):** `ReactNode`  
+JSX that replaces the contents of the Dub logo and title. Used for replacing Dub + title with a
+`contained lockup` and/or for adding design elements next to the Dub + title lockup.
 
 **`breakpoints` (optional):** `Object`  
 Default:
@@ -45,11 +73,13 @@ Default:
 }
 ```
 
-The breakpoints at which to collapse the contents of the nav.
+The breakpoints at which to collapse the children of the header.
 
-**`brand` (optional):** `ReactNode`  
-JSX that replaces the contents of the Dub logo and title. Used for replacing Dub + Title with a
-`contained lockup` and/or for adding design elements next to the dub + title lockup.
+Special children collapse in this order:
+
+- `<nav>` collapses into a hamburger icon menu after the screen width falls below the `lg`
+  breakpoint
+- Any `<SystemIcon>` collapses after the screen width falls below the `md` breakpoint
 
 **`onMenuClick` (optional):** `function`  
 A function that accepts a `React.SyntheticEvent` for when the user clicks the mobile collapsed nav
@@ -57,18 +87,17 @@ icon.
 
 **`centeredNav` (optional):** `boolean` A flag to center the nav in the middle of the header.
 
-### Example
+### Usage
 
 ```jsx
-import {Header HeaderTheme} from '@workday/canvas-kit-react-header';
+import * as React from 'react';
+import {Header} from '@workday/canvas-kit-react-header';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
-import {notificationsLargeIcon, inboxLargeIcon} from '@workday/canvas-system-icons-web';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {notificationsIcon} from '@workday/canvas-system-icons-web';
+import {Button} from '@workday/canvas-kit-react-button';
 
-<Header
-  title="Kitchen Sink"
-  themeColor={Header.Theme.Blue}
-  brandUrl="#"
->
+<Header title="Blue Header" themeColor={Header.Theme.Blue} brandUrl="#">
   <nav>
     <ul>
       <li className="current">
@@ -88,25 +117,28 @@ import {notificationsLargeIcon, inboxLargeIcon} from '@workday/canvas-system-ico
   <a href="#">
     <SystemIcon icon={notificationsIcon} />
   </a>
-  <a href="#">
-    <Avatar />
-  </a>
-  <Button>Sign Up</Button>
-</Header>
+  <Avatar
+    onClick={() => {
+      alert('clicked avatar');
+    }}
+  />
+  <Button buttonType={Button.Types.Primary}>Sign Up</Button>
+</Header>;
 ```
 
 ### Variations
 
-#### Small (Dub)
+#### Dub Variant (shorter)
 
-Small headers have a singular 'Dub' logo and a title at minimum, separated by a equivalent-height
+"Dub" headers have a singular "Dub" logo and a title at minimum, separated by a equivalent-height
 divider. It is shorter in height (64px). This is the default behaviour, but it can be explicitly
 indicated with `HeaderVariant.Dub`.
 
-#### Large (Full)
+#### Full Variant (taller)
 
-Large headers have the full Workday logo and a title at minimum, separated by an equivalent-height
-divider. It is taller in height (80px). Indicated with `HeaderVariant.Full`.
+"Full" headers have the full Workday logo and an optional title at minimum, separated by an
+equivalent-height divider (when a title exists). It is taller in height (80px). Indicated with
+`HeaderVariant.Full`.
 
 #### Product
 
