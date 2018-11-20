@@ -13,7 +13,7 @@
     "@types/react-test-renderer": "^16.0.2",
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__react": "^3.0.9",
-    "@workday/canvas-kit-build": "^3.5.4",
+    "@workday/canvas-kit-build": "^3.6.1",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "7",

@@ -49,7 +49,7 @@ cat > $packageJson << EOF
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
   "sideEffects": false,
-  "types": "dist/types/index.d.ts",
+  "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-$name"
@@ -144,7 +144,7 @@ echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "ts-tmp", "stories.tsx", "spec"]
+  "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories.tsx"]
 }
 
 EOF
