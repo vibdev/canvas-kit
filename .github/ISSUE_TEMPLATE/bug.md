@@ -11,6 +11,10 @@ A clear and concise description of what the bug is.
 
 Steps to reproduce the behavior:
 
+## Browser (if applicable)
+
+If this was a visual bug, what browser did you spot it on?
+
 ## Expected behavior
 
 A clear and concise description of what you expected to happen.
