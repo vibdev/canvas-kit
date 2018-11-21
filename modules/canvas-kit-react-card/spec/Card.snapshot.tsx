@@ -8,13 +8,13 @@ describe('Card Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a card with title', () => {
-    const component = renderer.create(<Card title="Card Title">Card</Card>);
+  test('renders a card with heading', () => {
+    const component = renderer.create(<Card heading="Card Title">Card</Card>);
     expect(component).toMatchSnapshot();
   });
 
   const cards = Array.from(Array(12).keys()).map(size => (
-    <Card title="Title" size={(size + 1) as CardSize} key={size} />
+    <Card heading="Title" size={(size + 1) as CardSize} key={size} />
   ));
 
   cards.forEach((card, i) => {

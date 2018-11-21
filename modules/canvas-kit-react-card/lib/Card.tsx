@@ -6,8 +6,8 @@ import {CanvasSpacingValue} from '@workday/canvas-space-web';
 
 export type CardSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-export interface CardProps {
-  title?: React.ReactNode;
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  heading?: React.ReactNode;
   size?: CardSize;
   padding: 0 | CanvasSpacingValue;
 
@@ -76,11 +76,11 @@ export default class Card extends React.Component<CardProps> {
   };
 
   public render() {
-    const {title, size, padding, breakpoints} = this.props;
+    const {heading, size, padding, breakpoints, ...elemProps} = this.props;
 
     return (
-      <Box size={size} padding={padding} breakpoints={breakpoints}>
-        {title && <Header>{title}</Header>}
+      <Box size={size} padding={padding} breakpoints={breakpoints} {...elemProps}>
+        {heading && <Header>{heading}</Header>}
         <Body>Card</Body>
       </Box>
     );
