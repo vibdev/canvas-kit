@@ -23,4 +23,15 @@ describe('Card Snapshots', () => {
       expect(component).toMatchSnapshot();
     });
   });
+
+  test(`renders a card with custom breakpoints`, () => {
+    const customBreakpoints = {
+      sm: 120,
+      md: 240,
+      lg: 480,
+    };
+
+    const component = renderer.create(<Card size={2} breakpoints={customBreakpoints} />);
+    expect(component).toMatchSnapshot();
+  });
 });
