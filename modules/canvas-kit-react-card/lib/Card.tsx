@@ -1,8 +1,15 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {makeMq} from '@workday/canvas-kit-react-common';
-import {colors, depth, type, spacing, spacingNumbers} from '@workday/canvas-kit-react-core';
+import {
+  colors,
+  depth as depthValues,
+  type,
+  spacing,
+  spacingNumbers,
+} from '@workday/canvas-kit-react-core';
 import {CanvasSpacingValue} from '@workday/canvas-space-web';
+import {CanvasDepthValue} from '@workday/canvas-depth-web';
 
 export type CardSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
@@ -10,6 +17,8 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   heading?: React.ReactNode;
   size?: CardSize;
   padding: 0 | CanvasSpacingValue;
+
+  depth: CanvasDepthValue;
 
   /**
    * An object that allows for custom specified breakpoints (sm, md, lg)
@@ -23,11 +32,11 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Box = styled('div')<CardProps>(
-  depth[2],
   {
     border: `1px solid ${colors.soap500}`,
     borderRadius: 3,
   },
+  ({depth}) => depth,
   ({padding}) => ({padding}),
   ({size, breakpoints}) => {
     if (!size) {
@@ -67,6 +76,7 @@ const Body = styled('div')(type.body);
 
 export default class Card extends React.Component<CardProps> {
   public static defaultProps = {
+    depth: depthValues[2],
     padding: spacing.l,
     breakpoints: {
       sm: 320,
