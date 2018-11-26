@@ -10,9 +10,9 @@ exports[`Card Snapshots renders a card with custom breakpoints 1`] = `
 }
 
 .emotion-1 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -43,9 +43,9 @@ exports[`Card Snapshots renders a card with custom breakpoints 1`] = `
 
 exports[`Card Snapshots renders a card with heading 1`] = `
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
 }
 
@@ -101,9 +101,9 @@ exports[`Card Snapshots renders a card with size 1 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -156,9 +156,9 @@ exports[`Card Snapshots renders a card with size 2 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -211,9 +211,9 @@ exports[`Card Snapshots renders a card with size 3 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -266,9 +266,9 @@ exports[`Card Snapshots renders a card with size 4 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -321,9 +321,9 @@ exports[`Card Snapshots renders a card with size 5 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -376,9 +376,9 @@ exports[`Card Snapshots renders a card with size 6 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -431,9 +431,9 @@ exports[`Card Snapshots renders a card with size 7 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -486,9 +486,9 @@ exports[`Card Snapshots renders a card with size 8 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -541,9 +541,9 @@ exports[`Card Snapshots renders a card with size 9 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -596,9 +596,9 @@ exports[`Card Snapshots renders a card with size 10 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -651,9 +651,9 @@ exports[`Card Snapshots renders a card with size 11 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -706,9 +706,9 @@ exports[`Card Snapshots renders a card with size 12 1`] = `
 }
 
 .emotion-2 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
   width: 100%;
 }
@@ -744,9 +744,9 @@ exports[`Card Snapshots renders a card with size 12 1`] = `
 
 exports[`Card Snapshots renders as expected 1`] = `
 .emotion-1 {
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   border: 1px solid #ced3d9;
   border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 32px;
 }
 
