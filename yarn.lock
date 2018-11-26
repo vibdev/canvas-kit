@@ -466,10 +466,10 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.12.2.tgz#0c471b272737b324da54e4cfedf168ac54ee5353"
   integrity sha1-DEcbJyc3syTaVOTP7fForFTuU1M=
 
-"@workday/canvas-depth-web@^0.15.0":
-  version "0.15.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.15.0.tgz#7db172369e7c1f69b409277a5d5ebfedc1d0875c"
-  integrity sha1-fbFyNp58H2m0CSd6XV6/7cHQh1w=
+"@workday/canvas-depth-web@^0.16.0":
+  version "0.16.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.0.tgz#f8953e0ef13f241577e59b1b796a3bedbe92d6ac"
+  integrity sha1-+JU+DvE/JBV35ZsbeWo77b6S1qw=
 
 "@workday/canvas-graphics-web@^0.16.20":
   version "0.16.21"

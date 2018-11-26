@@ -155,7 +155,7 @@ Example:
 ```js
 import {depth} from '@workday/canvas-kit-react-core';
 depth.inset;
-depth.['2'];
+depth['2'];
 ```
 
 ### Type Checking
