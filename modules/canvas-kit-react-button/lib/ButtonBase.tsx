@@ -178,5 +178,9 @@ function getButtonColors(buttonType: ButtonTypes) {
       return ButtonStyles.textColors;
     case ButtonTypes.TextDark:
       return ButtonStyles.textDarkColors;
+    case ButtonTypes.UdePrimary:
+      return ButtonStyles.udePrimaryColors;
+    case ButtonTypes.UdeSecondary:
+      return ButtonStyles.udeSecondaryColors;
   }
 }

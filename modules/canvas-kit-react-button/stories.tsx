@@ -81,6 +81,8 @@ storiesOf('Canvas Kit/Button', module)
       </div>
       <br />
       <h1 className="section-label">UDE Buttons</h1>
+      <Button buttonType={Button.Types.UdePrimary}>Ude Primary</Button>
+      <Button buttonType={Button.Types.UdeSecondary}>Ude Secondary</Button>
       <Button buttonType={Button.Types.Highlight}>Highlight</Button>
       <Button buttonType={Button.Types.OutlineBlue}>Outline Blue</Button>
       <Button buttonType={Button.Types.OutlineDark}>Outline Dark</Button>
