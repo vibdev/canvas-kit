@@ -56,7 +56,11 @@ storiesOf('Canvas Kit/Table', module)
         <h1 className="section-label">Table</h1>
         <Table>
           <thead>
-            <tr>{columns.map((col, i) => <th key={i}>{col}</th>)}</tr>
+            <TableRow header={true}>
+              {columns.map((col, i) => (
+                <th key={i}>{col}</th>
+              ))}
+            </TableRow>
           </thead>
           <tbody>{rows}</tbody>
         </Table>
