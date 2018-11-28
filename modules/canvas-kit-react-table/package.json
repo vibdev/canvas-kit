@@ -38,6 +38,7 @@
     "@workday/canvas-kit-react-core": "^1.2.3",
     "classnames": "^2.2.5",
     "emotion": "^9.2.12",
+    "polished": "^2.3.0",
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@ const borderWidth = 1;
 const borderColor = colors.soap400;
 const cellBorder = `${borderWidth}px solid ${borderColor}`;
 
-function makeColoredRow(_bgColor: string, _borderColor: string): Interpolation {
+export function makeColoredRow(_bgColor: string, _borderColor: string): Interpolation {
   return {
     backgroundColor: _bgColor,
     position: 'relative',
