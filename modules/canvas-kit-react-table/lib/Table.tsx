@@ -17,8 +17,8 @@ const TableComponent = styled('table')(type.body, {
   },
 });
 
-export default class Table extends React.Component<JSX.IntrinsicElements['table']> {
+export default class Table extends React.Component<React.TableHTMLAttributes<HTMLTableElement>> {
   public render() {
-    return <TableComponent>{this.props.children}</TableComponent>;
+    return <TableComponent {...this.props}>{this.props.children}</TableComponent>;
   }
 }

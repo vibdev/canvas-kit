@@ -15,7 +15,7 @@ export enum TableRowStates {
   Selected,
 }
 
-export interface TableRowProps {
+export interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
   state?: TableRowStates;
   header?: boolean;
 }
@@ -194,12 +194,10 @@ const Row = styled('tr')<TableRowProps>(
   }
 );
 
-export default class TableRow extends React.Component<JSX.IntrinsicElements['tr'] & TableRowProps> {
+export default class TableRow extends React.Component<TableRowProps> {
   public static States = TableRowStates;
 
   public render() {
-    const {state, ...elemProps} = this.props;
-
-    return <Row state={state}>{this.props.children}</Row>;
+    return <Row {...this.props}>{this.props.children}</Row>;
   }
 }
