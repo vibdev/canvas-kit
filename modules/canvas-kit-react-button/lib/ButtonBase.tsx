@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {css} from 'emotion';
 import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
@@ -23,6 +22,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       return {};
     }
     const buttonColors = getButtonColors(buttonType);
+
     return {
       backgroundColor: buttonColors.background,
       borderColor: buttonColors.border,
@@ -72,6 +72,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
         '&:focus, &:active': {
           ...(buttonColors.focusBorder &&
             (buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1))),
+          ...(buttonColors.focusRing && buttonColors.focusRing),
         },
       },
     };
