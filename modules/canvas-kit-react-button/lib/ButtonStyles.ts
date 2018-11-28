@@ -1,6 +1,10 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 
+export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
+export const CANVAS_BUTTON_HEIGHT_MEDIUM: number = 24;
+export const CANVAS_BUTTON_HEIGHT_SMALL: number = 18;
+
 export const highlightColors = {
   background: canvas.colors.soap200,
   border: canvas.colors.soap200,
@@ -251,4 +255,56 @@ export const dataLabelBaseStyles = {
 
 export const iconBaseStyles = {
   padding: '0 8px',
+};
+
+export const canvasSizes = {
+  large: {
+    height: `${CANVAS_BUTTON_HEIGHT_LARGE}px`,
+    padding: `0 ${canvas.spacing.l}`,
+    minWidth: '112px',
+    maxWidth: '288px',
+  },
+  medium: {
+    height: `${CANVAS_BUTTON_HEIGHT_MEDIUM}px`,
+    padding: `0 ${canvas.spacing.m}`,
+    minWidth: '80px',
+    maxWidth: '200px',
+  },
+  small: {
+    height: `${CANVAS_BUTTON_HEIGHT_SMALL}px`,
+    padding: `0 ${canvas.spacing.xxs}`,
+    minWidth: '56px',
+    maxWidth: '120px',
+  },
+};
+
+export const udeSizes = {
+  large: {
+    minWidth: '112px',
+    height: '48px',
+    padding: '0 32px',
+  },
+  medium: {
+    minWidth: '96px',
+    height: '40px',
+    padding: '0 24px',
+  },
+  small: {
+    minWidth: '80px',
+    height: '32px',
+    padding: '0 16px',
+  },
+};
+
+export const textSizes = {
+  large: {
+    minWidth: '64px',
+    height: '40px',
+    padding: '0 8px',
+  },
+  small: {
+    minWidth: '48px',
+    height: '32px',
+    padding: '0 8px',
+  },
 };

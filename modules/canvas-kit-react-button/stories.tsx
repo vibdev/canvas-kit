@@ -81,11 +81,22 @@ storiesOf('Canvas Kit/Button', module)
       </div>
       <br />
       <h1 className="section-label">UDE Buttons</h1>
-      <Button buttonType={Button.Types.UdePrimary}>Ude Primary</Button>
-      <Button buttonType={Button.Types.UdeSecondary}>Ude Secondary</Button>
-      <Button buttonType={Button.Types.Highlight}>Highlight</Button>
-      <Button buttonType={Button.Types.OutlineBlue}>Outline Blue</Button>
-      <Button buttonType={Button.Types.OutlineDark}>Outline Dark</Button>
+      <h3>Large Buttons</h3>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
+        Ude Primary
+      </Button>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
+        Ude Secondary
+      </Button>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Highlight}>
+        Highlight
+      </Button>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
+        Outline Blue
+      </Button>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
+        Outline Dark
+      </Button>
       <div
         className={css({
           display: 'flex',
@@ -96,7 +107,82 @@ storiesOf('Canvas Kit/Button', module)
           height: '100px',
         })}
       >
-        <Button buttonType={Button.Types.OutlineWhite}>Outline White</Button>
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
+          Outline White
+        </Button>
+      </div>
+      <Button buttonType={Button.Types.Text}>Text</Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonType={Button.Types.TextDark}>Text Dark</Button>
+      </div>
+      <h3>Medium Buttons</h3>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
+        Ude Primary
+      </Button>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
+        Ude Secondary
+      </Button>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Highlight}>
+        Highlight
+      </Button>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
+        Outline Blue
+      </Button>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
+        Outline Dark
+      </Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
+          Outline White
+        </Button>
+      </div>
+      <h3>Small Buttons</h3>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
+        Ude Primary
+      </Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
+        Ude Secondary
+      </Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Highlight}>
+        Highlight
+      </Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
+        Outline Blue
+      </Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
+        Outline Dark
+      </Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '200px',
+          height: '100px',
+        })}
+      >
+        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
+          Outline White
+        </Button>
       </div>
       <Button buttonType={Button.Types.Text}>Text</Button>
       <div

@@ -7,10 +7,6 @@ import {ButtonProps} from './Button';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
 
-export const BUTTON_HEIGHT_LARGE: number = 40;
-export const BUTTON_HEIGHT_MEDIUM: number = 24;
-export const BUTTON_HEIGHT_SMALL: number = 18;
-
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
   ({buttonType}) => {
@@ -77,31 +73,18 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       },
     };
   },
-  ({buttonSize}) => {
+  ({buttonSize, buttonType}) => {
+    const buttonSizeStyles = getButtonSize(buttonType);
+
     switch (buttonSize) {
       case ButtonSizes.Large:
-        return {
-          height: `${BUTTON_HEIGHT_LARGE}px`,
-          padding: `0 ${canvas.spacing.l}`,
-          minWidth: '112px',
-          maxWidth: '288px',
-        };
+        return buttonSizeStyles.large;
       case ButtonSizes.Medium:
-        return {
-          height: `${BUTTON_HEIGHT_MEDIUM}px`,
-          padding: `0 ${canvas.spacing.m}`,
-          minWidth: '80px',
-          maxWidth: '200px',
-        };
+        return buttonSizeStyles.medium;
       case ButtonSizes.Small:
-        return {
-          height: `${BUTTON_HEIGHT_SMALL}px`,
-          padding: `0 ${canvas.spacing.xxs}`,
-          minWidth: '56px',
-          maxWidth: '120px',
-        };
+        return buttonSizeStyles.small;
       default:
-        return {height: `${BUTTON_HEIGHT_LARGE}px`, padding: 0};
+        return {height: `${ButtonStyles.CANVAS_BUTTON_HEIGHT_LARGE}px`, padding: 0};
     }
   },
   ({grow}) => {
@@ -138,6 +121,26 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(({buttonType}) => {
 export class ButtonIcon extends React.Component<ButtonProps> {
   render() {
     return <SystemIcon icon={this.props.icon} />;
+  }
+}
+
+function getButtonSize(buttonType: ButtonTypes) {
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    case ButtonTypes.Secondary:
+    case ButtonTypes.Delete:
+    default:
+      return ButtonStyles.canvasSizes;
+    case ButtonTypes.UdePrimary:
+    case ButtonTypes.UdeSecondary:
+    case ButtonTypes.Highlight:
+    case ButtonTypes.OutlineBlue:
+    case ButtonTypes.OutlineDark:
+    case ButtonTypes.OutlineWhite:
+      return ButtonStyles.udeSizes;
+    case ButtonTypes.Text:
+    case ButtonTypes.TextDark:
+      return ButtonStyles.textSizes;
   }
 }
 
