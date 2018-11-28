@@ -146,12 +146,15 @@ function getButtonBase(buttonType: ButtonTypes) {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
     case ButtonTypes.Delete:
+    default:
+      return ButtonStyles.canvasBaseStyles;
+    case ButtonTypes.UdePrimary:
+    case ButtonTypes.UdeSecondary:
     case ButtonTypes.Highlight:
     case ButtonTypes.OutlineBlue:
     case ButtonTypes.OutlineDark:
     case ButtonTypes.OutlineWhite:
-    default:
-      return ButtonStyles.canvasBaseStyles;
+      return ButtonStyles.udeBaseStyles;
     case ButtonTypes.Text:
     case ButtonTypes.TextDark:
       return ButtonStyles.textBaseStyles;

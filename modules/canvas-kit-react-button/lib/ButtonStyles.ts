@@ -218,6 +218,11 @@ export const canvasBaseStyles = {
   '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
 };
 
+export const udeBaseStyles = {
+  ...canvasBaseStyles,
+  border: '2px solid transparent',
+};
+
 export const textBaseStyles = {
   ...canvasBaseStyles,
   borderRadius: '3px;',
