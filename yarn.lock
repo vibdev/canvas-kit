@@ -343,11 +343,6 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/chroma-js/-/chroma-js-1.4.0.tgz#1d215474b54e227bd0204572c0483b98593eabd0"
   integrity sha1-HSFUdLVOInvQIEVywEg7mFk+q9A=
 
-"@types/classnames@^2.2.6":
-  version "2.2.6"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/classnames/-/classnames-2.2.6.tgz#dbe8a666156d556ed018e15a4c65f08937c3f628"
-  integrity sha1-2+imZhVtVW7QGOFaTGXwiTfD9ig=
-
 "@types/depd@^1.1.32":
   version "1.1.32"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/depd/-/depd-1.1.32.tgz#7937f66870d0cd7a9881152e4eb02c8c43298f11"

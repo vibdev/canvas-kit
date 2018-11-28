@@ -4,7 +4,6 @@ import styled from 'react-emotion';
 import {rgba} from 'polished';
 import {colors, spacing, spacingNumbers} from '@workday/canvas-kit-react-core';
 import {borderColor, borderWidth, cellBorder} from './Table';
-import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css';
 
 export enum TableRowStates {
   Error,
