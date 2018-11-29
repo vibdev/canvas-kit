@@ -14,21 +14,21 @@ toolbars.
 > The primary action button should be left aligned followed by secondary buttons. The primary button
 > is on the right only in task orchestration.
 
-```jsx
-import { FloatingActionToolbar } from '@workday/canvas-kit-react-fat'
+```tsx
+import {FloatingActionToolbar} from '@workday/canvas-kit-react-fat';
 
 <FloatingActionToolbar>
   <Button buttonType={ButtonTypes.Primary}>Button</Button>
   <Button>Button</Button>
   <Button>Button</Button>
-</FloatingActionToolbar>
+</FloatingActionToolbar>;
 ```
 
 #### Fixed Positioning
 
 Add the `fixed` property to fix the toolbar to the bottom of the container.
 
-```jsx
+```tsx
 <FloatingActionToolbar fixed>
   <Button>Button</Button>
 </FloatingActionToolbar>

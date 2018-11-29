@@ -8,7 +8,7 @@ Components implementing Canvas buttons.
 
 Extends `<button>` with Canvas button styling.
 
-```jsx
+```tsx
 import { Button } from '@workday/canvas-kit-react-button'
 
 <Button>Secondary Button</Button>
@@ -47,7 +47,7 @@ Returns the ref to the rendered HTMLButtonElement.
 Button containing an icon. Icon may be a component from
 [`canvas-kit-react-icon`](../canvas-kit-react-icon).
 
-```jsx
+```tsx
 import { IconButton } from '@workday/canvas-kit-react-button'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
 import { activityStreamIcon } from '@workday/canvas-system-icons-web';

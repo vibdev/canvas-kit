@@ -35,7 +35,7 @@ import {Avatar, AvatarTheme, AvatarSize} from '@workday/canvas-kit-react-avatar'
 
 #### `Size: AvatarSize | number`
 
-```jsx
+```tsx
 // Example
 <Avatar size={Avatar.Size.xs} />
 
@@ -58,10 +58,10 @@ import {Avatar, AvatarTheme, AvatarSize} from '@workday/canvas-kit-react-avatar'
 
 Default: `AvatarTheme.Light`
 
-| Theme               | Description                      |
-| ------------------- | -------------------------------- |
-| `AvatarTheme.Light` | Light grey background, dark icon |
-| `AvatarTheme.Dark`  | Dark blue background, white icon |
+| Theme   | Description                      |
+| ------- | -------------------------------- |
+| `Light` | Light grey background, dark icon |
+| `Dark`  | Dark blue background, white icon |
 
 ---
 
@@ -71,14 +71,14 @@ Default: `AvatarTheme.Light`
 
 Default: `AvatarSize.m`
 
-| Variable | Size (px) |
-| -------- | --------- |
-| `xs`     | 16        |
-| `s`      | 24        |
-| `m`      | 32        |
-| `l`      | 40        |
-| `xl`     | 64        |
-| `xxl`    | 120       |
+| Name  | Size (px) |
+| ----- | --------- |
+| `xs`  | 16        |
+| `s`   | 24        |
+| `m`   | 32        |
+| `l`   | 40        |
+| `xl`  | 64        |
+| `xxl` | 120       |
 
 ---
 

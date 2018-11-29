@@ -89,7 +89,7 @@ icon.
 
 ### Usage
 
-```jsx
+```tsx
 import * as React from 'react';
 import {Header} from '@workday/canvas-kit-react-header';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
@@ -162,7 +162,7 @@ next to the title with custom components or markup, or change the background col
 
 #### Example
 
-```jsx
+```tsx
 import {Header, DubLogoTitle} from '@workday/canvas-kit-react-header';
 import canvas from '@workday/canvas-kit-react-core';
 
@@ -188,7 +188,7 @@ more elements next to the title with custom components or markup.
 
 #### Example
 
-```jsx
+```tsx
 import {Header, WorkdayLogoTitle} from '@workday/canvas-kit-react-header';
 
 <Header

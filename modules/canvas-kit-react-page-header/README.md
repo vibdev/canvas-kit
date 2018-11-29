@@ -10,7 +10,7 @@ An HTML Element `<header>` with Canvas Page Header styling that renders a title 
 elements. This component will automatically adjust Canvas `<SystemIcon>` children to the correct
 color.
 
-```jsx
+```tsx
 import { PageHeader } from '@workday/canvas-kit-react-page-header';
 import { SystemIcon } from '@workday/canvas-kit-react-icon';
 import { exportIcon, fullscreenIcon } from '@workday/canvas-system-icons-web';
