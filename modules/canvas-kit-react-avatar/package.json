@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-avatar",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A circular user photo (or a default)",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
