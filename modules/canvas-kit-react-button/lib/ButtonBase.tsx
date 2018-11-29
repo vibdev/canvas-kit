@@ -96,20 +96,17 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
 );
 
 export const ButtonBaseLabel = styled('span')<ButtonProps>(
-  ButtonStyles.labelBaseStyles,
+  ButtonStyles.labelBaseStyles.styles,
   ({buttonSize}) => {
-    if (buttonSize === ButtonSizes.Medium) {
-      return {
-        fontSize: '13px',
-      };
-    } else if (buttonSize === ButtonSizes.Small) {
-      return {
-        fontSize: '10px',
-      };
-    } else {
-      return {
-        fontSize: '14px',
-      };
+    const variantStyles = ButtonStyles.labelBaseStyles.variants;
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return variantStyles.large;
+      case ButtonSizes.Medium:
+        return variantStyles.medium;
+      case ButtonSizes.Small:
+        return variantStyles.small;
     }
   }
 );

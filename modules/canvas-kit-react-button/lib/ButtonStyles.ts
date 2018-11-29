@@ -234,23 +234,37 @@ export const textBaseStyles = {
 };
 
 export const labelBaseStyles = {
-  position: 'relative', // Fixes an IE issue with text within button moving on click
-  ':hover:active': {
-    backgroundColor: 'transparent',
+  styles: {
+    position: 'relative', // Fixes an IE issue with text within button moving on click
+    ':hover:active': {
+      backgroundColor: 'transparent',
+    },
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    fontWeight: 500,
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
   },
-  textOverflow: 'ellipsis',
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
-  fontWeight: 500,
-  fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
-  WebkitFontSmoothing: 'antialiased',
-  MozOsxFontSmoothing: 'grayscale',
+  variants: {
+    large: {
+      fontSize: '16px',
+    },
+    medium: {
+      fontSize: '14px',
+    },
+    small: {
+      fontSize: '14px',
+    },
+  },
 };
 
 export const dataLabelBaseStyles = {
   ...labelBaseStyles,
   paddingLeft: '12px',
-  fontWeight: 'initial',
+  fontWeight: 400,
+  fontSize: '16px',
 };
 
 export const iconBaseStyles = {
@@ -263,18 +277,21 @@ export const canvasSizes = {
     padding: `0 ${canvas.spacing.l}`,
     minWidth: '112px',
     maxWidth: '288px',
+    fontSize: '14px',
   },
   medium: {
     height: `${CANVAS_BUTTON_HEIGHT_MEDIUM}px`,
     padding: `0 ${canvas.spacing.m}`,
     minWidth: '80px',
     maxWidth: '200px',
+    fontSize: '13px',
   },
   small: {
     height: `${CANVAS_BUTTON_HEIGHT_SMALL}px`,
     padding: `0 ${canvas.spacing.xxs}`,
     minWidth: '56px',
     maxWidth: '120px',
+    fontSize: '10px',
   },
 };
 
