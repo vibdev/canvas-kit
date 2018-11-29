@@ -8928,7 +8928,7 @@ pretty-format@^23.6.0:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
-prismjs@^1.9.0:
+prismjs@^1.15.0, prismjs@^1.9.0:
   version "1.15.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
   integrity sha1-iAHTMuRyCRuo3vlJdsiHetYDmNk=
