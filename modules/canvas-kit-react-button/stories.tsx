@@ -111,7 +111,9 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <Button buttonType={Button.Types.Text}>Text</Button>
+      <Button buttonSizes={Button.Sizes.Large} buttonType={Button.Types.Text}>
+        Text
+      </Button>
       <div
         className={css({
           display: 'flex',
@@ -122,7 +124,9 @@ storiesOf('Canvas Kit/Button', module)
           height: '100px',
         })}
       >
-        <Button buttonType={Button.Types.TextDark}>Text Dark</Button>
+        <Button buttonSizes={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
+          Text Dark
+        </Button>
       </div>
       <h3>Medium Buttons</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
@@ -184,7 +188,9 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <Button buttonType={Button.Types.Text}>Text</Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
+        Text
+      </Button>
       <div
         className={css({
           display: 'flex',
@@ -195,7 +201,9 @@ storiesOf('Canvas Kit/Button', module)
           height: '100px',
         })}
       >
-        <Button buttonType={Button.Types.TextDark}>Text Dark</Button>
+        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
+          Text Dark
+        </Button>
       </div>
       <h1 className="section-label">UDE Data Labels</h1>
       <Button buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
