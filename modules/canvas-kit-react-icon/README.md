@@ -31,10 +31,7 @@ import { shieldIcon } from '@workday/canvas-accent-icons-web'
 import * as AccentIcons from '@workday/canvas-accent-icons-web'
 <AccentIcon icon={AccentIcons.shieldIcon} />
 
-# Module Import
-import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
-<AccentIcon icon={shieldIcon} />
-```
+## Usage
 
 # Accent Icons
 
@@ -89,6 +86,9 @@ Default: `false`
 ## Usage
 
 Use with `@workday/canvas-applet-icons-web`.
+
+Unlike `AccentIcon` or `SystemIcon`, `AppletIcon` uses a Canvas _hue_ (e.g. `Pomegranate`) rather
+than a specific _shade_ (e.g. `pomegranate100`).
 
 ```tsx
 import { AppletIcon } from '@workday/canvas-kit-react-icon'
@@ -163,7 +163,7 @@ Use with `@workday/canvas-system-icons-web`.
 ```tsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
-import { activityStreamIcon } from '@workday/canvas-system-icons-web
+import { activityStreamIcon } from '@workday/canvas-system-icons-web'
 
 <SystemIcon icon={activityStreamIcon} />
 <SystemIcon icon={activityStreamIcon} color={colors.blueberry500} />
@@ -251,9 +251,8 @@ Default: `undefined`
 Use with `@workday/canvas-graphics-web`.
 
 ```tsx
-import { colors } from '@workday/canvas-kit-react-core'
 import { Graphic } from '@workday/canvas-kit-react-icon'
-import { badgeAchievementGraphic } from '@workday/canvas-graphics-web
+import { badgeAchievementGraphic } from '@workday/canvas-graphics-web'
 
 <Graphic src={badgeAchievementGraphic} />
 <Graphic src={badgeAchievementGraphic} width={80}/>
