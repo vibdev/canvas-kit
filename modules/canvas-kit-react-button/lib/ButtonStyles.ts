@@ -299,17 +299,17 @@ export const udeSizes = {
   large: {
     minWidth: '112px',
     height: '48px',
-    padding: '0 32px',
+    padding: '0 30px',
   },
   medium: {
     minWidth: '96px',
     height: '40px',
-    padding: '0 24px',
+    padding: '0 22px',
   },
   small: {
     minWidth: '80px',
     height: '32px',
-    padding: '0 16px',
+    padding: '0 14px',
   },
 };
 
