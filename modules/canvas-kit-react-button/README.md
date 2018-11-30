@@ -1,62 +1,116 @@
 # Canvas Kit Button
 
-Components implementing Canvas buttons.
+> Clickable button elements that extend the native `<button>` element with Canvas styling.
+
+## Installation
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-button
+```
 
 ## Usage
 
-### Button
+```tsx
+import * as React from 'react';
+import {Button} from '@workday/canvas-kit-react-button';
 
-Extends `<button>` with Canvas button styling.
+<Button>Button Label</Button>;
+```
+
+## Static Properties
+
+#### `Sizes: ButtonSizes`
 
 ```tsx
-import { Button } from '@workday/canvas-kit-react-button'
-
-<Button>Secondary Button</Button>
-<Button buttonType={Button.Types.Primary}>Primary Button</Button>
-<Button buttonType={Button.Types.Delete}>Delete Button</Button>
-
-<Button buttonSize={Button.Sizes.Medium}>Medium Button</Button>
 <Button buttonSize={Button.Sizes.Small}>Small Button</Button>
 ```
 
-#### Properties
+---
 
-**Optional**
-
-**`buttonType`**  
-Type: `Button.Types = { Primary, Secondary, Delete }`  
-Default: `Button.Types.Secondary`  
-Button type.
-
-**`buttonSize`**  
-Type: `Button.Sizes = { Small, Medium, Large }`  
-Default: `Button.Sizes.Large`  
-Button size.
-
-**`grow`**  
-Type: `{true , false}`  
-Default: `false`  
-If true, the button's will grow to its container's width.
-
-**`buttonRef`**  
-Type: `React.Ref<HTMLButtonElement>`  
-Returns the ref to the rendered HTMLButtonElement.
-
-### Icon Button
-
-Button containing an icon. Icon may be a component from
-[`canvas-kit-react-icon`](../canvas-kit-react-icon).
+#### `Types: ButtonTypes`
 
 ```tsx
-import { IconButton } from '@workday/canvas-kit-react-button'
-import { SystemIcon } from '@workday/canvas-kit-react-icon'
-import { activityStreamIcon } from '@workday/canvas-system-icons-web';
+<Button buttonType={Button.Types.Primary}>Primary Button</Button>
+```
+
+## Component Props
+
+### Required
+
+#### `children: ReactNode`
+
+> Buttons cannot be empty
+
+### Optional
+
+#### `buttonType: ButtonTypes`
+
+> The type of the button
+
+Default: `ButtonTypes.Secondary`
+
+| Theme       | Description                     |
+| ----------- | ------------------------------- |
+| `Primary`   | Orange background, white text   |
+| `Secondary` | Gray background, dark gray text |
+| `Delete`    | Red background, dark text       |
+
+---
+
+#### `buttonSize: ButtonSizes`
+
+> The type of the button
+
+Default: `ButtonSizes.Large`
+
+| Theme    | Description                            |
+| -------- | -------------------------------------- |
+| `Small`  | 18px tall, small padding, small text   |
+| `Medium` | 24px tall, medium padding, medium text |
+| `Large`  | 40px tall, large padding, larger text  |
+
+---
+
+#### `fixed: boolean`
+
+> If true, the button's will grow to its container's width.
+
+Default: `false`
+
+---
+
+#### `buttonRef: React.Ref<HTMLButtonElement>`
+
+> Returns the ref to the rendered HTMLButtonElement.
+
+# Icon Button
+
+> Button containing an icon. Icon may be a component from
+> [`canvas-kit-react-icon`](../canvas-kit-react-icon) or an svg element.
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {IconButton} from '@workday/canvas-kit-react-button';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 
 <IconButton>
   <SystemIcon icon={activityStreamIcon} />
-</IconButton>
-
-<IconButton>
-  <svg>...</svg>
-</IconButton>
+</IconButton>;
 ```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+> Same as [`Button`](#canvas-kit-button)
