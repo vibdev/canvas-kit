@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {ButtonBaseCon, ButtonBaseLabel, ButtonDataLabel, ButtonIcon} from './ButtonBase';
-import {ButtonTypes, ButtonSizes, IconPosition} from './types';
+import {ButtonBaseCon, ButtonBaseLabel, ButtonDataLabel, ButtonIconLabel} from './ButtonBase';
+import {ButtonTypes, ButtonSizes, ButtonIconPositions} from './types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
@@ -52,12 +52,24 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
-        {elemProps.leftIcon && <ButtonIcon icon={elemProps.leftIcon} {...elemProps} />}
+        {elemProps.leftIcon && (
+          <ButtonIconLabel
+            iconPosition={ButtonIconPositions.Left}
+            icon={elemProps.leftIcon}
+            {...elemProps}
+          />
+        )}
         <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
         {elemProps.dataLabel && (
           <ButtonDataLabel {...elemProps}>{elemProps.dataLabel}</ButtonDataLabel>
         )}
-        {elemProps.rightIcon && <ButtonIcon icon={elemProps.rightIcon} {...elemProps} />}
+        {elemProps.rightIcon && (
+          <ButtonIconLabel
+            iconPosition={ButtonIconPositions.Right}
+            icon={elemProps.rightIcon}
+            {...elemProps}
+          />
+        )}
       </ButtonBaseCon>
     );
   }

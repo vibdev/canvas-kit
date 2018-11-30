@@ -25,9 +25,9 @@ export enum ButtonTypes {
 }
 
 /**
- * The different button position types.
+ * The different button icon position types.
  */
-export enum ButtonPositions {
+export enum ButtonIconPositions {
   Left,
   Right,
 }

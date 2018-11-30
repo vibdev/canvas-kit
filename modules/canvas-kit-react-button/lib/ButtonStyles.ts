@@ -250,9 +250,11 @@ export const labelBaseStyles = {
   variants: {
     large: {
       fontSize: '16px',
+      padding: '0 12px',
     },
     medium: {
       fontSize: '14px',
+      padding: '0 8px',
     },
     small: {
       fontSize: '14px',
@@ -261,14 +263,61 @@ export const labelBaseStyles = {
 };
 
 export const dataLabelBaseStyles = {
-  ...labelBaseStyles,
-  paddingLeft: '12px',
-  fontWeight: 400,
-  fontSize: '16px',
+  styles: {
+    ...labelBaseStyles.styles,
+    fontWeight: 400,
+    fontSize: '16px',
+  },
+  variants: {
+    large: {
+      paddingRight: '12px',
+    },
+    medium: {
+      paddingRight: '8px',
+    },
+  },
 };
 
-export const iconBaseStyles = {
-  padding: '0 8px',
+export const iconLabelBaseStyles = {
+  style: {},
+  variants: {
+    large: {
+      iconLeft: {
+        paddingLeft: '8px',
+      },
+      iconRight: {
+        paddingRight: '8px',
+      },
+    },
+    medium: {
+      iconLeft: {
+        paddingLeft: '4px',
+      },
+      iconRight: {
+        paddingRight: '4px',
+      },
+    },
+  },
+};
+
+export const iconButtonStyles = {
+  styles: {
+    // TODO: Support data-whatinput='input' css
+    borderRadius: '3px',
+    width: '32px',
+    height: '32px',
+    ['& .wd-icon']: {
+      display: 'inline-block',
+      verticalAlign: 'middle',
+    },
+    // Double parent selectors to ensure specificity to override original fill
+    ['&&:disabled']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.disabled},
+    },
+    ['&&:not([disabled])']: {
+      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
+    },
+  },
 };
 
 export const canvasSizes = {
@@ -299,12 +348,12 @@ export const udeSizes = {
   large: {
     minWidth: '112px',
     height: '48px',
-    padding: '0 30px',
+    padding: '0 20px',
   },
   medium: {
     minWidth: '96px',
     height: '40px',
-    padding: '0 22px',
+    padding: '0 16px',
   },
   small: {
     minWidth: '80px',
