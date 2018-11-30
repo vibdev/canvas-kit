@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {editIcon} from '@workday/canvas-system-icons-web';
+import {editIcon, mediaPlayIcon} from '@workday/canvas-system-icons-web';
 
 import {Button, IconButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -111,23 +111,6 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <Button buttonSizes={Button.Sizes.Large} buttonType={Button.Types.Text}>
-        Text
-      </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '200px',
-          height: '100px',
-        })}
-      >
-        <Button buttonSizes={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
-          Text Dark
-        </Button>
-      </div>
       <h3>Medium Buttons</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
         Ude Primary
@@ -180,7 +163,7 @@ storiesOf('Canvas Kit/Button', module)
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#4a47d4',
-          width: '200px',
+          width: '300px',
           height: '100px',
         })}
       >
@@ -188,24 +171,8 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
-        Text
-      </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '200px',
-          height: '100px',
-        })}
-      >
-        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
-          Text Dark
-        </Button>
-      </div>
       <h1 className="section-label">UDE Data Labels</h1>
+      <h3>Large Buttons</h3>
       <Button buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
         Highlight
       </Button>
@@ -221,7 +188,7 @@ storiesOf('Canvas Kit/Button', module)
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#4a47d4',
-          width: '200px',
+          width: '300px',
           height: '100px',
         })}
       >
@@ -229,14 +196,26 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <h1 className="section-label">UDE Button Icons</h1>
-      <Button buttonType={Button.Types.Highlight} leftIcon={editIcon}>
+      <h3>Medium Buttons</h3>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.Highlight}
+        dataLabel={'1:00'}
+      >
         Highlight
       </Button>
-      <Button buttonType={Button.Types.OutlineBlue} leftIcon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineBlue}
+        dataLabel={'2:00'}
+      >
         Outline Blue
       </Button>
-      <Button buttonType={Button.Types.OutlineDark} rightIcon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineDark}
+        dataLabel={'5:00'}
+      >
         Outline Dark
       </Button>
       <div
@@ -245,15 +224,116 @@ storiesOf('Canvas Kit/Button', module)
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#4a47d4',
-          width: '200px',
+          width: '300px',
           height: '100px',
         })}
       >
-        <Button rightIcon={editIcon} buttonType={Button.Types.TextDark}>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineWhite}
+          dataLabel={'3:00'}
+        >
+          Outline White
+        </Button>
+      </div>
+
+      <h1 className="section-label">UDE Button Icons</h1>
+      <h3>Large Buttons</h3>
+      <div
+        className={css({
+          display: 'flex',
+          button: {
+            margin: '15px',
+          },
+        })}
+      >
+        <Button buttonType={Button.Types.Highlight} leftIcon={editIcon}>
+          Highlight
+        </Button>
+        <Button buttonType={Button.Types.Highlight} leftIcon={mediaPlayIcon} dataLabel={'1:00'}>
+          Highlight
+        </Button>
+        <Button buttonType={Button.Types.OutlineBlue} leftIcon={editIcon}>
+          Outline Blue
+        </Button>
+        <Button buttonType={Button.Types.OutlineDark} rightIcon={editIcon}>
+          Outline Dark
+        </Button>
+      </div>
+      <h3>Medium Buttons</h3>
+      <div
+        className={css({
+          display: 'flex',
+          button: {
+            margin: '15px',
+          },
+        })}
+      >
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.Highlight}
+          leftIcon={editIcon}
+        >
+          Highlight
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.Highlight}
+          leftIcon={mediaPlayIcon}
+          dataLabel={'1:00'}
+        >
+          Highlight
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineBlue}
+          leftIcon={editIcon}
+        >
+          Outline Blue
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineDark}
+          rightIcon={editIcon}
+        >
+          Outline Dark
+        </Button>
+      </div>
+      <h1 className="section-label">UDE Text Buttons</h1>
+      <h3>Large Text Buttons</h3>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '300px',
+          height: '100px',
+        })}
+      >
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
           Text Dark
         </Button>
       </div>
-      <Button leftIcon={editIcon} buttonType={Button.Types.Text}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Text}>
+        Text
+      </Button>
+      <h3>Medium Text Buttons</h3>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '300px',
+          height: '100px',
+        })}
+      >
+        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
+          Text Dark
+        </Button>
+      </div>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
         Text
       </Button>
     </div>
