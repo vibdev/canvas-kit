@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.4"></a>
+## [0.1.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header/compare/@workday/canvas-kit-react-page-header@0.1.3...@workday/canvas-kit-react-page-header@0.1.4) (2018-12-03)
+
+
+
+
+**Note:** Version bump only for package @workday/canvas-kit-react-page-header
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header/compare/@workday/canvas-kit-react-page-header@0.1.2...@workday/canvas-kit-react-page-header@0.1.3) (2018-11-20)
 
