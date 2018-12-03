@@ -1,6 +1,6 @@
 import * as canvasColorsWeb from '@workday/canvas-colors-web';
 import {BrandingColors} from './lib/colors.types';
-import depth, {CanvasDepth} from './lib/depth';
+import depth, {CanvasDepth, CanvasDepthValue} from './lib/depth';
 import spacing, {spacingNumbers, CanvasSpacingNumbers, CanvasSpacing} from './lib/spacing';
 import type, {fontFamily, monoFontFamily, CanvasType} from './lib/type';
 import {CSSProperties} from './lib/types';
@@ -27,6 +27,7 @@ export {
   monoFontFamily,
   BrandingColors,
   CanvasDepth,
+  CanvasDepthValue,
   CanvasSpacing,
   CanvasSpacingNumbers,
   CanvasType,
