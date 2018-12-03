@@ -1,34 +1,13 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {makeMq} from '@workday/canvas-kit-react-common';
-import {
-  colors,
-  depth as depthValues,
-  type,
-  spacing,
-  spacingNumbers,
-} from '@workday/canvas-kit-react-core';
+import {colors, depth as depthValues, type, spacing} from '@workday/canvas-kit-react-core';
 import {CanvasSpacingValue} from '@workday/canvas-space-web';
 import {CanvasDepthValue} from '@workday/canvas-depth-web';
 
-export type CardSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   heading?: React.ReactNode;
-  size?: CardSize;
   padding: 0 | CanvasSpacingValue;
-
   depth: CanvasDepthValue;
-
-  /**
-   * An object that allows for custom specified breakpoints (sm, md, lg)
-   */
-  breakpoints: {
-    [key: string]: number;
-    sm: number;
-    md: number;
-    lg: number;
-  };
 }
 
 const Box = styled('div')<CardProps>(
@@ -37,35 +16,7 @@ const Box = styled('div')<CardProps>(
     borderRadius: 3,
   },
   ({depth}) => depth,
-  ({padding}) => ({padding}),
-  ({size, breakpoints}) => {
-    if (!size) {
-      return {};
-    }
-
-    const mq = makeMq(breakpoints);
-
-    const width = `${(100 / 12) * size}%`;
-    const spacingCompensation = spacingNumbers.l * 3;
-
-    let doubledWidth;
-
-    if (size * 2 > 6) {
-      doubledWidth = '100%';
-    } else {
-      doubledWidth = `${(100 / 12) * size * 2}%`;
-    }
-
-    return {
-      width: '100%',
-      [mq.sm]: {
-        width: `calc(${doubledWidth} - ${spacingCompensation}px)`,
-      },
-      [mq.md]: {
-        width: `calc(${width} - ${spacingCompensation}px)`,
-      },
-    };
-  }
+  ({padding}) => ({padding})
 );
 
 const Header = styled('div')(type.h3, {
@@ -78,18 +29,13 @@ export default class Card extends React.Component<CardProps> {
   public static defaultProps = {
     depth: depthValues[2],
     padding: spacing.l,
-    breakpoints: {
-      sm: 320,
-      md: 768,
-      lg: 1120,
-    },
   };
 
   public render() {
-    const {heading, size, padding, breakpoints, ...elemProps} = this.props;
+    const {heading, padding, ...elemProps} = this.props;
 
     return (
-      <Box size={size} padding={padding} breakpoints={breakpoints} {...elemProps}>
+      <Box padding={padding} {...elemProps}>
         {heading && <Header>{heading}</Header>}
         <Body>Card</Body>
       </Box>
