@@ -1,25 +1,28 @@
 # Canvas Kit Table
 
-Components implementing Canvas data table styling.
+> A component for applying Canvas styling to table elements.
 
-Refer to
-[canvas-kit-css-table](https://ghe.megaleo.com/design/canvas-kit-css/tree/master/modules/canvas-kit-css-table)
-for additional details.
+## Install
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-table
+```
 
 ## Usage
-
-**This package uses CSS.**  
-If you're using webpack, you must enable a CSS loader.
-
-### Table
 
 Extends `<table>` with Canvas data table styling. Use with native `<thead>` and `<tbody>` elements
 for respective styling.
 
 Use [`<TableRow>`](#TableRow) component instead of `<tr>` to define rows.
 
-```jsx
-import { Table, TableRow } from '@workday/canvas-kit-react-table'
+```tsx
+import {Table, TableRow} from '@workday/canvas-kit-react-table';
 
 <Table>
   <thead>
@@ -38,10 +41,16 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
       <td>Betty Chen</td>
     </TableRow>
   </tbody>
-</Table>
+</Table>;
 ```
 
-### TableRow
+## Static Properties
+
+> None
+
+# TableRow
+
+## Usage
 
 Extends `<tr>` with row states and styling. Use with `<th>` and `<td>` elements.
 
@@ -56,11 +65,11 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
     </TableRow>
   </thead>
   <tbody>
-    <TableRow state={TableRow.States.Error}>
+    <TableRow state={TableRow.State.Error}>
       <td>1</td>
       <td>Aidan Brown</td>
     </TableRow>
-    <TableRow state={TableRow.States.Alert}>
+    <TableRow state={TableRow.State.Alert}>
       <td>2</td>
       <td>Betty Chen</td>
     </TableRow>
@@ -68,16 +77,39 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
 </Table>
 ```
 
-#### Properties
+## Static Properties
 
-**Optional**
+#### `State: TableRowStates`
 
-**`state`**  
-Type: `TableRowStates.States = { Error, Alert, InputError, InputAlert, Hover, Selected }`  
-Default: `null`  
-Button state.
+```tsx
+<TableRow state={TableRow.State.Error}>
+```
 
-**`header`** Type: `boolean` Default: `false` Whether or not the row contains header elements.
+## Component Props
 
-> `InputError` and `InputAlert` are used for cases when the error is on the input-level rather than
-> the entire row. This style produces a colored row without a darkened border.
+### Optional
+
+#### `state: TableRowStates`
+
+> The state of the row
+
+Default: `null`
+
+| Theme        | Description                              |
+| ------------ | ---------------------------------------- |
+| `Error`      | Red border, light red background         |
+| `InputError` | Regular borders, light red background    |
+| `Alert`      | Orange border, light orange background   |
+| `InputAlert` | Regular borders, light orange background |
+| `Hover`      | Grey background                          |
+| `Selected`   | Blue border, light blue background       |
+
+`InputError` and `InputAlert` are used for cases when the error is on the input-level rather than
+the entire row. This style produces a colored row without a darkened border.
+
+#### `header: boolean`
+
+> Whether or not the row contains header elements. If true, special styling will be applied for
+> header elements.
+
+Default: `false`
