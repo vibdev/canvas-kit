@@ -69,10 +69,10 @@ Defalut: `false`
 
 > A set of breakpoints that specifies where each screen size's minimum window width begins. The page
 > header sets spacing styles based on the size of the screen.
-
+>
 > For example, by default a mobile screen size would be from 0 to 767 pixels, a 'sm' screen is from
 > 768 to 991, a 'md' screen is from 992 to 1199 pixels, and a 'lg' screen is 1200 pixels and beyond.
-
+>
 > For a non-marketing (default) context, the page header only adjusts its spacing styles up until
 > the 'sm' size breakpoint. In the `marketing` context, a page header adjusts for spacing in all
 > sizes.
