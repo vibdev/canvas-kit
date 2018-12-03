@@ -201,7 +201,7 @@ const Row = styled('tr')<TableRowProps>(
 );
 
 export default class TableRow extends React.Component<TableRowProps> {
-  public static States = TableRowStates;
+  public static State = TableRowStates;
 
   public render() {
     return <Row {...this.props}>{this.props.children}</Row>;
