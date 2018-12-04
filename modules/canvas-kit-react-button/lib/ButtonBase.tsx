@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {ButtonSizes, ButtonTypes, ButtonIconPositions} from './types';
+import {ButtonSizes, ButtonTypes} from './types';
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {ButtonProps} from './Button';
@@ -10,6 +10,9 @@ import * as ButtonStyles from './ButtonStyles';
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
   ({buttonType}) => {
+    if (buttonType === undefined) {
+      return {};
+    }
     return getButtonBase(buttonType);
   },
   ({buttonType}) => {
@@ -19,44 +22,24 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
     }
     const buttonColors = getButtonColors(buttonType);
 
-    return {
+    const buttonColorStyles = {
       backgroundColor: buttonColors.background,
       borderColor: buttonColors.border,
       color: buttonColors.text,
-      ...(buttonColors.iconColors && {
-        '.wd-icon-fill': {
-          fill: buttonColors.iconColors.color,
-        },
-      }),
       ':focus, :hover:focus': {
         backgroundColor: buttonColors.focusBackground,
         borderColor: buttonColors.focusBorder,
         color: buttonColors.focusText,
-        ...(buttonColors.iconColors && {
-          '.wd-icon-fill': {
-            fill: buttonColors.iconColors.colorFocus,
-          },
-        }),
       },
       ':active, :focus:active, :hover:active': {
         backgroundColor: buttonColors.activeBackground,
         borderColor: buttonColors.activeBorder,
         color: buttonColors.activeText,
-        ...(buttonColors.iconColors && {
-          '.wd-icon-fill': {
-            fill: buttonColors.iconColors.colorActive,
-          },
-        }),
       },
       ':hover': {
         backgroundColor: buttonColors.hoverBackground,
         borderColor: buttonColors.hoverBorder,
         color: buttonColors.hoverText,
-        ...(buttonColors.iconColors && {
-          '.wd-icon-fill': {
-            fill: buttonColors.iconColors.colorHover,
-          },
-        }),
       },
       ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
         backgroundColor: buttonColors.disabledBackground,
@@ -67,12 +50,53 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
         '&:focus, &:active': {
           ...(buttonColors.focusBorder &&
             (buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1))),
-          ...(buttonColors.focusRing && buttonColors.focusRing),
+        },
+      },
+    };
+    return buttonColorStyles;
+  },
+  ({buttonType}) => {
+    if (buttonType === undefined) {
+      return {};
+    }
+
+    const iconColors = getButtonIconColors(buttonType);
+
+    if (iconColors === undefined) {
+      return {};
+    }
+
+    return {
+      '.wd-icon-fill': {
+        fill: iconColors.color,
+      },
+      ':focus, :hover:focus': {
+        '.wd-icon-fill': {
+          fill: iconColors.colorFocus,
+        },
+      },
+      ':active, :focus:active, :hover:active': {
+        '.wd-icon-fill': {
+          fill: iconColors.colorActive,
+        },
+      },
+      ':hover': {
+        '.wd-icon-fill': {
+          fill: iconColors.colorHover,
+        },
+      },
+      '&:not([disabled])': {
+        '&:focus, &:active': {
+          ...(iconColors.focusRing && iconColors.focusRing),
         },
       },
     };
   },
   ({buttonSize, buttonType}) => {
+    if (buttonType === undefined) {
+      return {};
+    }
+
     const buttonSizeStyles = getButtonSize(buttonType);
 
     switch (buttonSize) {
@@ -95,23 +119,21 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
 );
 
 export const ButtonBaseLabel = styled('span')<ButtonProps>(
-  ButtonStyles.labelBaseStyles.styles,
+  `${ButtonStyles.labelBaseStyles.styles}`,
   ({buttonSize}) => {
-    const {variants} = ButtonStyles.labelBaseStyles;
     switch (buttonSize) {
-      case ButtonSizes.Large:
-      default:
-        return variants.large;
-      case ButtonSizes.Medium:
-        return variants.medium;
       case ButtonSizes.Small:
-        return variants.small;
+        return ButtonStyles.labelBaseStyles.variants.small;
+      case ButtonSizes.Medium:
+        return ButtonStyles.labelBaseStyles.variants.medium;
+      default:
+        return ButtonStyles.labelBaseStyles.variants!.large;
     }
   }
 );
 
 export const ButtonDataLabel = styled('span')<ButtonProps>(
-  ButtonStyles.dataLabelBaseStyles.styles,
+  `${ButtonStyles.dataLabelBaseStyles.styles}`,
   ({buttonSize}) => {
     const {variants} = ButtonStyles.dataLabelBaseStyles;
     switch (buttonSize) {
@@ -124,33 +146,25 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(
   }
 );
 
-const ButtonIconLabelStyled = styled('span')<ButtonProps>(({iconPosition, buttonSize}) => {
+const ButtonIconLabelStyled = styled('span')<ButtonProps>(({buttonSize}) => {
   switch (buttonSize) {
     case ButtonSizes.Large:
     default:
-      switch (iconPosition) {
-        case ButtonIconPositions.Left:
-        default:
-          return ButtonStyles.iconLabelBaseStyles.variants.large.iconLeft;
-        case ButtonIconPositions.Right:
-          return ButtonStyles.iconLabelBaseStyles.variants.large.iconRight;
-      }
+      return ButtonStyles.iconLabelBaseStyles.variants.large.iconLeft;
     case ButtonSizes.Medium:
-      switch (iconPosition) {
-        case ButtonIconPositions.Left:
-        default:
-          return ButtonStyles.iconLabelBaseStyles.variants.medium.iconLeft;
-        case ButtonIconPositions.Right:
-          return ButtonStyles.iconLabelBaseStyles.variants.medium.iconRight;
-      }
+      return ButtonStyles.iconLabelBaseStyles.variants.medium.iconLeft;
   }
 });
 
 export class ButtonIconLabel extends React.Component<ButtonProps> {
   public render() {
+    if (this.props.leftIcon === undefined) {
+      return {};
+    }
+
     return (
       <ButtonIconLabelStyled {...this.props}>
-        <SystemIcon icon={this.props.icon} />
+        <SystemIcon icon={this.props.leftIcon} />
       </ButtonIconLabelStyled>
     );
   }
@@ -221,5 +235,32 @@ function getButtonColors(buttonType: ButtonTypes) {
       return ButtonStyles.udePrimaryColors;
     case ButtonTypes.UdeSecondary:
       return ButtonStyles.udeSecondaryColors;
+  }
+}
+
+function getButtonIconColors(buttonType: ButtonTypes) {
+  const {iconStyles} = ButtonStyles;
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    case ButtonTypes.Secondary:
+    case ButtonTypes.Delete:
+    default:
+      return undefined;
+    case ButtonTypes.Highlight:
+      return iconStyles.highlight;
+    case ButtonTypes.OutlineBlue:
+      return iconStyles.outlineBlue;
+    case ButtonTypes.OutlineDark:
+      return iconStyles.outlineDark;
+    case ButtonTypes.OutlineWhite:
+      return iconStyles.outlineWhite;
+    case ButtonTypes.Text:
+      return iconStyles.text;
+    case ButtonTypes.TextDark:
+      return iconStyles.textDark;
+    case ButtonTypes.UdePrimary:
+      return iconStyles.udePrimary;
+    case ButtonTypes.UdeSecondary:
+      return iconStyles.udeSecondary;
   }
 }

@@ -256,9 +256,6 @@ storiesOf('Canvas Kit/Button', module)
         <Button buttonType={Button.Types.OutlineBlue} leftIcon={editIcon}>
           Outline Blue
         </Button>
-        <Button buttonType={Button.Types.OutlineDark} rightIcon={editIcon}>
-          Outline Dark
-        </Button>
       </div>
       <h3>Medium Buttons</h3>
       <div
@@ -290,13 +287,6 @@ storiesOf('Canvas Kit/Button', module)
           leftIcon={editIcon}
         >
           Outline Blue
-        </Button>
-        <Button
-          buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.OutlineDark}
-          rightIcon={editIcon}
-        >
-          Outline Dark
         </Button>
       </div>
       <h1 className="section-label">UDE Text Buttons</h1>

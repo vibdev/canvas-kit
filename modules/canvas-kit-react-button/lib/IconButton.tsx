@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {ButtonBaseCon} from './ButtonBase';
 import styled from 'react-emotion';
-import canvas from '@workday/canvas-kit-react-core';
 import {ButtonTypes} from './types';
 import {ButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';

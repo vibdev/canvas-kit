@@ -18,16 +18,9 @@ export const highlightColors = {
   focusBackground: canvas.colors.soap200,
   focusBorder: 'tansparent',
   focusText: canvas.colors.blueberry500,
-  focusRing: focusRing(2, 2),
   hoverBackground: canvas.colors.soap400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
-  iconColors: {
-    color: canvas.colors.blueberry500,
-    colorHover: canvas.colors.blueberry500,
-    colorActive: canvas.colors.blueberry500,
-    colorFocus: canvas.colors.blueberry500,
-  },
 };
 
 export const outlineBlueColors = {
@@ -47,12 +40,6 @@ export const outlineBlueColors = {
   hoverBackground: canvas.colors.blueberry400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColors: {
-    color: canvas.colors.blueberry400,
-    colorHover: canvas.colors.frenchVanilla100,
-    colorActive: canvas.colors.frenchVanilla100,
-    colorFocus: canvas.colors.frenchVanilla100,
-  },
 };
 
 export const outlineDarkColors = {
@@ -72,12 +59,6 @@ export const outlineDarkColors = {
   hoverBackground: canvas.colors.licorice500,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColors: {
-    color: canvas.colors.licorice200,
-    colorHover: canvas.colors.frenchVanilla100,
-    colorActive: canvas.colors.frenchVanilla100,
-    colorFocus: canvas.colors.frenchVanilla100,
-  },
 };
 
 export const outlineWhiteColors = {
@@ -93,16 +74,9 @@ export const outlineWhiteColors = {
   focusBackground: canvas.colors.frenchVanilla100,
   focusBorder: 'transparent',
   focusText: canvas.colors.blackPepper400,
-  focusRing: focusRing(2, 2, true, false, 'currentColor', canvas.colors.frenchVanilla100),
   hoverBackground: canvas.colors.frenchVanilla100,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blackPepper400,
-  iconColors: {
-    color: canvas.colors.frenchVanilla100,
-    colorHover: canvas.colors.licorice500,
-    colorActive: canvas.colors.licorice500,
-    colorFocus: canvas.colors.licorice500,
-  },
 };
 
 export const textColors = {
@@ -122,12 +96,6 @@ export const textColors = {
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
-  iconColors: {
-    color: canvas.colors.blueberry400,
-    colorHover: canvas.colors.blueberry500,
-    colorActive: canvas.colors.blueberry500,
-    colorFocus: canvas.colors.blueberry400,
-  },
 };
 
 export const textDarkColors = {
@@ -147,12 +115,6 @@ export const textDarkColors = {
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColors: {
-    color: canvas.colors.frenchVanilla100,
-    colorHover: canvas.colors.frenchVanilla100,
-    colorActive: canvas.colors.frenchVanilla100,
-    colorFocus: canvas.colors.licorice500,
-  },
 };
 
 export const udePrimaryColors = {
@@ -172,12 +134,6 @@ export const udePrimaryColors = {
   hoverBackground: canvas.colors.blueberry500,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColors: {
-    color: canvas.colors.frenchVanilla100,
-    colorHover: canvas.colors.frenchVanilla100,
-    colorActive: canvas.colors.frenchVanilla100,
-    colorFocus: canvas.colors.frenchVanilla100,
-  },
 };
 
 export const udeSecondaryColors = {
@@ -197,12 +153,6 @@ export const udeSecondaryColors = {
   hoverBackground: canvas.colors.soap400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blackPepper400,
-  iconColors: {
-    color: canvas.colors.licorice200,
-    colorHover: canvas.colors.licorice500,
-    colorActive: canvas.colors.licorice500,
-    colorFocus: canvas.colors.blueberry200,
-  },
 };
 
 export const canvasBaseStyles = {
@@ -258,6 +208,7 @@ export const labelBaseStyles = {
     },
     small: {
       fontSize: '14px',
+      padding: '0',
     },
   },
 };
@@ -368,9 +319,69 @@ export const textSizes = {
     height: '40px',
     padding: '0 8px',
   },
+  medium: {},
   small: {
     minWidth: '48px',
     height: '32px',
     padding: '0 8px',
+  },
+};
+
+export const iconStyles = {
+  highlight: {
+    color: canvas.colors.blueberry500,
+    colorHover: canvas.colors.blueberry500,
+    colorActive: canvas.colors.blueberry500,
+    colorFocus: canvas.colors.blueberry500,
+    focusRing: focusRing(2, 2),
+  },
+  outlineBlue: {
+    color: canvas.colors.blueberry400,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.frenchVanilla100,
+    focusRing: focusRing(2, 2),
+  },
+  outlineDark: {
+    color: canvas.colors.licorice200,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.frenchVanilla100,
+    focusRing: focusRing(2, 2),
+  },
+  outlineWhite: {
+    color: canvas.colors.frenchVanilla100,
+    colorHover: canvas.colors.licorice500,
+    colorActive: canvas.colors.licorice500,
+    colorFocus: canvas.colors.licorice500,
+    focusRing: focusRing(2, 2, true, false, 'currentColor', canvas.colors.frenchVanilla100),
+  },
+  text: {
+    color: canvas.colors.blueberry400,
+    colorHover: canvas.colors.blueberry500,
+    colorActive: canvas.colors.blueberry500,
+    colorFocus: canvas.colors.blueberry400,
+    focusRing: null,
+  },
+  textDark: {
+    color: canvas.colors.frenchVanilla100,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.licorice500,
+    focusRing: null,
+  },
+  udePrimary: {
+    color: canvas.colors.frenchVanilla100,
+    colorHover: canvas.colors.frenchVanilla100,
+    colorActive: canvas.colors.frenchVanilla100,
+    colorFocus: canvas.colors.frenchVanilla100,
+    focusRing: focusRing(2, 2),
+  },
+  udeSecondary: {
+    color: canvas.colors.licorice200,
+    colorHover: canvas.colors.licorice500,
+    colorActive: canvas.colors.licorice500,
+    colorFocus: canvas.colors.blueberry200,
+    focusRing: focusRing(2, 2),
   },
 };

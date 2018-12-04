@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {ButtonBaseCon, ButtonBaseLabel, ButtonDataLabel, ButtonIconLabel} from './ButtonBase';
-import {ButtonTypes, ButtonSizes, ButtonIconPositions} from './types';
+import {ButtonTypes, ButtonSizes} from './types';
+import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
@@ -27,11 +28,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * Left positioned icon for button.
    */
-  leftIcon?: React.ReactNode;
-  /**
-   * Right positioned icon button.
-   */
-  rightIcon?: React.ReactNode;
+  leftIcon?: CanvasSystemIcon;
 }
 
 export default class Button extends React.Component<ButtonProps> {
@@ -42,9 +39,6 @@ export default class Button extends React.Component<ButtonProps> {
     buttonSize: ButtonSizes.Large,
     buttonType: ButtonTypes.Secondary,
     grow: false,
-    dataLabel: false,
-    leftIcon: false,
-    rightIcon: false,
   };
 
   public render() {
@@ -52,23 +46,10 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
-        {elemProps.leftIcon && (
-          <ButtonIconLabel
-            iconPosition={ButtonIconPositions.Left}
-            icon={elemProps.leftIcon}
-            {...elemProps}
-          />
-        )}
+        {elemProps.leftIcon && <ButtonIconLabel {...elemProps} />}
         <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
         {elemProps.dataLabel && (
           <ButtonDataLabel {...elemProps}>{elemProps.dataLabel}</ButtonDataLabel>
-        )}
-        {elemProps.rightIcon && (
-          <ButtonIconLabel
-            iconPosition={ButtonIconPositions.Right}
-            icon={elemProps.rightIcon}
-            {...elemProps}
-          />
         )}
       </ButtonBaseCon>
     );
