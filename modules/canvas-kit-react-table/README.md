@@ -48,14 +48,24 @@ import {Table, TableRow} from '@workday/canvas-kit-react-table';
 
 > None
 
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+> None
+
 # TableRow
 
 ## Usage
 
 Extends `<tr>` with row states and styling. Use with `<th>` and `<td>` elements.
 
-```jsx
-import { Table, TableRow } from '@workday/canvas-kit-react-table'
+```tsx
+import {Table, TableRow} from '@workday/canvas-kit-react-table';
 
 <Table>
   <thead>
@@ -74,7 +84,7 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
       <td>Betty Chen</td>
     </TableRow>
   </tbody>
-</Table>
+</Table>;
 ```
 
 ## Static Properties
@@ -84,16 +94,6 @@ import { Table, TableRow } from '@workday/canvas-kit-react-table'
 ```tsx
 <TableRow state={TableRow.State.Error}>
 ```
-
-## Component Props
-
-### Optional
-
-#### `state: TableRowStates`
-
-> The state of the row
-
-Default: `null`
 
 | Theme        | Description                              |
 | ------------ | ---------------------------------------- |
@@ -106,6 +106,16 @@ Default: `null`
 
 `InputError` and `InputAlert` are used for cases when the error is on the input-level rather than
 the entire row. This style produces a colored row without a darkened border.
+
+## Component Props
+
+### Optional
+
+#### `state: TableRowStates`
+
+> The state of the row
+
+Default: `null`
 
 #### `header: boolean`
 
