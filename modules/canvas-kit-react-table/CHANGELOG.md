@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/compare/@workday/canvas-kit-react-table@0.4.4...@workday/canvas-kit-react-table@1.0.0) (2018-12-05)
+
+
+### Bug Fixes
+
+* **TableRow:** remove plural for static property ([34de107](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/34de107))
+
+
+### Code Refactoring
+
+* **Table:** move table row style to TableRow ([ccf1b35](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/ccf1b35))
+
+
+### Features
+
+* **Table:** add exports ([b7e1222](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/b7e1222))
+* **Table:** add support for HTML props ([d1199af](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/d1199af))
+* **Table:** embed emotion styles ([589d4fb](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/589d4fb))
+* **Table:** embed emotion styles for row ([d613785](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/d613785))
+
+
+### BREAKING CHANGES
+
+* **TableRow:** States is now State
+* **Table:** <tr> elements are no longer styled. <TableRow> must be used instead.
+
+
+
+
 <a name="0.4.4"></a>
 ## [0.4.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/compare/@workday/canvas-kit-react-table@0.4.3...@workday/canvas-kit-react-table@0.4.4) (2018-11-20)
 
