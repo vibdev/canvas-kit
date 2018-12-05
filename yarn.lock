@@ -30,6 +30,13 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/parser/-/parser-7.0.0-beta.53.tgz#1f45eb617bf9463d482b2c04d349d9e4edbf4892"
   integrity sha1-H0XrYXv5Rj1IKywE00nZ5O2/SJI=
 
+"@babel/runtime@^7.0.0":
+  version "7.1.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/runtime/-/runtime-7.1.5.tgz#4170907641cf1f61508f563ece3725150cc6fe39"
+  integrity sha1-QXCQdkHPH2FQj1Y+zjclFQzG/jk=
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/types@^7.0.0":
   version "7.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/types/-/types-7.1.2.tgz#183e7952cf6691628afdc2e2b90d03240bac80c0"
@@ -335,11 +342,6 @@
   version "1.4.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/chroma-js/-/chroma-js-1.4.0.tgz#1d215474b54e227bd0204572c0483b98593eabd0"
   integrity sha1-HSFUdLVOInvQIEVywEg7mFk+q9A=
-
-"@types/classnames@^2.2.6":
-  version "2.2.6"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/classnames/-/classnames-2.2.6.tgz#dbe8a666156d556ed018e15a4c65f08937c3f628"
-  integrity sha1-2+imZhVtVW7QGOFaTGXwiTfD9ig=
 
 "@types/depd@^1.1.32":
   version "1.1.32"
@@ -8547,6 +8549,13 @@ pn@^1.1.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha1-4vTO8OIZ9GPBeas3Rj5OHs3Muvs=
 
+polished@^2.3.0:
+  version "2.3.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/polished/-/polished-2.3.0.tgz#66c8b66bc666e95d9d12d760dac9df758aed8f8e"
+  integrity sha1-Zsi2a8Zm6V2dEtdg2snfdYrtj44=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -9559,6 +9568,11 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha1-vgWtf5v30i4Fb5cmzuUBf78Z4uk=
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
+  integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
 
 regenerator-transform@^0.10.0:
   version "0.10.1"

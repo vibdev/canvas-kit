@@ -35,9 +35,10 @@
   },
   "dependencies": {
     "@workday/canvas-kit-css-table": "^1.1.0",
-    "classnames": "^2.2.5"
-  },
-  "devDependencies": {
-    "@types/classnames": "^2.2.6"
+    "@workday/canvas-kit-react-core": "^1.2.3",
+    "classnames": "^2.2.5",
+    "emotion": "^9.2.12",
+    "polished": "^2.3.0",
+    "react-emotion": "^9.2.12"
   }
 }

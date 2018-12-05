@@ -1,13 +1,23 @@
 import * as React from 'react';
-import classNames from 'classnames';
-import '@workday/canvas-kit-css-table/dist/canvas-kit-css-table.css';
+import styled from 'react-emotion';
+import {colors, type} from '@workday/canvas-kit-react-core';
 
-export default class Table extends React.Component<JSX.IntrinsicElements['table']> {
+export const borderWidth = 1;
+export const borderColor = colors.soap400;
+export const cellBorder = `${borderWidth}px solid ${borderColor}`;
+
+const TableComponent = styled('table')(type.body, {
+  width: '100%',
+  border: cellBorder,
+  borderSpacing: 0,
+  textAlign: 'left',
+  thead: {
+    borderSpacing: 0,
+  },
+});
+
+export default class Table extends React.Component<React.TableHTMLAttributes<HTMLTableElement>> {
   public render() {
-    return (
-      <table {...this.props} className={classNames('wdc-table', this.props.className)}>
-        {this.props.children}
-      </table>
-    );
+    return <TableComponent {...this.props}>{this.props.children}</TableComponent>;
   }
 }

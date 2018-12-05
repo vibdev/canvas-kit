@@ -17,27 +17,27 @@ storiesOf('Canvas Kit/Table', module)
       },
       {
         data: [2, 'Betty Chen', 'Product Designer', 'San Francisco, CA'],
-        state: TableRow.States.Error,
+        state: TableRow.State.Error,
       },
       {
         data: [3, 'Helen Gonzalez', 'Application Developer', 'Portland, OR'],
-        state: TableRow.States.InputError,
+        state: TableRow.State.InputError,
       },
       {
         data: [4, 'Timothy May', 'VP, Product Development', 'San Francisco, CA'],
-        state: TableRow.States.Alert,
+        state: TableRow.State.Alert,
       },
       {
         data: [5, 'John Hours', 'Product Manager', 'New York, New York'],
-        state: TableRow.States.InputAlert,
+        state: TableRow.State.InputAlert,
       },
       {
         data: [6, 'Leslie Lang', 'Software Architect', 'New York, New York'],
-        state: TableRow.States.Hover,
+        state: TableRow.State.Hover,
       },
       {
         data: [7, 'Mary Pratt', 'Sr. Software Architect', 'New York, New York'],
-        state: TableRow.States.Selected,
+        state: TableRow.State.Selected,
       },
     ];
 
@@ -56,7 +56,11 @@ storiesOf('Canvas Kit/Table', module)
         <h1 className="section-label">Table</h1>
         <Table>
           <thead>
-            <tr>{columns.map((col, i) => <th key={i}>{col}</th>)}</tr>
+            <TableRow header={true}>
+              {columns.map((col, i) => (
+                <th key={i}>{col}</th>
+              ))}
+            </TableRow>
           </thead>
           <tbody>{rows}</tbody>
         </Table>
