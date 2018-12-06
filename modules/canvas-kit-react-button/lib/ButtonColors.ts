@@ -182,5 +182,5 @@ export const udeSecondaryColors = {
   iconColor: canvas.colors.licorice200,
   iconColorHover: canvas.colors.licorice500,
   iconColorActive: canvas.colors.licorice500,
-  iconColorFocus: canvas.colors.blueberry200,
+  iconColorFocus: canvas.colors.licorice200,
 };

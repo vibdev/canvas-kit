@@ -22,6 +22,7 @@ export enum ButtonTypes {
   TextDark,
   UdePrimary,
   UdeSecondary,
+  Dropdown,
 }
 
 /**

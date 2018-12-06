@@ -12,6 +12,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
     if (buttonType === undefined || buttonSize === undefined) {
       return {};
     }
+
     return getButtonStyle(buttonType, buttonSize);
   },
   ({grow}) => {
@@ -150,5 +151,7 @@ function getBaseButton(buttonType: ButtonTypes) {
     case ButtonTypes.Text:
     case ButtonTypes.TextDark:
       return ButtonStyles.textButtonStyles;
+    case ButtonTypes.Dropdown:
+      return ButtonStyles.dropdownButtonStyles;
   }
 }

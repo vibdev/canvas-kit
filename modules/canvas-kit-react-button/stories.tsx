@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {editIcon, mediaPlayIcon} from '@workday/canvas-system-icons-web';
 
-import {Button, IconButton} from './index'; // tslint:disable-line:import-name
+import {Button, IconButton, DropdownButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {css} from 'emotion';
 
@@ -247,6 +247,12 @@ storiesOf('Canvas Kit/Button', module)
           },
         })}
       >
+        <Button buttonType={Button.Types.UdePrimary} leftIcon={editIcon}>
+          Primary
+        </Button>
+        <Button buttonType={Button.Types.UdeSecondary} leftIcon={editIcon}>
+          Primary
+        </Button>
         <Button buttonType={Button.Types.Highlight} leftIcon={editIcon}>
           Highlight
         </Button>
@@ -266,6 +272,20 @@ storiesOf('Canvas Kit/Button', module)
           },
         })}
       >
+        <Button
+          buttonType={Button.Types.UdePrimary}
+          buttonSize={Button.Sizes.Medium}
+          leftIcon={editIcon}
+        >
+          Primary
+        </Button>
+        <Button
+          buttonType={Button.Types.UdeSecondary}
+          buttonSize={Button.Sizes.Medium}
+          leftIcon={editIcon}
+        >
+          Primary
+        </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.Highlight}
@@ -326,5 +346,18 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
         Text
       </Button>
+      <h3>Dropdown Buttons</h3>
+      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
+        Dropdown Button
+      </DropdownButton>
     </div>
   ));

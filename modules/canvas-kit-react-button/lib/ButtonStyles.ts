@@ -147,6 +147,31 @@ export const udeButtonStyles: GenericStyles = {
   },
 };
 
+export const dropdownButtonStyles: GenericStyles = {
+  classname: 'dropdown-button',
+  styles: {
+    ...udeButtonStyles.styles,
+  },
+  variants: {
+    types: {
+      primary: {
+        ...udeButtonStyles.variants.types.udePrimary,
+      },
+      secondary: {
+        ...udeButtonStyles.variants.types.udeSecondary,
+      },
+    },
+    sizes: {
+      large: {
+        ...udeButtonStyles.variants.sizes.large,
+      },
+      medium: {
+        ...udeButtonStyles.variants.sizes.medium,
+      },
+    },
+  },
+};
+
 export const textButtonStyles: GenericStyles = {
   classname: 'text-button',
   styles: {
