@@ -9,7 +9,19 @@ Includes:
 - [Depth](#depth)
 - [Type](#type)
 
-## Colors
+## Installation
+
+```tsx
+yarn add @workday/canvas-kit-react-core
+```
+
+or
+
+```tsx
+yarn add @workday/canvas-kit-react
+```
+
+# Colors
 
 Workday Canvas Colors are directly exported from
 [`@workday/canvas-colors-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-colors-web).
@@ -46,23 +58,23 @@ Colors (100-600):
 - French Vanilla
 - Black Pepper
 
-Example:
+## Usage
 
-```js
+```tsx
 import {colors} from '@workday/canvas-kit-react-core';
+
 colors.blueberry400;
 ```
 
-Each of the above colors have a gradient version as well
+> Each of the colors have a gradient version as well
 
-Example:
-
-```js
+```tsx
 import {colors} from '@workday/canvas-kit-react-core';
+
 colors.gradients.blueberry;
 ```
 
-### Semantic constants
+## Semantic constants
 
 To ensure consistency across implementations, our semantic constants should be used wherever
 possible. This allows us to swap out the color of a button or icon for example, without having to
@@ -79,111 +91,77 @@ We have several semantic groupings:
 - `statusColors`
 - `typeColors`
 
-Example:
-
-```js
+```tsx
 import {iconColors} from '@workday/canvas-kit-react-core';
+
 iconColors.hover;
 ```
 
-## Spacing
+# Spacing
 
 Workday Canvas Spacing is directly exported from
 [`@workday/canvas-spacing-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-space-web).
 
-Spacing variables in t-shirt size format. Spacing values are in `px` format.
+Spacing variables are in a "t-shirt size" format. Spacing values are in `px` format (`spacing`) or
+number format (`spacingNumbers`).
 
-| Variable | Size     |
-| -------- | -------- |
-| `xxxs`   | `'4px'`  |
-| `xxs`    | `'8px'`  |
-| `xs`     | `'12px'` |
-| `s`      | `'16px'` |
-| `m`      | `'24px'` |
-| `l`      | `'32px'` |
-| `xl`     | `'40px'` |
-| `xxl`    | `'64px'` |
-| `xxxl`   | `'80px'` |
+| Variable | Size (px) | Size (number) |
+| -------- | --------- | ------------- |
+| `xxxs`   | `'4px'`   | `4`           |
+| `xxs`    | `'8px'`   | `8`           |
+| `xs`     | `'12px'`  | `12`          |
+| `s`      | `'16px'`  | `16`          |
+| `m`      | `'24px'`  | `24`          |
+| `l`      | `'32px'`  | `32`          |
+| `xl`     | `'40px'`  | `40`          |
+| `xxl`    | `'64px'`  | `64`          |
+| `xxxl`   | `'80px'`  | `80`          |
 
-Example:
+## Usage
 
-```js
-import {spacing} from '@workday/canvas-kit-react-core';
-spacing.s;
+```tsx
+import {spacing, spacingNumbers} from '@workday/canvas-kit-react-core';
+
+spacing.s; // 16px
+spacingNumbers.s; // 16
 ```
 
-### Type Checking
-
-For the majority of your space based props, they should be using the Canvas spacing system
-(multiples of 8 for the most part). You can lock down your props to only allow Canvas spacing values
-(number or px value).
-
-Use `CanvasSpacing` for the px values and `CanvasSpacingNumbers` to only allow numbers (if you're
-doing lots of calculations and don't want to deal with stripping the `'px'` off.)
-
-Example:
-
-```js
-import {CanvasSpacing} from '@workday/canvas-kit-react-core';
-
-export interace MyComponent {
-  spacing: CanvasSpacing
-}
-```
-
-For medium spacing (24px):  
-This **will allow** the spacing prop to have values of `spacing.m`, `'m'`, `'24px'`, or `24`  
-But **will not allow** `spacing.foo`, `'foo'`, `'25px'`, `25`, etc.
-
-## Depth
+# Depth
 
 Five levels of depth are available. They are directly exported from
 [`@workday/canvas-depth-web`](https://ghe.megaleo.com/design/design-assets/tree/master/modules/canvas-depth-web).
 
-**Depth -1 (inset):** Inset card depth
+| Level            | Usage Recommendations             |
+| ---------------- | --------------------------------- |
+| Depth -1 (inset) | Inset card depth                  |
+| Depth 1          | Standard card depth               |
+| Depth 2          | Increased card depth on hover     |
+| Depth 3          | Active cards, popups              |
+| Depth 4          | Cards on white backgrounds, menus |
 
-**Depth 1:** Standard card depth
+## Usage
 
-**Depth 2:** Increased card depth on hover
-
-**Depth 3:** Active cards, popups
-
-**Depth 4:** Cards on white backgrounds, menus
-
-Example:
-
-```js
+```tsx
 import {depth} from '@workday/canvas-kit-react-core';
+
 depth.inset;
 depth['2'];
 ```
 
-### Type Checking
-
-Props that are used to adjust levels of depth should use `CanvasDepth` as the type to restrict it to
-only take the levels of depth Canvas provides.
-
-Example:
-
-```js
-import {CanvasDepth} from '@workday/canvas-kit-react-core';
-
-export interace MyComponent {
-  depth: CanvasDepth
-}
-```
-
-This **will allow** the spacing prop to have values of `depth.inset`, `depth.['1']`, `'inset'`, `1`,
-etc.  
-But **will not allow** `spacing.foo`, `'foo'`, `'box-shadow: 0 1px 1px rgba(0,0,0,0.1)'`, `5`, etc.
-
-## Type
+# Type
 
 Type styles are available as objects to use alone or with
 [Emotion](https://github.com/emotion-js/emotion).
 
-**Headings**  
-Modifies font size and weight.
+## Usage
+
+```tsx
+import {type} from '@workday/canvas-kit-react-core';
+```
+
+### Headings
+
+> Modifies font size and weight.
 
 ```tsx
 <h1 style={canvas.type.h1}>H1 Header</h1>
@@ -193,14 +171,14 @@ Modifies font size and weight.
 <h5 style={canvas.type.h5}>H5 Header</h5>
 ```
 
-**Body**
+### Body
 
 ```tsx
 <p style={canvas.type.body}>Body text</p>
 <p style={canvas.type.body2}>Smaller body text</p>
 ```
 
-**Small**
+### Small
 
 ```tsx
 <p style={canvas.type.small}>Smallest body text</p>
@@ -208,39 +186,39 @@ Modifies font size and weight.
 
 ### Variations
 
-You can modify any of the type hierarchy with the below variations:
+> You can modify any of the type hierarchy with the below variations:
 
-**Label**
+#### Labels
 
 ```tsx
 <label className={css(canvas.type.body, canvas.type.variant.label)}>Label Text</label>
 ```
 
-**Button**
+#### Buttons
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.button)}>Button Text</span>
 ```
 
-**Caps**
+#### Caps
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.caps)}>Caps Text</span>
 ```
 
-**Hint**
+#### Hint
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.hint)}>Hint Text</span>
 ```
 
-**Error**
+#### Error
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.error)}>Error Text</span>
 ```
 
-**Link**
+#### Link
 
 ```tsx
 <a href="#" className={css(canvas.type.body, canvas.type.variant.link)}>
@@ -248,13 +226,13 @@ You can modify any of the type hierarchy with the below variations:
 </a>
 ```
 
-**Mono**
+#### Mono
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.mono)}>Mono Text</span>
 ```
 
-**Inverse**
+#### Inverse
 
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.inverse)}>Inverse Text</span>
