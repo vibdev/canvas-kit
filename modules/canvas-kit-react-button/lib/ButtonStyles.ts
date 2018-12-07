@@ -187,6 +187,18 @@ export const textButtonStyles: GenericStyles = {
       textDark: {
         ...getButtonStateStyle(ButtonTypes.TextDark),
       },
+      textAllCaps: {
+        ...getButtonStateStyle(ButtonTypes.Text),
+        minWidth: '48px',
+        height: '32px',
+        padding: '0 8px',
+      },
+      textDarkAllCaps: {
+        ...getButtonStateStyle(ButtonTypes.TextDark),
+        minWidth: '48px',
+        height: '32px',
+        padding: '0 8px',
+      },
     },
     sizes: {
       large: {
@@ -220,7 +232,11 @@ export const labelBaseStyles: GenericStyles = {
     MozOsxFontSmoothing: 'grayscale',
   },
   variants: {
-    types: {},
+    types: {
+      textAllCaps: {
+        ...getTextUppercase(),
+      },
+    },
     sizes: {
       large: {
         fontSize: '16px',
@@ -298,6 +314,15 @@ export const iconButtonStyles: GenericStyles = {
     sizes: {},
   },
 };
+
+function getTextUppercase() {
+  return {
+    textTransform: 'uppercase',
+    fontSize: '14px',
+    letterSpacing: '.5px',
+    fontWeight: 500,
+  } as CSSObject;
+}
 
 function getButtonStateStyle(buttonType: ButtonTypes) {
   const buttonColors = getButtonColors(buttonType) as ButtonStyleColors;

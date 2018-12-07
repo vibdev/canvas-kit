@@ -47,7 +47,9 @@ export default class Button extends React.Component<ButtonProps> {
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
         {elemProps.icon && <ButtonIconLabel {...elemProps} />}
-        <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
+        <ButtonBaseLabel buttonSize={elemProps.buttonSize} buttonType={elemProps.buttonType}>
+          {elemProps.children}
+        </ButtonBaseLabel>
         {elemProps.dataLabel && (
           <ButtonDataLabel {...elemProps}>{elemProps.dataLabel}</ButtonDataLabel>
         )}

@@ -20,6 +20,8 @@ export enum ButtonTypes {
   OutlineWhite,
   Text,
   TextDark,
+  TextAllCaps,
+  TextDarkAllCaps,
   UdePrimary,
   UdeSecondary,
   Dropdown,

@@ -36,6 +36,15 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
       default:
         return sizes.large;
     }
+  },
+  ({buttonType}) => {
+    switch (buttonType) {
+      case ButtonTypes.TextAllCaps:
+      case ButtonTypes.TextDarkAllCaps:
+        return ButtonStyles.labelBaseStyles.variants.types.textAllCaps;
+      default:
+        return {};
+    }
   }
 );
 
@@ -138,6 +147,12 @@ function getButtonStyle(buttonType: ButtonTypes, buttonSize: ButtonSizes) {
     case ButtonTypes.TextDark:
       variantStyle = baseButton.variants.types.textDark;
       break;
+    case ButtonTypes.TextAllCaps:
+      variantStyle = baseButton.variants.types.textAllCaps;
+      break;
+    case ButtonTypes.TextDarkAllCaps:
+      variantStyle = baseButton.variants.types.textDarkAllCaps;
+      break;
   }
 
   return {...baseButton.styles, ...sizeStyle, ...variantStyle};
@@ -159,6 +174,8 @@ function getBaseButton(buttonType: ButtonTypes) {
       return ButtonStyles.udeButtonStyles;
     case ButtonTypes.Text:
     case ButtonTypes.TextDark:
+    case ButtonTypes.TextAllCaps:
+    case ButtonTypes.TextDarkAllCaps:
       return ButtonStyles.textButtonStyles;
     case ButtonTypes.Dropdown:
       return ButtonStyles.dropdownButtonStyles;

@@ -328,7 +328,7 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Text}>
         Text
       </Button>
-      <h3>Medium Text Buttons</h3>
+      <h3>Small Text Buttons</h3>
       <div
         className={css({
           display: 'flex',
@@ -343,9 +343,19 @@ storiesOf('Canvas Kit/Button', module)
           Text Dark
         </Button>
       </div>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
-        Text
-      </Button>
+      <Button buttonType={Button.Types.TextAllCaps}>All Caps</Button>
+      <div
+        className={css({
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#4a47d4',
+          width: '300px',
+          height: '100px',
+        })}
+      >
+        <Button buttonType={Button.Types.TextDarkAllCaps}>All Caps</Button>
+      </div>
       <h1 className="section-label">Dropdown Buttons</h1>
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Dropdown Button
