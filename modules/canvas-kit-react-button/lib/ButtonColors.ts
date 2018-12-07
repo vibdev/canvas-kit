@@ -1,7 +1,8 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
+import {ButtonStyleColors} from './ButtonStyles';
 
-export const highlightColors = {
+export const highlightColors: ButtonStyleColors = {
   background: canvas.colors.soap200,
   border: canvas.colors.soap200,
   text: canvas.colors.blueberry500,
@@ -24,7 +25,7 @@ export const highlightColors = {
   iconColorFocus: canvas.colors.blueberry500,
 };
 
-export const outlineBlueColors = {
+export const outlineBlueColors: ButtonStyleColors = {
   background: 'transparent',
   border: canvas.colors.blueberry400,
   text: canvas.colors.blueberry400,
@@ -47,7 +48,7 @@ export const outlineBlueColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const outlineDarkColors = {
+export const outlineDarkColors: ButtonStyleColors = {
   background: 'transparent',
   border: canvas.colors.soap500,
   text: canvas.colors.blackPepper400,
@@ -70,7 +71,7 @@ export const outlineDarkColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const outlineWhiteColors = {
+export const outlineWhiteColors: ButtonStyleColors = {
   background: 'transparent',
   border: canvas.colors.frenchVanilla100,
   text: canvas.colors.frenchVanilla100,
@@ -93,7 +94,7 @@ export const outlineWhiteColors = {
   iconColorFocus: canvas.colors.licorice500,
 };
 
-export const textColors = {
+export const textColors: ButtonStyleColors = {
   background: 'transparent',
   border: 'transparent',
   text: canvas.colors.blueberry400,
@@ -104,9 +105,9 @@ export const textColors = {
   disabledBorder: canvas.colors.soap500,
   disabledText: canvas.colors.licorice300,
   focusBackground: canvas.colors.blueberry100,
-  focusBorder: null,
+  focusBorder: undefined,
   focusText: canvas.colors.blueberry400,
-  focusRing: null,
+  focusRing: undefined,
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
@@ -116,7 +117,7 @@ export const textColors = {
   iconColorFocus: canvas.colors.blueberry400,
 };
 
-export const textDarkColors = {
+export const textDarkColors: ButtonStyleColors = {
   background: 'transparent',
   border: 'transparent',
   text: canvas.colors.frenchVanilla100,
@@ -128,8 +129,8 @@ export const textDarkColors = {
   disabledText: canvas.colors.licorice300,
   focusBackground: canvas.colors.frenchVanilla100,
   focusText: canvas.colors.licorice500,
-  focusBorder: null,
-  focusRing: null,
+  focusBorder: undefined,
+  focusRing: undefined,
   hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
@@ -139,7 +140,7 @@ export const textDarkColors = {
   iconColorFocus: canvas.colors.licorice500,
 };
 
-export const udePrimaryColors = {
+export const udePrimaryColors: ButtonStyleColors = {
   background: canvas.colors.blueberry400,
   border: 'transparent',
   text: canvas.colors.frenchVanilla100,
@@ -162,7 +163,7 @@ export const udePrimaryColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const udeSecondaryColors = {
+export const udeSecondaryColors: ButtonStyleColors = {
   background: canvas.colors.soap200,
   border: 'transparent',
   text: canvas.colors.blackPepper400,

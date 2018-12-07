@@ -29,12 +29,13 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
     const {sizes} = ButtonStyles.labelBaseStyles.variants;
 
     switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return sizes.large;
       case ButtonSizes.Small:
         return sizes.small;
       case ButtonSizes.Medium:
         return sizes.medium;
-      default:
-        return sizes.large;
     }
   },
   ({buttonType}) => {

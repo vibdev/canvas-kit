@@ -32,7 +32,7 @@ export interface ButtonStyleColors {
   disabledBorder: string;
   disabledText: string;
   focusBackground: string;
-  focusBorder: string;
+  focusBorder?: string;
   focusText: string;
   hoverBackground: string;
   hoverBorder: string;
@@ -315,16 +315,16 @@ export const iconButtonStyles: GenericStyles = {
   },
 };
 
-function getTextUppercase() {
+function getTextUppercase(): CSSObject {
   return {
     textTransform: 'uppercase',
     fontSize: '14px',
     letterSpacing: '.5px',
     fontWeight: 500,
-  } as CSSObject;
+  };
 }
 
-function getButtonStateStyle(buttonType: ButtonTypes) {
+function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
   const buttonColors = getButtonColors(buttonType) as ButtonStyleColors;
 
   return {
@@ -362,7 +362,7 @@ function getButtonStateStyle(buttonType: ButtonTypes) {
         ...(buttonColors.focusRing && buttonColors.focusRing),
       },
     },
-  } as CSSObject;
+  };
 }
 
 function getButtonColors(buttonType: ButtonTypes) {

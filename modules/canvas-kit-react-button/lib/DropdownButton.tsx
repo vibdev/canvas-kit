@@ -8,7 +8,7 @@ import {caretDownIcon} from '@workday/canvas-system-icons-web';
 
 export default class DropdownButton extends React.Component<ButtonProps> {
   public render() {
-    const {buttonRef, ...elemProps} = this.props;
+    const {children} = this.props;
 
     const DropdownButtonCon = styled('button')<ButtonProps>(
       dropdownButtonStyles.styles,
@@ -34,7 +34,7 @@ export default class DropdownButton extends React.Component<ButtonProps> {
 
     return (
       <DropdownButtonCon {...this.props}>
-        <ButtonBaseLabel>{elemProps.children}</ButtonBaseLabel>
+        <ButtonBaseLabel>{children}</ButtonBaseLabel>
         <ButtonIconLabel icon={caretDownIcon} {...this.props} buttonType={ButtonTypes.Dropdown} />
       </DropdownButtonCon>
     );
