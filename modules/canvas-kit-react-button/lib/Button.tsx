@@ -26,9 +26,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    */
   dataLabel?: String;
   /**
-   * Left positioned icon for button.
+   * Icon for button.
    */
-  leftIcon?: CanvasSystemIcon;
+  icon?: CanvasSystemIcon;
 }
 
 export default class Button extends React.Component<ButtonProps> {
@@ -46,7 +46,7 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
-        {elemProps.leftIcon && <ButtonIconLabel {...elemProps} />}
+        {elemProps.icon && <ButtonIconLabel {...elemProps} />}
         <ButtonBaseLabel buttonSize={elemProps.buttonSize}>{elemProps.children}</ButtonBaseLabel>
         {elemProps.dataLabel && (
           <ButtonDataLabel {...elemProps}>{elemProps.dataLabel}</ButtonDataLabel>

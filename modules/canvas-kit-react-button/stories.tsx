@@ -247,19 +247,19 @@ storiesOf('Canvas Kit/Button', module)
           },
         })}
       >
-        <Button buttonType={Button.Types.UdePrimary} leftIcon={editIcon}>
+        <Button buttonType={Button.Types.UdePrimary} icon={editIcon}>
           Primary
         </Button>
-        <Button buttonType={Button.Types.UdeSecondary} leftIcon={editIcon}>
+        <Button buttonType={Button.Types.UdeSecondary} icon={editIcon}>
           Primary
         </Button>
-        <Button buttonType={Button.Types.Highlight} leftIcon={editIcon}>
+        <Button buttonType={Button.Types.Highlight} icon={editIcon}>
           Highlight
         </Button>
-        <Button buttonType={Button.Types.Highlight} leftIcon={mediaPlayIcon} dataLabel={'1:00'}>
+        <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon} dataLabel={'1:00'}>
           Highlight
         </Button>
-        <Button buttonType={Button.Types.OutlineBlue} leftIcon={editIcon}>
+        <Button buttonType={Button.Types.OutlineBlue} icon={editIcon}>
           Outline Blue
         </Button>
       </div>
@@ -275,28 +275,28 @@ storiesOf('Canvas Kit/Button', module)
         <Button
           buttonType={Button.Types.UdePrimary}
           buttonSize={Button.Sizes.Medium}
-          leftIcon={editIcon}
+          icon={editIcon}
         >
           Primary
         </Button>
         <Button
           buttonType={Button.Types.UdeSecondary}
           buttonSize={Button.Sizes.Medium}
-          leftIcon={editIcon}
+          icon={editIcon}
         >
           Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.Highlight}
-          leftIcon={editIcon}
+          icon={editIcon}
         >
           Highlight
         </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.Highlight}
-          leftIcon={mediaPlayIcon}
+          icon={mediaPlayIcon}
           dataLabel={'1:00'}
         >
           Highlight
@@ -304,7 +304,7 @@ storiesOf('Canvas Kit/Button', module)
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.OutlineBlue}
-          leftIcon={editIcon}
+          icon={editIcon}
         >
           Outline Blue
         </Button>
@@ -346,7 +346,7 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
         Text
       </Button>
-      <h3>Dropdown Buttons</h3>
+      <h1 className="section-label">Dropdown Buttons</h1>
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Dropdown Button
       </DropdownButton>

@@ -53,7 +53,16 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(
   }
 );
 
-const ButtonIconLabelStyled = styled('span')<ButtonProps>(({buttonSize}) => {
+const ButtonIconLabelStyled = styled('span')<ButtonProps>(({buttonType, buttonSize}) => {
+  if (buttonType === ButtonTypes.Dropdown) {
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return {padding: '0 8px 0 0'};
+      case ButtonSizes.Medium:
+        return {padding: '0 4px 0 0'};
+    }
+  }
   switch (buttonSize) {
     case ButtonSizes.Large:
     default:
@@ -65,13 +74,13 @@ const ButtonIconLabelStyled = styled('span')<ButtonProps>(({buttonSize}) => {
 
 export class ButtonIconLabel extends React.Component<ButtonProps> {
   public render() {
-    if (this.props.leftIcon === undefined) {
+    if (this.props.icon === undefined) {
       return {};
     }
 
     return (
       <ButtonIconLabelStyled {...this.props}>
-        <SystemIcon icon={this.props.leftIcon} />
+        <SystemIcon icon={this.props.icon} />
       </ButtonIconLabelStyled>
     );
   }

@@ -35,7 +35,7 @@ export default class DropdownButton extends React.Component<ButtonProps> {
     return (
       <DropdownButtonCon {...this.props}>
         <ButtonBaseLabel>{elemProps.children}</ButtonBaseLabel>
-        <ButtonIconLabel leftIcon={caretDownIcon} {...elemProps} />
+        <ButtonIconLabel icon={caretDownIcon} {...this.props} buttonType={ButtonTypes.Dropdown} />
       </DropdownButtonCon>
     );
   }
