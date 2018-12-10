@@ -1,8 +1,31 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {ButtonStyleColors} from './ButtonStyles';
+import {CSSObject} from 'create-emotion';
 
-export const highlightColors: ButtonStyleColors = {
+export interface GenericButtonColors {
+  background: string;
+  border: string;
+  text: string;
+  activeBackground: string;
+  activeBorder: string;
+  activeText: string;
+  disabledBackground: string;
+  disabledBorder: string;
+  disabledText: string;
+  focusBackground: string;
+  focusBorder?: string;
+  focusText: string;
+  hoverBackground: string;
+  hoverBorder: string;
+  hoverText: string;
+  iconColor?: string;
+  iconColorHover?: string;
+  iconColorActive?: string;
+  iconColorFocus?: string;
+  focusRing?: CSSObject;
+}
+
+export const highlightColors: GenericButtonColors = {
   background: canvas.colors.soap200,
   border: canvas.colors.soap200,
   text: canvas.colors.blueberry500,
@@ -25,7 +48,7 @@ export const highlightColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.blueberry500,
 };
 
-export const outlineBlueColors: ButtonStyleColors = {
+export const outlineBlueColors: GenericButtonColors = {
   background: 'transparent',
   border: canvas.colors.blueberry400,
   text: canvas.colors.blueberry400,
@@ -48,7 +71,7 @@ export const outlineBlueColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const outlineDarkColors: ButtonStyleColors = {
+export const outlineDarkColors: GenericButtonColors = {
   background: 'transparent',
   border: canvas.colors.soap500,
   text: canvas.colors.blackPepper400,
@@ -71,7 +94,7 @@ export const outlineDarkColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const outlineWhiteColors: ButtonStyleColors = {
+export const outlineWhiteColors: GenericButtonColors = {
   background: 'transparent',
   border: canvas.colors.frenchVanilla100,
   text: canvas.colors.frenchVanilla100,
@@ -94,7 +117,7 @@ export const outlineWhiteColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.licorice500,
 };
 
-export const textColors: ButtonStyleColors = {
+export const textColors: GenericButtonColors = {
   background: 'transparent',
   border: 'transparent',
   text: canvas.colors.blueberry400,
@@ -117,7 +140,7 @@ export const textColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.blueberry400,
 };
 
-export const textDarkColors: ButtonStyleColors = {
+export const textDarkColors: GenericButtonColors = {
   background: 'transparent',
   border: 'transparent',
   text: canvas.colors.frenchVanilla100,
@@ -140,7 +163,7 @@ export const textDarkColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.licorice500,
 };
 
-export const udePrimaryColors: ButtonStyleColors = {
+export const udePrimaryColors: GenericButtonColors = {
   background: canvas.colors.blueberry400,
   border: 'transparent',
   text: canvas.colors.frenchVanilla100,
@@ -163,7 +186,7 @@ export const udePrimaryColors: ButtonStyleColors = {
   iconColorFocus: canvas.colors.frenchVanilla100,
 };
 
-export const udeSecondaryColors: ButtonStyleColors = {
+export const udeSecondaryColors: GenericButtonColors = {
   background: canvas.colors.soap200,
   border: 'transparent',
   text: canvas.colors.blackPepper400,

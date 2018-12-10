@@ -8,29 +8,6 @@ export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
 export const CANVAS_BUTTON_HEIGHT_MEDIUM: number = 24;
 export const CANVAS_BUTTON_HEIGHT_SMALL: number = 18;
 
-export interface ButtonStyleColors {
-  background: string;
-  border: string;
-  text: string;
-  activeBackground: string;
-  activeBorder: string;
-  activeText: string;
-  disabledBackground: string;
-  disabledBorder: string;
-  disabledText: string;
-  focusBackground: string;
-  focusBorder?: string;
-  focusText: string;
-  hoverBackground: string;
-  hoverBorder: string;
-  hoverText: string;
-  iconColor?: string;
-  iconColorHover?: string;
-  iconColorActive?: string;
-  iconColorFocus?: string;
-  focusRing?: CSSObject;
-}
-
 export const canvasButtonStyles: GenericStyle = {
   classname: 'canvas-button',
   styles: {
@@ -312,7 +289,7 @@ function getTextUppercase(): CSSObject {
 }
 
 function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
-  const buttonColors = getButtonColors(buttonType) as ButtonStyleColors;
+  const buttonColors = getButtonColors(buttonType) as ButtonColors.GenericButtonColors;
 
   return {
     backgroundColor: buttonColors.background,
