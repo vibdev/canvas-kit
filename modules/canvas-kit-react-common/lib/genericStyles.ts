@@ -17,13 +17,8 @@ export interface GenericStyles {
 export interface GenericStyle {
   classname: string;
   styles: CSSObject;
-  variants: {
-    types: {
-      [key: string]: CSSObject;
-    };
-    sizes: {
-      [key: string]: CSSObject;
-    };
+  variants?: {
+    [key: string]: CSSObject;
   };
   defaults?: Array<string>;
 }

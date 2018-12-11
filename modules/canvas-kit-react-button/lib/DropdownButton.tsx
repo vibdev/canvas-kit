@@ -15,19 +15,19 @@ export default class DropdownButton extends React.Component<ButtonProps> {
       ({buttonType}) => {
         switch (buttonType) {
           case ButtonTypes.Primary:
-            return dropdownButtonStyles.variants.types.primary;
+            return dropdownButtonStyles.variants!.types.primary;
           case ButtonTypes.Secondary:
           default:
-            return dropdownButtonStyles.variants.types.secondary;
+            return dropdownButtonStyles.variants!.types.secondary;
         }
       },
       ({buttonSize}) => {
         switch (buttonSize) {
           case ButtonSizes.Large:
           default:
-            return dropdownButtonStyles.variants.sizes.large;
+            return dropdownButtonStyles.variants!.sizes.large;
           case ButtonSizes.Medium:
-            return dropdownButtonStyles.variants.sizes.medium;
+            return dropdownButtonStyles.variants!.sizes.medium;
         }
       }
     );

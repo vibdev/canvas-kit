@@ -118,20 +118,12 @@ export const dropdownButtonStyles: GenericStyle = {
   },
   variants: {
     types: {
-      primary: {
-        ...udeButtonStyles.variants.types.udePrimary,
-      },
-      secondary: {
-        ...udeButtonStyles.variants.types.udeSecondary,
-      },
+      primary: udeButtonStyles.variants!.types.udePrimary,
+      secondary: udeButtonStyles.variants!.types.udeSecondary,
     },
     sizes: {
-      large: {
-        ...udeButtonStyles.variants.sizes.large,
-      },
-      medium: {
-        ...udeButtonStyles.variants.sizes.medium,
-      },
+      large: udeButtonStyles.variants!.sizes.large,
+      medium: udeButtonStyles.variants!.sizes.medium,
     },
   },
 };
