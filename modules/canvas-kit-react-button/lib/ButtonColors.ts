@@ -1,4 +1,4 @@
-import canvas from '@workday/canvas-kit-react-core';
+import canvas, {typeColors} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
 
@@ -14,6 +14,7 @@ export interface GenericButtonColors {
   disabledText: string;
   focusBackground: string;
   focusBorder?: string;
+  focusRing?: CSSObject;
   focusText: string;
   hoverBackground: string;
   hoverBorder: string;
@@ -22,7 +23,12 @@ export interface GenericButtonColors {
   iconColorHover?: string;
   iconColorActive?: string;
   iconColorFocus?: string;
-  focusRing?: CSSObject;
+  iconColorDisabled?: string;
+  dataLabel?: string;
+  dataLabelHover?: string;
+  dataLabelActive?: string;
+  dataLabelFocus?: string;
+  dataLabelDisabled?: string;
 }
 
 export const highlightColors: GenericButtonColors = {
@@ -32,9 +38,9 @@ export const highlightColors: GenericButtonColors = {
   activeBackground: canvas.colors.soap500,
   activeBorder: 'transparent',
   activeText: canvas.colors.blueberry500,
-  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.soap100,
   disabledBorder: 'transparent',
-  disabledText: canvas.colors.licorice300,
+  disabledText: typeColors.hint,
   focusBackground: canvas.colors.soap200,
   focusBorder: 'tansparent',
   focusRing: focusRing(2, 2),
@@ -46,6 +52,7 @@ export const highlightColors: GenericButtonColors = {
   iconColorHover: canvas.colors.blueberry500,
   iconColorActive: canvas.colors.blueberry500,
   iconColorFocus: canvas.colors.blueberry500,
+  iconColorDisabled: canvas.colors.soap600,
 };
 
 export const outlineBlueColors: GenericButtonColors = {
@@ -56,8 +63,8 @@ export const outlineBlueColors: GenericButtonColors = {
   activeBorder: 'transparent',
   activeText: canvas.colors.frenchVanilla100,
   disabledBackground: canvas.colors.frenchVanilla100,
-  disabledBorder: 'transparent',
-  disabledText: canvas.colors.licorice300,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: typeColors.hint,
   focusBackground: canvas.colors.blueberry400,
   focusBorder: 'transparent',
   focusRing: focusRing(2, 2),
@@ -69,6 +76,7 @@ export const outlineBlueColors: GenericButtonColors = {
   iconColorHover: canvas.colors.frenchVanilla100,
   iconColorActive: canvas.colors.frenchVanilla100,
   iconColorFocus: canvas.colors.frenchVanilla100,
+  iconColorDisabled: canvas.colors.soap600,
 };
 
 export const outlineDarkColors: GenericButtonColors = {
@@ -79,8 +87,8 @@ export const outlineDarkColors: GenericButtonColors = {
   activeBorder: 'transparent',
   activeText: canvas.colors.frenchVanilla100,
   disabledBackground: canvas.colors.frenchVanilla100,
-  disabledBorder: 'transparent',
-  disabledText: canvas.colors.licorice300,
+  disabledBorder: canvas.colors.soap500,
+  disabledText: typeColors.hint,
   focusBackground: canvas.colors.licorice500,
   focusBorder: 'transparent',
   focusText: canvas.colors.frenchVanilla100,
@@ -92,6 +100,7 @@ export const outlineDarkColors: GenericButtonColors = {
   iconColorHover: canvas.colors.frenchVanilla100,
   iconColorActive: canvas.colors.frenchVanilla100,
   iconColorFocus: canvas.colors.frenchVanilla100,
+  iconColorDisabled: canvas.colors.soap600,
 };
 
 export const outlineWhiteColors: GenericButtonColors = {
@@ -101,9 +110,9 @@ export const outlineWhiteColors: GenericButtonColors = {
   activeBackground: canvas.colors.soap200,
   activeBorder: 'transparent',
   activeText: canvas.colors.blackPepper400,
-  disabledBackground: canvas.colors.frenchVanilla100,
-  disabledBorder: canvas.colors.soap500,
-  disabledText: canvas.colors.licorice300,
+  disabledBackground: 'transparent',
+  disabledBorder: 'rgba(255, 255, 255, 0.75)',
+  disabledText: 'rgba(255, 255, 255, 0.75)',
   focusBackground: canvas.colors.frenchVanilla100,
   focusBorder: 'transparent',
   focusText: canvas.colors.blackPepper400,
@@ -115,6 +124,11 @@ export const outlineWhiteColors: GenericButtonColors = {
   iconColorHover: canvas.colors.licorice500,
   iconColorActive: canvas.colors.licorice500,
   iconColorFocus: canvas.colors.licorice500,
+  iconColorDisabled: 'rgba(255, 255, 255, 0.75)',
+  dataLabelHover: typeColors.hint,
+  dataLabelActive: typeColors.hint,
+  dataLabelFocus: typeColors.hint,
+  dataLabelDisabled: 'rgba(255, 255, 255, 0.75)',
 };
 
 export const textColors: GenericButtonColors = {
@@ -184,6 +198,7 @@ export const udePrimaryColors: GenericButtonColors = {
   iconColorHover: canvas.colors.frenchVanilla100,
   iconColorActive: canvas.colors.frenchVanilla100,
   iconColorFocus: canvas.colors.frenchVanilla100,
+  iconColorDisabled: canvas.colors.frenchVanilla100,
 };
 
 export const udeSecondaryColors: GenericButtonColors = {
@@ -193,9 +208,9 @@ export const udeSecondaryColors: GenericButtonColors = {
   activeBackground: canvas.colors.soap500,
   activeBorder: 'transparent',
   activeText: canvas.colors.blackPepper400,
-  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.soap100,
   disabledBorder: 'transparent',
-  disabledText: canvas.colors.licorice300,
+  disabledText: typeColors.hint,
   focusBackground: canvas.colors.soap200,
   focusBorder: 'transparent',
   focusRing: focusRing(2, 2),
@@ -207,4 +222,5 @@ export const udeSecondaryColors: GenericButtonColors = {
   iconColorHover: canvas.colors.licorice500,
   iconColorActive: canvas.colors.licorice500,
   iconColorFocus: canvas.colors.licorice200,
+  iconColorDisabled: canvas.colors.soap600,
 };

@@ -8,6 +8,16 @@ import {editIcon, mediaPlayIcon} from '@workday/canvas-system-icons-web';
 import {Button, IconButton, DropdownButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {css} from 'emotion';
+import {CSSObject} from 'create-emotion';
+
+const outlineWhiteBackground = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: '#4a47d4',
+  width: '300px',
+  height: '100px',
+} as CSSObject;
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
@@ -97,16 +107,7 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
         Outline Dark
       </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '200px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
           Outline White
         </Button>
@@ -127,16 +128,7 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
         Outline Dark
       </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '200px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
           Outline White
         </Button>
@@ -157,17 +149,29 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
         Outline Dark
       </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
+          Outline White
+        </Button>
+      </div>
+      <h3 className="section-label">Disabled States</h3>
+      <Button disabled={true} buttonType={Button.Types.UdePrimary}>
+        Primary
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.UdeSecondary}>
+        Secondary
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.Highlight}>
+        Highlight
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.OutlineBlue}>
+        Outline Blue
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.OutlineDark}>
+        Outline Dark
+      </Button>
+      <div className={css(outlineWhiteBackground)}>
+        <Button disabled={true} buttonType={Button.Types.OutlineWhite}>
           Outline White
         </Button>
       </div>
@@ -182,16 +186,7 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonType={Button.Types.OutlineDark} dataLabel={'5:00'}>
         Outline Dark
       </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonType={Button.Types.OutlineWhite} dataLabel={'3:00'}>
           Outline White
         </Button>
@@ -218,16 +213,7 @@ storiesOf('Canvas Kit/Button', module)
       >
         Outline Dark
       </Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.OutlineWhite}
@@ -236,7 +222,21 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-
+      <h3>Disabled States</h3>
+      <Button disabled={true} buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
+        Highlight
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.OutlineBlue} dataLabel={'2:00'}>
+        Outline Blue
+      </Button>
+      <Button disabled={true} buttonType={Button.Types.OutlineDark} dataLabel={'5:00'}>
+        Outline Dark
+      </Button>
+      <div className={css(outlineWhiteBackground)}>
+        <Button disabled={true} buttonType={Button.Types.OutlineWhite} dataLabel={'3:00'}>
+          Outline White
+        </Button>
+      </div>
       <h1 className="section-label">UDE Button Icons</h1>
       <h3>Large Buttons</h3>
       <div
@@ -261,6 +261,14 @@ storiesOf('Canvas Kit/Button', module)
         </Button>
         <Button buttonType={Button.Types.OutlineBlue} icon={editIcon}>
           Outline Blue
+        </Button>
+        <Button buttonType={Button.Types.OutlineDark} icon={editIcon}>
+          Outline Dark
+        </Button>
+      </div>
+      <div className={css(outlineWhiteBackground)}>
+        <Button buttonType={Button.Types.OutlineWhite} icon={editIcon}>
+          Outline White
         </Button>
       </div>
       <h3>Medium Buttons</h3>
@@ -308,19 +316,66 @@ storiesOf('Canvas Kit/Button', module)
         >
           Outline Blue
         </Button>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineDark}
+          icon={editIcon}
+        >
+          Outline Dark
+        </Button>
       </div>
-      <h1 className="section-label">UDE Text Buttons</h1>
-      <h3>Large Text Buttons</h3>
+      <div className={css(outlineWhiteBackground)}>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineWhite}
+          icon={editIcon}
+        >
+          Outline White
+        </Button>
+      </div>
+      <h3>Disabled States</h3>
       <div
         className={css({
           display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
+          button: {
+            margin: '15px',
+          },
         })}
       >
+        <Button disabled={true} buttonType={Button.Types.UdePrimary} icon={editIcon}>
+          Primary
+        </Button>
+        <Button disabled={true} buttonType={Button.Types.UdeSecondary} icon={editIcon}>
+          Primary
+        </Button>
+        <Button disabled={true} buttonType={Button.Types.Highlight} icon={editIcon}>
+          Highlight
+        </Button>
+        <Button
+          disabled={true}
+          buttonType={Button.Types.Highlight}
+          icon={mediaPlayIcon}
+          dataLabel={'1:00'}
+        >
+          Highlight
+        </Button>
+        <Button disabled={true} buttonType={Button.Types.OutlineBlue} icon={editIcon}>
+          Outline Blue
+        </Button>
+      </div>
+      <div className={css(outlineWhiteBackground)}>
+        <Button
+          disabled={true}
+          buttonSize={Button.Sizes.Medium}
+          buttonType={Button.Types.OutlineWhite}
+          icon={editIcon}
+        >
+          Outline White
+        </Button>
+      </div>
+      <h1 className="section-label">UDE Text Buttons</h1>
+      <h3>Large Text Buttons</h3>
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
           Text Dark
         </Button>
@@ -329,44 +384,57 @@ storiesOf('Canvas Kit/Button', module)
         Text
       </Button>
       <h3>Small Text Buttons</h3>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
           Text Dark
         </Button>
       </div>
       <Button buttonType={Button.Types.TextAllCaps}>All Caps</Button>
-      <div
-        className={css({
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#4a47d4',
-          width: '300px',
-          height: '100px',
-        })}
-      >
+      <div className={css(outlineWhiteBackground)}>
         <Button buttonType={Button.Types.TextDarkAllCaps}>All Caps</Button>
       </div>
       <h1 className="section-label">Dropdown Buttons</h1>
+      <h3>Large Dropdown Buttons</h3>
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Dropdown Button
       </DropdownButton>
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Dropdown Button
       </DropdownButton>
+      <h3>Medium Dropdown Buttons</h3>
       <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
         Dropdown Button
       </DropdownButton>
       <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
+        Dropdown Button
+      </DropdownButton>
+      <h3>Disabled States</h3>
+      <DropdownButton
+        disabled={true}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.Primary}
+      >
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton
+        disabled={true}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.Secondary}
+      >
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton
+        disabled={true}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.Primary}
+      >
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton
+        disabled={true}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.Secondary}
+      >
         Dropdown Button
       </DropdownButton>
     </div>

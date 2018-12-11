@@ -3,6 +3,7 @@ import {ButtonBaseCon, ButtonBaseLabel, ButtonDataLabel, ButtonIconLabel} from '
 import {ButtonTypes, ButtonSizes} from './types';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
+import {dataLabelBaseStyles} from './ButtonStyles';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
   /**
@@ -51,7 +52,9 @@ export default class Button extends React.Component<ButtonProps> {
           {elemProps.children}
         </ButtonBaseLabel>
         {elemProps.dataLabel && (
-          <ButtonDataLabel {...elemProps}>{elemProps.dataLabel}</ButtonDataLabel>
+          <ButtonDataLabel className={dataLabelBaseStyles.classname} {...elemProps}>
+            {elemProps.dataLabel}
+          </ButtonDataLabel>
         )}
       </ButtonBaseCon>
     );

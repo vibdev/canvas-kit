@@ -296,28 +296,51 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     borderColor: buttonColors.border,
     color: buttonColors.text,
     ...(buttonColors.iconColor && {'.wd-icon-fill': {fill: buttonColors.iconColor}}),
+    ...(buttonColors.dataLabel &&
+      dataLabelBaseStyles && {
+        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabel},
+      }),
     ':focus, :hover:focus': {
       backgroundColor: buttonColors.focusBackground,
       borderColor: buttonColors.focusBorder,
       color: buttonColors.focusText,
+      ...(buttonColors.dataLabelFocus &&
+        dataLabelBaseStyles && {
+          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelFocus},
+        }),
       ...(buttonColors.iconColorFocus && {'.wd-icon-fill': {fill: buttonColors.iconColorFocus}}),
     },
     ':active, :focus:active, :hover:active': {
       backgroundColor: buttonColors.activeBackground,
       borderColor: buttonColors.activeBorder,
       color: buttonColors.activeText,
+      ...(buttonColors.dataLabelActive &&
+        dataLabelBaseStyles && {
+          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelActive},
+        }),
       ...(buttonColors.iconColorActive && {'.wd-icon-fill': {fill: buttonColors.iconColorActive}}),
     },
     ':hover': {
       backgroundColor: buttonColors.hoverBackground,
       borderColor: buttonColors.hoverBorder,
       color: buttonColors.hoverText,
+      ...(buttonColors.dataLabelHover &&
+        dataLabelBaseStyles && {
+          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelHover},
+        }),
       ...(buttonColors.iconColorHover && {'.wd-icon-fill': {fill: buttonColors.iconColorHover}}),
     },
     ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
       backgroundColor: buttonColors.disabledBackground,
       borderColor: buttonColors.disabledBorder,
       color: buttonColors.disabledText,
+      ...(buttonColors.iconColorDisabled && {
+        '.wd-icon-fill': {fill: buttonColors.iconColorDisabled},
+      }),
+      ...(buttonColors.dataLabelDisabled &&
+        dataLabelBaseStyles && {
+          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelDisabled},
+        }),
     },
     '&:not([disabled])': {
       '&:focus, &:active': {
