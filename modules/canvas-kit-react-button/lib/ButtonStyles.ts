@@ -8,6 +8,80 @@ export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
 export const CANVAS_BUTTON_HEIGHT_MEDIUM: number = 24;
 export const CANVAS_BUTTON_HEIGHT_SMALL: number = 18;
 
+export const labelBaseStyles: GenericStyle = {
+  classname: 'button-label',
+  styles: {
+    position: 'relative', // Fixes an IE issue with text within button moving on click
+    ':hover:active': {
+      backgroundColor: 'transparent',
+    },
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    fontWeight: 700,
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  },
+  variants: {
+    types: {
+      textAllCaps: {
+        ...getTextUppercase(),
+      },
+    },
+    sizes: {
+      large: {
+        fontSize: '16px',
+        padding: '0 12px',
+      },
+      medium: {
+        fontSize: '14px',
+        padding: '0 8px',
+      },
+      small: {
+        fontSize: '14px',
+        padding: '0',
+      },
+    },
+  },
+};
+
+export const dataLabelBaseStyles: GenericStyle = {
+  classname: 'button-data-label',
+  styles: {
+    ...labelBaseStyles.styles,
+    fontWeight: 400,
+    fontSize: '16px',
+  },
+  variants: {
+    types: {},
+    sizes: {
+      large: {
+        paddingRight: '12px',
+      },
+      medium: {
+        paddingRight: '8px',
+      },
+    },
+  },
+};
+
+export const iconLabelBaseStyles: GenericStyle = {
+  classname: 'button-icon-label',
+  styles: {},
+  variants: {
+    types: {},
+    sizes: {
+      large: {
+        paddingLeft: '8px',
+      },
+      medium: {
+        paddingLeft: '4px',
+      },
+    },
+  },
+};
+
 export const canvasButtonStyles: GenericStyle = {
   classname: 'canvas-button',
   styles: {
@@ -172,80 +246,6 @@ export const textButtonStyles: GenericStyle = {
   },
 };
 
-export const labelBaseStyles: GenericStyle = {
-  classname: 'button-label',
-  styles: {
-    position: 'relative', // Fixes an IE issue with text within button moving on click
-    ':hover:active': {
-      backgroundColor: 'transparent',
-    },
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    fontWeight: 500,
-    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-  },
-  variants: {
-    types: {
-      textAllCaps: {
-        ...getTextUppercase(),
-      },
-    },
-    sizes: {
-      large: {
-        fontSize: '16px',
-        padding: '0 12px',
-      },
-      medium: {
-        fontSize: '14px',
-        padding: '0 8px',
-      },
-      small: {
-        fontSize: '14px',
-        padding: '0',
-      },
-    },
-  },
-};
-
-export const dataLabelBaseStyles: GenericStyle = {
-  classname: 'button-data-label',
-  styles: {
-    ...labelBaseStyles.styles,
-    fontWeight: 400,
-    fontSize: '16px',
-  },
-  variants: {
-    types: {},
-    sizes: {
-      large: {
-        paddingRight: '12px',
-      },
-      medium: {
-        paddingRight: '8px',
-      },
-    },
-  },
-};
-
-export const iconLabelBaseStyles: GenericStyle = {
-  classname: 'button-icon-label',
-  styles: {},
-  variants: {
-    types: {},
-    sizes: {
-      large: {
-        paddingLeft: '8px',
-      },
-      medium: {
-        paddingLeft: '4px',
-      },
-    },
-  },
-};
-
 export const iconButtonStyles: GenericStyle = {
   classname: 'icon-button',
   styles: {
@@ -273,10 +273,9 @@ export const iconButtonStyles: GenericStyle = {
 
 function getTextUppercase(): CSSObject {
   return {
-    textTransform: 'uppercase',
+    ...canvas.type.variant.caps,
     fontSize: '14px',
     letterSpacing: '.5px',
-    fontWeight: 500,
   };
 }
 
@@ -288,38 +287,34 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     borderColor: buttonColors.border,
     color: buttonColors.text,
     ...(buttonColors.iconColor && {'.wd-icon-fill': {fill: buttonColors.iconColor}}),
-    ...(buttonColors.dataLabel &&
-      dataLabelBaseStyles && {
-        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabel},
-      }),
+    ...(buttonColors.dataLabel && {
+      ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabel},
+    }),
     ':focus, :hover:focus': {
       backgroundColor: buttonColors.focusBackground,
       borderColor: buttonColors.focusBorder,
       color: buttonColors.focusText,
-      ...(buttonColors.dataLabelFocus &&
-        dataLabelBaseStyles && {
-          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelFocus},
-        }),
+      ...(buttonColors.dataLabelFocus && {
+        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelFocus},
+      }),
       ...(buttonColors.iconColorFocus && {'.wd-icon-fill': {fill: buttonColors.iconColorFocus}}),
     },
     ':active, :focus:active, :hover:active': {
       backgroundColor: buttonColors.activeBackground,
       borderColor: buttonColors.activeBorder,
       color: buttonColors.activeText,
-      ...(buttonColors.dataLabelActive &&
-        dataLabelBaseStyles && {
-          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelActive},
-        }),
+      ...(buttonColors.dataLabelActive && {
+        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelActive},
+      }),
       ...(buttonColors.iconColorActive && {'.wd-icon-fill': {fill: buttonColors.iconColorActive}}),
     },
     ':hover': {
       backgroundColor: buttonColors.hoverBackground,
       borderColor: buttonColors.hoverBorder,
       color: buttonColors.hoverText,
-      ...(buttonColors.dataLabelHover &&
-        dataLabelBaseStyles && {
-          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelHover},
-        }),
+      ...(buttonColors.dataLabelHover && {
+        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelHover},
+      }),
       ...(buttonColors.iconColorHover && {'.wd-icon-fill': {fill: buttonColors.iconColorHover}}),
     },
     ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
@@ -329,10 +324,9 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       ...(buttonColors.iconColorDisabled && {
         '.wd-icon-fill': {fill: buttonColors.iconColorDisabled},
       }),
-      ...(buttonColors.dataLabelDisabled &&
-        dataLabelBaseStyles && {
-          ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelDisabled},
-        }),
+      ...(buttonColors.dataLabelDisabled && {
+        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelDisabled},
+      }),
     },
     '&:not([disabled])': {
       '&:focus, &:active': {

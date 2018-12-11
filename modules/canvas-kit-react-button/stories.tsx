@@ -177,6 +177,12 @@ storiesOf('Canvas Kit/Button', module)
       </div>
       <h1 className="section-label">UDE Data Labels</h1>
       <h3>Large Buttons</h3>
+      <Button buttonType={Button.Types.UdePrimary} dataLabel={'1:00'}>
+        Primary
+      </Button>
+      <Button buttonType={Button.Types.UdeSecondary} dataLabel={'1:00'}>
+        Secondary
+      </Button>
       <Button buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
         Highlight
       </Button>
@@ -346,7 +352,7 @@ storiesOf('Canvas Kit/Button', module)
           Primary
         </Button>
         <Button disabled={true} buttonType={Button.Types.UdeSecondary} icon={editIcon}>
-          Primary
+          Secondary
         </Button>
         <Button disabled={true} buttonType={Button.Types.Highlight} icon={editIcon}>
           Highlight
