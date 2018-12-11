@@ -5,6 +5,7 @@ import {colors} from '@workday/canvas-kit-react-core';
 
 export interface ToggleProps {
   checked: boolean;
+  disabled?: boolean;
   onChange: () => void;
 }
 
@@ -49,13 +50,24 @@ const ToggleCircle = styled('div')((props: ToggleProps) => {
   };
 });
 
+const disabledToggle = css({
+  backgroundColor: colors.soap200,
+  pointerEvents: 'none',
+});
+
 export default class ToggleSwitch extends React.Component<ToggleProps> {
   public render() {
-    const {onChange, checked} = this.props;
+    const {onChange, checked, disabled} = this.props;
     return (
       <label className={labelCss}>
-        <ToggleInput tabIndex={0} checked={checked} onChange={onChange} type="checkbox" />
-        <ToggleBackground {...this.props}>
+        <ToggleInput
+          disabled={disabled}
+          tabIndex={0}
+          checked={checked}
+          onChange={onChange}
+          type="checkbox"
+        />
+        <ToggleBackground className={disabled ? disabledToggle : ''} {...this.props}>
           <ToggleCircle {...this.props} />
         </ToggleBackground>
       </label>
