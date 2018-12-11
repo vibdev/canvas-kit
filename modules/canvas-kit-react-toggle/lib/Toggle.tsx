@@ -11,7 +11,7 @@ export interface ToggleProps {
 const circleSize: number = 12;
 const toggleWidth: number = 32;
 const toggleHeight: number = 16;
-// const translateLength: number = toggleWidth - toggleHeight;
+const translateLength: number = toggleWidth - toggleHeight;
 
 const labelCss = css({
   display: 'inline-block',
@@ -37,13 +37,14 @@ const ToggleBackground = styled('div')((props: ToggleProps) => {
 });
 
 const ToggleCircle = styled('div')((props: ToggleProps) => {
+  const translate = props.checked ? `${translateLength}px` : '0';
   return {
     width: circleSize,
     height: circleSize,
     borderRadius: 100,
     boxShadow: '0 2px 4px 0 rgba(82, 97, 115, 0.14)',
     backgroundColor: colors.frenchVanilla100,
-    transform: `translateX(${props.checked ? '16px' : '0'})`,
+    transform: `translateX(${translate})`,
     transition: 'transform 0.25s linear',
   };
 });
