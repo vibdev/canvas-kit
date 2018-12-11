@@ -47,17 +47,21 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   className="emotion-3"
 >
   <input
+    checked={false}
     className="emotion-0"
+    onChange={[Function]}
     tabIndex={0}
     type="checkbox"
   />
   <div
+    checked={false}
     className="emotion-2"
-    onClick={[Function]}
+    onChange={[Function]}
   >
     <div
+      checked={false}
       className="emotion-1"
-      onClick={[Function]}
+      onChange={[Function]}
     />
   </div>
 </label>
@@ -76,7 +80,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
 .emotion-2 {
   width: 32px;
   height: 16px;
-  background-color: #dfe2e6;
+  background-color: #005cb9;
   border-radius: 100px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,9 +102,9 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   border-radius: 100px;
   box-shadow: 0 2px 4px 0 rgba(82,97,115,0.14);
   background-color: #ffffff;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
   -webkit-transition: -webkit-transform 0.25s linear;
   -webkit-transition: transform 0.25s linear;
   transition: transform 0.25s linear;
@@ -110,80 +114,21 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   className="emotion-3"
 >
   <input
+    checked={true}
     className="emotion-0"
+    onChange={[Function]}
     tabIndex={0}
     type="checkbox"
   />
   <div
+    checked={true}
     className="emotion-2"
-    onClick={[Function]}
+    onChange={[Function]}
   >
     <div
+      checked={true}
       className="emotion-1"
-      onClick={[Function]}
-    />
-  </div>
-</label>
-`;
-
-exports[`Toggle Snapshots renders toggle with different background color 1`] = `
-.emotion-3 {
-  display: inline-block;
-}
-
-.emotion-0 {
-  opacity: 0;
-  position: absolute;
-}
-
-.emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #dfe2e6;
-  border-radius: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: background-color 0.25s linear;
-  transition: background-color 0.25s linear;
-  padding: 0px 2px;
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  width: 12px;
-  height: 12px;
-  border-radius: 100px;
-  box-shadow: 0 2px 4px 0 rgba(82,97,115,0.14);
-  background-color: #ffffff;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.25s linear;
-  -webkit-transition: transform 0.25s linear;
-  transition: transform 0.25s linear;
-}
-
-<label
-  className="emotion-3"
->
-  <input
-    className="emotion-0"
-    tabIndex={0}
-    type="checkbox"
-  />
-  <div
-    className="emotion-2"
-    onClick={[Function]}
-  >
-    <div
-      className="emotion-1"
-      onClick={[Function]}
+      onChange={[Function]}
     />
   </div>
 </label>

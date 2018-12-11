@@ -6,8 +6,8 @@ describe('Toggle Snapshots', () => {
   test('renders as expected', () => {
     const component = renderer.create(
       <Toggle
-        isChecked={false}
-        onClick={() => {
+        checked={false}
+        onChange={() => {
           /* foo */
         }}
       />
@@ -17,22 +17,10 @@ describe('Toggle Snapshots', () => {
   test('renders toggle on', () => {
     const component = renderer.create(
       <Toggle
-        isChecked={true}
-        onClick={() => {
+        checked={true}
+        onChange={() => {
           /* foo */
         }}
-      />
-    );
-    expect(component).toMatchSnapshot();
-  });
-  test('renders toggle with different background color', () => {
-    const component = renderer.create(
-      <Toggle
-        isChecked={true}
-        onClick={() => {
-          /* foo */
-        }}
-        toggleBackgroundColor="#000"
       />
     );
     expect(component).toMatchSnapshot();
