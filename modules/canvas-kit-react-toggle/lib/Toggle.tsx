@@ -21,7 +21,6 @@ const ToggleInput = styled('input')({
   width: toggleWidth,
   opacity: 0,
   position: 'absolute',
-  zIndex: 1,
 });
 
 const ToggleBackground = styled('div')<ToggleProps>(({checked}) => ({

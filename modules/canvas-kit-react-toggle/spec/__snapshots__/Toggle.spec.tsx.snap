@@ -6,7 +6,6 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   width: 32px;
   opacity: 0;
   position: absolute;
-  z-index: 1;
 }
 
 .emotion-2 {
@@ -70,7 +69,6 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   width: 32px;
   opacity: 0;
   position: absolute;
-  z-index: 1;
 }
 
 .emotion-2 {
@@ -134,7 +132,6 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   width: 32px;
   opacity: 0;
   position: absolute;
-  z-index: 1;
 }
 
 .emotion-1 {
@@ -203,7 +200,6 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   width: 32px;
   opacity: 0;
   position: absolute;
-  z-index: 1;
 }
 
 .emotion-2 {
