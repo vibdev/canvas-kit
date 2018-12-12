@@ -50,11 +50,16 @@ const disabledToggle = css({
   cursor: 'not-allowed',
 });
 
+const toggleContainer = css({
+  display: 'inline-flex',
+  alignItems: 'center',
+});
+
 export default class ToggleSwitch extends React.Component<ToggleProps> {
   public render() {
     const {onChange, checked, disabled, value, inputRef, ...elemProps} = this.props;
     return (
-      <div>
+      <div className={toggleContainer}>
         <ToggleInput
           innerRef={inputRef}
           value={value}
