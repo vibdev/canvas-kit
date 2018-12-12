@@ -86,6 +86,7 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(
 );
 
 const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
+  ButtonStyles.iconLabelBaseStyles.styles,
   ({buttonType, buttonSize}) => {
     if (buttonType === ButtonTypes.Dropdown) {
       switch (buttonSize) {

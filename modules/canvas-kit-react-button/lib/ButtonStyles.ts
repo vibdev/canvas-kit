@@ -72,7 +72,9 @@ export const dataLabelBaseStyles: GenericStyle = {
 
 export const iconLabelBaseStyles: GenericStyle = {
   classname: 'button-icon-label',
-  styles: {},
+  styles: {
+    display: 'flex',
+  },
   variants: {
     types: {
       iconPositionLeft: {
