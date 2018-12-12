@@ -26,3 +26,11 @@ export enum ButtonTypes {
   UdeSecondary,
   Dropdown,
 }
+
+/**
+ * The different icon positions.
+ */
+export enum IconPositions {
+  Left,
+  Right,
+}

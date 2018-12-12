@@ -3,9 +3,9 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {editIcon, mediaPlayIcon} from '@workday/canvas-system-icons-web';
+import {editIcon, mediaPlayIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
 
-import {Button, IconButton, DropdownButton} from './index'; // tslint:disable-line:import-name
+import {Button, IconButton, DropdownButton, TextButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
@@ -18,6 +18,13 @@ const outlineWhiteBackground = {
   width: '300px',
   height: '100px',
 } as CSSObject;
+
+const buttonContainer = {
+  display: 'flex',
+  '& button + button': {
+    marginLeft: 10,
+  },
+};
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
@@ -62,14 +69,7 @@ storiesOf('Canvas Kit/Button', module)
       </IconButton>
       <br />
       <h1 className="section-label">Growing Button</h1>
-      <div
-        className={css({
-          display: 'flex',
-          '& button + button': {
-            marginLeft: 10,
-          },
-        })}
-      >
+      <div className={css(buttonContainer)}>
         <Button
           buttonType={Button.Types.Primary}
           grow={true}
@@ -245,14 +245,7 @@ storiesOf('Canvas Kit/Button', module)
       </div>
       <h1 className="section-label">UDE Button Icons</h1>
       <h3>Large Buttons</h3>
-      <div
-        className={css({
-          display: 'flex',
-          button: {
-            margin: '15px',
-          },
-        })}
-      >
+      <div className={css(buttonContainer)}>
         <Button buttonType={Button.Types.UdePrimary} icon={editIcon}>
           Primary
         </Button>
@@ -278,14 +271,7 @@ storiesOf('Canvas Kit/Button', module)
         </Button>
       </div>
       <h3>Medium Buttons</h3>
-      <div
-        className={css({
-          display: 'flex',
-          button: {
-            margin: '15px',
-          },
-        })}
-      >
+      <div className={css(buttonContainer)}>
         <Button
           buttonType={Button.Types.UdePrimary}
           buttonSize={Button.Sizes.Medium}
@@ -340,14 +326,7 @@ storiesOf('Canvas Kit/Button', module)
         </Button>
       </div>
       <h3>Disabled States</h3>
-      <div
-        className={css({
-          display: 'flex',
-          button: {
-            margin: '15px',
-          },
-        })}
-      >
+      <div className={css(buttonContainer)}>
         <Button disabled={true} buttonType={Button.Types.UdePrimary} icon={editIcon}>
           Primary
         </Button>
@@ -379,25 +358,83 @@ storiesOf('Canvas Kit/Button', module)
           Outline White
         </Button>
       </div>
-      <h1 className="section-label">UDE Text Buttons</h1>
+      <h1 className="section-label">Text Buttons</h1>
       <h3>Large Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
-        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
+        <TextButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
           Text Dark
-        </Button>
+        </TextButton>
       </div>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Text}>
+      <TextButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Text}>
         Text
-      </Button>
+      </TextButton>
       <h3>Small Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
-        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
+        <TextButton buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
           Text Dark
-        </Button>
+        </TextButton>
       </div>
-      <Button buttonType={Button.Types.TextAllCaps}>All Caps</Button>
+      <TextButton buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
+        Text
+      </TextButton>
+      <h3>All Caps Text Buttons</h3>
+      <TextButton buttonType={Button.Types.TextAllCaps}>All Caps</TextButton>
       <div className={css(outlineWhiteBackground)}>
-        <Button buttonType={Button.Types.TextDarkAllCaps}>All Caps</Button>
+        <TextButton buttonType={Button.Types.TextDarkAllCaps}>All Caps</TextButton>
+      </div>
+      <h3>Icon Text Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <TextButton
+          icon={editIcon}
+          iconPosition={TextButton.IconPositions.Left}
+          buttonType={Button.Types.Text}
+        >
+          Left Icon Large
+        </TextButton>
+        <TextButton
+          icon={arrowRightIcon}
+          iconPosition={TextButton.IconPositions.Right}
+          buttonType={Button.Types.Text}
+        >
+          Right Icon Large
+        </TextButton>
+      </div>
+      <div className={css(outlineWhiteBackground)}>
+        <TextButton
+          icon={editIcon}
+          iconPosition={TextButton.IconPositions.Left}
+          buttonType={Button.Types.TextDark}
+        >
+          Left Icon Large
+        </TextButton>
+      </div>
+      <div className={css(buttonContainer)}>
+        <TextButton
+          buttonSize={Button.Sizes.Small}
+          icon={editIcon}
+          iconPosition={TextButton.IconPositions.Left}
+          buttonType={Button.Types.Text}
+        >
+          Left Icon Small
+        </TextButton>
+        <TextButton
+          buttonSize={Button.Sizes.Small}
+          icon={arrowRightIcon}
+          iconPosition={TextButton.IconPositions.Right}
+          buttonType={Button.Types.Text}
+        >
+          Right Icon Small
+        </TextButton>
+      </div>
+      <div className={css(outlineWhiteBackground)}>
+        <TextButton
+          buttonSize={Button.Sizes.Small}
+          iconPosition={TextButton.IconPositions.Left}
+          icon={editIcon}
+          buttonType={Button.Types.TextDark}
+        >
+          Left Icon Small
+        </TextButton>
       </div>
       <h1 className="section-label">Dropdown Buttons</h1>
       <h3>Large Dropdown Buttons</h3>

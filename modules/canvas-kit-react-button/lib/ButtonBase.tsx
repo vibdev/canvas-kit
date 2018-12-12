@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {ButtonSizes, ButtonTypes} from './types';
+import {ButtonSizes, ButtonTypes, IconPositions} from './types';
 import {ButtonProps} from './Button';
+import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
 import {GenericStyle} from '@workday/canvas-kit-react-common';
@@ -58,6 +59,9 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
   },
   ({buttonType}) => {
     switch (buttonType) {
+      case ButtonTypes.Text:
+      case ButtonTypes.TextDark:
+        return ButtonStyles.labelBaseStyles.variants!.types.text;
       case ButtonTypes.TextAllCaps:
       case ButtonTypes.TextDarkAllCaps:
         return ButtonStyles.labelBaseStyles.variants!.types.textAllCaps;
@@ -81,24 +85,40 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(
   }
 );
 
-const ButtonIconLabelStyled = styled('span')<ButtonProps>(({buttonType, buttonSize}) => {
-  if (buttonType === ButtonTypes.Dropdown) {
+const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
+  ({buttonType, buttonSize}) => {
+    if (buttonType === ButtonTypes.Dropdown) {
+      switch (buttonSize) {
+        case ButtonSizes.Large:
+        default:
+          return {padding: '0 8px 0 0'};
+        case ButtonSizes.Medium:
+          return {padding: '0 4px 0 0'};
+      }
+    }
+
     switch (buttonSize) {
       case ButtonSizes.Large:
       default:
-        return {padding: '0 8px 0 0'};
+        return ButtonStyles.iconLabelBaseStyles.variants!.sizes.large;
       case ButtonSizes.Medium:
-        return {padding: '0 4px 0 0'};
+        return ButtonStyles.iconLabelBaseStyles.variants!.sizes.medium;
+    }
+  },
+  ({iconPosition}) => {
+    if (iconPosition === undefined) {
+      return {};
+    }
+
+    switch (iconPosition) {
+      case IconPositions.Left:
+      default:
+        return ButtonStyles.iconLabelBaseStyles.variants!.types.iconPositionLeft;
+      case IconPositions.Right:
+        return ButtonStyles.iconLabelBaseStyles.variants!.types.iconPositionRight;
     }
   }
-  switch (buttonSize) {
-    case ButtonSizes.Large:
-    default:
-      return ButtonStyles.iconLabelBaseStyles.variants!.sizes.large;
-    case ButtonSizes.Medium:
-      return ButtonStyles.iconLabelBaseStyles.variants!.sizes.medium;
-  }
-});
+);
 
 export class ButtonIconLabel extends React.Component<ButtonProps> {
   public render() {

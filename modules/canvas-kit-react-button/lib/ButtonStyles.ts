@@ -25,8 +25,12 @@ export const labelBaseStyles: GenericStyle = {
   },
   variants: {
     types: {
+      text: {
+        padding: '0',
+      },
       textAllCaps: {
         ...getTextUppercase(),
+        padding: '0',
       },
     },
     sizes: {
@@ -70,7 +74,14 @@ export const iconLabelBaseStyles: GenericStyle = {
   classname: 'button-icon-label',
   styles: {},
   variants: {
-    types: {},
+    types: {
+      iconPositionLeft: {
+        padding: '0 8px 0 0',
+      },
+      iconPositionRight: {
+        padding: '0 0 0 8px',
+      },
+    },
     sizes: {
       large: {
         paddingLeft: '8px',
@@ -208,6 +219,8 @@ export const textButtonStyles: GenericStyle = {
     ...canvasButtonStyles.styles,
     borderRadius: '3px;',
     '&:hover': {textDecoration: 'underline'},
+    margin: '0 8px',
+    minWidth: 'auto',
   },
   variants: {
     types: {
@@ -219,26 +232,20 @@ export const textButtonStyles: GenericStyle = {
       },
       textAllCaps: {
         ...getButtonStateStyle(ButtonTypes.Text),
-        minWidth: '48px',
         height: '32px',
-        padding: '0 8px',
       },
       textDarkAllCaps: {
         ...getButtonStateStyle(ButtonTypes.TextDark),
-        minWidth: '48px',
         height: '32px',
-        padding: '0 8px',
       },
     },
     sizes: {
       large: {
-        minWidth: '64px',
         height: '40px',
         padding: '0 8px',
       },
       medium: {},
       small: {
-        minWidth: '48px',
         height: '32px',
         padding: '0 8px',
       },
