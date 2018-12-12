@@ -37,4 +37,18 @@ describe('Toggle Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders toggle with name and value', () => {
+    const component = renderer.create(
+      <Toggle
+        name="test"
+        value="user"
+        disabled={false}
+        checked={true}
+        onChange={() => {
+          /* foo */
+        }}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

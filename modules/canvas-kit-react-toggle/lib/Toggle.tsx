@@ -7,6 +7,8 @@ export interface ToggleProps {
   checked: boolean;
   disabled?: boolean;
   onChange: () => void;
+  name?: string;
+  value?: string;
 }
 
 const circleSize: number = 12;
@@ -57,10 +59,12 @@ const disabledToggle = css({
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
   public render() {
-    const {onChange, checked, disabled} = this.props;
+    const {onChange, checked, disabled, name, value} = this.props;
     return (
       <label className={labelCss}>
         <ToggleInput
+          name={name}
+          value={value}
           disabled={disabled}
           tabIndex={0}
           checked={checked}
