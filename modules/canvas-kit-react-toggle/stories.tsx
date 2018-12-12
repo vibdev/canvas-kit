@@ -14,7 +14,7 @@ class ToggleSwitchWrapper extends React.Component<{}, ToggleSwitchWrapperState> 
   public constructor(props: {}) {
     super(props);
     this.state = {
-      isChecked: false,
+      isChecked: true,
     };
     this.handleCheck = this.handleCheck.bind(this);
   }
@@ -22,7 +22,7 @@ class ToggleSwitchWrapper extends React.Component<{}, ToggleSwitchWrapperState> 
   public render() {
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <Toggle disabled={false} checked={this.state.isChecked} onChange={this.handleCheck} />
+        <Toggle checked={this.state.isChecked} onChange={this.handleCheck} />
       </div>
     );
   }

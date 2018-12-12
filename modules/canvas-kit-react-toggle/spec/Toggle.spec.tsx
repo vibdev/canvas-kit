@@ -40,7 +40,6 @@ describe('Toggle Snapshots', () => {
   test('renders toggle with name and value', () => {
     const component = renderer.create(
       <Toggle
-        name="test"
         value="user"
         disabled={false}
         checked={true}
