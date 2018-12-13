@@ -30,4 +30,19 @@ describe('Card Snapshots', () => {
     const component = renderer.create(<Card padding="12px">Card with custom padding</Card>);
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a growing card', () => {
+    const component = renderer.create(<Card grow>Card with grow</Card>);
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a card with width', () => {
+    const component = renderer.create(<Card width="12px">Card with custom width</Card>);
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a card with height', () => {
+    const component = renderer.create(<Card height="12px">Card with custom width</Card>);
+    expect(component).toMatchSnapshot();
+  });
 });
