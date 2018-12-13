@@ -56,6 +56,9 @@ const toggleContainer = css({
 });
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
+  public static defaultProps = {
+    checked: true,
+  };
   public render() {
     const {onChange, checked, disabled, value, inputRef, ...elemProps} = this.props;
     return (
