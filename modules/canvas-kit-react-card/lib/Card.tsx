@@ -19,6 +19,21 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
    * Depth of card
    */
   depth: CanvasDepthValue;
+
+  /**
+   * If true, the button's will grow to its container's width.
+   */
+  grow?: boolean;
+
+  /**
+   * Width of card
+   */
+  width?: number | string;
+
+  /**
+   * Height of card
+   */
+  height?: number | string;
 }
 
 const Box = styled('div')<CardProps>(
@@ -27,7 +42,10 @@ const Box = styled('div')<CardProps>(
     borderRadius: 3,
   },
   ({depth}) => depth,
-  ({padding}) => ({padding})
+  ({padding}) => ({padding}),
+  ({grow}) => grow && {width: '100%', maxWidth: '100%'},
+  ({width}) => width && {width},
+  ({height}) => height && {height}
 );
 
 const Header = styled('div')(type.h3, {
@@ -43,10 +61,10 @@ export default class Card extends React.Component<CardProps> {
   };
 
   public render() {
-    const {heading, padding, ...elemProps} = this.props;
+    const {heading, ...elemProps} = this.props;
 
     return (
-      <Box padding={padding} {...elemProps}>
+      <Box {...elemProps}>
         {heading && <Header>{heading}</Header>}
         <Body>{this.props.children}</Body>
       </Box>
