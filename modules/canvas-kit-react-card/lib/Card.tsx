@@ -5,8 +5,19 @@ import {CanvasSpacingValue} from '@workday/canvas-space-web';
 import {CanvasDepthValue} from '@workday/canvas-depth-web';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Title of the card
+   */
   heading?: React.ReactNode;
+
+  /**
+   * Padding within card contents
+   */
   padding: 0 | CanvasSpacingValue;
+
+  /**
+   * Depth of card
+   */
   depth: CanvasDepthValue;
 }
 
