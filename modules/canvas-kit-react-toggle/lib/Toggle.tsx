@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {css} from 'emotion';
 import styled from 'react-emotion';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {colors, depth} from '@workday/canvas-kit-react-core';
 
 export interface ToggleProps {
@@ -46,10 +46,17 @@ const ToggleCircle = styled('div')<ToggleProps>(({checked}) => ({
   transition: 'transform 0.25s linear',
 }));
 
-const toggleContainer = css({
+const ToggleContainer = styled('div')<ToggleProps>({
   display: 'inline-flex',
   alignItems: 'center',
   cursor: 'pointer',
+  borderRadius: '999px',
+  '&:not([disabled])': {
+    '&:focus': {
+      outline: 'none',
+      ...focusRing(2, 2),
+    },
+  },
 });
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
@@ -59,7 +66,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
   public render() {
     const {onChange, checked, disabled, value, inputRef, ...elemProps} = this.props;
     return (
-      <div className={toggleContainer}>
+      <ToggleContainer tabIndex={0} {...this.props}>
         <ToggleInput
           innerRef={inputRef}
           value={value}
@@ -73,7 +80,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
         <ToggleBackground {...this.props}>
           <ToggleCircle {...this.props} />
         </ToggleBackground>
-      </div>
+      </ToggleContainer>
     );
   }
 }
