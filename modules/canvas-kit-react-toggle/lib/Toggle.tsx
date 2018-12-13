@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {css} from 'emotion';
 import styled from 'react-emotion';
-import {colors} from '@workday/canvas-kit-react-core';
+import {colors, depth} from '@workday/canvas-kit-react-core';
 
 export interface ToggleProps {
   checked: boolean;
@@ -21,12 +21,14 @@ const ToggleInput = styled('input')({
   width: toggleWidth,
   opacity: 0,
   position: 'absolute',
+  margin: 0,
+  borderRadius: 100,
 });
 
-const ToggleBackground = styled('div')<ToggleProps>(({checked}) => ({
+const ToggleBackground = styled('div')<ToggleProps>(({checked, disabled}) => ({
   width: toggleWidth,
   height: toggleHeight,
-  backgroundColor: checked ? colors.blueberry500 : colors.soap400,
+  backgroundColor: disabled ? colors.soap200 : checked ? colors.blueberry500 : colors.soap400,
   borderRadius: 100,
   display: 'flex',
   alignItems: 'center',
@@ -34,25 +36,20 @@ const ToggleBackground = styled('div')<ToggleProps>(({checked}) => ({
   padding: '0px 2px',
   boxSizing: 'border-box',
 }));
-
 const ToggleCircle = styled('div')<ToggleProps>(({checked}) => ({
   width: circleSize,
   height: circleSize,
   borderRadius: 100,
-  boxShadow: '0 2px 4px 0 rgba(82, 97, 115, 0.14)',
+  boxShadow: depth[1].boxShadow,
   backgroundColor: colors.frenchVanilla100,
   transform: checked ? `translateX(${translateLength}px)` : 'translateX(0)',
   transition: 'transform 0.25s linear',
 }));
 
-const disabledToggle = css({
-  backgroundColor: colors.soap200,
-  cursor: 'not-allowed',
-});
-
 const toggleContainer = css({
   display: 'inline-flex',
   alignItems: 'center',
+  cursor: 'pointer',
 });
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
@@ -73,7 +70,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
           type="checkbox"
           {...elemProps}
         />
-        <ToggleBackground className={disabled ? disabledToggle : ''} {...this.props}>
+        <ToggleBackground {...this.props}>
           <ToggleCircle {...this.props} />
         </ToggleBackground>
       </div>
