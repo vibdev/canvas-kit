@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card Snapshots renders a card with depth 1`] = `
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  padding: 32px;
+}
+
+<div
+  className="emotion-1"
+>
+  <div
+    className="emotion-0"
+  >
+    Card with custom depth
+  </div>
+</div>
+`;
+
 exports[`Card Snapshots renders a card with heading 1`] = `
 .emotion-2 {
   border: 1px solid #ced3d9;
@@ -36,7 +63,34 @@ exports[`Card Snapshots renders a card with heading 1`] = `
   <div
     className="emotion-1"
   >
-    Card
+    Card with a heading
+  </div>
+</div>
+`;
+
+exports[`Card Snapshots renders a card with padding 1`] = `
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 12px;
+}
+
+<div
+  className="emotion-1"
+>
+  <div
+    className="emotion-0"
+  >
+    Card with custom padding
   </div>
 </div>
 `;

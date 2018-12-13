@@ -37,7 +37,7 @@ export default class Card extends React.Component<CardProps> {
     return (
       <Box padding={padding} {...elemProps}>
         {heading && <Header>{heading}</Header>}
-        <Body>Card</Body>
+        <Body>{this.props.children}</Body>
       </Box>
     );
   }
