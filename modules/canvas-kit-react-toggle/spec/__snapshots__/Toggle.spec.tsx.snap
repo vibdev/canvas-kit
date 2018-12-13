@@ -70,9 +70,11 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   tabIndex={0}
 >
   <input
+    aria-checked={false}
     checked={false}
     className="emotion-0"
     onChange={[Function]}
+    role="checkbox"
     tabIndex={0}
     type="checkbox"
   />
@@ -160,9 +162,11 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   tabIndex={0}
 >
   <input
+    aria-checked={true}
     checked={true}
     className="emotion-0"
     onChange={[Function]}
+    role="checkbox"
     tabIndex={0}
     type="checkbox"
   />
@@ -251,10 +255,12 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   tabIndex={0}
 >
   <input
+    aria-checked={true}
     checked={true}
     className="emotion-0"
     disabled={true}
     onChange={[Function]}
+    role="checkbox"
     tabIndex={0}
     type="checkbox"
   />
@@ -346,10 +352,12 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   value="user"
 >
   <input
+    aria-checked={true}
     checked={true}
     className="emotion-0"
     disabled={false}
     onChange={[Function]}
+    role="checkbox"
     tabIndex={0}
     type="checkbox"
     value="user"

@@ -68,6 +68,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
     return (
       <ToggleContainer tabIndex={0} {...this.props}>
         <ToggleInput
+          aria-checked={checked}
           innerRef={inputRef}
           value={value}
           disabled={disabled}
@@ -75,6 +76,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
           checked={checked}
           onChange={onChange}
           type="checkbox"
+          role="checkbox"
           {...elemProps}
         />
         <ToggleBackground {...this.props}>
