@@ -98,9 +98,6 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
         Ude Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Highlight}>
-        Highlight
-      </Button>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
         Outline Blue
       </Button>
@@ -119,9 +116,6 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
         Ude Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Highlight}>
-        Highlight
-      </Button>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
         Outline Blue
       </Button>
@@ -139,9 +133,6 @@ storiesOf('Canvas Kit/Button', module)
       </Button>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
         Ude Secondary
-      </Button>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Highlight}>
-        Highlight
       </Button>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
         Outline Blue

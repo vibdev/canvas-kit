@@ -45,6 +45,14 @@ export default class Button extends React.Component<ButtonProps> {
   public render() {
     const {buttonRef, ...elemProps} = this.props;
 
+    // Restrict Hightlight button to only being sized Large, Medium with an Icon
+    if (
+      elemProps.buttonType === ButtonTypes.Highlight &&
+      (elemProps.icon === undefined || elemProps.buttonSize === ButtonSizes.Small)
+    ) {
+      return null;
+    }
+
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
         {elemProps.icon && <ButtonIconLabel {...elemProps} />}
