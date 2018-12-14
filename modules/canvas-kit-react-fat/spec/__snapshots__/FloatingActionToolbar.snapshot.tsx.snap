@@ -81,6 +81,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -94,17 +95,18 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:active,
-.emotion-1:hover:active {
-  background-color: #ffa126;
-  border-color: #ffa126;
-  color: #ffffff;
-}
-
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #ffa126;
   border-color: #005cb9;
+  color: #ffffff;
+}
+
+.emotion-1:active,
+.emotion-1:focus:active,
+.emotion-1:hover:active {
+  background-color: #ffa126;
+  border-color: #ffa126;
   color: #ffffff;
 }
 
@@ -135,11 +137,12 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 0 12px;
 }
 
 .emotion-0:hover:active {
@@ -246,6 +249,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -259,17 +263,18 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   box-shadow: none;
 }
 
-.emotion-1:active,
-.emotion-1:hover:active {
-  background-color: #ffa126;
-  border-color: #ffa126;
-  color: #ffffff;
-}
-
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #ffa126;
   border-color: #005cb9;
+  color: #ffffff;
+}
+
+.emotion-1:active,
+.emotion-1:focus:active,
+.emotion-1:hover:active {
+  background-color: #ffa126;
+  border-color: #ffa126;
   color: #ffffff;
 }
 
@@ -300,11 +305,12 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 0 12px;
 }
 
 .emotion-0:hover:active {
@@ -341,6 +347,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-3:hover:active {
@@ -354,17 +361,18 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   box-shadow: none;
 }
 
-.emotion-3:active,
-.emotion-3:hover:active {
-  background-color: #f0f1f2;
-  border-color: #ced3d9;
-  color: #333333;
-}
-
 .emotion-3:focus,
 .emotion-3:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
+  color: #333333;
+}
+
+.emotion-3:active,
+.emotion-3:focus:active,
+.emotion-3:hover:active {
+  background-color: #f0f1f2;
+  border-color: #ced3d9;
   color: #333333;
 }
 
@@ -503,6 +511,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -516,17 +525,18 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   box-shadow: none;
 }
 
-.emotion-1:active,
-.emotion-1:hover:active {
-  background-color: #ffa126;
-  border-color: #ffa126;
-  color: #ffffff;
-}
-
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #ffa126;
   border-color: #005cb9;
+  color: #ffffff;
+}
+
+.emotion-1:active,
+.emotion-1:focus:active,
+.emotion-1:hover:active {
+  background-color: #ffa126;
+  border-color: #ffa126;
   color: #ffffff;
 }
 
@@ -557,11 +567,12 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 0 12px;
 }
 
 .emotion-0:hover:active {
@@ -672,6 +683,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -685,17 +697,18 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   box-shadow: none;
 }
 
-.emotion-1:active,
-.emotion-1:hover:active {
-  background-color: #ffa126;
-  border-color: #ffa126;
-  color: #ffffff;
-}
-
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #ffa126;
   border-color: #005cb9;
+  color: #ffffff;
+}
+
+.emotion-1:active,
+.emotion-1:focus:active,
+.emotion-1:hover:active {
+  background-color: #ffa126;
+  border-color: #ffa126;
   color: #ffffff;
 }
 
@@ -726,11 +739,12 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 0 12px;
 }
 
 .emotion-0:hover:active {
@@ -767,6 +781,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
+  font-size: 14px;
 }
 
 .emotion-3:hover:active {
@@ -780,17 +795,18 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   box-shadow: none;
 }
 
-.emotion-3:active,
-.emotion-3:hover:active {
-  background-color: #f0f1f2;
-  border-color: #ced3d9;
-  color: #333333;
-}
-
 .emotion-3:focus,
 .emotion-3:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
+  color: #333333;
+}
+
+.emotion-3:active,
+.emotion-3:focus:active,
+.emotion-3:hover:active {
+  background-color: #f0f1f2;
+  border-color: #ced3d9;
   color: #333333;
 }
 
