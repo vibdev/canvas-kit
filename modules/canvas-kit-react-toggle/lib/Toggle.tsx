@@ -46,33 +46,38 @@ const ToggleCircle = styled('div')<ToggleProps>(({checked}) => ({
   transition: 'transform 0.25s linear',
 }));
 
-const ToggleContainer = styled('div')<ToggleProps>({
+const ToggleContainer = styled('div')<ToggleProps>(({disabled}) => ({
   display: 'inline-flex',
   alignItems: 'center',
-  cursor: 'pointer',
+  cursor: disabled ? 'no-allowed' : 'pointer',
   borderRadius: '999px',
-  '&:not([disabled])': {
-    '&:focus': {
+  '&:focus-within': {
+    '&:not([disabled])': {
       outline: 'none',
       ...focusRing(2, 2),
     },
   },
-});
+}));
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
+  private inputRefLocal: React.RefObject<HTMLInputElement>;
+  constructor(props: ToggleProps) {
+    super(props);
+    this.inputRefLocal = React.createRef();
+  }
   public static defaultProps = {
     checked: true,
   };
   public render() {
     const {onChange, checked, disabled, value, inputRef, ...elemProps} = this.props;
     return (
-      <ToggleContainer tabIndex={0} {...this.props}>
+      <ToggleContainer {...this.props}>
         <ToggleInput
           aria-checked={checked}
-          innerRef={inputRef}
+          innerRef={inputRef || this.inputRefLocal}
           value={value}
           disabled={disabled}
-          tabIndex={0}
+          tabIndex={1}
           checked={checked}
           onChange={onChange}
           type="checkbox"

@@ -14,7 +14,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   border-radius: 999px;
 }
 
-.emotion-3:not([disabled]):focus {
+.emotion-3:focus-within:not([disabled]) {
   outline: none;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -67,7 +67,6 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   checked={false}
   className="emotion-3"
   onChange={[Function]}
-  tabIndex={0}
 >
   <input
     aria-checked={false}
@@ -75,7 +74,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
     className="emotion-0"
     onChange={[Function]}
     role="checkbox"
-    tabIndex={0}
+    tabIndex={1}
     type="checkbox"
   />
   <div
@@ -106,7 +105,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   border-radius: 999px;
 }
 
-.emotion-3:not([disabled]):focus {
+.emotion-3:focus-within:not([disabled]) {
   outline: none;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -159,7 +158,6 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   checked={true}
   className="emotion-3"
   onChange={[Function]}
-  tabIndex={0}
 >
   <input
     aria-checked={true}
@@ -167,7 +165,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
     className="emotion-0"
     onChange={[Function]}
     role="checkbox"
-    tabIndex={0}
+    tabIndex={1}
     type="checkbox"
   />
   <div
@@ -185,26 +183,6 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
 `;
 
 exports[`Toggle Snapshots renders toggle on 2`] = `
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 999px;
-}
-
-.emotion-3:not([disabled]):focus {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
 .emotion-0 {
   height: 16px;
   width: 32px;
@@ -226,6 +204,26 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   -webkit-transition: -webkit-transform 0.25s linear;
   -webkit-transition: transform 0.25s linear;
   transition: transform 0.25s linear;
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: no-allowed;
+  border-radius: 999px;
+}
+
+.emotion-3:focus-within:not([disabled]) {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
 .emotion-2 {
@@ -252,7 +250,6 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   className="emotion-3"
   disabled={true}
   onChange={[Function]}
-  tabIndex={0}
 >
   <input
     aria-checked={true}
@@ -261,7 +258,7 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
     disabled={true}
     onChange={[Function]}
     role="checkbox"
-    tabIndex={0}
+    tabIndex={1}
     type="checkbox"
   />
   <div
@@ -294,7 +291,7 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   border-radius: 999px;
 }
 
-.emotion-3:not([disabled]):focus {
+.emotion-3:focus-within:not([disabled]) {
   outline: none;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -348,7 +345,6 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   className="emotion-3"
   disabled={false}
   onChange={[Function]}
-  tabIndex={0}
   value="user"
 >
   <input
@@ -358,7 +354,7 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
     disabled={false}
     onChange={[Function]}
     role="checkbox"
-    tabIndex={0}
+    tabIndex={1}
     type="checkbox"
     value="user"
   />
