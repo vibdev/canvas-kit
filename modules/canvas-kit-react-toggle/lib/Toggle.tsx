@@ -60,10 +60,6 @@ const ToggleContainer = styled('div')<ToggleProps>(({disabled}) => ({
 }));
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
-  constructor(props: ToggleProps) {
-    super(props);
-    this.inputRefLocal = React.createRef();
-  }
   public static defaultProps = {
     checked: true,
   };
