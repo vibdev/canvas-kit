@@ -93,35 +93,6 @@ timestamps {
           }
         }
 
-				stage('Test') {
-					echo env.STAGE_NAME
-					dir(repoBaseDir) {
-						try {
-							// https://jestjs.io/docs/en/troubleshooting#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server
-							sh('yarn run test -w 4')
-							// or do yarn run test -i
-							setGheStatusChecks('ci/jenkins/tests', 'tests SUCCESS!', 'SUCCESS')
-						} catch (Exception e) {
-							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
-							setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
-							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
-              slack.notifyFail()
-							throw e
-						}
-						finally {
-							junit 'junit.xml'
-							step([
-								$class              : 'CloverPublisher',
-								cloverReportDir     : 'build/reports/jest',
-								cloverReportFileName: 'clover.xml',
-								healthyTarget       : [methodCoverage: 97, conditionalCoverage: 97, statementCoverage: 97],
-								unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
-								failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
-							])
-						}
-					}
-				}
-
         stage('Storybook') {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
@@ -140,12 +111,43 @@ timestamps {
               }
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/storybook', 'storybook FAILED!', 'FAIL')
+              setGheStatusChecks('ci/jenkins/tests', 'tests not run.', 'FAIL')
               setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
               slack.notifyFail()
               throw e
             }
           }
         }
+
+
+				stage('Test') {
+					echo env.STAGE_NAME
+					dir(repoBaseDir) {
+						try {
+							// https://jestjs.io/docs/en/troubleshooting#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server
+							sh('yarn run test -w 4')
+							// or do yarn run test -i
+							setGheStatusChecks('ci/jenkins/tests', 'tests SUCCESS!', 'SUCCESS')
+						} catch (Exception e) {
+							setGheStatusChecks('ci/jenkins/tests', 'tests FAILED!', 'FAIL')
+							setGheStatusChecks('ci/jenkins/ciProgress', 'ciProgress FAILED!', 'FAIL')
+              slack.notifyFail()
+							throw e
+						}
+						finally {
+							junit 'junit.xml'
+							step([
+								$class              : 'CloverPublisher',
+								cloverReportDir     : 'build/reports/jest',
+								cloverReportFileName: 'clover.xml',
+								healthyTarget       : [methodCoverage: 97, conditionalCoverage: 97, statementCoverage: 97],
+								unhealthyTarget     : [methodCoverage: 90, conditionalCoverage: 90, statementCoverage: 90],
+								failingTarget       : [methodCoverage: 80, conditionalCoverage: 80, statementCoverage: 80]
+							])
+						}
+					}
+				}
+
 
         //Following stages occur only on master
         ifBranch.isMaster {
