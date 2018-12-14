@@ -14,13 +14,16 @@ const outlineWhiteBackground = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: '#4a47d4',
-  width: '300px',
-  height: '100px',
+  backgroundColor: '#0875e1',
+  margin: '0 10px',
+  padding: '24px',
+  maxWidth: 'max-content',
+  borderRadius: '3px',
 } as CSSObject;
 
 const buttonContainer = {
   display: 'flex',
+  alignItems: 'center',
   '& button + button': {
     marginLeft: 10,
   },
@@ -28,7 +31,7 @@ const buttonContainer = {
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Canvas', () => (
     <div className="story">
       <h1 className="section-label">Canvas Buttons</h1>
       <Button
@@ -89,209 +92,305 @@ storiesOf('Canvas Kit/Button', module)
           Growing Secondary Button
         </Button>
       </div>
-      <br />
+    </div>
+  ))
+  .add('UDE Buttons', () => (
+    <div className="story">
       <h1 className="section-label">UDE Buttons</h1>
       <h3>Large Buttons</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
-        Ude Primary
+        Primary
       </Button>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
-        Ude Secondary
+        Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
-        Outline Blue
+      <br />
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary} icon={editIcon}>
+        Primary
       </Button>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
-        Outline Dark
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
+        icon={editIcon}
+      >
+        Secondary
       </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
-          Outline White
-        </Button>
-      </div>
+      <br />
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdePrimary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Primary
+      </Button>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Secondary
+      </Button>
+      <br />
+      <Button
+        disabled={true}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdePrimary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Primary
+      </Button>
+      <Button
+        disabled={true}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Secondary
+      </Button>
       <h3>Medium Buttons</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
-        Ude Primary
+        Primary
       </Button>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
-        Ude Secondary
+        Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
-        Outline Blue
+      <br />
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary} icon={editIcon}>
+        Primary
       </Button>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
-        Outline Dark
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
+        icon={editIcon}
+      >
+        Secondary
       </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
-          Outline White
-        </Button>
-      </div>
+      <br />
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdePrimary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Primary
+      </Button>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Secondary
+      </Button>
+      <br />
+      <Button
+        disabled={true}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdePrimary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Primary
+      </Button>
+      <Button
+        disabled={true}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
+      >
+        Secondary
+      </Button>
       <h3>Small Buttons</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
-        Ude Primary
+        Primary
       </Button>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
-        Ude Secondary
-      </Button>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
-        Outline Blue
-      </Button>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
-        Outline Dark
-      </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
-          Outline White
-        </Button>
-      </div>
-      <h3 className="section-label">Disabled States</h3>
-      <Button disabled={true} buttonType={Button.Types.UdePrimary}>
-        Primary
-      </Button>
-      <Button disabled={true} buttonType={Button.Types.UdeSecondary}>
         Secondary
       </Button>
-      <Button disabled={true} buttonType={Button.Types.Highlight}>
-        Highlight
-      </Button>
-      <Button disabled={true} buttonType={Button.Types.OutlineBlue}>
-        Outline Blue
-      </Button>
-      <Button disabled={true} buttonType={Button.Types.OutlineDark}>
-        Outline Dark
-      </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button disabled={true} buttonType={Button.Types.OutlineWhite}>
-          Outline White
-        </Button>
-      </div>
-      <h1 className="section-label">UDE Data Labels</h1>
-      <h3>Large Buttons</h3>
-      <Button buttonType={Button.Types.UdePrimary} dataLabel={'1:00'}>
+      <br />
+      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
         Primary
       </Button>
-      <Button buttonType={Button.Types.UdeSecondary} dataLabel={'1:00'}>
+      <Button
+        disabled={true}
+        buttonSize={Button.Sizes.Small}
+        buttonType={Button.Types.UdeSecondary}
+      >
         Secondary
       </Button>
-      <Button buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
+    </div>
+  ))
+  .add('Highlight Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Highlight Buttons</h1>
+      <h3>Large Highlight Buttons</h3>
+      <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon}>
         Highlight
       </Button>
-      <Button buttonType={Button.Types.OutlineBlue} dataLabel={'2:00'}>
-        Outline Blue
+      <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon} dataLabel={'2:00'}>
+        Highlight
       </Button>
-      <Button buttonType={Button.Types.OutlineDark} dataLabel={'5:00'}>
-        Outline Dark
+      <Button
+        disabled={true}
+        buttonType={Button.Types.Highlight}
+        icon={mediaPlayIcon}
+        dataLabel={'2:00'}
+      >
+        Highlight
       </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button buttonType={Button.Types.OutlineWhite} dataLabel={'3:00'}>
-          Outline White
-        </Button>
-      </div>
-      <h3>Medium Buttons</h3>
+
+      <h3>Medium Highlight Buttons</h3>
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.Highlight}
+        icon={mediaPlayIcon}
+      >
+        Highlight
+      </Button>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.Highlight}
+        icon={mediaPlayIcon}
         dataLabel={'1:00'}
       >
         Highlight
       </Button>
       <Button
+        disabled={true}
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineBlue}
-        dataLabel={'2:00'}
+        buttonType={Button.Types.Highlight}
+        icon={mediaPlayIcon}
+        dataLabel={'1:00'}
       >
-        Outline Blue
-      </Button>
-      <Button
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineDark}
-        dataLabel={'5:00'}
-      >
-        Outline Dark
-      </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button
-          buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.OutlineWhite}
-          dataLabel={'3:00'}
-        >
-          Outline White
-        </Button>
-      </div>
-      <h3>Disabled States</h3>
-      <Button disabled={true} buttonType={Button.Types.Highlight} dataLabel={'1:00'}>
         Highlight
       </Button>
-      <Button disabled={true} buttonType={Button.Types.OutlineBlue} dataLabel={'2:00'}>
-        Outline Blue
-      </Button>
-      <Button disabled={true} buttonType={Button.Types.OutlineDark} dataLabel={'5:00'}>
-        Outline Dark
-      </Button>
-      <div className={css(outlineWhiteBackground)}>
-        <Button disabled={true} buttonType={Button.Types.OutlineWhite} dataLabel={'3:00'}>
-          Outline White
-        </Button>
-      </div>
-      <h1 className="section-label">UDE Button Icons</h1>
-      <h3>Large Buttons</h3>
+    </div>
+  ))
+  .add('Outline Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Outline Buttons</h1>
+      <h3>Large Outline Buttons</h3>
       <div className={css(buttonContainer)}>
-        <Button buttonType={Button.Types.UdePrimary} icon={editIcon}>
-          Primary
-        </Button>
-        <Button buttonType={Button.Types.UdeSecondary} icon={editIcon}>
-          Primary
-        </Button>
-        <Button buttonType={Button.Types.Highlight} icon={editIcon}>
-          Highlight
-        </Button>
-        <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon} dataLabel={'1:00'}>
-          Highlight
-        </Button>
-        <Button buttonType={Button.Types.OutlineBlue} icon={editIcon}>
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
           Outline Blue
         </Button>
-        <Button buttonType={Button.Types.OutlineDark} icon={editIcon}>
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
           Outline Dark
         </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
+            Outline White
+          </Button>
+        </div>
       </div>
-      <div className={css(outlineWhiteBackground)}>
-        <Button buttonType={Button.Types.OutlineWhite} icon={editIcon}>
-          Outline White
-        </Button>
-      </div>
-      <h3>Medium Buttons</h3>
+      <br />
       <div className={css(buttonContainer)}>
         <Button
-          buttonType={Button.Types.UdePrimary}
-          buttonSize={Button.Sizes.Medium}
+          buttonSize={Button.Sizes.Large}
+          buttonType={Button.Types.OutlineBlue}
           icon={editIcon}
         >
-          Primary
+          Outline Blue
         </Button>
         <Button
-          buttonType={Button.Types.UdeSecondary}
-          buttonSize={Button.Sizes.Medium}
+          buttonSize={Button.Sizes.Large}
+          buttonType={Button.Types.OutlineDark}
           icon={editIcon}
         >
-          Primary
+          Outline Dark
         </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Large}
+            buttonType={Button.Types.OutlineWhite}
+            icon={editIcon}
+          >
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <br />
+      <div className={css(buttonContainer)}>
         <Button
-          buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.Highlight}
-          icon={editIcon}
-        >
-          Highlight
-        </Button>
-        <Button
-          buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.Highlight}
-          icon={mediaPlayIcon}
+          buttonSize={Button.Sizes.Large}
           dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineBlue}
+          icon={mediaPlayIcon}
         >
-          Highlight
+          Outline Blue
         </Button>
+        <Button
+          buttonSize={Button.Sizes.Large}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineDark}
+          icon={mediaPlayIcon}
+        >
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Large}
+            dataLabel={'1:00'}
+            buttonType={Button.Types.OutlineWhite}
+            icon={mediaPlayIcon}
+          >
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <br />
+      <div className={css(buttonContainer)}>
+        <Button
+          buttonSize={Button.Sizes.Large}
+          disabled={true}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineBlue}
+          icon={mediaPlayIcon}
+        >
+          Outline Blue
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Large}
+          disabled={true}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineDark}
+          icon={mediaPlayIcon}
+        >
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Large}
+            disabled={true}
+            dataLabel={'1:00'}
+            buttonType={Button.Types.OutlineWhite}
+            icon={mediaPlayIcon}
+          >
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <h3>Medium Outline Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
+          Outline Blue
+        </Button>
+        <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <br />
+      <div className={css(buttonContainer)}>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.OutlineBlue}
@@ -306,49 +405,121 @@ storiesOf('Canvas Kit/Button', module)
         >
           Outline Dark
         </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Medium}
+            buttonType={Button.Types.OutlineWhite}
+            icon={editIcon}
+          >
+            Outline White
+          </Button>
+        </div>
       </div>
-      <div className={css(outlineWhiteBackground)}>
+      <br />
+      <div className={css(buttonContainer)}>
         <Button
           buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.OutlineWhite}
-          icon={editIcon}
-        >
-          Outline White
-        </Button>
-      </div>
-      <h3>Disabled States</h3>
-      <div className={css(buttonContainer)}>
-        <Button disabled={true} buttonType={Button.Types.UdePrimary} icon={editIcon}>
-          Primary
-        </Button>
-        <Button disabled={true} buttonType={Button.Types.UdeSecondary} icon={editIcon}>
-          Secondary
-        </Button>
-        <Button disabled={true} buttonType={Button.Types.Highlight} icon={editIcon}>
-          Highlight
-        </Button>
-        <Button
-          disabled={true}
-          buttonType={Button.Types.Highlight}
-          icon={mediaPlayIcon}
           dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineBlue}
+          icon={mediaPlayIcon}
         >
-          Highlight
-        </Button>
-        <Button disabled={true} buttonType={Button.Types.OutlineBlue} icon={editIcon}>
           Outline Blue
         </Button>
-      </div>
-      <div className={css(outlineWhiteBackground)}>
         <Button
-          disabled={true}
           buttonSize={Button.Sizes.Medium}
-          buttonType={Button.Types.OutlineWhite}
-          icon={editIcon}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineDark}
+          icon={mediaPlayIcon}
         >
-          Outline White
+          Outline Dark
         </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Medium}
+            dataLabel={'1:00'}
+            buttonType={Button.Types.OutlineWhite}
+            icon={mediaPlayIcon}
+          >
+            Outline White
+          </Button>
+        </div>
       </div>
+      <br />
+      <div className={css(buttonContainer)}>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          disabled={true}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineBlue}
+          icon={mediaPlayIcon}
+        >
+          Outline Blue
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Medium}
+          disabled={true}
+          dataLabel={'1:00'}
+          buttonType={Button.Types.OutlineDark}
+          icon={mediaPlayIcon}
+        >
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Medium}
+            disabled={true}
+            dataLabel={'1:00'}
+            buttonType={Button.Types.OutlineWhite}
+            icon={mediaPlayIcon}
+          >
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <h3>Small Outline Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
+          Outline Blue
+        </Button>
+        <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
+            Outline White
+          </Button>
+        </div>
+      </div>
+      <br />
+      <div className={css(buttonContainer)}>
+        <Button
+          buttonSize={Button.Sizes.Small}
+          disabled={true}
+          buttonType={Button.Types.OutlineBlue}
+        >
+          Outline Blue
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Small}
+          disabled={true}
+          buttonType={Button.Types.OutlineDark}
+        >
+          Outline Dark
+        </Button>
+        <div className={css(outlineWhiteBackground)}>
+          <Button
+            buttonSize={Button.Sizes.Small}
+            disabled={true}
+            buttonType={Button.Types.OutlineWhite}
+          >
+            Outline White
+          </Button>
+        </div>
+      </div>
+    </div>
+  ))
+  .add('Text Buttons', () => (
+    <div className="story">
       <h1 className="section-label">Text Buttons</h1>
       <h3>Large Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
@@ -373,6 +544,7 @@ storiesOf('Canvas Kit/Button', module)
       <div className={css(outlineWhiteBackground)}>
         <TextButton buttonType={Button.Types.TextDarkAllCaps}>All Caps</TextButton>
       </div>
+
       <h3>Icon Text Buttons</h3>
       <div className={css(buttonContainer)}>
         <TextButton
@@ -427,6 +599,10 @@ storiesOf('Canvas Kit/Button', module)
           Left Icon Small
         </TextButton>
       </div>
+    </div>
+  ))
+  .add('Dropdown Buttons', () => (
+    <div className="story">
       <h1 className="section-label">Dropdown Buttons</h1>
       <h3>Large Dropdown Buttons</h3>
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
@@ -435,14 +611,7 @@ storiesOf('Canvas Kit/Button', module)
       <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Dropdown Button
       </DropdownButton>
-      <h3>Medium Dropdown Buttons</h3>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
-        Dropdown Button
-      </DropdownButton>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
-        Dropdown Button
-      </DropdownButton>
-      <h3>Disabled States</h3>
+      <br />
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Large}
@@ -457,6 +626,14 @@ storiesOf('Canvas Kit/Button', module)
       >
         Dropdown Button
       </DropdownButton>
+      <h3>Medium Dropdown Buttons</h3>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
+        Dropdown Button
+      </DropdownButton>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
+        Dropdown Button
+      </DropdownButton>
+      <br />
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Medium}
