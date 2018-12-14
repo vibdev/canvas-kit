@@ -60,7 +60,6 @@ const ToggleContainer = styled('div')<ToggleProps>(({disabled}) => ({
 }));
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
-  private inputRefLocal: React.RefObject<HTMLInputElement>;
   constructor(props: ToggleProps) {
     super(props);
     this.inputRefLocal = React.createRef();
@@ -74,7 +73,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
       <ToggleContainer {...this.props}>
         <ToggleInput
           aria-checked={checked}
-          innerRef={inputRef || this.inputRefLocal}
+          innerRef={inputRef}
           value={value}
           disabled={disabled}
           tabIndex={1}
