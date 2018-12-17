@@ -65,6 +65,7 @@ export const dataLabelBaseStyles: GenericStyle = {
       },
       medium: {
         paddingRight: '8px',
+        fontSize: '14px',
       },
     },
   },
