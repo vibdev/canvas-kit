@@ -221,9 +221,9 @@ export const textButtonStyles: GenericStyle = {
   styles: {
     ...canvasButtonStyles.styles,
     borderRadius: '3px;',
-    '&:hover': {textDecoration: 'underline'},
     margin: '0 8px',
     minWidth: 'auto',
+    '&:hover:not([disabled])': {textDecoration: 'underline'},
   },
   variants: {
     types: {

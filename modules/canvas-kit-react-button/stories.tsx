@@ -599,6 +599,25 @@ storiesOf('Canvas Kit/Button', module)
           Left Icon Small
         </TextButton>
       </div>
+      <h3>Disabled States</h3>
+      <div className={css(outlineWhiteBackground)}>
+        <TextButton
+          icon={editIcon}
+          disabled={true}
+          buttonSize={Button.Sizes.Large}
+          buttonType={Button.Types.TextDark}
+        >
+          Text Dark
+        </TextButton>
+      </div>
+      <TextButton
+        icon={editIcon}
+        disabled={true}
+        buttonSize={Button.Sizes.Small}
+        buttonType={Button.Types.Text}
+      >
+        Text
+      </TextButton>
     </div>
   ))
   .add('Dropdown Buttons', () => (

@@ -138,9 +138,9 @@ export const textColors: GenericButtonColors = {
   activeBackground: 'transparent',
   activeBorder: 'transparent',
   activeText: canvas.colors.blueberry500,
-  disabledBackground: canvas.colors.frenchVanilla100,
-  disabledBorder: canvas.colors.soap500,
-  disabledText: canvas.colors.licorice300,
+  disabledBackground: 'transparent',
+  disabledBorder: 'transparent',
+  disabledText: 'rgba(8, 117, 225, 0.5)',
   focusBackground: canvas.colors.blueberry100,
   focusText: canvas.colors.blueberry400,
   hoverBackground: 'transparent',
@@ -150,6 +150,7 @@ export const textColors: GenericButtonColors = {
   iconColorHover: canvas.colors.blueberry500,
   iconColorActive: canvas.colors.blueberry500,
   iconColorFocus: canvas.colors.blueberry400,
+  iconColorDisabled: 'rgba(8, 117, 225, 0.5)',
 };
 
 export const textDarkColors: GenericButtonColors = {
@@ -159,9 +160,9 @@ export const textDarkColors: GenericButtonColors = {
   activeBackground: 'transparent',
   activeBorder: 'transparent',
   activeText: canvas.colors.frenchVanilla100,
-  disabledBackground: canvas.colors.frenchVanilla100,
+  disabledBackground: 'transparent',
   disabledBorder: 'transparent',
-  disabledText: canvas.colors.licorice300,
+  disabledText: 'rgba(255, 255, 255, 0.5)',
   focusBackground: canvas.colors.frenchVanilla100,
   focusText: canvas.colors.licorice500,
   hoverBackground: 'transparent',
@@ -171,6 +172,7 @@ export const textDarkColors: GenericButtonColors = {
   iconColorHover: canvas.colors.frenchVanilla100,
   iconColorActive: canvas.colors.frenchVanilla100,
   iconColorFocus: canvas.colors.licorice500,
+  iconColorDisabled: 'rgba(255, 255, 255, 0.5)',
 };
 
 export const udePrimaryColors: GenericButtonColors = {
