@@ -115,7 +115,7 @@ const button: CSSProperties = {
 } as CSSProperties;
 
 const caps: CSSProperties = {
-  fontWeight: 500,
+  fontWeight: 700,
   textTransform: 'uppercase',
 } as CSSProperties;
 
