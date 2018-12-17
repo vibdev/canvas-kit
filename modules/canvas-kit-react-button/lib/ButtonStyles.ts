@@ -303,7 +303,9 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       },
     }),
     ...(buttonColors.dataLabel && {
-      ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabel},
+      ['.' + dataLabelBaseStyles.classname]: {
+        color: buttonColors.dataLabel,
+      },
     }),
     ':focus, :hover:focus': {
       backgroundColor: buttonColors.focusBackground,
@@ -312,7 +314,9 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       ...(buttonColors.dataLabelFocus && {
         ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelFocus},
       }),
-      ...(buttonColors.iconColorFocus && {'.wd-icon-fill': {fill: buttonColors.iconColorFocus}}),
+      ...(buttonColors.iconColorFocus && {
+        'span .wd-icon-fill': {fill: buttonColors.iconColorFocus},
+      }),
     },
     ':active, :focus:active, :hover:active': {
       backgroundColor: buttonColors.activeBackground,
@@ -321,23 +325,30 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       ...(buttonColors.dataLabelActive && {
         ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelActive},
       }),
-      ...(buttonColors.iconColorActive && {'.wd-icon-fill': {fill: buttonColors.iconColorActive}}),
+      ...(buttonColors.iconColorActive && {
+        'span .wd-icon-fill': {fill: buttonColors.iconColorActive},
+      }),
     },
     ':hover': {
       backgroundColor: buttonColors.hoverBackground,
       borderColor: buttonColors.hoverBorder,
       color: buttonColors.hoverText,
       ...(buttonColors.dataLabelHover && {
-        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelHover},
+        ['.' + dataLabelBaseStyles.classname]: {
+          transition: 'color 120ms ease-in',
+          color: buttonColors.dataLabelHover,
+        },
       }),
-      ...(buttonColors.iconColorHover && {'.wd-icon-fill': {fill: buttonColors.iconColorHover}}),
+      ...(buttonColors.iconColorHover && {
+        'span .wd-icon-fill': {fill: buttonColors.iconColorHover},
+      }),
     },
     ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
       backgroundColor: buttonColors.disabledBackground,
       borderColor: buttonColors.disabledBorder,
       color: buttonColors.disabledText,
       ...(buttonColors.iconColorDisabled && {
-        '.wd-icon-fill': {fill: buttonColors.iconColorDisabled},
+        'span .wd-icon-fill': {fill: buttonColors.iconColorDisabled},
       }),
       ...(buttonColors.dataLabelDisabled && {
         ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelDisabled},
