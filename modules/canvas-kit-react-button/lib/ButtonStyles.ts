@@ -58,7 +58,6 @@ export const dataLabelBaseStyles: GenericStyle = {
     fontSize: '16px',
   },
   variants: {
-    types: {},
     sizes: {
       large: {
         paddingRight: '12px',
@@ -247,7 +246,6 @@ export const textButtonStyles: GenericStyle = {
         height: '40px',
         padding: '0 8px',
       },
-      medium: {},
       small: {
         height: '32px',
         padding: '0 8px',
@@ -274,10 +272,6 @@ export const iconButtonStyles: GenericStyle = {
     ['&&:not([disabled])']: {
       '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
     },
-  },
-  variants: {
-    types: {},
-    sizes: {},
   },
 };
 
