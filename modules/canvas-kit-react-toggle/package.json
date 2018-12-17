@@ -11,7 +11,7 @@
   "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-Toggle"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle"
   },
   "files": [
     "dist/",
@@ -28,7 +28,7 @@
     "react",
     "components",
     "workday",
-    "Toggle"
+    "toggle"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"

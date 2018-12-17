@@ -27,14 +27,14 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   opacity: 0;
   position: absolute;
   margin: 0;
-  border-radius: 100px;
+  border-radius: 999px;
 }
 
 .emotion-2 {
   width: 32px;
   height: 16px;
   background-color: #dfe2e6;
-  border-radius: 100px;
+  border-radius: 999px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -69,23 +69,20 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   onChange={[Function]}
 >
   <input
-    aria-checked={false}
     checked={false}
     className="emotion-0"
     onChange={[Function]}
     role="checkbox"
-    tabIndex={1}
+    tabIndex={0}
     type="checkbox"
   />
   <div
     checked={false}
     className="emotion-2"
-    onChange={[Function]}
   >
     <div
       checked={false}
       className="emotion-1"
-      onChange={[Function]}
     />
   </div>
 </div>
@@ -118,14 +115,14 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   opacity: 0;
   position: absolute;
   margin: 0;
-  border-radius: 100px;
+  border-radius: 999px;
 }
 
 .emotion-2 {
   width: 32px;
   height: 16px;
   background-color: #005cb9;
-  border-radius: 100px;
+  border-radius: 999px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -160,23 +157,20 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   onChange={[Function]}
 >
   <input
-    aria-checked={true}
     checked={true}
     className="emotion-0"
     onChange={[Function]}
     role="checkbox"
-    tabIndex={1}
+    tabIndex={0}
     type="checkbox"
   />
   <div
     checked={true}
     className="emotion-2"
-    onChange={[Function]}
   >
     <div
       checked={true}
       className="emotion-1"
-      onChange={[Function]}
     />
   </div>
 </div>
@@ -189,7 +183,26 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   opacity: 0;
   position: absolute;
   margin: 0;
-  border-radius: 100px;
+  border-radius: 999px;
+}
+
+.emotion-2 {
+  width: 32px;
+  height: 16px;
+  background-color: #005cb9;
+  border-radius: 999px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0.25s linear;
+  transition: background-color 0.25s linear;
+  padding: 0px 2px;
+  box-sizing: border-box;
 }
 
 .emotion-1 {
@@ -226,25 +239,6 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #f0f1f2;
-  border-radius: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: background-color 0.25s linear;
-  transition: background-color 0.25s linear;
-  padding: 0px 2px;
-  box-sizing: border-box;
-}
-
 <div
   checked={true}
   className="emotion-3"
@@ -252,26 +246,21 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
   onChange={[Function]}
 >
   <input
-    aria-checked={true}
     checked={true}
     className="emotion-0"
     disabled={true}
     onChange={[Function]}
     role="checkbox"
-    tabIndex={1}
+    tabIndex={0}
     type="checkbox"
   />
   <div
     checked={true}
     className="emotion-2"
-    disabled={true}
-    onChange={[Function]}
   >
     <div
       checked={true}
       className="emotion-1"
-      disabled={true}
-      onChange={[Function]}
     />
   </div>
 </div>
@@ -304,14 +293,14 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   opacity: 0;
   position: absolute;
   margin: 0;
-  border-radius: 100px;
+  border-radius: 999px;
 }
 
 .emotion-2 {
   width: 32px;
   height: 16px;
   background-color: #005cb9;
-  border-radius: 100px;
+  border-radius: 999px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -348,29 +337,22 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   value="user"
 >
   <input
-    aria-checked={true}
     checked={true}
     className="emotion-0"
     disabled={false}
     onChange={[Function]}
     role="checkbox"
-    tabIndex={1}
+    tabIndex={0}
     type="checkbox"
     value="user"
   />
   <div
     checked={true}
     className="emotion-2"
-    disabled={false}
-    onChange={[Function]}
-    value="user"
   >
     <div
       checked={true}
       className="emotion-1"
-      disabled={false}
-      onChange={[Function]}
-      value="user"
     />
   </div>
 </div>
