@@ -296,7 +296,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     backgroundColor: buttonColors.background,
     borderColor: buttonColors.border,
     color: buttonColors.text,
-    ...(buttonColors.iconColor && {'.wd-icon-fill': {fill: buttonColors.iconColor}}),
+    ...(buttonColors.iconColor && {'span .wd-icon-fill': {fill: buttonColors.iconColor}}),
     ...(buttonColors.dataLabel && {
       ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabel},
     }),
