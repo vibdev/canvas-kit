@@ -127,9 +127,15 @@ export class ButtonIconLabel extends React.Component<ButtonProps> {
       return {};
     }
 
+    let iconSize = 24;
+
+    if (this.props.buttonSize === ButtonSizes.Small) {
+      iconSize = 20;
+    }
+
     return (
       <ButtonIconLabelStyled {...this.props}>
-        <SystemIcon icon={this.props.icon} />
+        <SystemIcon size={iconSize} icon={this.props.icon} />
       </ButtonIconLabelStyled>
     );
   }
