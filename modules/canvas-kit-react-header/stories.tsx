@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import styled from 'react-emotion';
 import {css, cx} from 'emotion';
 import {Header, DubLogoTitle} from './index';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
@@ -28,6 +29,9 @@ const backgroundStyle = css({
   backgroundPosition: `0 50%`,
 });
 
+// Simulate a React Router link
+const Link = styled('a')<{to: string}>({});
+
 const handleMenuClickTest = (e: React.SyntheticEvent) => {
   alert(`Menu clicked!`);
 };
@@ -40,13 +44,13 @@ const nav = (
   <nav>
     <ul>
       <li className="current">
-        <a href="#">Discover</a>
+        <span>Discover</span>
       </li>
       <li>
-        <a href="#">Library</a>
+        <div>Library</div>
       </li>
       <li>
-        <a href="#">Create</a>
+        <Link to="#">Create</Link>
       </li>
       <li>
         <a href="#">Manage</a>

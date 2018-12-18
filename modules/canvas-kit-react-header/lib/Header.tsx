@@ -112,50 +112,48 @@ const navStyle = (props: HeaderProps) => {
         padding: 0,
         margin: 0,
         height: 'inherit',
-
         '&:hover': {
+          // De-emphasizes all color on hover, this allows us to create an illusion that hovering over a specific element
+          // fades out the rest
           color: theme.linkFadeOutColor,
         },
-
         '& li': {
+          boxSizing: 'border-box',
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
+          padding: `0px ${spacing.s}`,
           margin: `0 ${spacing.xxxs}`,
           fontSize: '14px',
           fontWeight: 700,
           height: 'inherit',
+          transition: `color 150ms ease-out 0s`,
+          cursor: 'pointer',
           '&:first-child': {
             marginLeft: 0,
           },
           '&:last-child': {
             marginRight: 0,
           },
-
           '& a': {
-            boxSizing: 'border-box',
-            display: 'flex',
-            alignItems: 'center',
             color: 'inherit',
             textDecoration: 'none',
-            height: 'inherit',
-            padding: `0px ${spacing.s}`,
-            transition: `color 150ms ease-out 0s`,
-            '&:hover, &:active': {
-              color: theme.linkColor,
+            '&:visited': {
+              color: 'inherit', // Keeps visited links from becoming default purple
             },
           },
-
+          '&:hover, &:active': {
+            color: theme.linkColor, // Completes the illusion of sibling elements fading into the background on hover
+          },
           '&.current': {
-            '& a': {
+            color: theme.currentLinkColor,
+            '&:hover, &:active': {
               color: theme.currentLinkColor,
-              '&:hover, &:active': {
-                color: theme.currentLinkColor,
-              },
             },
             '&:after': {
               position: 'absolute',
               bottom: 0,
+              left: 0,
               content: `''`,
               height: 4,
               width: '100%',
