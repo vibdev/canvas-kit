@@ -16,6 +16,7 @@
       [style guide](https://ghe.megaleo.com/UIC/wd-components/blob/master/docs/STYLEGUIDE.md)
 - [ ] code has been documented and, if applicable, usage described in README.md
 - [ ] module has been added to `canvas-kit-react`, if applicable
+- [ ] branch has been rebased on the latest master commit
 
 ## Additional References
 

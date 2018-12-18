@@ -1,5 +1,6 @@
 ---
 name: 💬 Questions / Help
+label: 'question'
 about:
   If you have questions, please utilize our Slack channel `#canvas-kit-react` (Workday internal)
 ---

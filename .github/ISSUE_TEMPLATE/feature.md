@@ -1,5 +1,6 @@
 ---
 name: 🚀 Feature Proposal
+labels: 'feature'
 about: Submit a proposal for a new feature
 ---
 
