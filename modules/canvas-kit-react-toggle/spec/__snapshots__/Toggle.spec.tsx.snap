@@ -88,95 +88,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
 </div>
 `;
 
-exports[`Toggle Snapshots renders toggle on 1`] = `
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-0 {
-  height: 16px;
-  width: 32px;
-  opacity: 0;
-  position: absolute;
-  margin: 0;
-  border-radius: 999px;
-}
-
-.emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #005cb9;
-  border-radius: 999px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: background-color 0.25s linear;
-  transition: background-color 0.25s linear;
-  padding: 0px 2px;
-  box-sizing: border-box;
-}
-
-.emotion-1 {
-  width: 12px;
-  height: 12px;
-  border-radius: 100px;
-  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  background-color: #ffffff;
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
-  transform: translateX(16px);
-  -webkit-transition: -webkit-transform 0.25s linear;
-  -webkit-transition: transform 0.25s linear;
-  transition: transform 0.25s linear;
-}
-
-<div
-  checked={true}
-  className="emotion-3"
-  onChange={[Function]}
->
-  <input
-    checked={true}
-    className="emotion-0"
-    onChange={[Function]}
-    role="checkbox"
-    tabIndex={0}
-    type="checkbox"
-  />
-  <div
-    checked={true}
-    className="emotion-2"
-  >
-    <div
-      checked={true}
-      className="emotion-1"
-    />
-  </div>
-</div>
-`;
-
-exports[`Toggle Snapshots renders toggle on 2`] = `
+exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
 .emotion-0 {
   height: 16px;
   width: 32px;
@@ -249,6 +161,184 @@ exports[`Toggle Snapshots renders toggle on 2`] = `
     checked={true}
     className="emotion-0"
     disabled={true}
+    onChange={[Function]}
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    checked={true}
+    className="emotion-2"
+  >
+    <div
+      checked={true}
+      className="emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
+.emotion-0 {
+  height: 16px;
+  width: 32px;
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  border-radius: 999px;
+}
+
+.emotion-2 {
+  width: 32px;
+  height: 16px;
+  background-color: #dfe2e6;
+  border-radius: 999px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0.25s linear;
+  transition: background-color 0.25s linear;
+  padding: 0px 2px;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  background-color: #ffffff;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.25s linear;
+  -webkit-transition: transform 0.25s linear;
+  transition: transform 0.25s linear;
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: no-allowed;
+  border-radius: 999px;
+}
+
+.emotion-3:focus-within:not([disabled]) {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+<div
+  checked={false}
+  className="emotion-3"
+  disabled={true}
+  onChange={[Function]}
+>
+  <input
+    checked={false}
+    className="emotion-0"
+    disabled={true}
+    onChange={[Function]}
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    checked={false}
+    className="emotion-2"
+  >
+    <div
+      checked={false}
+      className="emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Toggle Snapshots renders toggle on 1`] = `
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.emotion-3:focus-within:not([disabled]) {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+.emotion-0 {
+  height: 16px;
+  width: 32px;
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+  border-radius: 999px;
+}
+
+.emotion-2 {
+  width: 32px;
+  height: 16px;
+  background-color: #005cb9;
+  border-radius: 999px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 0.25s linear;
+  transition: background-color 0.25s linear;
+  padding: 0px 2px;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  background-color: #ffffff;
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  -webkit-transition: -webkit-transform 0.25s linear;
+  -webkit-transition: transform 0.25s linear;
+  transition: transform 0.25s linear;
+}
+
+<div
+  checked={true}
+  className="emotion-3"
+  onChange={[Function]}
+>
+  <input
+    checked={true}
+    className="emotion-0"
     onChange={[Function]}
     role="checkbox"
     tabIndex={0}

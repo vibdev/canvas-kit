@@ -25,7 +25,19 @@ describe('Toggle Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
-  test('renders toggle on', () => {
+  test('renders toggle disabled unchecked', () => {
+    const component = renderer.create(
+      <Toggle
+        disabled={true}
+        checked={false}
+        onChange={() => {
+          /* foo */
+        }}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders toggle disabled checked', () => {
     const component = renderer.create(
       <Toggle
         disabled={true}
