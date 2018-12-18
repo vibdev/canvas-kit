@@ -15,8 +15,8 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
       return {};
     }
 
-    const baseButton = getBaseButton(buttonType);
-    return baseButton.styles;
+    const {styles} = getBaseButton(buttonType);
+    return styles;
   },
   ({buttonType}) => {
     if (buttonType === undefined) {
@@ -34,12 +34,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
     const baseButton = getBaseButton(buttonType);
     return getButtonSize(baseButton, buttonSize);
   },
-  ({grow}) => {
-    if (grow) {
-      return {width: '100%', maxWidth: '100%'};
-    }
-    return {};
-  }
+  ({grow}) => grow && {width: '100%', maxWidth: '100%'}
 );
 
 export const ButtonBaseLabel = styled('span')<ButtonProps>(
