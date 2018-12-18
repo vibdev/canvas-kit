@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.11"></a>
+## [0.1.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.10...@workday/canvas-kit-react-header@0.1.11) (2018-12-18)
+
+
+### Bug Fixes
+
+* **header:** fix styles to allow other elements than anchors for nav ([a65a4a3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/a65a4a3))
+* **header:** update stories ([7cde67f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/7cde67f))
+
+
+
+
 <a name="0.1.10"></a>
 ## [0.1.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.9...@workday/canvas-kit-react-header@0.1.10) (2018-12-03)
 
