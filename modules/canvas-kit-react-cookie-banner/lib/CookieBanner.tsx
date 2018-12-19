@@ -26,7 +26,7 @@ export interface CookieBannerProps extends BannerProps {
   /**
    * Custom cookie notice text or element to display.
    */
-  notice?: string | React.ReactNode;
+  notice: string | React.ReactNode;
 }
 
 const Banner = styled('div')(
@@ -83,12 +83,16 @@ export default class CookieBanner extends React.Component<CookieBannerProps> {
   public static DefaultNotice =
     'We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we’ll assume that you are willing to receive cookies.';
 
+  public static defaultProps = {
+    notice: CookieBanner.DefaultNotice,
+  };
+
   public render(): React.ReactNode {
     const {isClosed, onAccept, onClickSettings, notice} = this.props;
 
     return (
       <Banner isClosed={isClosed}>
-        <BannerItem>{notice || CookieBanner.DefaultNotice}</BannerItem>
+        <BannerItem>{notice}</BannerItem>
         <BannerItem className={rowStyle}>
           {onClickSettings && (
             <CookieSettings onClick={onClickSettings}>Cookie Settings</CookieSettings>
