@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {ButtonBaseCon, ButtonBaseLabel, ButtonDataLabel, ButtonIconLabel} from './ButtonBase';
+import {ButtonBaseCon, ButtonBaseLabel, ButtonLabelData, ButtonLabelIcon} from './ButtonBase';
 import {ButtonTypes, ButtonSizes} from './types';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
-import {dataLabelBaseStyles} from './ButtonStyles';
+import {labelDataBaseStyles} from './ButtonStyles';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
   /**
@@ -55,14 +55,14 @@ export default class Button extends React.Component<ButtonProps> {
 
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
-        {elemProps.icon && <ButtonIconLabel {...elemProps} />}
+        {elemProps.icon && <ButtonLabelIcon {...elemProps} />}
         <ButtonBaseLabel buttonSize={elemProps.buttonSize} buttonType={elemProps.buttonType}>
           {elemProps.children}
         </ButtonBaseLabel>
         {elemProps.dataLabel && (
-          <ButtonDataLabel className={dataLabelBaseStyles.classname} {...elemProps}>
+          <ButtonLabelData className={labelDataBaseStyles.classname} {...elemProps}>
             {elemProps.dataLabel}
-          </ButtonDataLabel>
+          </ButtonLabelData>
         )}
       </ButtonBaseCon>
     );

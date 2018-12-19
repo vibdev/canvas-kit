@@ -19,16 +19,16 @@ export interface GenericButtonColors {
   hoverBackground?: string;
   hoverBorder: string;
   hoverText?: string;
-  iconColor?: string;
-  iconColorHover?: string;
-  iconColorActive?: string;
-  iconColorFocus?: string;
-  iconColorDisabled?: string;
-  dataLabel?: string;
-  dataLabelHover?: string;
-  dataLabelActive?: string;
-  dataLabelFocus?: string;
-  dataLabelDisabled?: string;
+  labelIcon?: string;
+  labelIconHover?: string;
+  labelIconActive?: string;
+  labelIconFocus?: string;
+  labelIconDisabled?: string;
+  labelData?: string;
+  labelDataHover?: string;
+  labelDataActive?: string;
+  labelDataFocus?: string;
+  labelDataDisabled?: string;
 }
 
 export const highlightColors: GenericButtonColors = {
@@ -48,11 +48,11 @@ export const highlightColors: GenericButtonColors = {
   hoverBackground: canvas.colors.soap400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
-  iconColor: canvas.colors.blueberry500,
-  iconColorHover: canvas.colors.blueberry500,
-  iconColorActive: canvas.colors.blueberry500,
-  iconColorFocus: canvas.colors.blueberry500,
-  iconColorDisabled: canvas.colors.soap600,
+  labelIcon: canvas.colors.blueberry500,
+  labelIconHover: canvas.colors.blueberry500,
+  labelIconActive: canvas.colors.blueberry500,
+  labelIconFocus: canvas.colors.blueberry500,
+  labelIconDisabled: canvas.colors.soap600,
 };
 
 export const outlineBlueColors: GenericButtonColors = {
@@ -72,11 +72,11 @@ export const outlineBlueColors: GenericButtonColors = {
   hoverBackground: canvas.colors.blueberry400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColor: canvas.colors.blueberry400,
-  iconColorHover: canvas.colors.frenchVanilla100,
-  iconColorActive: canvas.colors.frenchVanilla100,
-  iconColorFocus: canvas.colors.frenchVanilla100,
-  iconColorDisabled: canvas.colors.soap600,
+  labelIcon: canvas.colors.blueberry400,
+  labelIconHover: canvas.colors.frenchVanilla100,
+  labelIconActive: canvas.colors.frenchVanilla100,
+  labelIconFocus: canvas.colors.frenchVanilla100,
+  labelIconDisabled: canvas.colors.soap600,
 };
 
 export const outlineDarkColors: GenericButtonColors = {
@@ -96,11 +96,11 @@ export const outlineDarkColors: GenericButtonColors = {
   hoverBackground: canvas.colors.licorice500,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColor: canvas.colors.licorice200,
-  iconColorHover: canvas.colors.frenchVanilla100,
-  iconColorActive: canvas.colors.frenchVanilla100,
-  iconColorFocus: canvas.colors.frenchVanilla100,
-  iconColorDisabled: canvas.colors.soap600,
+  labelIcon: canvas.colors.licorice200,
+  labelIconHover: canvas.colors.frenchVanilla100,
+  labelIconActive: canvas.colors.frenchVanilla100,
+  labelIconFocus: canvas.colors.frenchVanilla100,
+  labelIconDisabled: canvas.colors.soap600,
 };
 
 export const outlineWhiteColors: GenericButtonColors = {
@@ -120,15 +120,15 @@ export const outlineWhiteColors: GenericButtonColors = {
   hoverBackground: canvas.colors.frenchVanilla100,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blackPepper400,
-  iconColor: canvas.colors.frenchVanilla100,
-  iconColorHover: canvas.colors.licorice500,
-  iconColorActive: canvas.colors.licorice500,
-  iconColorFocus: canvas.colors.licorice500,
-  iconColorDisabled: 'rgba(255, 255, 255, 0.75)',
-  dataLabelHover: typeColors.hint,
-  dataLabelActive: typeColors.hint,
-  dataLabelFocus: typeColors.hint,
-  dataLabelDisabled: 'rgba(255, 255, 255, 0.75)',
+  labelIcon: canvas.colors.frenchVanilla100,
+  labelIconHover: canvas.colors.licorice500,
+  labelIconActive: canvas.colors.licorice500,
+  labelIconFocus: canvas.colors.licorice500,
+  labelIconDisabled: 'rgba(255, 255, 255, 0.75)',
+  labelDataHover: typeColors.hint,
+  labelDataActive: typeColors.hint,
+  labelDataFocus: typeColors.hint,
+  labelDataDisabled: 'rgba(255, 255, 255, 0.75)',
 };
 
 export const textColors: GenericButtonColors = {
@@ -145,11 +145,11 @@ export const textColors: GenericButtonColors = {
   focusText: canvas.colors.blueberry400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
-  iconColor: canvas.colors.blueberry400,
-  iconColorHover: canvas.colors.blueberry500,
-  iconColorActive: canvas.colors.blueberry500,
-  iconColorFocus: canvas.colors.blueberry400,
-  iconColorDisabled: 'rgba(8, 117, 225, 0.5)',
+  labelIcon: canvas.colors.blueberry400,
+  labelIconHover: canvas.colors.blueberry500,
+  labelIconActive: canvas.colors.blueberry500,
+  labelIconFocus: canvas.colors.blueberry400,
+  labelIconDisabled: 'rgba(8, 117, 225, 0.5)',
 };
 
 export const textDarkColors: GenericButtonColors = {
@@ -165,10 +165,10 @@ export const textDarkColors: GenericButtonColors = {
   focusBackground: canvas.colors.frenchVanilla100,
   focusText: canvas.colors.licorice500,
   hoverBorder: 'transparent',
-  iconColor: canvas.colors.frenchVanilla100,
-  iconColorActive: canvas.colors.frenchVanilla100,
-  iconColorFocus: canvas.colors.licorice500,
-  iconColorDisabled: 'rgba(255, 255, 255, 0.5)',
+  labelIcon: canvas.colors.frenchVanilla100,
+  labelIconActive: canvas.colors.frenchVanilla100,
+  labelIconFocus: canvas.colors.licorice500,
+  labelIconDisabled: 'rgba(255, 255, 255, 0.5)',
 };
 
 export const udePrimaryColors: GenericButtonColors = {
@@ -188,11 +188,11 @@ export const udePrimaryColors: GenericButtonColors = {
   hoverBackground: canvas.colors.blueberry500,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.frenchVanilla100,
-  iconColor: canvas.colors.frenchVanilla100,
-  iconColorHover: canvas.colors.frenchVanilla100,
-  iconColorActive: canvas.colors.frenchVanilla100,
-  iconColorFocus: canvas.colors.frenchVanilla100,
-  iconColorDisabled: canvas.colors.frenchVanilla100,
+  labelIcon: canvas.colors.frenchVanilla100,
+  labelIconHover: canvas.colors.frenchVanilla100,
+  labelIconActive: canvas.colors.frenchVanilla100,
+  labelIconFocus: canvas.colors.frenchVanilla100,
+  labelIconDisabled: canvas.colors.frenchVanilla100,
 };
 
 export const udeSecondaryColors: GenericButtonColors = {
@@ -212,10 +212,10 @@ export const udeSecondaryColors: GenericButtonColors = {
   hoverBackground: canvas.colors.soap400,
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blackPepper400,
-  iconColor: canvas.colors.licorice200,
-  iconColorHover: canvas.colors.licorice500,
-  iconColorActive: canvas.colors.licorice500,
-  iconColorFocus: canvas.colors.licorice200,
-  iconColorDisabled: canvas.colors.soap600,
-  dataLabel: typeColors.hint,
+  labelIcon: canvas.colors.licorice200,
+  labelIconHover: canvas.colors.licorice500,
+  labelIconActive: canvas.colors.licorice500,
+  labelIconFocus: canvas.colors.licorice200,
+  labelIconDisabled: canvas.colors.soap600,
+  labelData: typeColors.hint,
 };

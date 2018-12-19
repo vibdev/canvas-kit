@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ButtonBaseLabel, ButtonIconLabel} from './ButtonBase';
+import {ButtonBaseLabel, ButtonLabelIcon} from './ButtonBase';
 import styled from 'react-emotion';
 import {ButtonTypes, ButtonSizes, IconPositions} from './types';
 import {ButtonProps} from './Button';
@@ -51,12 +51,12 @@ export default class TextButton extends React.Component<TextButtonProps> {
       <TextButtonCon {...this.props}>
         {elemProps.icon &&
           elemProps.iconPosition === IconPositions.Left && (
-            <ButtonIconLabel icon={elemProps.icon} {...this.props} />
+            <ButtonLabelIcon icon={elemProps.icon} {...this.props} />
           )}
         <ButtonBaseLabel {...this.props}>{children}</ButtonBaseLabel>
         {elemProps.icon &&
           elemProps.iconPosition === IconPositions.Right && (
-            <ButtonIconLabel icon={elemProps.icon} {...this.props} />
+            <ButtonLabelIcon icon={elemProps.icon} {...this.props} />
           )}
       </TextButtonCon>
     );

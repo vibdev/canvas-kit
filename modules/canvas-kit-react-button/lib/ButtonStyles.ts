@@ -50,8 +50,8 @@ export const labelBaseStyles: GenericStyle = {
   },
 };
 
-export const dataLabelBaseStyles: GenericStyle = {
-  classname: 'button-data-label',
+export const labelDataBaseStyles: GenericStyle = {
+  classname: 'button-label-data',
   styles: {
     ...labelBaseStyles.styles,
     fontWeight: 400,
@@ -70,8 +70,8 @@ export const dataLabelBaseStyles: GenericStyle = {
   },
 };
 
-export const iconLabelBaseStyles: GenericStyle = {
-  classname: 'button-icon-label',
+export const labelIconBaseStyles: GenericStyle = {
+  classname: 'button-label-icon',
   styles: {
     display: 'flex',
   },
@@ -290,26 +290,26 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     backgroundColor: buttonColors.background,
     borderColor: buttonColors.border,
     color: buttonColors.text,
-    ...(buttonColors.iconColor && {
+    ...(buttonColors.labelIcon && {
       'span .wd-icon-fill': {
         transition: 'fill 120ms ease-in',
-        fill: buttonColors.iconColor,
+        fill: buttonColors.labelIcon,
       },
     }),
-    ...(buttonColors.dataLabel && {
-      ['.' + dataLabelBaseStyles.classname]: {
-        color: buttonColors.dataLabel,
+    ...(buttonColors.labelData && {
+      ['.' + labelDataBaseStyles.classname]: {
+        color: buttonColors.labelData,
       },
     }),
     ':focus': {
       backgroundColor: buttonColors.focusBackground,
       borderColor: buttonColors.focusBorder,
       color: buttonColors.focusText,
-      ...(buttonColors.dataLabelFocus && {
-        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelFocus},
+      ...(buttonColors.labelDataFocus && {
+        ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataFocus},
       }),
-      ...(buttonColors.iconColorFocus && {
-        'span .wd-icon-fill': {fill: buttonColors.iconColorFocus},
+      ...(buttonColors.labelIconFocus && {
+        'span .wd-icon-fill': {fill: buttonColors.labelIconFocus},
       }),
     },
     ':hover:focus': {
@@ -319,36 +319,36 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       backgroundColor: buttonColors.activeBackground,
       borderColor: buttonColors.activeBorder,
       color: buttonColors.activeText,
-      ...(buttonColors.dataLabelActive && {
-        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelActive},
+      ...(buttonColors.labelDataActive && {
+        ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataActive},
       }),
-      ...(buttonColors.iconColorActive && {
-        'span .wd-icon-fill': {fill: buttonColors.iconColorActive},
+      ...(buttonColors.labelIconActive && {
+        'span .wd-icon-fill': {fill: buttonColors.labelIconActive},
       }),
     },
     ':hover': {
       backgroundColor: buttonColors.hoverBackground,
       borderColor: buttonColors.hoverBorder,
       color: buttonColors.hoverText,
-      ...(buttonColors.dataLabelHover && {
-        ['.' + dataLabelBaseStyles.classname]: {
+      ...(buttonColors.labelDataHover && {
+        ['.' + labelDataBaseStyles.classname]: {
           transition: 'color 120ms ease-in',
-          color: buttonColors.dataLabelHover,
+          color: buttonColors.labelDataHover,
         },
       }),
-      ...(buttonColors.iconColorHover && {
-        'span .wd-icon-fill': {fill: buttonColors.iconColorHover},
+      ...(buttonColors.labelIconHover && {
+        'span .wd-icon-fill': {fill: buttonColors.labelIconHover},
       }),
     },
     ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
       backgroundColor: buttonColors.disabledBackground,
       borderColor: buttonColors.disabledBorder,
       color: buttonColors.disabledText,
-      ...(buttonColors.iconColorDisabled && {
-        'span .wd-icon-fill': {fill: buttonColors.iconColorDisabled},
+      ...(buttonColors.labelIconDisabled && {
+        'span .wd-icon-fill': {fill: buttonColors.labelIconDisabled},
       }),
-      ...(buttonColors.dataLabelDisabled && {
-        ['.' + dataLabelBaseStyles.classname]: {color: buttonColors.dataLabelDisabled},
+      ...(buttonColors.labelDataDisabled && {
+        ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataDisabled},
       }),
     },
     '&:not([disabled])': {

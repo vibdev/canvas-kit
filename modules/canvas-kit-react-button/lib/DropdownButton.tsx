@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ButtonBaseLabel, ButtonIconLabel} from './ButtonBase';
+import {ButtonBaseLabel, ButtonLabelIcon} from './ButtonBase';
 import styled from 'react-emotion';
 import {ButtonTypes, ButtonSizes} from './types';
 import {ButtonProps} from './Button';
@@ -35,7 +35,7 @@ export default class DropdownButton extends React.Component<ButtonProps> {
     return (
       <DropdownButtonCon {...this.props}>
         <ButtonBaseLabel {...this.props}>{children}</ButtonBaseLabel>
-        <ButtonIconLabel icon={caretDownIcon} {...this.props} buttonType={ButtonTypes.Dropdown} />
+        <ButtonLabelIcon icon={caretDownIcon} {...this.props} buttonType={ButtonTypes.Dropdown} />
       </DropdownButtonCon>
     );
   }

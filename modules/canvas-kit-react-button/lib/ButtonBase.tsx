@@ -68,10 +68,10 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
   }
 );
 
-export const ButtonDataLabel = styled('span')<ButtonProps>(
-  ButtonStyles.dataLabelBaseStyles.styles,
+export const ButtonLabelData = styled('span')<ButtonProps>(
+  ButtonStyles.labelDataBaseStyles.styles,
   ({buttonSize}) => {
-    const {sizes} = ButtonStyles.dataLabelBaseStyles.variants!;
+    const {sizes} = ButtonStyles.labelDataBaseStyles.variants!;
     switch (buttonSize) {
       case ButtonSizes.Large:
       default:
@@ -82,8 +82,8 @@ export const ButtonDataLabel = styled('span')<ButtonProps>(
   }
 );
 
-const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
-  ButtonStyles.iconLabelBaseStyles.styles,
+const ButtonLabelIconStyled = styled('span')<TextButtonProps>(
+  ButtonStyles.labelIconBaseStyles.styles,
   ({buttonType, buttonSize}) => {
     if (buttonType === ButtonTypes.Dropdown) {
       switch (buttonSize) {
@@ -95,7 +95,7 @@ const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
       }
     }
 
-    const {sizes} = ButtonStyles.iconLabelBaseStyles.variants!;
+    const {sizes} = ButtonStyles.labelIconBaseStyles.variants!;
 
     switch (buttonSize) {
       case ButtonSizes.Large:
@@ -110,7 +110,7 @@ const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
       return {};
     }
 
-    const {types} = ButtonStyles.iconLabelBaseStyles.variants!;
+    const {types} = ButtonStyles.labelIconBaseStyles.variants!;
 
     switch (iconPosition) {
       case IconPositions.Left:
@@ -122,7 +122,7 @@ const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
   }
 );
 
-export class ButtonIconLabel extends React.Component<ButtonProps> {
+export class ButtonLabelIcon extends React.Component<ButtonProps> {
   public render() {
     if (this.props.icon === undefined) {
       return {};
@@ -135,9 +135,9 @@ export class ButtonIconLabel extends React.Component<ButtonProps> {
     }
 
     return (
-      <ButtonIconLabelStyled {...this.props}>
+      <ButtonLabelIconStyled {...this.props}>
         <SystemIcon size={iconSize} icon={this.props.icon} />
-      </ButtonIconLabelStyled>
+      </ButtonLabelIconStyled>
     );
   }
 }
