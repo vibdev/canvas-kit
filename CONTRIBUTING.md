@@ -99,6 +99,7 @@ Standardized code and documentation style helps Canvas Kit stay readable and sca
 written in a consistent manner we are able to stay more agile while catching and fixing bugs sooner.
 Please take a moment to familiarize yourself with these style guides before opening a pull request.
 
+- https://ghe.megaleo.com/UIC/wd-components/blob/master/docs/STYLEGUIDE.md
 - https://sdk.workday.build/appendix/style-guide
 - TODO: Link to documentation style guide
 - TODO: Link to Canvas Kit component tutorial
