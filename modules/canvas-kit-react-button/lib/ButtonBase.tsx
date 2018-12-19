@@ -53,13 +53,15 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
     }
   },
   ({buttonType}) => {
+    const {types} = ButtonStyles.labelBaseStyles.variants!;
+
     switch (buttonType) {
       case ButtonTypes.Text:
       case ButtonTypes.TextDark:
-        return ButtonStyles.labelBaseStyles.variants!.types.text;
+        return types.text;
       case ButtonTypes.TextAllCaps:
       case ButtonTypes.TextDarkAllCaps:
-        return ButtonStyles.labelBaseStyles.variants!.types.textAllCaps;
+        return types.textAllCaps;
       default:
         return {};
     }
@@ -93,12 +95,14 @@ const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
       }
     }
 
+    const {sizes} = ButtonStyles.iconLabelBaseStyles.variants!;
+
     switch (buttonSize) {
       case ButtonSizes.Large:
       default:
-        return ButtonStyles.iconLabelBaseStyles.variants!.sizes.large;
+        return sizes.large;
       case ButtonSizes.Medium:
-        return ButtonStyles.iconLabelBaseStyles.variants!.sizes.medium;
+        return sizes.medium;
     }
   },
   ({iconPosition}) => {
@@ -106,12 +110,14 @@ const ButtonIconLabelStyled = styled('span')<TextButtonProps>(
       return {};
     }
 
+    const {types} = ButtonStyles.iconLabelBaseStyles.variants!;
+
     switch (iconPosition) {
       case IconPositions.Left:
       default:
-        return ButtonStyles.iconLabelBaseStyles.variants!.types.iconPositionLeft;
+        return types.iconPositionLeft;
       case IconPositions.Right:
-        return ButtonStyles.iconLabelBaseStyles.variants!.types.iconPositionRight;
+        return types.iconPositionRight;
     }
   }
 );
@@ -137,46 +143,50 @@ export class ButtonIconLabel extends React.Component<ButtonProps> {
 }
 
 function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes) {
+  const {sizes} = baseButton.variants!;
+
   switch (buttonSize) {
     case ButtonSizes.Large:
-      return baseButton.variants!.sizes.large;
+      return sizes.large;
     case ButtonSizes.Medium:
     default:
-      return baseButton.variants!.sizes.medium;
+      return sizes.medium;
     case ButtonSizes.Small:
-      return baseButton.variants!.sizes.small;
+      return sizes.small;
   }
 }
 
 function getButtonStyle(baseButton: GenericStyle, buttonType: ButtonTypes) {
+  const {types} = baseButton.variants!;
+
   switch (buttonType) {
     case ButtonTypes.Primary:
     default:
-      return baseButton.variants!.types.primary;
+      return types.primary;
     case ButtonTypes.Secondary:
-      return baseButton.variants!.types.secondary;
+      return types.secondary;
     case ButtonTypes.Delete:
-      return baseButton.variants!.types.delete;
+      return types.delete;
     case ButtonTypes.Highlight:
-      return baseButton.variants!.types.highlight;
+      return types.highlight;
     case ButtonTypes.OutlineBlue:
-      return baseButton.variants!.types.outlineBlue;
+      return types.outlineBlue;
     case ButtonTypes.OutlineDark:
-      return baseButton.variants!.types.outlineDark;
+      return types.outlineDark;
     case ButtonTypes.OutlineWhite:
-      return baseButton.variants!.types.outlineWhite;
+      return types.outlineWhite;
     case ButtonTypes.UdePrimary:
-      return baseButton.variants!.types.udePrimary;
+      return types.udePrimary;
     case ButtonTypes.UdeSecondary:
-      return baseButton.variants!.types.udeSecondary;
+      return types.udeSecondary;
     case ButtonTypes.Text:
-      return baseButton.variants!.types.text;
+      return types.text;
     case ButtonTypes.TextDark:
-      return baseButton.variants!.types.textDark;
+      return types.textDark;
     case ButtonTypes.TextAllCaps:
-      return baseButton.variants!.types.textAllCaps;
+      return types.textAllCaps;
     case ButtonTypes.TextDarkAllCaps:
-      return baseButton.variants!.types.textDarkAllCaps;
+      return types.textDarkAllCaps;
   }
 }
 
