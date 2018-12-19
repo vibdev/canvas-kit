@@ -20,7 +20,7 @@ Fixes a cookie banner to the bottom of the web page.
 
 Can be configured with a "Cookie Settings" element and a custom notice.
 
-```jsx
+```tsx
 import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 
 <CookieBanner
@@ -31,14 +31,14 @@ import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 <CookieBanner
   onAccept={this.onAccept}
   isClosed={this.state.acceptedCookies}
-  onClickSettings={() => {}},
+  onClickSettings={this.openSettings}
   notice="Custom notice"
 />
 
 <CookieBanner
   onAccept={this.onAccept}
   isClosed={this.state.acceptedCookies}
-  onClickSettings={() => {}},
+  onClickSettings={this.openSettings}
   notice={`${CookieBanner.DefaultNotice} This is appended.`}
 />
 
@@ -60,7 +60,7 @@ import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 <CookieBanner
   onAccept={this.onAccept}
   isClosed={this.state.acceptedCookies}
-  onClickSettings={() => {}},
+  onClickSettings={this.openSettings}
   notice={`${CookieBanner.DefaultNotice} This is appended.`}
 />
 ```
