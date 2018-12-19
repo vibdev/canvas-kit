@@ -166,6 +166,7 @@ export const textDarkColors: GenericButtonColors = {
   focusText: canvas.colors.licorice500,
   hoverBorder: 'transparent',
   labelIcon: canvas.colors.frenchVanilla100,
+  labelIconHover: 'currentColor',
   labelIconActive: canvas.colors.frenchVanilla100,
   labelIconFocus: canvas.colors.licorice500,
   labelIconDisabled: 'rgba(255, 255, 255, 0.5)',
