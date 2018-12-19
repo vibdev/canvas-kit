@@ -22,10 +22,7 @@ A clear and concise description of what you expected to happen.
 
 ## Link to repl or repo (highly encouraged)
 
-Please provide a minimal reproduction in another Github repo or in a Repl like
-https://codesandbox.io
-
-Issues without a reproduction link are likely to stall.
+Please provide a reference to a repo or branch to help us reproduce this bug.
 
 ## Error Output
 
