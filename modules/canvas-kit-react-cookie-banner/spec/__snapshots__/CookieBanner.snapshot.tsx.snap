@@ -104,8 +104,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   max-width: 288px;
   width: 100%;
   max-width: 100%;
-  width: 100%;
-  max-width: auto;
 }
 
 .emotion-2:hover:active {
@@ -300,8 +298,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   max-width: 288px;
   width: 100%;
   max-width: 100%;
-  width: 100%;
-  max-width: auto;
 }
 
 .emotion-3:hover:active {
@@ -475,8 +471,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   max-width: 288px;
   width: 100%;
   max-width: 100%;
-  width: 100%;
-  max-width: auto;
 }
 
 .emotion-2:hover:active {
@@ -674,8 +668,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   max-width: 288px;
   width: 100%;
   max-width: 100%;
-  width: 100%;
-  max-width: auto;
 }
 
 .emotion-3:hover:active {
