@@ -35,6 +35,7 @@ const Box = styled('div')<CardProps>(
   {
     border: `1px solid ${colors.soap500}`,
     borderRadius: 3,
+    boxSizing: 'border-box',
   },
   ({depth}) => depth,
   ({padding}) => ({padding}),
