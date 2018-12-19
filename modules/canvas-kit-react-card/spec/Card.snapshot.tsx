@@ -31,11 +31,6 @@ describe('Card Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a growing card', () => {
-    const component = renderer.create(<Card grow>Card with grow</Card>);
-    expect(component).toMatchSnapshot();
-  });
-
   test('renders a card with width', () => {
     const component = renderer.create(<Card width="12px">Card with custom width</Card>);
     expect(component).toMatchSnapshot();

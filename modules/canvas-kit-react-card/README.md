@@ -35,27 +35,21 @@ import {depth, spacing} from '@workday/canvas-kit-react-core';
 
 #### `heading: ReactNode`
 
-> Heading at top of card.
+> Heading at the top of the card.
 
 Default: `null`
 
 #### `padding: 0 | CanvasSpacingValue`
 
-> Padding for card. Style imported from `@workday/canvas-kit-react-core`.
+> Padding of the card. Style imported from `@workday/canvas-kit-react-core`.
 
 Default: `spacing.l`
 
 #### `depth: CanvasDepthValue`
 
-> Depth for card. Style imported from `@workday/canvas-kit-react-core`.
+> Depth of the card. Style imported from `@workday/canvas-kit-react-core`.
 
 Default: `depth[2]`
-
-#### `grow: boolean`
-
-> If true, the button's will grow to its container's width.
-
-Default: `null`
 
 #### `width: number | string`
 

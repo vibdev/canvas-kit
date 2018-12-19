@@ -153,35 +153,6 @@ exports[`Card Snapshots renders a card with width 1`] = `
 </div>
 `;
 
-exports[`Card Snapshots renders a growing card 1`] = `
-.emotion-0 {
-  font-size: 14px;
-  color: #494949;
-  font-weight: 400;
-  line-height: 20px;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-}
-
-.emotion-1 {
-  border: 1px solid #ced3d9;
-  border-radius: 3px;
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
-  padding: 32px;
-  width: 100%;
-  max-width: 100%;
-}
-
-<div
-  className="emotion-1"
->
-  <div
-    className="emotion-0"
-  >
-    Card with grow
-  </div>
-</div>
-`;
-
 exports[`Card Snapshots renders as expected 1`] = `
 .emotion-1 {
   border: 1px solid #ced3d9;

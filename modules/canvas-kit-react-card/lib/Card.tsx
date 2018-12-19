@@ -6,32 +6,27 @@ import {CanvasDepthValue} from '@workday/canvas-depth-web';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * Title of the card
+   * Heading at the top of the card.
    */
   heading?: React.ReactNode;
 
   /**
-   * Padding within card contents
+   * Padding of the card.
    */
   padding: 0 | CanvasSpacingValue;
 
   /**
-   * Depth of card
+   * Depth of the card.
    */
   depth: CanvasDepthValue;
 
   /**
-   * If true, the button's will grow to its container's width.
-   */
-  grow?: boolean;
-
-  /**
-   * Width of card
+   * Width of the card.
    */
   width?: number | string;
 
   /**
-   * Height of card
+   * Height of the card.
    */
   height?: number | string;
 }
@@ -43,7 +38,6 @@ const Box = styled('div')<CardProps>(
   },
   ({depth}) => depth,
   ({padding}) => ({padding}),
-  ({grow}) => grow && {width: '100%', maxWidth: '100%'},
   ({width}) => width && {width},
   ({height}) => height && {height}
 );
