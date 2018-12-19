@@ -100,6 +100,7 @@ export default class CookieBanner extends React.Component<CookieBannerProps> {
             onClick={onAccept}
             buttonType={Button.Types.Primary}
             className={continueButtonStyle}
+            grow={true}
           >
             Continue
           </Button>
