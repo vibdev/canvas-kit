@@ -16,9 +16,9 @@ export interface GenericButtonColors {
   focusBorder?: string;
   focusRing?: CSSObject;
   focusText: string;
-  hoverBackground: string;
+  hoverBackground?: string;
   hoverBorder: string;
-  hoverText: string;
+  hoverText?: string;
   iconColor?: string;
   iconColorHover?: string;
   iconColorActive?: string;
@@ -143,7 +143,6 @@ export const textColors: GenericButtonColors = {
   disabledText: 'rgba(8, 117, 225, 0.5)',
   focusBackground: canvas.colors.blueberry100,
   focusText: canvas.colors.blueberry400,
-  hoverBackground: 'transparent',
   hoverBorder: 'transparent',
   hoverText: canvas.colors.blueberry500,
   iconColor: canvas.colors.blueberry400,
@@ -165,11 +164,8 @@ export const textDarkColors: GenericButtonColors = {
   disabledText: 'rgba(255, 255, 255, 0.5)',
   focusBackground: canvas.colors.frenchVanilla100,
   focusText: canvas.colors.licorice500,
-  hoverBackground: 'transparent',
   hoverBorder: 'transparent',
-  hoverText: canvas.colors.frenchVanilla100,
   iconColor: canvas.colors.frenchVanilla100,
-  iconColorHover: canvas.colors.frenchVanilla100,
   iconColorActive: canvas.colors.frenchVanilla100,
   iconColorFocus: canvas.colors.licorice500,
   iconColorDisabled: 'rgba(255, 255, 255, 0.5)',

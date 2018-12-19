@@ -301,7 +301,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
         color: buttonColors.dataLabel,
       },
     }),
-    ':focus, :hover:focus': {
+    ':focus': {
       backgroundColor: buttonColors.focusBackground,
       borderColor: buttonColors.focusBorder,
       color: buttonColors.focusText,
@@ -311,6 +311,9 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       ...(buttonColors.iconColorFocus && {
         'span .wd-icon-fill': {fill: buttonColors.iconColorFocus},
       }),
+    },
+    ':hover:focus': {
+      backgroundColor: buttonColors.hoverBackground,
     },
     ':active, :focus:active, :hover:active': {
       backgroundColor: buttonColors.activeBackground,
