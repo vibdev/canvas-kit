@@ -23,7 +23,7 @@ describe('Cookie Banner', () => {
       </React.Fragment>
     );
     const component = mount(<CookieBanner onAccept={noop} notice={customNotice} />);
-    expect(component.find('a').contains('Privacy Policy'));
+    expect(component.find('a').text()).toEqual('Privacy Policy');
   });
 
   test('should execute callback upon accepting notice', () => {
