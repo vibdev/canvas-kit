@@ -6,33 +6,24 @@ import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
 import {GenericStyle} from '@workday/canvas-kit-react-common';
+import {CSSObject} from 'create-emotion';
 
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   // TODO: Support data-whatinput='input'
-  ({buttonType}) => {
-    /* istanbul ignore next line for coverage */
-    if (buttonType === undefined) {
-      return {};
-    }
-
-    const {styles} = getBaseButton(buttonType);
-    return styles;
-  },
-  ({buttonType}) => {
-    if (buttonType === undefined) {
-      return {};
-    }
-
-    const baseButton = getBaseButton(buttonType);
-    return getButtonStyle(baseButton, buttonType);
-  },
   ({buttonType, buttonSize}) => {
-    if (buttonType === undefined || buttonSize === undefined) {
+    if (buttonType === undefined) {
       return {};
     }
 
     const baseButton = getBaseButton(buttonType);
-    return getButtonSize(baseButton, buttonSize);
+    const buttonStyles = getButtonStyle(baseButton, buttonType);
+    const buttonSizeStyles = buttonSize ? getButtonSize(baseButton, buttonSize) : {};
+
+    return {
+      ...baseButton.styles,
+      ...(buttonStyles as CSSObject),
+      ...(buttonSizeStyles as CSSObject),
+    };
   },
   ({grow}) => grow && {width: '100%', maxWidth: '100%'}
 );
