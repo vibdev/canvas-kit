@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.1.1...@workday/canvas-kit-react-card@0.2.0) (2018-12-19)
+
+
+### Bug Fixes
+
+* **Card:** add box-sizing ([3a6c98b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/commits/3a6c98b))
+
+
+### Features
+
+* **Card:** add sizing props ([37a5b01](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/commits/37a5b01))
+* **Card:** remove grow ([90915ab](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/commits/90915ab))
+
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.1.0...@workday/canvas-kit-react-card@0.1.1) (2018-12-13)
 
