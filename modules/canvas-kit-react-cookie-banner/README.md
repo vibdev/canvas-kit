@@ -1,15 +1,24 @@
 # Canvas Kit Cookie Banner
 
-Cookie banner component.
+> Cookie banner component.
+
+## Install
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-cookie-banner
+```
 
 ## Usage
 
-### CookieBanner
+Fixes a cookie banner to the bottom of the web page.
 
-Fixes a cookie banner to the bottom of the web page. Can be configured with a "Cookie Settings"
-element and a custom notice.
-
-A static constant is available with the default notice text: `CookieBanner.DefaultNotice`
+Can be configured with a "Cookie Settings" element and a custom notice.
 
 ```jsx
 import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
@@ -40,32 +49,47 @@ import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 />
 ```
 
-#### Properties
+## Static Properties
 
-**Required**
+#### `DefaultNotice: string`
 
-**`onAccept`**  
-Type: `(e: React.MouseEvent<HTMLButtonElement>) => void`  
-Callback upon accepting cookies
+> We use cookies to ensure that we give you the best experience on our website. If you continue
+> without changing your settings, we’ll assume that you are willing to receive cookies.
 
-**Optional**
-
-**`isClosed`**  
-Type: `boolean`  
-Default: `false`  
-If the banner is currently closed
-
-**`onClickSettings`**  
-Type: `(e: React.MouseEvent<HTMLButtonElement>) => void`  
-Default: `undefined`  
-Adds "Cookie Settings" element and attaches callback.
-
-**`notice`**  
-Type: `string | React.ReactNode`  
-Default:
-
-```
-We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we’ll assume that you are willing to receive cookies.
+```tsx
+<CookieBanner
+  onAccept={this.onAccept}
+  isClosed={this.state.acceptedCookies}
+  onClickSettings={() => {}},
+  notice={`${CookieBanner.DefaultNotice} This is appended.`}
+/>
 ```
 
-Customize notice with string or element.
+## Component Props
+
+### Required
+
+#### `onAccept: (e: React.MouseEvent<HTMLButtonElement>) => void`
+
+> Callback executed upon accepting cookies. The function should set `isClosed` to true.
+
+### Optional
+
+#### `isClosed: boolean`
+
+> Whether or not the banner is closed.
+
+Default: `false`
+
+#### `onClickSettings: (e: React.MouseEvent<HTMLButtonElement>) => void`
+
+> Callback executed upon clicking the "Cookie Settings" button. Adding this will automatically
+> display the "Cookie Settings" button.
+
+Default: `undefined`
+
+#### `notice: React.ReactNode`
+
+> Custom cookie notice text or element to display.
+
+Default: `CookieBanner.DefaultNotice`
