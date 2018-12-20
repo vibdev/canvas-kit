@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {ButtonBaseLabel, ButtonLabelIcon} from './ButtonBase';
+import {ButtonBaseLabel, ButtonLabelIcon, getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
-import {ButtonTypes, ButtonSizes, IconPositions} from './types';
+import {ButtonSizes, IconPositions} from './types';
 import {ButtonProps} from './Button';
 import {textButtonStyles} from './ButtonStyles';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
@@ -22,27 +22,17 @@ export default class TextButton extends React.Component<TextButtonProps> {
 
     const TextButtonCon = styled('button')<TextButtonProps>(
       textButtonStyles.styles,
-      ({buttonType}) => {
-        switch (buttonType) {
-          case ButtonTypes.Text:
-          default:
-            return textButtonStyles.variants!.types.text;
-          case ButtonTypes.TextDark:
-            return textButtonStyles.variants!.types.textDark;
-          case ButtonTypes.TextAllCaps:
-            return textButtonStyles.variants!.types.textAllCaps;
-          case ButtonTypes.TextDarkAllCaps:
-            return textButtonStyles.variants!.types.textDarkAllCaps;
-        }
-      },
+      ({buttonType}) => getButtonStyle(textButtonStyles, buttonType!),
       ({buttonSize}) => {
+        const {sizes} = textButtonStyles.variants!;
+
         switch (buttonSize) {
           case ButtonSizes.Large:
           default:
-            return textButtonStyles.variants!.sizes.large;
+            return sizes.large;
           case ButtonSizes.Medium:
           case ButtonSizes.Small:
-            return textButtonStyles.variants!.sizes.small;
+            return sizes.small;
         }
       }
     );

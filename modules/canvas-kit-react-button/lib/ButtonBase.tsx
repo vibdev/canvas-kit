@@ -133,7 +133,7 @@ export class ButtonLabelIcon extends React.Component<ButtonProps> {
   }
 }
 
-function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes) {
+export function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes) {
   const {sizes} = baseButton.variants!;
 
   switch (buttonSize) {
@@ -147,7 +147,7 @@ function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes) {
   }
 }
 
-function getButtonStyle(baseButton: GenericStyle, buttonType: ButtonTypes) {
+export function getButtonStyle(baseButton: GenericStyle, buttonType: ButtonTypes) {
   const {types} = baseButton.variants!;
 
   switch (buttonType) {
@@ -195,12 +195,5 @@ function getBaseButton(buttonType: ButtonTypes) {
     case ButtonTypes.OutlineDark:
     case ButtonTypes.OutlineWhite:
       return ButtonStyles.udeButtonStyles;
-    case ButtonTypes.Text:
-    case ButtonTypes.TextDark:
-    case ButtonTypes.TextAllCaps:
-    case ButtonTypes.TextDarkAllCaps:
-      return ButtonStyles.textButtonStyles;
-    case ButtonTypes.Dropdown:
-      return ButtonStyles.dropdownButtonStyles;
   }
 }

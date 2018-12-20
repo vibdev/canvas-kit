@@ -65,7 +65,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -81,7 +81,6 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -95,11 +94,14 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1:focus,
-.emotion-1:hover:focus {
+.emotion-1:focus {
   background-color: #ffa126;
   border-color: #005cb9;
   color: #ffffff;
+}
+
+.emotion-1:hover:focus {
+  background-color: #f38b00;
 }
 
 .emotion-1:active,
@@ -233,7 +235,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -249,7 +251,6 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -263,11 +264,14 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   box-shadow: none;
 }
 
-.emotion-1:focus,
-.emotion-1:hover:focus {
+.emotion-1:focus {
   background-color: #ffa126;
   border-color: #005cb9;
   color: #ffffff;
+}
+
+.emotion-1:hover:focus {
+  background-color: #f38b00;
 }
 
 .emotion-1:active,
@@ -331,7 +335,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -347,7 +351,6 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-3:hover:active {
@@ -361,11 +364,14 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   box-shadow: none;
 }
 
-.emotion-3:focus,
-.emotion-3:hover:focus {
+.emotion-3:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
+}
+
+.emotion-3:hover:focus {
+  background-color: #ced3d9;
 }
 
 .emotion-3:active,
@@ -495,7 +501,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -511,7 +517,6 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -525,11 +530,14 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   box-shadow: none;
 }
 
-.emotion-1:focus,
-.emotion-1:hover:focus {
+.emotion-1:focus {
   background-color: #ffa126;
   border-color: #005cb9;
   color: #ffffff;
+}
+
+.emotion-1:hover:focus {
+  background-color: #f38b00;
 }
 
 .emotion-1:active,
@@ -667,7 +675,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -683,7 +691,6 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -697,11 +704,14 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   box-shadow: none;
 }
 
-.emotion-1:focus,
-.emotion-1:hover:focus {
+.emotion-1:focus {
   background-color: #ffa126;
   border-color: #005cb9;
   color: #ffffff;
+}
+
+.emotion-1:hover:focus {
+  background-color: #f38b00;
 }
 
 .emotion-1:active,
@@ -765,7 +775,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -781,7 +791,6 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-size: 14px;
 }
 
 .emotion-3:hover:active {
@@ -795,11 +804,14 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   box-shadow: none;
 }
 
-.emotion-3:focus,
-.emotion-3:hover:focus {
+.emotion-3:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
+}
+
+.emotion-3:hover:focus {
+  background-color: #ced3d9;
 }
 
 .emotion-3:active,

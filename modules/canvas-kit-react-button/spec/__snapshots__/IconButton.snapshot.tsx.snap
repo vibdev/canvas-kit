@@ -43,11 +43,14 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
   box-shadow: none;
 }
 
-.emotion-0:focus,
-.emotion-0:hover:focus {
+.emotion-0:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
+}
+
+.emotion-0:hover:focus {
+  background-color: #ced3d9;
 }
 
 .emotion-0:active,
