@@ -17,48 +17,52 @@ const toggleWidth = 32;
 const toggleHeight = 16;
 const translateLength = toggleWidth - toggleHeight;
 
-const ToggleInput = styled('input')<ToggleProps>({
-  zIndex: -1,
-  height: toggleHeight,
-  width: toggleWidth,
-  position: 'absolute',
-  margin: 0,
-  borderRadius: 999,
-  '&:focus, &:active': {
-    outline: 'none',
-    ...focusRing(2, 2),
+const ToggleInput = styled('input')<ToggleProps>(
+  {
+    position: 'absolute',
+    zIndex: -1,
+    height: toggleHeight,
+    width: toggleWidth,
+    margin: 0,
+    borderRadius: 999,
+    '&:focus, &:active': {
+      outline: 'none',
+      ...focusRing(2, 2),
+    },
   },
-});
+  ({disabled}) => ({
+    cursor: disabled ? 'not-allowed' : 'pointer',
+  })
+);
 
 const ToggleBackground = styled('div')<Pick<ToggleProps, 'checked' | 'disabled'>>(
-  ({checked, disabled}) => ({
-    width: toggleWidth,
-    height: toggleHeight,
-    backgroundColor: disabled ? colors.soap400 : checked ? colors.blueberry500 : colors.licorice200,
-    borderRadius: 999,
+  {
+    boxSizing: 'border-box',
+    position: 'absolute',
     display: 'flex',
     alignItems: 'center',
+    pointerEvents: 'none',
+    width: toggleWidth,
+    height: toggleHeight,
+    borderRadius: 999,
     padding: '0px 2px',
-    boxSizing: 'border-box',
     transition: 'background-color 200ms ease',
+  },
+  ({checked, disabled}) => ({
+    backgroundColor: disabled ? colors.soap400 : checked ? colors.blueberry500 : colors.licorice200,
   })
 );
 
 const ToggleCircle = styled('div')<Pick<ToggleProps, 'checked'>>(({checked}) => ({
+  position: 'absolute',
   width: circleSize,
   height: circleSize,
-  borderRadius: 100,
-  boxShadow: depth[1].boxShadow,
+  borderRadius: 999,
+  ...depth[1],
   backgroundColor: colors.frenchVanilla100,
   transform: checked ? `translateX(${translateLength}px)` : 'translateX(0)',
   transition: 'transform 150ms ease',
-}));
-
-const ToggleContainer = styled('div')<Pick<ToggleProps, 'disabled'>>(({disabled}) => ({
-  display: 'inline-flex',
-  alignItems: 'center',
-  cursor: disabled ? 'not-allowed' : 'pointer',
-  borderRadius: 999,
+  pointerEvents: 'none',
 }));
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
@@ -70,23 +74,23 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
     const {checked, disabled, id, inputRef, onChange, value, ...otherProps} = this.props;
 
     return (
-      <ToggleContainer disabled={disabled}>
+      <div>
         <ToggleInput
+          checked={checked}
+          disabled={disabled}
           id={id}
           innerRef={inputRef}
-          value={value}
-          disabled={disabled}
-          tabIndex={0}
-          checked={checked}
           onChange={onChange}
-          type="checkbox"
           role="checkbox"
+          tabIndex={0}
+          type="checkbox"
+          value={value}
           {...otherProps}
         />
-        <ToggleBackground disabled={disabled} checked={checked}>
+        <ToggleBackground checked={checked} disabled={disabled}>
           <ToggleCircle checked={checked} />
         </ToggleBackground>
-      </ToggleContainer>
+      </div>
     );
   }
 }
