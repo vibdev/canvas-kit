@@ -3,9 +3,10 @@ import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {colors, depth} from '@workday/canvas-kit-react-core';
 
-export interface ToggleProps {
+export interface ToggleProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
   disabled?: boolean;
+  id?: string;
   onChange?: (e: React.SyntheticEvent) => void;
   value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
@@ -16,28 +17,34 @@ const toggleWidth = 32;
 const toggleHeight = 16;
 const translateLength = toggleWidth - toggleHeight;
 
-const ToggleInput = styled('input')<ToggleProps>(({disabled}) => ({
+const ToggleInput = styled('input')<ToggleProps>({
+  zIndex: -1,
   height: toggleHeight,
   width: toggleWidth,
-  opacity: 0,
   position: 'absolute',
   margin: 0,
   borderRadius: 999,
-  cursor: disabled ? 'not-allowed' : 'pointer',
-}));
+  '&:focus, &:active': {
+    outline: 'none',
+    ...focusRing(2, 2),
+  },
+});
 
-const ToggleBackground = styled('div')<ToggleProps>(({checked, disabled}) => ({
-  width: toggleWidth,
-  height: toggleHeight,
-  backgroundColor: disabled ? colors.soap400 : checked ? colors.blueberry500 : colors.licorice200,
-  borderRadius: 999,
-  display: 'flex',
-  alignItems: 'center',
-  padding: '0px 2px',
-  boxSizing: 'border-box',
-  transition: 'background-color 200ms ease',
-}));
-const ToggleCircle = styled('div')<ToggleProps>(({checked}) => ({
+const ToggleBackground = styled('div')<Pick<ToggleProps, 'checked' | 'disabled'>>(
+  ({checked, disabled}) => ({
+    width: toggleWidth,
+    height: toggleHeight,
+    backgroundColor: disabled ? colors.soap400 : checked ? colors.blueberry500 : colors.licorice200,
+    borderRadius: 999,
+    display: 'flex',
+    alignItems: 'center',
+    padding: '0px 2px',
+    boxSizing: 'border-box',
+    transition: 'background-color 200ms ease',
+  })
+);
+
+const ToggleCircle = styled('div')<Pick<ToggleProps, 'checked'>>(({checked}) => ({
   width: circleSize,
   height: circleSize,
   borderRadius: 100,
@@ -47,31 +54,25 @@ const ToggleCircle = styled('div')<ToggleProps>(({checked}) => ({
   transition: 'transform 150ms ease',
 }));
 
-const ToggleContainer = styled('div')<ToggleProps>(({disabled}) => ({
+const ToggleContainer = styled('div')<Pick<ToggleProps, 'disabled'>>(({disabled}) => ({
   display: 'inline-flex',
   alignItems: 'center',
   cursor: disabled ? 'not-allowed' : 'pointer',
   borderRadius: 999,
-  '&:focus-within:not([disabled])': {
-    outline: 'none',
-    ...focusRing(2, 2),
-  },
-  '&:active:not([disabled])': {
-    outline: 'none',
-    ...focusRing(2, 2),
-  },
 }));
 
 export default class ToggleSwitch extends React.Component<ToggleProps> {
   public static defaultProps = {
     checked: false,
   };
+
   public render() {
-    const {onChange, checked, disabled, value, inputRef} = this.props;
+    const {checked, disabled, id, inputRef, onChange, value, ...otherProps} = this.props;
 
     return (
-      <ToggleContainer {...this.props}>
+      <ToggleContainer disabled={disabled}>
         <ToggleInput
+          id={id}
           innerRef={inputRef}
           value={value}
           disabled={disabled}
@@ -80,6 +81,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
           onChange={onChange}
           type="checkbox"
           role="checkbox"
+          {...otherProps}
         />
         <ToggleBackground disabled={disabled} checked={checked}>
           <ToggleCircle checked={checked} />
