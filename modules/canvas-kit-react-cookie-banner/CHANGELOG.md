@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.22"></a>
+## [0.2.22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.2.21...@workday/canvas-kit-react-cookie-banner@0.2.22) (2018-12-20)
+
+
+### Bug Fixes
+
+* **CookieBanner:** fix button size on smaller screens ([d3bda9a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/d3bda9a))
+* **CookieBanner:** remove extra style for the button ([83eec1e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/83eec1e))
+
+
+
+
 <a name="0.2.21"></a>
 ## [0.2.21](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.2.20...@workday/canvas-kit-react-cookie-banner@0.2.21) (2018-12-03)
 
