@@ -62,4 +62,23 @@ describe('Toggle Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders toggle with id', () => {
+    const component = renderer.create(
+      <Toggle value="user" id={'123'} disabled={false} checked={true} onChange={jest.fn()} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders toggle with custom prop', () => {
+    const component = renderer.create(
+      <Toggle
+        title="hello world"
+        value="user"
+        id={'123'}
+        disabled={false}
+        checked={true}
+        onChange={jest.fn()}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

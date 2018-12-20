@@ -1,48 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toggle Snapshots renders as expected 1`] = `
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-3:active:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
 .emotion-0 {
+  position: absolute;
+  z-index: -1;
   height: 16px;
   width: 32px;
-  opacity: 0;
-  position: absolute;
   margin: 0;
   border-radius: 999px;
   cursor: pointer;
 }
 
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #7b858f;
-  border-radius: 999px;
+  box-sizing: border-box;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,16 +30,21 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
   padding: 0px 2px;
-  box-sizing: border-box;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
+  background-color: #7b858f;
 }
 
 .emotion-1 {
+  position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 999px;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
   background-color: #ffffff;
   -webkit-transform: translateX(0);
@@ -69,13 +53,10 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   -webkit-transition: -webkit-transform 150ms ease;
   -webkit-transition: transform 150ms ease;
   transition: transform 150ms ease;
+  pointer-events: none;
 }
 
-<div
-  checked={false}
-  className="emotion-3"
-  onChange={[Function]}
->
+<div>
   <input
     checked={false}
     className="emotion-0"
@@ -98,9 +79,10 @@ exports[`Toggle Snapshots renders as expected 1`] = `
 
 exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
 .emotion-1 {
+  position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 999px;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
   background-color: #ffffff;
   -webkit-transform: translateX(16px);
@@ -109,50 +91,30 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
   -webkit-transition: -webkit-transform 150ms ease;
   -webkit-transition: transform 150ms ease;
   transition: transform 150ms ease;
-}
-
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-3:active:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  pointer-events: none;
 }
 
 .emotion-0 {
+  position: absolute;
+  z-index: -1;
   height: 16px;
   width: 32px;
-  opacity: 0;
-  position: absolute;
   margin: 0;
   border-radius: 999px;
   cursor: not-allowed;
 }
 
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #dfe2e6;
-  border-radius: 999px;
+  box-sizing: border-box;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,18 +123,17 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
   padding: 0px 2px;
-  box-sizing: border-box;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
+  background-color: #dfe2e6;
 }
 
-<div
-  checked={true}
-  className="emotion-3"
-  disabled={true}
-  onChange={[Function]}
->
+<div>
   <input
     checked={true}
     className="emotion-0"
@@ -197,9 +158,10 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
 
 exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
 .emotion-1 {
+  position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 999px;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
   background-color: #ffffff;
   -webkit-transform: translateX(0);
@@ -208,50 +170,30 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
   -webkit-transition: -webkit-transform 150ms ease;
   -webkit-transition: transform 150ms ease;
   transition: transform 150ms ease;
-}
-
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-3:active:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  pointer-events: none;
 }
 
 .emotion-0 {
+  position: absolute;
+  z-index: -1;
   height: 16px;
   width: 32px;
-  opacity: 0;
-  position: absolute;
   margin: 0;
   border-radius: 999px;
   cursor: not-allowed;
 }
 
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #dfe2e6;
-  border-radius: 999px;
+  box-sizing: border-box;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -260,18 +202,17 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
   padding: 0px 2px;
-  box-sizing: border-box;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
+  background-color: #dfe2e6;
 }
 
-<div
-  checked={false}
-  className="emotion-3"
-  disabled={true}
-  onChange={[Function]}
->
+<div>
   <input
     checked={false}
     className="emotion-0"
@@ -295,48 +236,27 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
 `;
 
 exports[`Toggle Snapshots renders toggle on 1`] = `
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-3:active:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
 .emotion-0 {
+  position: absolute;
+  z-index: -1;
   height: 16px;
   width: 32px;
-  opacity: 0;
-  position: absolute;
   margin: 0;
   border-radius: 999px;
   cursor: pointer;
 }
 
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #005cb9;
-  border-radius: 999px;
+  box-sizing: border-box;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,16 +265,21 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
   padding: 0px 2px;
-  box-sizing: border-box;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
+  background-color: #005cb9;
 }
 
 .emotion-1 {
+  position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 999px;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
   background-color: #ffffff;
   -webkit-transform: translateX(16px);
@@ -363,13 +288,10 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   -webkit-transition: -webkit-transform 150ms ease;
   -webkit-transition: transform 150ms ease;
   transition: transform 150ms ease;
+  pointer-events: none;
 }
 
-<div
-  checked={true}
-  className="emotion-3"
-  onChange={[Function]}
->
+<div>
   <input
     checked={true}
     className="emotion-0"
@@ -390,49 +312,28 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
 </div>
 `;
 
-exports[`Toggle Snapshots renders toggle with name and value 1`] = `
-.emotion-3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 999px;
-}
-
-.emotion-3:focus-within:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-3:active:not([disabled]) {
-  outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
+exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
 .emotion-0 {
+  position: absolute;
+  z-index: -1;
   height: 16px;
   width: 32px;
-  opacity: 0;
-  position: absolute;
   margin: 0;
   border-radius: 999px;
   cursor: pointer;
 }
 
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-2 {
-  width: 32px;
-  height: 16px;
-  background-color: #005cb9;
-  border-radius: 999px;
+  box-sizing: border-box;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,16 +342,21 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
   padding: 0px 2px;
-  box-sizing: border-box;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
+  background-color: #005cb9;
 }
 
 .emotion-1 {
+  position: absolute;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 999px;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
   background-color: #ffffff;
   -webkit-transform: translateX(16px);
@@ -459,15 +365,173 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   -webkit-transition: -webkit-transform 150ms ease;
   -webkit-transition: transform 150ms ease;
   transition: transform 150ms ease;
+  pointer-events: none;
 }
 
-<div
-  checked={true}
-  className="emotion-3"
-  disabled={false}
-  onChange={[Function]}
-  value="user"
->
+<div>
+  <input
+    checked={true}
+    className="emotion-0"
+    disabled={false}
+    id="123"
+    onChange={[MockFunction]}
+    role="checkbox"
+    tabIndex={0}
+    title="hello world"
+    type="checkbox"
+    value="user"
+  />
+  <div
+    checked={true}
+    className="emotion-2"
+    disabled={false}
+  >
+    <div
+      checked={true}
+      className="emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Toggle Snapshots renders toggle with id 1`] = `
+.emotion-0 {
+  position: absolute;
+  z-index: -1;
+  height: 16px;
+  width: 32px;
+  margin: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
+  padding: 0px 2px;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  background-color: #005cb9;
+}
+
+.emotion-1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  background-color: #ffffff;
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  -webkit-transition: -webkit-transform 150ms ease;
+  -webkit-transition: transform 150ms ease;
+  transition: transform 150ms ease;
+  pointer-events: none;
+}
+
+<div>
+  <input
+    checked={true}
+    className="emotion-0"
+    disabled={false}
+    id="123"
+    onChange={[MockFunction]}
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+    value="user"
+  />
+  <div
+    checked={true}
+    className="emotion-2"
+    disabled={false}
+  >
+    <div
+      checked={true}
+      className="emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Toggle Snapshots renders toggle with name and value 1`] = `
+.emotion-0 {
+  position: absolute;
+  z-index: -1;
+  height: 16px;
+  width: 32px;
+  margin: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: none;
+  width: 32px;
+  height: 16px;
+  border-radius: 999px;
+  padding: 0px 2px;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  background-color: #005cb9;
+}
+
+.emotion-1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  background-color: #ffffff;
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  -webkit-transition: -webkit-transform 150ms ease;
+  -webkit-transition: transform 150ms ease;
+  transition: transform 150ms ease;
+  pointer-events: none;
+}
+
+<div>
   <input
     checked={true}
     className="emotion-0"
