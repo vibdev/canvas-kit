@@ -9,7 +9,6 @@ export interface ToggleProps {
   onChange?: (e: React.SyntheticEvent) => void;
   value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
-  inputProps?: {};
 }
 
 const circleSize = 12;
@@ -68,7 +67,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
     checked: false,
   };
   public render() {
-    const {onChange, checked, disabled, value, inputRef, ...inputProps} = this.props;
+    const {onChange, checked, disabled, value, inputRef} = this.props;
 
     return (
       <ToggleContainer {...this.props}>
@@ -81,7 +80,6 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
           onChange={onChange}
           type="checkbox"
           role="checkbox"
-          {...inputProps}
         />
         <ToggleBackground disabled={disabled} checked={checked}>
           <ToggleCircle checked={checked} />
