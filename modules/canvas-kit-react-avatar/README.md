@@ -1,8 +1,8 @@
 # Canvas Kit Avatar
 
-> A component showing a user's photo with a circular crop.
+A component showing a user's photo with a circular crop.
 
-## Install
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react

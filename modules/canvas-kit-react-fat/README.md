@@ -1,10 +1,10 @@
 # Canvas Kit Floating Action Toolbar
 
-> Full width toolbar fixed to bottom of screen.
+Full width toolbar fixed to bottom of screen.
 
-> Although not required, [buttons](../canvas-kit-react-button) are often used in floating action
-> toolbars. The primary action button should be left aligned followed by secondary buttons. The
-> primary button is on the right only in task orchestration and on mobile devices.
+Although not required, [buttons](../canvas-kit-react-button) are often used in floating action
+toolbars. The primary action button should be left aligned followed by secondary buttons. The
+primary button is on the right only in task orchestration and on mobile devices.
 
 ## Installation
 
@@ -47,8 +47,6 @@ import {FloatingActionToolbar} from '@workday/canvas-kit-react-fat';
 #### `fixed: boolean`
 
 > Fixes the toolbar to the bottom of the window (uses `position: fixed`)
-
----
 
 ## Responsive Behavior
 

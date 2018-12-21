@@ -4,7 +4,7 @@ A Canvas component that displays the header of a specific page within a website 
 is generally used as a sub-header to the main application header
 (`@workday/canvas-kit-react-header`).
 
-## Install
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react
@@ -24,9 +24,10 @@ import {PageHeader} from '@workday/canvas-kit-react-page-header';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exportIcon, fullscreenIcon} from '@workday/canvas-system-icons-web';
 
+// No need to set the `color` or `colorHover` prop on SystemIcon here, we'll do it for you
+
 <PageHeader title="Product">
   <a href="#">
-    // No need to set the `color` or `colorHover` prop on SystemIcon here, we'll do it for you
     <SystemIcon icon={exportIcon} />
   </a>
   <a href="#">
@@ -44,6 +45,10 @@ import {exportIcon, fullscreenIcon} from '@workday/canvas-system-icons-web';
 </PageHeader>
 ```
 
+## Static Properties
+
+> None
+
 ## Component Props
 
 ### Required
@@ -58,12 +63,16 @@ import {exportIcon, fullscreenIcon} from '@workday/canvas-system-icons-web';
 
 Default: `''`
 
+---
+
 #### `marketing: boolean`
 
 > Use the page header in the marketing context (non-product). In this context, content is centered
 > and the page header is responsive in all three breakpoints.
 
 Defalut: `false`
+
+---
 
 #### `breakpoints: { sm: number, md: number, lg: number }`
 

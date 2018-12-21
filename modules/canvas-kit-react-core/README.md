@@ -11,14 +11,14 @@ Includes:
 
 ## Installation
 
-```tsx
-yarn add @workday/canvas-kit-react-core
+```sh
+yarn add @workday/canvas-kit-react
 ```
 
 or
 
-```tsx
-yarn add @workday/canvas-kit-react
+```sh
+yarn add @workday/canvas-kit-react-core
 ```
 
 # Colors

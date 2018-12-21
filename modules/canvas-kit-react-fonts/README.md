@@ -4,6 +4,8 @@ By default, no fonts are included with Canvas Kit modules. To use official Canva
 and import the `@workday/canvas-kit-react-fonts` module. Note that this module sources fonts from
 the Workday CDN.
 
+## Installation
+
 ```sh
 yarn add @workday/canvas-kit-react-fonts
 ```

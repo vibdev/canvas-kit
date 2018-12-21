@@ -1,8 +1,8 @@
 # Canvas Kit Table
 
-> A component for applying Canvas styling to table elements.
+A component for applying Canvas styling to table elements.
 
-## Install
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react
@@ -116,6 +116,8 @@ the entire row. This style produces a colored row without a darkened border.
 > The state of the row
 
 Default: `null`
+
+---
 
 #### `header: boolean`
 

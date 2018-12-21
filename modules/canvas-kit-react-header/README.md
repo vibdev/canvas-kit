@@ -1,8 +1,8 @@
 # Canvas Kit Header
 
-> A set of components to create headers for various Workday applications and sites.
+A set of components to create headers for various Workday applications and sites.
 
-> For a full suite of examples, have a look at the [Header Stories](./stories.tsx).
+For a full suite of examples, have a look at the [Header Stories](./stories.tsx).
 
 ## Coming Soon
 
@@ -10,7 +10,7 @@
 - Search Support
 - Mobile Expanded Nav
 
-## Install
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react
@@ -24,7 +24,7 @@ yarn add @workday/canvas-kit-react-header
 
 # Header
 
-> This component renders a responsive, Canvas-style header.
+This component renders a responsive, Canvas-style header.
 
 ## Usage
 
@@ -194,17 +194,12 @@ Default:
 
 # "Dub" Logo and Title
 
-> _Intended to be used in conjunction with the `Header` component_
->
-> A component that encapsulates the 'Dub' logo and a title (we call this the contained lockup). This
-> is used whenever you want to override the contained lockup that comes default with a header, or if
-> you want to add more elements next to the title with custom components or markup, or change the
-> background color of the contained lockup
+_Intended to be used in conjunction with the `Header` component_
 
-## Install
-
-> _Included with the `@workday/canvas-kit-react-header` module, please refer to the
-> [instructions](#install) above._
+A component that encapsulates the 'Dub' logo and a title (we call this the contained lockup). This
+is used whenever you want to override the contained lockup that comes default with a header, or if
+you want to add more elements next to the title with custom components or markup, or change the
+background color of the contained lockup
 
 ## Usage
 
@@ -249,16 +244,11 @@ Default: `'none'`
 
 # Workday Logo and Title
 
-> _Intended to be used in conjunction with the `Header` component_
->
-> A component that contains the full Workday logo and a title. This is used whenever you want to
-> override the contained lockup that comes default with a header, or if you want to add more
-> elements next to the title with custom components or markup.
+_Intended to be used in conjunction with the `Header` component_
 
-## Install
-
-> _Included with the `@workday/canvas-kit-react-header` module, please refer to the
-> [instructions](#install) above._
+A component that contains the full Workday logo and a title. This is used whenever you want to
+override the contained lockup that comes default with a header, or if you want to add more elements
+next to the title with custom components or markup.
 
 ## Usage
 

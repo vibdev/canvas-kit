@@ -5,7 +5,10 @@ Components assisting the rendering of Canvas accent, applet, and system icons.
 Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets) must be used with
 these components. No icons are bundled with this package.
 
-## Install
+To browse a full list of icons, take a look at the
+[Canvas Design System resources](https://design.workday.com/resources) page.
+
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react
@@ -16,22 +19,6 @@ or
 ```sh
 yarn add @workday/canvas-kit-react-icon
 ```
-
-## Icon Packages
-
-When using an icon package, you have the option of using named exports or using an individual icon
-module. If using named exports, you should ensure that you have configured
-[tree shaking](https://webpack.js.org/guides/tree-shaking/) correctly to prevent bundle bloat.
-
-```tsx
-# Named Export
-import { shieldIcon } from '@workday/canvas-accent-icons-web'
-<AccentIcon icon={shieldIcon} />
-
-import * as AccentIcons from '@workday/canvas-accent-icons-web'
-<AccentIcon icon={AccentIcons.shieldIcon} />
-
-## Usage
 
 # Accent Icons
 
@@ -69,11 +56,15 @@ import { shieldIcon } from '@workday/canvas-accent-icons-web'
 
 Default: `colors.blueberry500`
 
+---
+
 #### `size: number`
 
 > Size of the icon.
 
 Default: `56`
+
+---
 
 #### `transparent: boolean`
 
@@ -87,9 +78,6 @@ Default: `false`
 
 Use with `@workday/canvas-applet-icons-web`.
 
-Unlike `AccentIcon` or `SystemIcon`, `AppletIcon` uses a Canvas _hue_ (e.g. `Pomegranate`) rather
-than a specific _shade_ (e.g. `pomegranate100`).
-
 ```tsx
 import { AppletIcon } from '@workday/canvas-kit-react-icon'
 import { benefitsIcon } from '@workday/canvas-applet-icons-web'
@@ -102,6 +90,8 @@ import { benefitsIcon } from '@workday/canvas-applet-icons-web'
 ## Static Properties
 
 #### `Colors: BrandingColors`
+
+> An enum of the various Canvas hues (`Pomegranate`, `Blueberry`, `Cinnamon`, etc.).
 
 ```tsx
 <AppletIcon icon={benefitsIcon} color={AppletIcon.Colors.Pomegranate} />
@@ -142,11 +132,13 @@ import { benefitsIcon } from '@workday/canvas-applet-icons-web'
 
 ### Optional
 
-#### `color: BrandingColors`
+#### `color: AppletIcon.Colors`
 
-> Icon color.
+> Icon color hue. Must use a member of the `AppletIcon.Colors` static enum.
 
 Default: `AppletIcon.Colors.Blueberry`
+
+---
 
 #### `size: number`
 
@@ -196,11 +188,15 @@ import { activityStreamIcon } from '@workday/canvas-system-icons-web'
 
 Default: `24`
 
-#### `color: string`\*\*
+---
 
-> Color of the icon. This will define `accent` and `fill`.
+#### `color: string`
+
+> Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property if defined.
 
 Default: `colors.primary.iconStandard`
+
+---
 
 #### `colorHover: string`
 
@@ -208,17 +204,19 @@ Default: `colors.primary.iconStandard`
 
 Default: `colors.primary.iconHover`
 
+---
+
 #### `accent: string`
 
 > `.wd-icon-accent` color. This will override `color`.
 
-Default: `undefined`
+---
 
 #### `accentHover: string`
 
 > `.wd-icon-accent` color on hover. This will override `colorHover`.
 
-Default: `undefined`
+---
 
 #### `background: string`
 
@@ -226,23 +224,25 @@ Default: `undefined`
 
 Default: `'transparent'`
 
+---
+
 #### `backgroundHover: string`
 
 > `.wd-icon-background` color on hover.
 
 Default: `'transparent'`
 
+---
+
 #### `fill: string`
 
 > `.wd-icon-fill` color. This will override `color`.
 
-Default: `undefined`
+---
 
 #### `fillHover: string`
 
 > `.wd-icon-fill` color on hover. This will override `colorHover`.
-
-Default: `undefined`
 
 # Graphics
 
@@ -251,6 +251,7 @@ Default: `undefined`
 Use with `@workday/canvas-graphics-web`.
 
 ```tsx
+import { colors } from '@workday/canvas-kit-react-core'
 import { Graphic } from '@workday/canvas-kit-react-icon'
 import { badgeAchievementGraphic } from '@workday/canvas-graphics-web'
 
@@ -281,11 +282,15 @@ import { badgeAchievementGraphic } from '@workday/canvas-graphics-web'
 
 Default: `width of graphic`
 
+---
+
 #### `height: number | string`
 
 > Graphic height in `px`. If set, `width` will be set to `100%`.
 
 Default: `height of graphic`
+
+---
 
 #### `grow: boolean`
 
