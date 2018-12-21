@@ -1,25 +1,85 @@
 # Canvas Kit Toggle
 
+A pill shaped toggle switch. This is an
+[_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `input` component.
+Undocumented props are spread to the `input` element.
+
+## Installation
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-toggle
+```
+
 ## Usage
 
-This component is a pill shaped toggle switch. The state of the toggle will be managed by an
-external container component.
+```tsx
+import * as React from 'react'
+import { Toggle } @workday/canvas-kit-react-toggle;
 
-`checked: boolean` - is the toggle active
-
-`onChange: () => void` - callback when the switch is clicked (such as setting state on a parent to
-pass to isChecked)
-
-`disabled?: boolean` - if true, the toggle with be disabled
-
-`value?: string` - the value of the checkbox for forms
-
-`inputRef: React.Ref<HTMLInputElement>` - access to the input for any imperative changes
-
-```javascript
-import {ToggleSwitch} from '@workday/pt-react-components';
+<Toggle disabled={false} checked={checked} onChange={this.handleCheck} />
 ```
 
-```jsx
-<ToggleSwitch onChange={callbackfn} checked={boolean} />
-```
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+#### `checked: boolean`
+
+> Whether or not the toggle is on (`true`) or off (`false`)
+
+Default: `false`
+
+---
+
+#### `disabled: boolean`
+
+> Whether or not the toggle is disabled (not able to be switched on or off)
+
+Default: `false`
+
+---
+
+#### `id: string`
+
+> The HTML attribute `id` for the underlying input checkbox component.
+
+Default: `undefined`
+
+---
+
+#### `onChange: (e: React.SyntheticEvent<HTMLInputElement>) => void`
+
+> A callback that gets called everytime the toggle checked state changes.
+
+Default: `undefined`
+
+---
+
+#### `value: string`
+
+> The `value` attribute of the input checkbox.
+
+Default: `undefined`
+
+---
+
+#### `inputRef: React.Ref<HTMLInputElement>`
+
+> A ref to the underlying input checkbox element. Use this to imperatively toggle or focus this
+> component.
+
+Default: `undefined`
