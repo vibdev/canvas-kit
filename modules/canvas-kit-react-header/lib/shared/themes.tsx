@@ -1,5 +1,5 @@
 import {colors, iconColors, depth, CSSProperties} from '@workday/canvas-kit-react-core';
-import * as chroma from 'chroma-js';
+import chroma from 'chroma-js';
 import {HeaderTheme} from './types';
 
 export interface ThemeAttributes {
