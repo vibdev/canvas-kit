@@ -12506,6 +12506,9 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
+  min-width: 80px;
+  height: 32px;
+  padding: 0 14px;
 }
 
 .emotion-1:hover:active {
@@ -12641,6 +12644,9 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
+  min-width: 80px;
+  height: 32px;
+  padding: 0 14px;
 }
 
 .emotion-1:hover:active {
@@ -12764,7 +12770,7 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 10px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -12776,6 +12782,10 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   background-color: #ffefee;
   border-color: #ff5347;
   color: #de2e21;
+  height: 18px;
+  padding: 0 8px;
+  min-width: 56px;
+  max-width: 120px;
 }
 
 .emotion-1:hover:active {
@@ -12884,6 +12894,9 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
+  min-width: 80px;
+  height: 32px;
+  padding: 0 14px;
 }
 
 .emotion-1:hover:active {
@@ -13019,6 +13032,9 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
+  min-width: 80px;
+  height: 32px;
+  padding: 0 14px;
 }
 
 .emotion-1:hover:active {
@@ -13154,6 +13170,9 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
+  min-width: 80px;
+  height: 32px;
+  padding: 0 14px;
 }
 
 .emotion-1:hover:active {
@@ -13283,7 +13302,7 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 10px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -13295,6 +13314,10 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   background-color: #ffa126;
   border-color: #ffa126;
   color: #ffffff;
+  height: 18px;
+  padding: 0 8px;
+  min-width: 56px;
+  max-width: 120px;
 }
 
 .emotion-1:hover:active {
@@ -13408,7 +13431,7 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 10px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -13420,6 +13443,10 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
+  height: 18px;
+  padding: 0 8px;
+  min-width: 56px;
+  max-width: 120px;
 }
 
 .emotion-1:hover:active {

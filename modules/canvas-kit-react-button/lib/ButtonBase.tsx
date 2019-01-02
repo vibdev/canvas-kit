@@ -9,7 +9,7 @@ import {GenericStyle} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
 
 export const ButtonBaseCon = styled('button')<ButtonProps>(
-  // TODO: Support data-whatinput='input'
+  /* istanbul ignore next line for coverage */
   ({buttonType, buttonSize}) => {
     if (buttonType === undefined) {
       return {};
@@ -17,7 +17,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
 
     const baseButton = getBaseButton(buttonType);
     const buttonStyles = getButtonStyle(baseButton, buttonType);
-    const buttonSizeStyles = buttonSize ? getButtonSize(baseButton, buttonSize) : {};
+    const buttonSizeStyles = buttonSize !== undefined ? getButtonSize(baseButton, buttonSize) : {};
 
     return {
       ...baseButton.styles,
@@ -115,6 +115,7 @@ const ButtonLabelIconStyled = styled('span')<TextButtonProps>(
 
 export class ButtonLabelIcon extends React.Component<ButtonProps> {
   public render() {
+    /* istanbul ignore next line for coverage */
     if (this.props.icon === undefined) {
       return {};
     }
