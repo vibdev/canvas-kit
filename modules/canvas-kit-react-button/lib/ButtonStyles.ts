@@ -182,12 +182,12 @@ export const udeButtonStyles: GenericStyle = {
       large: {
         minWidth: '112px',
         height: '48px',
-        padding: '0 20px',
+        padding: '0 18px',
       },
       medium: {
         minWidth: '96px',
         height: '40px',
-        padding: '0 16px',
+        padding: '0 14px',
       },
       small: {
         minWidth: '80px',
@@ -220,6 +220,7 @@ export const textButtonStyles: GenericStyle = {
   styles: {
     ...canvasButtonStyles.styles,
     borderRadius: '3px;',
+    border: '0',
     margin: '0 8px',
     minWidth: 'auto',
     '&:hover:not([disabled])': {textDecoration: 'underline'},
