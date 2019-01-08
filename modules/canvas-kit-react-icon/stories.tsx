@@ -59,5 +59,8 @@ storiesOf('Canvas Kit/Icon', module)
       <Graphic src={badgeAchievementGraphic} width={80} />
       <br />
       <Graphic src={emptyStateCheckmarkCircleGraphic} />
+      <div style={{width: 500}}>
+        <Graphic src={emptyStateCheckmarkCircleGraphic} grow={true} />
+      </div>
     </div>
   ));
