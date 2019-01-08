@@ -30,4 +30,16 @@ describe('Graphic', () => {
     const componentStyle = graphicStyles({width: 48, height: 24});
     expect(componentStyle['& svg']).toMatchObject({width: 48, height: '100%'});
   });
+
+  test('Grow', () => {
+    const componentStyle = graphicStyles({grow: true});
+    expect(componentStyle).toMatchObject({
+      width: '100%',
+      height: '100%',
+      '& svg': {
+        width: '100%',
+        height: '100%',
+      },
+    });
+  });
 });
