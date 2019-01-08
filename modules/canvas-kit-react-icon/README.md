@@ -5,15 +5,25 @@ Components assisting the rendering of Canvas accent, applet, and system icons.
 Icon packages from [Design Assets](https://ghe.megaleo.com/design/design-assets) must be used with
 these components. No icons are bundled with this package.
 
-## Usage
+## Install
 
-### Icon Packages
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-icon
+```
+
+## Icon Packages
 
 When using an icon package, you have the option of using named exports or using an individual icon
 module. If using named exports, you should ensure that you have configured
 [tree shaking](https://webpack.js.org/guides/tree-shaking/) correctly to prevent bundle bloat.
 
-```jsx
+```tsx
 # Named Export
 import { shieldIcon } from '@workday/canvas-accent-icons-web'
 <AccentIcon icon={shieldIcon} />
@@ -26,11 +36,13 @@ import shieldIcon from '@workday/canvas-accent-icons-web/dist/es6/shield'
 <AccentIcon icon={shieldIcon} />
 ```
 
-### Accent Icons
+# Accent Icons
+
+## Usage
 
 Use with `@workday/canvas-accent-icons-web`.
 
-```jsx
+```tsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { AccentIcon } from '@workday/canvas-kit-react-icon'
 import { shieldIcon } from '@workday/canvas-accent-icons-web'
@@ -40,32 +52,45 @@ import { shieldIcon } from '@workday/canvas-accent-icons-web'
 <AccentIcon icon={shieldIcon} size={80} />
 ```
 
-#### Properties
+## Static Properties
 
-**Required**
+> None
 
-**`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-accent-icons-web`
+## Component Props
 
-**Optional**
+### Required
 
-**`color`**  
-Default: `colors.blueberry500`  
-Icon color.
+#### `icon: CanvasIcon`
 
-**`size`**  
-Default: `56`  
-Icon size in `px`.
+> Icon to display from `@workday/canvas-accent-icons-web`.
 
-**`transparent`**  
-Default: `false`  
-Toggle for transparent accent icon background. If false, the background fill will be white.
+### Optional
 
-### Applet Icons
+#### `color: string`
+
+> Icon color from `@workday/canvas-colors-web`.
+
+Default: `colors.blueberry500`
+
+#### `size: number`
+
+> Size of the icon.
+
+Default: `56`
+
+#### `transparent: boolean`
+
+> Toggle for transparent accent icon background. If false, the background fill will be white.
+
+Default: `false`
+
+# Applet Icons
+
+## Usage
 
 Use with `@workday/canvas-applet-icons-web`.
 
-```jsx
+```tsx
 import { AppletIcon } from '@workday/canvas-kit-react-icon'
 import { benefitsIcon } from '@workday/canvas-applet-icons-web'
 
@@ -74,28 +99,68 @@ import { benefitsIcon } from '@workday/canvas-applet-icons-web'
 <AppletIcon icon={benefitsIcon} size={60} />
 ```
 
-#### Properties
+## Static Properties
 
-**Required**
+#### `Colors: BrandingColors`
 
-**`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-applet-icons-web`
+```tsx
+<AppletIcon icon={benefitsIcon} color={AppletIcon.Colors.Pomegranate} />
+```
 
-**Optional**
+- `Cinnamon`
+- `Peach`
+- `ChiliMango`
+- `Cantaloupe`
+- `SourLemon`
+- `JuicyPear`
+- `Kiwi`
+- `GreenApple`
+- `Watermelon`
+- `Jewel`
+- `Toothpaste`
+- `Blueberry`
+- `Plum`
+- `BerrySmoothie`
+- `Blackberry`
+- `IslandPunch`
+- `GrapeSoda`
+- `Pomegranate`
+- `FruitPunch`
+- `RootBeer`
+- `ToastedMarshmallow`
+- `Cappuccino`
+- `Licorice`
+- `BlackPepper`
 
-**`color`**  
-Default: `AppletIcon.Colors.Blueberry`  
-Icon color. Must use a member of the `AppletIcon.Colors` enum.
+## Component Props
 
-**`size`**  
-Default: `92`  
-Icon size in `px`.
+### Required
 
-### System Icons
+#### `icon: CanvasIcon`
+
+> Icon to display from `@workday/canvas-applet-icons-web`.
+
+### Optional
+
+#### `color: BrandingColors`
+
+> Icon color.
+
+Default: `AppletIcon.Colors.Blueberry`
+
+#### `size: number`
+
+> Size of the icon in `px`.
+
+Default: `92`
+
+# System Icons
+
+## Usage
 
 Use with `@workday/canvas-system-icons-web`.
 
-```jsx
+```tsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { SystemIcon } from '@workday/canvas-kit-react-icon'
 import { activityStreamIcon } from '@workday/canvas-system-icons-web
@@ -111,54 +176,81 @@ import { activityStreamIcon } from '@workday/canvas-system-icons-web
 <SystemIcon icon={activityStreamIcon} size={48} />
 ```
 
-#### Properties
+## Static Properties
 
-**Required**
+> None
 
-**`icon`:** `CanvasIcon`  
-Icon imported from `@workday/canvas-system-icons-web`
+## Component Props
 
-**Optional**
+### Required
 
-**`size`**  
-Default: `24`  
-Icon size in `px`.
+#### `icon: CanvasIcon`
 
-**`color`**  
-Default: `colors.primary.iconStandard`  
-Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property if
-defined.
+> Icon to display from `@workday/canvas-system-icons-web`
 
-**`colorHover`**  
-Default: `colors.primary.iconHover`  
-Icon hover color. This will define `accentHover` and `fillHover`. `accentHover` and `fillHover` will
-override this property if defined.
+### Optional
 
-**`accent`**  
-`.wd-icon-accent` color.
+#### `size: number`
 
-**`accentHover`**  
-`.wd-icon-accent` color on hover.
+> Size of the icon in `px`.
 
-**`background`**  
-Default: `'transparent'`  
-`.wd-icon-background` color.
+Default: `24`
 
-**`backgroundHover`**  
-Default: `'transparent'`  
-`.wd-icon-background` color on hover.
+#### `color: string`\*\*
 
-**`fill`**  
-`.wd-icon-fill` color.
+> Color of the icon. This will define `accent` and `fill`.
 
-**`fillHover`**  
-`.wd-icon-fill` color on hover.
+Default: `colors.primary.iconStandard`
 
-### Graphics
+#### `colorHover: string`
+
+> Hover color of the icon. This will define `accentHover` and `fillHover`.
+
+Default: `colors.primary.iconHover`
+
+#### `accent: string`
+
+> `.wd-icon-accent` color. This will override `color`.
+
+Default: `undefined`
+
+#### `accentHover: string`
+
+> `.wd-icon-accent` color on hover. This will override `colorHover`.
+
+Default: `undefined`
+
+#### `background: string`
+
+> `.wd-icon-background` color.
+
+Default: `'transparent'`
+
+#### `backgroundHover: string`
+
+> `.wd-icon-background` color on hover.
+
+Default: `'transparent'`
+
+#### `fill: string`
+
+> `.wd-icon-fill` color. This will override `color`.
+
+Default: `undefined`
+
+#### `fillHover: string`
+
+> `.wd-icon-fill` color on hover. This will override `colorHover`.
+
+Default: `undefined`
+
+# Graphics
+
+## Usage
 
 Use with `@workday/canvas-graphics-web`.
 
-```jsx
+```tsx
 import { colors } from '@workday/canvas-kit-react-core'
 import { Graphic } from '@workday/canvas-kit-react-icon'
 import { badgeAchievementGraphic } from '@workday/canvas-graphics-web
@@ -166,22 +258,38 @@ import { badgeAchievementGraphic } from '@workday/canvas-graphics-web
 <Graphic src={badgeAchievementGraphic} />
 <Graphic src={badgeAchievementGraphic} width={80}/>
 <Graphic src={badgeAchievementGraphic} height={80}/>
+<Graphic src={badgeAchievementGraphic} grow={true} />
 ```
 
-#### Properties
+## Static Properties
 
-**Required**
+> None
 
-**`src`:** `CanvasGraphic`  
-Icon imported from `@workday/canvas-graphics-web`
+## Component Props
 
-**Optional**
+### Required
 
-**`width`**  
-Default: `width of graphic`  
-Graphic width in `px`. `width` takes precedence over `height` in order to preserve the graphic's
-ratio.
+#### `src: CanvasGraphic`
 
-**`height`**  
-Default: `height of graphic`  
-Graphic height in `px`. If set, `width` will be set to `100%`.
+> Graphic to display from `@workday/canvas-graphics-web`
+
+### Optional
+
+#### `width: number | string`
+
+> Graphic width in `px`. `width` takes precedence over `height` in order to preserve the graphic's
+> ratio.
+
+Default: `width of graphic`
+
+#### `height: number | string`
+
+> Graphic height in `px`. If set, `width` will be set to `100%`.
+
+Default: `height of graphic`
+
+#### `grow: boolean`
+
+> Expand graphic to fit container.
+
+Default: `false`
