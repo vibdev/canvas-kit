@@ -35,14 +35,14 @@
   },
   "dependencies": {
     "@workday/canvas-kit-react-core": "1.2.3",
-    "@workday/design-assets-types": "^0.2.0",
+    "@workday/design-assets-types": "^0.2.1",
     "emotion": "^9.2.6",
     "react-emotion": "^9.2.6"
   },
   "devDependencies": {
-    "@workday/canvas-accent-icons-web": "^0.16.8",
-    "@workday/canvas-applet-icons-web": "^0.17.7",
-    "@workday/canvas-graphics-web": "^0.16.20",
-    "@workday/canvas-system-icons-web": "^0.16.7"
+    "@workday/canvas-accent-icons-web": "^0.16.31",
+    "@workday/canvas-applet-icons-web": "^0.17.32",
+    "@workday/canvas-graphics-web": "^0.16.31",
+    "@workday/canvas-system-icons-web": "^0.16.25"
   }
 }
