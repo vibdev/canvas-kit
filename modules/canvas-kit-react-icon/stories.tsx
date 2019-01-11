@@ -11,16 +11,14 @@ import {
   emptyStateCheckmarkCircleGraphic,
 } from '@workday/canvas-graphics-web';
 
-import {AccentIcon, AppletIcon, SystemIcon} from './index';
+import {AccentIcon, AppletIcon, SystemIcon, Graphic} from './index';
 import README from './README.md';
-import Graphic from './lib/Graphic';
 
 storiesOf('Canvas Kit/Icon', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Accent Icon', () => (
     <div className="story">
-      <h1 className="section-label">Icon</h1>
-      <h2>Accent Icon</h2>
+      <h1 className="section-label">Accent Icon</h1>
       <AccentIcon icon={shieldIcon} />
       <AccentIcon icon={shieldIcon} color={colors.pomegranate500} />
       <span
@@ -34,14 +32,20 @@ storiesOf('Canvas Kit/Icon', module)
       </span>
       <br />
       <AccentIcon icon={shieldIcon} size={80} />
-
-      <h2>Applet Icon</h2>
+    </div>
+  ))
+  .add('Applet Icon', () => (
+    <div className="story">
+      <h1 className="section-label">Applet Icon</h1>
       <AppletIcon icon={benefitsIcon} />
       <AppletIcon icon={benefitsIcon} color={AppletIcon.Colors.Pomegranate} />
       <br />
       <AppletIcon icon={benefitsIcon} size={60} />
-
-      <h2>System Icon</h2>
+    </div>
+  ))
+  .add('System Icon', () => (
+    <div className="story">
+      <h1 className="section-label">System Icon</h1>
       <SystemIcon icon={activityStreamIcon} />
       <SystemIcon icon={activityStreamIcon} color={colors.blueberry500} />
       <SystemIcon
@@ -53,11 +57,17 @@ storiesOf('Canvas Kit/Icon', module)
       />
       <br />
       <SystemIcon icon={activityStreamIcon} size={48} />
-
-      <h2>Graphic</h2>
+    </div>
+  ))
+  .add('Graphic', () => (
+    <div className="story">
+      <h1 className="section-label">Graphic</h1>
       <Graphic src={badgeAchievementGraphic} />
       <Graphic src={badgeAchievementGraphic} width={80} />
       <br />
       <Graphic src={emptyStateCheckmarkCircleGraphic} />
+      <div style={{width: 500}}>
+        <Graphic src={emptyStateCheckmarkCircleGraphic} grow={true} />
+      </div>
     </div>
   ));
