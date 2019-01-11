@@ -43,6 +43,7 @@
     "@workday/canvas-kit-react-header": "0.1.15",
     "@workday/canvas-kit-react-icon": "1.4.1",
     "@workday/canvas-kit-react-page-header": "0.1.7",
-    "@workday/canvas-kit-react-table": "1.0.1"
+    "@workday/canvas-kit-react-table": "1.0.1",
+    "@workday/canvas-kit-react-toggle": "0.0.1"
   }
 }
