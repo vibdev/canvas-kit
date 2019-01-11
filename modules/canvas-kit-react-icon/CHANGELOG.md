@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.3.3...@workday/canvas-kit-react-icon@1.4.0) (2019-01-11)
+
+
+### Bug Fixes
+
+* **Graphic:** remove height styling for grow ([0aed77e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/0aed77e))
+
+
+### Features
+
+* **Graphic:** add grow attribute ([aa5d628](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/aa5d628))
+
+
+
+
 <a name="1.3.3"></a>
 ## [1.3.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.3.2...@workday/canvas-kit-react-icon@1.3.3) (2019-01-10)
 
