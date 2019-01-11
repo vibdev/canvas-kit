@@ -19,10 +19,10 @@ yarn add @workday/canvas-kit-react-toggle
 ## Usage
 
 ```tsx
-import * as React from 'react'
-import { Toggle } @workday/canvas-kit-react-toggle;
+import * as React from 'react';
+import {Toggle} from '@workday/canvas-kit-react-toggle';
 
-<Toggle disabled={false} checked={checked} onChange={this.handleCheck} />
+<Toggle disabled={false} checked={checked} onChange={this.handleCheck} />;
 ```
 
 ## Static Properties
@@ -57,15 +57,11 @@ Default: `false`
 
 > The HTML attribute `id` for the underlying input checkbox component.
 
-Default: `undefined`
-
 ---
 
 #### `onChange: (e: React.SyntheticEvent<HTMLInputElement>) => void`
 
 > A callback that gets called everytime the toggle checked state changes.
-
-Default: `undefined`
 
 ---
 
@@ -73,13 +69,9 @@ Default: `undefined`
 
 > The `value` attribute of the input checkbox.
 
-Default: `undefined`
-
 ---
 
 #### `inputRef: React.Ref<HTMLInputElement>`
 
 > A ref to the underlying input checkbox element. Use this to imperatively toggle or focus this
 > component.
-
-Default: `undefined`
