@@ -10,7 +10,7 @@ import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
 import {Button} from '@workday/canvas-kit-react-button';
-import * as chroma from 'chroma-js';
+import chroma from 'chroma-js';
 import README from './README.md';
 import bgImg from './static/workday-bg.jpg';
 

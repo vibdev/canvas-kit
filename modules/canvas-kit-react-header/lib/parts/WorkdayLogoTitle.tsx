@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {wdayLogoWhite, wdayLogoBlue} from './_brand-assets'; // TODO: Replace with real SVGs from @workday/brand-assets
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import * as chroma from 'chroma-js';
+import chroma from 'chroma-js';
 
 export type WorkdayLogoTitleProps = {
   /**
