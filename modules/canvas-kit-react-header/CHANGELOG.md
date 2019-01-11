@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.13"></a>
+## [0.1.13](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.12...@workday/canvas-kit-react-header@0.1.13) (2019-01-11)
+
+
+### Bug Fixes
+
+* **header:** use correct import statement for chroma cjs module ([b4040b9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/b4040b9))
+
+
+
+
 <a name="0.1.12"></a>
 ## [0.1.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.11...@workday/canvas-kit-react-header@0.1.12) (2019-01-10)
 
