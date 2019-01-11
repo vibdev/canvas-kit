@@ -7,6 +7,7 @@ module.exports = {
     '**/canvas-kit-react-card/**/*.{tsx}',
     '**/canvas-kit-react-cookie-banner/**/*.{tsx}',
     '**/canvas-kit-react-table/**/*.{tsx}',
+    '**/canvas-kit-react-toggle/**/*.{tsx}',
     '**/canvas-kit-react-page-header/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
     '**/canvas-kit-react-icon/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
     '**/canvas-kit-react-button/**/*.{tsx}', // Needs to be changed as we add unit tests to other modules
