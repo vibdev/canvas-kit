@@ -290,6 +290,6 @@ Default: `height of graphic`
 
 #### `grow: boolean`
 
-> Expand graphic to fit container.
+> Expand graphic to fit container. `grow` takes precedence over both `width` and `height`.
 
 Default: `false`
