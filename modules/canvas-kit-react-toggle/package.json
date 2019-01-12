@@ -1,9 +1,8 @@
 {
   "name": "@workday/canvas-kit-react-toggle",
   "version": "0.0.1",
-  "description": "",
+  "description": "A Canvas-styled toggle switch",
   "homepage": "https://workdaydesign.com",
-  "author": "Manuel Carrera & Justin Olson",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -32,5 +31,11 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-react-common": "0.0.12",
+    "@workday/canvas-kit-react-core": "1.2.3",
+    "emotion": "^9.2.12",
+    "react-emotion": "^9.2.12"
   }
 }
