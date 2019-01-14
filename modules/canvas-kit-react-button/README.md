@@ -1,6 +1,6 @@
 # Canvas Kit Button
 
-> Clickable button elements that extend the native `<button>` element with Canvas styling.
+Clickable button elements that extend the native `<button>` element with Canvas styling.
 
 ## Installation
 
