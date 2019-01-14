@@ -286,7 +286,8 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -298,7 +299,8 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -316,7 +318,10 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -326,7 +331,8 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -342,7 +348,11 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -424,7 +434,8 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -436,7 +447,8 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -454,7 +466,10 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -464,7 +479,8 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -480,7 +496,11 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -584,7 +604,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -596,7 +617,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -614,7 +636,10 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -624,7 +649,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -640,7 +666,11 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -779,7 +809,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -791,7 +822,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -809,7 +841,10 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -819,7 +854,8 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -835,7 +871,11 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -996,7 +1036,8 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -1012,7 +1053,8 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -1030,7 +1072,10 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1040,7 +1085,8 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1056,7 +1102,11 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -1155,7 +1205,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -1171,7 +1222,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
   color: #333333;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -1189,7 +1241,10 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1199,7 +1254,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
   color: #333333;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1215,7 +1271,11 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -1347,7 +1407,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -1363,7 +1424,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
   color: #333333;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -1381,7 +1443,10 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1391,7 +1456,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
   color: #333333;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1407,7 +1473,11 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -1563,7 +1633,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -1579,7 +1650,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
   color: #333333;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -1597,7 +1669,10 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1607,7 +1682,8 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
   color: #333333;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -1623,7 +1699,11 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -1834,7 +1914,8 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -1846,7 +1927,8 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -1864,7 +1946,10 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -1874,7 +1959,8 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -1890,7 +1976,11 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2066,7 +2156,8 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -2082,7 +2173,8 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -2100,7 +2192,10 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -2110,7 +2205,8 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -2126,7 +2222,11 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -2275,7 +2375,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
@@ -2287,7 +2388,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
   color: #005cb9;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2305,7 +2407,10 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2315,7 +2420,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2331,7 +2437,11 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -2487,7 +2597,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
@@ -2499,7 +2610,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
   color: #005cb9;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2517,7 +2629,10 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2527,7 +2642,8 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
   color: #005cb9;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -2543,7 +2659,11 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -2642,7 +2762,8 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -2654,7 +2775,8 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2672,7 +2794,10 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2682,7 +2807,8 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2698,7 +2824,11 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -2797,7 +2927,8 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -2809,7 +2940,8 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2827,7 +2959,10 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2837,7 +2972,8 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -2853,7 +2989,11 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -2985,7 +3125,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -2997,7 +3138,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3015,7 +3157,10 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3025,7 +3170,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3041,7 +3187,11 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -3197,7 +3347,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -3209,7 +3360,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3227,7 +3379,10 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3237,7 +3392,8 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3253,7 +3409,11 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -3352,7 +3512,8 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -3364,7 +3525,8 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3382,7 +3544,10 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3392,7 +3557,8 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3408,7 +3574,11 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -3507,7 +3677,8 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -3519,7 +3690,8 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3537,7 +3709,10 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3547,7 +3722,8 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3563,7 +3739,11 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -3695,7 +3875,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -3707,7 +3888,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3725,7 +3907,10 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3735,7 +3920,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3751,7 +3937,11 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -3907,7 +4097,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -3919,7 +4110,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3937,7 +4129,10 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3947,7 +4142,8 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -3963,7 +4159,11 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -4062,7 +4262,8 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -4078,7 +4279,8 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4102,7 +4304,10 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4118,7 +4323,8 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4134,7 +4340,11 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -4240,7 +4450,8 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -4256,7 +4467,8 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
   color: #5e6a75;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4280,7 +4492,10 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4296,7 +4511,8 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
   color: #5e6a75;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4312,7 +4528,11 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -4451,7 +4671,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -4467,7 +4688,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
   color: #5e6a75;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4491,7 +4713,10 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4507,7 +4732,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
   color: #5e6a75;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4523,7 +4749,11 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -4686,7 +4916,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -4702,7 +4933,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
   color: #5e6a75;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4726,7 +4958,10 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4742,7 +4977,8 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
   color: #5e6a75;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -4758,7 +4994,11 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -5078,7 +5318,8 @@ exports[`Button Snapshots renders a large, text all caps button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5089,7 +5330,8 @@ exports[`Button Snapshots renders a large, text all caps button 1`] = `
   color: #0875e1;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5103,7 +5345,10 @@ exports[`Button Snapshots renders a large, text all caps button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5112,7 +5357,8 @@ exports[`Button Snapshots renders a large, text all caps button 1`] = `
   color: #005cb9;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5128,7 +5374,11 @@ exports[`Button Snapshots renders a large, text all caps button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -5264,7 +5514,8 @@ exports[`Button Snapshots renders a large, text all caps button with a left icon
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5275,7 +5526,8 @@ exports[`Button Snapshots renders a large, text all caps button with a left icon
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5289,7 +5541,10 @@ exports[`Button Snapshots renders a large, text all caps button with a left icon
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5298,7 +5553,8 @@ exports[`Button Snapshots renders a large, text all caps button with a left icon
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5314,7 +5570,11 @@ exports[`Button Snapshots renders a large, text all caps button with a left icon
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -5462,7 +5722,8 @@ exports[`Button Snapshots renders a large, text all caps button with a right ico
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5473,7 +5734,8 @@ exports[`Button Snapshots renders a large, text all caps button with a right ico
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5487,7 +5749,10 @@ exports[`Button Snapshots renders a large, text all caps button with a right ico
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5496,7 +5761,8 @@ exports[`Button Snapshots renders a large, text all caps button with a right ico
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5512,7 +5778,11 @@ exports[`Button Snapshots renders a large, text all caps button with a right ico
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -5613,7 +5883,8 @@ exports[`Button Snapshots renders a large, text button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5624,7 +5895,8 @@ exports[`Button Snapshots renders a large, text button 1`] = `
   color: #0875e1;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5638,7 +5910,10 @@ exports[`Button Snapshots renders a large, text button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5647,7 +5922,8 @@ exports[`Button Snapshots renders a large, text button 1`] = `
   color: #005cb9;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5663,7 +5939,11 @@ exports[`Button Snapshots renders a large, text button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -5782,7 +6062,8 @@ exports[`Button Snapshots renders a large, text button with a left icon 1`] = `
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5793,7 +6074,8 @@ exports[`Button Snapshots renders a large, text button with a left icon 1`] = `
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5807,7 +6089,10 @@ exports[`Button Snapshots renders a large, text button with a left icon 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5816,7 +6101,8 @@ exports[`Button Snapshots renders a large, text button with a left icon 1`] = `
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -5832,7 +6118,11 @@ exports[`Button Snapshots renders a large, text button with a left icon 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -5972,7 +6262,8 @@ exports[`Button Snapshots renders a large, text button with a right icon 1`] = 
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -5983,7 +6274,8 @@ exports[`Button Snapshots renders a large, text button with a right icon 1`] = 
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -5997,7 +6289,10 @@ exports[`Button Snapshots renders a large, text button with a right icon 1`] = 
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -6006,7 +6301,8 @@ exports[`Button Snapshots renders a large, text button with a right icon 1`] = 
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -6022,7 +6318,11 @@ exports[`Button Snapshots renders a large, text button with a right icon 1`] = 
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -6151,7 +6451,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -6162,7 +6463,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   color: #333d47;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -6176,7 +6478,10 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -6184,7 +6489,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   border-color: transparent;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -6200,7 +6506,11 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -6336,7 +6646,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a left
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -6347,7 +6658,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a left
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -6361,7 +6673,10 @@ exports[`Button Snapshots renders a large, text dark all caps button with a left
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -6369,7 +6684,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a left
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -6385,7 +6701,11 @@ exports[`Button Snapshots renders a large, text dark all caps button with a left
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -6533,7 +6853,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a righ
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -6544,7 +6865,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a righ
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -6558,7 +6880,10 @@ exports[`Button Snapshots renders a large, text dark all caps button with a righ
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -6566,7 +6891,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a righ
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -6582,7 +6908,11 @@ exports[`Button Snapshots renders a large, text dark all caps button with a righ
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -6676,7 +7006,8 @@ exports[`Button Snapshots renders a large, text dark button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -6687,7 +7018,8 @@ exports[`Button Snapshots renders a large, text dark button 1`] = `
   color: #333d47;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -6701,7 +7033,10 @@ exports[`Button Snapshots renders a large, text dark button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -6709,7 +7044,8 @@ exports[`Button Snapshots renders a large, text dark button 1`] = `
   border-color: transparent;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -6725,7 +7061,11 @@ exports[`Button Snapshots renders a large, text dark button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -6853,7 +7193,8 @@ exports[`Button Snapshots renders a large, text dark button with a left icon 1`]
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -6864,7 +7205,8 @@ exports[`Button Snapshots renders a large, text dark button with a left icon 1`]
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -6878,7 +7220,10 @@ exports[`Button Snapshots renders a large, text dark button with a left icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -6886,7 +7231,8 @@ exports[`Button Snapshots renders a large, text dark button with a left icon 1`]
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -6902,7 +7248,11 @@ exports[`Button Snapshots renders a large, text dark button with a left icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -7042,7 +7392,8 @@ exports[`Button Snapshots renders a large, text dark button with a right icon 1`
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7053,7 +7404,8 @@ exports[`Button Snapshots renders a large, text dark button with a right icon 1`
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -7067,7 +7419,10 @@ exports[`Button Snapshots renders a large, text dark button with a right icon 1`
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7075,7 +7430,8 @@ exports[`Button Snapshots renders a large, text dark button with a right icon 1`
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -7091,7 +7447,11 @@ exports[`Button Snapshots renders a large, text dark button with a right icon 1`
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -7193,7 +7553,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7204,7 +7565,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   color: #333d47;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -7218,7 +7580,10 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7226,7 +7591,8 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
   border-color: transparent;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -7242,7 +7608,11 @@ exports[`Button Snapshots renders a large, text dark all caps button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -7378,7 +7748,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a lef
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7389,7 +7760,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a lef
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -7403,7 +7775,10 @@ exports[`Button Snapshots renders a large, text dark all caps button with a lef
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7411,7 +7786,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a lef
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -7427,7 +7803,11 @@ exports[`Button Snapshots renders a large, text dark all caps button with a lef
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -7575,7 +7955,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a rig
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7586,7 +7967,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a rig
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -7600,7 +7982,10 @@ exports[`Button Snapshots renders a large, text dark all caps button with a rig
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7608,7 +7993,8 @@ exports[`Button Snapshots renders a large, text dark all caps button with a rig
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -7624,7 +8010,11 @@ exports[`Button Snapshots renders a large, text dark all caps button with a rig
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -7711,7 +8101,8 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7723,7 +8114,8 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7741,7 +8133,10 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7751,7 +8146,8 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7767,7 +8163,11 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7849,7 +8249,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -7861,7 +8262,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7879,7 +8281,10 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7889,7 +8294,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -7905,7 +8311,11 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8047,7 +8457,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -8059,7 +8470,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8077,7 +8489,10 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8087,7 +8502,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8103,7 +8519,11 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8242,7 +8662,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -8254,7 +8675,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8272,7 +8694,10 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8282,7 +8707,8 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8298,7 +8724,11 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -8423,7 +8853,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -8439,7 +8870,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -8457,7 +8889,10 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8467,7 +8902,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8483,7 +8919,11 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -8583,7 +9023,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -8599,7 +9040,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
   color: #333333;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -8617,7 +9059,10 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8627,7 +9072,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
   color: #333333;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8643,7 +9089,11 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -8775,7 +9225,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -8791,7 +9242,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
   color: #333333;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -8809,7 +9261,10 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8819,7 +9274,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
   color: #333333;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -8835,7 +9291,11 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -8992,7 +9452,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -9008,7 +9469,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
   color: #333333;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -9026,7 +9488,10 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -9036,7 +9501,8 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
   color: #333333;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -9052,7 +9518,11 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -9300,7 +9770,8 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -9312,7 +9783,8 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -9330,7 +9802,10 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -9340,7 +9815,8 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -9356,7 +9832,11 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -9495,7 +9975,8 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -9511,7 +9992,8 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
@@ -9529,7 +10011,10 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -9539,7 +10024,8 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
   color: #333333;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -9555,7 +10041,11 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -9702,7 +10192,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
@@ -9714,7 +10205,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
   color: #005cb9;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9732,7 +10224,10 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9742,7 +10237,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9758,7 +10254,11 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -9915,7 +10415,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
@@ -9927,7 +10428,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
   color: #005cb9;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9945,7 +10447,10 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9955,7 +10460,8 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
   color: #005cb9;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -9971,7 +10477,11 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10070,7 +10580,8 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -10082,7 +10593,8 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10100,7 +10612,10 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10110,7 +10625,8 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10126,7 +10642,11 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10226,7 +10746,8 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -10238,7 +10759,8 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10256,7 +10778,10 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10266,7 +10791,8 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10282,7 +10808,11 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10414,7 +10944,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -10426,7 +10957,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10444,7 +10976,10 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10454,7 +10989,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10470,7 +11006,11 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10627,7 +11167,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -10639,7 +11180,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10657,7 +11199,10 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10667,7 +11212,8 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10683,7 +11229,11 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10782,7 +11332,8 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -10794,7 +11345,8 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10812,7 +11364,10 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10822,7 +11377,8 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10838,7 +11394,11 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -10938,7 +11498,8 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -10950,7 +11511,8 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10968,7 +11530,10 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10978,7 +11543,8 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
   color: #ffffff;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -10994,7 +11560,11 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -11126,7 +11696,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -11138,7 +11709,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11156,7 +11728,10 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11166,7 +11741,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
   color: #ffffff;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11182,7 +11758,11 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -11339,7 +11919,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -11351,7 +11932,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11369,7 +11951,10 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11379,7 +11964,8 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
   color: #ffffff;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -11395,7 +11981,11 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -11494,7 +12084,8 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -11510,7 +12101,8 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11534,7 +12126,10 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11550,7 +12145,8 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11566,7 +12162,11 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -11673,7 +12273,8 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
   box-shadow: none;
 }
 
-.emotion-2 span .wd-icon-fill {
+.emotion-2 span .wd-icon-fill,
+.emotion-2 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -11689,7 +12290,8 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
   color: #5e6a75;
 }
 
-.emotion-2:focus span .wd-icon-fill {
+.emotion-2:focus span .wd-icon-fill,
+.emotion-2:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11713,7 +12315,10 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
 
 .emotion-2:active span .wd-icon-fill,
 .emotion-2:focus:active span .wd-icon-fill,
-.emotion-2:hover:active span .wd-icon-fill {
+.emotion-2:hover:active span .wd-icon-fill,
+.emotion-2:active span .wd-icon-accent,
+.emotion-2:focus:active span .wd-icon-accent,
+.emotion-2:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11729,7 +12334,8 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
   color: #5e6a75;
 }
 
-.emotion-2:hover span .wd-icon-fill {
+.emotion-2:hover span .wd-icon-fill,
+.emotion-2:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11745,7 +12351,11 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
 .emotion-2:disabled span .wd-icon-fill,
 .emotion-2:active:disabled span .wd-icon-fill,
 .emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill {
+.emotion-2:hover:disabled span .wd-icon-fill,
+.emotion-2:disabled span .wd-icon-accent,
+.emotion-2:active:disabled span .wd-icon-accent,
+.emotion-2:focus:disabled span .wd-icon-accent,
+.emotion-2:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -11884,7 +12494,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -11900,7 +12511,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
   color: #5e6a75;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11924,7 +12536,10 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11940,7 +12555,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
   color: #5e6a75;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -11956,7 +12572,11 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -12120,7 +12740,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -12136,7 +12757,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
   color: #5e6a75;
 }
 
-.emotion-4:focus span .wd-icon-fill {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -12160,7 +12782,10 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
 
 .emotion-4:active span .wd-icon-fill,
 .emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill {
+.emotion-4:hover:active span .wd-icon-fill,
+.emotion-4:active span .wd-icon-accent,
+.emotion-4:focus:active span .wd-icon-accent,
+.emotion-4:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -12176,7 +12801,8 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
   color: #5e6a75;
 }
 
-.emotion-4:hover span .wd-icon-fill {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -12192,7 +12818,11 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
 .emotion-4:disabled span .wd-icon-fill,
 .emotion-4:active:disabled span .wd-icon-fill,
 .emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill {
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -12522,7 +13152,8 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -12534,7 +13165,8 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12552,7 +13184,10 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12562,7 +13197,8 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12578,7 +13214,11 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12660,7 +13300,8 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -12672,7 +13313,8 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12690,7 +13332,10 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12700,7 +13345,8 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12716,7 +13362,11 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12910,7 +13560,8 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -12922,7 +13573,8 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12940,7 +13592,10 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12950,7 +13605,8 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -12966,7 +13622,11 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -13048,7 +13708,8 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
@@ -13060,7 +13721,8 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -13078,7 +13740,10 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -13088,7 +13753,8 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
   color: #ffffff;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -13104,7 +13770,11 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
@@ -13186,7 +13856,8 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
   box-shadow: none;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -13202,7 +13873,8 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -13226,7 +13898,10 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -13242,7 +13917,8 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
   color: #5e6a75;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -13258,7 +13934,11 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.75);
 }
 
@@ -13560,7 +14240,8 @@ exports[`Button Snapshots renders a small, text button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -13571,7 +14252,8 @@ exports[`Button Snapshots renders a small, text button 1`] = `
   color: #0875e1;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -13585,7 +14267,10 @@ exports[`Button Snapshots renders a small, text button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13594,7 +14279,8 @@ exports[`Button Snapshots renders a small, text button 1`] = `
   color: #005cb9;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13610,7 +14296,11 @@ exports[`Button Snapshots renders a small, text button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -13701,7 +14391,8 @@ exports[`Button Snapshots renders a small, text button with a left icon 1`] = `
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -13712,7 +14403,8 @@ exports[`Button Snapshots renders a small, text button with a left icon 1`] = `
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -13726,7 +14418,10 @@ exports[`Button Snapshots renders a small, text button with a left icon 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13735,7 +14430,8 @@ exports[`Button Snapshots renders a small, text button with a left icon 1`] = `
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13751,7 +14447,11 @@ exports[`Button Snapshots renders a small, text button with a left icon 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -13891,7 +14591,8 @@ exports[`Button Snapshots renders a small, text button with a right icon 1`] = `
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -13902,7 +14603,8 @@ exports[`Button Snapshots renders a small, text button with a right icon 1`] = `
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -13916,7 +14618,10 @@ exports[`Button Snapshots renders a small, text button with a right icon 1`] = `
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13925,7 +14630,8 @@ exports[`Button Snapshots renders a small, text button with a right icon 1`] = `
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -13941,7 +14647,11 @@ exports[`Button Snapshots renders a small, text button with a right icon 1`] = `
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -14073,7 +14783,8 @@ exports[`Button Snapshots renders a small, text button with all caps 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -14084,7 +14795,8 @@ exports[`Button Snapshots renders a small, text button with all caps 1`] = `
   color: #0875e1;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -14098,7 +14810,10 @@ exports[`Button Snapshots renders a small, text button with all caps 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14107,7 +14822,8 @@ exports[`Button Snapshots renders a small, text button with all caps 1`] = `
   color: #005cb9;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14123,7 +14839,11 @@ exports[`Button Snapshots renders a small, text button with all caps 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -14259,7 +14979,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a left
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -14270,7 +14991,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a left
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -14284,7 +15006,10 @@ exports[`Button Snapshots renders a small, text button with all caps with a left
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14293,7 +15018,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a left
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14309,7 +15035,11 @@ exports[`Button Snapshots renders a small, text button with all caps with a left
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -14457,7 +15187,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a righ
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
@@ -14468,7 +15199,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a righ
   color: #0875e1;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
@@ -14482,7 +15214,10 @@ exports[`Button Snapshots renders a small, text button with all caps with a righ
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14491,7 +15226,8 @@ exports[`Button Snapshots renders a small, text button with all caps with a righ
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
@@ -14507,7 +15243,11 @@ exports[`Button Snapshots renders a small, text button with all caps with a righ
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
@@ -14626,7 +15366,8 @@ exports[`Button Snapshots renders a small, text dark button 1`] = `
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -14637,7 +15378,8 @@ exports[`Button Snapshots renders a small, text dark button 1`] = `
   color: #333d47;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -14651,7 +15393,10 @@ exports[`Button Snapshots renders a small, text dark button 1`] = `
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -14659,7 +15404,8 @@ exports[`Button Snapshots renders a small, text dark button 1`] = `
   border-color: transparent;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -14675,7 +15421,11 @@ exports[`Button Snapshots renders a small, text dark button 1`] = `
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -14803,7 +15553,8 @@ exports[`Button Snapshots renders a small, text dark button with a left icon 1`]
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -14814,7 +15565,8 @@ exports[`Button Snapshots renders a small, text dark button with a left icon 1`]
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -14828,7 +15580,10 @@ exports[`Button Snapshots renders a small, text dark button with a left icon 1`]
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -14836,7 +15591,8 @@ exports[`Button Snapshots renders a small, text dark button with a left icon 1`]
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -14852,7 +15608,11 @@ exports[`Button Snapshots renders a small, text dark button with a left icon 1`]
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -14992,7 +15752,8 @@ exports[`Button Snapshots renders a small, text dark button with a right icon 1`
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -15003,7 +15764,8 @@ exports[`Button Snapshots renders a small, text dark button with a right icon 1`
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -15017,7 +15779,10 @@ exports[`Button Snapshots renders a small, text dark button with a right icon 1`
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -15025,7 +15790,8 @@ exports[`Button Snapshots renders a small, text dark button with a right icon 1`
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -15041,7 +15807,11 @@ exports[`Button Snapshots renders a small, text dark button with a right icon 1`
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -15143,7 +15913,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps 1`] = 
   text-decoration: underline;
 }
 
-.emotion-1 span .wd-icon-fill {
+.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -15154,7 +15925,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps 1`] = 
   color: #333d47;
 }
 
-.emotion-1:focus span .wd-icon-fill {
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -15168,7 +15940,10 @@ exports[`Button Snapshots renders a small, text dark button with all caps 1`] = 
 
 .emotion-1:active span .wd-icon-fill,
 .emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill {
+.emotion-1:hover:active span .wd-icon-fill,
+.emotion-1:active span .wd-icon-accent,
+.emotion-1:focus:active span .wd-icon-accent,
+.emotion-1:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -15176,7 +15951,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps 1`] = 
   border-color: transparent;
 }
 
-.emotion-1:hover span .wd-icon-fill {
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -15192,7 +15968,11 @@ exports[`Button Snapshots renders a small, text dark button with all caps 1`] = 
 .emotion-1:disabled span .wd-icon-fill,
 .emotion-1:active:disabled span .wd-icon-fill,
 .emotion-1:focus:disabled span .wd-icon-fill,
-.emotion-1:hover:disabled span .wd-icon-fill {
+.emotion-1:hover:disabled span .wd-icon-fill,
+.emotion-1:disabled span .wd-icon-accent,
+.emotion-1:active:disabled span .wd-icon-accent,
+.emotion-1:focus:disabled span .wd-icon-accent,
+.emotion-1:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -15328,7 +16108,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and le
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -15339,7 +16120,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and le
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -15353,7 +16135,10 @@ exports[`Button Snapshots renders a small, text dark button with all caps and le
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -15361,7 +16146,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and le
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -15377,7 +16163,11 @@ exports[`Button Snapshots renders a small, text dark button with all caps and le
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
@@ -15525,7 +16315,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and ri
   text-decoration: underline;
 }
 
-.emotion-3 span .wd-icon-fill {
+.emotion-3 span .wd-icon-fill,
+.emotion-3 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #ffffff;
@@ -15536,7 +16327,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and ri
   color: #333d47;
 }
 
-.emotion-3:focus span .wd-icon-fill {
+.emotion-3:focus span .wd-icon-fill,
+.emotion-3:focus span .wd-icon-accent {
   fill: #333d47;
 }
 
@@ -15550,7 +16342,10 @@ exports[`Button Snapshots renders a small, text dark button with all caps and ri
 
 .emotion-3:active span .wd-icon-fill,
 .emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill {
+.emotion-3:hover:active span .wd-icon-fill,
+.emotion-3:active span .wd-icon-accent,
+.emotion-3:focus:active span .wd-icon-accent,
+.emotion-3:hover:active span .wd-icon-accent {
   fill: #ffffff;
 }
 
@@ -15558,7 +16353,8 @@ exports[`Button Snapshots renders a small, text dark button with all caps and ri
   border-color: transparent;
 }
 
-.emotion-3:hover span .wd-icon-fill {
+.emotion-3:hover span .wd-icon-fill,
+.emotion-3:hover span .wd-icon-accent {
   fill: currentColor;
 }
 
@@ -15574,7 +16370,11 @@ exports[`Button Snapshots renders a small, text dark button with all caps and ri
 .emotion-3:disabled span .wd-icon-fill,
 .emotion-3:active:disabled span .wd-icon-fill,
 .emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill {
+.emotion-3:hover:disabled span .wd-icon-fill,
+.emotion-3:disabled span .wd-icon-accent,
+.emotion-3:active:disabled span .wd-icon-accent,
+.emotion-3:focus:disabled span .wd-icon-accent,
+.emotion-3:hover:disabled span .wd-icon-accent {
   fill: rgba(255,255,255,0.5);
 }
 
