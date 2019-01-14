@@ -4,6 +4,8 @@ By default, no fonts are included with Canvas Kit modules. To use official Canva
 and import the `@workday/canvas-kit-react-fonts` module. Note that this module sources fonts from
 the Workday CDN.
 
+## Installation
+
 ```sh
 yarn add @workday/canvas-kit-react-fonts
 ```
@@ -21,7 +23,7 @@ yarn add emotion
 
 Then in your index or main file of your project...
 
-```jsx
+```tsx
 import {injectGlobal} from 'emotion';
 import fonts from '@workday/canvas-kit-react-fonts';
 
@@ -35,7 +37,7 @@ same module.
 
 Examples:
 
-```jsx
+```tsx
 import {css} from 'react-emotion';
 import {type} from '@workday/canvas-kit-react-core';
 
@@ -49,7 +51,7 @@ render(
 
 or
 
-```jsx
+```tsx
 import styled from 'react-emotion';
 import {fontFamily, monoFontFamily} from '@workday/canvas-kit-react-core';
 

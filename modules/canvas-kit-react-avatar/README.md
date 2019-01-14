@@ -1,6 +1,18 @@
 # Canvas Kit Avatar
 
-> A component showing a user's photo with a circular crop.
+A component showing a user's photo with a circular crop.
+
+## Installation
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-avatar
+```
 
 ## Usage
 
@@ -27,7 +39,6 @@ import {Avatar, AvatarTheme, AvatarSize} from '@workday/canvas-kit-react-avatar'
 #### `ThemeColor: AvatarTheme`
 
 ```tsx
-// Example
 <Avatar themeColor={Avatar.ThemeColor.Dark} />
 ```
 
@@ -35,8 +46,7 @@ import {Avatar, AvatarTheme, AvatarSize} from '@workday/canvas-kit-react-avatar'
 
 #### `Size: AvatarSize | number`
 
-```jsx
-// Example
+```tsx
 <Avatar size={Avatar.Size.xs} />
 
 // Custom Size.
@@ -52,48 +62,48 @@ import {Avatar, AvatarTheme, AvatarSize} from '@workday/canvas-kit-react-avatar'
 
 ### Optional
 
-#### `themeColor: AvatarTheme` _(optional)_
+#### `themeColor: AvatarTheme`
 
 > The theme of the avatar if using a default image.
 
 Default: `AvatarTheme.Light`
 
-| Theme               | Description                      |
-| ------------------- | -------------------------------- |
-| `AvatarTheme.Light` | Light grey background, dark icon |
-| `AvatarTheme.Dark`  | Dark blue background, white icon |
+| Theme   | Description                      |
+| ------- | -------------------------------- |
+| `Light` | Light grey background, dark icon |
+| `Dark`  | Dark blue background, white icon |
 
 ---
 
-#### `size: AvatarSize` _(optional)_
+#### `size: AvatarSize`
 
 > The diameter of the avatar in pixels
 
 Default: `AvatarSize.m`
 
-| Variable | Size (px) |
-| -------- | --------- |
-| `xs`     | 16        |
-| `s`      | 24        |
-| `m`      | 32        |
-| `l`      | 40        |
-| `xl`     | 64        |
-| `xxl`    | 120       |
+| Name  | Size (px) |
+| ----- | --------- |
+| `xs`  | 16        |
+| `s`   | 24        |
+| `m`   | 32        |
+| `l`   | 40        |
+| `xl`  | 64        |
+| `xxl` | 120       |
 
 ---
 
-#### `url: string` _(optional)_
+#### `url: string`
 
 > The URL of the user's photo. Expects a square (1:1) photo.
 
 ---
 
-#### `buttonRef: React.Ref<HTMLButtonElement>` _(optional)_
+#### `buttonRef: React.Ref<HTMLButtonElement>`
 
 > A ref to the underlying `<button>` element.
 
 ---
 
-#### `onClick: (React.SyntheticEvent) => void` _(optional)_
+#### `onClick: (React.SyntheticEvent) => void`
 
 > A `click` event handler for this component.

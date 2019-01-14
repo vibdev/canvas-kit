@@ -2,39 +2,53 @@
 
 Full width toolbar fixed to bottom of screen.
 
+Although not required, [buttons](../canvas-kit-react-button) are often used in floating action
+toolbars. The primary action button should be left aligned followed by secondary buttons. The
+primary button is on the right only in task orchestration and on mobile devices.
+
+## Installation
+
+```sh
+yarn add @workday/canvas-kit-react
+```
+
+or
+
+```sh
+yarn add @workday/canvas-kit-react-fat
+```
+
 ## Usage
 
-### Floating Action Toolbar
-
-The toolbar can assume any `<div>` props.
-
-Although not required, [buttons](../canvas-kit-react-button) are often used in floating action
-toolbars.
-
-> The primary action button should be left aligned followed by secondary buttons. The primary button
-> is on the right only in task orchestration.
-
-```jsx
-import { FloatingActionToolbar } from '@workday/canvas-kit-react-fat'
+```tsx
+import * as React from 'react';
+import {Button} from '@workday/canvas-kit-react-button';
+import {FloatingActionToolbar} from '@workday/canvas-kit-react-fat';
 
 <FloatingActionToolbar>
   <Button buttonType={ButtonTypes.Primary}>Button</Button>
   <Button>Button</Button>
   <Button>Button</Button>
-</FloatingActionToolbar>
+</FloatingActionToolbar>;
 ```
 
-#### Fixed Positioning
+## Static Properties
 
-Add the `fixed` property to fix the toolbar to the bottom of the container.
+> None
 
-```jsx
-<FloatingActionToolbar fixed>
-  <Button>Button</Button>
-</FloatingActionToolbar>
-```
+## Component Props
 
-#### Responsive
+### Required
+
+> None
+
+### Optional
+
+#### `fixed: boolean`
+
+> Fixes the toolbar to the bottom of the window (uses `position: fixed`)
+
+## Responsive Behavior
 
 At 575px, responsive styles will take effect:
 

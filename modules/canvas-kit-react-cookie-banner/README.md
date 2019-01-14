@@ -1,8 +1,8 @@
 # Canvas Kit Cookie Banner
 
-> Cookie banner component.
+Cookie banner component.
 
-## Install
+## Installation
 
 ```sh
 yarn add @workday/canvas-kit-react
@@ -81,12 +81,16 @@ import CookieBanner from '@workday/canvas-kit-react-cookie-banner'
 
 Default: `false`
 
+---
+
 #### `onClickSettings: (e: React.MouseEvent<HTMLButtonElement>) => void`
 
 > Callback executed upon clicking the "Cookie Settings" button. Adding this will automatically
 > display the "Cookie Settings" button.
 
 Default: `undefined`
+
+---
 
 #### `notice: React.ReactNode`
 

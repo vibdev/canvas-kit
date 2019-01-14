@@ -43,6 +43,11 @@ This will start the unit tests and run code coverage.
 If you know you've made a breaking visual change, use this command to update your snapshot tests.
 This will add files to your workspace that you'll need to commit.
 
+## [Contributing](CONTRIBUTING.md)
+
+Want to contribute to Canvas Kit React? Please read our [contributing guidelines](CONTRIBUTING.md)
+to get started
+
 ## Code Style Guide
 
 This project follows UIC's
