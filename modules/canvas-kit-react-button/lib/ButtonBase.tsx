@@ -53,6 +53,10 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
       case ButtonTypes.TextAllCaps:
       case ButtonTypes.TextDarkAllCaps:
         return types.textAllCaps;
+      case ButtonTypes.Primary:
+      case ButtonTypes.Secondary:
+      case ButtonTypes.Delete:
+        return types.canvas;
       default:
         return {};
     }

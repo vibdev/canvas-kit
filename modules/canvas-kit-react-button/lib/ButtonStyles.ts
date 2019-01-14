@@ -32,6 +32,11 @@ export const labelBaseStyles: GenericStyle = {
         ...getTextUppercase(),
         padding: '0',
       },
+      canvas: {
+        fontWeight: 'inherit',
+        fontSize: 'inherit',
+        padding: '0',
+      },
     },
     sizes: {
       large: {
@@ -132,6 +137,7 @@ export const canvasButtonStyles: GenericStyle = {
         minWidth: '112px',
         maxWidth: '288px',
         fontSize: '14px',
+        fontWeight: 500,
       },
       medium: {
         height: `${CANVAS_BUTTON_HEIGHT_MEDIUM}px`,
@@ -139,6 +145,7 @@ export const canvasButtonStyles: GenericStyle = {
         minWidth: '80px',
         maxWidth: '200px',
         fontSize: '13px',
+        fontWeight: 500,
       },
       small: {
         height: `${CANVAS_BUTTON_HEIGHT_SMALL}px`,
@@ -146,6 +153,7 @@ export const canvasButtonStyles: GenericStyle = {
         minWidth: '56px',
         maxWidth: '120px',
         fontSize: '10px',
+        fontWeight: 500,
       },
     },
   },
@@ -205,8 +213,8 @@ export const dropdownButtonStyles: GenericStyle = {
   },
   variants: {
     types: {
-      primary: udeButtonStyles.variants!.types.udePrimary,
-      secondary: udeButtonStyles.variants!.types.udeSecondary,
+      udePrimary: udeButtonStyles.variants!.types.udePrimary,
+      udeSecondary: udeButtonStyles.variants!.types.udeSecondary,
     },
     sizes: {
       large: udeButtonStyles.variants!.sizes.large,

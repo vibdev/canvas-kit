@@ -633,46 +633,46 @@ storiesOf('Canvas Kit/Button', module)
     <div className="story">
       <h1 className="section-label">Dropdown Buttons</h1>
       <h3>Large Dropdown Buttons</h3>
-      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
+      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
         Dropdown Button
       </DropdownButton>
-      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
+      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
         Dropdown Button
       </DropdownButton>
       <br />
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.Primary}
+        buttonType={Button.Types.UdePrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.Secondary}
+        buttonType={Button.Types.UdeSecondary}
       >
         Dropdown Button
       </DropdownButton>
       <h3>Medium Dropdown Buttons</h3>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
         Dropdown Button
       </DropdownButton>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
+      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
         Dropdown Button
       </DropdownButton>
       <br />
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.Primary}
+        buttonType={Button.Types.UdePrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.Secondary}
+        buttonType={Button.Types.UdeSecondary}
       >
         Dropdown Button
       </DropdownButton>
