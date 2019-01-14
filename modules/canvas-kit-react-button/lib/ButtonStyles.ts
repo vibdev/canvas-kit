@@ -292,7 +292,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     borderColor: buttonColors.border,
     color: buttonColors.text,
     ...(buttonColors.labelIcon && {
-      'span .wd-icon-fill': {
+      'span .wd-icon-fill, span .wd-icon-accent': {
         transition: 'fill 120ms ease-in',
         fill: buttonColors.labelIcon,
       },
@@ -310,7 +310,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
         ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataFocus},
       }),
       ...(buttonColors.labelIconFocus && {
-        'span .wd-icon-fill': {fill: buttonColors.labelIconFocus},
+        'span .wd-icon-fill, span .wd-icon-accent': {fill: buttonColors.labelIconFocus},
       }),
     },
     ':hover:focus': {
@@ -324,7 +324,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
         ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataActive},
       }),
       ...(buttonColors.labelIconActive && {
-        'span .wd-icon-fill': {fill: buttonColors.labelIconActive},
+        'span .wd-icon-fill, span .wd-icon-accent': {fill: buttonColors.labelIconActive},
       }),
     },
     ':hover': {
@@ -338,7 +338,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
         },
       }),
       ...(buttonColors.labelIconHover && {
-        'span .wd-icon-fill': {fill: buttonColors.labelIconHover},
+        'span .wd-icon-fill, span .wd-icon-accent': {fill: buttonColors.labelIconHover},
       }),
     },
     ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
@@ -346,7 +346,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
       borderColor: buttonColors.disabledBorder,
       color: buttonColors.disabledText,
       ...(buttonColors.labelIconDisabled && {
-        'span .wd-icon-fill': {fill: buttonColors.labelIconDisabled},
+        'span .wd-icon-fill, span .wd-icon-accent': {fill: buttonColors.labelIconDisabled},
       }),
       ...(buttonColors.labelDataDisabled && {
         ['.' + labelDataBaseStyles.classname]: {color: buttonColors.labelDataDisabled},

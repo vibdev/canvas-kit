@@ -3,7 +3,12 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {editIcon, mediaPlayIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
+import {
+  editIcon,
+  mediaPlayIcon,
+  arrowRightIcon,
+  activityStreamIcon,
+} from '@workday/canvas-system-icons-web';
 
 import {Button, IconButton, DropdownButton, TextButton} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -105,13 +110,17 @@ storiesOf('Canvas Kit/Button', module)
         Secondary
       </Button>
       <br />
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdePrimary}
+        icon={activityStreamIcon}
+      >
         Primary
       </Button>
       <Button
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.UdeSecondary}
-        icon={editIcon}
+        icon={activityStreamIcon}
       >
         Secondary
       </Button>
@@ -229,7 +238,7 @@ storiesOf('Canvas Kit/Button', module)
     <div className="story">
       <h1 className="section-label">Highlight Buttons</h1>
       <h3>Large Highlight Buttons</h3>
-      <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon}>
+      <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon}>
         Highlight
       </Button>
       <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon} dataLabel={'2:00'}>
@@ -293,14 +302,14 @@ storiesOf('Canvas Kit/Button', module)
         <Button
           buttonSize={Button.Sizes.Large}
           buttonType={Button.Types.OutlineBlue}
-          icon={editIcon}
+          icon={activityStreamIcon}
         >
           Outline Blue
         </Button>
         <Button
           buttonSize={Button.Sizes.Large}
           buttonType={Button.Types.OutlineDark}
-          icon={editIcon}
+          icon={activityStreamIcon}
         >
           Outline Dark
         </Button>
@@ -308,7 +317,7 @@ storiesOf('Canvas Kit/Button', module)
           <Button
             buttonSize={Button.Sizes.Large}
             buttonType={Button.Types.OutlineWhite}
-            icon={editIcon}
+            icon={activityStreamIcon}
           >
             Outline White
           </Button>
@@ -564,7 +573,7 @@ storiesOf('Canvas Kit/Button', module)
       </div>
       <div className={css(outlineWhiteBackground)}>
         <TextButton
-          icon={editIcon}
+          icon={activityStreamIcon}
           iconPosition={TextButton.IconPositions.Left}
           buttonType={Button.Types.TextDark}
         >
