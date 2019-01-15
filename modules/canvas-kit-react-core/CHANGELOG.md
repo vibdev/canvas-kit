@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.5"></a>
+## [1.2.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.2.4...@workday/canvas-kit-react-core@1.2.5) (2019-01-15)
+
+
+### Bug Fixes
+
+* **kit-core:** Add in missing caret ([eb181db](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/eb181db))
+
+
+
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.2.3...@workday/canvas-kit-react-core@1.2.4) (2019-01-14)
 
