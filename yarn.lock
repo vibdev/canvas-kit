@@ -450,7 +450,7 @@
 
 "@workday/canvas-colors-web@^0.17.0":
   version "0.17.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.0.tgz#da46cf6e0caef1af465f0dbbf8e2ed446829c4a9"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.0.tgz#da46cf6e0caef1af465f0dbbf8e2ed446829c4a9"
   integrity sha1-2kbPbgyu8a9GXw27+OLtRGgpxKk=
 
 "@workday/canvas-depth-web@^0.12.1":
