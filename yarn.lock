@@ -343,13 +343,6 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/chroma-js/-/chroma-js-1.4.0.tgz#1d215474b54e227bd0204572c0483b98593eabd0"
   integrity sha1-HSFUdLVOInvQIEVywEg7mFk+q9A=
 
-"@types/depd@^1.1.32":
-  version "1.1.32"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/depd/-/depd-1.1.32.tgz#7937f66870d0cd7a9881152e4eb02c8c43298f11"
-  integrity sha1-eTf2aHDQzXqYgRUuTrAsjEMpjxE=
-  dependencies:
-    "@types/node" "*"
-
 "@types/enzyme-adapter-react-16@^1.0.3":
   version "1.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.3.tgz#0cf7025b036694ca8d596fe38f24162e7117acf1"
@@ -450,18 +443,15 @@
   dependencies:
     "@workday/design-assets-types" "0.2.1"
 
+"@workday/canvas-colors-web@0.17.0":
+  version "0.17.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.0.tgz#da46cf6e0caef1af465f0dbbf8e2ed446829c4a9"
+  integrity sha1-2kbPbgyu8a9GXw27+OLtRGgpxKk=
+
 "@workday/canvas-colors-web@^0.12.4":
   version "0.12.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
   integrity sha1-hTIeql0/I00kMNyz5Fv30vCfVtA=
-
-"@workday/canvas-colors-web@^0.15.4":
-  version "0.15.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.15.4.tgz#6bb91eebe2385ba8541b4648d1e5bb400c709b81"
-  integrity sha1-a7ke6+I4W6hUG0ZI0eW7QAxwm4E=
-  dependencies:
-    "@types/depd" "^1.1.32"
-    depd "^1.1.2"
 
 "@workday/canvas-depth-web@^0.12.1":
   version "0.12.2"
@@ -3711,7 +3701,7 @@ depd@1.1.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/depd/-/depd-1.1.1.tgz#5783b4e1c459f06fa5ca27f991f3d06e7a310359"
   integrity sha1-V4O04cRZ8G+lyif5kfPQbnoxA1k=
 
-depd@^1.1.2, depd@~1.1.1, depd@~1.1.2:
+depd@~1.1.1, depd@~1.1.2:
   version "1.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
