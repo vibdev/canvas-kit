@@ -66,13 +66,26 @@ const Container = styled('button')<AvatarProps>(
       : themeColor === AvatarTheme.Dark
         ? colors.blueberry400
         : colors.soap300,
-    '&:not([disabled])': {
-      '&:focus': {
-        outline: 'none',
-        ...(themeColor === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
-      },
-    },
-  })
+  }),
+  ({theme, themeColor}) => {
+    console.log(theme);
+    if (theme.display === 'keyboard') {
+      return {
+        '&:not([disabled])': {
+          '&:focus': {
+            outline: 'none',
+            ...(themeColor === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
+          },
+        },
+      };
+    } else {
+      return {
+        '&:focus': {
+          outline: 'none',
+        },
+      };
+    }
+  }
 );
 
 export default class Avatar extends React.Component<AvatarProps> {
