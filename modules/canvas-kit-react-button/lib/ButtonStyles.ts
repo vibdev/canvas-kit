@@ -380,8 +380,10 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
     },
     '&:not([disabled])': {
       '&:focus, &:active': {
-        ...(buttonColors.focusBorder &&
-          (buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1))),
+        ...(buttonColors.focusBorder && {
+          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
+          ...{borderColor: buttonColors.focusBorder},
+        }),
         ...(buttonColors.focusRing && buttonColors.focusRing),
       },
     },
