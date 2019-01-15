@@ -2,6 +2,19 @@
 
 Clickable button elements that extend the native `<button>` element with Canvas styling.
 
+#### Disclaimer
+
+> The documentation below is for the current Canvas buttons. The next iteration of our buttons have
+> been implemented in this module, but will not be documented until we're ready to roll them out
+> across all our products. We want to discourage their use until everyone can uptake them
+> simultaneously for consistencies sake.
+>
+> The new buttons include new `ButtonTypes`, icon support, and the `ButtonSizes` equate to different
+> button and font sizes.
+>
+> **If you would like to use the new buttons, please consult the design systems team and get
+> approval first**
+
 ## Installation
 
 ```sh
