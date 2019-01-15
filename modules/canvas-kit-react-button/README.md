@@ -77,9 +77,9 @@ Default: `ButtonSizes.Large`
 
 ---
 
-#### `fixed: boolean`
+#### `grow: boolean`
 
-> If true, the button's will grow to its container's width.
+> If true, the button will grow to its container's width.
 
 Default: `false`
 
