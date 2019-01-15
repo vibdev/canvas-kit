@@ -156,6 +156,7 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-1 {
@@ -169,8 +170,8 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -359,6 +360,7 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-2 {
@@ -372,8 +374,8 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -541,6 +543,7 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-1 {
@@ -554,8 +557,8 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -747,6 +750,7 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-2 {
@@ -760,8 +764,8 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 

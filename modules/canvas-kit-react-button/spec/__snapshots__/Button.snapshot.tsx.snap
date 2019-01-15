@@ -83,6 +83,7 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-0 {
@@ -221,6 +222,7 @@ exports[`Button Snapshots renders a growing button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -352,6 +354,7 @@ exports[`Button Snapshots renders a large, UDE primary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -500,6 +503,7 @@ exports[`Button Snapshots renders a large, UDE primary button with a data label
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -670,6 +674,7 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon 1`] 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-2 {
@@ -875,6 +880,7 @@ exports[`Button Snapshots renders a large, UDE primary button with an icon and 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-2 {
@@ -1123,6 +1129,7 @@ exports[`Button Snapshots renders a large, UDE secondary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -1292,6 +1299,7 @@ exports[`Button Snapshots renders a large, UDE secondary button with a data labe
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -1494,6 +1502,7 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon 1`]
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -1720,6 +1729,7 @@ exports[`Button Snapshots renders a large, UDE secondary button with an icon and
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -1853,6 +1863,7 @@ exports[`Button Snapshots renders a large, delete button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -2304,6 +2315,7 @@ exports[`Button Snapshots renders a large, highlight button with an icon 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: tansparent;
 }
 
 <button
@@ -2526,6 +2538,7 @@ exports[`Button Snapshots renders a large, highlight button with an icon and dat
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: tansparent;
 }
 
 <button
@@ -2691,6 +2704,7 @@ exports[`Button Snapshots renders a large, outline blue button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -2856,6 +2870,7 @@ exports[`Button Snapshots renders a large, outline blue button with a data labe
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -3054,6 +3069,7 @@ exports[`Button Snapshots renders a large, outline blue button with an icon 1`]
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -3276,6 +3292,7 @@ exports[`Button Snapshots renders a large, outline blue button with an icon and
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -3441,6 +3458,7 @@ exports[`Button Snapshots renders a large, outline dark button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -3606,6 +3624,7 @@ exports[`Button Snapshots renders a large, outline dark button with a data label
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -3804,6 +3823,7 @@ exports[`Button Snapshots renders a large, outline dark button with an icon 1`] 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -4026,6 +4046,7 @@ exports[`Button Snapshots renders a large, outline dark button with an icon and 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -4214,6 +4235,7 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -4402,6 +4424,7 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -4623,6 +4646,7 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -4868,6 +4892,7 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -5001,6 +5026,7 @@ exports[`Button Snapshots renders a large, primary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -5097,6 +5123,7 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-0 {
@@ -8021,6 +8048,7 @@ exports[`Button Snapshots renders a medium, UDE primary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -8169,6 +8197,7 @@ exports[`Button Snapshots renders a medium, UDE primary button with a data label
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -8377,6 +8406,7 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon 1`] 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-2 {
@@ -8582,6 +8612,7 @@ exports[`Button Snapshots renders a medium, UDE primary button with an icon and 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-2 {
@@ -8794,6 +8825,7 @@ exports[`Button Snapshots renders a medium, UDE secondary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -8964,6 +8996,7 @@ exports[`Button Snapshots renders a medium, UDE secondary button with a data lab
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -9166,6 +9199,7 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon 1`
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -9393,6 +9427,7 @@ exports[`Button Snapshots renders a medium, UDE secondary button with an icon an
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -9526,6 +9561,7 @@ exports[`Button Snapshots renders a medium, delete button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -9975,6 +10011,7 @@ exports[`Button Snapshots renders a medium, highlight button with an icon 1`] = 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: tansparent;
 }
 
 <button
@@ -10198,6 +10235,7 @@ exports[`Button Snapshots renders a medium, highlight button with an icon and a 
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: tansparent;
 }
 
 <button
@@ -10363,6 +10401,7 @@ exports[`Button Snapshots renders a medium, outline blue button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -10529,6 +10568,7 @@ exports[`Button Snapshots renders a medium, outline blue button with a data labe
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -10727,6 +10767,7 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon 1`]
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -10950,6 +10991,7 @@ exports[`Button Snapshots renders a medium, outline blue button with an icon and
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -11115,6 +11157,7 @@ exports[`Button Snapshots renders a medium, outline dark button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -11281,6 +11324,7 @@ exports[`Button Snapshots renders a medium, outline dark button with a data labe
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -11479,6 +11523,7 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon 1`]
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -11702,6 +11747,7 @@ exports[`Button Snapshots renders a medium, outline dark button with an icon and
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -11890,6 +11936,7 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -12079,6 +12126,7 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -12300,6 +12348,7 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -12546,6 +12595,7 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -12659,6 +12709,7 @@ exports[`Button Snapshots renders a medium, primary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-0 {
@@ -12795,6 +12846,7 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -12926,6 +12978,7 @@ exports[`Button Snapshots renders a small, UDE primary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -13074,6 +13127,7 @@ exports[`Button Snapshots renders a small, UDE secondary button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 .emotion-0 {
@@ -13207,6 +13261,7 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -13355,6 +13410,7 @@ exports[`Button Snapshots renders a small, outline blue button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -13503,6 +13559,7 @@ exports[`Button Snapshots renders a small, outline dark button 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  border-color: transparent;
 }
 
 <button
@@ -13674,6 +13731,7 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
   -webkit-animation: animation-1wochjw 100ms;
   animation: animation-1wochjw 100ms;
   box-shadow: 0 0 0 2px currentColor,0 0 0 4px #ffffff;
+  border-color: transparent;
 }
 
 <button
@@ -13770,6 +13828,7 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-0 {
@@ -13906,6 +13965,7 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 <button
@@ -16212,6 +16272,7 @@ exports[`Button Snapshots renders as expected 1`] = `
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-0 {
