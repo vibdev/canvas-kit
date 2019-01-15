@@ -311,7 +311,7 @@ function getTextUppercase(): CSSObject {
 }
 
 function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
-  const buttonColors = getButtonColors(buttonType) as ButtonColors.GenericButtonColors;
+  const buttonColors = getButtonColors(buttonType);
 
   return {
     backgroundColor: buttonColors.background,
@@ -388,7 +388,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
   };
 }
 
-function getButtonColors(buttonType: ButtonTypes) {
+function getButtonColors(buttonType: ButtonTypes): ButtonColors.GenericButtonColors {
   switch (buttonType) {
     case ButtonTypes.Primary:
       return canvas.buttonColors.primary;
