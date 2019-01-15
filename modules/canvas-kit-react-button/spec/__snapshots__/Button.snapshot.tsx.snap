@@ -26,7 +26,7 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -48,20 +48,20 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,
@@ -149,7 +149,7 @@ exports[`Button Snapshots renders a growing button 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -173,20 +173,20 @@ exports[`Button Snapshots renders a growing button 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,
@@ -456,7 +456,7 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -478,20 +478,20 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,
@@ -793,7 +793,7 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 24px;
   padding: 0 24px;
   min-width: 80px;
@@ -815,20 +815,20 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,
@@ -1114,7 +1114,7 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 18px;
   padding: 0 8px;
   min-width: 56px;
@@ -1136,20 +1136,20 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,
@@ -1205,7 +1205,7 @@ exports[`Button Snapshots renders as expected 1`] = `
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -1227,20 +1227,20 @@ exports[`Button Snapshots renders as expected 1`] = `
 .emotion-1:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:focus,
 .emotion-1:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-1:disabled,

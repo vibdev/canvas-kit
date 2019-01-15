@@ -336,7 +336,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -358,20 +358,20 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
 .emotion-3:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:focus,
 .emotion-3:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:disabled,
@@ -762,7 +762,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   transition: all 120ms ease-in;
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
   height: 40px;
   padding: 0 32px;
   min-width: 112px;
@@ -784,20 +784,20 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
 .emotion-3:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:focus,
 .emotion-3:hover:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-3:disabled,
