@@ -5,8 +5,6 @@ import {ButtonProps} from './Button';
 import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
-import {GenericStyle} from '@workday/canvas-kit-react-common';
-import {CSSObject} from 'create-emotion';
 
 export const ButtonBaseCon = styled('button')<ButtonProps>(
   /* istanbul ignore next line for coverage */
@@ -21,8 +19,8 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
 
     return {
       ...baseButton.styles,
-      ...(buttonStyles as CSSObject),
-      ...(buttonSizeStyles as CSSObject),
+      ...buttonStyles,
+      ...buttonSizeStyles,
     };
   },
   ({grow}) => grow && {width: '100%', maxWidth: '100%'}
@@ -54,9 +52,11 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
       case ButtonTypes.TextDarkAllCaps:
         return types.textAllCaps;
       case ButtonTypes.Primary:
+        return types.primary;
       case ButtonTypes.Secondary:
+        return types.secondary;
       case ButtonTypes.Delete:
-        return types.canvas;
+        return types.delete;
       default:
         return {};
     }
@@ -138,7 +138,10 @@ export class ButtonLabelIcon extends React.Component<ButtonProps> {
   }
 }
 
-export function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes) {
+export function getButtonSize(
+  baseButton: ButtonStyles.ButtonGenericStyle,
+  buttonSize: ButtonSizes
+) {
   const {sizes} = baseButton.variants!;
 
   switch (buttonSize) {
@@ -152,7 +155,10 @@ export function getButtonSize(baseButton: GenericStyle, buttonSize: ButtonSizes)
   }
 }
 
-export function getButtonStyle(baseButton: GenericStyle, buttonType: ButtonTypes) {
+export function getButtonStyle(
+  baseButton: ButtonStyles.ButtonGenericStyle,
+  buttonType: ButtonTypes
+) {
   const {types} = baseButton.variants!;
 
   switch (buttonType) {

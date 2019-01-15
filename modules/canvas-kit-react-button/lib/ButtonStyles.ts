@@ -1,14 +1,21 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing, GenericStyle} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
-import {ButtonTypes} from './types';
+import {ButtonTypes, ButtonSizes, IconPositions} from './types';
 import * as ButtonColors from './ButtonColors';
 
 export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
 export const CANVAS_BUTTON_HEIGHT_MEDIUM: number = 24;
 export const CANVAS_BUTTON_HEIGHT_SMALL: number = 18;
 
-export const labelBaseStyles: GenericStyle = {
+export interface ButtonGenericStyle extends GenericStyle {
+  variants?: {
+    types: {[key in ButtonTypes | IconPositions]?: CSSObject};
+    sizes: {[key in ButtonSizes]?: CSSObject};
+  };
+}
+
+export const labelBaseStyles: ButtonGenericStyle = {
   classname: 'button-label',
   styles: {
     position: 'relative', // Fixes an IE issue with text within button moving on click
@@ -32,9 +39,19 @@ export const labelBaseStyles: GenericStyle = {
         ...getTextUppercase(),
         padding: '0',
       },
-      canvas: {
-        fontWeight: 'inherit',
+      primary: {
         fontSize: 'inherit',
+        fontWeight: 'inherit',
+        padding: '0',
+      },
+      secondary: {
+        fontSize: 'inherit',
+        fontWeight: 'inherit',
+        padding: '0',
+      },
+      delete: {
+        fontSize: 'inherit',
+        fontWeight: 'inherit',
         padding: '0',
       },
     },
@@ -55,7 +72,7 @@ export const labelBaseStyles: GenericStyle = {
   },
 };
 
-export const labelDataBaseStyles: GenericStyle = {
+export const labelDataBaseStyles: ButtonGenericStyle = {
   classname: 'button-label-data',
   styles: {
     ...labelBaseStyles.styles,
@@ -63,6 +80,7 @@ export const labelDataBaseStyles: GenericStyle = {
     fontSize: '16px',
   },
   variants: {
+    types: {},
     sizes: {
       large: {
         paddingRight: '12px',
@@ -75,7 +93,7 @@ export const labelDataBaseStyles: GenericStyle = {
   },
 };
 
-export const labelIconBaseStyles: GenericStyle = {
+export const labelIconBaseStyles: ButtonGenericStyle = {
   classname: 'button-label-icon',
   styles: {
     display: 'flex',
@@ -100,7 +118,7 @@ export const labelIconBaseStyles: GenericStyle = {
   },
 };
 
-export const canvasButtonStyles: GenericStyle = {
+export const canvasButtonStyles: ButtonGenericStyle = {
   classname: 'canvas-button',
   styles: {
     boxSizing: 'border-box',
@@ -159,7 +177,7 @@ export const canvasButtonStyles: GenericStyle = {
   },
 };
 
-export const udeButtonStyles: GenericStyle = {
+export const udeButtonStyles: ButtonGenericStyle = {
   classname: 'ude-button',
   styles: {
     ...canvasButtonStyles.styles,
@@ -206,7 +224,7 @@ export const udeButtonStyles: GenericStyle = {
   },
 };
 
-export const dropdownButtonStyles: GenericStyle = {
+export const dropdownButtonStyles: ButtonGenericStyle = {
   classname: 'dropdown-button',
   styles: {
     ...udeButtonStyles.styles,
@@ -223,7 +241,7 @@ export const dropdownButtonStyles: GenericStyle = {
   },
 };
 
-export const textButtonStyles: GenericStyle = {
+export const textButtonStyles: ButtonGenericStyle = {
   classname: 'text-button',
   styles: {
     ...canvasButtonStyles.styles,
@@ -263,7 +281,7 @@ export const textButtonStyles: GenericStyle = {
   },
 };
 
-export const iconButtonStyles: GenericStyle = {
+export const iconButtonStyles: ButtonGenericStyle = {
   classname: 'icon-button',
   styles: {
     // TODO: Support data-whatinput='input' css

@@ -96,8 +96,8 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -128,8 +128,8 @@ exports[`Button Snapshots renders a growing button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -1762,8 +1762,8 @@ exports[`Button Snapshots renders a large, delete button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -1878,8 +1878,8 @@ exports[`Button Snapshots renders a large, dropdown primary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -2006,8 +2006,8 @@ exports[`Button Snapshots renders a large, dropdown secondary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -4910,8 +4910,8 @@ exports[`Button Snapshots renders a large, primary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -5110,8 +5110,8 @@ exports[`Button Snapshots renders a large, secondary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -9435,8 +9435,8 @@ exports[`Button Snapshots renders a medium, delete button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0 8px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -9588,8 +9588,8 @@ exports[`Button Snapshots renders a medium, dropdown primary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0 8px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -9716,8 +9716,8 @@ exports[`Button Snapshots renders a medium, dropdown secondary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0 8px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -12672,8 +12672,8 @@ exports[`Button Snapshots renders a medium, primary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0 8px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -12704,8 +12704,8 @@ exports[`Button Snapshots renders a medium, secondary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0 8px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -13116,8 +13116,8 @@ exports[`Button Snapshots renders a small, delete button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -13783,8 +13783,8 @@ exports[`Button Snapshots renders a small, primary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -13815,8 +13815,8 @@ exports[`Button Snapshots renders a small, secondary button 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
   padding: 0px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 
@@ -16225,8 +16225,8 @@ exports[`Button Snapshots renders as expected 1`] = `
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   padding: 0 12px;
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: inherit;
   padding: 0px;
 }
 

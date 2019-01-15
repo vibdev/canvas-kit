@@ -15,7 +15,7 @@ import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
 
-const outlineWhiteBackground = {
+const outlineWhiteBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -24,7 +24,7 @@ const outlineWhiteBackground = {
   padding: '24px',
   maxWidth: 'max-content',
   borderRadius: '3px',
-} as CSSObject;
+};
 
 const buttonContainer = {
   display: 'flex',
