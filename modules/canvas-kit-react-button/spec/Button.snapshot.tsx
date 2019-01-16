@@ -123,6 +123,15 @@ describe('Button Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
+  test('renders a large, UDE delete button', () => {
+    const component = renderer.create(
+      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdeDelete}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
   test('renders a large, highlight button with an icon', () => {
     const component = renderer.create(
       <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Highlight} icon={editIcon}>
@@ -610,6 +619,15 @@ describe('Button Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
+  test('renders a medium, UDE delete button', () => {
+    const component = renderer.create(
+      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdeDelete}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
   test('renders a medium, highlight button with an icon', () => {
     const component = renderer.create(
       <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.Highlight} icon={editIcon}>
@@ -825,6 +843,15 @@ describe('Button Snapshots', () => {
   test('renders a small, UDE secondary button', () => {
     const component = renderer.create(
       <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.UdePrimary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a small, UDE delete button', () => {
+    const component = renderer.create(
+      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.UdeDelete}>
         Button
       </Button>
     );
