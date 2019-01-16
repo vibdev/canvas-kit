@@ -3,32 +3,32 @@ import {focusRing} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
 
 export interface GenericButtonColors {
-  background: string;
-  border: string;
-  text: string;
   activeBackground: string;
   activeBorder: string;
   activeText: string;
+  background: string;
+  border: string;
   disabledBackground: string;
   disabledBorder: string;
   disabledText: string;
   focusBackground: string;
+  focusText: string;
+  hoverBorder: string;
+  text: string;
   focusBorder?: string;
   focusRing?: CSSObject;
-  focusText: string;
   hoverBackground?: string;
-  hoverBorder: string;
   hoverText?: string;
-  labelIcon?: string;
-  labelIconHover?: string;
-  labelIconActive?: string;
-  labelIconFocus?: string;
-  labelIconDisabled?: string;
   labelData?: string;
-  labelDataHover?: string;
   labelDataActive?: string;
-  labelDataFocus?: string;
   labelDataDisabled?: string;
+  labelDataFocus?: string;
+  labelDataHover?: string;
+  labelIcon?: string;
+  labelIconActive?: string;
+  labelIconDisabled?: string;
+  labelIconFocus?: string;
+  labelIconHover?: string;
 }
 
 export const udeDeleteColors: GenericButtonColors = {
@@ -60,7 +60,7 @@ export const highlightColors: GenericButtonColors = {
   disabledBorder: 'transparent',
   disabledText: typeColors.hint,
   focusBackground: canvas.colors.soap200,
-  focusBorder: 'tansparent',
+  focusBorder: 'transparent',
   focusRing: focusRing(2, 2),
   focusText: canvas.colors.blueberry500,
   hoverBackground: canvas.colors.soap400,
