@@ -22,7 +22,7 @@ export default class TextButton extends React.Component<TextButtonProps> {
 
     const TextButtonCon = styled('button')<TextButtonProps>(
       textButtonStyles.styles,
-      ({buttonType}) => getButtonStyle(textButtonStyles, buttonType!),
+      ({buttonType}) => getButtonStyle(textButtonStyles, buttonType),
       ({buttonSize}) => {
         const {sizes} = textButtonStyles.variants!;
 

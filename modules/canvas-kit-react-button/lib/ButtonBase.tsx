@@ -140,7 +140,7 @@ export class ButtonLabelIcon extends React.Component<ButtonProps> {
 
 export function getButtonSize(
   baseButton: ButtonStyles.ButtonGenericStyle,
-  buttonSize: ButtonSizes
+  buttonSize?: ButtonSizes
 ) {
   const {sizes} = baseButton.variants!;
 
@@ -157,7 +157,7 @@ export function getButtonSize(
 
 export function getButtonStyle(
   baseButton: ButtonStyles.ButtonGenericStyle,
-  buttonType: ButtonTypes
+  buttonType?: ButtonTypes
 ) {
   const {types} = baseButton.variants!;
 
