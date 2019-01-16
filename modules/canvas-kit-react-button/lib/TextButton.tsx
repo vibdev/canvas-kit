@@ -1,13 +1,18 @@
 import * as React from 'react';
 import {ButtonBaseLabel, ButtonLabelIcon, getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
-import {ButtonSizes, IconPositions} from './types';
+import {ButtonSizes, IconPositions, ButtonTypes} from './types';
 import {ButtonProps} from './Button';
 import {textButtonStyles} from './ButtonStyles';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
 export interface TextButtonProps extends ButtonProps, GrowthBehavior {
   iconPosition?: IconPositions;
+  buttonType?:
+    | ButtonTypes.Text
+    | ButtonTypes.TextDark
+    | ButtonTypes.TextAllCaps
+    | ButtonTypes.TextDarkAllCaps;
 }
 
 export default class TextButton extends React.Component<TextButtonProps> {
