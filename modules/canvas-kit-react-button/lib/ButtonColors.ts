@@ -38,7 +38,7 @@ export const udeDeleteColors: GenericButtonColors = {
   activeBackground: '#80160E',
   activeBorder: 'transparent',
   activeText: canvas.colors.frenchVanilla100,
-  disabledBackground: canvas.colors.cinnamon100,
+  disabledBackground: canvas.colors.cinnamon200,
   disabledBorder: 'transparent',
   disabledText: canvas.colors.frenchVanilla100,
   focusBackground: canvas.colors.cinnamon500,

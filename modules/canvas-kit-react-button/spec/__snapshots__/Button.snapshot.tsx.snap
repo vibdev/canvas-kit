@@ -323,7 +323,7 @@ exports[`Button Snapshots renders a large, UDE delete button 1`] = `
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffefee;
+  background-color: #fcc9c5;
   border-color: transparent;
   color: #ffffff;
 }
@@ -8287,7 +8287,7 @@ exports[`Button Snapshots renders a medium, UDE delete button 1`] = `
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffefee;
+  background-color: #fcc9c5;
   border-color: transparent;
   color: #ffffff;
 }
@@ -13487,7 +13487,7 @@ exports[`Button Snapshots renders a small, UDE delete button 1`] = `
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffefee;
+  background-color: #fcc9c5;
   border-color: transparent;
   color: #ffffff;
 }
