@@ -11,11 +11,6 @@ export interface ProviderState {
 }
 
 export enum InputType {
-  Intent,
-  Input,
-}
-
-export enum InputTypes {
   Keyboard = 'keyboard',
   Mouse = 'mouse',
   Pointer = 'pointer',
@@ -55,35 +50,35 @@ const ignoreMap = [
 
 // mapping of events to input types
 const inputMap = {
-  keydown: InputTypes.Keyboard,
-  keyup: InputTypes.Keyboard,
-  mousedown: InputTypes.Mouse,
-  mousemove: InputTypes.Mouse,
-  wheel: InputTypes.Mouse,
-  mousewheel: InputTypes.Mouse,
-  DOMMouseScroll: InputTypes.Mouse,
-  MSPointerDown: InputTypes.Pointer,
-  MSPointerMove: InputTypes.Pointer,
-  pointerdown: InputTypes.Pointer,
-  pointermove: InputTypes.Pointer,
-  touchstart: InputTypes.Touch,
+  keydown: InputType.Keyboard,
+  keyup: InputType.Keyboard,
+  mousedown: InputType.Mouse,
+  mousemove: InputType.Mouse,
+  wheel: InputType.Mouse,
+  mousewheel: InputType.Mouse,
+  DOMMouseScroll: InputType.Mouse,
+  MSPointerDown: InputType.Pointer,
+  MSPointerMove: InputType.Pointer,
+  pointerdown: InputType.Pointer,
+  pointermove: InputType.Pointer,
+  touchstart: InputType.Touch,
 };
 
 const getPointerType = (event: React.PointerEvent) => {
   // map of IE 10 pointer events
   const pointerMap = {
-    2: InputTypes.Touch,
-    3: InputTypes.Touch, // treat pen like touch
-    4: InputTypes.Mouse,
+    2: InputType.Touch,
+    3: InputType.Touch, // treat pen like touch
+    4: InputType.Mouse,
   };
 
   if (typeof event.pointerType === 'number') {
     return pointerMap[event.pointerType];
   } else if (event.pointerType === 'mouse') {
-    return InputTypes.Mouse;
+    return InputType.Mouse;
   } else {
     // treat pen like touch
-    return InputTypes.Touch;
+    return InputType.Touch;
   }
 };
 
@@ -221,16 +216,16 @@ export default class InputProvider extends React.Component<{}, ProviderState> {
     const eventType = event.type as keyof typeof inputMap;
     let value = inputMap[eventType];
 
-    if (value === InputTypes.Pointer) {
+    if (value === InputType.Pointer) {
       value = getPointerType(event as React.PointerEvent);
     }
 
     const ignoreMatch = eventKey ? ignoreMap.indexOf(eventKey) === -1 : undefined;
 
     const shouldUpdate =
-      (value === InputTypes.Keyboard && eventKey && ignoreMatch) ||
-      value === InputTypes.Mouse ||
-      value === InputTypes.Touch;
+      (value === InputType.Keyboard && eventKey && ignoreMatch) ||
+      value === InputType.Mouse ||
+      value === InputType.Touch;
 
     if (this.state.currentInput !== value && shouldUpdate) {
       this.setState({currentInput: value});
@@ -260,7 +255,7 @@ export default class InputProvider extends React.Component<{}, ProviderState> {
     if (!this.state.isBuffering && !this.state.isScrolling) {
       const eventType = event.type as keyof typeof inputMap;
       let value = inputMap[eventType];
-      if (value === InputTypes.Pointer) {
+      if (value === InputType.Pointer) {
         value = getPointerType(event as React.PointerEvent);
       }
 
