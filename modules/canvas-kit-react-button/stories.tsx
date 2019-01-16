@@ -36,7 +36,7 @@ const buttonContainer = {
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
-  .add('Canvas', () => (
+  .add('All', () => (
     <div className="story">
       <h1 className="section-label">Canvas Buttons</h1>
       <Button
@@ -98,8 +98,11 @@ storiesOf('Canvas Kit/Button', module)
         </Button>
       </div>
     </div>
-  ))
-  .add('UDE Buttons', () => (
+  ));
+
+storiesOf('Canvas Kit/Button/Beta', module)
+  .addDecorator(withReadme(README))
+  .add('Buttons', () => (
     <div className="story">
       <h1 className="section-label">UDE Buttons</h1>
       <h3>Large Buttons</h3>
