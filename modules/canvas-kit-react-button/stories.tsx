@@ -109,6 +109,9 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
         Secondary
       </Button>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
+        Delete
+      </Button>
       <br />
       <Button
         buttonSize={Button.Sizes.Large}
@@ -159,6 +162,9 @@ storiesOf('Canvas Kit/Button', module)
         dataLabel={'1:00'}
       >
         Secondary
+      </Button>
+      <Button disabled={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
+        Delete
       </Button>
       <h3>Medium Buttons</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
@@ -166,6 +172,9 @@ storiesOf('Canvas Kit/Button', module)
       </Button>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
         Secondary
+      </Button>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
+        Delete
       </Button>
       <br />
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary} icon={editIcon}>
@@ -214,12 +223,18 @@ storiesOf('Canvas Kit/Button', module)
       >
         Secondary
       </Button>
+      <Button disabled={true} buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
+        Secondary
+      </Button>
       <h3>Small Buttons</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
         Primary
       </Button>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
         Secondary
+      </Button>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
+        Delete
       </Button>
       <br />
       <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
@@ -231,6 +246,9 @@ storiesOf('Canvas Kit/Button', module)
         buttonType={Button.Types.UdeSecondary}
       >
         Secondary
+      </Button>
+      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
+        Delete
       </Button>
     </div>
   ))

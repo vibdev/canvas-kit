@@ -24,6 +24,7 @@ export enum ButtonTypes {
   TextDarkAllCaps = 'textDarkAllCaps',
   UdePrimary = 'udePrimary',
   UdeSecondary = 'udeSecondary',
+  UdeDelete = 'udeDelete',
   Dropdown = 'dropdown',
 }
 

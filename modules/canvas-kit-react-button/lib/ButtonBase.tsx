@@ -181,6 +181,8 @@ export function getButtonStyle(
       return types.udePrimary;
     case ButtonTypes.UdeSecondary:
       return types.udeSecondary;
+    case ButtonTypes.UdeDelete:
+      return types.udeDelete;
     case ButtonTypes.Text:
       return types.text;
     case ButtonTypes.TextDark:
@@ -201,6 +203,7 @@ function getBaseButton(buttonType: ButtonTypes) {
       return ButtonStyles.canvasButtonStyles;
     case ButtonTypes.UdePrimary:
     case ButtonTypes.UdeSecondary:
+    case ButtonTypes.UdeDelete:
     case ButtonTypes.Highlight:
     case ButtonTypes.OutlineBlue:
     case ButtonTypes.OutlineDark:

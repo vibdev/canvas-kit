@@ -191,6 +191,9 @@ export const udeButtonStyles: ButtonGenericStyle = {
       udeSecondary: {
         ...getButtonStateStyle(ButtonTypes.UdeSecondary),
       },
+      udeDelete: {
+        ...getButtonStateStyle(ButtonTypes.UdeDelete),
+      },
       highlight: {
         ...getButtonStateStyle(ButtonTypes.Highlight),
       },
@@ -415,5 +418,7 @@ function getButtonColors(buttonType: ButtonTypes): ButtonColors.GenericButtonCol
       return ButtonColors.udePrimaryColors;
     case ButtonTypes.UdeSecondary:
       return ButtonColors.udeSecondaryColors;
+    case ButtonTypes.UdeDelete:
+      return ButtonColors.udeDeleteColors;
   }
 }

@@ -31,6 +31,24 @@ export interface GenericButtonColors {
   labelDataDisabled?: string;
 }
 
+export const udeDeleteColors: GenericButtonColors = {
+  background: canvas.colors.cinnamon500,
+  border: canvas.colors.cinnamon500,
+  text: canvas.colors.frenchVanilla100,
+  activeBackground: '#80160E',
+  activeBorder: 'transparent',
+  activeText: canvas.colors.frenchVanilla100,
+  disabledBackground: canvas.colors.cinnamon100,
+  disabledBorder: 'transparent',
+  disabledText: canvas.colors.frenchVanilla100,
+  focusBackground: canvas.colors.cinnamon500,
+  focusRing: focusRing(2, 2),
+  focusText: canvas.colors.frenchVanilla100,
+  hoverBackground: canvas.colors.cinnamon600,
+  hoverBorder: canvas.colors.cinnamon600,
+  hoverText: canvas.colors.frenchVanilla100,
+};
+
 export const highlightColors: GenericButtonColors = {
   background: canvas.colors.soap200,
   border: canvas.colors.soap200,
