@@ -36,7 +36,9 @@ export const labelBaseStyles: ButtonGenericStyle = {
         padding: '0',
       },
       textAllCaps: {
-        ...getTextUppercase(),
+        ...canvas.type.variant.caps,
+        fontSize: '14px',
+        letterSpacing: '.5px',
         padding: '0',
       },
       primary: {
@@ -304,14 +306,6 @@ export const iconButtonStyles: ButtonGenericStyle = {
     },
   },
 };
-
-function getTextUppercase(): CSSObject {
-  return {
-    ...canvas.type.variant.caps,
-    fontSize: '14px',
-    letterSpacing: '.5px',
-  };
-}
 
 function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
   const buttonColors = getButtonColors(buttonType);
