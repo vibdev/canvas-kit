@@ -8,6 +8,7 @@ import spacing, {
   CanvasSpacingValue,
 } from './lib/spacing';
 import type, {fontFamily, monoFontFamily, CanvasType} from './lib/type';
+import InputProvider from './lib/InputProvider';
 import {CSSProperties} from './lib/types';
 
 const {default: colors, ...semanticColors} = canvasColorsWeb;
@@ -38,5 +39,6 @@ export {
   CanvasSpacingValue,
   CanvasType,
   CSSProperties,
+  InputProvider,
 };
 export default canvas;
