@@ -7,11 +7,7 @@ import {textButtonStyles} from './ButtonStyles';
 
 export interface TextButtonProps extends ButtonProps {
   iconPosition?: IconPositions;
-  buttonType?:
-    | ButtonTypes.Text
-    | ButtonTypes.TextDark
-    | ButtonTypes.TextAllCaps
-    | ButtonTypes.TextDarkAllCaps;
+  buttonType?: ButtonTypes;
 }
 
 export default class TextButton extends React.Component<TextButtonProps> {
@@ -19,6 +15,7 @@ export default class TextButton extends React.Component<TextButtonProps> {
 
   static defaultProps: Partial<TextButtonProps> = {
     iconPosition: IconPositions.Left,
+    buttonType: ButtonTypes.Text,
   };
 
   public render() {
