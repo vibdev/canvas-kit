@@ -3,12 +3,14 @@ import * as React from 'react';
 import styled, {css} from 'react-emotion';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 
 import canvas from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 storiesOf('Canvas Kit/Core', module)
   .addDecorator(withReadme(README))
+  .addDecorator(InputProviderDecorator)
   .add('Depth', () => {
     const Card = styled('div')({
       width: 200,
