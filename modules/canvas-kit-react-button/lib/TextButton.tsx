@@ -4,9 +4,8 @@ import styled from 'react-emotion';
 import {ButtonSizes, IconPositions, ButtonTypes} from './types';
 import {ButtonProps} from './Button';
 import {textButtonStyles} from './ButtonStyles';
-import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 
-export interface TextButtonProps extends ButtonProps, GrowthBehavior {
+export interface TextButtonProps extends ButtonProps {
   iconPosition?: IconPositions;
   buttonType?:
     | ButtonTypes.Text
