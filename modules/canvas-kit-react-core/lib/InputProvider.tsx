@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface ProviderState {
+export interface InputProviderState {
   currentInput: string;
   currentIntent: string;
   supportsPassive: boolean;
@@ -15,6 +15,21 @@ export enum InputType {
   Mouse = 'mouse',
   Pointer = 'pointer',
   Touch = 'touch',
+}
+
+export enum InputEventType {
+  KeyDown = 'keydown',
+  KeyUp = 'keyup',
+  MouseDown = 'mousedown',
+  MouseMove = 'mousemove',
+  Wheel = 'wheel',
+  MouseWheel = 'mousewheel',
+  DOMMouseScroll = 'DOMMouseScroll',
+  MSPointerDown = 'MSPointerDown',
+  MSPointerMove = 'MSPointerMove',
+  PointerDown = 'pointerdown',
+  PointerMove = 'pointermove',
+  TouchStart = 'touchstart',
 }
 
 type InputEvent =
@@ -49,19 +64,19 @@ const ignoreMap = [
 ];
 
 // mapping of events to input types
-const inputMap = {
-  keydown: InputType.Keyboard,
-  keyup: InputType.Keyboard,
-  mousedown: InputType.Mouse,
-  mousemove: InputType.Mouse,
-  wheel: InputType.Mouse,
-  mousewheel: InputType.Mouse,
-  DOMMouseScroll: InputType.Mouse,
-  MSPointerDown: InputType.Pointer,
-  MSPointerMove: InputType.Pointer,
-  pointerdown: InputType.Pointer,
-  pointermove: InputType.Pointer,
-  touchstart: InputType.Touch,
+export const inputEventMap = {
+  [InputEventType.KeyDown]: InputType.Keyboard,
+  [InputEventType.KeyUp]: InputType.Keyboard,
+  [InputEventType.MouseDown]: InputType.Mouse,
+  [InputEventType.MouseMove]: InputType.Mouse,
+  [InputEventType.Wheel]: InputType.Mouse,
+  [InputEventType.MouseWheel]: InputType.Mouse,
+  [InputEventType.DOMMouseScroll]: InputType.Mouse,
+  [InputEventType.MSPointerDown]: InputType.Pointer,
+  [InputEventType.MSPointerMove]: InputType.Pointer,
+  [InputEventType.PointerDown]: InputType.Pointer,
+  [InputEventType.PointerMove]: InputType.Pointer,
+  [InputEventType.TouchStart]: InputType.Touch,
 };
 
 const getPointerType = (event: React.PointerEvent) => {
@@ -102,7 +117,7 @@ const detectWheel = () => {
 /**
  * This component takes heavy inspiration from what-input (https://github.com/ten1seven/what-input)
  */
-export default class InputProvider extends React.Component<{}, ProviderState> {
+export default class InputProvider extends React.Component<{}, InputProviderState> {
   private eventTimer: number | undefined;
 
   constructor(props: any) {
@@ -172,6 +187,17 @@ export default class InputProvider extends React.Component<{}, ProviderState> {
     this.enableListeners(false);
   }
 
+  // shouldComponentUpdate(nextProps: React.Props<React.Component>, nextState: InputProviderState) {
+  //   if (
+  //     nextProps != this.props ||
+  //     nextState.currentInput != this.state.currentInput ||
+  //     nextState.currentIntent != this.state.currentIntent
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
+
   enableListeners(enable: boolean) {
     // `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
     // can only demonstrate potential, but not actual, interaction
@@ -213,8 +239,8 @@ export default class InputProvider extends React.Component<{}, ProviderState> {
       return;
     }
     const eventKey = 'which' in event ? event.which : undefined;
-    const eventType = event.type as keyof typeof inputMap;
-    let value = inputMap[eventType];
+    const eventType = event.type as keyof typeof inputEventMap;
+    let value = inputEventMap[eventType];
 
     if (value === InputType.Pointer) {
       value = getPointerType(event as React.PointerEvent);
@@ -253,8 +279,8 @@ export default class InputProvider extends React.Component<{}, ProviderState> {
     // only execute if the event buffer timer isn't running
     // or scrolling isn't happening
     if (!this.state.isBuffering && !this.state.isScrolling) {
-      const eventType = event.type as keyof typeof inputMap;
-      let value = inputMap[eventType];
+      const eventType = event.type as keyof typeof inputEventMap;
+      let value = inputEventMap[eventType];
       if (value === InputType.Pointer) {
         value = getPointerType(event as React.PointerEvent);
       }
