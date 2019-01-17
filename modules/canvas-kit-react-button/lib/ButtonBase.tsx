@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {ButtonSizes, ButtonTypes, IconPositions} from './types';
+import {ButtonSizes, ButtonTypes, IconPositions, AllButtonTypes, TextButtonTypes} from './types';
 import {ButtonProps} from './Button';
 import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
@@ -26,7 +26,7 @@ export const ButtonBaseCon = styled('button')<ButtonProps>(
   ({grow}) => grow && {width: '100%', maxWidth: '100%'}
 );
 
-export const ButtonBaseLabel = styled('span')<ButtonProps>(
+export const ButtonBaseLabel = styled('span')<ButtonProps<AllButtonTypes>>(
   ButtonStyles.labelBaseStyles.styles,
   ({buttonSize}) => {
     const {sizes} = ButtonStyles.labelBaseStyles.variants!;
@@ -45,11 +45,11 @@ export const ButtonBaseLabel = styled('span')<ButtonProps>(
     const {types} = ButtonStyles.labelBaseStyles.variants!;
 
     switch (buttonType) {
-      case ButtonTypes.Text:
-      case ButtonTypes.TextDark:
+      case TextButtonTypes.Default:
+      case TextButtonTypes.Dark:
         return types.text;
-      case ButtonTypes.TextAllCaps:
-      case ButtonTypes.TextDarkAllCaps:
+      case TextButtonTypes.AllCaps:
+      case TextButtonTypes.DarkAllCaps:
         return types.textAllCaps;
       case ButtonTypes.Primary:
         return types.primary;
@@ -77,10 +77,12 @@ export const ButtonLabelData = styled('span')<ButtonProps>(
   }
 );
 
-const ButtonLabelIconStyled = styled('span')<TextButtonProps>(
+const ButtonLabelIconStyled = styled('span')<
+  ButtonLabelIconProps & Pick<TextButtonProps, 'iconPosition'>
+>(
   ButtonStyles.labelIconBaseStyles.styles,
-  ({buttonType, buttonSize}) => {
-    if (buttonType === ButtonTypes.Dropdown) {
+  ({buttonSize, dropdown}) => {
+    if (dropdown) {
       switch (buttonSize) {
         case ButtonSizes.Large:
         default:
@@ -117,7 +119,11 @@ const ButtonLabelIconStyled = styled('span')<TextButtonProps>(
   }
 );
 
-export class ButtonLabelIcon extends React.Component<ButtonProps> {
+export interface ButtonLabelIconProps extends ButtonProps<AllButtonTypes> {
+  dropdown?: boolean;
+}
+
+export class ButtonLabelIcon extends React.Component<ButtonLabelIconProps> {
   public render() {
     /* istanbul ignore next line for coverage */
     if (this.props.icon === undefined) {
@@ -157,7 +163,7 @@ export function getButtonSize(
 
 export function getButtonStyle(
   baseButton: ButtonStyles.ButtonGenericStyle,
-  buttonType?: ButtonTypes
+  buttonType?: AllButtonTypes
 ) {
   const {types} = baseButton.variants!;
 
@@ -183,13 +189,13 @@ export function getButtonStyle(
       return types.udeSecondary;
     case ButtonTypes.UdeDelete:
       return types.udeDelete;
-    case ButtonTypes.Text:
+    case TextButtonTypes.Default:
       return types.text;
-    case ButtonTypes.TextDark:
+    case TextButtonTypes.Dark:
       return types.textDark;
-    case ButtonTypes.TextAllCaps:
+    case TextButtonTypes.AllCaps:
       return types.textAllCaps;
-    case ButtonTypes.TextDarkAllCaps:
+    case TextButtonTypes.DarkAllCaps:
       return types.textDarkAllCaps;
   }
 }

@@ -1,21 +1,23 @@
 import * as React from 'react';
 import {ButtonBaseLabel, ButtonLabelIcon, getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
-import {ButtonSizes, IconPositions, ButtonTypes} from './types';
+import {ButtonSizes, IconPositions, TextButtonTypes} from './types';
 import {ButtonProps} from './Button';
 import {textButtonStyles} from './ButtonStyles';
 
-export interface TextButtonProps extends ButtonProps {
+export interface TextButtonProps extends ButtonProps<TextButtonTypes> {
   iconPosition?: IconPositions;
-  buttonType?: ButtonTypes;
 }
 
 export default class TextButton extends React.Component<TextButtonProps> {
   public static IconPositions = IconPositions;
+  public static Types = TextButtonTypes;
+  public static Sizes = ButtonSizes;
 
-  static defaultProps: Partial<TextButtonProps> = {
+  static defaultProps = {
     iconPosition: IconPositions.Left,
-    buttonType: ButtonTypes.Text,
+    buttonType: TextButtonTypes.Default,
+    buttonSize: ButtonSizes.Large,
   };
 
   public render() {

@@ -553,26 +553,26 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h1 className="section-label">Text Buttons</h1>
       <h3>Large Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
-        <TextButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.TextDark}>
+        <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Dark}>
           Text Dark
         </TextButton>
       </div>
-      <TextButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.Text}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
         Text
       </TextButton>
       <h3>Small Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
-        <TextButton buttonSize={Button.Sizes.Small} buttonType={Button.Types.TextDark}>
+        <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Dark}>
           Text Dark
         </TextButton>
       </div>
-      <TextButton buttonSize={Button.Sizes.Small} buttonType={Button.Types.Text}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Default}>
         Text
       </TextButton>
       <h3>All Caps Text Buttons</h3>
-      <TextButton buttonType={Button.Types.TextAllCaps}>All Caps</TextButton>
+      <TextButton buttonType={TextButton.Types.AllCaps}>All Caps</TextButton>
       <div className={css(outlineWhiteBackground)}>
-        <TextButton buttonType={Button.Types.TextDarkAllCaps}>All Caps</TextButton>
+        <TextButton buttonType={TextButton.Types.DarkAllCaps}>All Caps</TextButton>
       </div>
 
       <h3>Icon Text Buttons</h3>
@@ -580,14 +580,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <TextButton
           icon={editIcon}
           iconPosition={TextButton.IconPositions.Left}
-          buttonType={Button.Types.Text}
+          buttonType={TextButton.Types.Default}
         >
           Left Icon Large
         </TextButton>
         <TextButton
           icon={arrowRightIcon}
           iconPosition={TextButton.IconPositions.Right}
-          buttonType={Button.Types.Text}
+          buttonType={TextButton.Types.Default}
         >
           Right Icon Large
         </TextButton>
@@ -596,7 +596,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <TextButton
           icon={activityStreamIcon}
           iconPosition={TextButton.IconPositions.Left}
-          buttonType={Button.Types.TextDark}
+          buttonType={TextButton.Types.Dark}
         >
           Left Icon Large
         </TextButton>
@@ -606,25 +606,25 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={Button.Sizes.Small}
           icon={editIcon}
           iconPosition={TextButton.IconPositions.Left}
-          buttonType={Button.Types.Text}
+          buttonType={TextButton.Types.Default}
         >
           Left Icon Small
         </TextButton>
         <TextButton
-          buttonSize={Button.Sizes.Small}
+          buttonSize={TextButton.Sizes.Small}
           icon={arrowRightIcon}
           iconPosition={TextButton.IconPositions.Right}
-          buttonType={Button.Types.Text}
+          buttonType={TextButton.Types.Default}
         >
           Right Icon Small
         </TextButton>
       </div>
       <div className={css(outlineWhiteBackground)}>
         <TextButton
-          buttonSize={Button.Sizes.Small}
+          buttonSize={TextButton.Sizes.Small}
           iconPosition={TextButton.IconPositions.Left}
           icon={editIcon}
-          buttonType={Button.Types.TextDark}
+          buttonType={TextButton.Types.Dark}
         >
           Left Icon Small
         </TextButton>
@@ -634,8 +634,8 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <TextButton
           icon={editIcon}
           disabled={true}
-          buttonSize={Button.Sizes.Large}
-          buttonType={Button.Types.TextDark}
+          buttonSize={TextButton.Sizes.Large}
+          buttonType={TextButton.Types.Dark}
         >
           Text Dark
         </TextButton>
@@ -643,8 +643,8 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <TextButton
         icon={editIcon}
         disabled={true}
-        buttonSize={Button.Sizes.Small}
-        buttonType={Button.Types.Text}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.Default}
       >
         Text
       </TextButton>
@@ -654,46 +654,58 @@ storiesOf('Canvas Kit/Button/Beta', module)
     <div className="story">
       <h1 className="section-label">Dropdown Buttons</h1>
       <h3>Large Dropdown Buttons</h3>
-      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdePrimary}
+      >
         Dropdown Button
       </DropdownButton>
-      <DropdownButton buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdeSecondary}
+      >
         Dropdown Button
       </DropdownButton>
       <br />
       <DropdownButton
         disabled={true}
-        buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdePrimary}
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdePrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
-        buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdeSecondary}
       >
         Dropdown Button
       </DropdownButton>
       <h3>Medium Dropdown Buttons</h3>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdePrimary}
+      >
         Dropdown Button
       </DropdownButton>
-      <DropdownButton buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdeSecondary}
+      >
         Dropdown Button
       </DropdownButton>
       <br />
       <DropdownButton
         disabled={true}
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdePrimary}
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdePrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdeSecondary}
       >
         Dropdown Button
       </DropdownButton>

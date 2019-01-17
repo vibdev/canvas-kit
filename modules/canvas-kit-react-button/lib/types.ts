@@ -18,15 +18,19 @@ export enum ButtonTypes {
   OutlineBlue = 'outlineBlue',
   OutlineDark = 'outlineDark',
   OutlineWhite = 'outlineWhite',
-  Text = 'text',
-  TextDark = 'textDark',
-  TextAllCaps = 'textAllCaps',
-  TextDarkAllCaps = 'textDarkAllCaps',
   UdePrimary = 'udePrimary',
   UdeSecondary = 'udeSecondary',
   UdeDelete = 'udeDelete',
-  Dropdown = 'dropdown',
 }
+
+export enum TextButtonTypes {
+  Default = 'text',
+  Dark = 'textDark',
+  AllCaps = 'textAllCaps',
+  DarkAllCaps = 'textDarkAllCaps',
+}
+
+export type AllButtonTypes = ButtonTypes | TextButtonTypes;
 
 /**
  * The different icon positions.

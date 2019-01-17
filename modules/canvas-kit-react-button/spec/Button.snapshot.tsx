@@ -3,7 +3,6 @@ import Button from '../lib/Button';
 import DropdownButton from '../lib/DropdownButton';
 import TextButton from '../lib/TextButton';
 import * as renderer from 'react-test-renderer';
-import {ButtonTypes, ButtonSizes, IconPositions} from '../lib/types';
 import {editIcon} from '@workday/canvas-system-icons-web';
 
 describe('Button Snapshots', () => {
@@ -13,7 +12,7 @@ describe('Button Snapshots', () => {
   });
   test('renders a large, primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Primary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Button
       </Button>
     );
@@ -21,7 +20,7 @@ describe('Button Snapshots', () => {
   });
   test('renders a large, secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Secondary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Button
       </Button>
     );
@@ -30,7 +29,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Delete}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
         Button
       </Button>
     );
@@ -39,7 +38,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
         Button
       </Button>
     );
@@ -48,7 +47,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE primary button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdePrimary} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary} icon={editIcon}>
         Button
       </Button>
     );
@@ -57,7 +56,11 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE primary button with a data label', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdePrimary} dataLabel={'1:00'}>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdePrimary}
+        dataLabel={'1:00'}
+      >
         Button
       </Button>
     );
@@ -67,8 +70,8 @@ describe('Button Snapshots', () => {
   test('renders a large, UDE primary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.UdePrimary}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdePrimary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -80,7 +83,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
         Button
       </Button>
     );
@@ -89,7 +92,11 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE secondary button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdeSecondary} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -99,8 +106,8 @@ describe('Button Snapshots', () => {
   test('renders a large, UDE secondary button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.UdeSecondary}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
         dataLabel={'1:00'}
       >
         Button
@@ -112,8 +119,8 @@ describe('Button Snapshots', () => {
   test('renders a large, UDE secondary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.UdeSecondary}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.UdeSecondary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -125,7 +132,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, UDE delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
         Button
       </Button>
     );
@@ -134,7 +141,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, highlight button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Highlight} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Highlight} icon={editIcon}>
         Button
       </Button>
     );
@@ -143,7 +150,11 @@ describe('Button Snapshots', () => {
 
   test('renders a large, highlight button with a data label', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Highlight} dataLabel={'1:00'}>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.Highlight}
+        dataLabel={'1:00'}
+      >
         Button
       </Button>
     );
@@ -153,8 +164,8 @@ describe('Button Snapshots', () => {
   test('renders a large, highlight button with an icon and data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.Highlight}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.Highlight}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -166,7 +177,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline blue button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
         Button
       </Button>
     );
@@ -175,7 +186,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline blue button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineBlue} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue} icon={editIcon}>
         Button
       </Button>
     );
@@ -185,8 +196,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline blue button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineBlue}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineBlue}
         dataLabel={'1:00'}
       >
         Button
@@ -198,8 +209,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline blue button with an icon and data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineBlue}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineBlue}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -211,7 +222,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline dark button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineDark}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
         Button
       </Button>
     );
@@ -220,7 +231,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline dark button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineDark} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark} icon={editIcon}>
         Button
       </Button>
     );
@@ -230,8 +241,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline dark button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineDark}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineDark}
         dataLabel={'1:00'}
       >
         Button
@@ -243,8 +254,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline dark button with an icon and data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineDark}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineDark}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -256,7 +267,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline white button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineWhite}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
         Button
       </Button>
     );
@@ -265,7 +276,11 @@ describe('Button Snapshots', () => {
 
   test('renders a large, outline white button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.OutlineWhite} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineWhite}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -275,8 +290,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline white button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineWhite}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineWhite}
         dataLabel={'1:00'}
       >
         Button
@@ -288,8 +303,8 @@ describe('Button Snapshots', () => {
   test('renders a large, outline white button with an icon and data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.OutlineWhite}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineWhite}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -301,7 +316,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, text button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.Text}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
         Button
       </TextButton>
     );
@@ -311,10 +326,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.Text}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.Default}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -325,10 +340,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.Text}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.Default}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -338,7 +353,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, text all caps button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.TextAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.AllCaps}>
         Button
       </TextButton>
     );
@@ -348,10 +363,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text all caps button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.AllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -362,10 +377,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text all caps button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.AllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -375,7 +390,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, text dark all caps button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.TextDarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.DarkAllCaps}>
         Button
       </TextButton>
     );
@@ -385,10 +400,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark all caps button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -399,10 +414,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark all caps button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -412,7 +427,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, text dark button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.TextDark}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Dark}>
         Button
       </TextButton>
     );
@@ -422,10 +437,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDark}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.Dark}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -436,10 +451,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDark}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.Dark}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -449,7 +464,7 @@ describe('Button Snapshots', () => {
 
   test('renders a large, text dark all caps button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.TextDarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.DarkAllCaps}>
         Button
       </TextButton>
     );
@@ -459,10 +474,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark all caps button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -473,10 +488,10 @@ describe('Button Snapshots', () => {
   test('renders a large, text dark all caps button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Large}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Large}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -486,7 +501,10 @@ describe('Button Snapshots', () => {
 
   test('renders a large, dropdown primary button', () => {
     const component = renderer.create(
-      <DropdownButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdePrimary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdePrimary}
+      >
         Button
       </DropdownButton>
     );
@@ -495,7 +513,10 @@ describe('Button Snapshots', () => {
 
   test('renders a large, dropdown secondary button', () => {
     const component = renderer.create(
-      <DropdownButton buttonSize={ButtonSizes.Large} buttonType={ButtonTypes.UdeSecondary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Large}
+        buttonType={DropdownButton.Types.UdeSecondary}
+      >
         Button
       </DropdownButton>
     );
@@ -504,7 +525,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.Primary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
         Button
       </Button>
     );
@@ -513,7 +534,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.Secondary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
         Button
       </Button>
     );
@@ -522,7 +543,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.Delete}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Delete}>
         Button
       </Button>
     );
@@ -531,7 +552,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, UDE primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
         Button
       </Button>
     );
@@ -540,7 +561,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, UDE primary button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdePrimary} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary} icon={editIcon}>
         Button
       </Button>
     );
@@ -550,8 +571,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, UDE primary button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.UdePrimary}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdePrimary}
         dataLabel={'1:00'}
       >
         Button
@@ -563,8 +584,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, UDE primary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.UdePrimary}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdePrimary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -576,7 +597,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, UDE secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
         Button
       </Button>
     );
@@ -585,7 +606,11 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, UDE secondary button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdeSecondary} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -595,8 +620,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, UDE secondary button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.UdeSecondary}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
         dataLabel={'1:00'}
       >
         Button
@@ -608,8 +633,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, UDE secondary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.UdeSecondary}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.UdeSecondary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -621,7 +646,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, UDE delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
         Button
       </Button>
     );
@@ -630,7 +655,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, highlight button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.Highlight} icon={editIcon}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Highlight} icon={editIcon}>
         Button
       </Button>
     );
@@ -640,8 +665,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, highlight button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.Highlight}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.Highlight}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -653,7 +678,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline blue button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
         Button
       </Button>
     );
@@ -662,7 +687,11 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline blue button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineBlue} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineBlue}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -672,8 +701,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline blue button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineBlue}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineBlue}
         dataLabel={'1:00'}
       >
         Button
@@ -685,8 +714,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline blue button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineBlue}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineBlue}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -698,7 +727,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline dark button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineDark}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
         Button
       </Button>
     );
@@ -707,7 +736,11 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline dark button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineDark} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineDark}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -717,8 +750,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline dark button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineDark}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineDark}
         dataLabel={'1:00'}
       >
         Button
@@ -730,8 +763,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline dark button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineDark}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineDark}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -743,7 +776,7 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline white button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineWhite}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
         Button
       </Button>
     );
@@ -752,7 +785,11 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, outline white button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.OutlineWhite} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineWhite}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
@@ -762,8 +799,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline white button with a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineWhite}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineWhite}
         dataLabel={'1:00'}
       >
         Button
@@ -775,8 +812,8 @@ describe('Button Snapshots', () => {
   test('renders a medium, outline white button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
-        buttonSize={ButtonSizes.Medium}
-        buttonType={ButtonTypes.OutlineWhite}
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineWhite}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -788,7 +825,10 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, dropdown primary button', () => {
     const component = renderer.create(
-      <DropdownButton buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdePrimary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdePrimary}
+      >
         Button
       </DropdownButton>
     );
@@ -797,7 +837,10 @@ describe('Button Snapshots', () => {
 
   test('renders a medium, dropdown secondary button', () => {
     const component = renderer.create(
-      <DropdownButton buttonSize={ButtonSizes.Medium} buttonType={ButtonTypes.UdeSecondary}>
+      <DropdownButton
+        buttonSize={DropdownButton.Sizes.Medium}
+        buttonType={DropdownButton.Types.UdeSecondary}
+      >
         Button
       </DropdownButton>
     );
@@ -806,7 +849,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.Primary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Primary}>
         Button
       </Button>
     );
@@ -815,7 +858,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.Secondary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Secondary}>
         Button
       </Button>
     );
@@ -824,7 +867,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.Delete}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Delete}>
         Button
       </Button>
     );
@@ -833,7 +876,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, UDE primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
         Button
       </Button>
     );
@@ -842,7 +885,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, UDE secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
         Button
       </Button>
     );
@@ -851,7 +894,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, UDE delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
         Button
       </Button>
     );
@@ -860,7 +903,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, outline blue button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
         Button
       </Button>
     );
@@ -869,7 +912,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, outline dark button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.OutlineDark}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
         Button
       </Button>
     );
@@ -878,7 +921,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, outline white button', () => {
     const component = renderer.create(
-      <Button buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.OutlineWhite}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
         Button
       </Button>
     );
@@ -887,7 +930,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, text button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.Text}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Default}>
         Button
       </TextButton>
     );
@@ -897,10 +940,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.Text}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.Default}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -911,10 +954,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.Text}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.Default}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -924,7 +967,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, text button with all caps', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.TextAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.AllCaps}>
         Button
       </TextButton>
     );
@@ -934,10 +977,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text button with all caps with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextAllCaps}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.AllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -948,10 +991,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text button with all caps with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextAllCaps}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.AllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -961,7 +1004,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, text dark button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.TextDark}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Dark}>
         Button
       </TextButton>
     );
@@ -970,7 +1013,7 @@ describe('Button Snapshots', () => {
 
   test('renders a small, text dark button with all caps', () => {
     const component = renderer.create(
-      <TextButton buttonSize={ButtonSizes.Small} buttonType={ButtonTypes.TextDarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.DarkAllCaps}>
         Button
       </TextButton>
     );
@@ -980,10 +1023,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text dark button with all caps and left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -994,10 +1037,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text dark button with all caps and right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextDarkAllCaps}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.DarkAllCaps}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>
@@ -1008,10 +1051,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text dark button with a left icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextDark}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.Dark}
         icon={editIcon}
-        iconPosition={IconPositions.Left}
+        iconPosition={TextButton.IconPositions.Left}
       >
         Button
       </TextButton>
@@ -1022,10 +1065,10 @@ describe('Button Snapshots', () => {
   test('renders a small, text dark button with a right icon', () => {
     const component = renderer.create(
       <TextButton
-        buttonSize={ButtonSizes.Small}
-        buttonType={ButtonTypes.TextDark}
+        buttonSize={TextButton.Sizes.Small}
+        buttonType={TextButton.Types.Dark}
         icon={editIcon}
-        iconPosition={IconPositions.Right}
+        iconPosition={TextButton.IconPositions.Right}
       >
         Button
       </TextButton>

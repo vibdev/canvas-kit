@@ -1,7 +1,7 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing, GenericStyle} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
-import {ButtonTypes, ButtonSizes, IconPositions} from './types';
+import {ButtonTypes, ButtonSizes, IconPositions, AllButtonTypes, TextButtonTypes} from './types';
 import * as ButtonColors from './ButtonColors';
 
 export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
@@ -10,7 +10,7 @@ export const CANVAS_BUTTON_HEIGHT_SMALL: number = 18;
 
 export interface ButtonGenericStyle extends GenericStyle {
   variants?: {
-    types: {[key in ButtonTypes | IconPositions]?: CSSObject};
+    types: {[key in AllButtonTypes | IconPositions]?: CSSObject};
     sizes: {[key in ButtonSizes]?: CSSObject};
   };
 }
@@ -259,17 +259,17 @@ export const textButtonStyles: ButtonGenericStyle = {
   variants: {
     types: {
       text: {
-        ...getButtonStateStyle(ButtonTypes.Text),
+        ...getButtonStateStyle(TextButtonTypes.Default),
       },
       textDark: {
-        ...getButtonStateStyle(ButtonTypes.TextDark),
+        ...getButtonStateStyle(TextButtonTypes.Dark),
       },
       textAllCaps: {
-        ...getButtonStateStyle(ButtonTypes.Text),
+        ...getButtonStateStyle(TextButtonTypes.Default),
         height: '32px',
       },
       textDarkAllCaps: {
-        ...getButtonStateStyle(ButtonTypes.TextDark),
+        ...getButtonStateStyle(TextButtonTypes.Dark),
         height: '32px',
       },
     },
@@ -307,7 +307,7 @@ export const iconButtonStyles: ButtonGenericStyle = {
   },
 };
 
-function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
+function getButtonStateStyle(buttonType: AllButtonTypes): CSSObject {
   const buttonColors = getButtonColors(buttonType);
 
   return {
@@ -387,7 +387,7 @@ function getButtonStateStyle(buttonType: ButtonTypes): CSSObject {
   };
 }
 
-function getButtonColors(buttonType: ButtonTypes): ButtonColors.GenericButtonColors {
+function getButtonColors(buttonType: AllButtonTypes): ButtonColors.GenericButtonColors {
   switch (buttonType) {
     case ButtonTypes.Primary:
       return canvas.buttonColors.primary;
@@ -404,9 +404,9 @@ function getButtonColors(buttonType: ButtonTypes): ButtonColors.GenericButtonCol
       return ButtonColors.outlineDarkColors;
     case ButtonTypes.OutlineWhite:
       return ButtonColors.outlineWhiteColors;
-    case ButtonTypes.Text:
+    case TextButtonTypes.Default:
       return ButtonColors.textColors;
-    case ButtonTypes.TextDark:
+    case TextButtonTypes.Dark:
       return ButtonColors.textDarkColors;
     case ButtonTypes.UdePrimary:
       return ButtonColors.udePrimaryColors;

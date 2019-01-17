@@ -5,7 +5,9 @@ import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {labelDataBaseStyles} from './ButtonStyles';
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, GrowthBehavior {
+export interface ButtonProps<T = ButtonTypes>
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    GrowthBehavior {
   /**
    * Button cannot be empty.
    */
@@ -13,7 +15,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * Type of button.
    */
-  buttonType?: ButtonTypes;
+  buttonType?: T;
   /**
    * Size of button.
    */

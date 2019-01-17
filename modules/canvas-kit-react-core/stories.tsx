@@ -1,7 +1,7 @@
 /// <reference path="../../typings.d.ts" />
 import * as React from 'react';
-import styled, { css } from 'react-emotion';
-import { storiesOf } from '@storybook/react';
+import styled, {css} from 'react-emotion';
+import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
 import canvas from './index'; // tslint:disable-line:import-name
@@ -39,7 +39,7 @@ storiesOf('Canvas Kit/Core', module)
       background: '#667380',
       padding: '2px 8px',
       borderRadius: '3px',
-    }
+    };
 
     return (
       <div className="story">
@@ -96,5 +96,5 @@ storiesOf('Canvas Kit/Core', module)
           <span className={css(canvas.type.body, canvas.type.variant.mono)}>Mono Text</span>
         </section>
       </div>
-    )
+    );
   });
