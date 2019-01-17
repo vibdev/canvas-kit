@@ -125,7 +125,7 @@ export const outlineWhiteColors: GenericButtonColors = {
   background: 'transparent',
   border: canvas.colors.frenchVanilla100,
   text: canvas.colors.frenchVanilla100,
-  activeBackground: canvas.colors.soap200,
+  activeBackground: canvas.colors.soap300,
   activeBorder: 'transparent',
   activeText: canvas.colors.blackPepper400,
   disabledBackground: 'transparent',

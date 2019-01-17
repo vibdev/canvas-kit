@@ -4436,7 +4436,7 @@ exports[`Button Snapshots renders a large, outline white button 1`] = `
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -4625,7 +4625,7 @@ exports[`Button Snapshots renders a large, outline white button with a data lab
 .emotion-2:active,
 .emotion-2:focus:active,
 .emotion-2:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -4847,7 +4847,7 @@ exports[`Button Snapshots renders a large, outline white button with an icon 1`
 .emotion-3:active,
 .emotion-3:focus:active,
 .emotion-3:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -5093,7 +5093,7 @@ exports[`Button Snapshots renders a large, outline white button with an icon an
 .emotion-4:active,
 .emotion-4:focus:active,
 .emotion-4:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -12407,7 +12407,7 @@ exports[`Button Snapshots renders a medium, outline white button 1`] = `
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -12597,7 +12597,7 @@ exports[`Button Snapshots renders a medium, outline white button with a data lab
 .emotion-2:active,
 .emotion-2:focus:active,
 .emotion-2:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -12819,7 +12819,7 @@ exports[`Button Snapshots renders a medium, outline white button with an icon 1`
 .emotion-3:active,
 .emotion-3:focus:active,
 .emotion-3:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -13066,7 +13066,7 @@ exports[`Button Snapshots renders a medium, outline white button with an icon an
 .emotion-4:active,
 .emotion-4:focus:active,
 .emotion-4:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
@@ -14312,7 +14312,7 @@ exports[`Button Snapshots renders a small, outline white button 1`] = `
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: transparent;
   color: #333333;
 }
