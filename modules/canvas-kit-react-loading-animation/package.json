@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-loading-animation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Components that display animations while a page or component loads.",
   "homepage": "https://workdaydesign.com",
   "author": "",
