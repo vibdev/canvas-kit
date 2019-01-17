@@ -2,7 +2,7 @@ import * as React from 'react';
 import InputProvider, {InputType, InputEventType, inputEventMap} from '../lib/InputProvider';
 import {mount} from 'enzyme';
 
-const testInput = (mockEvent: Object, inputType: InputType) => {
+const testInput = (mockEvent: {type: string}, inputType: InputType) => {
   // https://github.com/airbnb/enzyme/issues/426#issuecomment-228601631
   const map: any = {};
   window.addEventListener = jest.fn((event, cb) => {
@@ -10,8 +10,8 @@ const testInput = (mockEvent: Object, inputType: InputType) => {
   });
 
   const component = mount(<InputProvider />);
-  // @ts-ignore
-  map.keydown(mockEvent);
+  const eventType = mockEvent.type!;
+  map[eventType](mockEvent);
 
   expect(component.getDOMNode().getAttribute('data-whatinput')).toBe(inputType);
   expect(component.getDOMNode().getAttribute('data-whatintent')).toBe(inputType);
