@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Components that display animations while a page or component loads.",
   "homepage": "https://workdaydesign.com",
-  "author": "",
+  "author": "Alex Kong <alex.kong@workday.com>",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
