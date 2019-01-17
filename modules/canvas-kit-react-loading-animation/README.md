@@ -1,13 +1,38 @@
-# Canvas Kit CSS Loading-animations
+# Canvas Kit CSS Loading Animations
 
 Components that display animations while a page or component loads.
 
-## Usage
+## Installation
 
-```html
-<LoadingAnimation />
+```sh
+yarn add @workday/canvas-kit-react
 ```
 
-### Loading Spinner
+or
 
-The loading spinner will be used to replace all current instances of the loading spinner.
+```sh
+yarn add @workday/canvas-kit-react-fat
+```
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {LoadingAnimation} from '@workday/canvas-kit-react-loading-animation';
+
+<LoadingAnimation />;
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+> None
