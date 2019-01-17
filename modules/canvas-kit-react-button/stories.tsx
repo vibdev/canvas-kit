@@ -5,7 +5,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {
   editIcon,
-  mediaPlayIcon,
+  playCircleIcon,
   arrowRightIcon,
   activityStreamIcon,
 } from '@workday/canvas-system-icons-web';
@@ -134,7 +134,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.UdePrimary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Primary
@@ -142,7 +142,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.UdeSecondary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
@@ -152,7 +152,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         disabled={true}
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.UdePrimary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Primary
@@ -161,7 +161,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         disabled={true}
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.UdeSecondary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
@@ -194,7 +194,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.UdePrimary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Primary
@@ -202,7 +202,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.UdeSecondary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
@@ -212,7 +212,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         disabled={true}
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.UdePrimary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Primary
@@ -221,7 +221,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         disabled={true}
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.UdeSecondary}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
@@ -262,13 +262,13 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon}>
         Highlight
       </Button>
-      <Button buttonType={Button.Types.Highlight} icon={mediaPlayIcon} dataLabel={'2:00'}>
+      <Button buttonType={Button.Types.Highlight} icon={playCircleIcon} dataLabel={'2:00'}>
         Highlight
       </Button>
       <Button
         disabled={true}
         buttonType={Button.Types.Highlight}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'2:00'}
       >
         Highlight
@@ -278,14 +278,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.Highlight}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
       >
         Highlight
       </Button>
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.Highlight}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Highlight
@@ -294,7 +294,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         disabled={true}
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.Highlight}
-        icon={mediaPlayIcon}
+        icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Highlight
@@ -350,7 +350,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={Button.Sizes.Large}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineBlue}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Blue
         </Button>
@@ -358,7 +358,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={Button.Sizes.Large}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineDark}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Dark
         </Button>
@@ -367,7 +367,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonSize={Button.Sizes.Large}
             dataLabel={'1:00'}
             buttonType={Button.Types.OutlineWhite}
-            icon={mediaPlayIcon}
+            icon={playCircleIcon}
           >
             Outline White
           </Button>
@@ -380,7 +380,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           disabled={true}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineBlue}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Blue
         </Button>
@@ -389,7 +389,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           disabled={true}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineDark}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Dark
         </Button>
@@ -399,7 +399,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             disabled={true}
             dataLabel={'1:00'}
             buttonType={Button.Types.OutlineWhite}
-            icon={mediaPlayIcon}
+            icon={playCircleIcon}
           >
             Outline White
           </Button>
@@ -451,7 +451,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={Button.Sizes.Medium}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineBlue}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Blue
         </Button>
@@ -459,7 +459,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={Button.Sizes.Medium}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineDark}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Dark
         </Button>
@@ -468,7 +468,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonSize={Button.Sizes.Medium}
             dataLabel={'1:00'}
             buttonType={Button.Types.OutlineWhite}
-            icon={mediaPlayIcon}
+            icon={playCircleIcon}
           >
             Outline White
           </Button>
@@ -481,7 +481,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           disabled={true}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineBlue}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Blue
         </Button>
@@ -490,7 +490,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           disabled={true}
           dataLabel={'1:00'}
           buttonType={Button.Types.OutlineDark}
-          icon={mediaPlayIcon}
+          icon={playCircleIcon}
         >
           Outline Dark
         </Button>
@@ -500,7 +500,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             disabled={true}
             dataLabel={'1:00'}
             buttonType={Button.Types.OutlineWhite}
-            icon={mediaPlayIcon}
+            icon={playCircleIcon}
           >
             Outline White
           </Button>
