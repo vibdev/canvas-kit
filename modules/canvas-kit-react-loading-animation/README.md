@@ -1,4 +1,4 @@
-# Canvas Kit CSS Loading Animations
+# Canvas Kit CSS Loading Animation
 
 Components that display animations while a page or component loads.
 
