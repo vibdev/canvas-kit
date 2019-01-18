@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-loading-animation",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A component that renders a loading animation.",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Kong <alex.kong@workday.com>",
