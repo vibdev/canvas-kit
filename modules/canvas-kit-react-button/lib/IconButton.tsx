@@ -9,6 +9,8 @@ const IconButtonCon = styled(ButtonBaseCon)(iconButtonStyles.styles);
 
 export default class IconButton extends React.Component<ButtonProps> {
   public render() {
-    return <IconButtonCon buttonType={ButtonTypes.Secondary} {...this.props} />;
+    return (
+      <IconButtonCon {...this.props} buttonType={ButtonTypes.Secondary} buttonSize={undefined} />
+    );
   }
 }
