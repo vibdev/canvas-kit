@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.1.1...@workday/canvas-kit-react@1.1.2) (2019-01-18)
+
+
+### Bug Fixes
+
+* **loading-animation:** add import for new component in index.ts ([6900500](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/6900500))
+
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.1.0...@workday/canvas-kit-react@1.1.1) (2019-01-15)
 
