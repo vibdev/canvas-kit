@@ -8,6 +8,7 @@ Includes:
 - [Spacing](#spacing)
 - [Depth](#depth)
 - [Type](#type)
+- [InputProvider](#input-provider)
 
 ## Installation
 
@@ -237,3 +238,99 @@ import {type} from '@workday/canvas-kit-react-core';
 ```tsx
 <span className={css(canvas.type.body, canvas.type.variant.inverse)}>Inverse Text</span>
 ```
+
+# InputProvider
+
+This is a higher order (wrapping) component for providing css-referencable data attributes for the
+users current input. Focus outlines are required for accesibility, but they can be unnecessary
+visual noise when using a mouse. This allows us to hide focus outlines (as desired) while the user
+is interacting with components using a mouse, touch, etc. and show them when keyboard navigation
+begins.This logic is heavily influenced by [what-input](https://github.com/ten1seven/what-input).
+
+**We strongly encouraged you to use this in your application to wrap all Canvas components**. You
+can use it to style your own components as well.
+
+### Definitions
+
+**Input**: The current input method from the user.
+
+- Equal to one of [`InputTypes`](#inputtypes)
+- Triggered by the following events: - `keydown` - `keyup` - `mousedown` - `MSPointerDown` -
+  `pointerdown` - `touchstart`
+
+**Intent**: The potential next input method from the user. Mouse, pointer and mouse wheel events
+only demonstrate potential, but not actual, interaction and are treated separately. Note: if input
+type updates from the events above, the intent type will also be updated to the same value.
+
+- Equal to one of [`InputTypes`](#inputtypes)
+- Triggered by the following events:
+  - `mousemove`
+  - `MSPointerMove`
+  - `pointermove`
+  - `wheel`
+  - `mousewheel`
+  - `DOMMouseScroll`
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {InputProvider} from '@workday/canvas-kit-react-core';
+
+<InputProvider>{/* All your components containing any Canvas components */}</InputProvider>;
+```
+
+This will result in a wrapping div with two data attributes:
+
+```html
+<div data-whatinput="mouse" data-whatinput="mouse"><!-- All your components' HTML --></div>
+```
+
+Now in any component within this wrapper, you can use these data attributes to customize the focus
+handling.
+
+**React/Emotion:**
+
+```js
+[`[data-whatinput='mouse'],
+  [data-whatinput='touch'],
+  [data-whatinput='pointer']`]: {
+  '&:focus': {
+    outline: 'none',
+    border: 'none',
+  },
+},
+```
+
+**SCSS:**
+
+```scss
+[data-whatinput='mouse'],
+[data-whatinput='touch'],
+[data-whatinput='pointer'] {
+  .my-component:focus {
+    outline: none;
+    border: none;
+  }
+}
+```
+
+**Note:** It is best practice to show focus outlines by default and specifically hide them in the
+cases you would like (i.e. mouse/touch/pointer input).
+
+## Static Properties
+
+#### `InputTypes`
+
+| Theme      |
+| ---------- |
+| `Keyboard` |
+| `Mouse`    |
+| `Pointer`  |
+| `Touch`    |
+
+---
+
+## Component Props
+
+> None
