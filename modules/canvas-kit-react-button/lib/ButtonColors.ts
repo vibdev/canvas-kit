@@ -1,23 +1,10 @@
 import canvas, {typeColors} from '@workday/canvas-kit-react-core';
 import {AllButtonTypes, ButtonTypes, TextButtonTypes} from './types';
 
-export interface CanvasButtonColors {
-  activeBackground?: string;
-  activeBorder?: string;
-  activeText?: string;
-  background?: string;
-  border?: string;
-  disabledBackground?: string;
-  disabledBorder?: string;
-  disabledText?: string;
-  focusBackground?: string;
-  focusBorder?: string;
-  focusText?: string;
-  hoverBackground?: string;
-  hoverBorder?: string;
-  hoverText?: string;
-  text?: string;
-}
+export interface CanvasButtonColors
+  extends Partial<typeof canvas.buttonColors.secondary>,
+    Partial<typeof canvas.buttonColors.primary>,
+    Partial<typeof canvas.buttonColors.delete> {}
 
 export interface GenericButtonColors extends CanvasButtonColors {
   focusRingInnerBorder?: string;
