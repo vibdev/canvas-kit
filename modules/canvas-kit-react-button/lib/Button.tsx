@@ -38,7 +38,7 @@ export default class Button extends React.Component<ButtonProps> {
   public static Types = ButtonTypes;
   public static Sizes = ButtonSizes;
 
-  static defaultProps: Partial<ButtonProps> = {
+  static defaultProps = {
     buttonSize: ButtonSizes.Large,
     buttonType: ButtonTypes.Secondary,
     grow: false,
