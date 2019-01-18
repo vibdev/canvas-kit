@@ -1,7 +1,14 @@
 import canvas from '@workday/canvas-kit-react-core';
 import {focusRing, GenericStyle} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
-import {ButtonTypes, ButtonSizes, IconPositions, AllButtonTypes, TextButtonTypes} from './types';
+import {
+  ButtonTypes,
+  ButtonSizes,
+  IconPositions,
+  AllButtonTypes,
+  TextButtonTypes,
+  BetaButtonTypes,
+} from './types';
 import {ButtonColors} from './ButtonColors';
 
 export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
@@ -187,26 +194,26 @@ export const betaButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      [ButtonTypes.BetaPrimary]: {
-        ...getButtonStateStyle(ButtonTypes.BetaPrimary),
+      [BetaButtonTypes.Primary]: {
+        ...getButtonStateStyle(BetaButtonTypes.Primary),
       },
-      [ButtonTypes.BetaSecondary]: {
-        ...getButtonStateStyle(ButtonTypes.BetaSecondary),
+      [BetaButtonTypes.Secondary]: {
+        ...getButtonStateStyle(BetaButtonTypes.Secondary),
       },
-      [ButtonTypes.BetaDelete]: {
-        ...getButtonStateStyle(ButtonTypes.BetaDelete),
+      [BetaButtonTypes.Delete]: {
+        ...getButtonStateStyle(BetaButtonTypes.Delete),
       },
-      [ButtonTypes.Highlight]: {
-        ...getButtonStateStyle(ButtonTypes.Highlight),
+      [BetaButtonTypes.Highlight]: {
+        ...getButtonStateStyle(BetaButtonTypes.Highlight),
       },
-      [ButtonTypes.OutlinePrimary]: {
-        ...getButtonStateStyle(ButtonTypes.OutlinePrimary),
+      [BetaButtonTypes.OutlinePrimary]: {
+        ...getButtonStateStyle(BetaButtonTypes.OutlinePrimary),
       },
-      [ButtonTypes.OutlineSecondary]: {
-        ...getButtonStateStyle(ButtonTypes.OutlineSecondary),
+      [BetaButtonTypes.OutlineSecondary]: {
+        ...getButtonStateStyle(BetaButtonTypes.OutlineSecondary),
       },
-      [ButtonTypes.OutlineInverse]: {
-        ...getButtonStateStyle(ButtonTypes.OutlineInverse),
+      [BetaButtonTypes.OutlineInverse]: {
+        ...getButtonStateStyle(BetaButtonTypes.OutlineInverse),
       },
     },
     sizes: {
@@ -236,8 +243,8 @@ export const dropdownButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      [ButtonTypes.BetaPrimary]: betaButtonStyles.variants!.types[ButtonTypes.BetaPrimary],
-      [ButtonTypes.BetaSecondary]: betaButtonStyles.variants!.types[ButtonTypes.BetaSecondary],
+      [BetaButtonTypes.Primary]: betaButtonStyles.variants!.types[BetaButtonTypes.Primary],
+      [BetaButtonTypes.Secondary]: betaButtonStyles.variants!.types[BetaButtonTypes.Secondary],
     },
     sizes: {
       [ButtonSizes.Large]: betaButtonStyles.variants!.sizes.large,
@@ -399,7 +406,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
       return focusRing(1);
-    case ButtonTypes.OutlineInverse:
+    case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     case TextButtonTypes.Default:
     case TextButtonTypes.Inverse:

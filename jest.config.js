@@ -18,7 +18,7 @@ module.exports = {
     '**/canvas-kit-react-toggle/**/*.{tsx}',
     '**/canvas-kit-react-loading-animation/**/*.{tsx}',
     '!**/index.{ts,tsx,js,jsx}',
-    '!**/stories.{ts,tsx,js,jsx}',
+    '!**/stories*.{ts,tsx,js,jsx}',
   ],
   coverageReporters: ['text', 'clover', 'html'],
   coverageDirectory: '<rootDir>/build/reports/jest',

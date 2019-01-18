@@ -1,6 +1,13 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {ButtonSizes, ButtonTypes, IconPositions, AllButtonTypes, TextButtonTypes} from './types';
+import {
+  ButtonSizes,
+  ButtonTypes,
+  IconPositions,
+  AllButtonTypes,
+  TextButtonTypes,
+  BetaButtonTypes,
+} from './types';
 import {ButtonProps} from './Button';
 import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
@@ -175,20 +182,20 @@ export function getButtonStyle(
       return types[ButtonTypes.Secondary];
     case ButtonTypes.Delete:
       return types[ButtonTypes.Delete];
-    case ButtonTypes.Highlight:
-      return types[ButtonTypes.Highlight];
-    case ButtonTypes.OutlinePrimary:
-      return types[ButtonTypes.OutlinePrimary];
-    case ButtonTypes.OutlineSecondary:
-      return types[ButtonTypes.OutlineSecondary];
-    case ButtonTypes.OutlineInverse:
-      return types[ButtonTypes.OutlineInverse];
-    case ButtonTypes.BetaPrimary:
-      return types[ButtonTypes.BetaPrimary];
-    case ButtonTypes.BetaSecondary:
-      return types[ButtonTypes.BetaSecondary];
-    case ButtonTypes.BetaDelete:
-      return types[ButtonTypes.BetaDelete];
+    case BetaButtonTypes.Highlight:
+      return types[BetaButtonTypes.Highlight];
+    case BetaButtonTypes.OutlinePrimary:
+      return types[BetaButtonTypes.OutlinePrimary];
+    case BetaButtonTypes.OutlineSecondary:
+      return types[BetaButtonTypes.OutlineSecondary];
+    case BetaButtonTypes.OutlineInverse:
+      return types[BetaButtonTypes.OutlineInverse];
+    case BetaButtonTypes.Primary:
+      return types[BetaButtonTypes.Primary];
+    case BetaButtonTypes.Secondary:
+      return types[BetaButtonTypes.Secondary];
+    case BetaButtonTypes.Delete:
+      return types[BetaButtonTypes.Delete];
     case TextButtonTypes.Default:
       return types[TextButtonTypes.Default];
     case TextButtonTypes.Inverse:
@@ -200,20 +207,20 @@ export function getButtonStyle(
   }
 }
 
-function getBaseButton(buttonType: ButtonTypes) {
+function getBaseButton(buttonType: ButtonTypes | BetaButtonTypes) {
   switch (buttonType) {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
     case ButtonTypes.Delete:
     default:
       return ButtonStyles.canvasButtonStyles;
-    case ButtonTypes.BetaPrimary:
-    case ButtonTypes.BetaSecondary:
-    case ButtonTypes.BetaDelete:
-    case ButtonTypes.Highlight:
-    case ButtonTypes.OutlinePrimary:
-    case ButtonTypes.OutlineSecondary:
-    case ButtonTypes.OutlineInverse:
+    case BetaButtonTypes.Primary:
+    case BetaButtonTypes.Secondary:
+    case BetaButtonTypes.Delete:
+    case BetaButtonTypes.Highlight:
+    case BetaButtonTypes.OutlinePrimary:
+    case BetaButtonTypes.OutlineSecondary:
+    case BetaButtonTypes.OutlineInverse:
       return ButtonStyles.betaButtonStyles;
   }
 }

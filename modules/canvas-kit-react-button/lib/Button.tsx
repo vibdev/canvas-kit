@@ -1,11 +1,11 @@
 import * as React from 'react';
 import {ButtonBaseCon, ButtonBaseLabel, ButtonLabelData, ButtonLabelIcon} from './ButtonBase';
-import {ButtonTypes, ButtonSizes} from './types';
+import {ButtonTypes, ButtonSizes, BetaButtonTypes} from './types';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {labelDataBaseStyles} from './ButtonStyles';
 
-export interface ButtonProps<T = ButtonTypes>
+export interface ButtonProps<T = ButtonTypes | BetaButtonTypes>
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     GrowthBehavior {
   /**
@@ -47,14 +47,6 @@ export default class Button extends React.Component<ButtonProps> {
   public render() {
     const {buttonRef, ...elemProps} = this.props;
 
-    // Restrict Hightlight button to only being sized Large, Medium with an Icon
-    if (
-      elemProps.buttonType === ButtonTypes.Highlight &&
-      (elemProps.icon === undefined || elemProps.buttonSize === ButtonSizes.Small)
-    ) {
-      return null;
-    }
-
     return (
       <ButtonBaseCon {...elemProps} innerRef={buttonRef}>
         {elemProps.icon && <ButtonLabelIcon {...elemProps} />}
@@ -68,5 +60,23 @@ export default class Button extends React.Component<ButtonProps> {
         )}
       </ButtonBaseCon>
     );
+  }
+}
+
+// tslint:disable:class-name
+export class beta_Button extends React.Component<ButtonProps<BetaButtonTypes>> {
+  public static Types = BetaButtonTypes;
+  public static Sizes = ButtonSizes;
+
+  render() {
+    // Restrict Hightlight button to only being sized Large, Medium with an Icon
+    if (
+      this.props.buttonType === BetaButtonTypes.Highlight &&
+      (this.props.icon === undefined || this.props.buttonSize === ButtonSizes.Small)
+    ) {
+      return null;
+    }
+
+    return <Button {...this.props} />;
   }
 }

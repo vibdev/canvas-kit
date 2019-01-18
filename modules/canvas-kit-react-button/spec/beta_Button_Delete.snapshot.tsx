@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import Button from '../lib/Button';
+import {beta_Button as Button} from '../lib/Button';
 
-describe('Button (Delete) Snapshots', () => {
+describe('Button (Delete) Snapshots (beta)', () => {
   test('renders a large, delete button', () => {
     const component = renderer.create(
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>

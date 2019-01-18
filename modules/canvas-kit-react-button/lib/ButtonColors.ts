@@ -1,5 +1,5 @@
 import canvas, {typeColors} from '@workday/canvas-kit-react-core';
-import {AllButtonTypes, ButtonTypes, TextButtonTypes} from './types';
+import {AllButtonTypes, ButtonTypes, TextButtonTypes, BetaButtonTypes} from './types';
 
 export interface CanvasButtonColors
   extends Partial<typeof canvas.buttonColors.secondary>,
@@ -27,7 +27,7 @@ export const ButtonColors: ButtonColorCollection = {
   [ButtonTypes.Primary]: canvas.buttonColors.primary,
   [ButtonTypes.Secondary]: canvas.buttonColors.secondary,
   [ButtonTypes.Delete]: canvas.buttonColors.delete,
-  [ButtonTypes.BetaPrimary]: {
+  [BetaButtonTypes.Primary]: {
     background: canvas.colors.blueberry400,
     border: 'transparent',
     text: canvas.colors.frenchVanilla100,
@@ -49,7 +49,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.frenchVanilla100,
     labelIconDisabled: canvas.colors.frenchVanilla100,
   },
-  [ButtonTypes.BetaSecondary]: {
+  [BetaButtonTypes.Secondary]: {
     background: canvas.colors.soap200,
     border: 'transparent',
     text: canvas.colors.blackPepper400,
@@ -72,7 +72,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconDisabled: canvas.colors.soap600,
     labelData: typeColors.hint,
   },
-  [ButtonTypes.BetaDelete]: {
+  [BetaButtonTypes.Delete]: {
     background: canvas.colors.cinnamon500,
     border: canvas.colors.cinnamon500,
     text: canvas.colors.frenchVanilla100,
@@ -88,7 +88,7 @@ export const ButtonColors: ButtonColorCollection = {
     hoverBorder: canvas.colors.cinnamon600,
     hoverText: canvas.colors.frenchVanilla100,
   },
-  [ButtonTypes.Highlight]: {
+  [BetaButtonTypes.Highlight]: {
     background: canvas.colors.soap200,
     border: canvas.colors.soap200,
     text: canvas.colors.blueberry500,
@@ -110,7 +110,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.blueberry500,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [ButtonTypes.OutlinePrimary]: {
+  [BetaButtonTypes.OutlinePrimary]: {
     background: 'transparent',
     border: canvas.colors.blueberry400,
     text: canvas.colors.blueberry400,
@@ -132,7 +132,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.frenchVanilla100,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [ButtonTypes.OutlineSecondary]: {
+  [BetaButtonTypes.OutlineSecondary]: {
     background: 'transparent',
     border: canvas.colors.soap500,
     text: canvas.colors.blackPepper400,
@@ -154,7 +154,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.frenchVanilla100,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [ButtonTypes.OutlineInverse]: {
+  [BetaButtonTypes.OutlineInverse]: {
     background: 'transparent',
     border: canvas.colors.frenchVanilla100,
     text: canvas.colors.frenchVanilla100,

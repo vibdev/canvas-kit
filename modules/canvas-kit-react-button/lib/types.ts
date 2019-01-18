@@ -14,13 +14,16 @@ export enum ButtonTypes {
   Primary = 'primary',
   Secondary = 'secondary',
   Delete = 'delete',
+}
+
+export enum BetaButtonTypes {
+  Primary = 'betaPrimary',
+  Secondary = 'betaSecondary',
+  Delete = 'betaDelete',
   Highlight = 'highlight',
   OutlinePrimary = 'outlinePrimary',
   OutlineSecondary = 'outlineSecondary',
   OutlineInverse = 'outlineInverse',
-  BetaPrimary = 'betaPrimary',
-  BetaSecondary = 'betaSecondary',
-  BetaDelete = 'betaDelete',
 }
 
 export enum TextButtonTypes {
@@ -30,7 +33,7 @@ export enum TextButtonTypes {
   InverseAllCaps = 'textInverseAllCaps',
 }
 
-export type AllButtonTypes = ButtonTypes | TextButtonTypes;
+export type AllButtonTypes = ButtonTypes | BetaButtonTypes | TextButtonTypes;
 
 /**
  * The different icon positions.

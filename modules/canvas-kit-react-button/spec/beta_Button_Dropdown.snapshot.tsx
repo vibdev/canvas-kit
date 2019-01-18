@@ -7,7 +7,7 @@ describe('Button (Dropdown) Snapshots', () => {
     const component = renderer.create(
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.BetaPrimary}
+        buttonType={DropdownButton.Types.Primary}
       >
         Button
       </DropdownButton>
@@ -19,7 +19,7 @@ describe('Button (Dropdown) Snapshots', () => {
     const component = renderer.create(
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.BetaPrimary}
+        buttonType={DropdownButton.Types.Primary}
       >
         Button
       </DropdownButton>
@@ -31,7 +31,7 @@ describe('Button (Dropdown) Snapshots', () => {
     const component = renderer.create(
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.BetaSecondary}
+        buttonType={DropdownButton.Types.Secondary}
       >
         Button
       </DropdownButton>
@@ -43,7 +43,7 @@ describe('Button (Dropdown) Snapshots', () => {
     const component = renderer.create(
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.BetaSecondary}
+        buttonType={DropdownButton.Types.Secondary}
       >
         Button
       </DropdownButton>
