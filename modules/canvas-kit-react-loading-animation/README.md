@@ -1,6 +1,6 @@
 # Canvas Kit CSS Loading Animation
 
-Components that display animations while a page or component loads.
+A component that renders a loading animation.
 
 ## Installation
 
@@ -11,7 +11,7 @@ yarn add @workday/canvas-kit-react
 or
 
 ```sh
-yarn add @workday/canvas-kit-react-fat
+yarn add @workday/canvas-kit-react-loading-animation
 ```
 
 ## Usage
