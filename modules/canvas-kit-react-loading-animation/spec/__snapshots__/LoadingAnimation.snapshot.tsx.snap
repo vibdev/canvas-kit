@@ -30,6 +30,10 @@ exports[`LoadingAnimation Snapshots renders as expected 1`] = `
   animation-delay: 0ms;
 }
 
+.emotion-0:last-child {
+  margin-right: 0;
+}
+
 .emotion-1 {
   background-color: #dfe2e6;
   width: 16px;
@@ -55,6 +59,10 @@ exports[`LoadingAnimation Snapshots renders as expected 1`] = `
   animation-delay: 160ms;
 }
 
+.emotion-1:last-child {
+  margin-right: 0;
+}
+
 .emotion-2 {
   background-color: #dfe2e6;
   width: 16px;
@@ -78,6 +86,10 @@ exports[`LoadingAnimation Snapshots renders as expected 1`] = `
   animation-fill-mode: both;
   -webkit-animation-delay: 320ms;
   animation-delay: 320ms;
+}
+
+.emotion-2:last-child {
+  margin-right: 0;
 }
 
 <div

@@ -41,6 +41,9 @@ const LoadingAnimationDot = styled('div')<LoadingDotProps>(
     animationIterationCount: 'infinite',
     animationTimingFunction: 'ease-in-out',
     animationFillMode: 'both',
+    '&:last-child': {
+      marginRight: 0,
+    },
   },
   ({animationDelay}) => ({
     animationDelay: animationDelay + 'ms',
