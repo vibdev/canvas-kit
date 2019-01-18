@@ -675,23 +675,5 @@ storiesOf('Canvas Kit/Button/Beta', module)
       >
         Dropdown Button
       </DropdownButton>
-
-      <h3>Growing Buttons</h3>
-      <div className={css(buttonContainer)}>
-        <DropdownButton
-          grow={true}
-          buttonSize={DropdownButton.Sizes.Large}
-          buttonType={DropdownButton.Types.Primary}
-        >
-          Dropdown Button
-        </DropdownButton>
-        <DropdownButton
-          grow={true}
-          buttonSize={DropdownButton.Sizes.Large}
-          buttonType={DropdownButton.Types.Secondary}
-        >
-          Dropdown Button
-        </DropdownButton>
-      </div>
     </div>
   ));
