@@ -78,10 +78,10 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
 
 .emotion-0:not([disabled]):focus,
 .emotion-0:not([disabled]):active {
+  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
-  border-color: #005cb9;
 }
 
 .emotion-0 .wd-icon {

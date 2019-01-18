@@ -4,30 +4,21 @@ import Button from '../lib/Button';
 import {editIcon} from '@workday/canvas-system-icons-web';
 
 describe('Button (Outline) Snapshots', () => {
-  test('renders a large, outline blue button', () => {
+  test('renders a large, outline primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline blue button with an icon', () => {
-    const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineBlue} icon={editIcon}>
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a large, outline blue button with a data label', () => {
+  test('renders a large, outline primary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineBlue}
-        dataLabel={'1:00'}
+        buttonType={Button.Types.OutlinePrimary}
+        icon={editIcon}
       >
         Button
       </Button>
@@ -35,12 +26,11 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline blue button with an icon and data label', () => {
+  test('renders a large, outline primary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineBlue}
-        icon={editIcon}
+        buttonType={Button.Types.OutlinePrimary}
         dataLabel={'1:00'}
       >
         Button
@@ -49,29 +39,12 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline dark button', () => {
-    const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark}>
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a large, outline dark button with an icon', () => {
-    const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineDark} icon={editIcon}>
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a large, outline dark button with a data label', () => {
+  test('renders a large, outline primary button with an icon and data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineDark}
+        buttonType={Button.Types.OutlinePrimary}
+        icon={editIcon}
         dataLabel={'1:00'}
       >
         Button
@@ -80,13 +53,21 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline dark button with an icon and data label', () => {
+  test('renders a large, outline secondary button', () => {
+    const component = renderer.create(
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a large, outline secondary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineDark}
+        buttonType={Button.Types.OutlineSecondary}
         icon={editIcon}
-        dataLabel={'1:00'}
       >
         Button
       </Button>
@@ -94,21 +75,12 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline white button', () => {
-    const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineWhite}>
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a large, outline white button with an icon', () => {
+  test('renders a large, outline secondary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineWhite}
-        icon={editIcon}
+        buttonType={Button.Types.OutlineSecondary}
+        dataLabel={'1:00'}
       >
         Button
       </Button>
@@ -116,11 +88,12 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline white button with a data label', () => {
+  test('renders a large, outline secondary button with an icon and data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineWhite}
+        buttonType={Button.Types.OutlineSecondary}
+        icon={editIcon}
         dataLabel={'1:00'}
       >
         Button
@@ -129,11 +102,46 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, outline white button with an icon and data label', () => {
+  test('renders a large, outline inverse button', () => {
+    const component = renderer.create(
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a large, outline inverse button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.OutlineWhite}
+        buttonType={Button.Types.OutlineInverse}
+        icon={editIcon}
+      >
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a large, outline inverse button with a data label', () => {
+    const component = renderer.create(
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineInverse}
+        dataLabel={'1:00'}
+      >
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a large, outline inverse button with an icon and data label', () => {
+    const component = renderer.create(
+      <Button
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.OutlineInverse}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -143,20 +151,20 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline blue button', () => {
+  test('renders a medium, outline primary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlinePrimary}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline blue button with an icon', () => {
+  test('renders a medium, outline primary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineBlue}
+        buttonType={Button.Types.OutlinePrimary}
         icon={editIcon}
       >
         Button
@@ -165,11 +173,11 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline blue button with a data label', () => {
+  test('renders a medium, outline primary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineBlue}
+        buttonType={Button.Types.OutlinePrimary}
         dataLabel={'1:00'}
       >
         Button
@@ -178,60 +186,11 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline blue button with an icon and a data label', () => {
+  test('renders a medium, outline primary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineBlue}
-        icon={editIcon}
-        dataLabel={'1:00'}
-      >
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a medium, outline dark button', () => {
-    const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineDark}>
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a medium, outline dark button with an icon', () => {
-    const component = renderer.create(
-      <Button
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineDark}
-        icon={editIcon}
-      >
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a medium, outline dark button with a data label', () => {
-    const component = renderer.create(
-      <Button
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineDark}
-        dataLabel={'1:00'}
-      >
-        Button
-      </Button>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
-  test('renders a medium, outline dark button with an icon and a data label', () => {
-    const component = renderer.create(
-      <Button
-        buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineDark}
+        buttonType={Button.Types.OutlinePrimary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -241,20 +200,20 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline white button', () => {
+  test('renders a medium, outline secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineWhite}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineSecondary}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline white button with an icon', () => {
+  test('renders a medium, outline secondary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineWhite}
+        buttonType={Button.Types.OutlineSecondary}
         icon={editIcon}
       >
         Button
@@ -263,11 +222,11 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline white button with a data label', () => {
+  test('renders a medium, outline secondary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineWhite}
+        buttonType={Button.Types.OutlineSecondary}
         dataLabel={'1:00'}
       >
         Button
@@ -276,11 +235,11 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, outline white button with an icon and a data label', () => {
+  test('renders a medium, outline secondary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.OutlineWhite}
+        buttonType={Button.Types.OutlineSecondary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -290,27 +249,76 @@ describe('Button (Outline) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, outline blue button', () => {
+  test('renders a medium, outline inverse button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineBlue}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineInverse}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, outline dark button', () => {
+  test('renders a medium, outline inverse button with an icon', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineDark}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineInverse}
+        icon={editIcon}
+      >
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, outline white button', () => {
+  test('renders a medium, outline inverse button with a data label', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineWhite}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineInverse}
+        dataLabel={'1:00'}
+      >
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a medium, outline inverse button with an icon and a data label', () => {
+    const component = renderer.create(
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.OutlineInverse}
+        icon={editIcon}
+        dataLabel={'1:00'}
+      >
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a small, outline primary button', () => {
+    const component = renderer.create(
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlinePrimary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a small, outline secondary button', () => {
+    const component = renderer.create(
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineSecondary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a small, outline inverse button', () => {
+    const component = renderer.create(
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineInverse}>
         Button
       </Button>
     );

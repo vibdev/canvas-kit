@@ -1108,7 +1108,7 @@ exports[`Button (Text) Snapshots renders a large, text button with a right icon
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -1257,7 +1257,7 @@ exports[`Button (Text) Snapshots renders a large, text dark all caps button 1`] 
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button with a left icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button with a left icon 1`] = `
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1464,7 +1464,7 @@ exports[`Button (Text) Snapshots renders a large, text dark all caps button with
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button with a right icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button with a right icon 1`] = `
 .emotion-1 {
   display: inline-block;
 }
@@ -1671,7 +1671,7 @@ exports[`Button (Text) Snapshots renders a large, text dark all caps button with
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark button 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse button 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -1812,7 +1812,7 @@ exports[`Button (Text) Snapshots renders a large, text dark button 1`] = `
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark button with a left icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse button with a left icon 1`] = `
 .emotion-2 {
   position: relative;
   text-overflow: ellipsis;
@@ -2011,7 +2011,7 @@ exports[`Button (Text) Snapshots renders a large, text dark button with a left i
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark button with a right icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse button with a right icon 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -2210,7 +2210,7 @@ exports[`Button (Text) Snapshots renders a large, text dark button with a right 
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -2359,7 +2359,7 @@ exports[`Button (Text) Snapshots renders a large, text dark all caps button 1`]
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button with a left icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button with a left icon 1`] = `
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2566,7 +2566,7 @@ exports[`Button (Text) Snapshots renders a large, text dark all caps button wit
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a large, text dark all caps button with a right icon 1`] = `
+exports[`Button (Text) Snapshots renders a large, text inverse all caps button with a right icon 1`] = `
 .emotion-1 {
   display: inline-block;
 }
@@ -3881,7 +3881,7 @@ exports[`Button (Text) Snapshots renders a small, text button with all caps with
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -4022,7 +4022,7 @@ exports[`Button (Text) Snapshots renders a small, text dark button 1`] = `
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button with a left icon 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button with a left icon 1`] = `
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4221,7 +4221,7 @@ exports[`Button (Text) Snapshots renders a small, text dark button with a left i
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button with a right icon 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button with a right icon 1`] = `
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4420,7 +4420,7 @@ exports[`Button (Text) Snapshots renders a small, text dark button with a right 
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button with all caps 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button with all caps 1`] = `
 .emotion-0 {
   position: relative;
   text-overflow: ellipsis;
@@ -4569,7 +4569,7 @@ exports[`Button (Text) Snapshots renders a small, text dark button with all caps
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button with all caps and left icon 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button with all caps and left icon 1`] = `
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4776,7 +4776,7 @@ exports[`Button (Text) Snapshots renders a small, text dark button with all caps
 </button>
 `;
 
-exports[`Button (Text) Snapshots renders a small, text dark button with all caps and right icon 1`] = `
+exports[`Button (Text) Snapshots renders a small, text inverse button with all caps and right icon 1`] = `
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;

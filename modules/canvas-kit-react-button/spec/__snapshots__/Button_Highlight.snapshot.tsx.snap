@@ -117,10 +117,10 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 
 .emotion-3:not([disabled]):focus,
 .emotion-3:not([disabled]):active {
+  border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-  border-color: transparent;
 }
 
 .emotion-1 {
@@ -323,10 +323,10 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
+  border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-  border-color: transparent;
 }
 
 .emotion-1 {
@@ -588,10 +588,10 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 
 .emotion-3:not([disabled]):focus,
 .emotion-3:not([disabled]):active {
+  border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-  border-color: transparent;
 }
 
 .emotion-1 {
@@ -794,10 +794,10 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
+  border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-  border-color: transparent;
 }
 
 .emotion-1 {

@@ -78,20 +78,20 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button', () => {
+  test('renders a large, text inverse all caps button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.DarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.InverseAllCaps}>
         Button
       </TextButton>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button with a left icon', () => {
+  test('renders a large, text inverse all caps button with a left icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Left}
       >
@@ -101,11 +101,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button with a right icon', () => {
+  test('renders a large, text inverse all caps button with a right icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Right}
       >
@@ -115,20 +115,20 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark button', () => {
+  test('renders a large, text inverse button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Dark}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
         Button
       </TextButton>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark button with a left icon', () => {
+  test('renders a large, text inverse button with a left icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.Dark}
+        buttonType={TextButton.Types.Inverse}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Left}
       >
@@ -138,11 +138,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark button with a right icon', () => {
+  test('renders a large, text inverse button with a right icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.Dark}
+        buttonType={TextButton.Types.Inverse}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Right}
       >
@@ -152,20 +152,20 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button', () => {
+  test('renders a large, text inverse all caps button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.DarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.InverseAllCaps}>
         Button
       </TextButton>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button with a left icon', () => {
+  test('renders a large, text inverse all caps button with a left icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Left}
       >
@@ -175,11 +175,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, text dark all caps button with a right icon', () => {
+  test('renders a large, text inverse all caps button with a right icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Large}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Right}
       >
@@ -263,29 +263,29 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button', () => {
+  test('renders a small, text inverse button', () => {
     const component = renderer.create(
-      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Dark}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Inverse}>
         Button
       </TextButton>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button with all caps', () => {
+  test('renders a small, text inverse button with all caps', () => {
     const component = renderer.create(
-      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.DarkAllCaps}>
+      <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.InverseAllCaps}>
         Button
       </TextButton>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button with all caps and left icon', () => {
+  test('renders a small, text inverse button with all caps and left icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Small}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Left}
       >
@@ -295,11 +295,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button with all caps and right icon', () => {
+  test('renders a small, text inverse button with all caps and right icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Small}
-        buttonType={TextButton.Types.DarkAllCaps}
+        buttonType={TextButton.Types.InverseAllCaps}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Right}
       >
@@ -309,11 +309,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button with a left icon', () => {
+  test('renders a small, text inverse button with a left icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Small}
-        buttonType={TextButton.Types.Dark}
+        buttonType={TextButton.Types.Inverse}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Left}
       >
@@ -323,11 +323,11 @@ describe('Button (Text) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, text dark button with a right icon', () => {
+  test('renders a small, text inverse button with a right icon', () => {
     const component = renderer.create(
       <TextButton
         buttonSize={TextButton.Sizes.Small}
-        buttonType={TextButton.Types.Dark}
+        buttonType={TextButton.Types.Inverse}
         icon={editIcon}
         iconPosition={TextButton.IconPositions.Right}
       >
