@@ -2,7 +2,7 @@ import canvas from '@workday/canvas-kit-react-core';
 import {focusRing, GenericStyle} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
 import {ButtonTypes, ButtonSizes, IconPositions, AllButtonTypes, TextButtonTypes} from './types';
-import * as ButtonColors from './ButtonColors';
+import {ButtonColors} from './ButtonColors';
 
 export const CANVAS_BUTTON_HEIGHT_LARGE: number = 40;
 export const CANVAS_BUTTON_HEIGHT_MEDIUM: number = 24;
@@ -32,41 +32,41 @@ export const labelBaseStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      text: {
+      [TextButtonTypes.Default]: {
         padding: '0',
       },
-      textAllCaps: {
+      [TextButtonTypes.AllCaps]: {
         ...canvas.type.variant.caps,
         fontSize: '14px',
         letterSpacing: '.5px',
         padding: '0',
       },
-      primary: {
+      [ButtonTypes.Primary]: {
         fontSize: 'inherit',
         fontWeight: 'inherit',
         padding: '0',
       },
-      secondary: {
+      [ButtonTypes.Secondary]: {
         fontSize: 'inherit',
         fontWeight: 'inherit',
         padding: '0',
       },
-      delete: {
+      [ButtonTypes.Delete]: {
         fontSize: 'inherit',
         fontWeight: 'inherit',
         padding: '0',
       },
     },
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         fontSize: '16px',
         padding: '0 12px',
       },
-      medium: {
+      [ButtonSizes.Medium]: {
         fontSize: '14px',
         padding: '0 8px',
       },
-      small: {
+      [ButtonSizes.Small]: {
         fontSize: '14px',
         padding: '0',
       },
@@ -84,10 +84,10 @@ export const labelDataBaseStyles: ButtonGenericStyle = {
   variants: {
     types: {},
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         paddingRight: '12px',
       },
-      medium: {
+      [ButtonSizes.Medium]: {
         paddingRight: '8px',
         fontSize: '14px',
       },
@@ -102,18 +102,18 @@ export const labelIconBaseStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      iconPositionLeft: {
+      [IconPositions.Left]: {
         padding: '0 8px 0 0',
       },
-      iconPositionRight: {
+      [IconPositions.Right]: {
         padding: '0 0 0 8px',
       },
     },
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         paddingLeft: '8px',
       },
-      medium: {
+      [ButtonSizes.Medium]: {
         paddingLeft: '4px',
       },
     },
@@ -140,18 +140,18 @@ export const canvasButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      primary: {
+      [ButtonTypes.Primary]: {
         ...getButtonStateStyle(ButtonTypes.Primary),
       },
-      secondary: {
+      [ButtonTypes.Secondary]: {
         ...getButtonStateStyle(ButtonTypes.Secondary),
       },
-      delete: {
+      [ButtonTypes.Delete]: {
         ...getButtonStateStyle(ButtonTypes.Delete),
       },
     },
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         height: `${CANVAS_BUTTON_HEIGHT_LARGE}px`,
         padding: `0 ${canvas.spacing.l}`,
         minWidth: '112px',
@@ -159,7 +159,7 @@ export const canvasButtonStyles: ButtonGenericStyle = {
         fontSize: '14px',
         fontWeight: 500,
       },
-      medium: {
+      [ButtonSizes.Medium]: {
         height: `${CANVAS_BUTTON_HEIGHT_MEDIUM}px`,
         padding: `0 ${canvas.spacing.m}`,
         minWidth: '80px',
@@ -167,7 +167,7 @@ export const canvasButtonStyles: ButtonGenericStyle = {
         fontSize: '13px',
         fontWeight: 500,
       },
-      small: {
+      [ButtonSizes.Small]: {
         height: `${CANVAS_BUTTON_HEIGHT_SMALL}px`,
         padding: `0 ${canvas.spacing.xxs}`,
         minWidth: '56px',
@@ -187,40 +187,40 @@ export const udeButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      udePrimary: {
+      [ButtonTypes.UdePrimary]: {
         ...getButtonStateStyle(ButtonTypes.UdePrimary),
       },
-      udeSecondary: {
+      [ButtonTypes.UdeSecondary]: {
         ...getButtonStateStyle(ButtonTypes.UdeSecondary),
       },
-      udeDelete: {
+      [ButtonTypes.UdeDelete]: {
         ...getButtonStateStyle(ButtonTypes.UdeDelete),
       },
-      highlight: {
+      [ButtonTypes.Highlight]: {
         ...getButtonStateStyle(ButtonTypes.Highlight),
       },
-      outlineBlue: {
-        ...getButtonStateStyle(ButtonTypes.OutlineBlue),
+      [ButtonTypes.OutlinePrimary]: {
+        ...getButtonStateStyle(ButtonTypes.OutlinePrimary),
       },
-      outlineDark: {
-        ...getButtonStateStyle(ButtonTypes.OutlineDark),
+      [ButtonTypes.OutlineSecondary]: {
+        ...getButtonStateStyle(ButtonTypes.OutlineSecondary),
       },
-      outlineWhite: {
-        ...getButtonStateStyle(ButtonTypes.OutlineWhite),
+      [ButtonTypes.OutlineInverse]: {
+        ...getButtonStateStyle(ButtonTypes.OutlineInverse),
       },
     },
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         minWidth: '112px',
         height: '48px',
         padding: '0 18px',
       },
-      medium: {
+      [ButtonSizes.Medium]: {
         minWidth: '96px',
         height: '40px',
         padding: '0 14px',
       },
-      small: {
+      [ButtonSizes.Small]: {
         minWidth: '80px',
         height: '32px',
         padding: '0 14px',
@@ -236,12 +236,12 @@ export const dropdownButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      udePrimary: udeButtonStyles.variants!.types.udePrimary,
-      udeSecondary: udeButtonStyles.variants!.types.udeSecondary,
+      [ButtonTypes.UdePrimary]: udeButtonStyles.variants!.types.udePrimary,
+      [ButtonTypes.UdeSecondary]: udeButtonStyles.variants!.types.udeSecondary,
     },
     sizes: {
-      large: udeButtonStyles.variants!.sizes.large,
-      medium: udeButtonStyles.variants!.sizes.medium,
+      [ButtonSizes.Large]: udeButtonStyles.variants!.sizes.large,
+      [ButtonSizes.Medium]: udeButtonStyles.variants!.sizes.medium,
     },
   },
 };
@@ -258,27 +258,27 @@ export const textButtonStyles: ButtonGenericStyle = {
   },
   variants: {
     types: {
-      text: {
+      [TextButtonTypes.Default]: {
         ...getButtonStateStyle(TextButtonTypes.Default),
       },
-      textDark: {
-        ...getButtonStateStyle(TextButtonTypes.Dark),
+      [TextButtonTypes.Inverse]: {
+        ...getButtonStateStyle(TextButtonTypes.Inverse),
       },
-      textAllCaps: {
+      [TextButtonTypes.AllCaps]: {
         ...getButtonStateStyle(TextButtonTypes.Default),
         height: '32px',
       },
-      textDarkAllCaps: {
-        ...getButtonStateStyle(TextButtonTypes.Dark),
+      [TextButtonTypes.InverseAllCaps]: {
+        ...getButtonStateStyle(TextButtonTypes.Inverse),
         height: '32px',
       },
     },
     sizes: {
-      large: {
+      [ButtonSizes.Large]: {
         height: '40px',
         padding: '0 8px',
       },
-      small: {
+      [ButtonSizes.Small]: {
         height: '32px',
         padding: '0 8px',
       },
@@ -308,7 +308,11 @@ export const iconButtonStyles: ButtonGenericStyle = {
 };
 
 function getButtonStateStyle(buttonType: AllButtonTypes): CSSObject {
-  const buttonColors = getButtonColors(buttonType);
+  const buttonColors = ButtonColors[buttonType];
+
+  if (buttonColors == null) {
+    return {};
+  }
 
   return {
     backgroundColor: buttonColors.background,
@@ -377,42 +381,39 @@ function getButtonStateStyle(buttonType: AllButtonTypes): CSSObject {
     },
     '&:not([disabled])': {
       '&:focus, &:active': {
-        ...(buttonColors.focusBorder && {
-          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
-          ...{borderColor: buttonColors.focusBorder},
-        }),
-        ...(buttonColors.focusRing && buttonColors.focusRing),
+        borderColor: buttonColors.focusBorder,
+        ...getButtonFocusRing(buttonType),
       },
     },
   };
 }
 
-function getButtonColors(buttonType: AllButtonTypes): ButtonColors.GenericButtonColors {
+function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
+  const buttonColors = ButtonColors[buttonType];
+
+  if (buttonColors == null) {
+    return {};
+  }
+
   switch (buttonType) {
     case ButtonTypes.Primary:
-      return canvas.buttonColors.primary;
     case ButtonTypes.Secondary:
-      return canvas.buttonColors.secondary;
-    case ButtonTypes.Delete:
-      return canvas.buttonColors.delete;
-    case ButtonTypes.Highlight:
-    default:
-      return ButtonColors.highlightColors;
-    case ButtonTypes.OutlineBlue:
-      return ButtonColors.outlineBlueColors;
-    case ButtonTypes.OutlineDark:
-      return ButtonColors.outlineDarkColors;
-    case ButtonTypes.OutlineWhite:
-      return ButtonColors.outlineWhiteColors;
+      return focusRing(1);
+    case ButtonTypes.OutlineInverse:
+      return focusRing(
+        2,
+        2,
+        true,
+        false,
+        buttonColors.focusRingInnerBorder,
+        buttonColors.focusRingOuterBorder
+      );
     case TextButtonTypes.Default:
-      return ButtonColors.textColors;
-    case TextButtonTypes.Dark:
-      return ButtonColors.textDarkColors;
-    case ButtonTypes.UdePrimary:
-      return ButtonColors.udePrimaryColors;
-    case ButtonTypes.UdeSecondary:
-      return ButtonColors.udeSecondaryColors;
-    case ButtonTypes.UdeDelete:
-      return ButtonColors.udeDeleteColors;
+    case TextButtonTypes.Inverse:
+    case TextButtonTypes.AllCaps:
+    case TextButtonTypes.InverseAllCaps:
+      return {};
+    default:
+      return focusRing(2, 2);
   }
 }

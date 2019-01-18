@@ -15,9 +15,9 @@ export enum ButtonTypes {
   Secondary = 'secondary',
   Delete = 'delete',
   Highlight = 'highlight',
-  OutlineBlue = 'outlineBlue',
-  OutlineDark = 'outlineDark',
-  OutlineWhite = 'outlineWhite',
+  OutlinePrimary = 'outlinePrimary',
+  OutlineSecondary = 'outlineSecondary',
+  OutlineInverse = 'outlineInverse',
   UdePrimary = 'udePrimary',
   UdeSecondary = 'udeSecondary',
   UdeDelete = 'udeDelete',
@@ -25,9 +25,9 @@ export enum ButtonTypes {
 
 export enum TextButtonTypes {
   Default = 'text',
-  Dark = 'textDark',
+  Inverse = 'textInverse',
   AllCaps = 'textAllCaps',
-  DarkAllCaps = 'textDarkAllCaps',
+  InverseAllCaps = 'textInverseAllCaps',
 }
 
 export type AllButtonTypes = ButtonTypes | TextButtonTypes;

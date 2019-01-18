@@ -46,10 +46,10 @@ export const ButtonBaseLabel = styled('span')<ButtonProps<AllButtonTypes>>(
 
     switch (buttonType) {
       case TextButtonTypes.Default:
-      case TextButtonTypes.Dark:
+      case TextButtonTypes.Inverse:
         return types.text;
       case TextButtonTypes.AllCaps:
-      case TextButtonTypes.DarkAllCaps:
+      case TextButtonTypes.InverseAllCaps:
         return types.textAllCaps;
       case ButtonTypes.Primary:
         return types.primary;
@@ -170,33 +170,33 @@ export function getButtonStyle(
   switch (buttonType) {
     case ButtonTypes.Primary:
     default:
-      return types.primary;
+      return types[ButtonTypes.Primary];
     case ButtonTypes.Secondary:
-      return types.secondary;
+      return types[ButtonTypes.Secondary];
     case ButtonTypes.Delete:
-      return types.delete;
+      return types[ButtonTypes.Delete];
     case ButtonTypes.Highlight:
-      return types.highlight;
-    case ButtonTypes.OutlineBlue:
-      return types.outlineBlue;
-    case ButtonTypes.OutlineDark:
-      return types.outlineDark;
-    case ButtonTypes.OutlineWhite:
-      return types.outlineWhite;
+      return types[ButtonTypes.Highlight];
+    case ButtonTypes.OutlinePrimary:
+      return types[ButtonTypes.OutlinePrimary];
+    case ButtonTypes.OutlineSecondary:
+      return types[ButtonTypes.OutlineSecondary];
+    case ButtonTypes.OutlineInverse:
+      return types[ButtonTypes.OutlineInverse];
     case ButtonTypes.UdePrimary:
-      return types.udePrimary;
+      return types[ButtonTypes.UdePrimary];
     case ButtonTypes.UdeSecondary:
-      return types.udeSecondary;
+      return types[ButtonTypes.UdeSecondary];
     case ButtonTypes.UdeDelete:
-      return types.udeDelete;
+      return types[ButtonTypes.UdeDelete];
     case TextButtonTypes.Default:
-      return types.text;
-    case TextButtonTypes.Dark:
-      return types.textDark;
+      return types[TextButtonTypes.Default];
+    case TextButtonTypes.Inverse:
+      return types[TextButtonTypes.Inverse];
     case TextButtonTypes.AllCaps:
-      return types.textAllCaps;
-    case TextButtonTypes.DarkAllCaps:
-      return types.textDarkAllCaps;
+      return types[TextButtonTypes.AllCaps];
+    case TextButtonTypes.InverseAllCaps:
+      return types[TextButtonTypes.InverseAllCaps];
   }
 }
 
@@ -211,9 +211,9 @@ function getBaseButton(buttonType: ButtonTypes) {
     case ButtonTypes.UdeSecondary:
     case ButtonTypes.UdeDelete:
     case ButtonTypes.Highlight:
-    case ButtonTypes.OutlineBlue:
-    case ButtonTypes.OutlineDark:
-    case ButtonTypes.OutlineWhite:
+    case ButtonTypes.OutlinePrimary:
+    case ButtonTypes.OutlineSecondary:
+    case ButtonTypes.OutlineInverse:
       return ButtonStyles.udeButtonStyles;
   }
 }
