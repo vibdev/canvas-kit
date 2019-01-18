@@ -400,14 +400,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case ButtonTypes.Secondary:
       return focusRing(1);
     case ButtonTypes.OutlineInverse:
-      return focusRing(
-        2,
-        2,
-        true,
-        false,
-        buttonColors.focusRingInnerBorder,
-        buttonColors.focusRingOuterBorder
-      );
+      return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     case TextButtonTypes.Default:
     case TextButtonTypes.Inverse:
     case TextButtonTypes.AllCaps:

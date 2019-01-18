@@ -7,8 +7,8 @@ export interface CanvasButtonColors
     Partial<typeof canvas.buttonColors.delete> {}
 
 export interface GenericButtonColors extends CanvasButtonColors {
-  focusRingInnerBorder?: string;
-  focusRingOuterBorder?: string;
+  focusRingInner?: string;
+  focusRingOuter?: string;
   labelData?: string;
   labelDataActive?: string;
   labelDataDisabled?: string;
@@ -166,8 +166,8 @@ export const ButtonColors: ButtonColorCollection = {
     disabledText: 'rgba(255, 255, 255, 0.75)',
     focusBackground: canvas.colors.frenchVanilla100,
     focusBorder: 'transparent',
-    focusRingInnerBorder: 'currentColor',
-    focusRingOuterBorder: canvas.colors.frenchVanilla100,
+    focusRingInner: 'currentColor',
+    focusRingOuter: canvas.colors.frenchVanilla100,
     focusText: canvas.colors.blackPepper400,
     hoverBackground: canvas.colors.frenchVanilla100,
     hoverBorder: 'transparent',
