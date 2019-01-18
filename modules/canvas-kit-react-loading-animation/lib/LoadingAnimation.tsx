@@ -48,14 +48,21 @@ const LoadingAnimationDot = styled('div')<LoadingDotProps>(
 );
 
 /**
+ * A simple container for the loading dots.
+ */
+const Container = styled('div')({
+  display: 'inline-block',
+});
+
+/**
  * A simple component that displays three horizontal dots, to be used when some data is loading.
  */
 export default function LoadingAnimation() {
   return (
-    <div>
+    <Container>
       <LoadingAnimationDot animationDelay={0} />
       <LoadingAnimationDot animationDelay={160} />
       <LoadingAnimationDot animationDelay={320} />
-    </div>
+    </Container>
   );
 }

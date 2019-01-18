@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingAnimation Snapshots renders as expected 1`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
 .emotion-0 {
   background-color: #dfe2e6;
   width: 16px;
@@ -76,7 +80,9 @@ exports[`LoadingAnimation Snapshots renders as expected 1`] = `
   animation-delay: 320ms;
 }
 
-<div>
+<div
+  className="emotion-3"
+>
   <div
     className="emotion-0"
   />
