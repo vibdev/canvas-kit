@@ -5,9 +5,8 @@ import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {labelDataBaseStyles} from './ButtonStyles';
 
-export interface ButtonProps<T = ButtonTypes | BetaButtonTypes>
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    GrowthBehavior {
+export interface BaseButtonProps<T = ButtonTypes | BetaButtonTypes>
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Button cannot be empty.
    */
@@ -33,6 +32,10 @@ export interface ButtonProps<T = ButtonTypes | BetaButtonTypes>
    */
   icon?: CanvasSystemIcon;
 }
+
+export interface ButtonProps<T = ButtonTypes | BetaButtonTypes>
+  extends BaseButtonProps<T>,
+    GrowthBehavior {}
 
 export default class Button extends React.Component<ButtonProps> {
   public static Types = ButtonTypes;

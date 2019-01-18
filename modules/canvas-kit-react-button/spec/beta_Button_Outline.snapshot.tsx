@@ -324,4 +324,13 @@ describe('Button (Outline) Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a large, growing outline primary button', () => {
+    const component = renderer.create(
+      <Button grow={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

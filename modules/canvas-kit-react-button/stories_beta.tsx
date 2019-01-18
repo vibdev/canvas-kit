@@ -179,6 +179,15 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.Delete}>
         Delete
       </Button>
+      <h3>Growing Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary} grow={true}>
+          Primary
+        </Button>
+        <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary} grow={true}>
+          Secondary
+        </Button>
+      </div>
     </div>
   ))
   .add('Highlight Buttons', () => (
@@ -225,6 +234,20 @@ storiesOf('Canvas Kit/Button/Beta', module)
       >
         Highlight
       </Button>
+      <h3>Growing Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon} grow={true}>
+          Highlight
+        </Button>
+        <Button
+          buttonType={Button.Types.Highlight}
+          icon={playCircleIcon}
+          dataLabel={'2:00'}
+          grow={true}
+        >
+          Highlight
+        </Button>
+      </div>
     </div>
   ))
   .add('Outline Buttons', () => (
@@ -472,6 +495,23 @@ storiesOf('Canvas Kit/Button/Beta', module)
           </Button>
         </div>
       </div>
+      <h3>Growing Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <Button
+          buttonSize={Button.Sizes.Large}
+          buttonType={Button.Types.OutlinePrimary}
+          grow={true}
+        >
+          Outline Blue
+        </Button>
+        <Button
+          buttonSize={Button.Sizes.Large}
+          buttonType={Button.Types.OutlineSecondary}
+          grow={true}
+        >
+          Outline Dark
+        </Button>
+      </div>
     </div>
   ))
   .add('Text Buttons', () => (
@@ -635,5 +675,23 @@ storiesOf('Canvas Kit/Button/Beta', module)
       >
         Dropdown Button
       </DropdownButton>
+
+      <h3>Growing Buttons</h3>
+      <div className={css(buttonContainer)}>
+        <DropdownButton
+          grow={true}
+          buttonSize={DropdownButton.Sizes.Large}
+          buttonType={DropdownButton.Types.Primary}
+        >
+          Dropdown Button
+        </DropdownButton>
+        <DropdownButton
+          grow={true}
+          buttonSize={DropdownButton.Sizes.Large}
+          buttonType={DropdownButton.Types.Secondary}
+        >
+          Dropdown Button
+        </DropdownButton>
+      </div>
     </div>
   ));

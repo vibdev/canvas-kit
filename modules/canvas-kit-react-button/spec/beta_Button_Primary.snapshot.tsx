@@ -94,4 +94,13 @@ describe('Button (Primary) Snapshots (beta)', () => {
     );
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a large, growing primary button', () => {
+    const component = renderer.create(
+      <Button grow={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

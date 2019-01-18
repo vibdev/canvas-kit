@@ -29,4 +29,13 @@ describe('Button (Delete) Snapshots (beta)', () => {
     );
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a large, growing delete button', () => {
+    const component = renderer.create(
+      <Button grow={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

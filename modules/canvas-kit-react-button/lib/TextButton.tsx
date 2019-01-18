@@ -2,10 +2,10 @@ import * as React from 'react';
 import {ButtonBaseLabel, ButtonLabelIcon, getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
 import {ButtonSizes, IconPositions, TextButtonTypes} from './types';
-import {ButtonProps} from './Button';
+import {BaseButtonProps} from './Button';
 import {textButtonStyles} from './ButtonStyles';
 
-export interface TextButtonProps extends ButtonProps<TextButtonTypes> {
+export interface TextButtonProps extends BaseButtonProps<TextButtonTypes> {
   iconPosition?: IconPositions;
 }
 

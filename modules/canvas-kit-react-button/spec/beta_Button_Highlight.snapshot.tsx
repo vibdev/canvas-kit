@@ -62,4 +62,18 @@ describe('Button (Highlight) Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a large, highlight button with an icon', () => {
+    const component = renderer.create(
+      <Button
+        grow={true}
+        buttonSize={Button.Sizes.Large}
+        buttonType={Button.Types.Highlight}
+        icon={editIcon}
+      >
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

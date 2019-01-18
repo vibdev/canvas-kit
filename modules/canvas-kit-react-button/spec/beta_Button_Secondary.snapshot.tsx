@@ -102,4 +102,13 @@ describe('Button (Secondary) Snapshots (beta)', () => {
     );
     expect(component).toMatchSnapshot();
   });
+
+  test('renders a large, growing secondary button', () => {
+    const component = renderer.create(
+      <Button grow={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
+        Button
+      </Button>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
