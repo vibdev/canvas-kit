@@ -27,7 +27,7 @@ export const ButtonColors: ButtonColorCollection = {
   [ButtonTypes.Primary]: canvas.buttonColors.primary,
   [ButtonTypes.Secondary]: canvas.buttonColors.secondary,
   [ButtonTypes.Delete]: canvas.buttonColors.delete,
-  [ButtonTypes.UdePrimary]: {
+  [ButtonTypes.BetaPrimary]: {
     background: canvas.colors.blueberry400,
     border: 'transparent',
     text: canvas.colors.frenchVanilla100,
@@ -49,7 +49,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.frenchVanilla100,
     labelIconDisabled: canvas.colors.frenchVanilla100,
   },
-  [ButtonTypes.UdeSecondary]: {
+  [ButtonTypes.BetaSecondary]: {
     background: canvas.colors.soap200,
     border: 'transparent',
     text: canvas.colors.blackPepper400,
@@ -72,7 +72,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconDisabled: canvas.colors.soap600,
     labelData: typeColors.hint,
   },
-  [ButtonTypes.UdeDelete]: {
+  [ButtonTypes.BetaDelete]: {
     background: canvas.colors.cinnamon500,
     border: canvas.colors.cinnamon500,
     text: canvas.colors.frenchVanilla100,

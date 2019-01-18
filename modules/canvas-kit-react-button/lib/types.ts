@@ -18,9 +18,9 @@ export enum ButtonTypes {
   OutlinePrimary = 'outlinePrimary',
   OutlineSecondary = 'outlineSecondary',
   OutlineInverse = 'outlineInverse',
-  UdePrimary = 'udePrimary',
-  UdeSecondary = 'udeSecondary',
-  UdeDelete = 'udeDelete',
+  BetaPrimary = 'betaPrimary',
+  BetaSecondary = 'betaSecondary',
+  BetaDelete = 'betaDelete',
 }
 
 export enum TextButtonTypes {

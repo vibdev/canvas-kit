@@ -30,27 +30,27 @@ describe('Button (Delete) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, UDE delete button', () => {
+  test('renders a large, (beta) delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaDelete}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, UDE delete button', () => {
+  test('renders a medium, (beta) delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaDelete}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, UDE delete button', () => {
+  test('renders a small, (beta) delete button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaDelete}>
         Button
       </Button>
     );

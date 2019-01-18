@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button (Primary) Snapshots renders a large, UDE primary button 1`] = `
+exports[`Button (Primary) Snapshots renders a large, (beta) primary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -149,7 +149,7 @@ exports[`Button (Primary) Snapshots renders a large, UDE primary button 1`] = `
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a large, UDE primary button with a data label 1`] = `
+exports[`Button (Primary) Snapshots renders a large, (beta) primary button with a data label 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -320,7 +320,7 @@ exports[`Button (Primary) Snapshots renders a large, UDE primary button with a 
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a large, UDE primary button with an icon 1`] = `
+exports[`Button (Primary) Snapshots renders a large, (beta) primary button with an icon 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -526,7 +526,7 @@ exports[`Button (Primary) Snapshots renders a large, UDE primary button with an
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a large, UDE primary button with an icon and a data label 1`] = `
+exports[`Button (Primary) Snapshots renders a large, (beta) primary button with an icon and a data label 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -871,7 +871,7 @@ exports[`Button (Primary) Snapshots renders a large, primary button 1`] = `
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a medium, UDE primary button 1`] = `
+exports[`Button (Primary) Snapshots renders a medium, (beta) primary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1020,7 +1020,7 @@ exports[`Button (Primary) Snapshots renders a medium, UDE primary button 1`] = `
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a medium, UDE primary button with a data label 1`] = `
+exports[`Button (Primary) Snapshots renders a medium, (beta) primary button with a data label 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1192,7 +1192,7 @@ exports[`Button (Primary) Snapshots renders a medium, UDE primary button with a 
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a medium, UDE primary button with an icon 1`] = `
+exports[`Button (Primary) Snapshots renders a medium, (beta) primary button with an icon 1`] = `
 .emotion-0 {
   display: inline-block;
 }
@@ -1398,7 +1398,7 @@ exports[`Button (Primary) Snapshots renders a medium, UDE primary button with an
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a medium, UDE primary button with an icon and a data label 1`] = `
+exports[`Button (Primary) Snapshots renders a medium, (beta) primary button with an icon and a data label 1`] = `
 .emotion-0 {
   display: inline-block;
 }
@@ -1744,7 +1744,7 @@ exports[`Button (Primary) Snapshots renders a medium, primary button 1`] = `
 </button>
 `;
 
-exports[`Button (Primary) Snapshots renders a small, UDE primary button 1`] = `
+exports[`Button (Primary) Snapshots renders a small, (beta) primary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;

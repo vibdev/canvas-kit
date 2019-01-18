@@ -31,20 +31,20 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, UDE secondary button', () => {
+  test('renders a large, (beta) secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaSecondary}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, UDE secondary button with an icon', () => {
+  test('renders a large, (beta) secondary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={editIcon}
       >
         Button
@@ -53,11 +53,11 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, UDE secondary button with a data label', () => {
+  test('renders a large, (beta) secondary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         dataLabel={'1:00'}
       >
         Button
@@ -66,11 +66,11 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a large, UDE secondary button with an icon and a data label', () => {
+  test('renders a large, (beta) secondary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -80,20 +80,20 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, UDE secondary button', () => {
+  test('renders a medium, (beta) secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaSecondary}>
         Button
       </Button>
     );
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, UDE secondary button with an icon', () => {
+  test('renders a medium, (beta) secondary button with an icon', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={editIcon}
       >
         Button
@@ -102,11 +102,11 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, UDE secondary button with a data label', () => {
+  test('renders a medium, (beta) secondary button with a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         dataLabel={'1:00'}
       >
         Button
@@ -115,11 +115,11 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a medium, UDE secondary button with an icon and a data label', () => {
+  test('renders a medium, (beta) secondary button with an icon and a data label', () => {
     const component = renderer.create(
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={editIcon}
         dataLabel={'1:00'}
       >
@@ -129,9 +129,9 @@ describe('Button (Secondary) Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders a small, UDE secondary button', () => {
+  test('renders a small, (beta) secondary button', () => {
     const component = renderer.create(
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaSecondary}>
         Button
       </Button>
     );

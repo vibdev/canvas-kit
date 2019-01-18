@@ -183,12 +183,12 @@ export function getButtonStyle(
       return types[ButtonTypes.OutlineSecondary];
     case ButtonTypes.OutlineInverse:
       return types[ButtonTypes.OutlineInverse];
-    case ButtonTypes.UdePrimary:
-      return types[ButtonTypes.UdePrimary];
-    case ButtonTypes.UdeSecondary:
-      return types[ButtonTypes.UdeSecondary];
-    case ButtonTypes.UdeDelete:
-      return types[ButtonTypes.UdeDelete];
+    case ButtonTypes.BetaPrimary:
+      return types[ButtonTypes.BetaPrimary];
+    case ButtonTypes.BetaSecondary:
+      return types[ButtonTypes.BetaSecondary];
+    case ButtonTypes.BetaDelete:
+      return types[ButtonTypes.BetaDelete];
     case TextButtonTypes.Default:
       return types[TextButtonTypes.Default];
     case TextButtonTypes.Inverse:
@@ -207,13 +207,13 @@ function getBaseButton(buttonType: ButtonTypes) {
     case ButtonTypes.Delete:
     default:
       return ButtonStyles.canvasButtonStyles;
-    case ButtonTypes.UdePrimary:
-    case ButtonTypes.UdeSecondary:
-    case ButtonTypes.UdeDelete:
+    case ButtonTypes.BetaPrimary:
+    case ButtonTypes.BetaSecondary:
+    case ButtonTypes.BetaDelete:
     case ButtonTypes.Highlight:
     case ButtonTypes.OutlinePrimary:
     case ButtonTypes.OutlineSecondary:
     case ButtonTypes.OutlineInverse:
-      return ButtonStyles.udeButtonStyles;
+      return ButtonStyles.betaButtonStyles;
   }
 }

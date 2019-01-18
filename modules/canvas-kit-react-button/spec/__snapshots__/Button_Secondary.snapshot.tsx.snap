@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button (Secondary) Snapshots renders a large, UDE secondary button 1`] = `
+exports[`Button (Secondary) Snapshots renders a large, (beta) secondary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -153,7 +153,7 @@ exports[`Button (Secondary) Snapshots renders a large, UDE secondary button 1`] 
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a large, UDE secondary button with a data label 1`] = `
+exports[`Button (Secondary) Snapshots renders a large, (beta) secondary button with a data label 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -328,7 +328,7 @@ exports[`Button (Secondary) Snapshots renders a large, UDE secondary button with
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a large, UDE secondary button with an icon 1`] = `
+exports[`Button (Secondary) Snapshots renders a large, (beta) secondary button with an icon 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -538,7 +538,7 @@ exports[`Button (Secondary) Snapshots renders a large, UDE secondary button with
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a large, UDE secondary button with an icon and a data label 1`] = `
+exports[`Button (Secondary) Snapshots renders a large, (beta) secondary button with an icon and a data label 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -887,7 +887,7 @@ exports[`Button (Secondary) Snapshots renders a large, secondary button 1`] = `
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button 1`] = `
+exports[`Button (Secondary) Snapshots renders a medium, (beta) secondary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1040,7 +1040,7 @@ exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button 1`]
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button with a data label 1`] = `
+exports[`Button (Secondary) Snapshots renders a medium, (beta) secondary button with a data label 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1216,7 +1216,7 @@ exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button wit
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button with an icon 1`] = `
+exports[`Button (Secondary) Snapshots renders a medium, (beta) secondary button with an icon 1`] = `
 .emotion-0 {
   display: inline-block;
 }
@@ -1426,7 +1426,7 @@ exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button wit
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a medium, UDE secondary button with an icon and a data label 1`] = `
+exports[`Button (Secondary) Snapshots renders a medium, (beta) secondary button with an icon and a data label 1`] = `
 .emotion-0 {
   display: inline-block;
 }
@@ -1776,7 +1776,7 @@ exports[`Button (Secondary) Snapshots renders a medium, secondary button 1`] = `
 </button>
 `;
 
-exports[`Button (Secondary) Snapshots renders a small, UDE secondary button 1`] = `
+exports[`Button (Secondary) Snapshots renders a small, (beta) secondary button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   display: -webkit-inline-box;

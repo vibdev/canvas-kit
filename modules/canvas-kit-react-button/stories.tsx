@@ -104,28 +104,28 @@ storiesOf('Canvas Kit/Button/Beta', module)
   .addDecorator(withReadme(README))
   .add('Buttons', () => (
     <div className="story">
-      <h1 className="section-label">UDE Buttons</h1>
+      <h1 className="section-label">(Beta) Buttons</h1>
       <h3>Large Buttons</h3>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaPrimary}>
         Primary
       </Button>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaSecondary}>
         Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaDelete}>
         Delete
       </Button>
       <br />
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdePrimary}
+        buttonType={Button.Types.BetaPrimary}
         icon={activityStreamIcon}
       >
         Primary
       </Button>
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={activityStreamIcon}
       >
         Secondary
@@ -133,7 +133,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <br />
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdePrimary}
+        buttonType={Button.Types.BetaPrimary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -141,7 +141,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </Button>
       <Button
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -151,7 +151,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         disabled={true}
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdePrimary}
+        buttonType={Button.Types.BetaPrimary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -160,32 +160,36 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         disabled={true}
         buttonSize={Button.Sizes.Large}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
       </Button>
-      <Button disabled={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.UdeDelete}>
+      <Button disabled={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.BetaDelete}>
         Delete
       </Button>
       <h3>Medium Buttons</h3>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaPrimary}>
         Primary
       </Button>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaSecondary}>
         Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaDelete}>
         Delete
       </Button>
       <br />
-      <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdePrimary} icon={editIcon}>
+      <Button
+        buttonSize={Button.Sizes.Medium}
+        buttonType={Button.Types.BetaPrimary}
+        icon={editIcon}
+      >
         Primary
       </Button>
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={editIcon}
       >
         Secondary
@@ -193,7 +197,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <br />
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdePrimary}
+        buttonType={Button.Types.BetaPrimary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -201,7 +205,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </Button>
       <Button
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -211,7 +215,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         disabled={true}
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdePrimary}
+        buttonType={Button.Types.BetaPrimary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
@@ -220,37 +224,37 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <Button
         disabled={true}
         buttonSize={Button.Sizes.Medium}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
         icon={playCircleIcon}
         dataLabel={'1:00'}
       >
         Secondary
       </Button>
-      <Button disabled={true} buttonSize={Button.Sizes.Medium} buttonType={Button.Types.UdeDelete}>
+      <Button disabled={true} buttonSize={Button.Sizes.Medium} buttonType={Button.Types.BetaDelete}>
         Secondary
       </Button>
       <h3>Small Buttons</h3>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaPrimary}>
         Primary
       </Button>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeSecondary}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaSecondary}>
         Secondary
       </Button>
-      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
+      <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaDelete}>
         Delete
       </Button>
       <br />
-      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdePrimary}>
+      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaPrimary}>
         Primary
       </Button>
       <Button
         disabled={true}
         buttonSize={Button.Sizes.Small}
-        buttonType={Button.Types.UdeSecondary}
+        buttonType={Button.Types.BetaSecondary}
       >
         Secondary
       </Button>
-      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.UdeDelete}>
+      <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.BetaDelete}>
         Delete
       </Button>
     </div>
@@ -656,13 +660,13 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h3>Large Dropdown Buttons</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.UdePrimary}
+        buttonType={DropdownButton.Types.BetaPrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.UdeSecondary}
+        buttonType={DropdownButton.Types.BetaSecondary}
       >
         Dropdown Button
       </DropdownButton>
@@ -670,27 +674,27 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <DropdownButton
         disabled={true}
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.UdePrimary}
+        buttonType={DropdownButton.Types.BetaPrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
         buttonSize={DropdownButton.Sizes.Large}
-        buttonType={DropdownButton.Types.UdeSecondary}
+        buttonType={DropdownButton.Types.BetaSecondary}
       >
         Dropdown Button
       </DropdownButton>
       <h3>Medium Dropdown Buttons</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.UdePrimary}
+        buttonType={DropdownButton.Types.BetaPrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.UdeSecondary}
+        buttonType={DropdownButton.Types.BetaSecondary}
       >
         Dropdown Button
       </DropdownButton>
@@ -698,14 +702,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <DropdownButton
         disabled={true}
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.UdePrimary}
+        buttonType={DropdownButton.Types.BetaPrimary}
       >
         Dropdown Button
       </DropdownButton>
       <DropdownButton
         disabled={true}
         buttonSize={DropdownButton.Sizes.Medium}
-        buttonType={DropdownButton.Types.UdeSecondary}
+        buttonType={DropdownButton.Types.BetaSecondary}
       >
         Dropdown Button
       </DropdownButton>

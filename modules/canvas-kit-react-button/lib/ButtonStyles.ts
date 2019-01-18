@@ -179,22 +179,22 @@ export const canvasButtonStyles: ButtonGenericStyle = {
   },
 };
 
-export const udeButtonStyles: ButtonGenericStyle = {
-  classname: 'ude-button',
+export const betaButtonStyles: ButtonGenericStyle = {
+  classname: 'beta-button',
   styles: {
     ...canvasButtonStyles.styles,
     border: '2px solid transparent',
   },
   variants: {
     types: {
-      [ButtonTypes.UdePrimary]: {
-        ...getButtonStateStyle(ButtonTypes.UdePrimary),
+      [ButtonTypes.BetaPrimary]: {
+        ...getButtonStateStyle(ButtonTypes.BetaPrimary),
       },
-      [ButtonTypes.UdeSecondary]: {
-        ...getButtonStateStyle(ButtonTypes.UdeSecondary),
+      [ButtonTypes.BetaSecondary]: {
+        ...getButtonStateStyle(ButtonTypes.BetaSecondary),
       },
-      [ButtonTypes.UdeDelete]: {
-        ...getButtonStateStyle(ButtonTypes.UdeDelete),
+      [ButtonTypes.BetaDelete]: {
+        ...getButtonStateStyle(ButtonTypes.BetaDelete),
       },
       [ButtonTypes.Highlight]: {
         ...getButtonStateStyle(ButtonTypes.Highlight),
@@ -232,16 +232,16 @@ export const udeButtonStyles: ButtonGenericStyle = {
 export const dropdownButtonStyles: ButtonGenericStyle = {
   classname: 'dropdown-button',
   styles: {
-    ...udeButtonStyles.styles,
+    ...betaButtonStyles.styles,
   },
   variants: {
     types: {
-      [ButtonTypes.UdePrimary]: udeButtonStyles.variants!.types.udePrimary,
-      [ButtonTypes.UdeSecondary]: udeButtonStyles.variants!.types.udeSecondary,
+      [ButtonTypes.BetaPrimary]: betaButtonStyles.variants!.types[ButtonTypes.BetaPrimary],
+      [ButtonTypes.BetaSecondary]: betaButtonStyles.variants!.types[ButtonTypes.BetaSecondary],
     },
     sizes: {
-      [ButtonSizes.Large]: udeButtonStyles.variants!.sizes.large,
-      [ButtonSizes.Medium]: udeButtonStyles.variants!.sizes.medium,
+      [ButtonSizes.Large]: betaButtonStyles.variants!.sizes.large,
+      [ButtonSizes.Medium]: betaButtonStyles.variants!.sizes.medium,
     },
   },
 };
