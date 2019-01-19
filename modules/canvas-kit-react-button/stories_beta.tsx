@@ -15,6 +15,8 @@ import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
 
+// TODO (beta button): remove this story, edit storybook config to not accept stories*.tsx
+// TODO (beta button): remove stories_beta.tsx from tsconfig.json in this module
 const outlineWhiteBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',

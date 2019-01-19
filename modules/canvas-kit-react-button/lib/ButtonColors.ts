@@ -24,6 +24,7 @@ export interface GenericButtonColors extends CanvasButtonColors {
 export type ButtonColorCollection = {[key in AllButtonTypes]: GenericButtonColors | null};
 
 export const ButtonColors: ButtonColorCollection = {
+  // TODO (beta button): remove in favor of beta buttons, consider moving from design-assets too
   [ButtonTypes.Primary]: canvas.buttonColors.primary,
   [ButtonTypes.Secondary]: canvas.buttonColors.secondary,
   [ButtonTypes.Delete]: canvas.buttonColors.delete,

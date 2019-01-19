@@ -10,6 +10,7 @@ const IconButtonCon = styled(ButtonBaseCon)(iconButtonStyles.styles);
 export default class IconButton extends React.Component<ButtonProps> {
   public render() {
     return (
+      // TODO (breaking change): need to remove buttonType and buttonSize prop here, doesn't make sense to expose
       <IconButtonCon {...this.props} buttonType={ButtonTypes.Secondary} buttonSize={undefined} />
     );
   }

@@ -7,6 +7,7 @@ export enum ButtonSizes {
   Large = 'large',
 }
 
+// TODO (beta button): consolidate all these button types
 /**
  * The different button types.
  */

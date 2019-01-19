@@ -5,6 +5,8 @@ import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {labelDataBaseStyles} from './ButtonStyles';
 
+// TODO (beta button): add README for new buttons when merging
+
 export interface BaseButtonProps<T = ButtonTypes | BetaButtonTypes>
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
@@ -72,6 +74,7 @@ export class beta_Button extends React.Component<ButtonProps<BetaButtonTypes>> {
   public static Sizes = ButtonSizes;
 
   render() {
+    // TODO (beta button): Move this logic back into Button compponent
     // Restrict Hightlight button to only being sized Large, Medium with an Icon
     if (
       this.props.buttonType === BetaButtonTypes.Highlight &&

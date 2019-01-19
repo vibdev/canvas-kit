@@ -127,6 +127,7 @@ export const labelIconBaseStyles: ButtonGenericStyle = {
   },
 };
 
+// TODO (beta button): remove
 export const canvasButtonStyles: ButtonGenericStyle = {
   classname: 'canvas-button',
   styles: {
@@ -187,6 +188,7 @@ export const canvasButtonStyles: ButtonGenericStyle = {
 };
 
 export const betaButtonStyles: ButtonGenericStyle = {
+  // TODO (beta button): rename classname from beta-button to something
   classname: 'beta-button',
   styles: {
     ...canvasButtonStyles.styles,
