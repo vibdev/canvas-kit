@@ -41,6 +41,7 @@ exports[`Button (Outline) Snapshots renders a large, growing outline primary but
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -192,6 +193,7 @@ exports[`Button (Outline) Snapshots renders a large, outline inverse button 1`] 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -381,6 +383,7 @@ exports[`Button (Outline) Snapshots renders a large, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -603,6 +606,7 @@ exports[`Button (Outline) Snapshots renders a large, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -849,6 +853,7 @@ exports[`Button (Outline) Snapshots renders a large, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -1021,6 +1026,7 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button 1`] 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -1170,6 +1176,7 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -1341,6 +1348,7 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -1547,6 +1555,7 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -1792,6 +1801,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button 1`
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -1958,6 +1968,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -2157,6 +2168,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -2380,6 +2392,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -2546,6 +2559,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline inverse button 1`]
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -2736,6 +2750,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -2958,6 +2973,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -3205,6 +3221,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline inverse button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -3377,6 +3394,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button 1`]
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -3526,6 +3544,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -3735,6 +3754,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -3941,6 +3961,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -4150,6 +4171,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button 1
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -4317,6 +4339,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -4516,6 +4539,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -4740,6 +4764,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;
@@ -4906,6 +4931,7 @@ exports[`Button (Outline) Snapshots renders a small, outline inverse button 1`] 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
@@ -5061,6 +5087,7 @@ exports[`Button (Outline) Snapshots renders a small, outline primary button 1`] 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #0875e1;
   color: #0875e1;
@@ -5227,6 +5254,7 @@ exports[`Button (Outline) Snapshots renders a small, outline secondary button 1`
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: transparent;
   border-color: #ced3d9;
   color: #333333;

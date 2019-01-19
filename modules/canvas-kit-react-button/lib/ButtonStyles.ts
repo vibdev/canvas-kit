@@ -192,6 +192,7 @@ export const betaButtonStyles: ButtonGenericStyle = {
   classname: 'beta-button',
   styles: {
     ...canvasButtonStyles.styles,
+    verticalAlign: 'middle',
     border: '2px solid transparent',
   },
   variants: {

@@ -26,6 +26,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: #f0f1f2;
   color: #005cb9;
@@ -294,6 +295,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: #f0f1f2;
   color: #005cb9;
@@ -440,6 +442,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: #f0f1f2;
   color: #005cb9;
@@ -705,6 +708,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: #f0f1f2;
   color: #005cb9;
@@ -911,6 +915,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: #f0f1f2;
   color: #005cb9;

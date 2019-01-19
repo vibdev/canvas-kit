@@ -41,6 +41,7 @@ exports[`Button (Primary) Snapshots (beta) renders a large, growing primary butt
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -175,6 +176,7 @@ exports[`Button (Primary) Snapshots (beta) renders a large, primary button 1`] =
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -324,6 +326,7 @@ exports[`Button (Primary) Snapshots (beta) renders a large, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -495,6 +498,7 @@ exports[`Button (Primary) Snapshots (beta) renders a large, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -701,6 +705,7 @@ exports[`Button (Primary) Snapshots (beta) renders a large, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -929,6 +934,7 @@ exports[`Button (Primary) Snapshots (beta) renders a medium, primary button 1`] 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -1078,6 +1084,7 @@ exports[`Button (Primary) Snapshots (beta) renders a medium, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -1287,6 +1294,7 @@ exports[`Button (Primary) Snapshots (beta) renders a medium, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -1493,6 +1501,7 @@ exports[`Button (Primary) Snapshots (beta) renders a medium, primary button with
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -1685,6 +1694,7 @@ exports[`Button (Primary) Snapshots (beta) renders a small, primary button 1`] =
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;

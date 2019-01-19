@@ -24,6 +24,7 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown primary button 1`
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -292,6 +293,7 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown secondary button 
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: transparent;
   color: #333333;
@@ -477,6 +479,7 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown primary button 1
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #0875e1;
   border-color: transparent;
   color: #ffffff;
@@ -708,6 +711,7 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown secondary button
   outline: none;
   -webkit-transition: all 120ms ease-in;
   transition: all 120ms ease-in;
+  vertical-align: middle;
   background-color: #f0f1f2;
   border-color: transparent;
   color: #333333;
