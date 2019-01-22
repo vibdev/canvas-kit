@@ -23,7 +23,7 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -140,7 +140,7 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,6 +164,7 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -173,10 +174,14 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -188,41 +193,33 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
-  color: #323232;
+.emotion-5 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-5 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -292,7 +289,7 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -409,7 +406,7 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 }
 
 .emotion-5 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -433,6 +430,7 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -442,10 +440,14 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -457,41 +459,33 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
-  color: #323232;
+.emotion-5 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-5 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -563,7 +557,7 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-0 {
@@ -648,7 +642,7 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
 }
 
 .emotion-1 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -672,6 +666,7 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
 }
 
 .emotion-1 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -681,10 +676,14 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-1 nav ul li:first-child {
@@ -696,41 +695,33 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
 }
 
 .emotion-1 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-1 nav ul li a:hover,
-.emotion-1 nav ul li a:active {
-  color: #323232;
+.emotion-1 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-1 nav ul li.current a {
+.emotion-1 nav ul li:hover,
+.emotion-1 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-1 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-1 nav ul li.current a:hover,
-.emotion-1 nav ul li.current a:active {
+.emotion-1 nav ul li.current:hover,
+.emotion-1 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-1 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -779,7 +770,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -896,7 +887,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 }
 
 .emotion-5 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -920,6 +911,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -929,10 +921,14 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -944,41 +940,33 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
-  color: #323232;
+.emotion-5 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-5 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -1048,7 +1036,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -1165,7 +1153,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 .emotion-6 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1189,6 +1177,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 .emotion-6 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1198,10 +1187,14 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-6 nav ul li:first-child {
@@ -1213,41 +1206,33 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 .emotion-6 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-6 nav ul li a:hover,
-.emotion-6 nav ul li a:active {
-  color: #323232;
+.emotion-6 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-6 nav ul li.current a {
+.emotion-6 nav ul li:hover,
+.emotion-6 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-6 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-6 nav ul li.current a:hover,
-.emotion-6 nav ul li.current a:active {
+.emotion-6 nav ul li.current:hover,
+.emotion-6 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-6 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -1359,7 +1344,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -1508,7 +1493,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 .emotion-6 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1532,6 +1517,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 .emotion-6 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1541,10 +1527,14 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-6 nav ul li:first-child {
@@ -1556,41 +1546,33 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 .emotion-6 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-6 nav ul li a:hover,
-.emotion-6 nav ul li a:active {
-  color: #323232;
+.emotion-6 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-6 nav ul li.current a {
+.emotion-6 nav ul li:hover,
+.emotion-6 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-6 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-6 nav ul li.current a:hover,
-.emotion-6 nav ul li.current a:active {
+.emotion-6 nav ul li.current:hover,
+.emotion-6 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-6 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -1811,6 +1793,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1820,10 +1803,14 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -1835,41 +1822,33 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
+.emotion-5 nav ul li a:visited {
+  color: inherit;
+}
+
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
   color: #ffffff;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li.current {
   color: #ffffff;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #ffffff;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -2055,6 +2034,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2064,10 +2044,14 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -2079,41 +2063,33 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
+.emotion-5 nav ul li a:visited {
+  color: inherit;
+}
+
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
   color: #ffffff;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li.current {
   color: #ffffff;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #ffffff;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -2208,7 +2184,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   height: 64px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-4 {
@@ -2325,7 +2301,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
 }
 
 .emotion-5 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2349,6 +2325,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2358,10 +2335,14 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -2373,41 +2354,33 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
-  color: #323232;
+.emotion-5 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-5 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -2541,7 +2514,7 @@ exports[`Full Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul {
-  color: #323232;
+  color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2565,6 +2538,7 @@ exports[`Full Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul li {
+  box-sizing: border-box;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2574,10 +2548,14 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 16px;
   margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
 }
 
 .emotion-5 nav ul li:first-child {
@@ -2589,41 +2567,33 @@ exports[`Full Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-5 nav ul li a {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  height: inherit;
-  padding: 0px 16px;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
 }
 
-.emotion-5 nav ul li a:hover,
-.emotion-5 nav ul li a:active {
-  color: #323232;
+.emotion-5 nav ul li a:visited {
+  color: inherit;
 }
 
-.emotion-5 nav ul li.current a {
+.emotion-5 nav ul li:hover,
+.emotion-5 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-5 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-5 nav ul li.current a:hover,
-.emotion-5 nav ul li.current a:active {
+.emotion-5 nav ul li.current:hover,
+.emotion-5 nav ul li.current:active {
   color: #005cb9;
 }
 
 .emotion-5 nav ul li.current:after {
   position: absolute;
   bottom: 0;
+  left: 0;
   content: '';
   height: 4px;
   width: 100%;
@@ -2653,7 +2623,7 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   height: 80px;
   background: #ffffff;
   box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #323232;
+  color: #333333;
 }
 
 .emotion-2 {
