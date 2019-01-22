@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from '../lib/Header';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 describe('Header', () => {
   const cb = jest.fn();
@@ -22,5 +22,13 @@ describe('Header', () => {
     const component = shallow(<Header />);
     // @ts-ignore
     expect(component.instance().getScreenSize(widths.sm, breakpoints)).toBe('sm');
+  });
+
+  test('Searching something should call callback', () => {
+    const component = mount(<Header onSearchSubmit={cb} />);
+
+    component.find('form').simulate('submit');
+    expect(cb.mock.calls.length).toBe(1);
+    component.unmount();
   });
 });
