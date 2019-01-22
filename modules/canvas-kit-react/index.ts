@@ -8,7 +8,7 @@ export * from '@workday/canvas-kit-react-fat';
 export * from '@workday/canvas-kit-react-fonts';
 export * from '@workday/canvas-kit-react-header';
 export * from '@workday/canvas-kit-react-icon';
+export * from '@workday/canvas-kit-react-loading-animation';
 export * from '@workday/canvas-kit-react-page-header';
 export * from '@workday/canvas-kit-react-table';
 export * from '@workday/canvas-kit-react-toggle';
-export * from '@workday/canvas-kit-react-loading-animation';
