@@ -22,8 +22,8 @@ exports[`Button (Primary) Snapshots renders a large, primary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #ffa126;
   border-color: #ffa126;
   color: #ffffff;
@@ -139,8 +139,8 @@ exports[`Button (Primary) Snapshots renders a medium, primary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #ffa126;
   border-color: #ffa126;
   color: #ffffff;
@@ -256,8 +256,8 @@ exports[`Button (Primary) Snapshots renders a small, primary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #ffa126;
   border-color: #ffa126;
   color: #ffffff;

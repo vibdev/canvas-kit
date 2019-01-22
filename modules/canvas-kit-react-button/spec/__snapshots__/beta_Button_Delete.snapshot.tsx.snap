@@ -22,8 +22,8 @@ exports[`Button (Delete) Snapshots (beta) renders a large, delete button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   vertical-align: middle;
   background-color: #de2e21;
   border-color: #de2e21;
@@ -150,8 +150,8 @@ exports[`Button (Delete) Snapshots (beta) renders a large, growing delete button
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   vertical-align: middle;
   background-color: #de2e21;
   border-color: #de2e21;
@@ -246,8 +246,8 @@ exports[`Button (Delete) Snapshots (beta) renders a medium, delete button 1`] = 
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   vertical-align: middle;
   background-color: #de2e21;
   border-color: #de2e21;
@@ -357,8 +357,8 @@ exports[`Button (Delete) Snapshots (beta) renders a small, delete button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   vertical-align: middle;
   background-color: #de2e21;
   border-color: #de2e21;

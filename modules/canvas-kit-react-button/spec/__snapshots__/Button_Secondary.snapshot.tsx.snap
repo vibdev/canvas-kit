@@ -22,8 +22,8 @@ exports[`Button (Secondary) Snapshots renders a large, secondary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
@@ -139,8 +139,8 @@ exports[`Button (Secondary) Snapshots renders a medium, secondary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
@@ -256,8 +256,8 @@ exports[`Button (Secondary) Snapshots renders a small, secondary button 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;

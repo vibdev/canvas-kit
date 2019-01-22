@@ -22,8 +22,8 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
