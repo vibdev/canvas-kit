@@ -9,6 +9,23 @@ export interface TextButtonProps extends BaseButtonProps<TextButtonTypes> {
   iconPosition?: IconPositions;
 }
 
+const TextButtonCon = styled('button')<TextButtonProps>(
+  textButtonStyles.styles,
+  ({buttonType}) => getButtonStyle(textButtonStyles, buttonType),
+  ({buttonSize}) => {
+    const {sizes} = textButtonStyles.variants!;
+
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return sizes.large;
+      case ButtonSizes.Medium:
+      case ButtonSizes.Small:
+        return sizes.small;
+    }
+  }
+);
+
 export default class TextButton extends React.Component<TextButtonProps> {
   public static IconPositions = IconPositions;
   public static Types = TextButtonTypes;
@@ -22,23 +39,6 @@ export default class TextButton extends React.Component<TextButtonProps> {
 
   public render() {
     const {children, ...elemProps} = this.props;
-
-    const TextButtonCon = styled('button')<TextButtonProps>(
-      textButtonStyles.styles,
-      ({buttonType}) => getButtonStyle(textButtonStyles, buttonType),
-      ({buttonSize}) => {
-        const {sizes} = textButtonStyles.variants!;
-
-        switch (buttonSize) {
-          case ButtonSizes.Large:
-          default:
-            return sizes.large;
-          case ButtonSizes.Medium:
-          case ButtonSizes.Small:
-            return sizes.small;
-        }
-      }
-    );
 
     return (
       <TextButtonCon {...this.props}>
