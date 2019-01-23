@@ -71,7 +71,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, growing secondary 
 }
 
 .emotion-1 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:focus {
@@ -123,7 +123,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, growing secondary 
 .emotion-1:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -208,7 +208,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button 1
 }
 
 .emotion-1 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:focus {
@@ -260,7 +260,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button 1
 .emotion-1:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -362,7 +362,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 }
 
 .emotion-2 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:focus {
@@ -414,7 +414,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 .emotion-2:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:disabled span .wd-icon-fill,
@@ -538,7 +538,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 }
 
 .emotion-3 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:focus {
@@ -590,7 +590,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -749,7 +749,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 }
 
 .emotion-4 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:focus {
@@ -801,7 +801,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a large, secondary button w
 .emotion-4:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -982,7 +982,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 }
 
 .emotion-1 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:focus {
@@ -1034,7 +1034,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 .emotion-1:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -1136,7 +1136,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 }
 
 .emotion-2 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:focus {
@@ -1188,7 +1188,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 .emotion-2:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:disabled span .wd-icon-fill,
@@ -1350,7 +1350,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 }
 
 .emotion-3 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:focus {
@@ -1402,7 +1402,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -1561,7 +1561,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 }
 
 .emotion-4 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:focus {
@@ -1613,7 +1613,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a medium, secondary button 
 .emotion-4:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -1758,7 +1758,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a small, secondary button 1
 }
 
 .emotion-1 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:focus {
@@ -1810,7 +1810,7 @@ exports[`Button (Secondary) Snapshots (beta) renders a small, secondary button 1
 .emotion-1:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,

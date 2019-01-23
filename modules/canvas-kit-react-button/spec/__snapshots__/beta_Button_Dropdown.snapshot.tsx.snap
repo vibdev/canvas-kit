@@ -321,7 +321,7 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown secondary button 
 }
 
 .emotion-3 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:focus {
@@ -373,7 +373,7 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown secondary button 
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -739,7 +739,7 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown secondary button
 }
 
 .emotion-3 .button-label-data {
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:focus {
@@ -791,7 +791,7 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown secondary button
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,

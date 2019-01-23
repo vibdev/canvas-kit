@@ -1877,7 +1877,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button 1`
 .emotion-1:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -2044,7 +2044,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-2:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:disabled span .wd-icon-fill,
@@ -2244,7 +2244,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-3:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -2468,7 +2468,7 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-4:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -4247,7 +4247,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button 1
 .emotion-1:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -4415,7 +4415,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-2:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-2:disabled span .wd-icon-fill,
@@ -4615,7 +4615,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-3:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -4840,7 +4840,7 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-4:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -5330,7 +5330,7 @@ exports[`Button (Outline) Snapshots renders a small, outline secondary button 1`
 .emotion-1:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-1:disabled span .wd-icon-fill,

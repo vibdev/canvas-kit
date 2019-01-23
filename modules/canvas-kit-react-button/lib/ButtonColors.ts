@@ -1,4 +1,4 @@
-import canvas, {typeColors} from '@workday/canvas-kit-react-core';
+import canvas from '@workday/canvas-kit-react-core';
 import {AllButtonTypes, ButtonTypes, TextButtonTypes, BetaButtonTypes} from './types';
 
 export interface CanvasButtonColors
@@ -59,7 +59,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeText: canvas.colors.blackPepper400,
     disabledBackground: canvas.colors.soap100,
     disabledBorder: 'transparent',
-    disabledText: typeColors.hint,
+    disabledText: canvas.colors.licorice100,
     focusBackground: canvas.colors.soap200,
     focusBorder: 'transparent',
     focusText: canvas.colors.blackPepper400,
@@ -71,7 +71,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconActive: canvas.colors.licorice500,
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap600,
-    labelData: typeColors.hint,
+    labelData: canvas.colors.licorice100,
   },
   [BetaButtonTypes.Delete]: {
     background: canvas.colors.cinnamon500,
@@ -98,7 +98,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeText: canvas.colors.blueberry500,
     disabledBackground: canvas.colors.soap100,
     disabledBorder: 'transparent',
-    disabledText: typeColors.hint,
+    disabledText: canvas.colors.licorice100,
     focusBackground: canvas.colors.soap200,
     focusBorder: 'transparent',
     focusText: canvas.colors.blueberry500,
@@ -120,7 +120,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeText: canvas.colors.frenchVanilla100,
     disabledBackground: canvas.colors.frenchVanilla100,
     disabledBorder: canvas.colors.soap500,
-    disabledText: typeColors.hint,
+    disabledText: canvas.colors.licorice300,
     focusBackground: canvas.colors.blueberry400,
     focusBorder: 'transparent',
     focusText: canvas.colors.frenchVanilla100,
@@ -142,7 +142,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeText: canvas.colors.frenchVanilla100,
     disabledBackground: canvas.colors.frenchVanilla100,
     disabledBorder: canvas.colors.soap500,
-    disabledText: typeColors.hint,
+    disabledText: canvas.colors.licorice100,
     focusBackground: canvas.colors.licorice500,
     focusBorder: 'transparent',
     focusText: canvas.colors.frenchVanilla100,
@@ -178,9 +178,9 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconActive: canvas.colors.licorice500,
     labelIconFocus: canvas.colors.licorice500,
     labelIconDisabled: 'rgba(255, 255, 255, 0.75)',
-    labelDataHover: typeColors.hint,
-    labelDataActive: typeColors.hint,
-    labelDataFocus: typeColors.hint,
+    labelDataHover: canvas.colors.licorice300,
+    labelDataActive: canvas.colors.licorice300,
+    labelDataFocus: canvas.colors.licorice300,
     labelDataDisabled: 'rgba(255, 255, 255, 0.75)',
   },
   [TextButtonTypes.Default]: {

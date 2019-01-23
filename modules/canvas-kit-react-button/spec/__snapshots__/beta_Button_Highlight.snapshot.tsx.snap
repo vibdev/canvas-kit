@@ -102,7 +102,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -373,7 +373,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -518,7 +518,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-4:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -784,7 +784,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 .emotion-3:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-3:disabled span .wd-icon-fill,
@@ -991,7 +991,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 .emotion-4:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
-  color: #5e6a75;
+  color: #a1aab3;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
