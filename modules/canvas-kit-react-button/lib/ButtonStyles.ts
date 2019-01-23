@@ -8,6 +8,7 @@ import {
   AllButtonTypes,
   TextButtonTypes,
   BetaButtonTypes,
+  IconButtonTypes,
 } from './types';
 import {ButtonColors} from './ButtonColors';
 
@@ -300,19 +301,38 @@ export const iconButtonStyles: ButtonGenericStyle = {
   classname: 'icon-button',
   styles: {
     // TODO: Support data-whatinput='input' css
-    borderRadius: '3px',
-    width: '32px',
-    height: '32px',
+    ...canvasButtonStyles.styles,
+    borderWidth: '0',
+    borderRadius: '50%',
+    width: '40px',
+    height: '40px',
     ['& .wd-icon']: {
       display: 'inline-block',
       verticalAlign: 'middle',
     },
-    // Double parent selectors to ensure specificity to override original fill
-    ['&&:disabled']: {
-      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.disabled},
-    },
-    ['&&:not([disabled])']: {
-      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
+  },
+  variants: {
+    sizes: {},
+    types: {
+      [IconButtonTypes.Default]: {
+        borderRadius: '3px',
+        borderWidth: '1px',
+        width: '32px',
+        height: '32px',
+        ...getButtonStateStyle(IconButtonTypes.Default),
+      },
+      [IconButtonTypes.IconPrimary]: {
+        ...getButtonStateStyle(IconButtonTypes.IconPrimary),
+      },
+      [IconButtonTypes.IconPrimaryFilled]: {
+        ...getButtonStateStyle(IconButtonTypes.IconPrimaryFilled),
+      },
+      [IconButtonTypes.IconInverse]: {
+        ...getButtonStateStyle(IconButtonTypes.IconInverse),
+      },
+      [IconButtonTypes.IconInverseFilled]: {
+        ...getButtonStateStyle(IconButtonTypes.IconInverseFilled),
+      },
     },
   },
 };
@@ -409,6 +429,8 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
       return focusRing(1);
+    case IconButtonTypes.Default:
+      return focusRing(2);
     case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     case TextButtonTypes.Default:

@@ -7,6 +7,7 @@ import {
   AllButtonTypes,
   TextButtonTypes,
   BetaButtonTypes,
+  IconButtonTypes,
 } from './types';
 import {ButtonProps} from './Button';
 import {TextButtonProps} from './TextButton';
@@ -204,6 +205,16 @@ export function getButtonStyle(
       return types[TextButtonTypes.AllCaps];
     case TextButtonTypes.InverseAllCaps:
       return types[TextButtonTypes.InverseAllCaps];
+    case IconButtonTypes.Default:
+      return types[IconButtonTypes.Default];
+    case IconButtonTypes.IconPrimary:
+      return types[IconButtonTypes.IconPrimary];
+    case IconButtonTypes.IconPrimaryFilled:
+      return types[IconButtonTypes.IconPrimaryFilled];
+    case IconButtonTypes.IconInverse:
+      return types[IconButtonTypes.IconInverse];
+    case IconButtonTypes.IconInverseFilled:
+      return types[IconButtonTypes.IconInverseFilled];
   }
 }
 

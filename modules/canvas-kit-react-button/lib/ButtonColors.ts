@@ -1,5 +1,5 @@
 import canvas from '@workday/canvas-kit-react-core';
-import {AllButtonTypes, ButtonTypes, TextButtonTypes, BetaButtonTypes} from './types';
+import {AllButtonTypes, ButtonTypes, TextButtonTypes, BetaButtonTypes, IconButtonTypes} from './types';
 
 export interface CanvasButtonColors
   extends Partial<typeof canvas.buttonColors.secondary>,
@@ -225,6 +225,68 @@ export const ButtonColors: ButtonColorCollection = {
   },
   [TextButtonTypes.AllCaps]: null,
   [TextButtonTypes.InverseAllCaps]: null,
+  [IconButtonTypes.Default]: {
+    background: canvas.colors.soap200,
+    border: canvas.colors.soap500,
+    activeBackground: canvas.colors.soap500,
+    disabledBackground: canvas.colors.frenchVanilla100,
+    focusBackground: canvas.colors.soap200,
+    focusBorder: 'transparent',
+    hoverBackground: canvas.colors.soap400,
+    labelIcon: canvas.colors.licorice200,
+    labelIconHover: canvas.colors.licorice500,
+    labelIconActive: canvas.colors.licorice500,
+    labelIconFocus: canvas.colors.licorice200,
+    labelIconDisabled: canvas.colors.soap200,
+  },
+  [IconButtonTypes.IconPrimary]: {
+    background: 'transparent',
+    activeBackground: canvas.colors.soap400,
+    disabledBackground: 'transparent',
+    focusBackground: canvas.colors.frenchVanilla100,
+    hoverBackground: canvas.colors.soap300,
+    labelIcon: canvas.colors.licorice200,
+    labelIconHover: canvas.colors.licorice500,
+    labelIconActive: canvas.colors.licorice500,
+    labelIconFocus: canvas.colors.licorice200,
+    labelIconDisabled: canvas.colors.soap600,
+  },
+  [IconButtonTypes.IconPrimaryFilled]: {
+    background: canvas.colors.soap200,
+    activeBackground: canvas.colors.soap500,
+    disabledBackground: canvas.colors.soap100,
+    focusBackground: canvas.colors.soap200,
+    hoverBackground: canvas.colors.soap400,
+    labelIcon: canvas.colors.licorice200,
+    labelIconHover: canvas.colors.licorice500,
+    labelIconActive: canvas.colors.licorice500,
+    labelIconFocus: canvas.colors.licorice200,
+    labelIconDisabled: canvas.colors.soap600,
+  },
+  [IconButtonTypes.IconInverse]: {
+    background: 'transparent',
+    activeBackground: 'rgba(0, 0, 0, 0.4)',
+    disabledBackground: 'transparent',
+    focusBackground: canvas.colors.frenchVanilla100,
+    hoverBackground: 'rgba(0, 0, 0, 0.2)',
+    labelIcon: canvas.colors.frenchVanilla100,
+    labelIconHover: canvas.colors.frenchVanilla100,
+    labelIconActive: canvas.colors.frenchVanilla100,
+    labelIconFocus: canvas.colors.licorice500,
+    labelIconDisabled: 'rgba(255, 255, 255, 0.75)',
+  },
+  [IconButtonTypes.IconInverseFilled]: {
+    background: 'rgba(0, 0, 0, 0.2)',
+    activeBackground: 'rgba(0, 0, 0, 0.4)',
+    disabledBackground: 'rgba(0, 0, 0, 0.2)',
+    focusBackground: canvas.colors.frenchVanilla100,
+    hoverBackground: 'rgba(0, 0, 0, 0.3)',
+    labelIcon: canvas.colors.frenchVanilla100,
+    labelIconHover: canvas.colors.frenchVanilla100,
+    labelIconActive: canvas.colors.frenchVanilla100,
+    labelIconFocus: canvas.colors.licorice500,
+    labelIconDisabled: 'rgba(255, 255, 255, 0.75)',
+  },
 };
 
 export default ButtonColors;
