@@ -86,7 +86,7 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -102,7 +102,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-weight: 500;
   width: 100%;
   max-width: 100%;
 }
@@ -118,21 +117,17 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   box-shadow: none;
 }
 
-.emotion-2:focus {
-  background-color: #ffa126;
-  border-color: #005cb9;
-  color: #ffffff;
-}
-
-.emotion-2:hover:focus {
-  background-color: #f38b00;
-}
-
 .emotion-2:active,
-.emotion-2:focus:active,
 .emotion-2:hover:active {
   background-color: #ffa126;
   border-color: #ffa126;
+  color: #ffffff;
+}
+
+.emotion-2:focus,
+.emotion-2:hover:focus {
+  background-color: #ffa126;
+  border-color: #005cb9;
   color: #ffffff;
 }
 
@@ -153,7 +148,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
@@ -164,15 +158,11 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  padding: 0 12px;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -290,7 +280,7 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -306,7 +296,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-weight: 500;
   width: 100%;
   max-width: 100%;
 }
@@ -322,21 +311,17 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   box-shadow: none;
 }
 
-.emotion-3:focus {
-  background-color: #ffa126;
-  border-color: #005cb9;
-  color: #ffffff;
-}
-
-.emotion-3:hover:focus {
-  background-color: #f38b00;
-}
-
 .emotion-3:active,
-.emotion-3:focus:active,
 .emotion-3:hover:active {
   background-color: #ffa126;
   border-color: #ffa126;
+  color: #ffffff;
+}
+
+.emotion-3:focus,
+.emotion-3:hover:focus {
+  background-color: #ffa126;
+  border-color: #005cb9;
   color: #ffffff;
 }
 
@@ -357,7 +342,6 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
 
 .emotion-3:not([disabled]):focus,
 .emotion-3:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
@@ -368,15 +352,11 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  padding: 0 12px;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0px;
+  font-size: 14px;
 }
 
 .emotion-2:hover:active {
@@ -473,7 +453,7 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -489,7 +469,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-weight: 500;
   width: 100%;
   max-width: 100%;
 }
@@ -505,21 +484,17 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   box-shadow: none;
 }
 
-.emotion-2:focus {
-  background-color: #ffa126;
-  border-color: #005cb9;
-  color: #ffffff;
-}
-
-.emotion-2:hover:focus {
-  background-color: #f38b00;
-}
-
 .emotion-2:active,
-.emotion-2:focus:active,
 .emotion-2:hover:active {
   background-color: #ffa126;
   border-color: #ffa126;
+  color: #ffffff;
+}
+
+.emotion-2:focus,
+.emotion-2:hover:focus {
+  background-color: #ffa126;
+  border-color: #005cb9;
   color: #ffffff;
 }
 
@@ -540,7 +515,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
@@ -551,15 +525,11 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  padding: 0 12px;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0px;
+  font-size: 14px;
 }
 
 .emotion-1:hover:active {
@@ -680,7 +650,7 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 999px;
   border: 1px solid transparent;
   box-shadow: none;
@@ -696,7 +666,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   padding: 0 32px;
   min-width: 112px;
   max-width: 288px;
-  font-weight: 500;
   width: 100%;
   max-width: 100%;
 }
@@ -712,21 +681,17 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   box-shadow: none;
 }
 
-.emotion-3:focus {
-  background-color: #ffa126;
-  border-color: #005cb9;
-  color: #ffffff;
-}
-
-.emotion-3:hover:focus {
-  background-color: #f38b00;
-}
-
 .emotion-3:active,
-.emotion-3:focus:active,
 .emotion-3:hover:active {
   background-color: #ffa126;
   border-color: #ffa126;
+  color: #ffffff;
+}
+
+.emotion-3:focus,
+.emotion-3:hover:focus {
+  background-color: #ffa126;
+  border-color: #005cb9;
   color: #ffffff;
 }
 
@@ -747,7 +712,6 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
 
 .emotion-3:not([disabled]):focus,
 .emotion-3:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
@@ -758,15 +722,11 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  padding: 0 12px;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0px;
+  font-size: 14px;
 }
 
 .emotion-2:hover:active {
