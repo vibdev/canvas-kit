@@ -23,39 +23,45 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         return {};
       case IconButtonTypes.IconPrimary:
         return {
-          'span .wd-icon-fill, span .wd-icon-background': {
+          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
             fill: colors.blueberry400,
           },
-          'span .wd-icon-accent': {
+          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
             fill: colors.frenchVanilla100,
           },
         };
       case IconButtonTypes.IconPrimaryFilled:
         return {
           backgroundColor: colors.blueberry400,
-          'span .wd-icon-fill, span .wd-icon-background': {
+          '&:focus, &:hover': {
+            backgroundColor: colors.blueberry500,
+          },
+          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
             fill: colors.frenchVanilla100,
           },
-          'span .wd-icon-accent': {
+          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
             fill: colors.blueberry400,
           },
         };
       case IconButtonTypes.IconInverse:
         return {
-          'span .wd-icon-fill, span .wd-icon-background': {
+          '&:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
             fill: colors.frenchVanilla100,
           },
-          'span .wd-icon-accent': {
+          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
             fill: colors.licorice200,
           },
         };
       case IconButtonTypes.IconInverseFilled:
         return {
           backgroundColor: 'rgba(0, 0, 0, 0.4)',
-          'span .wd-icon-fill, span .wd-icon-background': {
+          '&:focus': {
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          },
+          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
             fill: colors.frenchVanilla100,
           },
-          'span .wd-icon-accent': {
+          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
             fill: colors.licorice200,
           },
         };
