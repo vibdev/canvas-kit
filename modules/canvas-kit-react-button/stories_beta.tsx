@@ -258,14 +258,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h3>Large Outline Buttons</h3>
       <div className={css(buttonContainer)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary}>
-          Outline Blue
+          Outline Primary
         </Button>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -276,14 +276,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={activityStreamIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Large}
           buttonType={Button.Types.OutlineSecondary}
           icon={activityStreamIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -291,7 +291,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={activityStreamIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -303,7 +303,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={playCircleIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Large}
@@ -311,7 +311,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlineSecondary}
           icon={playCircleIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -320,7 +320,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={playCircleIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -333,7 +333,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={playCircleIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Large}
@@ -342,7 +342,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlineSecondary}
           icon={playCircleIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -352,21 +352,21 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={playCircleIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
       <h3>Medium Outline Buttons</h3>
       <div className={css(buttonContainer)}>
         <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlinePrimary}>
-          Outline Blue
+          Outline Primary
         </Button>
         <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineSecondary}>
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineInverse}>
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -377,14 +377,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={editIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
           buttonType={Button.Types.OutlineSecondary}
           icon={editIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -392,7 +392,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={editIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -404,7 +404,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={playCircleIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
@@ -412,7 +412,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlineSecondary}
           icon={playCircleIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -421,7 +421,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={playCircleIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -434,7 +434,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           icon={playCircleIcon}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Medium}
@@ -443,7 +443,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlineSecondary}
           icon={playCircleIcon}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -453,21 +453,21 @@ storiesOf('Canvas Kit/Button/Beta', module)
             buttonType={Button.Types.OutlineInverse}
             icon={playCircleIcon}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
       <h3>Small Outline Buttons</h3>
       <div className={css(buttonContainer)}>
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlinePrimary}>
-          Outline Blue
+          Outline Primary
         </Button>
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineSecondary}>
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineInverse}>
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -478,14 +478,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
           disabled={true}
           buttonType={Button.Types.OutlinePrimary}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Small}
           disabled={true}
           buttonType={Button.Types.OutlineSecondary}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
         <div className={css(outlineWhiteBackground)}>
           <Button
@@ -493,7 +493,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
             disabled={true}
             buttonType={Button.Types.OutlineInverse}
           >
-            Outline White
+            Outline Inverse
           </Button>
         </div>
       </div>
@@ -504,14 +504,14 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonType={Button.Types.OutlinePrimary}
           grow={true}
         >
-          Outline Blue
+          Outline Primary
         </Button>
         <Button
           buttonSize={Button.Sizes.Large}
           buttonType={Button.Types.OutlineSecondary}
           grow={true}
         >
-          Outline Dark
+          Outline Secondary
         </Button>
       </div>
     </div>
@@ -522,7 +522,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h3>Large Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
-          Text Dark
+          Text Inverse
         </TextButton>
       </div>
       <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
@@ -531,7 +531,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h3>Small Text Buttons</h3>
       <div className={css(outlineWhiteBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Inverse}>
-          Text Dark
+          Text Inverse
         </TextButton>
       </div>
       <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Default}>
@@ -605,7 +605,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           buttonSize={TextButton.Sizes.Large}
           buttonType={TextButton.Types.Inverse}
         >
-          Text Dark
+          Text Inverse
         </TextButton>
       </div>
       <TextButton
