@@ -1,146 +1,226 @@
+import * as React from 'react';
 import styled from 'react-emotion';
-import {ButtonSizes, ButtonTypes} from './types';
-import canvas from '@workday/canvas-kit-react-core';
-import {focusRing} from '@workday/canvas-kit-react-common';
+import {
+  ButtonSizes,
+  ButtonTypes,
+  IconPositions,
+  AllButtonTypes,
+  TextButtonTypes,
+  BetaButtonTypes,
+} from './types';
 import {ButtonProps} from './Button';
-// @ts-ignore: To appease the TS god
-import {ButtonHTMLAttributes, ClassAttributes, HTMLAttributes} from 'react';
-// @ts-ignore: To appease the TS god
-import {StyledOtherComponent} from 'create-emotion-styled';
-
-export const BUTTON_HEIGHT_LARGE: number = 40;
-export const BUTTON_HEIGHT_MEDIUM: number = 24;
-export const BUTTON_HEIGHT_SMALL: number = 18;
+import {TextButtonProps} from './TextButton';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import * as ButtonStyles from './ButtonStyles';
 
 export const ButtonBaseCon = styled('button')<ButtonProps>(
-  // TODO: Support data-whatinput='input'
-  {
-    boxSizing: 'border-box',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '13px',
-    borderRadius: '999px',
-    border: '1px solid transparent',
-    boxShadow: 'none',
-    position: 'relative',
-    cursor: 'pointer',
-    outline: 'none',
-    transition: 'all 120ms ease-in',
-    '&:hover:active': {transitionDuration: '40ms'}, // Makes the "down" state of the button happens faster than the hover state, so it animates in correctly.
-    '&:disabled, &:disabled:active': {cursor: 'default', boxShadow: 'none'},
-  },
-  ({buttonType}) => {
-    /* istanbul ignore next line for coverage */
+  /* istanbul ignore next line for coverage */
+  ({buttonType, buttonSize}) => {
     if (buttonType === undefined) {
       return {};
     }
-    const buttonColors = getButtonColors(buttonType);
+
+    const baseButton = getBaseButton(buttonType);
+    const buttonStyles = getButtonStyle(baseButton, buttonType);
+    const buttonSizeStyles = buttonSize !== undefined ? getButtonSize(baseButton, buttonSize) : {};
+
     return {
-      backgroundColor: buttonColors.background,
-      borderColor: buttonColors.border,
-      color: buttonColors.text,
-      ':active, :hover:active': {
-        backgroundColor: buttonColors.activeBackground,
-        borderColor: buttonColors.activeBorder,
-        color: buttonColors.activeText,
-      },
-      ':focus, :hover:focus': {
-        backgroundColor: buttonColors.focusBackground,
-        borderColor: buttonColors.focusBorder,
-        color: buttonColors.focusText,
-      },
-      ':hover': {
-        backgroundColor: buttonColors.hoverBackground,
-        borderColor: buttonColors.hoverBorder,
-        color: buttonColors.hoverText,
-      },
-      ':disabled, :active:disabled, :focus:disabled, :hover:disabled': {
-        backgroundColor: buttonColors.disabledBackground,
-        borderColor: buttonColors.disabledBorder,
-        color: buttonColors.disabledText,
-      },
-      '&:not([disabled])': {
-        '&:focus, &:active': {
-          ...(buttonType === ButtonTypes.Delete ? focusRing(2, 2) : focusRing(1)),
-        },
-      },
+      ...baseButton.styles,
+      ...buttonStyles,
+      ...buttonSizeStyles,
     };
   },
+  ({grow}) => grow && {width: '100%', maxWidth: '100%'}
+);
+
+export const ButtonBaseLabel = styled('span')<ButtonProps<AllButtonTypes>>(
+  ButtonStyles.labelBaseStyles.styles,
   ({buttonSize}) => {
+    const {sizes} = ButtonStyles.labelBaseStyles.variants!;
+
     switch (buttonSize) {
       case ButtonSizes.Large:
-        return {
-          height: `${BUTTON_HEIGHT_LARGE}px`,
-          padding: `0 ${canvas.spacing.l}`,
-          minWidth: '112px',
-          maxWidth: '288px',
-        };
-      case ButtonSizes.Medium:
-        return {
-          height: `${BUTTON_HEIGHT_MEDIUM}px`,
-          padding: `0 ${canvas.spacing.m}`,
-          minWidth: '80px',
-          maxWidth: '200px',
-        };
-      case ButtonSizes.Small:
-        return {
-          height: `${BUTTON_HEIGHT_SMALL}px`,
-          padding: `0 ${canvas.spacing.xxs}`,
-          minWidth: '56px',
-          maxWidth: '120px',
-        };
       default:
-        return {height: `${BUTTON_HEIGHT_LARGE}px`, padding: 0};
+        return sizes.large;
+      case ButtonSizes.Small:
+        return sizes.small;
+      case ButtonSizes.Medium:
+        return sizes.medium;
     }
   },
-  ({grow}) => {
-    if (grow) {
-      return {width: '100%', maxWidth: '100%'};
+  ({buttonType}) => {
+    const {types} = ButtonStyles.labelBaseStyles.variants!;
+
+    switch (buttonType) {
+      case TextButtonTypes.Default:
+      case TextButtonTypes.Inverse:
+        return types.text;
+      case TextButtonTypes.AllCaps:
+      case TextButtonTypes.InverseAllCaps:
+        return types.textAllCaps;
+      case ButtonTypes.Primary:
+        return types.primary;
+      case ButtonTypes.Secondary:
+        return types.secondary;
+      case ButtonTypes.Delete:
+        return types.delete;
+      default:
+        return {};
     }
-    return {};
   }
 );
 
-export const ButtonBaseLabel = styled('span')<ButtonProps>(
-  {
-    position: 'relative', // Fixes an IE issue with text within button moving on click
-    ':hover:active': {
-      backgroundColor: 'transparent',
-    },
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    fontWeight: 500,
-    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-  },
+export const ButtonLabelData = styled('span')<ButtonProps>(
+  ButtonStyles.labelDataBaseStyles.styles,
   ({buttonSize}) => {
-    if (buttonSize === ButtonSizes.Medium) {
-      return {
-        fontSize: '13px',
-      };
-    } else if (buttonSize === ButtonSizes.Small) {
-      return {
-        fontSize: '10px',
-      };
-    } else {
-      return {
-        fontSize: '14px',
-      };
+    const {sizes} = ButtonStyles.labelDataBaseStyles.variants!;
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return sizes.large;
+      case ButtonSizes.Medium:
+        return sizes.medium;
     }
   }
 );
 
-function getButtonColors(buttonType: ButtonTypes) {
+const ButtonLabelIconStyled = styled('span')<
+  ButtonLabelIconProps & Pick<TextButtonProps, 'iconPosition'>
+>(
+  ButtonStyles.labelIconBaseStyles.styles,
+  ({buttonSize, dropdown}) => {
+    if (dropdown) {
+      switch (buttonSize) {
+        case ButtonSizes.Large:
+        default:
+          return {padding: '0 8px 0 0'};
+        case ButtonSizes.Medium:
+          return {padding: '0 4px 0 0'};
+      }
+    }
+
+    const {sizes} = ButtonStyles.labelIconBaseStyles.variants!;
+
+    switch (buttonSize) {
+      case ButtonSizes.Large:
+      default:
+        return sizes.large;
+      case ButtonSizes.Medium:
+        return sizes.medium;
+    }
+  },
+  ({iconPosition}) => {
+    if (iconPosition === undefined) {
+      return {};
+    }
+
+    const {types} = ButtonStyles.labelIconBaseStyles.variants!;
+
+    switch (iconPosition) {
+      case IconPositions.Left:
+      default:
+        return types.iconPositionLeft;
+      case IconPositions.Right:
+        return types.iconPositionRight;
+    }
+  }
+);
+
+export interface ButtonLabelIconProps extends ButtonProps<AllButtonTypes> {
+  dropdown?: boolean;
+}
+
+export class ButtonLabelIcon extends React.Component<ButtonLabelIconProps> {
+  public render() {
+    /* istanbul ignore next line for coverage */
+    if (this.props.icon === undefined) {
+      return {};
+    }
+
+    let iconSize = 24;
+
+    if (this.props.buttonSize === ButtonSizes.Small) {
+      iconSize = 20;
+    }
+
+    return (
+      <ButtonLabelIconStyled {...this.props}>
+        <SystemIcon size={iconSize} icon={this.props.icon} />
+      </ButtonLabelIconStyled>
+    );
+  }
+}
+
+export function getButtonSize(
+  baseButton: ButtonStyles.ButtonGenericStyle,
+  buttonSize?: ButtonSizes
+) {
+  const {sizes} = baseButton.variants!;
+
+  switch (buttonSize) {
+    case ButtonSizes.Large:
+      return sizes.large;
+    case ButtonSizes.Medium:
+    default:
+      return sizes.medium;
+    case ButtonSizes.Small:
+      return sizes.small;
+  }
+}
+
+export function getButtonStyle(
+  baseButton: ButtonStyles.ButtonGenericStyle,
+  buttonType?: AllButtonTypes
+) {
+  const {types} = baseButton.variants!;
+
   switch (buttonType) {
     case ButtonTypes.Primary:
     default:
-      return canvas.buttonColors.primary;
+      return types[ButtonTypes.Primary];
     case ButtonTypes.Secondary:
-      return canvas.buttonColors.secondary;
+      return types[ButtonTypes.Secondary];
     case ButtonTypes.Delete:
-      return canvas.buttonColors.delete;
+      return types[ButtonTypes.Delete];
+    case BetaButtonTypes.Highlight:
+      return types[BetaButtonTypes.Highlight];
+    case BetaButtonTypes.OutlinePrimary:
+      return types[BetaButtonTypes.OutlinePrimary];
+    case BetaButtonTypes.OutlineSecondary:
+      return types[BetaButtonTypes.OutlineSecondary];
+    case BetaButtonTypes.OutlineInverse:
+      return types[BetaButtonTypes.OutlineInverse];
+    case BetaButtonTypes.Primary:
+      return types[BetaButtonTypes.Primary];
+    case BetaButtonTypes.Secondary:
+      return types[BetaButtonTypes.Secondary];
+    case BetaButtonTypes.Delete:
+      return types[BetaButtonTypes.Delete];
+    case TextButtonTypes.Default:
+      return types[TextButtonTypes.Default];
+    case TextButtonTypes.Inverse:
+      return types[TextButtonTypes.Inverse];
+    case TextButtonTypes.AllCaps:
+      return types[TextButtonTypes.AllCaps];
+    case TextButtonTypes.InverseAllCaps:
+      return types[TextButtonTypes.InverseAllCaps];
+  }
+}
+
+function getBaseButton(buttonType: ButtonTypes | BetaButtonTypes) {
+  switch (buttonType) {
+    case ButtonTypes.Primary:
+    case ButtonTypes.Secondary:
+    case ButtonTypes.Delete:
+    default:
+      return ButtonStyles.canvasButtonStyles;
+    case BetaButtonTypes.Primary:
+    case BetaButtonTypes.Secondary:
+    case BetaButtonTypes.Delete:
+    case BetaButtonTypes.Highlight:
+    case BetaButtonTypes.OutlinePrimary:
+    case BetaButtonTypes.OutlineSecondary:
+    case BetaButtonTypes.OutlineInverse:
+      return ButtonStyles.betaButtonStyles;
   }
 }

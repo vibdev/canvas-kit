@@ -5,15 +5,23 @@ import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {editIcon} from '@workday/canvas-system-icons-web';
 
-import {Button, IconButton} from './index'; // tslint:disable-line:import-name
+import {Button, IconButton} from './index';
 import README from './README.md';
 import {css} from 'emotion';
+
+const buttonContainer = {
+  display: 'flex',
+  alignItems: 'center',
+  '& button + button': {
+    marginLeft: 10,
+  },
+};
 
 storiesOf('Canvas Kit/Button', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Button</h1>
+      <h1 className="section-label">Canvas Buttons</h1>
       <Button
         buttonType={Button.Types.Primary}
         onClick={() => {
@@ -52,14 +60,7 @@ storiesOf('Canvas Kit/Button', module)
       </IconButton>
       <br />
       <h1 className="section-label">Growing Button</h1>
-      <div
-        className={css({
-          display: 'flex',
-          '& button + button': {
-            marginLeft: 10,
-          },
-        })}
-      >
+      <div className={css(buttonContainer)}>
         <Button
           buttonType={Button.Types.Primary}
           grow={true}

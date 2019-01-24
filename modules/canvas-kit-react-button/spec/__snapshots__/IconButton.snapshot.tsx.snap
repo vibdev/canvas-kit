@@ -22,13 +22,11 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-transition: all 120ms ease-in;
-  transition: all 120ms ease-in;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
-  height: 40px;
-  padding: 0;
   border-radius: 3px;
   width: 32px;
   height: 32px;
@@ -45,17 +43,21 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
   box-shadow: none;
 }
 
-.emotion-0:active,
-.emotion-0:hover:active {
+.emotion-0:focus {
   background-color: #f0f1f2;
-  border-color: #ced3d9;
+  border-color: #005cb9;
   color: #333333;
 }
 
-.emotion-0:focus,
 .emotion-0:hover:focus {
+  background-color: #ced3d9;
+}
+
+.emotion-0:active,
+.emotion-0:focus:active,
+.emotion-0:hover:active {
   background-color: #f0f1f2;
-  border-color: #005cb9;
+  border-color: #ced3d9;
   color: #333333;
 }
 
@@ -76,6 +78,7 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
 
 .emotion-0:not([disabled]):focus,
 .emotion-0:not([disabled]):active {
+  border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
