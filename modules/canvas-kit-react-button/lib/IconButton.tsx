@@ -7,7 +7,7 @@ import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
 
 export interface IconButtonProps extends BaseButtonProps<IconButtonTypes> {
-  toggled?: Boolean;
+  toggled?: boolean;
 }
 
 const IconButtonCon = styled('button')<IconButtonProps>(
@@ -73,7 +73,7 @@ export default class IconButton extends React.Component<IconButtonProps> {
   public render() {
     return (
       // TODO (breaking change): need to remove buttonType and buttonSize prop here, doesn't make sense to expose
-      <IconButtonCon {...this.props} buttonSize={undefined} />
+      <IconButtonCon {...this.props} buttonSize={undefined} aria-pressed={this.props.toggled} />
     );
   }
 }
