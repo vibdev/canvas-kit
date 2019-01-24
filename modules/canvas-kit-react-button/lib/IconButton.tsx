@@ -23,12 +23,8 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         return {};
       case IconButtonTypes.IconPrimary:
         return {
-          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
-            fill: colors.blueberry400,
-          },
-          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
-            fill: colors.frenchVanilla100,
-          },
+          ...getFillBackgroundSelector(colors.blueberry400),
+          ...getAccentSelector(colors.frenchVanilla100),
         };
       case IconButtonTypes.IconPrimaryFilled:
         return {
@@ -36,21 +32,15 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           '&:focus, &:hover': {
             backgroundColor: colors.blueberry500,
           },
-          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
-            fill: colors.frenchVanilla100,
-          },
-          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
-            fill: colors.blueberry400,
-          },
+          ...getFillBackgroundSelector(colors.frenchVanilla100),
+          ...getAccentSelector(colors.blueberry400),
         };
       case IconButtonTypes.IconInverse:
         return {
           '&:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
             fill: colors.frenchVanilla100,
           },
-          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
-            fill: colors.licorice200,
-          },
+          ...getAccentSelector(colors.licorice200),
         };
       case IconButtonTypes.IconInverseFilled:
         return {
@@ -58,16 +48,28 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           '&:focus': {
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
           },
-          '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
-            fill: colors.frenchVanilla100,
-          },
-          '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
-            fill: colors.licorice200,
-          },
+          ...getFillBackgroundSelector(colors.frenchVanilla100),
+          ...getAccentSelector(colors.licorice200),
         };
     }
   }
 );
+
+function getFillBackgroundSelector(fillColor: string) {
+  return {
+    '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
+      fill: fillColor,
+    },
+  };
+}
+
+function getAccentSelector(fillColor: string) {
+  return {
+    '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
+      fill: fillColor,
+    },
+  };
+}
 
 export default class IconButton extends React.Component<IconButtonProps> {
   public static Types = IconButtonTypes;
