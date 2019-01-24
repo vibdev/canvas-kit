@@ -71,7 +71,8 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconActive: canvas.colors.licorice500,
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap600,
-    labelData: canvas.colors.licorice100,
+    labelData: canvas.colors.blackPepper400,
+    labelDataDisabled: canvas.colors.licorice100,
   },
   [BetaButtonTypes.Delete]: {
     background: canvas.colors.cinnamon500,

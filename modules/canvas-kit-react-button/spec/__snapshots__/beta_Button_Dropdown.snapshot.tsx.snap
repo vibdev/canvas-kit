@@ -321,7 +321,7 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown secondary button 
 }
 
 .emotion-3 .button-label-data {
-  color: #a1aab3;
+  color: #333333;
 }
 
 .emotion-3:focus {
@@ -385,6 +385,13 @@ exports[`Button (Dropdown) Snapshots renders a large, dropdown secondary button 
 .emotion-3:focus:disabled span .wd-icon-accent,
 .emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
+}
+
+.emotion-3:disabled .button-label-data,
+.emotion-3:active:disabled .button-label-data,
+.emotion-3:focus:disabled .button-label-data,
+.emotion-3:hover:disabled .button-label-data {
+  color: #a1aab3;
 }
 
 .emotion-3:not([disabled]):focus,
@@ -739,7 +746,7 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown secondary button
 }
 
 .emotion-3 .button-label-data {
-  color: #a1aab3;
+  color: #333333;
 }
 
 .emotion-3:focus {
@@ -803,6 +810,13 @@ exports[`Button (Dropdown) Snapshots renders a medium, dropdown secondary button
 .emotion-3:focus:disabled span .wd-icon-accent,
 .emotion-3:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
+}
+
+.emotion-3:disabled .button-label-data,
+.emotion-3:active:disabled .button-label-data,
+.emotion-3:focus:disabled .button-label-data,
+.emotion-3:hover:disabled .button-label-data {
+  color: #a1aab3;
 }
 
 .emotion-3:not([disabled]):focus,
