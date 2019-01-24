@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.2.26...@workday/canvas-kit-react-cookie-banner@0.3.0) (2019-01-24)
+
+
+### Features
+
+* **ude-buttons:** added tests; updated snapshots ([8132d22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/8132d22))
+* **ude-buttons:** updated snaps ([a77b6e0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/a77b6e0))
+
+
+
+
 <a name="0.2.26"></a>
 ## [0.2.26](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.2.25...@workday/canvas-kit-react-cookie-banner@0.2.26) (2019-01-15)
 

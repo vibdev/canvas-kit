@@ -3,6 +3,94 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.16.0"></a>
+# [0.16.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.22...@workday/canvas-kit-react-button@0.16.0) (2019-01-24)
+
+
+### Bug Fixes
+
+* **button:** adj secondary button label color ([812a2ab](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/812a2ab))
+* **button:** adjust outline primary disabled button color ([50f824a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/50f824a))
+* **button:** fix vertical align bug ([e6554a6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e6554a6))
+* **button:** move styled component out of render ([f19cbd2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f19cbd2))
+* **button:** reconcile generic button colors types ([6c03960](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6c03960))
+* **button:** remove ability to alter icon button's type and size ([db1b762](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/db1b762))
+* **button:** remove partial mapped type for defaultProps ([4d59481](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/4d59481))
+* **button:** revert erroneously checked in code for dropdown stories ([cf5b5df](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/cf5b5df))
+* **button:** TS fixes and adjustments to generic styles ([a584471](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/a584471))
+* **button:** update button transition ([9e2b3e5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9e2b3e5))
+* **button:** update sec. disabled btn text colors ([88c7556](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/88c7556))
+* **buttons:** refactor button types ([77e6bad](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/77e6bad))
+* **ude-buttons:** changed media icon to play icon ([5fc7657](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/5fc7657))
+* **ude-buttons:** fixed regressions ([54b9ef4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/54b9ef4))
+* **ude-buttons:** fixed type errors ([f7be0ce](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f7be0ce))
+
+
+### Features
+
+* **Button:** added ButtonDataLabel component ([d03f251](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/d03f251))
+* **button-base:** added button base for text button ([222834f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/222834f))
+* **ide-buttons:** updated ude padding to account for border widths ([54b3578](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/54b3578))
+* **ude-buttons:** addded highlight & outline buttons ([82ca51b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/82ca51b))
+* **ude-buttons:** added all caps variant for text buttons ([41dc9e1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/41dc9e1))
+* **ude-buttons:** added correct border widths for ude buttons ([be3b47b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/be3b47b))
+* **ude-buttons:** added default buttonType to TextButton ([272b3e8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/272b3e8))
+* **ude-buttons:** added disabled state to text buttons ([e0d37be](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e0d37be))
+* **ude-buttons:** added disabled states ([f64cfa1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f64cfa1))
+* **ude-buttons:** added dropdown button type ([31fadd1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/31fadd1))
+* **ude-buttons:** added icon component and styles ([6ace9bd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6ace9bd))
+* **ude-buttons:** added icons to text buttons ([aceac48](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/aceac48))
+* **ude-buttons:** added non null assertion to buttons ([96fab5e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/96fab5e))
+* **ude-buttons:** added primary & secondary button colors ([810d648](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/810d648))
+* **ude-buttons:** added restrictions to highlight variants ([f040bb2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f040bb2))
+* **ude-buttons:** added sizing for ude buttons ([6a5dc6d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6a5dc6d))
+* **ude-buttons:** added tests for ude delete button ([a59646c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/a59646c))
+* **ude-buttons:** added tests; updated snapshots ([8132d22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8132d22))
+* **ude-buttons:** added transitions to button icons ([d65e5fd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/d65e5fd))
+* **ude-buttons:** added udeDelete button type ([e0bf3ac](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e0bf3ac))
+* **ude-buttons:** added wd-icon-accent selector to ButtonStyles ([26d55c0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/26d55c0))
+* **ude-buttons:** cleaned up ButtonBase.tsx ([3d4e7ef](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/3d4e7ef))
+* **ude-buttons:** cleaned up ButtonBase.tsx ([56ed2b6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/56ed2b6))
+* **ude-buttons:** cleaned up ButtonStyles.ts ([dd9a082](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/dd9a082))
+* **ude-buttons:** combined base button styles ([b208c56](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/b208c56))
+* **ude-buttons:** combined focus and hover states ([0fd67da](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/0fd67da))
+* **ude-buttons:** dropdown ([7fca9d5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/7fca9d5))
+* **ude-buttons:** fix medium dropdown button type ([9e48a0a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9e48a0a))
+* **ude-buttons:** fixed regression border ([5f104b3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/5f104b3))
+* **ude-buttons:** focus ring polish ([9ac7e56](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9ac7e56))
+* **ude-buttons:** increased specitivity for button icon color ([3feb673](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/3feb673))
+* **ude-buttons:** made getButtonStyles, getButtonSizeStyles second argument optional ([b941708](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/b941708))
+* **ude-buttons:** moved button colors interface to ButtonColors.ts ([8587677](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8587677))
+* **ude-buttons:** moved generic styles to common ([e3d51e6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e3d51e6))
+* **ude-buttons:** polished type and weight ([8e40253](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8e40253))
+* **ude-buttons:** refactored naming convention for button labels ([9132df9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9132df9))
+* **ude-buttons:** removed left/right icon prop ([e92cb35](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e92cb35))
+* **ude-buttons:** removed unnecessary getUppercase function ([6a28bf2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6a28bf2))
+* **ude-buttons:** restricted growth from TextButton ([f8d683f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f8d683f))
+* **ude-buttons:** style and type updates ([278b17c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/278b17c))
+* **ude-buttons:** typo fix; minor code style updates ([9f6d797](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9f6d797))
+* **ude-buttons:** udpated styles to generic styles ([31300e4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/31300e4))
+* **ude-buttons:** updated buttonTypes for TextButton ([2184471](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/2184471))
+* **ude-buttons:** updated icon vertical alignment ([55ff718](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/55ff718))
+* **ude-buttons:** updated logic for button sizes ([8d45bc1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8d45bc1))
+* **ude-buttons:** updated medium fontsize for data label ([4cd915e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/4cd915e))
+* **ude-buttons:** updated outlinewhite active background to soap300 ([5afaebf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/5afaebf))
+* **ude-buttons:** updated padding to compensate for border box-sizing ([0a9bb23](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/0a9bb23))
+* **ude-buttons:** updated small text button icon size ([e0ce0b2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e0ce0b2))
+* **ude-buttons:** updated snaps ([a77b6e0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/a77b6e0))
+* **ude-buttons:** updated snaps ([05548ef](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/05548ef))
+* **ude-buttons:** updated snapshots for dropdown button ([35b0eb7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/35b0eb7))
+* **ude-buttons:** updated storybook layout ([abe0d7a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/abe0d7a))
+* **ude-buttons:** updated storybook structure ([863cdb3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/863cdb3))
+* **ude-buttons:** updated text icon dark icon hover ([2bc3835](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/2bc3835))
+* **ude-buttons:** updated ude delete disabled background to cinnamon200 ([c878062](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/c878062))
+* **ude-buttons:** updates to button states and specificity ([b0fde89](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/b0fde89))
+* **ude-buttons:** updates to icon label sizing ([13db6fe](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/13db6fe))
+* **ude-buttons:** updates to storybook ([9cb117f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9cb117f))
+
+
+
+
 <a name="0.15.22"></a>
 ## [0.15.22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.15.21...@workday/canvas-kit-react-button@0.15.22) (2019-01-15)
 

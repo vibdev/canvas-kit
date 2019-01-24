@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.5.8...@workday/canvas-kit-react-fat@0.6.0) (2019-01-24)
+
+
+### Features
+
+* **ude-buttons:** added tests; updated snapshots ([8132d22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/8132d22))
+* **ude-buttons:** updated snaps ([a77b6e0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/a77b6e0))
+
+
+
+
 <a name="0.5.8"></a>
 ## [0.5.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.5.7...@workday/canvas-kit-react-fat@0.5.8) (2019-01-15)
 
