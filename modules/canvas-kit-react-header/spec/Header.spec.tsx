@@ -46,14 +46,6 @@ describe('Header', () => {
     expect(component.instance().getScreenSize(widths.lg, breakpoints)).toBe('lg');
   });
 
-  test('Searching something should call callback', () => {
-    const component = mount(<Header onSearchSubmit={cb} />);
-
-    component.find('form').simulate('submit');
-    expect(cb.mock.calls.length).toBe(1);
-    component.unmount();
-  });
-
   describe('How Header children render', () => {
     const icon = <SystemIcon icon={activityStreamIcon} />;
 

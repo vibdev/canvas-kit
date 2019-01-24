@@ -47,6 +47,7 @@ const SearchContainer = styled('form')<SearchProps>(
     position: 'relative',
     marginLeft: spacing.m,
     flexGrow: 1,
+    display: 'block',
   },
   ({rightAlign, collapse}) => {
     const rightAlignStyles: CSSObject = rightAlign
