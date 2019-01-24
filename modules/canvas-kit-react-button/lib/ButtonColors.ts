@@ -120,7 +120,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeText: canvas.colors.frenchVanilla100,
     disabledBackground: canvas.colors.frenchVanilla100,
     disabledBorder: canvas.colors.soap500,
-    disabledText: canvas.colors.licorice300,
+    disabledText: canvas.colors.licorice100,
     focusBackground: canvas.colors.blueberry400,
     focusBorder: 'transparent',
     focusText: canvas.colors.frenchVanilla100,
