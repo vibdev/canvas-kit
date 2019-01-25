@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.18"></a>
+## [0.1.18](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.17...@workday/canvas-kit-react-header@0.1.18) (2019-01-25)
+
+
+### Bug Fixes
+
+* **header:** change lodash import to es module ([124dc31](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/124dc31))
+
+
+
+
 <a name="0.1.17"></a>
 ## [0.1.17](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.16...@workday/canvas-kit-react-header@0.1.17) (2019-01-24)
 
