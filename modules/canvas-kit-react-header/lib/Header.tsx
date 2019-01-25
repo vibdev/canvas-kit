@@ -275,7 +275,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * Updates the state screen size/width if it has changed (syncs w/ browser paints using RAF)
    */
   updateScreenSize(): void {
-    console.log('tick');
     requestAnimationFrame(() => {
       const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
 
