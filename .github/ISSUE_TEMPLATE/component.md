@@ -14,9 +14,10 @@ _link_
 
 _link_
 
-#### Transitions / Microinteractions
+#### Transitions / Micro-interactions
 
 Detailed information about each transition (properties being animated, duration, easing, etc.).
+
 Specs should follow our [motion guidelines](https://design.workday.com/guidelines/motion/behavior).
 
 #### Additional Notes
