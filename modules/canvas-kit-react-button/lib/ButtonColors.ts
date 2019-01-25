@@ -234,10 +234,11 @@ export const ButtonColors: ButtonColorCollection = {
   [IconButtonTypes.Default]: {
     background: canvas.colors.soap200,
     border: canvas.colors.soap500,
+    text: canvas.colors.blackPepper400,
     activeBackground: canvas.colors.soap500,
     disabledBackground: canvas.colors.frenchVanilla100,
     focusBackground: canvas.colors.soap200,
-    focusBorder: canvas.colors.blueberry400,
+    focusBorder: canvas.colors.blueberry500,
     hoverBackground: canvas.colors.soap400,
     labelIcon: canvas.colors.licorice200,
     labelIconHover: canvas.colors.licorice500,
