@@ -3,58 +3,8 @@
 This project provides a set of React components that can be used to implement user experiences
 consistent with [Workday's design principles](https://design.workday.com/).
 
-## Kit Status
-
-We will continue to update this list as we add or make significant changes to components that are
-part of Canvas.
-
-**Legend** :white_check_mark: Available :construction: In Progress :round_pushpin: Planned
-
-### Basic Guidelines
-
-| Component                                                    |       Status       |
-| ------------------------------------------------------------ | :----------------: |
-| [Colors](https://design.workday.com/guidelines/visual/color) | :white_check_mark: |
-| [Depth](https://design.workday.com/guidelines/visual/depth)  | :white_check_mark: |
-| [Icons](https://design.workday.com/guidelines/visual/icons)  | :white_check_mark: |
-| [Space](https://design.workday.com/guidelines/visual/space)  | :white_check_mark: |
-| Grid System                                                  | :white_check_mark: |
-| [Type](https://design.workday.com/guidelines/visual/type)    | :white_check_mark: |
-
-### Components
-
-| Component                                                                             |       Status       |
-| ------------------------------------------------------------------------------------- | :----------------: |
-| Avatar                                                                                | :white_check_mark: |
-| [Button - Standard](https://design.workday.com/guidelines/components/buttons)         | :white_check_mark: |
-| [Button - Drop Down](https://design.workday.com/guidelines/components/buttons)        |                    |
-| [Button - Icon](https://design.workday.com/guidelines/components/buttons)             | :white_check_mark: |
-| [Button - Link](https://design.workday.com/guidelines/components/buttons)             |                    |
-| Card                                                                                  | :white_check_mark: |
-| [Checkbox](https://design.workday.com/guidelines/components/check-boxes)              |                    |
-| Color Picker                                                                          |                    |
-| Context Menu                                                                          |                    |
-| [Cookie Banner](modules/canvas-kit-react-cookie-banner)                               | :white_check_mark: |
-| [Date Input](https://design.workday.com/guidelines/components/date-picker)            |                    |
-| Dialog                                                                                |                    |
-| [Drop Down Select](https://design.workday.com/guidelines/components/dropdown-menus)   |                    |
-| Floating Action Toolbar                                                               | :white_check_mark: |
-| [Header](https://design.workday.com/guidelines/components/application-header)         | :white_check_mark: |
-| List                                                                                  |                    |
-| [Loading Animation](canvas-kit-react-loading-animation)                               | :white_check_mark: |
-| Numeric Input                                                                         |                    |
-| [Page Header](https://design.workday.com/guidelines/components/page-header)           | :white_check_mark: |
-| Pop Up                                                                                |                    |
-| Progress Bar                                                                          |                    |
-| [Radio Buttons](https://design.workday.com/guidelines/components/radio-buttons)       |                    |
-| [Rich Text Editor](https://design.workday.com/guidelines/components/rich-text-editor) |                    |
-| Slider                                                                                |                    |
-| [Table](https://design.workday.com/guidelines/components/grids)                       | :white_check_mark: |
-| [Tabs](https://design.workday.com/guidelines/components/tabs)                         |                    |
-| Toast                                                                                 |                    |
-| Text Area                                                                             |                    |
-| [Text Input](https://design.workday.com/guidelines/components/text-inputs)            |                    |
-| [Toggle Switch](modules/canvas-kit-react-toggle)                                      | :white_check_mark: |
+**:white_check_mark: For a list of available react modules see
+[Canvas Kit Component Status](KIT_STATUS.md)**
 
 ## Getting Started
 

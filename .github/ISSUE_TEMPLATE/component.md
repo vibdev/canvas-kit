@@ -14,8 +14,9 @@ _link_
 
 _link_
 
-#### Transitions / Micro Motions
+#### Transitions / Microinteractions
 
-_Insert gifs or attach links to transitions or micro motions for component state changes._
+Detailed information about each transition (properties being animated, duration, easing, etc.).
+Specs should follow our [motion guidelines](https://design.workday.com/guidelines/motion/behavior).
 
 #### Additional Notes
