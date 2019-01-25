@@ -10,6 +10,23 @@ declare global {
     resizeBy: (x: number, y: number) => void;
   }
 }
+const map: {[key: string]: any} = {};
+window.addEventListener = jest.fn((event, callback) => {
+  map[event] = callback;
+});
+window.removeEventListener = jest.fn((event, callback) => {
+  if (map[event] && map[event] === callback) {
+    delete map[event];
+  }
+});
+window.dispatchEvent = (event: Event) => {
+  if (map[event.type]) {
+    map[event.type]();
+  }
+
+  // TODO: not totally accurate
+  return false;
+};
 
 window.resizeBy = (x: number, y: number) => {
   // @ts-ignore
@@ -44,6 +61,34 @@ describe('Header', () => {
     expect(component.instance().getScreenSize(widths.sm, breakpoints)).toBe('sm');
     expect(component.instance().getScreenSize(widths.md, breakpoints)).toBe('md');
     expect(component.instance().getScreenSize(widths.lg, breakpoints)).toBe('lg');
+  });
+
+  test('resize eventlisteners are throttled', () => {
+    const spy = jest.spyOn(Header.prototype, 'updateScreenSize');
+    mount<Header>(<Header />);
+
+    expect(spy).not.toHaveBeenCalled();
+
+    window.resizeBy(319, 720);
+    window.resizeBy(320, 720);
+    window.resizeBy(321, 720);
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  test('resize eventlisteners are correctly unmounted', () => {
+    const spy = jest.spyOn(Header.prototype, 'updateScreenSize');
+    const wrapper = mount<Header>(<Header />);
+
+    expect(spy).not.toHaveBeenCalled();
+
+    window.resizeBy(319, 720);
+    expect(spy).toHaveBeenCalledTimes(1);
+
+    spy.mockReset();
+
+    wrapper.unmount();
+    window.resizeBy(320, 720);
+    expect(spy).not.toHaveBeenCalled();
   });
 
   describe('How Header children render', () => {

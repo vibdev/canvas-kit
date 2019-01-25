@@ -180,10 +180,19 @@ describe('Full Header Snapshots', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('renders a blue header with a search bar and no children', () => {
+    const tree = renderer
+      .create(
+        <Header variant={Header.Variant.Full} themeColor={Header.Theme.Blue} onSearchSubmit={cb} />
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   test('renders a header with content with a search bar', () => {
     const tree = renderer
       .create(
-        <Header variant={Header.Variant.Full} onSearchSubmit={cb}>
+        <Header variant={Header.Variant.Full} themeColor={Header.Theme.Blue} onSearchSubmit={cb}>
           <SystemIcon icon={notificationsIcon} />
         </Header>
       )
