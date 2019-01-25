@@ -7,7 +7,7 @@ import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
-import {throttle} from 'lodash';
+import throttle from 'lodash-es/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface HeaderProps {
