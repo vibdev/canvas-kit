@@ -1,5 +1,11 @@
 import canvas from '@workday/canvas-kit-react-core';
-import {AllButtonTypes, ButtonTypes, TextButtonTypes, BetaButtonTypes, IconButtonTypes} from './types';
+import {
+  AllButtonTypes,
+  ButtonTypes,
+  TextButtonTypes,
+  BetaButtonTypes,
+  IconButtonTypes,
+} from './types';
 
 export interface CanvasButtonColors
   extends Partial<typeof canvas.buttonColors.secondary>,
@@ -231,7 +237,7 @@ export const ButtonColors: ButtonColorCollection = {
     activeBackground: canvas.colors.soap500,
     disabledBackground: canvas.colors.frenchVanilla100,
     focusBackground: canvas.colors.soap200,
-    focusBorder: 'transparent',
+    focusBorder: canvas.colors.blueberry400,
     hoverBackground: canvas.colors.soap400,
     labelIcon: canvas.colors.licorice200,
     labelIconHover: canvas.colors.licorice500,

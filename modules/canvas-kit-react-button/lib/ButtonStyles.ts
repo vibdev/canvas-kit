@@ -428,9 +428,8 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
   switch (buttonType) {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
-      return focusRing(1);
     case IconButtonTypes.Default:
-      return focusRing(2);
+      return focusRing(1);
     case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     case TextButtonTypes.Default:
