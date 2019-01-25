@@ -7,7 +7,7 @@ import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
-import {throttle} from 'lodash';
+import throttle from 'lodash-es/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface HeaderProps {
@@ -275,6 +275,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * Updates the state screen size/width if it has changed (syncs w/ browser paints using RAF)
    */
   updateScreenSize(): void {
+    console.log('tick');
     requestAnimationFrame(() => {
       const currentScreenSize = this.getScreenSize(window.innerWidth, this.props.breakpoints);
 
