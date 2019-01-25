@@ -27,6 +27,8 @@ describe('Header Search Snapshots', () => {
     expect(tree.white).toMatchSnapshot('<Search /> with white theme applied');
   });
 
+  console.log('hi');
+
   // test('renders themed, collapsed search bars', () => {
   //   const tree = {
   //     blue: renderer.create(<Search themeColor={Header.Theme.Blue} collapse={true} />).toJSON(),
