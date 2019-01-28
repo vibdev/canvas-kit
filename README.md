@@ -1,6 +1,10 @@
 # Canvas Kit React
 
-This project provides Canvas-styled React components.
+This project provides a set of React components that can be used to implement user experiences
+consistent with [Workday's design principles](https://design.workday.com/).
+
+**:white_check_mark: For a list of available react modules see
+[Canvas Kit Component Status](COMPONENT_STATUS.md)**
 
 ## Getting Started
 
