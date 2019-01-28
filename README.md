@@ -4,7 +4,7 @@ This project provides a set of React components that can be used to implement us
 consistent with [Workday's design principles](https://design.workday.com/).
 
 **:white_check_mark: For a list of available react modules see
-[Canvas Kit Component Status](KIT_STATUS.md)**
+[Canvas Kit Component Status](COMPONENT_STATUS.md)**
 
 ## Getting Started
 
