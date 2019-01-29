@@ -71,8 +71,16 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <IconButton buttonType={IconButton.Types.IconPrimary}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
+      <br />
+      <IconButton disabled={true} buttonType={IconButton.Types.IconPrimary}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
       <h3>Primary Filled Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPrimaryFilled}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <br />
+      <IconButton disabled={true} buttonType={IconButton.Types.IconPrimaryFilled}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <h3>Inversed Icon Buttons</h3>
@@ -81,9 +89,21 @@ storiesOf('Canvas Kit/Button/Beta', module)
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
+      <br />
+      <div className={css(blueBackground)}>
+        <IconButton disabled={true} buttonType={IconButton.Types.IconInverse}>
+          <SystemIcon icon={activityStreamIcon} />
+        </IconButton>
+      </div>
       <h3>Inverse Filled Icon Buttons</h3>
       <div className={css(blueBackground)}>
         <IconButton buttonType={IconButton.Types.IconInverseFilled}>
+          <SystemIcon icon={activityStreamIcon} />
+        </IconButton>
+      </div>
+      <br />
+      <div className={css(blueBackground)}>
+        <IconButton disabled={true} buttonType={IconButton.Types.IconInverseFilled}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
