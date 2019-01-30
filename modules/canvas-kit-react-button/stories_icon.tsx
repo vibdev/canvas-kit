@@ -20,7 +20,7 @@ interface ToggleIconButtonWrapperProps {
   buttonType: IconButtonTypes;
 }
 
-class ToggleIconButtonWrapper extends React.Component<
+export class ToggleIconButtonWrapper extends React.Component<
   ToggleIconButtonWrapperProps,
   ToggleIconButtonWrapperState
 > {

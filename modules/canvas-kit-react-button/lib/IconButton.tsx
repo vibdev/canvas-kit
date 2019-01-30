@@ -21,9 +21,23 @@ const IconButtonCon = styled('button')<IconButtonProps>(
     switch (buttonType) {
       default:
         return {};
+      case IconButtonTypes.Default:
+        return {
+          '&:focus&:hover, &:focus': {
+            backgroundColor: colors.blueberry500,
+          },
+          '&:hover': {
+            backgroundColor: colors.blueberry400,
+          },
+          backgroundColor: colors.blueberry500,
+          borderColor: colors.blueberry500,
+          ...getFillSelector(colors.frenchVanilla100),
+          ...getAccentSelector(colors.frenchVanilla100),
+        };
       case IconButtonTypes.IconPrimary:
         return {
-          ...getFillBackgroundSelector(colors.blueberry400),
+          ...getBackgroundSelector(colors.blueberry400),
+          ...getFillSelector(colors.blueberry400),
           ...getAccentSelector(colors.frenchVanilla100),
         };
       case IconButtonTypes.IconPrimaryFilled:
@@ -32,14 +46,16 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           '&:focus, &:hover': {
             backgroundColor: colors.blueberry500,
           },
-          ...getFillBackgroundSelector(colors.frenchVanilla100),
+          ...getBackgroundSelector(colors.frenchVanilla100),
+          ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.blueberry400),
         };
       case IconButtonTypes.IconInverse:
         return {
-          '&:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
+          '&:hover span .wd-icon-fill, span .wd-icon-fill': {
             fill: colors.frenchVanilla100,
           },
+          ...getBackgroundSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.licorice200),
         };
       case IconButtonTypes.IconInverseFilled:
@@ -48,16 +64,25 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           '&:focus': {
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
           },
-          ...getFillBackgroundSelector(colors.frenchVanilla100),
+          ...getBackgroundSelector(colors.frenchVanilla100),
+          ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.licorice200),
         };
     }
   }
 );
 
-function getFillBackgroundSelector(fillColor: string) {
+function getFillSelector(fillColor: string) {
   return {
-    '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill, &:hover span .wd-icon-background, span .wd-icon-background': {
+    '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill': {
+      fill: fillColor,
+    },
+  };
+}
+
+function getBackgroundSelector(fillColor: string) {
+  return {
+    '&:hover span .wd-icon-background, span .wd-icon-background': {
       fill: fillColor,
     },
   };

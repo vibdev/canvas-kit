@@ -4,6 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {editIcon} from '@workday/canvas-system-icons-web';
+import {ToggleIconButtonWrapper} from './stories_icon';
 
 import {Button, IconButton} from './index';
 import README from './README.md';
@@ -54,6 +55,8 @@ storiesOf('Canvas Kit/Button', module)
       <IconButton>
         <SystemIcon icon={editIcon} />
       </IconButton>
+      <br />
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
       <br />
       <IconButton disabled={true}>
         <SystemIcon icon={editIcon} />
