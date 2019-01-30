@@ -37,7 +37,6 @@
     "@workday/canvas-kit-react-button": "0.16.0",
     "@workday/canvas-kit-react-core": "1.3.0",
     "emotion": "^9.2.10",
-    "prop-types": "^15.6.2",
     "react-emotion": "^9.2.10"
   }
 }
