@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Header Search Snapshots Renders a collapsed search bar 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
 exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 1`] = `
 .emotion-2 {
   position: relative;
@@ -416,4 +466,154 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
     type="search"
   />
 </form>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with blue theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with transparent theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with white theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
 `;
