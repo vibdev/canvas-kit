@@ -199,4 +199,21 @@ describe('Full Header Snapshots', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  test('renders a header in a lg screen with search', () => {
+    // @ts-ignore
+    window.innerWidth = 1280;
+    const tree = renderer
+      .create(
+        <Header
+          brandUrl={'http://test'}
+          onSearchSubmit={() => {
+            return;
+          }}
+        />
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

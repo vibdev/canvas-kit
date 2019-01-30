@@ -303,7 +303,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * before stamped out in render().
    *
    * E.g. <SystemIcon> components need to have the appropriate `color` and `colorHover`
-   * props set based on the theme.cu
+   * props set based on the theme.
    *
    * @param children From props.children of a React component
    *

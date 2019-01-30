@@ -4404,6 +4404,429 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
 </div>
 `;
 
+exports[`Full Header Snapshots renders a header in a lg screen with search 1`] = `
+.emotion-10 {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 64px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  color: #333333;
+}
+
+.emotion-5 {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 64px;
+  background: none;
+}
+
+.emotion-0 {
+  padding: 0 16px;
+  margin-right: 16px;
+  border-right: 1px solid #dfe2e6;
+}
+
+.emotion-1 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 32px;
+  white-space: nowrap;
+  color: #005cb9;
+}
+
+.emotion-9 {
+  margin-right: 24px;
+}
+
+.emotion-9 > .canvas-header--menu-icon {
+  cursor: pointer;
+}
+
+@media (min-width:320px) {
+  .emotion-9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .emotion-9 > * {
+    margin-left: 24px;
+  }
+
+  .emotion-9 > *:not(.canvas-header--menu-icon) {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .emotion-9 > *:last-child {
+    margin-right: 0;
+  }
+
+  .emotion-9 > *:not(.canvas-header--menu-icon) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1120px) {
+  .emotion-9 {
+    -webkit-box-flex: unset;
+    -webkit-flex-grow: unset;
+    -ms-flex-positive: unset;
+    flex-grow: unset;
+  }
+}
+
+.emotion-9 nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: inherit;
+  margin-left: 40px;
+}
+
+.emotion-9 nav ul {
+  color: #333333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: inherit;
+}
+
+.emotion-9 nav ul:hover {
+  color: #7b858f;
+}
+
+.emotion-9 nav ul li {
+  box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 16px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
+}
+
+.emotion-9 nav ul li:first-child {
+  margin-left: 0;
+}
+
+.emotion-9 nav ul li:last-child {
+  margin-right: 0;
+}
+
+.emotion-9 nav ul li a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 nav ul li a:visited {
+  color: inherit;
+}
+
+.emotion-9 nav ul li:hover,
+.emotion-9 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-9 nav ul li.current {
+  color: #005cb9;
+}
+
+.emotion-9 nav ul li.current:hover,
+.emotion-9 nav ul li.current:active {
+  color: #005cb9;
+}
+
+.emotion-9 nav ul li.current:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: #0875e1;
+  border-radius: 3px 3px 0 0;
+}
+
+.emotion-8 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 320px;
+}
+
+.emotion-6 {
+  display: inline-block;
+}
+
+.emotion-6 svg {
+  display: block;
+}
+
+.emotion-6 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-6:hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-6 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-6:hover .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-6 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-7 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 44px;
+  max-width: 320px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7:not([disabled]):focus,
+.emotion-7:not([disabled]):active {
+  outline: none;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-7:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-7:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7:not([disabled]):focus::-moz-placeholder,
+.emotion-7:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7:not([disabled]):focus:-ms-input-placeholder,
+.emotion-7:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-7:not([disabled]):focus::placeholder,
+.emotion-7:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-4:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+  className="emotion-10"
+>
+  <div
+    className="emotion-5"
+  >
+    <a
+      className="emotion-4"
+      href="http://test"
+    >
+      <span>
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-2"
+            title=""
+          >
+            <span
+              className="emotion-0"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<svg width=\\"32px\\" height=\\"32px\\" viewBox=\\"0 0 32 32\\" version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"> <g id=\\"favicon-32x32\\" stroke=\\"none\\" stroke-width=\\"1\\" fill=\\"none\\" fill-rule=\\"evenodd\\"> <path d=\\"M5.58458798,11.2 C5.44377852,11.2 5.30078598,11.1808226 5.15848805,11.1407609 C4.31621133,10.9030014 3.82382478,10.0192348 4.05850721,9.16669416 C4.09274206,9.04279413 4.12886232,8.91939613 4.16676874,8.797203 C5.79505793,3.53536773 10.5519169,0 16.0034954,0 C21.4483261,0 26.2033989,3.52964464 27.8358558,8.78294546 C27.8717776,8.89841145 27.9065086,9.01578513 27.9394535,9.13376125 C28.1782044,9.98529781 27.6895886,10.8713738 26.848205,11.1127479 C26.0076152,11.3543228 25.131699,10.8596263 24.8931466,10.0080898 C24.8683387,9.92003442 24.8428362,9.83268189 24.8158453,9.74583139 C23.5997636,5.83314089 20.0585894,3.20513501 16.0034954,3.20513501 C11.9434398,3.20513501 8.40087632,5.83735791 7.18836699,9.75526948 C7.16058218,9.84533295 7.13388892,9.93609926 7.10878336,10.0273676 C6.91359505,10.7359271 6.27732287,11.2 5.58458798,11.2\\" id=\\"Fill-1\\" fill=\\"#F38B00\\"></path> <path d=\\"M27.3337042,15.6 L25.1552325,15.6 C24.846619,15.6 24.5784778,15.8098977 24.5078773,16.1068985 L21.5795139,28.0738354 C21.5392425,28.0743298 18.3527806,16.1164887 18.3527806,16.1164887 C18.2717357,15.8121717 17.9925475,15.6 17.6732887,15.6 L14.2987262,15.6 C13.9957367,15.6 13.7308091,15.8012961 13.6537813,16.0900909 L10.4441207,28.1250493 C10.3254155,28.0494149 7.49175516,16.1068985 7.49175516,16.1068985 C7.42105425,15.8098977 7.15301345,15.6 6.84439996,15.6 L4.66753503,15.6 C4.23067572,15.6 3.91161778,16.0069425 4.02198753,16.4234752 L8.01608676,31.5090193 C8.0920099,31.7961333 8.35322164,31.9974294 8.65339922,32 L11.947921,31.9948588 C12.2502076,31.9943645 12.5138296,31.7957378 12.5912591,31.507734 C13.1542553,29.417062 15.9298685,18.8437746 15.9298685,18.8437746 C15.9298685,18.8437746 18.8453772,29.4167654 19.4082729,31.507734 C19.4858029,31.7957378 19.7494249,31.9943645 20.051611,31.9948588 L23.3462332,32 C23.6464108,31.9974294 23.9076225,31.7961333 23.9836461,31.5090193 L27.9780466,16.4218933 C28.0882155,16.0060527 27.7698606,15.6 27.3337042,15.6\\" id=\\"Fill-4\\" fill=\\"#005CB9\\"></path> </g> </svg>",
+                }
+              }
+              title=""
+            />
+            <h3
+              className="emotion-1"
+              title=""
+            >
+              
+            </h3>
+          </div>
+        </div>
+      </span>
+    </a>
+  </div>
+  <form
+    className="emotion-8"
+    onSubmit={[Function]}
+    placeholder="Search"
+  >
+    <span
+      className="emotion-6"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+      style={
+        Object {
+          "left": "12px",
+          "position": "absolute",
+          "top": "50%",
+          "transform": "translateY(-50%)",
+        }
+      }
+    />
+    <input
+      className="emotion-7"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Search"
+      type="search"
+    />
+  </form>
+  <div
+    className="emotion-9"
+  />
+</div>
+`;
+
 exports[`Full Header Snapshots renders a header with a custom brand element 1`] = `
 .emotion-0 {
   height: 100%;

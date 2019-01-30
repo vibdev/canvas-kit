@@ -36,6 +36,9 @@ window.resizeBy = (x: number, y: number) => {
   window.dispatchEvent(new Event('resize'));
 };
 
+// @ts-ignore
+window.requestAnimationFrame = cbFn => cbFn();
+
 describe('Header', () => {
   const cb = jest.fn();
   beforeEach(() => {

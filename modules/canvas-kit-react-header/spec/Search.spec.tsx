@@ -8,6 +8,15 @@ describe('Header Search', () => {
     cb.mockReset();
   });
 
+  test('Trying to search without a callback should do nothing', () => {
+    const mockPreventDefault = jest.fn();
+    const mockEvent = {preventDefault: mockPreventDefault};
+    const component = mount(<Search rightAlign={true} />);
+    component.find('form').simulate('submit', mockEvent);
+
+    expect(mockPreventDefault).toBeCalled();
+  });
+
   test('Searching something should call callback', () => {
     const component = mount(<Search onSearchSubmit={cb} />);
 
