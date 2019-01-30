@@ -1,4 +1,7 @@
-import spacing, {ICanvasSpacing as CanvasSpacing} from '@workday/canvas-space-web';
+import spacing, {
+  ICanvasSpacing as CanvasSpacing,
+  CanvasSpacingValue,
+} from '@workday/canvas-space-web';
 
 export interface CanvasSpacingNumbers {
   xxxs: number;
@@ -28,6 +31,6 @@ export const spacingNumbers: CanvasSpacingNumbers = {
   xxxl: stripUnit(spacing.xxxl),
 };
 
-export {CanvasSpacing};
+export {CanvasSpacing, CanvasSpacingValue};
 
 export default spacing;
