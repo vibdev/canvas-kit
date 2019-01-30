@@ -228,12 +228,12 @@ export const betaButtonStyles: ButtonGenericStyle = {
       },
       [ButtonSizes.Medium]: {
         minWidth: '96px',
-        height: '40px',
+        height: canvas.spacing.xl,
         padding: '0 14px',
       },
       [ButtonSizes.Small]: {
         minWidth: '80px',
-        height: '32px',
+        height: canvas.spacing.l,
         padding: '0 14px',
       },
     },
@@ -277,20 +277,20 @@ export const textButtonStyles: ButtonGenericStyle = {
       },
       [TextButtonTypes.AllCaps]: {
         ...getButtonStateStyle(TextButtonTypes.Default),
-        height: '32px',
+        height: canvas.spacing.l,
       },
       [TextButtonTypes.InverseAllCaps]: {
         ...getButtonStateStyle(TextButtonTypes.Inverse),
-        height: '32px',
+        height: canvas.spacing.l,
       },
     },
     sizes: {
       [ButtonSizes.Large]: {
-        height: '40px',
+        height: canvas.spacing.xl,
         padding: '0 8px',
       },
       [ButtonSizes.Small]: {
-        height: '32px',
+        height: canvas.spacing.l,
         padding: '0 8px',
       },
     },
@@ -304,8 +304,8 @@ export const iconButtonStyles: ButtonGenericStyle = {
     ...canvasButtonStyles.styles,
     borderWidth: '0',
     borderRadius: '50%',
-    width: '40px',
-    height: '40px',
+    width: canvas.spacing.xl,
+    height: canvas.spacing.xl,
     ['& .wd-icon']: {
       display: 'inline-block',
       verticalAlign: 'middle',
@@ -317,8 +317,8 @@ export const iconButtonStyles: ButtonGenericStyle = {
       [IconButtonTypes.Default]: {
         borderRadius: '3px',
         borderWidth: '1px',
-        width: '32px',
-        height: '32px',
+        width: canvas.spacing.l,
+        height: canvas.spacing.l,
         ...getButtonStateStyle(IconButtonTypes.Default),
       },
       [IconButtonTypes.IconPrimary]: {
