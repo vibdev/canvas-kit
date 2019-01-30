@@ -503,11 +503,6 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.0.tgz#d32d473e03556c1f7d8bc8dcd5394a4671d05e0c"
   integrity sha1-0y1HPgNVbB99i8jc1TlKRnHQXgw=
 
-"@workday/canvas-space-web@^0.15.1":
-  version "0.15.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.1.tgz#a2eff4591864c7d715ee42fed5f11760d562421e"
-  integrity sha1-ou/0WRhkx9cV7kL+1fEXYNViQh4=
-
 "@workday/canvas-system-icons-web@^0.16.25":
   version "0.16.25"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.25.tgz#24222091dcefc46d1cff81a2d7744f6a6b95fd7d"

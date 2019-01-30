@@ -1,8 +1,13 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {colors, depth as depthValues, type, spacing} from '@workday/canvas-kit-react-core';
-import {CanvasSpacingValue} from '@workday/canvas-space-web';
-import {CanvasDepthValue} from '@workday/canvas-depth-web';
+import {
+  colors,
+  depth as depthValues,
+  type,
+  spacing,
+  CanvasDepthValue,
+  CanvasSpacingValue,
+} from '@workday/canvas-kit-react-core';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
