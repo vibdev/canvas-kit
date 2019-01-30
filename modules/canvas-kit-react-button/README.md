@@ -127,3 +127,13 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 ## Component Props
 
 > Same as [`Button`](#canvas-kit-button)
+
+---
+
+#### `toggled: boolean`
+
+> Whether or not the toggle is on (`true`) or off (`false`). This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component.
+> Undocumented props are spread to the `button` element.
+
+Default: `false`
