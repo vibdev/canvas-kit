@@ -19,9 +19,8 @@ const IconButtonCon = styled('button')<IconButtonProps>(
     }
 
     switch (buttonType) {
-      default:
-        return {};
       case IconButtonTypes.Default:
+      default:
         return {
           '&:focus&:hover, &:focus': {
             backgroundColor: colors.blueberry500,

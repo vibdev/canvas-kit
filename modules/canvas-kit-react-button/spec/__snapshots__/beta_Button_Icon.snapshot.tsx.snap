@@ -34,6 +34,8 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
+  background-color: #005cb9;
+  border-color: #005cb9;
 }
 
 .emotion-1:hover:active {
@@ -121,6 +123,27 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+}
+
+.emotion-1:focus.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #005cb9;
+}
+
+.emotion-1:hover {
+  background-color: #0875e1;
+}
+
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1 span .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-1:focus span .wd-icon-accent,
+.emotion-1:hover span .wd-icon-accent,
+.emotion-1 span .wd-icon-accent {
+  fill: #ffffff;
 }
 
 .emotion-0 {
@@ -646,11 +669,14 @@ exports[`Button (Icon) Snapshots renders a primary filled icon button, toggled o
   background-color: #005cb9;
 }
 
-.emotion-1:focus span .wd-icon-fill,
-.emotion-1:hover span .wd-icon-fill,
-.emotion-1 span .wd-icon-fill,
 .emotion-1:hover span .wd-icon-background,
 .emotion-1 span .wd-icon-background {
+  fill: #ffffff;
+}
+
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1 span .wd-icon-fill {
   fill: #ffffff;
 }
 
@@ -1145,11 +1171,14 @@ exports[`Button (Icon) Snapshots renders a primary icon button, toggled on 1`] =
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-1:focus span .wd-icon-fill,
-.emotion-1:hover span .wd-icon-fill,
-.emotion-1 span .wd-icon-fill,
 .emotion-1:hover span .wd-icon-background,
 .emotion-1 span .wd-icon-background {
+  fill: #0875e1;
+}
+
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1 span .wd-icon-fill {
   fill: #0875e1;
 }
 
@@ -1649,11 +1678,14 @@ exports[`Button (Icon) Snapshots renders an inverse filled icon button, toggled 
   background-color: rgba(0,0,0,0.4);
 }
 
-.emotion-1:focus span .wd-icon-fill,
-.emotion-1:hover span .wd-icon-fill,
-.emotion-1 span .wd-icon-fill,
 .emotion-1:hover span .wd-icon-background,
 .emotion-1 span .wd-icon-background {
+  fill: #ffffff;
+}
+
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:hover span .wd-icon-fill,
+.emotion-1 span .wd-icon-fill {
   fill: #ffffff;
 }
 
@@ -2149,7 +2181,10 @@ exports[`Button (Icon) Snapshots renders an inverse icon button, toggled on 1`] 
 }
 
 .emotion-1:hover span .wd-icon-fill,
-.emotion-1 span .wd-icon-fill,
+.emotion-1 span .wd-icon-fill {
+  fill: #ffffff;
+}
+
 .emotion-1:hover span .wd-icon-background,
 .emotion-1 span .wd-icon-background {
   fill: #ffffff;
