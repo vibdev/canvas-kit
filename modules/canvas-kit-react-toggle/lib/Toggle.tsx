@@ -20,7 +20,6 @@ const translateLength = toggleWidth - toggleHeight;
 const ToggleInput = styled('input')<ToggleProps>(
   {
     position: 'absolute',
-    zIndex: -1,
     height: toggleHeight,
     width: toggleWidth,
     margin: 0,
