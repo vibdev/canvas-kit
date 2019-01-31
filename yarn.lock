@@ -6380,7 +6380,7 @@ jest-each@^23.6.0:
     chalk "^2.0.1"
     pretty-format "^23.6.0"
 
-jest-emotion@^9.2.11, jest-emotion@^9.2.7:
+jest-emotion@^9.2.11:
   version "9.2.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-emotion/-/jest-emotion-9.2.11.tgz#de1e5974f1a6e636fa87c631dd58f988ed8311f9"
   integrity sha1-3h5ZdPGm5jb6h8Yx3Vj5iO2DEfk=

@@ -42,8 +42,5 @@
     "emotion": "^9.2.6",
     "react-emotion": "^9.2.6"
   },
-  "devDependencies": {
-    "@workday/canvas-kit-react-icon": "1.4.3",
-    "jest-emotion": "^9.2.7"
-  }
+  "devDependencies": {}
 }
