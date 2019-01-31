@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
-import {IconButtonTypes} from './types';
+import {IconButtonTypes, ButtonSizes} from './types';
 import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
@@ -25,6 +25,15 @@ export interface IconButtonProps extends PartialButtonProps {
 const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
+  ({buttonSize}) => {
+    switch (buttonSize) {
+      default:
+      case ButtonSizes.Medium:
+        return {};
+      case ButtonSizes.Small:
+        return iconButtonStyles.variants!.sizes.small;
+    }
+  },
   ({buttonType, toggled}) => {
     if (!toggled) {
       return {};

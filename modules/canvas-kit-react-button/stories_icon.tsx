@@ -7,7 +7,7 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from './index'; // tslint:disable-line:import-name
-import {IconButtonTypes} from './lib/types';
+import {IconButtonTypes, ButtonSizes} from './lib/types';
 import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
@@ -71,11 +71,19 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
+      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={ButtonSizes.Small}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <br />
       <IconButton disabled={true} buttonType={IconButton.Types.IconPrimary}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <h3>Primary Filled Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPrimaryFilled}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <br />
+      <IconButton buttonType={IconButton.Types.IconPrimaryFilled} buttonSize={ButtonSizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -90,6 +98,12 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </div>
       <br />
       <div className={css(blueBackground)}>
+        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={ButtonSizes.Small}>
+          <SystemIcon icon={activityStreamIcon} />
+        </IconButton>
+      </div>
+      <br />
+      <div className={css(blueBackground)}>
         <IconButton disabled={true} buttonType={IconButton.Types.IconInverse}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
@@ -97,6 +111,12 @@ storiesOf('Canvas Kit/Button/Beta', module)
       <h3>Inverse Filled Icon Buttons</h3>
       <div className={css(blueBackground)}>
         <IconButton buttonType={IconButton.Types.IconInverseFilled}>
+          <SystemIcon icon={activityStreamIcon} />
+        </IconButton>
+      </div>
+      <br />
+      <div className={css(blueBackground)}>
+        <IconButton buttonType={IconButton.Types.IconInverseFilled} buttonSize={ButtonSizes.Small}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>

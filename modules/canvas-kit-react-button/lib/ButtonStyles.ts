@@ -312,7 +312,16 @@ export const iconButtonStyles: ButtonGenericStyle = {
     },
   },
   variants: {
-    sizes: {},
+    sizes: {
+      [ButtonSizes.Small]: {
+        width: canvas.spacing.l,
+        height: canvas.spacing.l,
+        'span svg': {
+          width: '20px',
+          height: '20px',
+        },
+      },
+    },
     types: {
       [IconButtonTypes.Default]: {
         borderRadius: '3px',
