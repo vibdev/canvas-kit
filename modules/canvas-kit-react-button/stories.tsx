@@ -52,9 +52,7 @@ storiesOf('Canvas Kit/Button', module)
         Delete Button
       </Button>
       <br />
-      <IconButton>
-        <SystemIcon icon={editIcon} />
-      </IconButton>
+      <IconButton icon={editIcon} />
       <br />
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
       <br />

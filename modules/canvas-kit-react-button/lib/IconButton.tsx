@@ -5,9 +5,21 @@ import {IconButtonTypes} from './types';
 import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
-export interface IconButtonProps extends BaseButtonProps<IconButtonTypes> {
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
+type PartialButtonProps = Omit<BaseButtonProps<IconButtonTypes>, 'children'>;
+
+export interface IconButtonProps extends PartialButtonProps {
+  /**
+   * Whether the icon button is toggled on or off
+   */
   toggled?: boolean;
+  /**
+   * Optional children for icon button
+   */
+  children?: React.ReactNode;
 }
 
 const IconButtonCon = styled('button')<IconButtonProps>(
@@ -105,7 +117,9 @@ export default class IconButton extends React.Component<IconButtonProps> {
   public render() {
     return (
       // TODO (breaking change): need to remove buttonType and buttonSize prop here, doesn't make sense to expose
-      <IconButtonCon {...this.props} buttonSize={undefined} aria-pressed={this.props.toggled} />
+      <IconButtonCon {...this.props} aria-pressed={this.props.toggled}>
+        {this.props.icon ? <SystemIcon icon={this.props.icon} /> : this.props.children}
+      </IconButtonCon>
     );
   }
 }

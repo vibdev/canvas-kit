@@ -118,6 +118,8 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 <IconButton>
   <SystemIcon icon={activityStreamIcon} />
 </IconButton>;
+
+<IconButton icon={activityStreamIcon} />;
 ```
 
 ## Static Properties
