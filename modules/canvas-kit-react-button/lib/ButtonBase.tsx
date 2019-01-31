@@ -207,6 +207,8 @@ export function getButtonStyle(
       return types[TextButtonTypes.InverseAllCaps];
     case IconButtonTypes.Default:
       return types[IconButtonTypes.Default];
+    case IconButtonTypes.IconPlain:
+      return types[IconButtonTypes.IconPlain];
     case IconButtonTypes.IconPrimary:
       return types[IconButtonTypes.IconPrimary];
     case IconButtonTypes.IconPrimaryFilled:

@@ -66,6 +66,18 @@ storiesOf('Canvas Kit/Button/Beta', module)
   .add('Icon Buttons', () => (
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
+      <h3>Plain Icon Buttons</h3>
+      <IconButton buttonType={IconButton.Types.IconPlain}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <br />
+      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={ButtonSizes.Small}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <br />
+      <IconButton disabled={true} buttonType={IconButton.Types.IconPlain}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
       <h3>Primary Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPrimary}>
         <SystemIcon icon={activityStreamIcon} />

@@ -29,6 +29,7 @@ export enum BetaButtonTypes {
 
 export enum IconButtonTypes {
   Default = 'iconSecondary',
+  IconPlain = 'iconPlain',
   IconPrimary = 'iconPrimary',
   IconPrimaryFilled = 'iconPrimaryFilled',
   IconInverse = 'iconInverse',

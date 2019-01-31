@@ -330,6 +330,9 @@ export const iconButtonStyles: ButtonGenericStyle = {
         height: canvas.spacing.l,
         ...getButtonStateStyle(IconButtonTypes.Default),
       },
+      [IconButtonTypes.IconPlain]: {
+        ...getButtonStateStyle(IconButtonTypes.IconPlain),
+      },
       [IconButtonTypes.IconPrimary]: {
         ...getButtonStateStyle(IconButtonTypes.IconPrimary),
       },
@@ -445,6 +448,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case TextButtonTypes.Inverse:
     case TextButtonTypes.AllCaps:
     case TextButtonTypes.InverseAllCaps:
+    case IconButtonTypes.IconPlain:
       return {};
     default:
       return focusRing(2, 2);
