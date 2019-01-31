@@ -7,7 +7,7 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from './index'; // tslint:disable-line:import-name
-import {IconButtonTypes, IconButtonSizes} from './lib/types';
+import {IconButtonTypes} from './lib/types';
 import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
@@ -69,7 +69,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       <h3>Default Icon Buttons</h3>
       <IconButton icon={activityStreamIcon} />
       <br />
-      <IconButton icon={activityStreamIcon} buttonSize={IconButtonSizes.Small} />
+      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Small} />
       <br />
       <IconButton disabled={true}>
         <SystemIcon icon={activityStreamIcon} />
@@ -79,7 +79,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButtonSizes.Small}>
+      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButton.Sizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -91,7 +91,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={IconButtonSizes.Small}>
+      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={IconButton.Sizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -105,7 +105,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       <br />
       <IconButton
         buttonType={IconButton.Types.IconPrimaryFilled}
-        buttonSize={IconButtonSizes.Small}
+        buttonSize={IconButton.Sizes.Small}
       >
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
@@ -121,7 +121,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={IconButtonSizes.Small}>
+        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={IconButton.Sizes.Small}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
@@ -141,7 +141,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       <div className={css(blueBackground)}>
         <IconButton
           buttonType={IconButton.Types.IconInverseFilled}
-          buttonSize={IconButtonSizes.Small}
+          buttonSize={IconButton.Sizes.Small}
         >
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>

@@ -1,29 +1,21 @@
 import * as React from 'react';
 import {getButtonStyle} from './ButtonBase';
 import styled from 'react-emotion';
-import {IconButtonTypes, IconButtonSizes} from './types';
+import {IconButtonTypes, ButtonSizes} from './types';
 import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
-type PartialButtonProps = Omit<BaseButtonProps<IconButtonTypes>, 'children' | 'buttonSize'>;
-
-export interface IconButtonProps extends PartialButtonProps {
+export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes>> {
   /**
    * Whether the icon button is toggled on or off
    */
   toggled?: boolean;
   /**
-   * Optional children for icon button
-   */
-  children?: React.ReactNode;
-  /**
    * Size of icon button
    */
-  buttonSize?: IconButtonSizes;
+  buttonSize?: ButtonSizes.Small | ButtonSizes.Medium;
 }
 
 const IconButtonCon = styled('button')<IconButtonProps>(
@@ -32,9 +24,9 @@ const IconButtonCon = styled('button')<IconButtonProps>(
   ({buttonSize}) => {
     switch (buttonSize) {
       default:
-      case IconButtonSizes.Medium:
+      case ButtonSizes.Medium:
         return {};
-      case IconButtonSizes.Small:
+      case ButtonSizes.Small:
         return iconButtonStyles.variants!.sizes.small;
     }
   },
@@ -122,11 +114,11 @@ function getAccentSelector(fillColor: string) {
 
 export default class IconButton extends React.Component<IconButtonProps> {
   public static Types = IconButtonTypes;
-  public static Sizes = IconButtonSizes;
+  public static Sizes = ButtonSizes;
 
   static defaultProps = {
     buttonType: IconButtonTypes.Default,
-    buttonSize: IconButtonSizes.Medium,
+    buttonSize: ButtonSizes,
   };
 
   public render() {

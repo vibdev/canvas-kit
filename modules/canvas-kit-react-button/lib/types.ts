@@ -36,11 +36,6 @@ export enum IconButtonTypes {
   IconInverseFilled = 'iconInverseFilled',
 }
 
-export enum IconButtonSizes {
-  Small = 'small',
-  Medium = 'medium',
-}
-
 /**
  * The different icon positions.
  */
