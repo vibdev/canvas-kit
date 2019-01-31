@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.6"></a>
+## [0.0.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.0.5...@workday/canvas-kit-react-toggle@0.0.6) (2019-01-31)
+
+
+### Bug Fixes
+
+* **toggle:** remove zindex as to not create a weird stacking context issue ([772b509](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/commits/772b509))
+
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.0.4...@workday/canvas-kit-react-toggle@0.0.5) (2019-01-24)
 
