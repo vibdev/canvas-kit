@@ -67,7 +67,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
       <h3>Default Icon Buttons</h3>
-      <IconButton icon={activityStreamIcon} />
+      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Medium} />
       <br />
       <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Small} />
       <br />

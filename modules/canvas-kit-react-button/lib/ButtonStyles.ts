@@ -304,8 +304,6 @@ export const iconButtonStyles: ButtonGenericStyle = {
     ...canvasButtonStyles.styles,
     borderWidth: '0',
     borderRadius: '50%',
-    width: canvas.spacing.xl,
-    height: canvas.spacing.xl,
     ['& .wd-icon']: {
       display: 'inline-block',
       verticalAlign: 'middle',
@@ -316,10 +314,10 @@ export const iconButtonStyles: ButtonGenericStyle = {
       [ButtonSizes.Small]: {
         width: canvas.spacing.l,
         height: canvas.spacing.l,
-        'span svg': {
-          width: '20px',
-          height: '20px',
-        },
+      },
+      [ButtonSizes.Medium]: {
+        width: canvas.spacing.xl,
+        height: canvas.spacing.xl,
       },
     },
     types: {

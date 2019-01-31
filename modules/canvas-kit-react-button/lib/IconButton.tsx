@@ -21,11 +21,14 @@ export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes
 const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
-  ({buttonSize}) => {
+  ({buttonSize, buttonType}) => {
     switch (buttonSize) {
       default:
+        return buttonType === IconButtonTypes.Default
+          ? iconButtonStyles.variants!.sizes.small
+          : iconButtonStyles.variants!.sizes.medium;
       case ButtonSizes.Medium:
-        return {};
+        return iconButtonStyles.variants!.sizes.medium;
       case ButtonSizes.Small:
         return iconButtonStyles.variants!.sizes.small;
     }
