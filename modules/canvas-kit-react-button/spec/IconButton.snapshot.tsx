@@ -2,7 +2,6 @@ import * as renderer from 'react-test-renderer';
 import IconButton from '../lib/IconButton';
 import * as React from 'react';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 describe('Icon Button Snapshots', () => {
   test('renders as expected', () => {
@@ -14,12 +13,22 @@ describe('Icon Button Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('renders an icon button, toggled', () => {
+  test('renders a small icon button', () => {
     const component = renderer.create(
-      <IconButton toggled={true}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
+      <IconButton buttonSize={IconButton.Sizes.Small} icon={activityStreamIcon} />
     );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a medium icon button', () => {
+    const component = renderer.create(
+      <IconButton buttonSize={IconButton.Sizes.Medium} icon={activityStreamIcon} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders an icon button, toggled', () => {
+    const component = renderer.create(<IconButton toggled={true} icon={activityStreamIcon} />);
     expect(component).toMatchSnapshot();
   });
 });
