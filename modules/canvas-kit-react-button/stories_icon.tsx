@@ -7,7 +7,7 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from './index'; // tslint:disable-line:import-name
-import {IconButtonTypes, ButtonSizes} from './lib/types';
+import {IconButtonTypes, IconButtonSizes} from './lib/types';
 import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
@@ -71,7 +71,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={ButtonSizes.Small}>
+      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButtonSizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -83,7 +83,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={ButtonSizes.Small}>
+      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={IconButtonSizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -95,7 +95,10 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPrimaryFilled} buttonSize={ButtonSizes.Small}>
+      <IconButton
+        buttonType={IconButton.Types.IconPrimaryFilled}
+        buttonSize={IconButtonSizes.Small}
+      >
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
@@ -110,7 +113,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={ButtonSizes.Small}>
+        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={IconButtonSizes.Small}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
@@ -128,7 +131,10 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverseFilled} buttonSize={ButtonSizes.Small}>
+        <IconButton
+          buttonType={IconButton.Types.IconInverseFilled}
+          buttonSize={IconButtonSizes.Small}
+        >
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
