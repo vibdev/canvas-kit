@@ -61,11 +61,19 @@ const blueBackground: CSSObject = {
   borderRadius: '3px',
 };
 
-storiesOf('Canvas Kit/Button/Beta', module)
+storiesOf('Canvas Kit/Button/Icon Buttons', module)
   .addDecorator(withReadme(README))
-  .add('Icon Buttons', () => (
+  .add('All', () => (
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
+      <h3>Default Icon Buttons</h3>
+      <IconButton icon={activityStreamIcon} />
+      <br />
+      <IconButton icon={activityStreamIcon} buttonSize={IconButtonSizes.Small} />
+      <br />
+      <IconButton disabled={true}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
       <h3>Plain Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPlain}>
         <SystemIcon icon={activityStreamIcon} />
@@ -145,6 +153,8 @@ storiesOf('Canvas Kit/Button/Beta', module)
         </IconButton>
       </div>
       <h1 className="section-label">Icon Button Toggles</h1>
+      <h3>Default Icon Buttons</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
       <h3>Primary Icon Buttons</h3>
       <ToggleIconButtonWrapper buttonType={IconButton.Types.IconPrimary} />
       <h3>Primary Filled Icon Buttons</h3>
