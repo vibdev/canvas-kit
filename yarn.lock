@@ -450,20 +450,10 @@
   dependencies:
     "@workday/design-assets-types" "0.2.1"
 
-"@workday/canvas-colors-web@^0.12.4":
-  version "0.12.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.12.4.tgz#85321eaa5d3f234d2430dcb3e45bf7d2f09f56d0"
-  integrity sha1-hTIeql0/I00kMNyz5Fv30vCfVtA=
-
 "@workday/canvas-colors-web@^0.17.0":
   version "0.17.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.0.tgz#da46cf6e0caef1af465f0dbbf8e2ed446829c4a9"
   integrity sha1-2kbPbgyu8a9GXw27+OLtRGgpxKk=
-
-"@workday/canvas-depth-web@^0.12.1":
-  version "0.12.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.12.2.tgz#0c471b272737b324da54e4cfedf168ac54ee5353"
-  integrity sha1-DEcbJyc3syTaVOTP7fForFTuU1M=
 
 "@workday/canvas-depth-web@^0.16.0":
   version "0.16.0"
@@ -503,21 +493,6 @@
     rollup-plugin-uglify "^3.0.0"
     shelljs "^0.7.8"
 
-"@workday/canvas-kit-css-core@2.0.0":
-  version "2.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-core/-/@workday/canvas-kit-css-core-2.0.0.tgz#6525a6519ac165e7cee815acbc5baf04b980a688"
-  integrity sha1-ZSWmUZrBZefO6BWsvFuvBLmApog=
-  dependencies:
-    "@workday/canvas-colors-web" "^0.12.4"
-    "@workday/canvas-depth-web" "^0.12.1"
-
-"@workday/canvas-kit-css-table@^1.1.0":
-  version "1.1.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-css-table/-/@workday/canvas-kit-css-table-1.1.5.tgz#9ceee32235bf5e84b18d5293409953d2b93d71ee"
-  integrity sha1-nO7jIjW/XoSxjVKTQJlT0rk9ce4=
-  dependencies:
-    "@workday/canvas-kit-css-core" "2.0.0"
-
 "@workday/canvas-kit-react-toggle@0.0.1":
   version "0.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-toggle/-/@workday/canvas-kit-react-toggle-0.0.1.tgz#5272d256cb9f6e172a7792cfd92a80c781030988"
@@ -532,6 +507,13 @@
   version "0.16.25"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.25.tgz#24222091dcefc46d1cff81a2d7744f6a6b95fd7d"
   integrity sha1-JCIgkdzvxG0c/4Gi13RPamuV/X0=
+  dependencies:
+    "@workday/design-assets-types" "0.2.1"
+
+"@workday/canvas-system-icons-web@^0.16.27":
+  version "0.16.27"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.27.tgz#c0a1b51a880aaa79bb16661c92c8ba7242bc5b9e"
+  integrity sha1-wKG1GogKqnm7FmYcksi6ckK8W54=
   dependencies:
     "@workday/design-assets-types" "0.2.1"
 
@@ -6398,7 +6380,7 @@ jest-each@^23.6.0:
     chalk "^2.0.1"
     pretty-format "^23.6.0"
 
-jest-emotion@^9.2.11, jest-emotion@^9.2.7:
+jest-emotion@^9.2.11:
   version "9.2.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/jest-emotion/-/jest-emotion-9.2.11.tgz#de1e5974f1a6e636fa87c631dd58f988ed8311f9"
   integrity sha1-3h5ZdPGm5jb6h8Yx3Vj5iO2DEfk=

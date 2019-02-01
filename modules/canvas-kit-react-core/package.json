@@ -39,7 +39,5 @@
     "@workday/canvas-space-web": "^0.15.0",
     "emotion": "^9.2.6"
   },
-  "devDependencies": {
-    "react-emotion": "^9.2.6"
-  }
+  "devDependencies": {}
 }
