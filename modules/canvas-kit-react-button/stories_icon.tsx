@@ -75,17 +75,19 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <h3>Plain Icon Buttons</h3>
-      <IconButton buttonType={IconButton.Types.IconPlain}>
-        <SystemIcon icon={xIcon} />
-      </IconButton>
-      <br />
-      <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButton.Sizes.Small}>
-        <SystemIcon icon={xIcon} />
-      </IconButton>
-      <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.IconPlain}>
-        <SystemIcon icon={xIcon} />
-      </IconButton>
+      <div>
+        <IconButton buttonType={IconButton.Types.IconPlain}>
+          <SystemIcon icon={xIcon} />
+        </IconButton>
+        <br />
+        <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButton.Sizes.Small}>
+          <SystemIcon icon={xIcon} />
+        </IconButton>
+        <br />
+        <IconButton disabled={true} buttonType={IconButton.Types.IconPlain}>
+          <SystemIcon icon={xIcon} />
+        </IconButton>
+      </div>
       <h3>Primary Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPrimary}>
         <SystemIcon icon={activityStreamIcon} />

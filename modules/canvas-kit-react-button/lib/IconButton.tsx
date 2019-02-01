@@ -30,6 +30,20 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         case ButtonSizes.Small:
           return {};
       }
+    } else if (buttonType === IconButtonTypes.IconPlain) {
+      switch (buttonSize) {
+        default:
+        case ButtonSizes.Medium:
+          return {
+            margin: '-8px',
+            ...iconButtonStyles.variants!.sizes.medium,
+          };
+        case ButtonSizes.Small:
+          return {
+            margin: '-6px',
+            ...iconButtonStyles.variants!.sizes.small,
+          };
+      }
     } else {
       switch (buttonSize) {
         default:
