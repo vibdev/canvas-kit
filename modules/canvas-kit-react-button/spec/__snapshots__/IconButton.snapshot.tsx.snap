@@ -201,8 +201,6 @@ exports[`Icon Button Snapshots renders a small icon button 1`] = `
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
-  width: 32px;
-  height: 32px;
 }
 
 .emotion-1:hover:active {
@@ -402,8 +400,6 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
-  width: 32px;
-  height: 32px;
   background-color: #0875e1;
   border-color: #0875e1;
 }
@@ -496,8 +492,33 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
 }
 
 .emotion-1:focus.emotion-1:hover,
-.emotion-1:focus {
+.emotion-1:focus,
+.emotion-1:active {
   background-color: #0875e1;
+}
+
+.emotion-1:focus.emotion-1:hover:focus span .wd-icon-fill,
+.emotion-1:focus:focus span .wd-icon-fill,
+.emotion-1:active:focus span .wd-icon-fill,
+.emotion-1:focus.emotion-1:hover:hover span .wd-icon-fill,
+.emotion-1:focus:hover span .wd-icon-fill,
+.emotion-1:active:hover span .wd-icon-fill,
+.emotion-1:focus.emotion-1:hover span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-fill,
+.emotion-1:active span .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-1:focus.emotion-1:hover:focus span .wd-icon-accent,
+.emotion-1:focus:focus span .wd-icon-accent,
+.emotion-1:active:focus span .wd-icon-accent,
+.emotion-1:focus.emotion-1:hover:hover span .wd-icon-accent,
+.emotion-1:focus:hover span .wd-icon-accent,
+.emotion-1:active:hover span .wd-icon-accent,
+.emotion-1:focus.emotion-1:hover span .wd-icon-accent,
+.emotion-1:focus span .wd-icon-accent,
+.emotion-1:active span .wd-icon-accent {
+  fill: #ffffff;
 }
 
 .emotion-1:hover {
@@ -563,8 +584,6 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
-  width: 32px;
-  height: 32px;
 }
 
 .emotion-0:hover:active {
