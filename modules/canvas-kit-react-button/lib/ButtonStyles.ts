@@ -453,6 +453,9 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
       return {};
     case IconButtonTypes.IconPlain:
       return focusRing(2);
+    case IconButtonTypes.IconInverse:
+    case IconButtonTypes.IconInverseFilled:
+      return focusRing(2, 0, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     default:
       return focusRing(2, 2);
   }
