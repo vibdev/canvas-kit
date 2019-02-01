@@ -63,7 +63,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
       case IconButtonTypes.Default:
       default:
         return {
-          '&:focus&:hover, &:focus': {
+          '&:focus&:hover, &:focus, &:active': {
             backgroundColor: colors.blueberry400,
             ...getFillSelector(colors.frenchVanilla100),
             ...getAccentSelector(colors.frenchVanilla100),
@@ -78,6 +78,10 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         };
       case IconButtonTypes.IconPrimary:
         return {
+          '&:active': {
+            ...getFillSelector(colors.blueberry400),
+            ...getAccentSelector(colors.frenchVanilla100),
+          },
           ...getBackgroundSelector(colors.blueberry400),
           ...getFillSelector(colors.blueberry400),
           ...getAccentSelector(colors.frenchVanilla100),
