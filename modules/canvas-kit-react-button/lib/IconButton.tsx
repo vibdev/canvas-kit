@@ -89,8 +89,9 @@ const IconButtonCon = styled('button')<IconButtonProps>(
       case IconButtonTypes.IconPrimaryFilled:
         return {
           backgroundColor: colors.blueberry400,
-          '&:focus, &:hover': {
+          '&:hover, &:focus&:hover': {
             backgroundColor: colors.blueberry500,
+            ...getAccentSelector(colors.blueberry500),
           },
           ...getBackgroundSelector(colors.frenchVanilla100),
           ...getFillSelector(colors.frenchVanilla100),
