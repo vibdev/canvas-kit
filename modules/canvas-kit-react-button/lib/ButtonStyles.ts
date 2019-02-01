@@ -450,8 +450,9 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case TextButtonTypes.Inverse:
     case TextButtonTypes.AllCaps:
     case TextButtonTypes.InverseAllCaps:
-    case IconButtonTypes.IconPlain:
       return {};
+    case IconButtonTypes.IconPlain:
+      return focusRing(2);
     default:
       return focusRing(2, 2);
   }
