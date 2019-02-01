@@ -22,7 +22,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
   ({buttonSize, buttonType}) => {
-    if (buttonType === IconButtonTypes.Default) {
+    if (buttonType === IconButtonTypes.Square) {
       switch (buttonSize) {
         case ButtonSizes.Medium:
           return iconButtonStyles.variants!.sizes.medium;
@@ -30,7 +30,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         case ButtonSizes.Small:
           return {};
       }
-    } else if (buttonType === IconButtonTypes.IconPlain) {
+    } else if (buttonType === IconButtonTypes.Plain) {
       switch (buttonSize) {
         default:
         case ButtonSizes.Medium:
@@ -60,7 +60,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
     }
 
     switch (buttonType) {
-      case IconButtonTypes.Default:
+      case IconButtonTypes.Square:
       default:
         return {
           '&:focus&:hover, &:focus, &:active': {
@@ -76,7 +76,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.frenchVanilla100),
         };
-      case IconButtonTypes.IconPrimary:
+      case IconButtonTypes.Default:
         return {
           '&:active': {
             ...getFillSelector(colors.blueberry400),
@@ -86,7 +86,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           ...getFillSelector(colors.blueberry400),
           ...getAccentSelector(colors.frenchVanilla100),
         };
-      case IconButtonTypes.IconPrimaryFilled:
+      case IconButtonTypes.Filled:
         return {
           backgroundColor: colors.blueberry400,
           '&:hover, &:focus&:hover': {
@@ -97,7 +97,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.blueberry400),
         };
-      case IconButtonTypes.IconInverse:
+      case IconButtonTypes.Inverse:
         return {
           '&:hover span .wd-icon-fill, span .wd-icon-fill': {
             fill: colors.frenchVanilla100,
@@ -105,7 +105,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           ...getBackgroundSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.licorice200),
         };
-      case IconButtonTypes.IconInverseFilled:
+      case IconButtonTypes.InverseFilled:
         return {
           backgroundColor: 'rgba(0, 0, 0, 0.4)',
           '&:focus': {
@@ -151,7 +151,7 @@ export default class IconButton extends React.Component<IconButtonProps> {
   public static Sizes = ButtonSizes;
 
   static defaultProps = {
-    buttonType: IconButtonTypes.Default,
+    buttonType: IconButtonTypes.Square,
     buttonSize: ButtonSizes,
   };
 

@@ -231,7 +231,7 @@ export const ButtonColors: ButtonColorCollection = {
   },
   [TextButtonTypes.AllCaps]: null,
   [TextButtonTypes.InverseAllCaps]: null,
-  [IconButtonTypes.Default]: {
+  [IconButtonTypes.Square]: {
     background: canvas.colors.soap200,
     border: canvas.colors.soap500,
     text: canvas.colors.blackPepper400,
@@ -246,7 +246,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap200,
   },
-  [IconButtonTypes.IconPlain]: {
+  [IconButtonTypes.Plain]: {
     background: 'transparent',
     activeBackground: 'transparent',
     activeBorder: 'transparent',
@@ -259,7 +259,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [IconButtonTypes.IconPrimary]: {
+  [IconButtonTypes.Default]: {
     background: 'transparent',
     activeBackground: canvas.colors.soap400,
     disabledBackground: 'transparent',
@@ -271,7 +271,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [IconButtonTypes.IconPrimaryFilled]: {
+  [IconButtonTypes.Filled]: {
     background: canvas.colors.soap200,
     activeBackground: canvas.colors.soap500,
     disabledBackground: canvas.colors.soap100,
@@ -281,7 +281,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconFocus: canvas.colors.licorice200,
     labelIconDisabled: canvas.colors.soap600,
   },
-  [IconButtonTypes.IconInverse]: {
+  [IconButtonTypes.Inverse]: {
     background: 'transparent',
     activeBackground: 'rgba(0, 0, 0, 0.4)',
     disabledBackground: 'transparent',
@@ -291,7 +291,7 @@ export const ButtonColors: ButtonColorCollection = {
     labelIconDisabled: 'rgba(255, 255, 255, 0.75)',
     focusRingOuter: canvas.colors.frenchVanilla100,
   },
-  [IconButtonTypes.IconInverseFilled]: {
+  [IconButtonTypes.InverseFilled]: {
     background: 'rgba(0, 0, 0, 0.2)',
     activeBackground: 'rgba(0, 0, 0, 0.4)',
     disabledBackground: 'rgba(0, 0, 0, 0.2)',

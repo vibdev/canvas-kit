@@ -325,27 +325,27 @@ export const iconButtonStyles: ButtonGenericStyle = {
       },
     },
     types: {
-      [IconButtonTypes.Default]: {
+      [IconButtonTypes.Square]: {
         borderRadius: '3px',
         borderWidth: '1px',
         width: canvas.spacing.l,
         height: canvas.spacing.l,
+        ...getButtonStateStyle(IconButtonTypes.Square),
+      },
+      [IconButtonTypes.Plain]: {
+        ...getButtonStateStyle(IconButtonTypes.Plain),
+      },
+      [IconButtonTypes.Default]: {
         ...getButtonStateStyle(IconButtonTypes.Default),
       },
-      [IconButtonTypes.IconPlain]: {
-        ...getButtonStateStyle(IconButtonTypes.IconPlain),
+      [IconButtonTypes.Filled]: {
+        ...getButtonStateStyle(IconButtonTypes.Filled),
       },
-      [IconButtonTypes.IconPrimary]: {
-        ...getButtonStateStyle(IconButtonTypes.IconPrimary),
+      [IconButtonTypes.Inverse]: {
+        ...getButtonStateStyle(IconButtonTypes.Inverse),
       },
-      [IconButtonTypes.IconPrimaryFilled]: {
-        ...getButtonStateStyle(IconButtonTypes.IconPrimaryFilled),
-      },
-      [IconButtonTypes.IconInverse]: {
-        ...getButtonStateStyle(IconButtonTypes.IconInverse),
-      },
-      [IconButtonTypes.IconInverseFilled]: {
-        ...getButtonStateStyle(IconButtonTypes.IconInverseFilled),
+      [IconButtonTypes.InverseFilled]: {
+        ...getButtonStateStyle(IconButtonTypes.InverseFilled),
       },
     },
   },
@@ -442,7 +442,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
   switch (buttonType) {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
-    case IconButtonTypes.Default:
+    case IconButtonTypes.Square:
       return focusRing(1);
     case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
@@ -451,10 +451,10 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case TextButtonTypes.AllCaps:
     case TextButtonTypes.InverseAllCaps:
       return {};
-    case IconButtonTypes.IconPlain:
+    case IconButtonTypes.Plain:
       return focusRing(2);
-    case IconButtonTypes.IconInverse:
-    case IconButtonTypes.IconInverseFilled:
+    case IconButtonTypes.Inverse:
+    case IconButtonTypes.InverseFilled:
       return focusRing(2, 0, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     default:
       return focusRing(2, 2);

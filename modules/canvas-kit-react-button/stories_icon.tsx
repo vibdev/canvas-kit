@@ -66,7 +66,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
   .add('All', () => (
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
-      <h3>Default Icon Buttons</h3>
+      <h3>Square Icon Buttons</h3>
       <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Medium} />
       <br />
       <IconButton icon={activityStreamIcon} />
@@ -76,98 +76,92 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       </IconButton>
       <h3>Plain Icon Buttons</h3>
       <div>
-        <IconButton buttonType={IconButton.Types.IconPlain}>
+        <IconButton buttonType={IconButton.Types.Plain}>
           <SystemIcon icon={xIcon} />
         </IconButton>
         <br />
-        <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButton.Sizes.Small}>
+        <IconButton buttonType={IconButton.Types.Plain} buttonSize={IconButton.Sizes.Small}>
           <SystemIcon icon={xIcon} />
         </IconButton>
         <br />
-        <IconButton disabled={true} buttonType={IconButton.Types.IconPlain}>
+        <IconButton disabled={true} buttonType={IconButton.Types.Plain}>
           <SystemIcon icon={xIcon} />
         </IconButton>
       </div>
-      <h3>Primary Icon Buttons</h3>
-      <IconButton buttonType={IconButton.Types.IconPrimary}>
+      <h3>Default Icon Buttons</h3>
+      <IconButton buttonType={IconButton.Types.Default}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton buttonType={IconButton.Types.IconPrimary} buttonSize={IconButton.Sizes.Small}>
+      <IconButton buttonType={IconButton.Types.Default} buttonSize={IconButton.Sizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.IconPrimary}>
+      <IconButton disabled={true} buttonType={IconButton.Types.Default}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
-      <h3>Primary Filled Icon Buttons</h3>
-      <IconButton buttonType={IconButton.Types.IconPrimaryFilled}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <br />
-      <IconButton
-        buttonType={IconButton.Types.IconPrimaryFilled}
-        buttonSize={IconButton.Sizes.Small}
-      >
+      <h3>Filled Icon Buttons</h3>
+      <IconButton buttonType={IconButton.Types.Filled}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.IconPrimaryFilled}>
+      <IconButton buttonType={IconButton.Types.Filled} buttonSize={IconButton.Sizes.Small}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
-      <h3>Inversed Icon Buttons</h3>
+      <br />
+      <IconButton disabled={true} buttonType={IconButton.Types.Filled}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+      <h3>Inverse Icon Buttons</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverse}>
+        <IconButton buttonType={IconButton.Types.Inverse}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverse} buttonSize={IconButton.Sizes.Small}>
+        <IconButton buttonType={IconButton.Types.Inverse} buttonSize={IconButton.Sizes.Small}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton disabled={true} buttonType={IconButton.Types.IconInverse}>
+        <IconButton disabled={true} buttonType={IconButton.Types.Inverse}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <h3>Inverse Filled Icon Buttons</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.IconInverseFilled}>
+        <IconButton buttonType={IconButton.Types.InverseFilled}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton
-          buttonType={IconButton.Types.IconInverseFilled}
-          buttonSize={IconButton.Sizes.Small}
-        >
+        <IconButton buttonType={IconButton.Types.InverseFilled} buttonSize={IconButton.Sizes.Small}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <br />
       <div className={css(blueBackground)}>
-        <IconButton disabled={true} buttonType={IconButton.Types.IconInverseFilled}>
+        <IconButton disabled={true} buttonType={IconButton.Types.InverseFilled}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
       </div>
       <h1 className="section-label">Icon Button Toggles</h1>
+      <h3>Square Icon Buttons</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
       <h3>Default Icon Buttons</h3>
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
-      <h3>Primary Icon Buttons</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.IconPrimary} />
-      <h3>Primary Filled Icon Buttons</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.IconPrimaryFilled} />
-      <h3>Inversed Icon Buttons</h3>
+      <h3>Filled Icon Buttons</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Filled} />
+      <h3>Inverse Icon Buttons</h3>
       <div className={css(blueBackground)}>
-        <ToggleIconButtonWrapper buttonType={IconButton.Types.IconInverse} />
+        <ToggleIconButtonWrapper buttonType={IconButton.Types.Inverse} />
       </div>
       <h3>Inverse Filled Icon Buttons</h3>
       <div className={css(blueBackground)}>
-        <ToggleIconButtonWrapper buttonType={IconButton.Types.IconInverseFilled} />
+        <ToggleIconButtonWrapper buttonType={IconButton.Types.InverseFilled} />
       </div>
     </div>
   ));
