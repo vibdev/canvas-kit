@@ -27,6 +27,7 @@ const backgroundStyle = css({
     .alpha(0.8)
     .css()}), url(${bgImg})`,
   backgroundPosition: `0 50%`,
+  backgroundSize: 'cover',
 });
 
 // Simulate a React Router link
@@ -38,6 +39,10 @@ const handleMenuClickTest = (e: React.SyntheticEvent) => {
 
 const handleAvatarClickTest = (e: React.SyntheticEvent) => {
   alert(`Avatar clicked!`);
+};
+
+const handleSearchSubmitTest = (query: string) => {
+  alert(`You searched for "${query}"!`);
 };
 
 const nav = (
@@ -65,10 +70,10 @@ storiesOf('Canvas Kit/Header/Marketing', module)
     <div className="story">
       <h1 className="section-label">"Dub" Header</h1>
       <div className={containerStyle}>
-        <Header title="Required" />
+        <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
       <div className={containerStyle}>
-        <Header title="Icons Only" brandUrl="#">
+        <Header title="Icons Only" brandUrl="#" onSearchSubmit={handleSearchSubmitTest}>
           <a href="#">
             <SystemIcon icon={notificationsIcon} />
           </a>
@@ -85,6 +90,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.Blue}
           brandUrl="#"
           onMenuClick={handleMenuClickTest}
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -108,6 +114,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
             />
           }
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -127,6 +134,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           themeColor={Header.Theme.White}
           centeredNav={true}
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">
@@ -145,6 +153,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           title="Transparent"
           themeColor={Header.Theme.Transparent}
           brandUrl="#"
+          onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
           <a href="#">

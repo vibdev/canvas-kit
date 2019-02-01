@@ -410,6 +410,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-transition-group@^2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.14.tgz#afd0cd785a97f070b55765e9f9d76ff568269001"
+  integrity sha512-pa7qB0/mkhwWMBFoXhX8BcntK8G4eQl4sIfSrJCxnivTYRQWjOWf2ClR9bWdm0EUFBDHzMbKYS+QYfDtBzkY4w==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.4.16":
   version "16.4.16"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react/-/react-16.4.16.tgz#99f91b1200ae8c2062030402006d3b3c3a177043"
@@ -9333,7 +9340,7 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.5.2:
     react-is "^16.5.2"
     schedule "^0.5.0"
 
-react-transition-group@^2.0.0:
+react-transition-group@^2.0.0, react-transition-group@^2.5.0:
   version "2.5.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-transition-group/-/react-transition-group-2.5.0.tgz#70bca0e3546102c4dc5cf3f5f57f73447cce6874"
   integrity sha1-cLyg41RhAsTcXPP19X9zRHzOaHQ=

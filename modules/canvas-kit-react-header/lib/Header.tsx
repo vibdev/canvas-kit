@@ -2,7 +2,7 @@ import * as React from 'react';
 import {css} from 'emotion';
 import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
-import {DubLogoTitle, WorkdayLogoTitle} from './parts';
+import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
@@ -40,6 +40,10 @@ export interface HeaderProps {
    */
   onMenuClick?: (e: React.SyntheticEvent) => void;
   /**
+   * An event handler function that gets called when the search field is submitted
+   */
+  onSearchSubmit?: (query: string) => void;
+  /**
    * An object that allows for custom specified breakpoints (sm, md, lg)
    */
   breakpoints: {
@@ -63,6 +67,7 @@ const HeaderShell = styled('div')<HeaderProps>(
     ...type.body,
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
+    position: 'relative',
   },
   ({variant, themeColor}) => ({
     height: variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
@@ -77,7 +82,7 @@ const BrandSlot = styled('div')(
     height: '100%',
   },
   (props: {grow?: boolean}) => ({
-    flexGrow: props.grow ? 'unset' : 1,
+    flexGrow: props.grow ? 1 : 'unset',
   })
 );
 
@@ -102,6 +107,7 @@ const navStyle = (props: HeaderProps) => {
       flexGrow: 1,
       justifyContent: 'center',
       height: 'inherit',
+      marginLeft: spacing.xl,
 
       '& ul': {
         color: theme.linkColor,
@@ -171,11 +177,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
   const mq = makeMq(breakpoints);
 
   return {
-    marginRight: variant === HeaderVariant.Dub ? spacing.s : spacing.l,
-    '> *': {
-      marginRight: 0,
-      marginLeft: spacing.s,
-    },
+    marginRight: spacing.m,
 
     // TODO: remove this when we get real icon buttons
     '> .canvas-header--menu-icon': {
@@ -186,17 +188,15 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       alignItems: 'center',
       justifyContent: 'flex-end',
       height: '100%',
-      flexGrow: centeredNav ? 1 : 'unset',
 
+      '> *': {
+        marginLeft: spacing.m,
+      },
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
       },
     },
     [mq.md]: {
-      '> *': {
-        margin: `0 ${spacing.s}`,
-      },
-
       '> *:last-child': {
         marginRight: 0,
       },
@@ -204,6 +204,9 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       '> *:not(.canvas-header--menu-icon)': {
         display: 'flex',
       },
+    },
+    [mq.lg]: {
+      flexGrow: centeredNav ? 1 : 'unset',
     },
   };
 },                                              navStyle);
@@ -300,13 +303,28 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * before stamped out in render().
    *
    * E.g. <SystemIcon> components need to have the appropriate `color` and `colorHover`
-   * props set based on the theme.cu
+   * props set based on the theme.
    *
    * @param children From props.children of a React component
    *
    * @returns {React.ReactNode} The child/children to be rendered
    */
   private renderChildren(children: React.ReactNode): React.ReactNode {
+    if (React.Children.count(children) && this.state.screenSize !== 'lg') {
+      // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
+      const hamburgerIconProps = {
+        color: themes[this.props.themeColor].systemIcon.color,
+        colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+        icon: justifyIcon,
+        onClick: this.props.onMenuClick,
+      };
+
+      // TODO: This needs to get changed to IconButton when we get it restyled for headers
+      return (
+        <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+      );
+    }
+
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
@@ -318,20 +336,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       const propsChildren = (child as React.ReactElement<Props>).props.children;
 
       if (React.Children.count(propsChildren)) {
-        if (child.type === 'nav' && this.state.screenSize !== 'lg') {
-          // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
-          const hamburgerIconProps = {
-            color: themes[this.props.themeColor].systemIcon.color,
-            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-            icon: justifyIcon,
-            onClick: this.props.onMenuClick,
-          };
-
-          // TODO: This needs to get changed to IconButton when we get it restyled for headers
-          return (
-            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
-          );
-        }
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
         });
@@ -349,18 +353,64 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    const {onMenuClick, onSearchSubmit, ...props} = this.props;
+
+    /* Push everything to the right if:
+       - on tablet and mobile screens
+       - Search isn't enabled and the nav shouldn't be centered
+       - Search is enabled, and there aren't any children
+    */
+    const growBrand =
+      this.state.screenSize !== 'lg' ||
+      (!onSearchSubmit && !this.props.centeredNav) ||
+      (onSearchSubmit && !this.props.children);
+
+    // Ignore centeredNav if search is enabled
+    const centeredNav = onSearchSubmit ? false : this.props.centeredNav;
+
+    // Collapse search at sm breakpoint if no children, at md breakpoint if children
+    const collapseSearch = Boolean(
+      (!this.props.children && this.state.screenSize === 'sm') ||
+        (this.props.children && this.state.screenSize !== 'lg')
+    );
+
+    // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
+    // TODO: This needs to get changed to IconButton when we get it restyled for headers
+    const collapseMenu = this.props.children && this.state.screenSize !== 'lg';
+    const hamburgerIconProps = {
+      color: themes[this.props.themeColor].systemIcon.color,
+      colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+      icon: justifyIcon,
+      onClick: this.props.onMenuClick,
+    };
+
     return (
-      <HeaderShell {...this.props}>
-        <BrandSlot grow={this.props.centeredNav}>
+      <HeaderShell {...props}>
+        <BrandSlot grow={growBrand}>
           {this.props.brandUrl ? (
             <BrandLink href={this.props.brandUrl}>
-              <Brand {...this.props} />
+              <Brand {...props} />
             </BrandLink>
           ) : (
-            <Brand {...this.props} />
+            <Brand {...props} />
           )}
         </BrandSlot>
-        <ChildrenSlot {...this.props}>{this.renderChildren(this.props.children)}</ChildrenSlot>
+        {onSearchSubmit && (
+          <Search
+            onSearchSubmit={onSearchSubmit}
+            rightAlign={!this.props.children}
+            themeColor={this.props.themeColor}
+            collapse={collapseSearch}
+            placeholder="Search"
+          />
+        )}
+        <ChildrenSlot {...props} centeredNav={centeredNav}>
+          {collapseMenu ? (
+            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+          ) : (
+            this.renderChildren(this.props.children)
+          )}
+        </ChildrenSlot>
       </HeaderShell>
     );
   }

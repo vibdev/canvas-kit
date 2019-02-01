@@ -1,0 +1,619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Search Snapshots Renders a collapsed search bar 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 1`] = `
+.emotion-2 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 44px;
+  max-width: 320px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+<form
+  className="emotion-2"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "12px",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+    type="search"
+  />
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with transparent theme applied 1`] = `
+.emotion-2 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 44px;
+  max-width: 320px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+<form
+  className="emotion-2"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "12px",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+    type="search"
+  />
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with white theme applied 1`] = `
+.emotion-2 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 44px;
+  max-width: 320px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+<form
+  className="emotion-2"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "12px",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+    type="search"
+  />
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with blue theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with transparent theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #d7eafc;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
+
+exports[`Header Search Snapshots renders themed, collapsed search bars: <Search /> with white theme applied 1`] = `
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<span
+  className="emotion-0"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    }
+  }
+  onClick={[Function]}
+  style={
+    Object {
+      "cursor": "pointer",
+      "marginLeft": "16px",
+    }
+  }
+/>
+`;
