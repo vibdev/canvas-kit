@@ -65,6 +65,8 @@ const IconButtonCon = styled('button')<IconButtonProps>(
         return {
           '&:focus&:hover, &:focus': {
             backgroundColor: colors.blueberry400,
+            ...getFillSelector(colors.frenchVanilla100),
+            ...getAccentSelector(colors.frenchVanilla100),
           },
           '&:hover': {
             backgroundColor: colors.blueberry500,
