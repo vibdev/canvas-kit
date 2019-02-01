@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.3.0...@workday/canvas-kit-react-core@1.4.0) (2019-02-01)
+
+
+### Features
+
+* **core:** add CanvasSpacingValue type to core ([c09aa8c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c09aa8c))
+
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.2.5...@workday/canvas-kit-react-core@1.3.0) (2019-01-24)
 

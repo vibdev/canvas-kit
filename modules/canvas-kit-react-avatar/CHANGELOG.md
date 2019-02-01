@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.11"></a>
+## [0.2.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.2.10...@workday/canvas-kit-react-avatar@0.2.11) (2019-02-01)
+
+
+
+
+**Note:** Version bump only for package @workday/canvas-kit-react-avatar
+
 <a name="0.2.10"></a>
 ## [0.2.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.2.9...@workday/canvas-kit-react-avatar@0.2.10) (2019-01-24)
 
