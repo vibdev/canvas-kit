@@ -22,15 +22,22 @@ const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
   ({buttonSize, buttonType}) => {
-    switch (buttonSize) {
-      default:
-        return buttonType === IconButtonTypes.Default
-          ? iconButtonStyles.variants!.sizes.small
-          : iconButtonStyles.variants!.sizes.medium;
-      case ButtonSizes.Medium:
-        return iconButtonStyles.variants!.sizes.medium;
-      case ButtonSizes.Small:
-        return iconButtonStyles.variants!.sizes.small;
+    if (buttonType === IconButtonTypes.Default) {
+      switch (buttonSize) {
+        case ButtonSizes.Medium:
+          return iconButtonStyles.variants!.sizes.medium;
+        default:
+        case ButtonSizes.Small:
+          return {};
+      }
+    } else {
+      switch (buttonSize) {
+        default:
+        case ButtonSizes.Medium:
+          return iconButtonStyles.variants!.sizes.medium;
+        case ButtonSizes.Small:
+          return iconButtonStyles.variants!.sizes.small;
+      }
     }
   },
   ({buttonType, toggled}) => {

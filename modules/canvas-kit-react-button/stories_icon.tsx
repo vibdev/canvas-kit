@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {activityStreamIcon} from '@workday/canvas-system-icons-web';
+import {activityStreamIcon, xIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from './index'; // tslint:disable-line:import-name
@@ -69,22 +69,22 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
       <h3>Default Icon Buttons</h3>
       <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Medium} />
       <br />
-      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Small} />
+      <IconButton icon={activityStreamIcon} />
       <br />
       <IconButton disabled={true}>
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <h3>Plain Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPlain}>
-        <SystemIcon icon={activityStreamIcon} />
+        <SystemIcon icon={xIcon} />
       </IconButton>
       <br />
       <IconButton buttonType={IconButton.Types.IconPlain} buttonSize={IconButton.Sizes.Small}>
-        <SystemIcon icon={activityStreamIcon} />
+        <SystemIcon icon={xIcon} />
       </IconButton>
       <br />
       <IconButton disabled={true} buttonType={IconButton.Types.IconPlain}>
-        <SystemIcon icon={activityStreamIcon} />
+        <SystemIcon icon={xIcon} />
       </IconButton>
       <h3>Primary Icon Buttons</h3>
       <IconButton buttonType={IconButton.Types.IconPrimary}>

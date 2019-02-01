@@ -314,6 +314,10 @@ export const iconButtonStyles: ButtonGenericStyle = {
       [ButtonSizes.Small]: {
         width: canvas.spacing.l,
         height: canvas.spacing.l,
+        'span svg': {
+          width: '20px',
+          height: '20px',
+        },
       },
       [ButtonSizes.Medium]: {
         width: canvas.spacing.xl,
