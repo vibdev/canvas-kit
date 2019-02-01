@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.19...@workday/canvas-kit-react-header@0.2.0) (2019-02-01)
+
+
+### Bug Fixes
+
+* **header:** fix responsive styling and use correct input width ([485ce19](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/485ce19))
+* **header:** Fix reversed condition for brand slot grow prop ([2d60320](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/2d60320))
+* **header:** Fix tiling background image in header story ([bcd353e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/bcd353e))
+* **header:** Fix typescript and console warnings ([cd91c8a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/cd91c8a))
+* **header:** Fix typescript errors ([33d153c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/33d153c))
+* **header:** Use correct alignment in header if search isn't enabled ([b0fa92c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/b0fa92c))
+* **search:** Fix flash of default focus styles on mobile search while it re-renders ([d243c53](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/d243c53))
+* **search:** Fix some styling ([f6cf64d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/f6cf64d))
+* **search:** Fix submit call after render refactor ([e4d07fc](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/e4d07fc))
+
+
+### Features
+
+* **header:** Add a basic search bar ([0805934](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/0805934))
+* **header:** Add responsive behavior, remove highlightSearch for correct positioning behavior ([1151acf](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/1151acf))
+* **header:** Collapse all icons and buttons into menu button on responsive ([1ce9ecd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/1ce9ecd))
+* **header:** Implement mobile search toggle and ensure the right spacing ([dfcf4fc](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/dfcf4fc))
+* **header:** Make highlightSearch prop work ([82851e1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/82851e1))
+* **header:** Make the search field actually submit ([fbf81f0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/fbf81f0))
+* **header:** Style search field properly based on header theme ([0346dee](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/0346dee))
+* **header-search:** Update focus state for blue and transparent themees ([bbfe16d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/bbfe16d))
+* **search:** Animate transition for mobile search ([104cc1f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/104cc1f))
+* **search:** Focus input when mobile search is opened ([b11b268](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/b11b268))
+
+
+
+
 <a name="0.1.19"></a>
 ## [0.1.19](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.1.18...@workday/canvas-kit-react-header@0.1.19) (2019-02-01)
 
