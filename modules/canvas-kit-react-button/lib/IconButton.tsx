@@ -114,6 +114,9 @@ const IconButtonCon = styled('button')<IconButtonProps>(
           ...getBackgroundSelector(colors.frenchVanilla100),
           ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.licorice200),
+          '&:active': {
+            ...getAccentSelector(colors.licorice200),
+          },
         };
     }
   }
