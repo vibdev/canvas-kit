@@ -61,6 +61,13 @@ const blueBackground: CSSObject = {
   borderRadius: '3px',
 };
 
+const plainSection: CSSObject = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: '120px',
+  justifyContent: 'space-between',
+};
+
 storiesOf('Canvas Kit/Button/Icon Buttons', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
@@ -75,7 +82,7 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
         <SystemIcon icon={activityStreamIcon} />
       </IconButton>
       <h3>Plain Icon Buttons</h3>
-      <div>
+      <div className={css(plainSection)}>
         <IconButton buttonType={IconButton.Types.Plain}>
           <SystemIcon icon={xIcon} />
         </IconButton>

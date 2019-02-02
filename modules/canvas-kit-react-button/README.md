@@ -139,3 +139,22 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 > Undocumented props are spread to the `button` element.
 
 Default: `false`
+
+---
+
+#### `buttonType: IconButtonTypes`
+
+> The type of the icon button
+
+Default: `IconButtonTypes.Square`
+
+| Theme           | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `Square`        | Square, gray background, dark gray icon          |
+| `Plain`         | Dark gray icon                                   |
+| `Default`       | Circular, dark gray icon                         |
+| `Filled`        | Circular, gray background, dark gray icon        |
+| `Inverse`       | Circular, transparent background, white icon     |
+| `InverseFilled` | Circular, semitransparent background, white icon |
+
+---
