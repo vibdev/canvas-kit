@@ -152,7 +152,6 @@ export default class IconButton extends React.Component<IconButtonProps> {
 
   static defaultProps = {
     buttonType: IconButtonTypes.Square,
-    buttonSize: ButtonSizes,
   };
 
   public render() {

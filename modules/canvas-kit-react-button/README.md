@@ -158,3 +158,14 @@ Default: `IconButtonTypes.Square`
 | `InverseFilled` | Circular, semitransparent background, white icon |
 
 ---
+
+#### `buttonSize: IconButton.Sizes.Small | IconButton.Sizes.Medium`
+
+> The size of the icon button
+
+| Theme                       | Description                   | Is Default |
+| --------------------------- | ----------------------------- | ---------- |
+| `Small`                     | 32px Diameter, 20px Icon Size | False      |
+| `Medium`                    | 40px Diameter, 24px Icon Size | True       |
+| `Small` (Square Icon Type)  | 32px x 32px, 24px Icon Size   | True       |
+| `Medium` (Square Icon Type) | 40px x 40px, 24px Icon Size   | False      |
