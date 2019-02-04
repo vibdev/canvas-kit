@@ -1178,6 +1178,15 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
+"@storybook/addon-options@^4.1.11":
+  version "4.1.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-options/-/addon-options-4.1.11.tgz#88da466fa1a220126094de5198c6d2d69ea4e0e0"
+  integrity sha1-iNpGb6GiIBJglN5RmMbS1p6k4OA=
+  dependencies:
+    "@storybook/addons" "4.1.11"
+    core-js "^2.5.7"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-viewport@^4.1.11":
   version "4.1.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-viewport/-/addon-viewport-4.1.11.tgz#884e146985dea15a1b6e20dfea0ac3ede24adea4"
@@ -1658,7 +1667,14 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/storybook__addon-actions/-/storybook__addon-actions-3.4.1.tgz#8f90d76b023b58ee794170f2fe774a3fddda2c1d"
   integrity sha1-j5DXawI7WO55QXDy/ndKP93aLB0=
 
-"@types/storybook__react@^4.0.0":
+"@types/storybook__addon-options@^4.0.0":
+  version "4.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/storybook__addon-options/-/storybook__addon-options-4.0.0.tgz#80beff796c892f9bccbd221cbfc792dbe2d9764f"
+  integrity sha1-gL7/eWyJL5vMvSIcv8eS2+LZdk8=
+  dependencies:
+    "@types/storybook__react" "*"
+
+"@types/storybook__react@*", "@types/storybook__react@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/storybook__react/-/storybook__react-4.0.0.tgz#52cc452fbab599568d595075a90142ef4a1233f6"
   integrity sha1-UsxFL7q1mVaNWVB1qQFC70oSM/Y=
