@@ -1230,7 +1230,7 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/client-logger/-/client-logger-4.1.11.tgz#2b1e34e892045199592fdb01656e5dcdcd1999d7"
   integrity sha1-Kx406JIEUZlZL9sBZW5dzc0Zmdc=
 
-"@storybook/components@4.1.11":
+"@storybook/components@4.1.11", "@storybook/components@^4.1.11":
   version "4.1.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/components/-/components-4.1.11.tgz#25458a4a4f2edd836b1e4b944cfcfcb4a3567036"
   integrity sha1-JUWKSk8u3YNrHkuUTPz8tKNWcDY=
