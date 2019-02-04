@@ -6,6 +6,7 @@ import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {CSSObject} from 'create-emotion';
 
 export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes>> {
   /**
@@ -122,7 +123,7 @@ const IconButtonCon = styled('button')<IconButtonProps>(
   }
 );
 
-function getFillSelector(fillColor: string) {
+function getFillSelector(fillColor: string): CSSObject {
   return {
     '&:focus span .wd-icon-fill, &:hover span .wd-icon-fill, span .wd-icon-fill': {
       fill: fillColor,
@@ -130,7 +131,7 @@ function getFillSelector(fillColor: string) {
   };
 }
 
-function getBackgroundSelector(fillColor: string) {
+function getBackgroundSelector(fillColor: string): CSSObject {
   return {
     '&:hover span .wd-icon-background, span .wd-icon-background': {
       fill: fillColor,
@@ -138,7 +139,7 @@ function getBackgroundSelector(fillColor: string) {
   };
 }
 
-function getAccentSelector(fillColor: string) {
+function getAccentSelector(fillColor: string): CSSObject {
   return {
     '&:focus span .wd-icon-accent, &:hover span .wd-icon-accent, span .wd-icon-accent': {
       fill: fillColor,
