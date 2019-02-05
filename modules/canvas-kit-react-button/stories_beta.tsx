@@ -17,7 +17,7 @@ import {CSSObject} from 'create-emotion';
 
 // TODO (beta button): remove this story, edit storybook config to not accept stories*.tsx
 // TODO (beta button): remove stories_beta.tsx from tsconfig.json in this module
-const outlineWhiteBackground: CSSObject = {
+const blueBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -263,7 +263,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
             Outline Inverse
           </Button>
@@ -285,7 +285,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Large}
             buttonType={Button.Types.OutlineInverse}
@@ -313,7 +313,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Large}
             dataLabel={'1:00'}
@@ -344,7 +344,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Large}
             disabled={true}
@@ -364,7 +364,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineSecondary}>
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineInverse}>
             Outline Inverse
           </Button>
@@ -386,7 +386,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Medium}
             buttonType={Button.Types.OutlineInverse}
@@ -414,7 +414,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Medium}
             dataLabel={'1:00'}
@@ -445,7 +445,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Medium}
             disabled={true}
@@ -465,7 +465,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineSecondary}>
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineInverse}>
             Outline Inverse
           </Button>
@@ -487,7 +487,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         >
           Outline Secondary
         </Button>
-        <div className={css(outlineWhiteBackground)}>
+        <div className={css(blueBackground)}>
           <Button
             buttonSize={Button.Sizes.Small}
             disabled={true}
@@ -520,7 +520,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
     <div className="story">
       <h1 className="section-label">Text Buttons</h1>
       <h3>Large Text Buttons</h3>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
           Text Inverse
         </TextButton>
@@ -529,7 +529,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         Text
       </TextButton>
       <h3>Small Text Buttons</h3>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Inverse}>
           Text Inverse
         </TextButton>
@@ -539,7 +539,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
       </TextButton>
       <h3>All Caps Text Buttons</h3>
       <TextButton buttonType={TextButton.Types.AllCaps}>All Caps</TextButton>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton buttonType={TextButton.Types.InverseAllCaps}>All Caps</TextButton>
       </div>
 
@@ -560,7 +560,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           Right Icon Large
         </TextButton>
       </div>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton
           icon={activityStreamIcon}
           iconPosition={TextButton.IconPositions.Left}
@@ -587,7 +587,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
           Right Icon Small
         </TextButton>
       </div>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton
           buttonSize={TextButton.Sizes.Small}
           iconPosition={TextButton.IconPositions.Left}
@@ -598,7 +598,7 @@ storiesOf('Canvas Kit/Button/Beta', module)
         </TextButton>
       </div>
       <h3>Disabled States</h3>
-      <div className={css(outlineWhiteBackground)}>
+      <div className={css(blueBackground)}>
         <TextButton
           icon={editIcon}
           disabled={true}

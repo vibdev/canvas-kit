@@ -118,12 +118,66 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 <IconButton>
   <SystemIcon icon={activityStreamIcon} />
 </IconButton>;
+
+<IconButton icon={activityStreamIcon} />;
 ```
 
 ## Static Properties
 
-> None
+#### `Sizes: ButtonSizes`
+
+```tsx
+<IconButton buttonSize={IconButton.Sizes.Small} icon={xIcon} />
+```
+
+---
+
+#### `Types: IconButtonTypes`
+
+```tsx
+<IconButton buttonType={IconButton.Types.Plain} icon={xIcon} />
+```
 
 ## Component Props
 
 > Same as [`Button`](#canvas-kit-button)
+
+---
+
+#### `toggled: boolean`
+
+> Whether or not the toggle is on (`true`) or off (`false`). This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component.
+> Undocumented props are spread to the `button` element.
+
+Default: `false`
+
+---
+
+#### `buttonType: IconButtonTypes`
+
+> The type of the icon button
+
+Default: `IconButtonTypes.Square`
+
+| Theme           | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `Square`        | Square, gray background, dark gray icon          |
+| `Plain`         | Dark gray icon                                   |
+| `Default`       | Circular, dark gray icon                         |
+| `Filled`        | Circular, gray background, dark gray icon        |
+| `Inverse`       | Circular, transparent background, white icon     |
+| `InverseFilled` | Circular, semitransparent background, white icon |
+
+---
+
+#### `buttonSize: IconButton.Sizes.Small | IconButton.Sizes.Medium`
+
+> The size of the icon button
+
+| Theme                       | Description                   | Is Default |
+| --------------------------- | ----------------------------- | ---------- |
+| `Small`                     | 32px Diameter, 20px Icon Size | False      |
+| `Medium`                    | 40px Diameter, 24px Icon Size | True       |
+| `Small` (Square Icon Type)  | 32px x 32px, 24px Icon Size   | True       |
+| `Medium` (Square Icon Type) | 40px x 40px, 24px Icon Size   | False      |

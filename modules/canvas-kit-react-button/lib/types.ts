@@ -27,14 +27,14 @@ export enum BetaButtonTypes {
   OutlineInverse = 'outlineInverse',
 }
 
-export enum TextButtonTypes {
-  Default = 'text',
-  Inverse = 'textInverse',
-  AllCaps = 'textAllCaps',
-  InverseAllCaps = 'textInverseAllCaps',
+export enum IconButtonTypes {
+  Square = 'square',
+  Plain = 'plain',
+  Default = 'default',
+  Filled = 'filled',
+  Inverse = 'inverse',
+  InverseFilled = 'inverseFilled',
 }
-
-export type AllButtonTypes = ButtonTypes | BetaButtonTypes | TextButtonTypes;
 
 /**
  * The different icon positions.
@@ -43,3 +43,12 @@ export enum IconPositions {
   Left = 'iconPositionLeft',
   Right = 'iconPositionRight',
 }
+
+export enum TextButtonTypes {
+  Default = 'text',
+  Inverse = 'textInverse',
+  AllCaps = 'textAllCaps',
+  InverseAllCaps = 'textInverseAllCaps',
+}
+
+export type AllButtonTypes = ButtonTypes | BetaButtonTypes | TextButtonTypes | IconButtonTypes;

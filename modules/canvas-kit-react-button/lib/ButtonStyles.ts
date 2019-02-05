@@ -8,6 +8,7 @@ import {
   AllButtonTypes,
   TextButtonTypes,
   BetaButtonTypes,
+  IconButtonTypes,
 } from './types';
 import {ButtonColors} from './ButtonColors';
 
@@ -227,12 +228,12 @@ export const betaButtonStyles: ButtonGenericStyle = {
       },
       [ButtonSizes.Medium]: {
         minWidth: '96px',
-        height: '40px',
+        height: canvas.spacing.xl,
         padding: '0 14px',
       },
       [ButtonSizes.Small]: {
         minWidth: '80px',
-        height: '32px',
+        height: canvas.spacing.l,
         padding: '0 14px',
       },
     },
@@ -276,20 +277,20 @@ export const textButtonStyles: ButtonGenericStyle = {
       },
       [TextButtonTypes.AllCaps]: {
         ...getButtonStateStyle(TextButtonTypes.Default),
-        height: '32px',
+        height: canvas.spacing.l,
       },
       [TextButtonTypes.InverseAllCaps]: {
         ...getButtonStateStyle(TextButtonTypes.Inverse),
-        height: '32px',
+        height: canvas.spacing.l,
       },
     },
     sizes: {
       [ButtonSizes.Large]: {
-        height: '40px',
+        height: canvas.spacing.xl,
         padding: '0 8px',
       },
       [ButtonSizes.Small]: {
-        height: '32px',
+        height: canvas.spacing.l,
         padding: '0 8px',
       },
     },
@@ -300,19 +301,52 @@ export const iconButtonStyles: ButtonGenericStyle = {
   classname: 'icon-button',
   styles: {
     // TODO: Support data-whatinput='input' css
-    borderRadius: '3px',
-    width: '32px',
-    height: '32px',
+    ...canvasButtonStyles.styles,
+    borderWidth: '0',
+    borderRadius: '50%',
     ['& .wd-icon']: {
       display: 'inline-block',
       verticalAlign: 'middle',
     },
-    // Double parent selectors to ensure specificity to override original fill
-    ['&&:disabled']: {
-      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.disabled},
+  },
+  variants: {
+    sizes: {
+      [ButtonSizes.Small]: {
+        width: canvas.spacing.l,
+        height: canvas.spacing.l,
+        'span svg': {
+          width: '20px',
+          height: '20px',
+        },
+      },
+      [ButtonSizes.Medium]: {
+        width: canvas.spacing.xl,
+        height: canvas.spacing.xl,
+      },
     },
-    ['&&:not([disabled])']: {
-      '& .wd-icon-fill, &:hover .wd-icon-fill': {fill: canvas.iconColors.standard},
+    types: {
+      [IconButtonTypes.Square]: {
+        borderRadius: '3px',
+        borderWidth: '1px',
+        width: canvas.spacing.l,
+        height: canvas.spacing.l,
+        ...getButtonStateStyle(IconButtonTypes.Square),
+      },
+      [IconButtonTypes.Plain]: {
+        ...getButtonStateStyle(IconButtonTypes.Plain),
+      },
+      [IconButtonTypes.Default]: {
+        ...getButtonStateStyle(IconButtonTypes.Default),
+      },
+      [IconButtonTypes.Filled]: {
+        ...getButtonStateStyle(IconButtonTypes.Filled),
+      },
+      [IconButtonTypes.Inverse]: {
+        ...getButtonStateStyle(IconButtonTypes.Inverse),
+      },
+      [IconButtonTypes.InverseFilled]: {
+        ...getButtonStateStyle(IconButtonTypes.InverseFilled),
+      },
     },
   },
 };
@@ -408,6 +442,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
   switch (buttonType) {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
+    case IconButtonTypes.Square:
       return focusRing(1);
     case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
@@ -416,6 +451,11 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case TextButtonTypes.AllCaps:
     case TextButtonTypes.InverseAllCaps:
       return {};
+    case IconButtonTypes.Plain:
+      return focusRing(2);
+    case IconButtonTypes.Inverse:
+    case IconButtonTypes.InverseFilled:
+      return focusRing(2, 0, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     default:
       return focusRing(2, 2);
   }

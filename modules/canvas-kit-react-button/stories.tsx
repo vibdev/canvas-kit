@@ -2,10 +2,8 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {editIcon} from '@workday/canvas-system-icons-web';
 
-import {Button, IconButton} from './index';
+import {Button} from './index';
 import README from './README.md';
 import {css} from 'emotion';
 
@@ -50,14 +48,6 @@ storiesOf('Canvas Kit/Button', module)
       <Button buttonType={Button.Types.Delete} disabled={true}>
         Delete Button
       </Button>
-      <br />
-      <IconButton>
-        <SystemIcon icon={editIcon} />
-      </IconButton>
-      <br />
-      <IconButton disabled={true}>
-        <SystemIcon icon={editIcon} />
-      </IconButton>
       <br />
       <h1 className="section-label">Growing Button</h1>
       <div className={css(buttonContainer)}>
