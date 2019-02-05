@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.17.0"></a>
+# [0.17.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.16.1...@workday/canvas-kit-react-button@0.17.0) (2019-02-05)
+
+
+### Bug Fixes
+
+* **icon-buttons:** updated IconButtonProps interface ([e5aa68c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e5aa68c))
+
+
+### Features
+
+* **icon-buttons:** added aria-pressed attribute for toggle icon buttons ([3d0b454](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/3d0b454))
+* **icon-buttons:** added CSSObject as return type to get selectors ([2e30119](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/2e30119))
+* **icon-buttons:** added focus ring to plain icon ([aee76ed](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/aee76ed))
+* **icon-buttons:** added negative margins to plain icons ([51231b4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/51231b4))
+* **icon-buttons:** added plain icon type ([86002d2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/86002d2))
+* **icon-buttons:** added small, medium sizes to icon button ([59b0002](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/59b0002))
+* **icon-buttons:** added toggle feature to canvas icon button ([f5630d2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f5630d2))
+* **icon-buttons:** added type IconButtonSizes ([bc920aa](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/bc920aa))
+* **icon-buttons:** cleaned up selectors for toggle state ([8daa01e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8daa01e))
+* **icon-buttons:** fixed icon button canvas regression ([aa8a5cc](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/aa8a5cc))
+* **icon-buttons:** initial beta icon button commit ([d50f62b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/d50f62b))
+* **icon-buttons:** introduced medium icon size for square default icon ([65c6086](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/65c6086))
+* **icon-buttons:** made children prop optional for icon buttons ([024794e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/024794e))
+* **icon-buttons:** moved icon buttons into separate storybook ([35aa33f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/35aa33f))
+* **icon-buttons:** removed background color change on focus ([f4d6464](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f4d6464))
+* **icon-buttons:** updated canvas button focus border ([8283cc4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/8283cc4))
+* **icon-buttons:** updated canvas icon button toggle style ([87f5294](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/87f5294))
+* **icon-buttons:** updated default icon button toggled click state ([260a94b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/260a94b))
+* **icon-buttons:** updated focus ring for inverse icon buttons ([cc2562e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/cc2562e))
+* **icon-buttons:** updated primary icon button toggled click state ([9ec7e60](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/9ec7e60))
+* **icon-buttons:** updated small icons to 20px ([73d646f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/73d646f))
+* **icon-buttons:** updated to toggle click states ([22d61f9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/22d61f9))
+* **icon-buttons:** updated toggle states ([69375c0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/69375c0))
+
+
+
+
 <a name="0.16.1"></a>
 ## [0.16.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.16.0...@workday/canvas-kit-react-button@0.16.1) (2019-02-01)
 
