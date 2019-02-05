@@ -124,7 +124,7 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 
 ## Static Properties
 
-#### `Sizes: ButtonSizes.Small | ButtonSizes.Medium`
+#### `Sizes: ButtonSizes`
 
 ```tsx
 <IconButton buttonSize={IconButton.Sizes.Small} icon={xIcon} />
