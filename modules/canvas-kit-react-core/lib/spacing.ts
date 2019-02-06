@@ -4,6 +4,7 @@ import spacing, {
 } from '@workday/canvas-space-web';
 
 export interface CanvasSpacingNumbers {
+  zero: number;
   xxxs: number;
   xxs: number;
   xs: number;
@@ -20,6 +21,7 @@ function stripUnit(value: string): number {
 }
 
 export const spacingNumbers: CanvasSpacingNumbers = {
+  zero: stripUnit(spacing.zero),
   xxxs: stripUnit(spacing.xxxs),
   xxs: stripUnit(spacing.xxs),
   xs: stripUnit(spacing.xs),

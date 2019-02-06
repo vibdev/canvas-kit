@@ -457,10 +457,10 @@
   dependencies:
     "@workday/design-assets-types" "0.2.1"
 
-"@workday/canvas-colors-web@^0.17.0":
-  version "0.17.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.0.tgz#da46cf6e0caef1af465f0dbbf8e2ed446829c4a9"
-  integrity sha1-2kbPbgyu8a9GXw27+OLtRGgpxKk=
+"@workday/canvas-colors-web@^0.17.1":
+  version "0.17.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.1.tgz#6712059cba167c1a4cbe777015b6b510277d75d3"
+  integrity sha1-ZxIFnLoWfBpMvndwFba1ECd9ddM=
 
 "@workday/canvas-depth-web@^0.16.0":
   version "0.16.0"
@@ -505,10 +505,10 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-toggle/-/@workday/canvas-kit-react-toggle-0.0.1.tgz#5272d256cb9f6e172a7792cfd92a80c781030988"
   integrity sha1-UnLSVsufbhcqd5LP2SqAx4EDCYg=
 
-"@workday/canvas-space-web@^0.15.0":
-  version "0.15.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.0.tgz#d32d473e03556c1f7d8bc8dcd5394a4671d05e0c"
-  integrity sha1-0y1HPgNVbB99i8jc1TlKRnHQXgw=
+"@workday/canvas-space-web@^0.15.2":
+  version "0.15.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.2.tgz#84bf34f585bd5bad9106c4461f8914e6b5c6a9aa"
+  integrity sha1-hL809YW9W62RBsRGH4kU5rXGqao=
 
 "@workday/canvas-system-icons-web@^0.16.25":
   version "0.16.25"
