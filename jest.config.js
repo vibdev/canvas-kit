@@ -50,7 +50,7 @@ module.exports = {
   transform: {
     '^.+\\.(j|t)sx?$': 'ts-jest',
   },
-  transformIgnorePatterns: ['<rootDir>/node_modules/(?!lodash-es/.*)'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
   clearMocks: true,
   reporters: ['default', ['jest-junit', {suiteName: 'Canvas Kit React tests'}]],
   testURL: 'http://localhost',

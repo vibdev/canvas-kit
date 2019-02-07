@@ -368,14 +368,7 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/jest/-/jest-23.3.5.tgz#870a1434208b60603745bfd214fc3fc675142364"
   integrity sha1-hwoUNCCLYGA3Rb/SFPw/xnUUI2Q=
 
-"@types/lodash-es@^4.17.1":
-  version "4.17.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/lodash-es/-/lodash-es-4.17.1.tgz#56745e5411558362aeca31def918f88f725dd29d"
-  integrity sha1-VnReVBFVg2KuyjHe+Rj4j3Jd0p0=
-  dependencies:
-    "@types/lodash" "*"
-
-"@types/lodash@*":
+"@types/lodash@^4.14.120":
   version "4.14.120"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/lodash/-/lodash-4.14.120.tgz#cf265d06f6c7a710db087ed07523ab8c1a24047b"
   integrity sha1-zyZdBvbHpxDbCH7QdSOrjBokBHs=
@@ -7050,7 +7043,7 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.11, lodash-es@^4.2.1:
+lodash-es@^4.2.1:
   version "4.17.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
   integrity sha1-FFq0p6xcXlKjUx+08xAlWhUrS+A=
