@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.4.0...@workday/canvas-kit-react-core@1.5.0) (2019-02-07)
+
+
+### Features
+
+* **spacing:** add zero spacing entry ([5a82374](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/5a82374))
+
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.3.0...@workday/canvas-kit-react-core@1.4.0) (2019-02-01)
 
