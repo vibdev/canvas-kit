@@ -39,17 +39,14 @@ module.exports = {
         ignoreCodes: [151001],
       },
       tsConfig: {
-        allowJs: true,
         esModuleInterop: true,
       },
     },
   },
   moduleFileExtensions: ['tsx', 'ts', 'js', 'jsx', 'json'],
+  preset: 'ts-jest',
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
-  transform: {
-    '^.+\\.(j|t)sx?$': 'ts-jest',
-  },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   clearMocks: true,
   reporters: ['default', ['jest-junit', {suiteName: 'Canvas Kit React tests'}]],
