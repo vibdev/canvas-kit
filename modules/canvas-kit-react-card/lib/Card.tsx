@@ -18,7 +18,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Padding of the card.
    */
-  padding: 0 | CanvasSpacingValue;
+  padding: CanvasSpacingValue;
 
   /**
    * Depth of the card.
