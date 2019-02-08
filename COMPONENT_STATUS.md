@@ -19,9 +19,9 @@ part of Canvas.
 | --------------------------------------------------------------- | :----------------: | :--------------------------------------------------------------------------------: |
 | [Avatar](modules/canvas-kit-react-avatar)                       | :white_check_mark: |                                                                                    |
 | [Button - Standard](modules/canvas-kit-react-button)            | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
-| [Button - Drop Down](modules/canvas-kit-react-button)           |                    |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
+| [Button - Drop Down](modules/canvas-kit-react-button)           | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Button - Icon](modules/canvas-kit-react-button)                | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
-| [Button - Text](modules/canvas-kit-react-button)                |                    |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
+| [Button - Text](modules/canvas-kit-react-button)                | :white_check_mark: |     [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Card](modules/canvas-kit-react-card)                           | :white_check_mark: |                                                                                    |
 | Checkbox                                                        |                    |    [:blue_book:](https://design.workday.com/guidelines/components/check-boxes)     |
 | Color Picker                                                    |                    |                                                                                    |
