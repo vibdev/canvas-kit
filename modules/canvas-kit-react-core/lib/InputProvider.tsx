@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 export interface InputProviderState {
-  currentInput: string;
-  currentIntent: string;
+  currentInput: InputType | 'initial';
+  currentIntent: InputType | 'initial';
   supportsPassive: boolean;
   isBuffering: boolean;
   isScrolling: boolean;
@@ -79,14 +79,14 @@ export const inputEventMap = {
   [InputEventType.TouchStart]: InputType.Touch,
 };
 
-const getPointerType = (event: React.PointerEvent) => {
-  // map of IE 10 pointer events
-  const pointerMap = {
-    2: InputType.Touch,
-    3: InputType.Touch, // treat pen like touch
-    4: InputType.Mouse,
-  };
+// map of IE 10 pointer events
+const pointerMap = {
+  2: InputType.Touch,
+  3: InputType.Touch, // treat pen like touch
+  4: InputType.Mouse,
+};
 
+const getPointerType = (event: React.PointerEvent): InputType => {
   if (typeof event.pointerType === 'number') {
     return pointerMap[event.pointerType];
   } else if (event.pointerType === 'mouse') {
@@ -142,8 +142,8 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
     // check for sessionStorage support
     // then check for session variables and use if available
     try {
-      const storedInput = window.sessionStorage.getItem('what-input');
-      const storedIntent = window.sessionStorage.getItem('what-intent');
+      const storedInput = window.sessionStorage.getItem('what-input') as InputType | 'initial';
+      const storedIntent = window.sessionStorage.getItem('what-intent') as InputType | 'initial';
 
       this.setState({
         currentInput: storedInput || this.state.currentInput,
