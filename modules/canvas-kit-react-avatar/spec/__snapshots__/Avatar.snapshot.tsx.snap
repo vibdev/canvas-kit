@@ -37,6 +37,15 @@ exports[`Button Snapshots renders a large Avatar 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
 }
 
+[data-whatinput='mouse'] .emotion-1:focus,
+[data-whatinput='touch'] .emotion-1:focus,
+[data-whatinput='pointer'] .emotion-1:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
 .emotion-0 {
   display: inline-block;
 }
@@ -126,6 +135,15 @@ exports[`Button Snapshots renders a large avatar with a photo 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
 }
 
+[data-whatinput='mouse'] .emotion-0:focus,
+[data-whatinput='touch'] .emotion-0:focus,
+[data-whatinput='pointer'] .emotion-0:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
 <button
   className="emotion-0 emotion-1"
   disabled={true}
@@ -172,6 +190,15 @@ exports[`Button Snapshots renders a large, dark Avatar 1`] = `
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+[data-whatinput='mouse'] .emotion-1:focus,
+[data-whatinput='touch'] .emotion-1:focus,
+[data-whatinput='pointer'] .emotion-1:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
 }
 
 .emotion-0 {
@@ -263,6 +290,15 @@ exports[`Button Snapshots renders an avatar with a photo 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
 }
 
+[data-whatinput='mouse'] .emotion-0:focus,
+[data-whatinput='touch'] .emotion-0:focus,
+[data-whatinput='pointer'] .emotion-0:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
+}
+
 <button
   className="emotion-0 emotion-1"
   disabled={true}
@@ -309,6 +345,15 @@ exports[`Button Snapshots renders as expected 1`] = `
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+}
+
+[data-whatinput='mouse'] .emotion-1:focus,
+[data-whatinput='touch'] .emotion-1:focus,
+[data-whatinput='pointer'] .emotion-1:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-animation: none;
+  animation: none;
 }
 
 .emotion-0 {
