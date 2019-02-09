@@ -187,16 +187,16 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
     this.enableListeners(false);
   }
 
-  // shouldComponentUpdate(nextProps: React.Props<React.Component>, nextState: InputProviderState) {
-  //   if (
-  //     nextProps != this.props ||
-  //     nextState.currentInput != this.state.currentInput ||
-  //     nextState.currentIntent != this.state.currentIntent
-  //   ) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
+  shouldComponentUpdate(nextProps: {}, nextState: InputProviderState) {
+    if (
+      nextProps !== this.props ||
+      nextState.currentInput !== this.state.currentInput ||
+      nextState.currentIntent !== this.state.currentIntent
+    ) {
+      return true;
+    }
+    return false;
+  }
 
   enableListeners(enable: boolean) {
     // `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
