@@ -245,18 +245,23 @@ This is a higher order (wrapping) component for providing css-referencable data 
 users current input. Focus outlines are required for accesibility, but they can be unnecessary
 visual noise when using a mouse. This allows us to hide focus outlines (as desired) while the user
 is interacting with components using a mouse, touch, etc. and show them when keyboard navigation
-begins.This logic is heavily influenced by [what-input](https://github.com/ten1seven/what-input).
+begins. This logic is heavily influenced by [what-input](https://github.com/ten1seven/what-input).
 
-**We strongly encouraged you to use this in your application to wrap all Canvas components**. You
-can use it to style your own components as well.
+**We strongly encourage you to use this in your application to wrap all Canvas components**. You can
+use it to style your own components as well.
 
 ### Definitions
 
 **Input**: The current input method from the user.
 
 - Equal to one of [`InputTypes`](#inputtypes)
-- Triggered by the following events: - `keydown` - `keyup` - `mousedown` - `MSPointerDown` -
-  `pointerdown` - `touchstart`
+- Triggered by the following events:
+  - `keydown`
+  - `keyup`
+  - `mousedown`
+  - `MSPointerDown`
+  - `pointerdown`
+  - `touchstart`
 
 **Intent**: The potential next input method from the user. Mouse, pointer and mouse wheel events
 only demonstrate potential, but not actual, interaction and are treated separately. Note: if input
@@ -292,13 +297,11 @@ handling.
 **React/Emotion:**
 
 ```js
-[`[data-whatinput='mouse'],
-  [data-whatinput='touch'],
-  [data-whatinput='pointer']`]: {
-  '&:focus': {
-    outline: 'none',
-    border: 'none',
-  },
+[`[data-whatinput='mouse'] &:focus,
+  [data-whatinput='touch'] &:focus,
+  [data-whatinput='pointer'] &:focus`]: {
+  outline: 'none',
+  border: 'none',
 },
 ```
 
@@ -314,6 +317,9 @@ handling.
   }
 }
 ```
+
+We provide a [helper](../canvas-kit-react-common/lib/styles/hideMouseFocus.ts) to hide the focus
+outlines on mouse input. Simply spread its return value in your styles.
 
 **Note:** It is best practice to show focus outlines by default and specifically hide them in the
 cases you would like (i.e. mouse/touch/pointer input).
