@@ -18,11 +18,5 @@
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true
   },
-  "exclude": [
-    "node_modules",
-    "modules/**/dist/*",
-    "modules/**/ts-tmp/*",
-    "modules/**/spec/*",
-    "docs"
-  ]
+  "exclude": ["node_modules", "modules/**/dist/*", "modules/**/ts-tmp/*", "docs"]
 }
