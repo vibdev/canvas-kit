@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {colors} from '@workday/canvas-kit-react-core';
-import {focusRing} from '@workday/canvas-kit-react-common';
+import {focusRing, hideMouseFocus} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {userIcon} from '@workday/canvas-system-icons-web';
 
@@ -72,6 +72,7 @@ const Container = styled('button')<AvatarProps>(
         ...(themeColor === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
       },
     },
+    ...hideMouseFocus(),
   })
 );
 

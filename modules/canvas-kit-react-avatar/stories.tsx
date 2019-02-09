@@ -2,11 +2,13 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 
 import Avatar from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 storiesOf('Canvas Kit/Avatar', module)
+  .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
