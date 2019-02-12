@@ -2790,21 +2790,22 @@ babel-jest@23.6.0, babel-jest@^23.6.0:
     babel-plugin-istanbul "^4.1.6"
     babel-preset-jest "^23.2.0"
 
-babel-loader@7:
-  version "7.1.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-loader/-/babel-loader-7.1.5.tgz#e3ee0cd7394aa557e013b02d3e492bfd07aa6d68"
-  integrity sha1-4+4M1zlKpVfgE7AtPkkr/QeqbWg=
-  dependencies:
-    find-cache-dir "^1.0.0"
-    loader-utils "^1.0.2"
-    mkdirp "^0.5.1"
-
 babel-loader@8.0.4:
   version "8.0.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-loader/-/babel-loader-8.0.4.tgz#7bbf20cbe4560629e2e41534147692d3fecbdce6"
   integrity sha1-e78gy+RWBini5BU0FHaS0/7L3OY=
   dependencies:
     find-cache-dir "^1.0.0"
+    loader-utils "^1.0.2"
+    mkdirp "^0.5.1"
+    util.promisify "^1.0.0"
+
+babel-loader@^8.0.5:
+  version "8.0.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-loader/-/babel-loader-8.0.5.tgz#225322d7509c2157655840bba52e46b6c2f2fe33"
+  integrity sha1-IlMi11CcIVdlWEC7pS5GtsLy/jM=
+  dependencies:
+    find-cache-dir "^2.0.0"
     loader-utils "^1.0.2"
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
@@ -9548,11 +9549,6 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
-
-lodash-es@^4.17.11:
-  version "4.17.11"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/lodash-es/-/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
-  integrity sha1-FFq0p6xcXlKjUx+08xAlWhUrS+A=
 
 lodash._getnative@^3.0.0:
   version "3.9.1"

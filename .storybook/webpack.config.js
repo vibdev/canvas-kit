@@ -8,6 +8,7 @@ const babelLoader = {
   loader: 'babel-loader',
   options: {
     plugins: [
+      '@babel/plugin-transform-modules-commonjs',
       [
         'emotion',
         {
@@ -24,7 +25,7 @@ const customRules = [
     test: /\.tsx?$/,
     exclude: /node_modules/,
     include: modulesPath,
-    loader: 'happypack/loader?id=ts'
+    loader: 'happypack/loader?id=ts',
   },
   {
     test: /\.scss$/,
