@@ -1,6 +1,6 @@
 module.exports = {
   rootDir: '.',
-  setupTestFrameworkScriptFile: '<rootDir>/jest/setupTests.ts',
+  setupFilesAfterEnv: ['<rootDir>/jest/setupTests.ts'],
   verbose: true,
   collectCoverage: true,
   collectCoverageFrom: [
@@ -33,18 +33,7 @@ module.exports = {
       statements: 97,
     },
   },
-  globals: {
-    'ts-jest': {
-      diagnostics: {
-        ignoreCodes: [151001],
-      },
-      tsConfig: {
-        esModuleInterop: true,
-      },
-    },
-  },
   moduleFileExtensions: ['tsx', 'ts', 'js', 'jsx', 'json'],
-  preset: 'ts-jest',
   snapshotSerializers: ['jest-emotion/serializer'],
   testMatch: ['**/?(*.)+(spec|test|snapshot).ts?(x)'],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
