@@ -11,7 +11,10 @@ interface CustomColorInputState {
    * The hex value entered by the user
    */
   colorHexValue: string;
-  submitedColorValue: string;
+}
+
+interface CustomColorInputProps {
+  onSubmit: (color: string) => void;
 }
 
 const CustomHexInput = styled('input')({
@@ -56,13 +59,15 @@ const selectedCustomHex = css({
   ...focusRing(2, 2),
 });
 
-export default class CustomColorInput extends React.Component<{}, CustomColorInputState> {
+export default class CustomColorInput extends React.Component<
+  CustomColorInputProps,
+  CustomColorInputState
+> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef();
-  public constructor(props: {}) {
+  public constructor(props: CustomColorInputProps) {
     super(props);
     this.state = {
       colorHexValue: '',
-      submitedColorValue: '',
     };
   }
   public render() {
@@ -74,12 +79,13 @@ export default class CustomColorInput extends React.Component<{}, CustomColorInp
           innerRef={this.inputRef}
           onChange={this.onCustomHexChange}
           type="text"
+          defaultValue={this.state.colorHexValue}
         />
         <SwatchTile
           style={{backgroundColor: `${this.state.colorHexValue || ''}`}}
           role="button"
           className={
-            this.isValidHexValue(this.state.colorHexValue) && this.state.submitedColorValue
+            this.isValidHexValue(this.state.colorHexValue) && this.state.colorHexValue
               ? css`
                   ${selectedCustomHex};
                 `
@@ -102,8 +108,9 @@ export default class CustomColorInput extends React.Component<{}, CustomColorInp
     const isValidHex: boolean = this.isValidHexValue(this.state.colorHexValue);
     if (evt.key === 'Enter' && isValidHex) {
       this.setState({
-        submitedColorValue: this.state.colorHexValue,
+        colorHexValue: this.state.colorHexValue,
       });
+      this.props.onSubmit(this.state.colorHexValue);
     }
   };
 
@@ -133,8 +140,10 @@ export default class CustomColorInput extends React.Component<{}, CustomColorInp
   };
 
   private handleSubmit = (): void => {
-    this.setState({
-      submitedColorValue: this.state.colorHexValue,
-    });
+    console.warn('input submit');
+    // this.setState({
+    //   submitedColorValue: this.state.colorHexValue,
+    // });
+    this.props.onSubmit(this.state.colorHexValue);
   };
 }
