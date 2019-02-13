@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
-.emotion-3 {
+.emotion-6 {
   height: 84px;
   background-image: linear-gradient(to bottom right,#0875e1,#005cb9);
   color: #ffffff;
@@ -9,7 +9,7 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
 }
 
 @media (min-width:768px) {
-  .emotion-2 {
+  .emotion-4 {
     padding: 0 40px;
   }
 }
@@ -44,7 +44,7 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,31 +52,31 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
   margin-left: 32px;
 }
 
-.emotion-1 > *:not(:last-child) {
+.emotion-2 > *:not(:last-child) {
   margin-right: 8px;
 }
 
 <header
-  className="emotion-3"
+  className="emotion-6 emotion-7"
 >
   <div
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     title="Test Page Header"
   >
     <h2
-      className="emotion-0"
+      className="emotion-0 emotion-1"
     >
       Test Page Header
     </h2>
     <div
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </header>
 `;
 
 exports[`Page Header Snapshots renders a marketing context PageHeader as expected 1`] = `
-.emotion-3 {
+.emotion-6 {
   height: 84px;
   background-image: linear-gradient(to bottom right,#0875e1,#005cb9);
   color: #ffffff;
@@ -95,7 +95,7 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
   white-space: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,11 +103,11 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
   margin-left: 32px;
 }
 
-.emotion-1 > *:not(:last-child) {
+.emotion-2 > *:not(:last-child) {
   margin-right: 8px;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,37 +130,37 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
 }
 
 @media (min-width:768px) {
-  .emotion-2 {
+  .emotion-4 {
     padding: 0 40px;
   }
 }
 
 @media (min-width:992px) {
-  .emotion-2 {
+  .emotion-4 {
     padding: 0 64px;
   }
 }
 
 @media (min-width:1200px) {
-  .emotion-2 {
+  .emotion-4 {
     padding: 0 100px;
   }
 }
 
 <header
-  className="emotion-3"
+  className="emotion-6 emotion-7"
 >
   <div
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     title="Test Marketing Page Header"
   >
     <h2
-      className="emotion-0"
+      className="emotion-0 emotion-1"
     >
       Test Marketing Page Header
     </h2>
     <div
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </header>

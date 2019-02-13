@@ -9,7 +9,7 @@ exports[`Card Snapshots renders a card with depth 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -18,10 +18,10 @@ exports[`Card Snapshots renders a card with depth 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card with custom depth
   </div>
@@ -29,7 +29,7 @@ exports[`Card Snapshots renders a card with depth 1`] = `
 `;
 
 exports[`Card Snapshots renders a card with heading 1`] = `
-.emotion-2 {
+.emotion-4 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ exports[`Card Snapshots renders a card with heading 1`] = `
   padding: 32px;
 }
 
-.emotion-1 {
+.emotion-2 {
   font-size: 14px;
   color: #494949;
   font-weight: 400;
@@ -55,15 +55,15 @@ exports[`Card Snapshots renders a card with heading 1`] = `
 }
 
 <div
-  className="emotion-2"
+  className="emotion-4 emotion-5"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card Title
   </div>
   <div
-    className="emotion-1"
+    className="emotion-2 emotion-3"
   >
     Card with a heading
   </div>
@@ -79,7 +79,7 @@ exports[`Card Snapshots renders a card with height 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -89,11 +89,11 @@ exports[`Card Snapshots renders a card with height 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
   height="12px"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card with custom width
   </div>
@@ -109,7 +109,7 @@ exports[`Card Snapshots renders a card with padding 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -118,10 +118,10 @@ exports[`Card Snapshots renders a card with padding 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card with custom padding
   </div>
@@ -137,7 +137,7 @@ exports[`Card Snapshots renders a card with width 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-1 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -147,11 +147,11 @@ exports[`Card Snapshots renders a card with width 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
   width="12px"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card with custom width
   </div>
@@ -159,7 +159,7 @@ exports[`Card Snapshots renders a card with width 1`] = `
 `;
 
 exports[`Card Snapshots renders as expected 1`] = `
-.emotion-1 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -176,10 +176,10 @@ exports[`Card Snapshots renders as expected 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Card
   </div>

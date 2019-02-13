@@ -116,7 +116,7 @@ exports[`Table Row Snapshots header mode 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <th>
     cell
@@ -212,7 +212,7 @@ exports[`Table Row Snapshots renders as expected 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -301,7 +301,7 @@ exports[`Table Row Snapshots states Alert 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -390,7 +390,7 @@ exports[`Table Row Snapshots states Error 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -486,7 +486,7 @@ exports[`Table Row Snapshots states Hover 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -531,7 +531,7 @@ exports[`Table Row Snapshots states Input Alert 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -576,7 +576,7 @@ exports[`Table Row Snapshots states Input Error 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell
@@ -663,7 +663,7 @@ exports[`Table Row Snapshots states Selected 1`] = `
 }
 
 <tr
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <td>
     cell

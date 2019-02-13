@@ -75,7 +75,7 @@ exports[`Button Snapshots renders a large Avatar 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   disabled={true}
   size={64}
 >
@@ -127,7 +127,7 @@ exports[`Button Snapshots renders a large avatar with a photo 1`] = `
 }
 
 <button
-  className="emotion-0"
+  className="emotion-0 emotion-1"
   disabled={true}
   size={64}
 >
@@ -212,7 +212,7 @@ exports[`Button Snapshots renders a large, dark Avatar 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   disabled={true}
   size={64}
 >
@@ -264,7 +264,7 @@ exports[`Button Snapshots renders an avatar with a photo 1`] = `
 }
 
 <button
-  className="emotion-0"
+  className="emotion-0 emotion-1"
   disabled={true}
   size={32}
 >
@@ -349,7 +349,7 @@ exports[`Button Snapshots renders as expected 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   disabled={true}
   size={32}
 >
