@@ -476,6 +476,12 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
   fill: #ffffff;
 }
 
+.emotion-1:not([disabled]):focus {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
 .emotion-1:hover {
   background-color: #005cb9;
 }
