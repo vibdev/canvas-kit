@@ -249,8 +249,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
   constructor(props: HeaderProps) {
     super(props);
+
+    const screenSize =
+      typeof window !== 'undefined' && window.innerWidth
+        ? this.getScreenSize(window.innerWidth, props.breakpoints)
+        : 'md';
+
     this.state = {
-      screenSize: this.getScreenSize(window.innerWidth, props.breakpoints),
+      screenSize: screenSize,
     };
     this.updateScreenSize = throttle(this.updateScreenSize.bind(this), 150);
   }
