@@ -3,7 +3,7 @@
 exports[`Button (Highlight) Snapshots renders a large, highlight button with a data label 1`] = `null`;
 
 exports[`Button (Highlight) Snapshots renders a large, highlight button with an icon 1`] = `
-.emotion-3 {
+.emotion-5 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -35,89 +35,89 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding: 0 18px;
 }
 
-.emotion-3:hover:active {
+.emotion-5:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:active {
+.emotion-5:disabled,
+.emotion-5:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill,
-.emotion-3 span .wd-icon-accent {
+.emotion-5 span .wd-icon-fill,
+.emotion-5 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
 }
 
-.emotion-3:focus {
+.emotion-5:focus {
   background-color: #f0f1f2;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:focus span .wd-icon-fill,
-.emotion-3:focus span .wd-icon-accent {
+.emotion-5:focus span .wd-icon-fill,
+.emotion-5:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover:focus {
+.emotion-5:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-3:active,
-.emotion-3:focus:active,
-.emotion-3:hover:active {
+.emotion-5:active,
+.emotion-5:focus:active,
+.emotion-5:hover:active {
   background-color: #ced3d9;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:active span .wd-icon-fill,
-.emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill,
-.emotion-3:active span .wd-icon-accent,
-.emotion-3:focus:active span .wd-icon-accent,
-.emotion-3:hover:active span .wd-icon-accent {
+.emotion-5:active span .wd-icon-fill,
+.emotion-5:focus:active span .wd-icon-fill,
+.emotion-5:hover:active span .wd-icon-fill,
+.emotion-5:active span .wd-icon-accent,
+.emotion-5:focus:active span .wd-icon-accent,
+.emotion-5:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   background-color: #dfe2e6;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill,
-.emotion-3:hover span .wd-icon-accent {
+.emotion-5:hover span .wd-icon-fill,
+.emotion-5:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:disabled,
-.emotion-3:active:disabled,
-.emotion-3:focus:disabled,
-.emotion-3:hover:disabled {
+.emotion-5:disabled,
+.emotion-5:active:disabled,
+.emotion-5:focus:disabled,
+.emotion-5:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
   color: #a1aab3;
 }
 
-.emotion-3:disabled span .wd-icon-fill,
-.emotion-3:active:disabled span .wd-icon-fill,
-.emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill,
-.emotion-3:disabled span .wd-icon-accent,
-.emotion-3:active:disabled span .wd-icon-accent,
-.emotion-3:focus:disabled span .wd-icon-accent,
-.emotion-3:hover:disabled span .wd-icon-accent {
+.emotion-5:disabled span .wd-icon-fill,
+.emotion-5:active:disabled span .wd-icon-fill,
+.emotion-5:focus:disabled span .wd-icon-fill,
+.emotion-5:hover:disabled span .wd-icon-fill,
+.emotion-5:disabled span .wd-icon-accent,
+.emotion-5:active:disabled span .wd-icon-accent,
+.emotion-5:focus:disabled span .wd-icon-accent,
+.emotion-5:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-3:not([disabled]):focus,
-.emotion-3:not([disabled]):active {
+.emotion-5:not([disabled]):focus,
+.emotion-5:not([disabled]):active {
   border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -169,7 +169,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   height: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -182,15 +182,15 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding: 0 12px;
 }
 
-.emotion-2:hover:active {
+.emotion-3:hover:active {
   background-color: transparent;
 }
 
 <button
-  className="emotion-3"
+  className="emotion-5 emotion-6"
 >
   <span
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -202,7 +202,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
     />
   </span>
   <span
-    className="emotion-2"
+    className="emotion-3 emotion-4"
   >
     Button
   </span>
@@ -255,7 +255,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   height: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -268,11 +268,11 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding: 0 12px;
 }
 
-.emotion-2:hover:active {
+.emotion-3:hover:active {
   background-color: transparent;
 }
 
-.emotion-3 {
+.emotion-5 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -306,89 +306,89 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   max-width: 100%;
 }
 
-.emotion-3:hover:active {
+.emotion-5:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:active {
+.emotion-5:disabled,
+.emotion-5:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill,
-.emotion-3 span .wd-icon-accent {
+.emotion-5 span .wd-icon-fill,
+.emotion-5 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
 }
 
-.emotion-3:focus {
+.emotion-5:focus {
   background-color: #f0f1f2;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:focus span .wd-icon-fill,
-.emotion-3:focus span .wd-icon-accent {
+.emotion-5:focus span .wd-icon-fill,
+.emotion-5:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover:focus {
+.emotion-5:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-3:active,
-.emotion-3:focus:active,
-.emotion-3:hover:active {
+.emotion-5:active,
+.emotion-5:focus:active,
+.emotion-5:hover:active {
   background-color: #ced3d9;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:active span .wd-icon-fill,
-.emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill,
-.emotion-3:active span .wd-icon-accent,
-.emotion-3:focus:active span .wd-icon-accent,
-.emotion-3:hover:active span .wd-icon-accent {
+.emotion-5:active span .wd-icon-fill,
+.emotion-5:focus:active span .wd-icon-fill,
+.emotion-5:hover:active span .wd-icon-fill,
+.emotion-5:active span .wd-icon-accent,
+.emotion-5:focus:active span .wd-icon-accent,
+.emotion-5:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   background-color: #dfe2e6;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill,
-.emotion-3:hover span .wd-icon-accent {
+.emotion-5:hover span .wd-icon-fill,
+.emotion-5:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:disabled,
-.emotion-3:active:disabled,
-.emotion-3:focus:disabled,
-.emotion-3:hover:disabled {
+.emotion-5:disabled,
+.emotion-5:active:disabled,
+.emotion-5:focus:disabled,
+.emotion-5:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
   color: #a1aab3;
 }
 
-.emotion-3:disabled span .wd-icon-fill,
-.emotion-3:active:disabled span .wd-icon-fill,
-.emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill,
-.emotion-3:disabled span .wd-icon-accent,
-.emotion-3:active:disabled span .wd-icon-accent,
-.emotion-3:focus:disabled span .wd-icon-accent,
-.emotion-3:hover:disabled span .wd-icon-accent {
+.emotion-5:disabled span .wd-icon-fill,
+.emotion-5:active:disabled span .wd-icon-fill,
+.emotion-5:focus:disabled span .wd-icon-fill,
+.emotion-5:hover:disabled span .wd-icon-fill,
+.emotion-5:disabled span .wd-icon-accent,
+.emotion-5:active:disabled span .wd-icon-accent,
+.emotion-5:focus:disabled span .wd-icon-accent,
+.emotion-5:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-3:not([disabled]):focus,
-.emotion-3:not([disabled]):active {
+.emotion-5:not([disabled]):focus,
+.emotion-5:not([disabled]):active {
   border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -396,10 +396,10 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 }
 
 <button
-  className="emotion-3"
+  className="emotion-5 emotion-6"
 >
   <span
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -411,7 +411,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
     />
   </span>
   <span
-    className="emotion-2"
+    className="emotion-3 emotion-4"
   >
     Button
   </span>
@@ -419,7 +419,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 `;
 
 exports[`Button (Highlight) Snapshots renders a large, highlight button with an icon and data label 1`] = `
-.emotion-4 {
+.emotion-7 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -451,89 +451,89 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding: 0 18px;
 }
 
-.emotion-4:hover:active {
+.emotion-7:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-4:disabled,
-.emotion-4:disabled:active {
+.emotion-7:disabled,
+.emotion-7:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill,
-.emotion-4 span .wd-icon-accent {
+.emotion-7 span .wd-icon-fill,
+.emotion-7 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
 }
 
-.emotion-4:focus {
+.emotion-7:focus {
   background-color: #f0f1f2;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:focus span .wd-icon-fill,
-.emotion-4:focus span .wd-icon-accent {
+.emotion-7:focus span .wd-icon-fill,
+.emotion-7:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:hover:focus {
+.emotion-7:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-4:active,
-.emotion-4:focus:active,
-.emotion-4:hover:active {
+.emotion-7:active,
+.emotion-7:focus:active,
+.emotion-7:hover:active {
   background-color: #ced3d9;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:active span .wd-icon-fill,
-.emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill,
-.emotion-4:active span .wd-icon-accent,
-.emotion-4:focus:active span .wd-icon-accent,
-.emotion-4:hover:active span .wd-icon-accent {
+.emotion-7:active span .wd-icon-fill,
+.emotion-7:focus:active span .wd-icon-fill,
+.emotion-7:hover:active span .wd-icon-fill,
+.emotion-7:active span .wd-icon-accent,
+.emotion-7:focus:active span .wd-icon-accent,
+.emotion-7:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:hover {
+.emotion-7:hover {
   background-color: #dfe2e6;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:hover span .wd-icon-fill,
-.emotion-4:hover span .wd-icon-accent {
+.emotion-7:hover span .wd-icon-fill,
+.emotion-7:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:disabled,
-.emotion-4:active:disabled,
-.emotion-4:focus:disabled,
-.emotion-4:hover:disabled {
+.emotion-7:disabled,
+.emotion-7:active:disabled,
+.emotion-7:focus:disabled,
+.emotion-7:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
   color: #a1aab3;
 }
 
-.emotion-4:disabled span .wd-icon-fill,
-.emotion-4:active:disabled span .wd-icon-fill,
-.emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill,
-.emotion-4:disabled span .wd-icon-accent,
-.emotion-4:active:disabled span .wd-icon-accent,
-.emotion-4:focus:disabled span .wd-icon-accent,
-.emotion-4:hover:disabled span .wd-icon-accent {
+.emotion-7:disabled span .wd-icon-fill,
+.emotion-7:active:disabled span .wd-icon-fill,
+.emotion-7:focus:disabled span .wd-icon-fill,
+.emotion-7:hover:disabled span .wd-icon-fill,
+.emotion-7:disabled span .wd-icon-accent,
+.emotion-7:active:disabled span .wd-icon-accent,
+.emotion-7:focus:disabled span .wd-icon-accent,
+.emotion-7:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-4:not([disabled]):focus,
-.emotion-4:not([disabled]):active {
+.emotion-7:not([disabled]):focus,
+.emotion-7:not([disabled]):active {
   border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -585,7 +585,7 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   height: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -598,11 +598,11 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding: 0 12px;
 }
 
-.emotion-2:hover:active {
+.emotion-3:hover:active {
   background-color: transparent;
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -615,15 +615,15 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
   padding-right: 12px;
 }
 
-.emotion-3:hover:active {
+.emotion-5:hover:active {
   background-color: transparent;
 }
 
 <button
-  className="emotion-4"
+  className="emotion-7 emotion-8"
 >
   <span
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -635,12 +635,12 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
     />
   </span>
   <span
-    className="emotion-2"
+    className="emotion-3 emotion-4"
   >
     Button
   </span>
   <span
-    className="button-label-data emotion-3"
+    className="button-label-data emotion-5 emotion-6"
   >
     1:00
   </span>
@@ -685,7 +685,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   height: 24px;
 }
 
-.emotion-3 {
+.emotion-5 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -717,89 +717,89 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding: 0 14px;
 }
 
-.emotion-3:hover:active {
+.emotion-5:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:active {
+.emotion-5:disabled,
+.emotion-5:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-3 span .wd-icon-fill,
-.emotion-3 span .wd-icon-accent {
+.emotion-5 span .wd-icon-fill,
+.emotion-5 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
 }
 
-.emotion-3:focus {
+.emotion-5:focus {
   background-color: #f0f1f2;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:focus span .wd-icon-fill,
-.emotion-3:focus span .wd-icon-accent {
+.emotion-5:focus span .wd-icon-fill,
+.emotion-5:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover:focus {
+.emotion-5:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-3:active,
-.emotion-3:focus:active,
-.emotion-3:hover:active {
+.emotion-5:active,
+.emotion-5:focus:active,
+.emotion-5:hover:active {
   background-color: #ced3d9;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:active span .wd-icon-fill,
-.emotion-3:focus:active span .wd-icon-fill,
-.emotion-3:hover:active span .wd-icon-fill,
-.emotion-3:active span .wd-icon-accent,
-.emotion-3:focus:active span .wd-icon-accent,
-.emotion-3:hover:active span .wd-icon-accent {
+.emotion-5:active span .wd-icon-fill,
+.emotion-5:focus:active span .wd-icon-fill,
+.emotion-5:hover:active span .wd-icon-fill,
+.emotion-5:active span .wd-icon-accent,
+.emotion-5:focus:active span .wd-icon-accent,
+.emotion-5:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   background-color: #dfe2e6;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-3:hover span .wd-icon-fill,
-.emotion-3:hover span .wd-icon-accent {
+.emotion-5:hover span .wd-icon-fill,
+.emotion-5:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-3:disabled,
-.emotion-3:active:disabled,
-.emotion-3:focus:disabled,
-.emotion-3:hover:disabled {
+.emotion-5:disabled,
+.emotion-5:active:disabled,
+.emotion-5:focus:disabled,
+.emotion-5:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
   color: #a1aab3;
 }
 
-.emotion-3:disabled span .wd-icon-fill,
-.emotion-3:active:disabled span .wd-icon-fill,
-.emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill,
-.emotion-3:disabled span .wd-icon-accent,
-.emotion-3:active:disabled span .wd-icon-accent,
-.emotion-3:focus:disabled span .wd-icon-accent,
-.emotion-3:hover:disabled span .wd-icon-accent {
+.emotion-5:disabled span .wd-icon-fill,
+.emotion-5:active:disabled span .wd-icon-fill,
+.emotion-5:focus:disabled span .wd-icon-fill,
+.emotion-5:hover:disabled span .wd-icon-fill,
+.emotion-5:disabled span .wd-icon-accent,
+.emotion-5:active:disabled span .wd-icon-accent,
+.emotion-5:focus:disabled span .wd-icon-accent,
+.emotion-5:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-3:not([disabled]):focus,
-.emotion-3:not([disabled]):active {
+.emotion-5:not([disabled]):focus,
+.emotion-5:not([disabled]):active {
   border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -814,7 +814,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding-left: 4px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -827,15 +827,15 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding: 0 8px;
 }
 
-.emotion-2:hover:active {
+.emotion-3:hover:active {
   background-color: transparent;
 }
 
 <button
-  className="emotion-3"
+  className="emotion-5 emotion-6"
 >
   <span
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -847,7 +847,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
     />
   </span>
   <span
-    className="emotion-2"
+    className="emotion-3 emotion-4"
   >
     Button
   </span>
@@ -892,7 +892,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   height: 24px;
 }
 
-.emotion-4 {
+.emotion-7 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -924,89 +924,89 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding: 0 14px;
 }
 
-.emotion-4:hover:active {
+.emotion-7:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-4:disabled,
-.emotion-4:disabled:active {
+.emotion-7:disabled,
+.emotion-7:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-4 span .wd-icon-fill,
-.emotion-4 span .wd-icon-accent {
+.emotion-7 span .wd-icon-fill,
+.emotion-7 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #005cb9;
 }
 
-.emotion-4:focus {
+.emotion-7:focus {
   background-color: #f0f1f2;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:focus span .wd-icon-fill,
-.emotion-4:focus span .wd-icon-accent {
+.emotion-7:focus span .wd-icon-fill,
+.emotion-7:focus span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:hover:focus {
+.emotion-7:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-4:active,
-.emotion-4:focus:active,
-.emotion-4:hover:active {
+.emotion-7:active,
+.emotion-7:focus:active,
+.emotion-7:hover:active {
   background-color: #ced3d9;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:active span .wd-icon-fill,
-.emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill,
-.emotion-4:active span .wd-icon-accent,
-.emotion-4:focus:active span .wd-icon-accent,
-.emotion-4:hover:active span .wd-icon-accent {
+.emotion-7:active span .wd-icon-fill,
+.emotion-7:focus:active span .wd-icon-fill,
+.emotion-7:hover:active span .wd-icon-fill,
+.emotion-7:active span .wd-icon-accent,
+.emotion-7:focus:active span .wd-icon-accent,
+.emotion-7:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:hover {
+.emotion-7:hover {
   background-color: #dfe2e6;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-4:hover span .wd-icon-fill,
-.emotion-4:hover span .wd-icon-accent {
+.emotion-7:hover span .wd-icon-fill,
+.emotion-7:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-4:disabled,
-.emotion-4:active:disabled,
-.emotion-4:focus:disabled,
-.emotion-4:hover:disabled {
+.emotion-7:disabled,
+.emotion-7:active:disabled,
+.emotion-7:focus:disabled,
+.emotion-7:hover:disabled {
   background-color: #f6f7f8;
   border-color: transparent;
   color: #a1aab3;
 }
 
-.emotion-4:disabled span .wd-icon-fill,
-.emotion-4:active:disabled span .wd-icon-fill,
-.emotion-4:focus:disabled span .wd-icon-fill,
-.emotion-4:hover:disabled span .wd-icon-fill,
-.emotion-4:disabled span .wd-icon-accent,
-.emotion-4:active:disabled span .wd-icon-accent,
-.emotion-4:focus:disabled span .wd-icon-accent,
-.emotion-4:hover:disabled span .wd-icon-accent {
+.emotion-7:disabled span .wd-icon-fill,
+.emotion-7:active:disabled span .wd-icon-fill,
+.emotion-7:focus:disabled span .wd-icon-fill,
+.emotion-7:hover:disabled span .wd-icon-fill,
+.emotion-7:disabled span .wd-icon-accent,
+.emotion-7:active:disabled span .wd-icon-accent,
+.emotion-7:focus:disabled span .wd-icon-accent,
+.emotion-7:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-4:not([disabled]):focus,
-.emotion-4:not([disabled]):active {
+.emotion-7:not([disabled]):focus,
+.emotion-7:not([disabled]):active {
   border-color: transparent;
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
@@ -1021,7 +1021,7 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding-left: 4px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1034,11 +1034,11 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   padding: 0 8px;
 }
 
-.emotion-2:hover:active {
+.emotion-3:hover:active {
   background-color: transparent;
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1052,15 +1052,15 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
   font-size: 14px;
 }
 
-.emotion-3:hover:active {
+.emotion-5:hover:active {
   background-color: transparent;
 }
 
 <button
-  className="emotion-4"
+  className="emotion-7 emotion-8"
 >
   <span
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -1072,12 +1072,12 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
     />
   </span>
   <span
-    className="emotion-2"
+    className="emotion-3 emotion-4"
   >
     Button
   </span>
   <span
-    className="button-label-data emotion-3"
+    className="button-label-data emotion-5 emotion-6"
   >
     1:00
   </span>

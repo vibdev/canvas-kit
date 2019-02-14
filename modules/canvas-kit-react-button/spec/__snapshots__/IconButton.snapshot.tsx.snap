@@ -156,7 +156,7 @@ exports[`Icon Button Snapshots renders a medium icon button 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
 >
   <span
     className="emotion-0"
@@ -323,7 +323,7 @@ exports[`Icon Button Snapshots renders a small icon button 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
 >
   <span
     className="emotion-0"
@@ -539,7 +539,7 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
 
 <button
   aria-pressed={true}
-  className="emotion-1"
+  className="emotion-1 emotion-2"
 >
   <span
     className="emotion-0"
@@ -674,7 +674,7 @@ exports[`Icon Button Snapshots renders as expected 1`] = `
 }
 
 <button
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 >
   <svg>
     Hello

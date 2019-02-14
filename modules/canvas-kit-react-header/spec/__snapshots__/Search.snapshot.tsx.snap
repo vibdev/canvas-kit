@@ -51,7 +51,7 @@ exports[`Header Search Snapshots Renders a collapsed search bar 1`] = `
 `;
 
 exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 1`] = `
-.emotion-2 {
+.emotion-3 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -159,7 +159,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
 }
 
 <form
-  className="emotion-2"
+  className="emotion-3 emotion-4"
   onSubmit={[Function]}
   placeholder="Search"
 >
@@ -180,7 +180,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
     }
   />
   <input
-    className="emotion-1"
+    className="emotion-1 emotion-2"
     onBlur={[Function]}
     onFocus={[Function]}
     placeholder="Search"
@@ -190,7 +190,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
 `;
 
 exports[`Header Search Snapshots renders themed search bars: <Search /> with transparent theme applied 1`] = `
-.emotion-2 {
+.emotion-3 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -298,7 +298,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
 }
 
 <form
-  className="emotion-2"
+  className="emotion-3 emotion-4"
   onSubmit={[Function]}
   placeholder="Search"
 >
@@ -319,7 +319,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
     }
   />
   <input
-    className="emotion-1"
+    className="emotion-1 emotion-2"
     onBlur={[Function]}
     onFocus={[Function]}
     placeholder="Search"
@@ -329,7 +329,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
 `;
 
 exports[`Header Search Snapshots renders themed search bars: <Search /> with white theme applied 1`] = `
-.emotion-2 {
+.emotion-3 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -438,7 +438,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
 }
 
 <form
-  className="emotion-2"
+  className="emotion-3 emotion-4"
   onSubmit={[Function]}
   placeholder="Search"
 >
@@ -459,7 +459,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
     }
   />
   <input
-    className="emotion-1"
+    className="emotion-1 emotion-2"
     onBlur={[Function]}
     onFocus={[Function]}
     placeholder="Search"

@@ -18,7 +18,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -39,7 +39,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   background-color: #7b858f;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -58,7 +58,7 @@ exports[`Toggle Snapshots renders as expected 1`] = `
 <div>
   <input
     checked={false}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     onChange={[Function]}
     role="checkbox"
     tabIndex={0}
@@ -66,18 +66,18 @@ exports[`Toggle Snapshots renders as expected 1`] = `
   />
   <div
     checked={false}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
   >
     <div
       checked={false}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
 `;
 
 exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -110,7 +110,7 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -134,7 +134,7 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
 <div>
   <input
     checked={true}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     disabled={true}
     onChange={[Function]}
     role="checkbox"
@@ -143,19 +143,19 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
   />
   <div
     checked={true}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     disabled={true}
   >
     <div
       checked={true}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
 `;
 
 exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -188,7 +188,7 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -212,7 +212,7 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
 <div>
   <input
     checked={false}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     disabled={true}
     onChange={[Function]}
     role="checkbox"
@@ -221,12 +221,12 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
   />
   <div
     checked={false}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     disabled={true}
   >
     <div
       checked={false}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
@@ -250,7 +250,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -271,7 +271,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   background-color: #005cb9;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -290,7 +290,7 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
 <div>
   <input
     checked={true}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     onChange={[Function]}
     role="checkbox"
     tabIndex={0}
@@ -298,11 +298,11 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
   />
   <div
     checked={true}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
   >
     <div
       checked={true}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
@@ -326,7 +326,7 @@ exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -347,7 +347,7 @@ exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
   background-color: #005cb9;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -366,7 +366,7 @@ exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
 <div>
   <input
     checked={true}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     disabled={false}
     id="123"
     onChange={[MockFunction]}
@@ -378,12 +378,12 @@ exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
   />
   <div
     checked={true}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     disabled={false}
   >
     <div
       checked={true}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
@@ -407,7 +407,7 @@ exports[`Toggle Snapshots renders toggle with id 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -428,7 +428,7 @@ exports[`Toggle Snapshots renders toggle with id 1`] = `
   background-color: #005cb9;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -447,7 +447,7 @@ exports[`Toggle Snapshots renders toggle with id 1`] = `
 <div>
   <input
     checked={true}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     disabled={false}
     id="123"
     onChange={[MockFunction]}
@@ -458,12 +458,12 @@ exports[`Toggle Snapshots renders toggle with id 1`] = `
   />
   <div
     checked={true}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     disabled={false}
   >
     <div
       checked={true}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>
@@ -487,7 +487,7 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
-.emotion-2 {
+.emotion-4 {
   box-sizing: border-box;
   position: absolute;
   display: -webkit-box;
@@ -508,7 +508,7 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   background-color: #005cb9;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   width: 12px;
   height: 12px;
@@ -527,7 +527,7 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
 <div>
   <input
     checked={true}
-    className="emotion-0"
+    className="emotion-0 emotion-1"
     disabled={false}
     onChange={[Function]}
     role="checkbox"
@@ -537,12 +537,12 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
   />
   <div
     checked={true}
-    className="emotion-2"
+    className="emotion-4 emotion-5"
     disabled={false}
   >
     <div
       checked={true}
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     />
   </div>
 </div>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button Snapshots renders a button with no type defined 1`] = `
-.emotion-1 {
+.emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -34,52 +34,52 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
   font-weight: 500;
 }
 
-.emotion-1:hover:active {
+.emotion-2:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-1:disabled,
-.emotion-1:disabled:active {
+.emotion-2:disabled,
+.emotion-2:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
 }
 
-.emotion-1:hover:focus {
+.emotion-2:hover:focus {
   background-color: #ced3d9;
 }
 
-.emotion-1:active,
-.emotion-1:focus:active,
-.emotion-1:hover:active {
+.emotion-2:active,
+.emotion-2:focus:active,
+.emotion-2:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
   color: #333333;
 }
 
-.emotion-1:disabled,
-.emotion-1:active:disabled,
-.emotion-1:focus:disabled,
-.emotion-1:hover:disabled {
+.emotion-2:disabled,
+.emotion-2:active:disabled,
+.emotion-2:focus:disabled,
+.emotion-2:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
   color: #ced3d9;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
+.emotion-2:not([disabled]):focus,
+.emotion-2:not([disabled]):active {
   border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
@@ -107,10 +107,10 @@ exports[`Button Snapshots renders a button with no type defined 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <span
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Button
   </span>
@@ -138,7 +138,7 @@ exports[`Button Snapshots renders a growing button 1`] = `
   background-color: transparent;
 }
 
-.emotion-1 {
+.emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -173,52 +173,52 @@ exports[`Button Snapshots renders a growing button 1`] = `
   max-width: 100%;
 }
 
-.emotion-1:hover:active {
+.emotion-2:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-1:disabled,
-.emotion-1:disabled:active {
+.emotion-2:disabled,
+.emotion-2:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
 }
 
-.emotion-1:hover:focus {
+.emotion-2:hover:focus {
   background-color: #ced3d9;
 }
 
-.emotion-1:active,
-.emotion-1:focus:active,
-.emotion-1:hover:active {
+.emotion-2:active,
+.emotion-2:focus:active,
+.emotion-2:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
   color: #333333;
 }
 
-.emotion-1:disabled,
-.emotion-1:active:disabled,
-.emotion-1:focus:disabled,
-.emotion-1:hover:disabled {
+.emotion-2:disabled,
+.emotion-2:active:disabled,
+.emotion-2:focus:disabled,
+.emotion-2:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
   color: #ced3d9;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
+.emotion-2:not([disabled]):focus,
+.emotion-2:not([disabled]):active {
   border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
@@ -226,10 +226,10 @@ exports[`Button Snapshots renders a growing button 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <span
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Button
   </span>
@@ -237,7 +237,7 @@ exports[`Button Snapshots renders a growing button 1`] = `
 `;
 
 exports[`Button Snapshots renders as expected 1`] = `
-.emotion-1 {
+.emotion-2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -270,52 +270,52 @@ exports[`Button Snapshots renders as expected 1`] = `
   font-weight: 500;
 }
 
-.emotion-1:hover:active {
+.emotion-2:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-1:disabled,
-.emotion-1:disabled:active {
+.emotion-2:disabled,
+.emotion-2:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-1:focus {
+.emotion-2:focus {
   background-color: #f0f1f2;
   border-color: #005cb9;
   color: #333333;
 }
 
-.emotion-1:hover:focus {
+.emotion-2:hover:focus {
   background-color: #ced3d9;
 }
 
-.emotion-1:active,
-.emotion-1:focus:active,
-.emotion-1:hover:active {
+.emotion-2:active,
+.emotion-2:focus:active,
+.emotion-2:hover:active {
   background-color: #f0f1f2;
   border-color: #ced3d9;
   color: #333333;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   background-color: #ced3d9;
   border-color: #a1aab3;
   color: #333333;
 }
 
-.emotion-1:disabled,
-.emotion-1:active:disabled,
-.emotion-1:focus:disabled,
-.emotion-1:hover:disabled {
+.emotion-2:disabled,
+.emotion-2:active:disabled,
+.emotion-2:focus:disabled,
+.emotion-2:hover:disabled {
   background-color: #ffffff;
   border-color: #ced3d9;
   color: #ced3d9;
 }
 
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
+.emotion-2:not([disabled]):focus,
+.emotion-2:not([disabled]):active {
   border-color: #005cb9;
   -webkit-animation: animation-1lvxwzr 100ms;
   animation: animation-1lvxwzr 100ms;
@@ -343,10 +343,10 @@ exports[`Button Snapshots renders as expected 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <span
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   >
     Button
   </span>

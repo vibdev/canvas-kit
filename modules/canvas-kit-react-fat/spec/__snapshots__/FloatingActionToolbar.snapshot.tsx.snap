@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
-.emotion-3 {
+.emotion-4 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -9,7 +9,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
 }
 
 @media (max-width:575px) {
-  .emotion-3 {
+  .emotion-4 {
     padding: 8px;
   }
 }
@@ -157,10 +157,10 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
 }
 
 <div
-  className="emotion-3"
+  className="emotion-4 emotion-5"
 >
   <div
-    className="emotion-2"
+    className="emotion-2 emotion-3"
   >
     <button
       className="emotion-1"
@@ -176,7 +176,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
 `;
 
 exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = `
-.emotion-5 {
+.emotion-6 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -184,7 +184,7 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
 }
 
 @media (max-width:575px) {
-  .emotion-5 {
+  .emotion-6 {
     padding: 8px;
   }
 }
@@ -417,10 +417,10 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
 }
 
 <div
-  className="emotion-5"
+  className="emotion-6 emotion-7"
 >
   <div
-    className="emotion-4"
+    className="emotion-4 emotion-5"
   >
     <button
       className="emotion-1"
@@ -482,7 +482,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
   }
 }
 
-.emotion-3 {
+.emotion-4 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -494,7 +494,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
 }
 
 @media (max-width:575px) {
-  .emotion-3 {
+  .emotion-4 {
     padding: 8px;
   }
 }
@@ -605,10 +605,10 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
 }
 
 <div
-  className="emotion-3"
+  className="emotion-4 emotion-5"
 >
   <div
-    className="emotion-2"
+    className="emotion-2 emotion-3"
   >
     <button
       className="emotion-1"
@@ -661,7 +661,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -673,7 +673,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
 }
 
 @media (max-width:575px) {
-  .emotion-5 {
+  .emotion-6 {
     padding: 8px;
   }
 }
@@ -869,10 +869,10 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
 }
 
 <div
-  className="emotion-5"
+  className="emotion-6 emotion-7"
 >
   <div
-    className="emotion-4"
+    className="emotion-4 emotion-5"
   >
     <button
       className="emotion-1"
@@ -934,7 +934,7 @@ exports[`Floating Action Toolbar Snapshots renders a fixed empty FAT 1`] = `
   }
 }
 
-.emotion-1 {
+.emotion-2 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -946,22 +946,22 @@ exports[`Floating Action Toolbar Snapshots renders a fixed empty FAT 1`] = `
 }
 
 @media (max-width:575px) {
-  .emotion-1 {
+  .emotion-2 {
     padding: 8px;
   }
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   />
 </div>
 `;
 
 exports[`Floating Action Toolbar Snapshots renders an empty FAT 1`] = `
-.emotion-1 {
+.emotion-2 {
   border-top: solid 1px #dfe2e6;
   background: #ffffff;
   padding: 16px;
@@ -969,7 +969,7 @@ exports[`Floating Action Toolbar Snapshots renders an empty FAT 1`] = `
 }
 
 @media (max-width:575px) {
-  .emotion-1 {
+  .emotion-2 {
     padding: 8px;
   }
 }
@@ -1012,10 +1012,10 @@ exports[`Floating Action Toolbar Snapshots renders an empty FAT 1`] = `
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0"
+    className="emotion-0 emotion-1"
   />
 </div>
 `;

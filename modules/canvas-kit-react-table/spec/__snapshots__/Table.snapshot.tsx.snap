@@ -18,6 +18,6 @@ exports[`Table Snapshots renders as expected 1`] = `
 }
 
 <table
-  className="emotion-0"
+  className="emotion-0 emotion-1"
 />
 `;
