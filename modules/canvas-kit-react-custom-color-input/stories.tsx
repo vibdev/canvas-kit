@@ -22,27 +22,22 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
   public render() {
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <CustomColorInput onSubmit={this.onSubmit} />
-        <h3 style={{color: `${this.state.color}`}}>Hello World</h3>
+        <CustomColorInput selectedHexColor={this.state.color} onSubmit={this.onSubmit} />
+        <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
     );
   }
 
   private onSubmit(color: string) {
-    console.warn('story submit', color);
     this.setState({color: color});
-  }
-
-  componentDidUpdate() {
-    console.log(this.state);
   }
 }
 
-storiesOf('Canvas Kit/Custom-color-input', module)
+storiesOf('Canvas Kit/Custom Color Input', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Custom-color-input</h1>
+      <h1 className="section-label">Custom Color Input</h1>
       <CustomColorInputWrapper />
     </div>
   ));

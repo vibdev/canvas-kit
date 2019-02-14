@@ -5,17 +5,18 @@ import {colors} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {checkIcon} from '@workday/canvas-system-icons-web';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
-interface CustomColorInputState {
-  /**
-   * The hex value entered by the user
-   */
-  colorHexValue: string;
+export interface CustomColorInputState {
+  typedInHexValue: string;
 }
 
-interface CustomColorInputProps {
+export interface CustomColorInputProps {
   onSubmit: (color: string) => void;
+  selectedHexColor: string;
 }
+
+const swatchTileSpacing = 8;
 
 const CustomHexInput = styled('input')({
   margin: 0,
@@ -23,19 +24,20 @@ const CustomHexInput = styled('input')({
   WebkitAppearance: 'none',
   MozAppearance: 'none',
   borderColor: 'transparent',
-  borderRadius: '2px',
+  borderRadius: '4px',
   border: `1px solid ${colors.frenchVanilla400}`,
   boxSizing: 'border-box',
   textAlign: 'left',
   paddingLeft: '36px',
   marginRight: 8,
   '&:focus, &:active': {
+    borderColor: 'transparent',
     outline: 'none',
     ...focusRing(2, 0),
   },
 });
 
-const container = css({
+const CustomColorInputContainer = styled('div')({
   display: 'flex',
   boxSizing: 'border-box',
   position: 'relative',
@@ -46,17 +48,23 @@ const SwatchTile = styled('div')({
   cursor: 'pointer',
   height: '20px',
   width: '20px',
-  top: '0',
+  top: 0,
   bottom: 0,
+  left: swatchTileSpacing,
   margin: 'auto',
-  left: 8,
-  border: '1px solid grey',
+  border: `1px solid ${colors.soap600}`,
   pointerEvents: 'none',
-  borderRadius: '3px',
+  borderRadius: '2px',
 });
 
 const selectedCustomHex = css({
   ...focusRing(2, 2),
+});
+
+const swatchCheckIcon = css({
+  position: 'absolute',
+  left: swatchTileSpacing,
+  top: swatchTileSpacing,
 });
 
 export default class CustomColorInput extends React.Component<
@@ -67,25 +75,27 @@ export default class CustomColorInput extends React.Component<
   public constructor(props: CustomColorInputProps) {
     super(props);
     this.state = {
-      colorHexValue: '',
+      typedInHexValue: '',
     };
   }
   public render() {
+    const {selectedHexColor} = this.props;
+    const {typedInHexValue} = this.state;
     return (
-      <div className={container}>
+      <CustomColorInputContainer>
         <CustomHexInput
           onKeyPress={this.onKeyPress}
           placeholder="eg. #FFFFFF"
           innerRef={this.inputRef}
           onChange={this.onCustomHexChange}
           type="text"
-          defaultValue={this.state.colorHexValue}
+          defaultValue={typedInHexValue}
         />
         <SwatchTile
-          style={{backgroundColor: `${this.state.colorHexValue || ''}`}}
+          style={{backgroundColor: `${typedInHexValue || ''}`}}
           role="button"
           className={
-            this.isValidHexValue(this.state.colorHexValue) && this.state.colorHexValue
+            selectedHexColor && this.isValidHexValue(selectedHexColor)
               ? css`
                   ${selectedCustomHex};
                 `
@@ -93,57 +103,42 @@ export default class CustomColorInput extends React.Component<
           }
         />
         <IconButton
+          disabled={!this.isValidHexValue(typedInHexValue)}
           onClick={this.handleSubmit}
           buttonType={IconButton.Types.Filled}
           icon={checkIcon}
         />
-      </div>
+        {selectedHexColor ? (
+          <SystemIcon fill="#fff" fillHover="#fff" className={swatchCheckIcon} icon={checkIcon} />
+        ) : null}
+      </CustomColorInputContainer>
     );
   }
 
-  /**
-   * If the hex code is valid, user can press enter to submit their custom hex color
-   */
   private onKeyPress = (evt: React.KeyboardEvent<HTMLInputElement>) => {
-    const isValidHex: boolean = this.isValidHexValue(this.state.colorHexValue);
+    const isValidHex: boolean = this.isValidHexValue(this.state.typedInHexValue);
     if (evt.key === 'Enter' && isValidHex) {
-      this.setState({
-        colorHexValue: this.state.colorHexValue,
-      });
-      this.props.onSubmit(this.state.colorHexValue);
+      this.props.onSubmit(this.state.typedInHexValue);
     }
   };
 
-  /**
-   * On change, it checks if the hex code is valid and updates the custom hex swatch
-   */
   private onCustomHexChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const isValidHex: boolean = this.isValidHexValue(evt.target.value);
     const newColorHexValue: string = isValidHex ? this.addPoundSign(evt.target.value) : '';
     this.setState({
-      colorHexValue: newColorHexValue,
+      typedInHexValue: newColorHexValue,
     });
   };
 
-  /**
-   * Checks if the hex code is valid and the right length
-   */
   private isValidHexValue = (hexCode: string): boolean => {
     return /(^#?[0-9A-F]{6}$)|(^#?[0-9A-F]{3}$)/i.test(hexCode);
   };
 
-  /**
-   * Adds pound sign to the hex code if necessary
-   */
   private addPoundSign = (hexCode: string): string => {
     return hexCode.slice(0, 1) === '#' ? hexCode : `#${hexCode}`;
   };
 
   private handleSubmit = (): void => {
-    console.warn('input submit');
-    // this.setState({
-    //   submitedColorValue: this.state.colorHexValue,
-    // });
-    this.props.onSubmit(this.state.colorHexValue);
+    this.props.onSubmit(this.state.typedInHexValue);
   };
 }
