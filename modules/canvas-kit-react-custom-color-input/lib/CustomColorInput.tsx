@@ -9,6 +9,7 @@ import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 export interface CustomColorInputState {
   typedInHexValue: string;
+  isInputFocused: boolean;
 }
 
 export interface CustomColorInputProps {
@@ -17,6 +18,7 @@ export interface CustomColorInputProps {
 }
 
 const swatchTileSpacing = 8;
+const swatchTitleSize = 20;
 
 const CustomHexInput = styled('input')({
   margin: 0,
@@ -46,8 +48,8 @@ const CustomColorInputContainer = styled('div')({
 const SwatchTile = styled('div')({
   position: 'absolute',
   cursor: 'pointer',
-  height: '20px',
-  width: '20px',
+  height: swatchTitleSize,
+  width: swatchTitleSize,
   top: 0,
   bottom: 0,
   left: swatchTileSpacing,
@@ -76,11 +78,12 @@ export default class CustomColorInput extends React.Component<
     super(props);
     this.state = {
       typedInHexValue: '',
+      isInputFocused: false,
     };
   }
   public render() {
     const {selectedHexColor} = this.props;
-    const {typedInHexValue} = this.state;
+    const {typedInHexValue, isInputFocused} = this.state;
     return (
       <CustomColorInputContainer>
         <CustomHexInput
@@ -93,24 +96,23 @@ export default class CustomColorInput extends React.Component<
         />
         <SwatchTile
           style={{backgroundColor: `${typedInHexValue || ''}`}}
-          role="button"
           className={
-            selectedHexColor && this.isValidHexValue(selectedHexColor)
+            selectedHexColor && isInputFocused
               ? css`
                   ${selectedCustomHex};
                 `
               : ''
           }
         />
+        {selectedHexColor ? (
+          <SystemIcon fill="#fff" fillHover="#fff" className={swatchCheckIcon} icon={checkIcon} />
+        ) : null}
         <IconButton
           disabled={!this.isValidHexValue(typedInHexValue)}
           onClick={this.handleSubmit}
           buttonType={IconButton.Types.Filled}
           icon={checkIcon}
         />
-        {selectedHexColor ? (
-          <SystemIcon fill="#fff" fillHover="#fff" className={swatchCheckIcon} icon={checkIcon} />
-        ) : null}
       </CustomColorInputContainer>
     );
   }
@@ -118,7 +120,7 @@ export default class CustomColorInput extends React.Component<
   private onKeyPress = (evt: React.KeyboardEvent<HTMLInputElement>) => {
     const isValidHex: boolean = this.isValidHexValue(this.state.typedInHexValue);
     if (evt.key === 'Enter' && isValidHex) {
-      this.props.onSubmit(this.state.typedInHexValue);
+      this.handleSubmit();
     }
   };
 
@@ -127,6 +129,7 @@ export default class CustomColorInput extends React.Component<
     const newColorHexValue: string = isValidHex ? this.addPoundSign(evt.target.value) : '';
     this.setState({
       typedInHexValue: newColorHexValue,
+      isInputFocused: false,
     });
   };
 
@@ -139,6 +142,9 @@ export default class CustomColorInput extends React.Component<
   };
 
   private handleSubmit = (): void => {
+    this.setState({
+      isInputFocused: true,
+    });
     this.props.onSubmit(this.state.typedInHexValue);
   };
 }

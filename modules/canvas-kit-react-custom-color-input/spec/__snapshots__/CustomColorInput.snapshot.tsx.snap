@@ -193,7 +193,6 @@ exports[`CustomColorInput Snapshots renders as expected 1`] = `
   />
   <div
     className="emotion-1"
-    role="button"
     style={
       Object {
         "backgroundColor": "",
@@ -250,7 +249,21 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
 }
 
-.emotion-3 {
+.emotion-1 {
+  position: absolute;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  margin: auto;
+  border: 1px solid #b9c0c7;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -279,80 +292,115 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
   height: 40px;
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:active {
+.emotion-4:disabled,
+.emotion-4:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-3 .wd-icon {
+.emotion-4 .wd-icon {
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-3 span .wd-icon-fill,
-.emotion-3 span .wd-icon-accent {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
 }
 
-.emotion-3:focus span .wd-icon-fill,
-.emotion-3:focus span .wd-icon-accent {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-3:hover:focus {
+.emotion-4:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-3:active,
-.emotion-3:focus:active,
-.emotion-3:hover:active {
+.emotion-4:active,
+.emotion-4:focus:active,
+.emotion-4:hover:active {
   background-color: #ced3d9;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   background-color: #dfe2e6;
 }
 
-.emotion-3:hover span .wd-icon-fill,
-.emotion-3:hover span .wd-icon-accent {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
-.emotion-3:disabled,
-.emotion-3:active:disabled,
-.emotion-3:focus:disabled,
-.emotion-3:hover:disabled {
+.emotion-4:disabled,
+.emotion-4:active:disabled,
+.emotion-4:focus:disabled,
+.emotion-4:hover:disabled {
   background-color: #f6f7f8;
 }
 
-.emotion-3:disabled span .wd-icon-fill,
-.emotion-3:active:disabled span .wd-icon-fill,
-.emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill,
-.emotion-3:disabled span .wd-icon-accent,
-.emotion-3:active:disabled span .wd-icon-accent,
-.emotion-3:focus:disabled span .wd-icon-accent,
-.emotion-3:hover:disabled span .wd-icon-accent {
+.emotion-4:disabled span .wd-icon-fill,
+.emotion-4:active:disabled span .wd-icon-fill,
+.emotion-4:focus:disabled span .wd-icon-fill,
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-3:not([disabled]):focus,
-.emotion-3:not([disabled]):active {
+.emotion-4:not([disabled]):focus,
+.emotion-4:not([disabled]):active {
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
 .emotion-2 {
   display: inline-block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
 }
 
 .emotion-2 svg {
@@ -360,11 +408,11 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
 }
 
 .emotion-2 .wd-icon-fill {
-  fill: #7b858f;
+  fill: #fff;
 }
 
 .emotion-2:hover .wd-icon-fill {
-  fill: #333d47;
+  fill: #fff;
 }
 
 .emotion-2 .wd-icon-accent {
@@ -383,58 +431,6 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
   fill: transparent;
 }
 
-.emotion-1 {
-  position: absolute;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  top: 0;
-  bottom: 0;
-  left: 8px;
-  margin: auto;
-  border: 1px solid #b9c0c7;
-  pointer-events: none;
-  border-radius: 2px;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-4 {
-  display: inline-block;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-}
-
-.emotion-4 svg {
-  display: block;
-}
-
-.emotion-4 .wd-icon-fill {
-  fill: #fff;
-}
-
-.emotion-4:hover .wd-icon-fill {
-  fill: #fff;
-}
-
-.emotion-4 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-4:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-4 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-4:hover .wd-icon-background {
-  fill: transparent;
-}
-
 <div
   className="emotion-5"
 >
@@ -448,20 +444,27 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
   />
   <div
     className="emotion-1"
-    role="button"
     style={
       Object {
         "backgroundColor": "",
       }
     }
   />
+  <span
+    className="emotion-2"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+  />
   <button
-    className="emotion-3"
+    className="emotion-4"
     disabled={true}
     onClick={[Function]}
   >
     <span
-      className="emotion-2"
+      className="emotion-3"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -469,14 +472,6 @@ exports[`CustomColorInput Snapshots renders with a selected color 1`] = `
       }
     />
   </button>
-  <span
-    className="emotion-4"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
-  />
 </div>
 `;
 
@@ -513,7 +508,21 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
 }
 
-.emotion-3 {
+.emotion-1 {
+  position: absolute;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  margin: auto;
+  border: 1px solid #b9c0c7;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -542,80 +551,115 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
   height: 40px;
 }
 
-.emotion-3:hover:active {
+.emotion-4:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-3:disabled,
-.emotion-3:disabled:active {
+.emotion-4:disabled,
+.emotion-4:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-3 .wd-icon {
+.emotion-4 .wd-icon {
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-3 span .wd-icon-fill,
-.emotion-3 span .wd-icon-accent {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
 }
 
-.emotion-3:focus span .wd-icon-fill,
-.emotion-3:focus span .wd-icon-accent {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-3:hover:focus {
+.emotion-4:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-3:active,
-.emotion-3:focus:active,
-.emotion-3:hover:active {
+.emotion-4:active,
+.emotion-4:focus:active,
+.emotion-4:hover:active {
   background-color: #ced3d9;
 }
 
-.emotion-3:hover {
+.emotion-4:hover {
   background-color: #dfe2e6;
 }
 
-.emotion-3:hover span .wd-icon-fill,
-.emotion-3:hover span .wd-icon-accent {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
-.emotion-3:disabled,
-.emotion-3:active:disabled,
-.emotion-3:focus:disabled,
-.emotion-3:hover:disabled {
+.emotion-4:disabled,
+.emotion-4:active:disabled,
+.emotion-4:focus:disabled,
+.emotion-4:hover:disabled {
   background-color: #f6f7f8;
 }
 
-.emotion-3:disabled span .wd-icon-fill,
-.emotion-3:active:disabled span .wd-icon-fill,
-.emotion-3:focus:disabled span .wd-icon-fill,
-.emotion-3:hover:disabled span .wd-icon-fill,
-.emotion-3:disabled span .wd-icon-accent,
-.emotion-3:active:disabled span .wd-icon-accent,
-.emotion-3:focus:disabled span .wd-icon-accent,
-.emotion-3:hover:disabled span .wd-icon-accent {
+.emotion-4:disabled span .wd-icon-fill,
+.emotion-4:active:disabled span .wd-icon-fill,
+.emotion-4:focus:disabled span .wd-icon-fill,
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-3:not([disabled]):focus,
-.emotion-3:not([disabled]):active {
+.emotion-4:not([disabled]):focus,
+.emotion-4:not([disabled]):active {
   -webkit-animation: animation-72u8ku 100ms;
   animation: animation-72u8ku 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
 .emotion-2 {
   display: inline-block;
+  position: absolute;
+  left: 8px;
+  top: 8px;
 }
 
 .emotion-2 svg {
@@ -623,11 +667,11 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
 }
 
 .emotion-2 .wd-icon-fill {
-  fill: #7b858f;
+  fill: #fff;
 }
 
 .emotion-2:hover .wd-icon-fill {
-  fill: #333d47;
+  fill: #fff;
 }
 
 .emotion-2 .wd-icon-accent {
@@ -646,58 +690,6 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
   fill: transparent;
 }
 
-.emotion-1 {
-  position: absolute;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  top: 0;
-  bottom: 0;
-  left: 8px;
-  margin: auto;
-  border: 1px solid #b9c0c7;
-  pointer-events: none;
-  border-radius: 2px;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-4 {
-  display: inline-block;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-}
-
-.emotion-4 svg {
-  display: block;
-}
-
-.emotion-4 .wd-icon-fill {
-  fill: #fff;
-}
-
-.emotion-4:hover .wd-icon-fill {
-  fill: #fff;
-}
-
-.emotion-4 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-4:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-4 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-4:hover .wd-icon-background {
-  fill: transparent;
-}
-
 <div
   className="emotion-5"
 >
@@ -711,20 +703,27 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
   />
   <div
     className="emotion-1"
-    role="button"
     style={
       Object {
         "backgroundColor": "",
       }
     }
   />
+  <span
+    className="emotion-2"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+  />
   <button
-    className="emotion-3"
+    className="emotion-4"
     disabled={true}
     onClick={[Function]}
   >
     <span
-      className="emotion-2"
+      className="emotion-3"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -732,13 +731,5 @@ exports[`CustomColorInput Snapshots renders with a selected color without # 1`] 
       }
     />
   </button>
-  <span
-    className="emotion-4"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
-  />
 </div>
 `;
