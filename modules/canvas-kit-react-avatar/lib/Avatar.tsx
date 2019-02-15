@@ -64,15 +64,15 @@ const Container = styled('button')<AvatarProps>(
     backgroundColor: url
       ? undefined
       : themeColor === AvatarTheme.Dark
-      ? colors.blueberry400
-      : colors.soap300,
+        ? colors.blueberry400
+        : colors.soap300,
     '&:not([disabled])': {
       '&:focus': {
         outline: 'none',
         ...(themeColor === AvatarTheme.Dark ? focusRing(2, 2) : focusRing(2)),
       },
     },
-    ...hideMouseFocus(),
+    ...hideMouseFocus,
   })
 );
 
