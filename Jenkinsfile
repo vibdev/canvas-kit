@@ -121,8 +121,8 @@ timestamps {
 
 				stage('Test') {
 					echo env.STAGE_NAME
-          echo "Changing NODE_ENV to 'test' for this stage"
-          env.NODE_ENV = "test"
+					echo "Changing NODE_ENV to 'test' for this stage"
+					env.NODE_ENV = "test"
 					dir(repoBaseDir) {
 						try {
 							// https://jestjs.io/docs/en/troubleshooting#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server
@@ -147,7 +147,7 @@ timestamps {
 							])
 						}
 					}
-          setEnv.node()
+					setEnv.node()
 				}
 
         //Following stages occur only on master
