@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.5"></a>
+## [0.2.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.2.4...@workday/canvas-kit-react-header@0.2.5) (2019-02-15)
+
+
+### Bug Fixes
+
+* **Header:** fixed window undefined bug ([82b0bd0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/82b0bd0))
+
+
+
+
 <a name="0.2.4"></a>
 ## [0.2.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.2.3...@workday/canvas-kit-react-header@0.2.4) (2019-02-14)
 
