@@ -199,6 +199,10 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
   }
 
   enableListeners(enable: boolean) {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
     // can only demonstrate potential, but not actual, interaction
     // and are treated separately
