@@ -150,7 +150,7 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
         currentIntent: storedIntent || this.state.currentIntent,
       });
     } catch (e) {
-      console.log('Failed to retrieve input status from session storage' + e);
+      console.warn('Failed to retrieve input status from session storage' + e);
     }
 
     // Check for passive event listener support
@@ -168,7 +168,7 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
       window.addEventListener('test', stub, opts);
       window.removeEventListener('test', stub, opts);
     } catch (e) {
-      console.log('Browser does not support passive event listeners');
+      console.warn('Browser does not support passive event listeners');
     }
 
     this.enableListeners(true);
@@ -179,7 +179,7 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
       window.sessionStorage.setItem('what-input', this.state.currentInput);
       window.sessionStorage.setItem('what-intent', this.state.currentIntent);
     } catch (e) {
-      console.log('Failed to set input status in session storage' + e);
+      console.warn('Failed to set input status in session storage' + e);
     }
   }
 
