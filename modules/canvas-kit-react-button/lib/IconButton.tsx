@@ -5,6 +5,7 @@ import {IconButtonTypes, ButtonSizes} from './types';
 import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {CSSObject} from 'create-emotion';
 
@@ -68,6 +69,9 @@ const IconButtonCon = styled('button')<IconButtonProps>(
             backgroundColor: colors.blueberry400,
             ...getFillSelector(colors.frenchVanilla100),
             ...getAccentSelector(colors.frenchVanilla100),
+          },
+          '&:not([disabled]):focus': {
+            ...(toggled ? focusRing(2, 2) : {}),
           },
           '&:hover': {
             backgroundColor: colors.blueberry500,
