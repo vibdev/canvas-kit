@@ -1,13 +1,17 @@
 import * as React from 'react';
 
+export interface InputProviderProps {
+  provideIntent?: boolean;
+}
+
 export interface InputProviderState {
   currentInput: InputType | 'initial';
   currentIntent: InputType | 'initial';
   supportsPassive: boolean;
   isBuffering: boolean;
-  isScrolling: boolean;
-  mousePosX: number | null;
-  mousePosY: number | null;
+  isScrolling: boolean; // Unused if props.provideIntent is not defined
+  mousePosX: number | null; // Unused if props.provideIntent is not defined
+  mousePosY: number | null; // Unused if props.provideIntent is not defined
 }
 
 export enum InputType {
@@ -117,7 +121,7 @@ const detectWheel = () => {
 /**
  * This component takes heavy inspiration from what-input (https://github.com/ten1seven/what-input)
  */
-export default class InputProvider extends React.Component<{}, InputProviderState> {
+export default class InputProvider extends React.Component<InputProviderProps, InputProviderState> {
   private eventTimer: number | undefined;
 
   constructor(props: any) {
@@ -213,14 +217,11 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
     // pointer events (mouse, pen, touch)
     if (window.PointerEvent) {
       fn('pointerdown', this.setInput);
-      fn('pointermove', this.setIntent);
     } else if (window.MSPointerEvent) {
       fn('MSPointerDown', this.setInput);
-      fn('MSPointerMove', this.setIntent);
     } else {
       // mouse events
       fn('mousedown', this.setInput);
-      fn('mousemove', this.setIntent);
 
       // touch events
       if ('ontouchstart' in window) {
@@ -229,8 +230,18 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
       }
     }
 
-    // mouse wheel
-    fn(detectWheel(), this.setIntent, options);
+    if (this.props.provideIntent) {
+      if (window.PointerEvent) {
+        fn('pointermove', this.setIntent);
+      } else if (window.MSPointerEvent) {
+        fn('MSPointerMove', this.setIntent);
+      } else {
+        fn('mousemove', this.setIntent);
+      }
+
+      // mouse wheel
+      fn(detectWheel(), this.setIntent, options);
+    }
 
     // keyboard events
     fn('keydown', this.eventBuffer);
@@ -261,7 +272,7 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
       this.setState({currentInput: value});
     }
 
-    if (this.state.currentIntent !== value && shouldUpdate) {
+    if (this.state.currentIntent !== value && shouldUpdate && this.props.provideIntent) {
       // preserve intent for keyboard typing in form fields
       const activeElem = document.activeElement;
       const notFormInput =
@@ -322,8 +333,9 @@ export default class InputProvider extends React.Component<{}, InputProviderStat
   }
 
   render() {
+    const intent = this.props.provideIntent ? this.state.currentIntent : null;
     return (
-      <div data-whatinput={this.state.currentInput} data-whatintent={this.state.currentIntent}>
+      <div data-whatinput={this.state.currentInput} data-whatintent={intent}>
         {this.props.children}
       </div>
     );

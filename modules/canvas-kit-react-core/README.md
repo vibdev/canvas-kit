@@ -339,4 +339,14 @@ cases you would like (i.e. mouse/touch/pointer input).
 
 ## Component Props
 
+### Required
+
 > None
+
+### Optional
+
+#### `provideIntent: boolean`
+
+> Whether you would like the attribute `data-whatintent` rendered (see definition of intent above).
+> Note: detecting intent will add scroll and mouse positioning listeners which could affect
+> performance.

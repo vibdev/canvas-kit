@@ -23,7 +23,7 @@ const testInput = (
     }
   }
 
-  const component = mount(<InputProvider />);
+  const component = mount(<InputProvider provideIntent={true} />);
   const eventType = mockEvent.type!;
 
   // Reset window environment
