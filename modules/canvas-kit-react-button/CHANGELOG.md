@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.17.3"></a>
+## [0.17.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.17.2...@workday/canvas-kit-react-button@0.17.3) (2019-02-15)
+
+
+### Bug Fixes
+
+* **icon-button:** Use correct focus styling for toggled icon buttons ([62a7eee](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/62a7eee))
+
+
+
+
 <a name="0.17.2"></a>
 ## [0.17.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.17.1...@workday/canvas-kit-react-button@0.17.2) (2019-02-14)
 
