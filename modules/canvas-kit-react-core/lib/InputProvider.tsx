@@ -5,8 +5,8 @@ export interface InputProviderProps {
 }
 
 export interface InputProviderState {
-  currentInput: InputType | 'initial';
-  currentIntent: InputType | 'initial';
+  currentInput: InputType;
+  currentIntent: InputType;
   supportsPassive: boolean;
   isBuffering: boolean;
   isScrolling: boolean; // Unused if props.provideIntent is not defined
@@ -15,6 +15,7 @@ export interface InputProviderState {
 }
 
 export enum InputType {
+  Initial = 'initial',
   Keyboard = 'keyboard',
   Mouse = 'mouse',
   Pointer = 'pointer',
@@ -127,41 +128,22 @@ export default class InputProvider extends React.Component<InputProviderProps, I
   constructor(props: any) {
     super(props);
 
-    this.state = {
-      currentInput: 'initial',
-      currentIntent: 'initial',
-      supportsPassive: false,
-      isBuffering: false,
-      isScrolling: false,
-      mousePosX: null,
-      mousePosY: null,
-    };
-
-    this.setInput = this.setInput.bind(this);
-    this.setIntent = this.setIntent.bind(this);
-    this.eventBuffer = this.eventBuffer.bind(this);
-  }
-
-  componentWillMount() {
     // check for sessionStorage support
     // then check for session variables and use if available
+    let storedInput, storedIntent;
     try {
-      const storedInput = window.sessionStorage.getItem('what-input') as InputType | 'initial';
-      const storedIntent = window.sessionStorage.getItem('what-intent') as InputType | 'initial';
-
-      this.setState({
-        currentInput: storedInput || this.state.currentInput,
-        currentIntent: storedIntent || this.state.currentIntent,
-      });
+      storedInput = window.sessionStorage.getItem('what-input') as InputType;
+      storedIntent = window.sessionStorage.getItem('what-intent') as InputType;
     } catch (e) {
       console.warn('Failed to retrieve input status from session storage' + e);
     }
 
     // Check for passive event listener support
+    let supportsPassive;
     try {
       const opts = Object.defineProperty({}, 'passive', {
         get: () => {
-          this.setState({supportsPassive: true});
+          supportsPassive = true;
         },
       });
 
@@ -175,6 +157,22 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       console.warn('Browser does not support passive event listeners');
     }
 
+    this.state = {
+      currentInput: storedInput || InputType.Initial,
+      currentIntent: storedIntent || InputType.Initial,
+      supportsPassive: supportsPassive || false,
+      isBuffering: false,
+      isScrolling: false,
+      mousePosX: null,
+      mousePosY: null,
+    };
+
+    this.setInput = this.setInput.bind(this);
+    this.setIntent = this.setIntent.bind(this);
+    this.eventBuffer = this.eventBuffer.bind(this);
+  }
+
+  componentDidMount() {
     this.enableListeners(true);
   }
 
