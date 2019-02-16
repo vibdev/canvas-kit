@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.5.0...@workday/canvas-kit-react-core@1.6.0) (2019-02-16)
+
+
+### Bug Fixes
+
+* **core:** Add missing InputProvider export caused by commit revert ([8ec1caa](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/8ec1caa))
+* **focus-handling:** Address review commments ([8e241f2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/8e241f2))
+* **focus-handling:** Handle contexts with window undefined ([681818a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/681818a))
+* **focus-handling:** Save mounting intent bool to ensure we remove listeners ([2564f7a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/2564f7a))
+* **input-provider:** Remove unused enum and singularize input type enum ([bc9bfad](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/bc9bfad))
+
+
+### Features
+
+* **core:** Add InputProvider higher order component based off what-input ([9d5145d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/9d5145d))
+* **focus-handling:** Add helper to hide focus outlines on mouse input ([db19ee2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/db19ee2))
+* **focus-handling:** Make intent tracking opt-in ([6b0c5a5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/6b0c5a5))
+* **focus-handling:** Only re-render when necessary ([c503b35](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c503b35))
+* **focus-handling:** WIP ([c527110](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c527110))
+* **input-provider:** Add a storybook decorator addon for InputProvider ([c9ca3fd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c9ca3fd))
+
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.4.0...@workday/canvas-kit-react-core@1.5.0) (2019-02-07)
 

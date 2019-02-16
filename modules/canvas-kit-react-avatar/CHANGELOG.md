@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.2.13...@workday/canvas-kit-react-avatar@0.3.0) (2019-02-16)
+
+
+### Features
+
+* **focus-handling:** Implement on avatar as a test ([7ddf508](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/7ddf508))
+* **focus-handling:** WIP ([c527110](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/c527110))
+
+
+
+
 <a name="0.2.13"></a>
 ## [0.2.13](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.2.12...@workday/canvas-kit-react-avatar@0.2.13) (2019-02-14)
 

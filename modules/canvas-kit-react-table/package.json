@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-table",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Canvas data grids",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
@@ -34,7 +34,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "1.5.0",
+    "@workday/canvas-kit-react-core": "1.6.0",
     "emotion": "^9.2.12",
     "polished": "^2.3.0",
     "react-emotion": "^9.2.12"

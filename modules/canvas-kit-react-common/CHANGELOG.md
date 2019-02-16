@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.1.2...@workday/canvas-kit-react-common@0.2.0) (2019-02-16)
+
+
+### Features
+
+* **focus-handling:** Add helper to hide focus outlines on mouse input ([db19ee2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/db19ee2))
+* **input-provider:** Add a storybook decorator addon for InputProvider ([c9ca3fd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/c9ca3fd))
+
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.1.1...@workday/canvas-kit-react-common@0.1.2) (2019-02-07)
 
