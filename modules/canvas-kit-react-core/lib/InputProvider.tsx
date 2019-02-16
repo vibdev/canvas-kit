@@ -172,6 +172,9 @@ export default class InputProvider extends React.Component<InputProviderProps, I
     this.eventBuffer = this.eventBuffer.bind(this);
   }
 
+  // Need to remember how it component was mounted so we ensure listener removal
+  provideIntent = this.props.provideIntent;
+
   componentDidMount() {
     this.enableListeners(true);
   }
@@ -228,7 +231,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       }
     }
 
-    if (this.props.provideIntent) {
+    if (this.provideIntent) {
       if (window.PointerEvent) {
         fn('pointermove', this.setIntent);
       } else if (window.MSPointerEvent) {
@@ -270,7 +273,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       this.setState({currentInput: value});
     }
 
-    if (this.state.currentIntent !== value && shouldUpdate && this.props.provideIntent) {
+    if (this.state.currentIntent !== value && shouldUpdate && this.provideIntent) {
       // preserve intent for keyboard typing in form fields
       const activeElem = document.activeElement;
       const notFormInput =
@@ -331,7 +334,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
   }
 
   render() {
-    const intent = this.props.provideIntent ? this.state.currentIntent : null;
+    const intent = this.provideIntent ? this.state.currentIntent : null;
     return (
       <div data-whatinput={this.state.currentInput} data-whatintent={intent}>
         {this.props.children}
