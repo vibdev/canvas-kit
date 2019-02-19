@@ -51,6 +51,7 @@ declare global {
     MSPointerEvent(): void;
   }
   interface Document {
+    // @ts-ignore: typescript 2.x users gets a duplicate identifier error since their lib definition files already contain onmousewheel
     onmousewheel(): void;
   }
 }
