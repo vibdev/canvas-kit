@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-fat",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Canvas floating action toolbar component",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
@@ -34,11 +34,11 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "1.6.0",
+    "@workday/canvas-kit-react-core": "1.6.1",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {
-    "@workday/canvas-kit-react-button": "0.17.4"
+    "@workday/canvas-kit-react-button": "0.17.5"
   }
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.8"></a>
+## [0.2.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.2.7...@workday/canvas-kit-react-card@0.2.8) (2019-02-19)
+
+
+
+
+**Note:** Version bump only for package @workday/canvas-kit-react-card
+
 <a name="0.2.7"></a>
 ## [0.2.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.2.6...@workday/canvas-kit-react-card@0.2.7) (2019-02-16)
 
