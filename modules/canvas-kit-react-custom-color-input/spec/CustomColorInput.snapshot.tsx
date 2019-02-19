@@ -5,19 +5,19 @@ import * as renderer from 'react-test-renderer';
 describe('CustomColorInput Snapshots', () => {
   test('renders as expected', () => {
     const component = renderer.create(
-      <CustomColorInput selectedHexColor={''} onSubmit={jest.fn()} />
+      <CustomColorInput selectedHexColor={''} onClick={jest.fn()} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders with a selected color', () => {
     const component = renderer.create(
-      <CustomColorInput selectedHexColor={'#e6e'} onSubmit={jest.fn()} />
+      <CustomColorInput selectedHexColor={'#e6e'} onClick={jest.fn()} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders with a selected color without #', () => {
     const component = renderer.create(
-      <CustomColorInput selectedHexColor={'DD5'} onSubmit={jest.fn()} />
+      <CustomColorInput selectedHexColor={'DD5'} onClick={jest.fn()} />
     );
     expect(component).toMatchSnapshot();
   });

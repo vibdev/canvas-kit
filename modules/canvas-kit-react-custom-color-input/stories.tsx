@@ -22,7 +22,7 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
   public render() {
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <CustomColorInput selectedHexColor={this.state.color} onSubmit={this.onSubmit} />
+        <CustomColorInput selectedHexColor={this.state.color} onClick={this.onSubmit} />
         <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
     );

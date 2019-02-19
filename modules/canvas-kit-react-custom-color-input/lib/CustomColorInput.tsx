@@ -13,12 +13,12 @@ export interface CustomColorInputState {
 }
 
 export interface CustomColorInputProps {
-  onSubmit: (color: string) => void;
+  onClick: (color: string) => void;
   selectedHexColor: string;
 }
 
 const swatchTileSpacing = 8;
-const swatchTitleSize = 20;
+const swatchTileSize = 20;
 
 const CustomHexInput = styled('input')({
   margin: 0,
@@ -48,13 +48,13 @@ const CustomColorInputContainer = styled('div')({
 const SwatchTile = styled('div')({
   position: 'absolute',
   cursor: 'pointer',
-  height: swatchTitleSize,
-  width: swatchTitleSize,
+  height: swatchTileSize,
+  width: swatchTileSize,
   top: 0,
   bottom: 0,
   left: swatchTileSpacing,
   margin: 'auto',
-  border: `1px solid ${colors.soap600}`,
+  boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.25)',
   pointerEvents: 'none',
   borderRadius: '2px',
 });
@@ -65,7 +65,7 @@ const selectedCustomHex = css({
 
 const swatchCheckIcon = css({
   position: 'absolute',
-  left: swatchTileSpacing,
+  left: 6,
   top: swatchTileSpacing,
 });
 
@@ -80,6 +80,7 @@ export default class CustomColorInput extends React.Component<
       typedInHexValue: '',
       isInputFocused: false,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   public render() {
     const {selectedHexColor} = this.props;
@@ -145,6 +146,6 @@ export default class CustomColorInput extends React.Component<
     this.setState({
       isInputFocused: true,
     });
-    this.props.onSubmit(this.state.typedInHexValue);
+    this.props.onClick(this.state.typedInHexValue);
   };
 }
