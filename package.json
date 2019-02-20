@@ -23,7 +23,7 @@
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-options": "^4.0.0",
     "@types/storybook__react": "^4.0.0",
-    "@workday/canvas-kit-build": "^3.6.1",
+    "@workday/canvas-kit-build": "^3.6.3",
     "babel-core": "^6.26.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
