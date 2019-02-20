@@ -2052,7 +2052,7 @@
     rollup-plugin-uglify "^3.0.0"
     shelljs "^0.7.8"
 
-"@workday/canvas-kit-react-toggle@0.0.1":
+"@workday/canvas-kit-react-toggle@^0.0.1":
   version "0.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-kit-react-toggle/-/@workday/canvas-kit-react-toggle-0.0.1.tgz#5272d256cb9f6e172a7792cfd92a80c781030988"
   integrity sha1-UnLSVsufbhcqd5LP2SqAx4EDCYg=
