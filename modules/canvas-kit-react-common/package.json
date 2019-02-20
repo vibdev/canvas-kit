@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-common",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A module of common utilities shared across canvas components",
   "homepage": "https://workdaydesign.com",
   "author": "Phuoc Huynh <phuoc.huynh@workday.com>",
