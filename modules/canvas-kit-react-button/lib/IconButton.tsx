@@ -161,7 +161,7 @@ export default class IconButton extends React.Component<IconButtonProps> {
 
   static defaultProps = {
     buttonType: IconButtonTypes.Square,
-    toggled: false,
+    toggled: undefined,
   };
 
   componentDidUpdate(prevProps: IconButtonProps) {

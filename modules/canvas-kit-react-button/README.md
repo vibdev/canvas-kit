@@ -140,17 +140,17 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 
 ## Component Props
 
-> Same as [`Button`](#canvas-kit-button)
+> Same as [`Button`](#canvas-kit-button) Undocumented props are spread to the `button` element.
 
 ---
 
-#### `toggled: boolean`
+#### `toggled: boolean | undefined`
 
-> Whether or not the toggle is on (`true`) or off (`false`). This is a
-> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component.
-> Undocumented props are spread to the `button` element.
+> If defined as a boolean, then it manages the button state: on (`true`) or off (`false`). This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component. If
+> left `undefined` then the button is not considered toggle-able and will act as a normal button.
 
-Default: `false`
+Default: `undefined`
 
 ---
 
