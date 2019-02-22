@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.5"></a>
+## [0.1.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.1.4...@workday/canvas-kit-react-fonts@0.1.5) (2019-02-22)
+
+
+### Bug Fixes
+
+* **build:** Create dist dir to avoid tsc race condition ([d992b0b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/commits/d992b0b))
+
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.1.3...@workday/canvas-kit-react-fonts@0.1.4) (2019-02-22)
 

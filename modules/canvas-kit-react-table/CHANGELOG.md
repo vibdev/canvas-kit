@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.11"></a>
+## [1.0.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/compare/@workday/canvas-kit-react-table@1.0.10...@workday/canvas-kit-react-table@1.0.11) (2019-02-22)
+
+
+### Bug Fixes
+
+* **build:** Create dist dir to avoid tsc race condition ([d992b0b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/commits/d992b0b))
+
+
+
+
 <a name="1.0.10"></a>
 ## [1.0.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-table/compare/@workday/canvas-kit-react-table@1.0.9...@workday/canvas-kit-react-table@1.0.10) (2019-02-22)
 

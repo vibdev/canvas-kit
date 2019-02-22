@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.4"></a>
+## [0.3.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.3.3...@workday/canvas-kit-react-avatar@0.3.4) (2019-02-22)
+
+
+### Bug Fixes
+
+* **build:** Create dist dir to avoid tsc race condition ([d992b0b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/d992b0b))
+
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.3.2...@workday/canvas-kit-react-avatar@0.3.3) (2019-02-22)
 

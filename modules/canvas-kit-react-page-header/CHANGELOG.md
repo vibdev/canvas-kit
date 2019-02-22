@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.17"></a>
+## [0.1.17](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header/compare/@workday/canvas-kit-react-page-header@0.1.16...@workday/canvas-kit-react-page-header@0.1.17) (2019-02-22)
+
+
+### Bug Fixes
+
+* **build:** Create dist dir to avoid tsc race condition ([d992b0b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header/commits/d992b0b))
+
+
+
+
 <a name="0.1.16"></a>
 ## [0.1.16](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-page-header/compare/@workday/canvas-kit-react-page-header@0.1.15...@workday/canvas-kit-react-page-header@0.1.16) (2019-02-22)
 
