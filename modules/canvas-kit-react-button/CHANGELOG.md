@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.18.0"></a>
+# [0.18.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.17.8...@workday/canvas-kit-react-button@0.18.0) (2019-02-22)
+
+
+### Bug Fixes
+
+* **button:** allow onToggleChange handler to also output undefined ([775d926](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/775d926))
+* **button:** allow whether or not a button is defined as a toggle ([62ee5b2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/62ee5b2))
+
+
+### Features
+
+* **button:** add toggle change handler for icon button ([f6c9257](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/f6c9257))
+
+
+
+
 <a name="0.17.8"></a>
 ## [0.17.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.17.7...@workday/canvas-kit-react-button@0.17.8) (2019-02-22)
 
