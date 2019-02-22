@@ -8,7 +8,7 @@ Includes:
 - [Spacing](#spacing)
 - [Depth](#depth)
 - [Type](#type)
-- [InputProvider](#input-provider)
+- [Input Provider](#input-provider)
 
 ## Installation
 
@@ -239,7 +239,7 @@ import {type} from '@workday/canvas-kit-react-core';
 <span className={css(canvas.type.body, canvas.type.variant.inverse)}>Inverse Text</span>
 ```
 
-# InputProvider
+# Input Provider
 
 This is a higher order (wrapping) component for providing css-referencable data attributes for the
 users current input. Focus outlines are required for accesibility, but they can be unnecessary
@@ -350,3 +350,19 @@ cases you would like (i.e. mouse/touch/pointer input).
 > Whether you would like the attribute `data-whatintent` rendered (see definition of intent above).
 > Note: detecting intent will add scroll and mouse positioning listeners which could affect
 > performance.
+
+## Storybook Decorator
+
+We provide a
+[storybook decorator](../canvas-kit-react-common/lib/storybook/InputProviderDecorator.tsx) to wrap
+your stories in an `InputProvider` automatically.
+
+Example:
+
+```js
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
+
+storiesOf('My Story', module)
+  .addDecorator(InputProviderDecorator)
+  .add('All', () => <YourJSX />);
+```
