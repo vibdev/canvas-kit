@@ -61,7 +61,10 @@ cat > $packageJson << EOF
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "canvas-kit-build build-ts --commonjs"
+    "clean": "rimraf dist",
+    "build:cjs": "tsc --outDir dist/commonjs --module commonjs --declaration",
+    "build:es6": "tsc --outDir dist/es6 --declaration",
+    "build": "npm-run-all clean --parallel build:cjs build:es6"
   },
   "keywords": [
     "canvas",
