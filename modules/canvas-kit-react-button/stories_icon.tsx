@@ -38,6 +38,7 @@ export class ToggleIconButtonWrapper extends React.Component<
         toggled={this.state.isToggled}
         buttonType={this.props.buttonType}
         onClick={this.handleToggle}
+        onToggleChange={toggled => console.log(toggled)}
         icon={activityStreamIcon}
       />
     );

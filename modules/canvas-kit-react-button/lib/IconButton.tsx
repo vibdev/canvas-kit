@@ -13,11 +13,15 @@ export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes
   /**
    * Whether the icon button is toggled on or off
    */
-  toggled?: boolean;
+  toggled: boolean;
   /**
    * Size of icon button
    */
   buttonSize?: ButtonSizes.Small | ButtonSizes.Medium;
+  /**
+   * Callback that fires when a button changes toggled states
+   */
+  onToggleChange?: (toggled: boolean | undefined) => void;
 }
 
 const IconButtonCon = styled('button')<IconButtonProps>(
@@ -157,12 +161,24 @@ export default class IconButton extends React.Component<IconButtonProps> {
 
   static defaultProps = {
     buttonType: IconButtonTypes.Square,
+    toggled: undefined,
   };
 
+  componentDidUpdate(prevProps: IconButtonProps) {
+    if (
+      prevProps.toggled !== this.props.toggled &&
+      typeof this.props.onToggleChange === 'function'
+    ) {
+      this.props.onToggleChange(this.props.toggled);
+    }
+  }
+
   public render() {
+    // onToggleChange will generate a warning if spread over a <button>
+    const {onToggleChange, ...iconButtonConProps} = this.props;
     return (
       // TODO (breaking change): need to remove buttonType and buttonSize prop here, doesn't make sense to expose
-      <IconButtonCon {...this.props} aria-pressed={this.props.toggled}>
+      <IconButtonCon {...iconButtonConProps} aria-pressed={this.props.toggled}>
         {this.props.icon ? <SystemIcon icon={this.props.icon} /> : this.props.children}
       </IconButtonCon>
     );

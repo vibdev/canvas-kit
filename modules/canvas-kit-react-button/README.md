@@ -140,17 +140,18 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 
 ## Component Props
 
-> Same as [`Button`](#canvas-kit-button)
+> Same as [`Button`](#canvas-kit-button) Undocumented props are spread to the `button` element.
 
 ---
 
-#### `toggled: boolean`
+#### `toggled: boolean | undefined`
 
-> Whether or not the toggle is on (`true`) or off (`false`). This is a
-> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component.
-> Undocumented props are spread to the `button` element.
+> If defined as a boolean, then it manages the button state: on (`true`) or off (`false`). This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component. If
+> left `undefined` then the button is not considered toggle-able (`aria-pressed` is `undefined`) and
+> will act as a normal button.
 
-Default: `false`
+Default: `undefined`
 
 ---
 
@@ -181,3 +182,10 @@ Default: `IconButtonTypes.Square`
 | `Medium`                    | 40px Diameter, 24px Icon Size | True       |
 | `Small` (Square Icon Type)  | 32px x 32px, 24px Icon Size   | True       |
 | `Medium` (Square Icon Type) | 40px x 40px, 24px Icon Size   | False      |
+
+#### `onToggleChange: (toggled: boolean | undefined) => void`
+
+> The callback that is fired when a button toggle prop changes This is true when the toggle changes
+> from `true` to `false` but also if you disable the toggle-ability of a button (in other words, if
+> `toggle` changes from a `boolean` to `undefined`). This is important because the `aria-pressed`
+> attribute for accessibility is goverened by whether or not the `toggle` prop is defined.
