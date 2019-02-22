@@ -43,6 +43,21 @@ describe('Icon Button', () => {
     expect(cb.mock.calls.length).toBe(0);
     component.unmount();
   });
+
+  test('should call onToggleChange when toggle prop changes', () => {
+    const wrapper = mount(
+      <IconButton toggled={false} onToggleChange={cb}>
+        <SystemIcon icon={activityStreamIcon} />
+      </IconButton>
+    );
+
+    wrapper.setProps({toggled: true});
+    wrapper.update();
+    wrapper.setProps({toggled: true});
+    wrapper.update();
+
+    expect(cb.mock.calls.length).toBe(1);
+  });
 });
 
 describe('Icon Button Accessibility', () => {
