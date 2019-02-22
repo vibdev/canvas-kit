@@ -55,8 +55,10 @@ describe('Icon Button', () => {
     wrapper.update();
     wrapper.setProps({toggled: true});
     wrapper.update();
+    wrapper.setProps({toggled: undefined});
+    wrapper.update();
 
-    expect(cb.mock.calls.length).toBe(1);
+    expect(cb.mock.calls.length).toBe(2);
   });
 });
 

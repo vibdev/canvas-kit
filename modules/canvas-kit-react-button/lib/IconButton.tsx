@@ -21,7 +21,7 @@ export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes
   /**
    * Callback that fires when a button changes toggled states
    */
-  onToggleChange?: (toggled: boolean) => void;
+  onToggleChange?: (toggled: boolean | undefined) => void;
 }
 
 const IconButtonCon = styled('button')<IconButtonProps>(
