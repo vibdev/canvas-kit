@@ -2011,12 +2011,12 @@
 
 "@workday/canvas-colors-web@^0.17.4":
   version "0.17.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.4.tgz#7496ebde977a65e5d35ef41762ba636b03b15012"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.4.tgz#7496ebde977a65e5d35ef41762ba636b03b15012"
   integrity sha1-dJbr3pd6ZeXTXvQXYrpjawOxUBI=
 
 "@workday/canvas-depth-web@^0.16.2":
   version "0.16.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.2.tgz#9c245b91f8492bfc45e3b6176a12605ef6143788"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.2.tgz#9c245b91f8492bfc45e3b6176a12605ef6143788"
   integrity sha1-nCRbkfhJK/xF47YXahJgXvYUN4g=
 
 "@workday/canvas-graphics-web@^0.16.31":
@@ -2059,7 +2059,7 @@
 
 "@workday/canvas-space-web@^0.15.4":
   version "0.15.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.4.tgz#6086b1f903c28dd751f7fcc508011dc1bb46d275"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.4.tgz#6086b1f903c28dd751f7fcc508011dc1bb46d275"
   integrity sha1-YIax+QPCjddR9/zFCAEdwbtG0nU=
 
 "@workday/canvas-system-icons-web@^0.16.25":
