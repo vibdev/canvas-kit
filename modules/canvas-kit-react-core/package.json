@@ -37,9 +37,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-colors-web": "^0.17.1",
-    "@workday/canvas-depth-web": "^0.16.0",
-    "@workday/canvas-space-web": "^0.15.2",
+    "@workday/canvas-colors-web": "^0.17.4",
+    "@workday/canvas-depth-web": "^0.16.2",
+    "@workday/canvas-space-web": "^0.15.4",
     "emotion": "^9.2.6"
   }
 }
