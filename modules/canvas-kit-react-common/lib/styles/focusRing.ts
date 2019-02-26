@@ -3,6 +3,15 @@ import {CSSObject} from 'create-emotion';
 import canvas from '@workday/canvas-kit-react-core';
 import memoize from 'lodash/memoize';
 
+type FocusRingParams = {
+  ringWidth: number;
+  separationWidth: number;
+  animate: boolean;
+  inset: boolean;
+  innerShadowColor: string;
+  outerShadowColor: string;
+};
+
 function calculateFocusRing({
   ringWidth,
   separationWidth,
@@ -10,14 +19,7 @@ function calculateFocusRing({
   inset,
   innerShadowColor,
   outerShadowColor,
-}: {
-  ringWidth: number;
-  separationWidth: number;
-  animate: boolean;
-  inset: boolean;
-  innerShadowColor: string;
-  outerShadowColor: string;
-}): CSSObject {
+}: FocusRingParams): CSSObject {
   const endingInnerShadow =
     (inset ? 'inset ' : '') + '0 0 0 ' + separationWidth + 'px ' + innerShadowColor;
   const endingOuterShadow =
@@ -64,7 +66,7 @@ export default function focusRing(
   outerShadowColor: string = canvas.commonColors.focusOutline,
   memoizeCalculation: boolean = true
 ): CSSObject {
-  const argsToPass = {
+  const argsToPass: FocusRingParams = {
     ringWidth,
     separationWidth,
     animate,
