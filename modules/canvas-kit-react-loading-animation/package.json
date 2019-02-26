@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-loading-animation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A component that renders a loading animation.",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Kong <alex.kong@workday.com>",
@@ -37,7 +37,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "^1.7.0",
+    "@workday/canvas-kit-react-core": "^1.7.1",
     "emotion": "^9.2.6",
     "react-emotion": "^9.2.6"
   }
