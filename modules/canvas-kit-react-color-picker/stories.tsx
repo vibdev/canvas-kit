@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import CustomColorInput from './index'; // tslint:disable-line:import-name
+import ColorInput from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 interface CustomColorInputWrapperState {
@@ -22,7 +22,11 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
   public render() {
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <CustomColorInput selectedHexColor={this.state.color} onClick={this.onSubmit} />
+        <ColorInput
+          showSwatchTileCheckIcon={true}
+          selectedHexColor={this.state.color}
+          onClick={this.onSubmit}
+        />
         <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
     );

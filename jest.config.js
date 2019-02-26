@@ -9,7 +9,7 @@ module.exports = {
     '**/canvas-kit-react-card/**/*.{tsx}',
     // '**/canvas-kit-react-common/**/*.{tsx}',
     '**/canvas-kit-react-cookie-banner/**/*.{tsx}',
-    '**/canvas-kit-react-color-input/**/*.{tsx}',
+    '**/canvas-kit-react-color-picker/**/*.{tsx}',
     '**/canvas-kit-react-fat/**/*.{tsx}',
     // '**/canvas-kit-react-fonts/**/*.{tsx}',
     '**/canvas-kit-react-icon/**/*.{tsx}',

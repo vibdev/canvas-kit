@@ -1,28 +1,31 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {colors} from '@workday/canvas-kit-react-core';
+import {colors, spacing} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
-import {checkIcon} from '@workday/canvas-system-icons-web';
+import {checkIcon, checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {pickDarkOrLightColor} from './ColorUtils';
 
-export interface CustomColorInputState {
-  typedInHexValue: string;
+export interface ColorInputState {
   isInputFocused: boolean;
+  typedInHexValue: string;
 }
 
-export interface CustomColorInputProps {
+export interface ColorInputProps {
   onClick: (color: string) => void;
   selectedHexColor: string;
+  showSwatchTileCheckIcon?: boolean;
+  value?: string;
 }
 
-const swatchTileSpacing = 8;
+const swatchTileSpacing = spacing.xxs;
 const swatchTileSize = 20;
 
 const CustomHexInput = styled('input')({
-  margin: 0,
-  height: 40,
+  margin: spacing.zero,
+  height: spacing.xl,
   WebkitAppearance: 'none',
   MozAppearance: 'none',
   borderColor: 'transparent',
@@ -31,7 +34,7 @@ const CustomHexInput = styled('input')({
   boxSizing: 'border-box',
   textAlign: 'left',
   paddingLeft: '36px',
-  marginRight: 8,
+  marginRight: spacing.xxs,
   '&:focus, &:active': {
     borderColor: 'transparent',
     outline: 'none',
@@ -39,7 +42,7 @@ const CustomHexInput = styled('input')({
   },
 });
 
-const CustomColorInputContainer = styled('div')({
+const ColorInputContainer = styled('div')({
   display: 'flex',
   boxSizing: 'border-box',
   position: 'relative',
@@ -50,8 +53,8 @@ const SwatchTile = styled('div')({
   cursor: 'pointer',
   height: swatchTileSize,
   width: swatchTileSize,
-  top: 0,
-  bottom: 0,
+  top: spacing.zero,
+  bottom: spacing.zero,
   left: swatchTileSpacing,
   margin: 'auto',
   boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.25)',
@@ -59,54 +62,41 @@ const SwatchTile = styled('div')({
   borderRadius: '2px',
 });
 
-const selectedCustomHex = css({
-  ...focusRing(2, 2),
-});
-
 const swatchCheckIcon = css({
   position: 'absolute',
-  left: 6,
-  top: swatchTileSpacing,
+  left: 5,
+  top: 9,
 });
 
-export default class CustomColorInput extends React.Component<
-  CustomColorInputProps,
-  CustomColorInputState
-> {
-  private inputRef: React.RefObject<HTMLInputElement> = React.createRef();
-  public constructor(props: CustomColorInputProps) {
+export default class ColorInput extends React.Component<ColorInputProps, ColorInputState> {
+  public constructor(props: ColorInputProps) {
     super(props);
     this.state = {
-      typedInHexValue: '',
+      typedInHexValue: this.props.selectedHexColor,
       isInputFocused: false,
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   public render() {
-    const {selectedHexColor} = this.props;
+    const {selectedHexColor, showSwatchTileCheckIcon} = this.props;
     const {typedInHexValue, isInputFocused} = this.state;
     return (
-      <CustomColorInputContainer>
+      <ColorInputContainer>
         <CustomHexInput
           onKeyPress={this.onKeyPress}
           placeholder="eg. #FFFFFF"
-          innerRef={this.inputRef}
-          onChange={this.onCustomHexChange}
+          onChange={this.onChange}
           type="text"
           defaultValue={typedInHexValue}
         />
-        <SwatchTile
-          style={{backgroundColor: `${typedInHexValue || ''}`}}
-          className={
-            selectedHexColor && isInputFocused
-              ? css`
-                  ${selectedCustomHex};
-                `
-              : ''
-          }
-        />
-        {selectedHexColor ? (
-          <SystemIcon fill="#fff" fillHover="#fff" className={swatchCheckIcon} icon={checkIcon} />
+        <SwatchTile style={{backgroundColor: `${typedInHexValue || ''}`}} />
+        {selectedHexColor && isInputFocused && showSwatchTileCheckIcon ? (
+          <SystemIcon
+            fill={pickDarkOrLightColor(selectedHexColor)}
+            fillHover={pickDarkOrLightColor(selectedHexColor)}
+            className={swatchCheckIcon}
+            icon={checkSmallIcon}
+          />
         ) : null}
         <IconButton
           disabled={!this.isValidHexValue(typedInHexValue)}
@@ -114,7 +104,7 @@ export default class CustomColorInput extends React.Component<
           buttonType={IconButton.Types.Filled}
           icon={checkIcon}
         />
-      </CustomColorInputContainer>
+      </ColorInputContainer>
     );
   }
 
@@ -125,7 +115,7 @@ export default class CustomColorInput extends React.Component<
     }
   };
 
-  private onCustomHexChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+  private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const isValidHex: boolean = this.isValidHexValue(evt.target.value);
     const newColorHexValue: string = isValidHex ? this.addPoundSign(evt.target.value) : '';
     this.setState({

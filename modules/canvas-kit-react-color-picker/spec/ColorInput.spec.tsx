@@ -1,15 +1,15 @@
 import * as React from 'react';
-import CustomColorInput from '../lib/CustomColorInput';
+import ColorInput from '../lib/ColorInput';
 import {mount} from 'enzyme';
 
-describe('CustomColorInput', () => {
+describe('ColorInput', () => {
   const cb = jest.fn();
   afterEach(() => {
     cb.mockReset();
   });
 
   test('should call onClick when clicking the button', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: '#DD5'});
     const button = component.find('button');
     button.simulate('click');
@@ -18,7 +18,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should call onClick on Enter', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: '#DD5'});
     const input = component.find('input');
     input.simulate('keypress', {key: 'Enter'});
@@ -26,7 +26,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should not call onClick on Enter if hex value is invalid', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: '#DD500076'});
     const input = component.find('input');
     input.simulate('keypress', {key: 'Enter'});
@@ -34,7 +34,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should not call onClick if invalid hex value', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: '#DD567890'});
     const button = component.find('button');
     button.simulate('click');
@@ -43,7 +43,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should add # to a hex value', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: 'DD5'});
     const button = component.find('button');
     button.simulate('click');
@@ -52,7 +52,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should still submit a hex code that has #', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     component.setState({typedInHexValue: '#DD5'});
     const button = component.find('button');
     button.simulate('click');
@@ -61,7 +61,7 @@ describe('CustomColorInput', () => {
   });
 
   test('should update typedInHexValue  onChange', () => {
-    const component = mount(<CustomColorInput selectedHexColor="#DD5" onClick={cb} />);
+    const component = mount(<ColorInput selectedHexColor="#DD5" onClick={cb} />);
     const input = component.find('input');
     input.simulate('change', {target: {value: 'DD5'}});
     expect(component.state('typedInHexValue')).toBe('#DD5');
