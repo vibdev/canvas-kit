@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.0"></a>
+# [0.1.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.0.15...@workday/canvas-kit-react-toggle@0.1.0) (2019-02-26)
+
+
+### Features
+
+* **tsconfig:** add esModuleInterop flag to all modules for publishing ([1ac3be6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/commits/1ac3be6))
+
+
+
+
 <a name="0.0.15"></a>
 ## [0.0.15](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.0.14...@workday/canvas-kit-react-toggle@0.0.15) (2019-02-25)
 

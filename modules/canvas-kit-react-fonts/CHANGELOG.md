@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.1.5...@workday/canvas-kit-react-fonts@0.2.0) (2019-02-26)
+
+
+### Features
+
+* **tsconfig:** add esModuleInterop flag to all modules for publishing ([1ac3be6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/commits/1ac3be6))
+
+
+
+
 <a name="0.1.5"></a>
 ## [0.1.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.1.4...@workday/canvas-kit-react-fonts@0.1.5) (2019-02-22)
 

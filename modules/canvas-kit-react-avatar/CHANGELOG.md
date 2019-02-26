@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.3.5...@workday/canvas-kit-react-avatar@0.4.0) (2019-02-26)
+
+
+### Features
+
+* **tsconfig:** add esModuleInterop flag to all modules for publishing ([1ac3be6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/1ac3be6))
+
+
+
+
 <a name="0.3.5"></a>
 ## [0.3.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.3.4...@workday/canvas-kit-react-avatar@0.3.5) (2019-02-25)
 
