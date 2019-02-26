@@ -61,7 +61,8 @@ export default function focusRing(
   animate: boolean = true,
   inset: boolean = false,
   innerShadowColor: string = canvas.colors.frenchVanilla100,
-  outerShadowColor: string = canvas.commonColors.focusOutline
+  outerShadowColor: string = canvas.commonColors.focusOutline,
+  memoizeCalculation: boolean = true
 ): CSSObject {
   const argsToPass = {
     ringWidth,
@@ -71,6 +72,7 @@ export default function focusRing(
     innerShadowColor,
     outerShadowColor,
   };
+
   if (memoizeCalculation) {
     return memoizedFocusRing(argsToPass);
   }
