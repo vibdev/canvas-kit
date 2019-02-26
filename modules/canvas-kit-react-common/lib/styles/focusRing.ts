@@ -1,6 +1,44 @@
 import {keyframes} from 'react-emotion';
 import {CSSObject} from 'create-emotion';
 import canvas from '@workday/canvas-kit-react-core';
+import memoize from 'lodash/memoize';
+
+function calculateFocusRing({
+  ringWidth,
+  separationWidth,
+  animate,
+  inset,
+  innerShadowColor,
+  outerShadowColor,
+}: {
+  ringWidth: number;
+  separationWidth: number;
+  animate: boolean;
+  inset: boolean;
+  innerShadowColor: string;
+  outerShadowColor: string;
+}): CSSObject {
+  const endingInnerShadow =
+    (inset ? 'inset ' : '') + '0 0 0 ' + separationWidth + 'px ' + innerShadowColor;
+  const endingOuterShadow =
+    (inset ? 'inset ' : '') + '0 0 0 ' + (ringWidth + separationWidth) + 'px ' + outerShadowColor;
+  const endingBoxShadow = inset
+    ? `${endingOuterShadow}`
+    : `${endingInnerShadow}, ${endingOuterShadow}`;
+
+  if (animate) {
+    const fadeIn = keyframes({
+      '0%': {boxShadow: endingBoxShadow},
+      '100%': {boxShadow: endingBoxShadow},
+    });
+
+    return {animation: `${fadeIn} 100ms`, boxShadow: endingBoxShadow};
+  }
+
+  return {boxShadow: endingBoxShadow};
+}
+
+export const memoizedFocusRing = memoize(calculateFocusRing, (...args) => JSON.stringify(args));
 
 /**
  * A utility to create a canvas style focus ring around your widget.
@@ -25,22 +63,17 @@ export default function focusRing(
   innerShadowColor: string = canvas.colors.frenchVanilla100,
   outerShadowColor: string = canvas.commonColors.focusOutline
 ): CSSObject {
-  const endingInnerShadow =
-    (inset ? 'inset ' : '') + '0 0 0 ' + separationWidth + 'px ' + innerShadowColor;
-  const endingOuterShadow =
-    (inset ? 'inset ' : '') + '0 0 0 ' + (ringWidth + separationWidth) + 'px ' + outerShadowColor;
-  const endingBoxShadow = inset
-    ? `${endingOuterShadow}`
-    : `${endingInnerShadow}, ${endingOuterShadow}`;
-
-  if (animate) {
-    const fadeIn = keyframes({
-      '0%': {boxShadow: endingBoxShadow},
-      '100%': {boxShadow: endingBoxShadow},
-    });
-
-    return {animation: `${fadeIn} 100ms`, boxShadow: endingBoxShadow};
+  const argsToPass = {
+    ringWidth,
+    separationWidth,
+    animate,
+    inset,
+    innerShadowColor,
+    outerShadowColor,
+  };
+  if (memoizeCalculation) {
+    return memoizedFocusRing(argsToPass);
   }
 
-  return {boxShadow: endingBoxShadow};
+  return calculateFocusRing(argsToPass);
 }
