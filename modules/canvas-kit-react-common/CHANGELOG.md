@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.3.0...@workday/canvas-kit-react-common@0.3.1) (2019-02-26)
+
+
+### Bug Fixes
+
+* **focusRing:** changed focusRing to use object args ([697ab72](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/697ab72))
+* **focusRing:** corrected rebase issue ([cfbbf29](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/cfbbf29))
+* **focusRing:** readded tests that disappeared ([420b89f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/420b89f))
+* **snapshots:** corrected snapshots ([d7e92d9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/d7e92d9))
+
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.2.5...@workday/canvas-kit-react-common@0.3.0) (2019-02-26)
 
