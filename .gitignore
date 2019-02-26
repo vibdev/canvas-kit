@@ -19,3 +19,6 @@ build/*
 # intellij
 .idea
 junit.xml
+
+# vscode
+.vscode
