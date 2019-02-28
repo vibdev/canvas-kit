@@ -110,15 +110,15 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
   }
 
   private onKeyPress = (evt: React.KeyboardEvent<HTMLInputElement>) => {
-    const isValidHex: boolean = this.isValidHexValue(this.state.typedInHexValue);
+    const isValidHex = this.isValidHexValue(this.state.typedInHexValue);
     if (evt.key === 'Enter' && isValidHex) {
       this.handleSubmit();
     }
   };
 
   private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const isValidHex: boolean = this.isValidHexValue(evt.target.value);
-    const newColorHexValue: string = isValidHex ? this.addPoundSign(evt.target.value) : '';
+    const isValidHex = this.isValidHexValue(evt.target.value);
+    const newColorHexValue = isValidHex ? this.addPoundSign(evt.target.value) : '';
     this.setState({
       typedInHexValue: newColorHexValue,
       isInputFocused: false,

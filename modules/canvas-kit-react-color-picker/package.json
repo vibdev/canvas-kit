@@ -1,7 +1,7 @@
 {
   "name": "@workday/canvas-kit-react-color-picker",
   "version": "0.0.0",
-  "description": "",
+  "description": "A Canvas-styled color picker",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
   "license": "Apache-2.0",
