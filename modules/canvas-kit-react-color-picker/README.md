@@ -40,9 +40,13 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 > Handles onKeyPress `Enter` for submitting a selected color
 
+---
+
 #### `selectedHexColor: string`
 
 > The selected color that was entered
+
+---
 
 ### Optional
 
