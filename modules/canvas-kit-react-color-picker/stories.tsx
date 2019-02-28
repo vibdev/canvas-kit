@@ -25,7 +25,7 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
         <ColorInput
           showSwatchTileCheckIcon={true}
           selectedHexColor={this.state.color}
-          onClick={this.onSubmit}
+          onEnterPress={this.onSubmit}
         />
         <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
@@ -37,7 +37,7 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
   }
 }
 
-storiesOf('Canvas Kit/Custom Color Input', module)
+storiesOf('Canvas Kit/Color Input', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">

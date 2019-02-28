@@ -1,10 +1,9 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {colors, spacing} from '@workday/canvas-kit-react-core';
+import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
-import {IconButton} from '@workday/canvas-kit-react-button';
-import {checkIcon, checkSmallIcon} from '@workday/canvas-system-icons-web';
+import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor} from './ColorUtils';
 
@@ -14,14 +13,14 @@ export interface ColorInputState {
 }
 
 export interface ColorInputProps {
-  onClick: (color: string) => void;
+  onEnterPress: (color: string) => void;
   selectedHexColor: string;
   showSwatchTileCheckIcon?: boolean;
-  value?: string;
 }
 
 const swatchTileSpacing = spacing.xxs;
-const swatchTileSize = 20;
+const swatchTileSize = 24;
+const swatchCheckIconSpacing = 8;
 
 const CustomHexInput = styled('input')({
   margin: spacing.zero,
@@ -33,7 +32,7 @@ const CustomHexInput = styled('input')({
   border: `1px solid ${colors.frenchVanilla400}`,
   boxSizing: 'border-box',
   textAlign: 'left',
-  paddingLeft: '36px',
+  paddingLeft: '46px',
   marginRight: spacing.xxs,
   '&:focus, &:active': {
     borderColor: 'transparent',
@@ -44,8 +43,15 @@ const CustomHexInput = styled('input')({
 
 const ColorInputContainer = styled('div')({
   display: 'flex',
-  boxSizing: 'border-box',
   position: 'relative',
+});
+
+const PoundSignPrefix = styled('span')({
+  position: 'absolute',
+  left: 36,
+  top: 12,
+  ...type.small,
+  color: colors.blackPepper100,
 });
 
 const SwatchTile = styled('div')({
@@ -64,8 +70,8 @@ const SwatchTile = styled('div')({
 
 const swatchCheckIcon = css({
   position: 'absolute',
-  left: 5,
-  top: 9,
+  left: swatchCheckIconSpacing,
+  top: swatchCheckIconSpacing,
 });
 
 export default class ColorInput extends React.Component<ColorInputProps, ColorInputState> {
@@ -82,11 +88,12 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
     const {typedInHexValue, isInputFocused} = this.state;
     return (
       <ColorInputContainer>
+        <PoundSignPrefix>#</PoundSignPrefix>
         <CustomHexInput
           onKeyPress={this.onKeyPress}
-          placeholder="eg. #FFFFFF"
           onChange={this.onChange}
           type="text"
+          placeholder="FFFFFF"
           defaultValue={typedInHexValue}
         />
         <SwatchTile style={{backgroundColor: `${typedInHexValue || ''}`}} />
@@ -98,12 +105,6 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
             icon={checkSmallIcon}
           />
         ) : null}
-        <IconButton
-          disabled={!this.isValidHexValue(typedInHexValue)}
-          onClick={this.handleSubmit}
-          buttonType={IconButton.Types.Filled}
-          icon={checkIcon}
-        />
       </ColorInputContainer>
     );
   }
@@ -129,13 +130,13 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
   };
 
   private addPoundSign = (hexCode: string): string => {
-    return hexCode.slice(0, 1) === '#' ? hexCode : `#${hexCode}`;
+    return `#${hexCode}`;
   };
 
   private handleSubmit = (): void => {
     this.setState({
       isInputFocused: true,
     });
-    this.props.onClick(this.state.typedInHexValue);
+    this.props.onEnterPress(this.state.typedInHexValue);
   };
 }
