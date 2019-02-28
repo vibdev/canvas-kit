@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {colors, spacing, type} from '@workday/canvas-kit-react-core';
+import {colors, spacing, type, InputProvider} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
@@ -34,9 +34,11 @@ const CustomHexInput = styled('input')({
   textAlign: 'left',
   paddingLeft: '46px',
   marginRight: spacing.xxs,
-  '&:focus, &:active': {
-    borderColor: 'transparent',
+  [`[data-whatinput='mouse'] &:focus,
+  [data-whatinput='keyboard'] &:focus,
+  [data-whatinput='pointer'] &:focus`]: {
     outline: 'none',
+    borderColor: 'transparent',
     ...focusRing(2, 0),
   },
 });
@@ -87,25 +89,27 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
     const {selectedHexColor, showSwatchTileCheckIcon} = this.props;
     const {typedInHexValue, isInputFocused} = this.state;
     return (
-      <ColorInputContainer>
-        <PoundSignPrefix>#</PoundSignPrefix>
-        <CustomHexInput
-          onKeyPress={this.onKeyPress}
-          onChange={this.onChange}
-          type="text"
-          placeholder="FFFFFF"
-          defaultValue={typedInHexValue}
-        />
-        <SwatchTile style={{backgroundColor: `${typedInHexValue || ''}`}} />
-        {selectedHexColor && isInputFocused && showSwatchTileCheckIcon ? (
-          <SystemIcon
-            fill={pickDarkOrLightColor(selectedHexColor)}
-            fillHover={pickDarkOrLightColor(selectedHexColor)}
-            className={swatchCheckIcon}
-            icon={checkSmallIcon}
+      <InputProvider>
+        <ColorInputContainer>
+          <PoundSignPrefix>#</PoundSignPrefix>
+          <CustomHexInput
+            onKeyPress={this.onKeyPress}
+            onChange={this.onChange}
+            type="text"
+            placeholder="FFFFFF"
+            defaultValue={typedInHexValue}
           />
-        ) : null}
-      </ColorInputContainer>
+          <SwatchTile style={{backgroundColor: `${typedInHexValue || ''}`}} />
+          {selectedHexColor && isInputFocused && showSwatchTileCheckIcon ? (
+            <SystemIcon
+              fill={pickDarkOrLightColor(selectedHexColor)}
+              fillHover={pickDarkOrLightColor(selectedHexColor)}
+              className={swatchCheckIcon}
+              icon={checkSmallIcon}
+            />
+          ) : null}
+        </ColorInputContainer>
+      </InputProvider>
     );
   }
 

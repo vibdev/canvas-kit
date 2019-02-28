@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 
 import ColorInput from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -38,6 +39,7 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
 }
 
 storiesOf('Canvas Kit/Color Input', module)
+  .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">

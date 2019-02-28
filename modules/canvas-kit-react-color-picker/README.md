@@ -38,7 +38,7 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 #### `onEnterPress: (color: string) => void`
 
-> Handles onKeyPress `Enter` for submitting a selected color
+> A callback that handles onKeyPress `Enter` for submitting a selected color
 
 ---
 
@@ -53,3 +53,5 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 #### `showSwatchTileCheckIcon: boolean`
 
 > Optionally show a check icon when a cusgtom hex color has been selected
+
+Default: `false`
