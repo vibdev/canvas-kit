@@ -17,6 +17,12 @@ const toggleWidth = 32;
 const toggleHeight = 16;
 const translateLength = toggleWidth - toggleHeight;
 
+const ToggleContainer = styled('div')({
+  position: 'relative',
+  height: toggleHeight,
+  width: toggleWidth,
+});
+
 const ToggleInput = styled('input')<ToggleProps>(
   {
     position: 'absolute',
@@ -73,7 +79,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
     const {checked, disabled, id, inputRef, onChange, value, ...otherProps} = this.props;
 
     return (
-      <div>
+      <ToggleContainer>
         <ToggleInput
           checked={checked}
           disabled={disabled}
@@ -89,7 +95,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
         <ToggleBackground checked={checked} disabled={disabled}>
           <ToggleCircle checked={checked} />
         </ToggleBackground>
-      </div>
+      </ToggleContainer>
     );
   }
 }
