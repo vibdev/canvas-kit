@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.3"></a>
+## [0.1.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.1.2...@workday/canvas-kit-react-toggle@0.1.3) (2019-03-01)
+
+
+### Bug Fixes
+
+* **toggle:** Fixing Toggle so that absolutely positioned children dont lead to styling issues ([fa461d7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/commits/fa461d7))
+* **toggle:** Updating snapshots ([c5069da](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/commits/c5069da))
+
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.1.1...@workday/canvas-kit-react-toggle@0.1.2) (2019-02-26)
 
