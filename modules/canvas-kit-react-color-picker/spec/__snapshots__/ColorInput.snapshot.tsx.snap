@@ -34,10 +34,11 @@ exports[`ColorInput Snapshots renders a checked icon 1`] = `
   margin-right: 8px;
 }
 
-.emotion-2:focus,
-.emotion-2:active {
-  border-color: transparent;
+[data-whatinput='mouse'] .emotion-2:focus,
+[data-whatinput='keyboard'] .emotion-2:focus,
+[data-whatinput='pointer'] .emotion-2:focus {
   outline: none;
+  border-color: transparent;
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
@@ -58,29 +59,34 @@ exports[`ColorInput Snapshots renders a checked icon 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  data-whatinput="initial"
+  data-whatintent={null}
 >
-  <span
-    className="emotion-0 emotion-1"
-  >
-    #
-  </span>
-  <input
-    className="emotion-2 emotion-3"
-    defaultValue="DD5"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="FFFFFF"
-    type="text"
-  />
   <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "backgroundColor": "DD5",
+    className="emotion-6 emotion-7"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      #
+    </span>
+    <input
+      className="emotion-2 emotion-3"
+      defaultValue="DD5"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="FFFFFF"
+      type="text"
+    />
+    <div
+      className="emotion-4 emotion-5"
+      style={
+        Object {
+          "backgroundColor": "DD5",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -118,10 +124,11 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   margin-right: 8px;
 }
 
-.emotion-2:focus,
-.emotion-2:active {
-  border-color: transparent;
+[data-whatinput='mouse'] .emotion-2:focus,
+[data-whatinput='keyboard'] .emotion-2:focus,
+[data-whatinput='pointer'] .emotion-2:focus {
   outline: none;
+  border-color: transparent;
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
@@ -142,29 +149,34 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  data-whatinput="initial"
+  data-whatintent={null}
 >
-  <span
-    className="emotion-0 emotion-1"
-  >
-    #
-  </span>
-  <input
-    className="emotion-2 emotion-3"
-    defaultValue=""
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="FFFFFF"
-    type="text"
-  />
   <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "backgroundColor": "",
+    className="emotion-6 emotion-7"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      #
+    </span>
+    <input
+      className="emotion-2 emotion-3"
+      defaultValue=""
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="FFFFFF"
+      type="text"
+    />
+    <div
+      className="emotion-4 emotion-5"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -202,10 +214,11 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   margin-right: 8px;
 }
 
-.emotion-2:focus,
-.emotion-2:active {
-  border-color: transparent;
+[data-whatinput='mouse'] .emotion-2:focus,
+[data-whatinput='keyboard'] .emotion-2:focus,
+[data-whatinput='pointer'] .emotion-2:focus {
   outline: none;
+  border-color: transparent;
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
@@ -226,29 +239,34 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  data-whatinput="initial"
+  data-whatintent={null}
 >
-  <span
-    className="emotion-0 emotion-1"
-  >
-    #
-  </span>
-  <input
-    className="emotion-2 emotion-3"
-    defaultValue="#e6e"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="FFFFFF"
-    type="text"
-  />
   <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "backgroundColor": "#e6e",
+    className="emotion-6 emotion-7"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      #
+    </span>
+    <input
+      className="emotion-2 emotion-3"
+      defaultValue="#e6e"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="FFFFFF"
+      type="text"
+    />
+    <div
+      className="emotion-4 emotion-5"
+      style={
+        Object {
+          "backgroundColor": "#e6e",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -286,10 +304,11 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   margin-right: 8px;
 }
 
-.emotion-2:focus,
-.emotion-2:active {
-  border-color: transparent;
+[data-whatinput='mouse'] .emotion-2:focus,
+[data-whatinput='keyboard'] .emotion-2:focus,
+[data-whatinput='pointer'] .emotion-2:focus {
   outline: none;
+  border-color: transparent;
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
@@ -310,29 +329,34 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  data-whatinput="initial"
+  data-whatintent={null}
 >
-  <span
-    className="emotion-0 emotion-1"
-  >
-    #
-  </span>
-  <input
-    className="emotion-2 emotion-3"
-    defaultValue="DD5"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="FFFFFF"
-    type="text"
-  />
   <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "backgroundColor": "DD5",
+    className="emotion-6 emotion-7"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      #
+    </span>
+    <input
+      className="emotion-2 emotion-3"
+      defaultValue="DD5"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="FFFFFF"
+      type="text"
+    />
+    <div
+      className="emotion-4 emotion-5"
+      style={
+        Object {
+          "backgroundColor": "DD5",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
 
@@ -370,10 +394,11 @@ exports[`ColorInput Snapshots renders without checked icon 1`] = `
   margin-right: 8px;
 }
 
-.emotion-2:focus,
-.emotion-2:active {
-  border-color: transparent;
+[data-whatinput='mouse'] .emotion-2:focus,
+[data-whatinput='keyboard'] .emotion-2:focus,
+[data-whatinput='pointer'] .emotion-2:focus {
   outline: none;
+  border-color: transparent;
   -webkit-animation: animation-bvpr5k 100ms;
   animation: animation-bvpr5k 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
@@ -394,28 +419,33 @@ exports[`ColorInput Snapshots renders without checked icon 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  data-whatinput="initial"
+  data-whatintent={null}
 >
-  <span
-    className="emotion-0 emotion-1"
-  >
-    #
-  </span>
-  <input
-    className="emotion-2 emotion-3"
-    defaultValue="DD5"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="FFFFFF"
-    type="text"
-  />
   <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "backgroundColor": "DD5",
+    className="emotion-6 emotion-7"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      #
+    </span>
+    <input
+      className="emotion-2 emotion-3"
+      defaultValue="DD5"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="FFFFFF"
+      type="text"
+    />
+    <div
+      className="emotion-4 emotion-5"
+      style={
+        Object {
+          "backgroundColor": "DD5",
+        }
       }
-    }
-  />
+    />
+  </div>
 </div>
 `;
