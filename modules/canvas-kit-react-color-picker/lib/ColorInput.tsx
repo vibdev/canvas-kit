@@ -19,7 +19,7 @@ export interface ColorInputProps {
 }
 
 const swatchTileSpacing = spacing.xxs;
-const swatchTileSize = 24;
+const swatchTileSize = 20;
 const swatchCheckIconSpacing = 8;
 
 const CustomHexInput = styled('input')({
@@ -72,7 +72,7 @@ const SwatchTile = styled('div')({
 
 const swatchCheckIcon = css({
   position: 'absolute',
-  left: swatchCheckIconSpacing,
+  left: 6,
   top: swatchCheckIconSpacing,
 });
 

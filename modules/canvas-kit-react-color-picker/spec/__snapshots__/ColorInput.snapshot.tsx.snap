@@ -47,8 +47,8 @@ exports[`ColorInput Snapshots renders a checked icon 1`] = `
 .emotion-4 {
   position: absolute;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   top: 0px;
   bottom: 0px;
   left: 8px;
@@ -137,8 +137,8 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
 .emotion-4 {
   position: absolute;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   top: 0px;
   bottom: 0px;
   left: 8px;
@@ -227,8 +227,8 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
 .emotion-4 {
   position: absolute;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   top: 0px;
   bottom: 0px;
   left: 8px;
@@ -317,8 +317,8 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
 .emotion-4 {
   position: absolute;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   top: 0px;
   bottom: 0px;
   left: 8px;
@@ -407,8 +407,8 @@ exports[`ColorInput Snapshots renders without checked icon 1`] = `
 .emotion-4 {
   position: absolute;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   top: 0px;
   bottom: 0px;
   left: 8px;
