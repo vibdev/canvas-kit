@@ -29,10 +29,10 @@ const CustomHexInput = styled('input')({
   MozAppearance: 'none',
   borderColor: 'transparent',
   borderRadius: '4px',
-  border: `1px solid ${colors.frenchVanilla400}`,
+  border: `1px solid ${colors.frenchVanilla500}`,
   boxSizing: 'border-box',
-  textAlign: 'left',
   paddingLeft: '46px',
+  ...type.body,
   marginRight: spacing.xxs,
   [`[data-whatinput='mouse'] &:focus,
   [data-whatinput='keyboard'] &:focus,
@@ -51,8 +51,8 @@ const ColorInputContainer = styled('div')({
 const PoundSignPrefix = styled('span')({
   position: 'absolute',
   left: 36,
-  top: 12,
-  ...type.small,
+  top: 10,
+  ...type.body,
   color: colors.blackPepper100,
 });
 
