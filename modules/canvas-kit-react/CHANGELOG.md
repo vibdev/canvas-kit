@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.3"></a>
+## [1.2.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.2.2...@workday/canvas-kit-react@1.2.3) (2019-03-11)
+
+
+### Bug Fixes
+
+* fix stuck version for toggle component ([4484ae3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/4484ae3))
+
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.2.1...@workday/canvas-kit-react@1.2.2) (2019-02-26)
 
