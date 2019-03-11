@@ -3,6 +3,7 @@ import {BrandingColors} from './lib/colors.types';
 import depth, {CanvasDepth, CanvasDepthValue} from './lib/depth';
 import spacing, {
   spacingNumbers,
+  space,
   CanvasSpacingNumbers,
   CanvasSpacing,
   CanvasSpacingValue,
@@ -27,6 +28,7 @@ export {
   colors,
   depth,
   spacing,
+  space,
   spacingNumbers,
   type,
   fontFamily,

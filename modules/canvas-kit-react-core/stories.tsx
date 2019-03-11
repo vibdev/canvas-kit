@@ -4,13 +4,26 @@ import styled, {css} from 'react-emotion';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
-
-import canvas from './index'; // tslint:disable-line:import-name
+import canvas, {space, spacing} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 storiesOf('Canvas Kit/Core', module)
   .addDecorator(withReadme(README))
   .addDecorator(InputProviderDecorator)
+  .add('Space', () => {
+    const Box = styled('div')(space);
+
+    return (
+      <div className="story">
+        <h1 className="section-label">Space</h1>
+        <div>
+          <Box style={{border: '1px solid #eee'}} p={spacing.xl} pb={64} m={40} mx={10}>
+            Margin and Padding
+          </Box>
+        </div>
+      </div>
+    );
+  })
   .add('Depth', () => {
     const Card = styled('div')({
       width: 200,
