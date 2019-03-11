@@ -8,26 +8,36 @@ describe('ColorInput', () => {
     cb.mockReset();
   });
 
-  test('should call onClick on Enter', () => {
-    const component = mount(<ColorInput selectedHexColor="#DD5" onEnterPress={cb} />);
-    component.setState({typedInHexValue: '#DD5'});
-    const input = component.find('input');
-    input.simulate('keypress', {key: 'Enter'});
-    expect(cb).toHaveBeenCalled();
-  });
-
-  test('should not call onClick on Enter if hex value is invalid', () => {
-    const component = mount(<ColorInput selectedHexColor="#DD5" onEnterPress={cb} />);
-    component.setState({typedInHexValue: '#DD500076'});
-    const input = component.find('input');
-    input.simulate('keypress', {key: 'Enter'});
-    expect(cb.mock.calls.length).toBe(0);
-  });
-
-  test('should update typedInHexValue onChange', () => {
-    const component = mount(<ColorInput selectedHexColor="#DD5" onEnterPress={cb} />);
+  test('should update validHexValue onChange', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
+    );
     const input = component.find('input');
     input.simulate('change', {target: {value: 'DD5'}});
-    expect(component.state('typedInHexValue')).toBe('#DD5');
+    expect(component.state('validHexValue')).toBe('#DD5');
+  });
+  test('should update validHexValue onChange with pound sign', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
+    );
+    const input = component.find('input');
+    input.simulate('change', {target: {value: '#DD5'}});
+    expect(component.state('validHexValue')).toBe('#DD5');
+  });
+  test('should update validHexValue onChange to empty string if not valid hex value', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
+    );
+    const input = component.find('input');
+    input.simulate('change', {target: {value: '#eeeeeeee'}});
+    expect(component.state('validHexValue')).toBe('');
+  });
+  test('should still allow user to type if more than 3 characters', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
+    );
+    const input = component.find('input');
+    input.simulate('change', {target: {value: '#eeeee'}});
+    expect(component.state('validHexValue')).toBe('#eeeee');
   });
 });

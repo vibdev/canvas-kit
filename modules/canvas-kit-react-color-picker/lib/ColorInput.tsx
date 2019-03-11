@@ -5,17 +5,17 @@ import {colors, spacing, type, InputProvider} from '@workday/canvas-kit-react-co
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {pickDarkOrLightColor} from './ColorUtils';
+import {pickDarkOrLightColor, stringByConvertingToValidHexValue} from './ColorUtils';
 
 export interface ColorInputState {
-  isInputFocused: boolean;
-  typedInHexValue: string;
+  validHexValue: string;
 }
 
 export interface ColorInputProps {
-  onEnterPress: (color: string) => void;
-  selectedHexColor: string;
+  onChange: (color: string) => void;
+  value: string;
   showSwatchTileCheckIcon?: boolean;
+  onValidColorChange: (color: string) => void;
 }
 
 const swatchTileSpacing = spacing.xxs;
@@ -80,30 +80,29 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
   public constructor(props: ColorInputProps) {
     super(props);
     this.state = {
-      typedInHexValue: this.props.selectedHexColor,
-      isInputFocused: false,
+      validHexValue: '',
     };
   }
 
   public render() {
-    const {selectedHexColor, showSwatchTileCheckIcon} = this.props;
-    const {typedInHexValue, isInputFocused} = this.state;
+    const {showSwatchTileCheckIcon, value} = this.props;
+    const validValue = value && value.slice(0, 1) === '#' ? value.substring(1) : value;
+
     return (
       <InputProvider>
         <ColorInputContainer>
           <PoundSignPrefix>#</PoundSignPrefix>
           <CustomHexInput
-            onKeyPress={this.onKeyPress}
             onChange={this.onChange}
             type="text"
             placeholder="FFFFFF"
-            defaultValue={typedInHexValue}
+            value={validValue}
           />
-          <SwatchTile style={{backgroundColor: `${typedInHexValue || ''}`}} />
-          {selectedHexColor && isInputFocused && showSwatchTileCheckIcon ? (
+          <SwatchTile style={{backgroundColor: `${this.state.validHexValue}`}} />
+          {showSwatchTileCheckIcon && this.state.validHexValue ? (
             <SystemIcon
-              fill={pickDarkOrLightColor(selectedHexColor)}
-              fillHover={pickDarkOrLightColor(selectedHexColor)}
+              fill={pickDarkOrLightColor(value)}
+              fillHover={pickDarkOrLightColor(value)}
               className={swatchCheckIcon}
               icon={checkSmallIcon}
             />
@@ -113,34 +112,33 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
     );
   }
 
-  private onKeyPress = (evt: React.KeyboardEvent<HTMLInputElement>) => {
-    const isValidHex = this.isValidHexValue(this.state.typedInHexValue);
-    if (evt.key === 'Enter' && isValidHex) {
-      this.handleSubmit();
+  public componentDidUpdate(prevProps: ColorInputProps, prevState: ColorInputState) {
+    if (prevState.validHexValue !== this.state.validHexValue) {
+      this.props.onValidColorChange(this.state.validHexValue);
     }
-  };
+  }
 
   private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const isValidHex = this.isValidHexValue(evt.target.value);
-    const newColorHexValue = isValidHex ? this.addPoundSign(evt.target.value) : '';
+    const validInput = stringByConvertingToValidHexValue(evt.target.value, this.props.value);
+    const _isValid = this.isValidHexValue(validInput);
+    console.warn('validInput', validInput);
+    const validHexValue = _isValid ? `#${validInput}` : '';
+
     this.setState({
-      typedInHexValue: newColorHexValue,
-      isInputFocused: false,
+      validHexValue,
     });
+
+    this.props.onChange(validInput);
   };
 
   private isValidHexValue = (hexCode: string): boolean => {
-    return /(^#?[0-9A-F]{6}$)|(^#?[0-9A-F]{3}$)/i.test(hexCode);
-  };
-
-  private addPoundSign = (hexCode: string): string => {
-    return `#${hexCode}`;
-  };
-
-  private handleSubmit = (): void => {
-    this.setState({
-      isInputFocused: true,
-    });
-    this.props.onEnterPress(this.state.typedInHexValue);
+    if (hexCode.length > 6) {
+      return false;
+    }
+    if (hexCode.length === 4 || hexCode.length === 5) {
+      console.warn('in if', hexCode);
+      return this.isValidHexValue(hexCode.substring(0, 3));
+    }
+    return /(^#?[0-9A-F]{3}$)|(^#?[0-9A-F]{6}$)/i.test(hexCode);
   };
 }

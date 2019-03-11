@@ -17,7 +17,7 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
     this.state = {
       color: '',
     };
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   public render() {
@@ -25,17 +25,26 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
           showSwatchTileCheckIcon={true}
-          selectedHexColor={this.state.color}
-          onEnterPress={this.onSubmit}
+          onChange={this.onChange}
+          value={this.state.color}
+          onValidColorChange={this.validColorChange}
         />
         <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
     );
   }
 
-  private onSubmit(color: string) {
-    this.setState({color: color});
+  private onChange(color: string) {
+    this.setState({
+      color: color,
+    });
   }
+
+  private validColorChange = (colorHex: string) => {
+    this.setState({
+      color: colorHex,
+    });
+  };
 }
 
 storiesOf('Canvas Kit/Color Input', module)
