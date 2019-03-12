@@ -8,29 +8,29 @@ describe('ColorInput', () => {
     cb.mockReset();
   });
 
-  test('should update validHexValue onChange', () => {
+  test('should update potentialHexValue onChange', () => {
     const component = mount(
       <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
     const input = component.find('input');
     input.simulate('change', {target: {value: 'DD5'}});
-    expect(component.state('validHexValue')).toBe('#DD5');
+    expect(component.state('potentialHexValue')).toBe('#DD5');
   });
-  test('should update validHexValue onChange with pound sign', () => {
+  test('should update potentialHexValue onChange with pound sign', () => {
     const component = mount(
       <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
     const input = component.find('input');
     input.simulate('change', {target: {value: '#DD5'}});
-    expect(component.state('validHexValue')).toBe('#DD5');
+    expect(component.state('potentialHexValue')).toBe('#DD5');
   });
-  test('should update validHexValue onChange to empty string if not valid hex value', () => {
+  test('should update potentialHexValue onChange to empty string if not valid hex value', () => {
     const component = mount(
       <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
     const input = component.find('input');
     input.simulate('change', {target: {value: '#eeeeeeee'}});
-    expect(component.state('validHexValue')).toBe('');
+    expect(component.state('potentialHexValue')).toBe('');
   });
   test('should still allow user to type if more than 3 characters', () => {
     const component = mount(
@@ -38,6 +38,6 @@ describe('ColorInput', () => {
     );
     const input = component.find('input');
     input.simulate('change', {target: {value: '#eeeee'}});
-    expect(component.state('validHexValue')).toBe('#eeeee');
+    expect(component.state('potentialHexValue')).toBe('eeeee');
   });
 });

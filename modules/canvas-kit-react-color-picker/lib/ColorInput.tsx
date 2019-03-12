@@ -5,10 +5,15 @@ import {colors, spacing, type, InputProvider} from '@workday/canvas-kit-react-co
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {pickDarkOrLightColor, stringByConvertingToValidHexValue} from './ColorUtils';
+import {
+  isValidHexValue,
+  pickDarkOrLightColor,
+  stringByConvertingToValidHexValue,
+} from './ColorUtils';
 
 export interface ColorInputState {
-  validHexValue: string;
+  potentialHexValue: string;
+  isContinuableHexValue: boolean;
 }
 
 export interface ColorInputProps {
@@ -80,12 +85,14 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
   public constructor(props: ColorInputProps) {
     super(props);
     this.state = {
-      validHexValue: '',
+      potentialHexValue: '',
+      isContinuableHexValue: false,
     };
   }
 
   public render() {
     const {showSwatchTileCheckIcon, value} = this.props;
+    const {isContinuableHexValue, potentialHexValue} = this.state;
     const validValue = value && value.slice(0, 1) === '#' ? value.substring(1) : value;
 
     return (
@@ -98,8 +105,12 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
             placeholder="FFFFFF"
             value={validValue}
           />
-          <SwatchTile style={{backgroundColor: `${this.state.validHexValue}`}} />
-          {showSwatchTileCheckIcon && this.state.validHexValue ? (
+          <SwatchTile
+            style={{
+              backgroundColor: `${isContinuableHexValue ? '' : potentialHexValue}`,
+            }}
+          />
+          {showSwatchTileCheckIcon && potentialHexValue && !isContinuableHexValue ? (
             <SystemIcon
               fill={pickDarkOrLightColor(value)}
               fillHover={pickDarkOrLightColor(value)}
@@ -113,32 +124,38 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
   }
 
   public componentDidUpdate(prevProps: ColorInputProps, prevState: ColorInputState) {
-    if (prevState.validHexValue !== this.state.validHexValue) {
-      this.props.onValidColorChange(this.state.validHexValue);
+    if (prevState.potentialHexValue !== this.state.potentialHexValue) {
+      this.props.onValidColorChange(this.state.potentialHexValue);
     }
   }
 
   private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const validInput = stringByConvertingToValidHexValue(evt.target.value, this.props.value);
-    const _isValid = this.isValidHexValue(validInput);
-    console.warn('validInput', validInput);
-    const validHexValue = _isValid ? `#${validInput}` : '';
+    const inputValue = stringByConvertingToValidHexValue(evt.target.value, this.props.value);
+    const isValidInput = isValidHexValue(inputValue);
+    const threeCharacterValidHexCode = isValidHexValue(inputValue.substring(0, 3));
+    const moreThanThreeCharactersValidHexValue =
+      threeCharacterValidHexCode && (inputValue.length === 4 || inputValue.length === 5);
+    let potentialHexValue: string;
+    let isContinuableHexValue = false;
+
+    if (isValidInput) {
+      potentialHexValue = `#${inputValue}`;
+    } else {
+      isContinuableHexValue = moreThanThreeCharactersValidHexValue;
+
+      if (isContinuableHexValue) {
+        potentialHexValue = inputValue;
+      } else {
+        potentialHexValue = '';
+      }
+    }
+    const validHexValue = isValidInput || isContinuableHexValue ? potentialHexValue : '';
 
     this.setState({
-      validHexValue,
+      potentialHexValue: validHexValue,
+      isContinuableHexValue,
     });
 
-    this.props.onChange(validInput);
-  };
-
-  private isValidHexValue = (hexCode: string): boolean => {
-    if (hexCode.length > 6) {
-      return false;
-    }
-    if (hexCode.length === 4 || hexCode.length === 5) {
-      console.warn('in if', hexCode);
-      return this.isValidHexValue(hexCode.substring(0, 3));
-    }
-    return /(^#?[0-9A-F]{3}$)|(^#?[0-9A-F]{6}$)/i.test(hexCode);
+    this.props.onChange(inputValue);
   };
 }

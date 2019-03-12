@@ -21,4 +21,26 @@ describe('ColorInput Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders a light checkIcon if hex value is dark', () => {
+    const component = renderer.create(
+      <ColorInput
+        showSwatchTileCheckIcon={true}
+        onChange={jest.fn()}
+        onValidColorChange={jest.fn()}
+        value={'#e6e'}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders a dark checkIcon if hex value is light', () => {
+    const component = renderer.create(
+      <ColorInput
+        showSwatchTileCheckIcon={true}
+        onChange={jest.fn()}
+        onValidColorChange={jest.fn()}
+        value={'#ffffff'}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
