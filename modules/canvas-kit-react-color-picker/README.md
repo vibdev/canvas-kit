@@ -23,8 +23,9 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 <ColorInput
   showSwatchTileCheckIcon={true}
-  selectedHexColor={this.state.color}
-  onEnterPress={this.onEnterPress}
+  onChange={this.onChange}
+  value={this.state.color}
+  onValidColorChange={this.validColorChange}
 />;
 ```
 
@@ -36,15 +37,21 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 ### Required
 
-#### `onEnterPress: (color: string) => void`
+#### `onChange: (color: string) => void`
 
-> A callback that handles onKeyPress `Enter` for submitting a selected color
+> A onChange callback that passes up the value entered by the user
 
 ---
 
-#### `selectedHexColor: string`
+#### `onValidColorChange: (color: string) => void`
 
-> The selected color that was entered
+> A callback that passes up the valid hex value typed by the user
+
+---
+
+#### `value: string`
+
+> The value entered by the user into the color input
 
 ---
 
@@ -52,6 +59,6 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 #### `showSwatchTileCheckIcon: boolean`
 
-> Optionally show a check icon when a cusgtom hex color has been selected
+> Optionally show a check icon when a custom hex color has been selected
 
 Default: `false`

@@ -57,8 +57,7 @@ const PoundSignPrefix = styled('span')({
   position: 'absolute',
   left: 36,
   top: 10,
-  ...type.body,
-  color: colors.blackPepper100,
+  ...type.hint,
 });
 
 const SwatchTile = styled('div')({
@@ -82,13 +81,10 @@ const swatchCheckIcon = css({
 });
 
 export default class ColorInput extends React.Component<ColorInputProps, ColorInputState> {
-  public constructor(props: ColorInputProps) {
-    super(props);
-    this.state = {
-      potentialHexValue: '',
-      isContinuableHexValue: false,
-    };
-  }
+  state = {
+    potentialHexValue: '',
+    isContinuableHexValue: false,
+  };
 
   public render() {
     const {showSwatchTileCheckIcon, value} = this.props;

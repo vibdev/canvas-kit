@@ -11,14 +11,13 @@ interface CustomColorInputWrapperState {
   color: string;
 }
 
-class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrapperState> {
-  public constructor(props: {}) {
-    super(props);
-    this.state = {
-      color: '',
-    };
-    this.onChange = this.onChange.bind(this);
-  }
+export default class CustomColorInputWrapper extends React.Component<
+  {},
+  CustomColorInputWrapperState
+> {
+  state = {
+    color: '',
+  };
 
   public render() {
     return (
@@ -34,11 +33,11 @@ class CustomColorInputWrapper extends React.Component<{}, CustomColorInputWrappe
     );
   }
 
-  private onChange(color: string) {
+  private onChange = (color: string) => {
     this.setState({
       color: color,
     });
-  }
+  };
 
   private validColorChange = (colorHex: string) => {
     this.setState({
