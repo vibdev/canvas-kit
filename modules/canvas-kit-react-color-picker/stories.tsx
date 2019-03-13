@@ -46,10 +46,10 @@ export default class CustomColorInputWrapper extends React.Component<
   };
 }
 
-storiesOf('Canvas Kit/Color Input', module)
+storiesOf('Canvas Kit/Color Picker', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Color Input', () => (
     <div className="story">
       <h1 className="section-label">Custom Color Input</h1>
       <CustomColorInputWrapper />

@@ -18,9 +18,9 @@ export interface ColorInputState {
 
 export interface ColorInputProps {
   onChange: (color: string) => void;
+  onValidColorChange: (color: string) => void;
   value: string;
   showSwatchTileCheckIcon?: boolean;
-  onValidColorChange: (color: string) => void;
 }
 
 const swatchTileSpacing = spacing.xxs;
@@ -57,7 +57,7 @@ const PoundSignPrefix = styled('span')({
   position: 'absolute',
   left: 36,
   top: 10,
-  ...type.hint,
+  ...type.variant.hint,
 });
 
 const SwatchTile = styled('div')({
@@ -100,6 +100,7 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
             type="text"
             placeholder="FFFFFF"
             value={validValue}
+            maxLength={6}
           />
           <SwatchTile
             style={{
@@ -152,6 +153,6 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
       isContinuableHexValue,
     });
 
-    this.props.onChange(inputValue);
+    this.props.onChange(evt.target.value);
   };
 }
