@@ -74,7 +74,7 @@ const swatchCheckIcon = css({
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
     const {showSwatchTileCheckIcon, value} = this.props;
-    const validValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
+    const strippedHashValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
     return (
       <InputProvider>
         <ColorInputContainer>
@@ -83,7 +83,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
             onChange={this.onChange}
             type="text"
             placeholder="FFFFFF"
-            value={validValue}
+            value={strippedHashValue}
             maxLength={6}
             spellCheck={false}
           />

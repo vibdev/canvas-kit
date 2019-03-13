@@ -19,7 +19,7 @@ const hexToRgb = (hex: string) => {
 
 /**
  *
- * Chooses luminance of depending on the rgb value. Eventually should be replaced
+ * Chooses luminance color depending on the rgb value. Eventually should be replaced
  * by by Chroma 2.0
  */
 const pickDarkOrLightColor = (color: string) => {
