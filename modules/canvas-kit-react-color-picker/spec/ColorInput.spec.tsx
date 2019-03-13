@@ -8,38 +8,48 @@ describe('ColorInput', () => {
     cb.mockReset();
   });
 
-  test('should update potentialHexValue onChange', () => {
+  test('should update value onChange', () => {
     const component = mount(
       <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
-    const input = component.find('input');
-    input.simulate('change', {target: {value: 'e6e'}});
-    component.update();
-    // component.setProps({value: 'DD5'});
-    expect(component.prop('value')).toBe('#DD5');
+    expect(component.find('input').props().value).toBe('');
+    component.setProps({value: 'e6e'});
+    expect(component.find('input').props().value).toBe('e6e');
   });
-  // test('should update potentialHexValue onChange with pound sign', () => {
-  //   const component = mount(
-  //     <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
-  //   );
-  //   const input = component.find('input');
-  //   input.simulate('change', {target: {value: '#DD5'}});
-  //   expect(component.state('potentialHexValue')).toBe('#DD5');
-  // });
-  // test('should update potentialHexValue onChange to empty string if not valid hex value', () => {
-  //   const component = mount(
-  //     <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
-  //   );
-  //   const input = component.find('input');
-  //   input.simulate('change', {target: {value: '#eeeeeeee'}});
-  //   expect(component.state('potentialHexValue')).toBe('');
-  // });
-  // test('should still allow user to type if more than 3 characters', () => {
-  //   const component = mount(
-  //     <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
-  //   );
-  //   const input = component.find('input');
-  //   input.simulate('change', {target: {value: '#eeeee'}});
-  //   expect(component.state('potentialHexValue')).toBe('eeeee');
-  // });
+  test('should call onChange prop onChange with value', () => {
+    const onChangeMock = jest.fn();
+    const component = mount(
+      <ColorInput onChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
+    );
+    const event = {
+      target: {value: 'e6e'},
+    };
+    const input = component.find('input');
+    input.simulate('change', event);
+    expect(onChangeMock).toBeCalledWith('e6e');
+  });
+  test('should call onValidColorChange prop onChange with valid hex value', () => {
+    const onValidColorChange = jest.fn();
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChange} value={''} />
+    );
+    const event = {
+      target: {value: 'e6e'},
+    };
+    const input = component.find('input');
+    input.simulate('change', event);
+    expect(onValidColorChange).toBeCalledWith('#e6e');
+  });
+  test('should not call onValidColorChange prop onChange if hex code is not valid', () => {
+    const onValidColorChange = jest.fn();
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChange} value={''} />
+    );
+    const event = {
+      target: {value: 'e6ee'},
+    };
+    const input = component.find('input');
+    input.simulate('change', event);
+    expect(onValidColorChange).toHaveBeenCalledTimes(0);
+  });
 });

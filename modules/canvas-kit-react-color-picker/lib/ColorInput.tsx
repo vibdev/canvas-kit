@@ -5,11 +5,7 @@ import {colors, spacing, type, InputProvider} from '@workday/canvas-kit-react-co
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {
-  // isValidHexValue,
-  pickDarkOrLightColor,
-  // stringByConvertingToValidHexValue,
-} from './ColorUtils';
+import {pickDarkOrLightColor} from './ColorUtils';
 
 export interface ColorInputProps {
   onChange: (color: string) => void;
@@ -79,7 +75,6 @@ export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
     const {showSwatchTileCheckIcon, value} = this.props;
     const validValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
-    console.warn(value);
     return (
       <InputProvider>
         <ColorInputContainer>
