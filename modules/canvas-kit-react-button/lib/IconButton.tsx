@@ -5,8 +5,8 @@ import {IconButtonTypes, ButtonSizes} from './types';
 import {BaseButtonProps} from './Button';
 import {iconButtonStyles} from './ButtonStyles';
 import {colors} from '@workday/canvas-kit-react-core';
-import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {CSSObject} from 'create-emotion';
 
 export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes>> {
@@ -24,7 +24,7 @@ export interface IconButtonProps extends Partial<BaseButtonProps<IconButtonTypes
   onToggleChange?: (toggled: boolean | undefined) => void;
 }
 
-const IconButtonCon = styled('button')<IconButtonProps>(
+export const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
   ({buttonSize, buttonType}) => {

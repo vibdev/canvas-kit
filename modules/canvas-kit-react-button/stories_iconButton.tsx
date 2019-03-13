@@ -7,50 +7,11 @@ import {activityStreamIcon, xIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from './index'; // tslint:disable-line:import-name
-import {IconButtonTypes} from './lib/types';
 import README from './README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
 
-interface ToggleIconButtonWrapperState {
-  isToggled: boolean;
-}
-
-interface ToggleIconButtonWrapperProps {
-  buttonType: IconButtonTypes;
-}
-
-export class ToggleIconButtonWrapper extends React.Component<
-  ToggleIconButtonWrapperProps,
-  ToggleIconButtonWrapperState
-> {
-  public constructor(props: ToggleIconButtonWrapperProps) {
-    super(props);
-    this.state = {
-      isToggled: false,
-    };
-    this.handleToggle = this.handleToggle.bind(this);
-  }
-
-  public render() {
-    return (
-      <IconButton
-        toggled={this.state.isToggled}
-        buttonType={this.props.buttonType}
-        onClick={this.handleToggle}
-        onToggleChange={toggled => console.log(toggled)}
-        icon={activityStreamIcon}
-      />
-    );
-  }
-
-  public handleToggle() {
-    this.setState({isToggled: !this.state.isToggled});
-  }
-}
-
 // TODO (beta button): remove this story, edit storybook config to not accept stories*.tsx
-// TODO (beta button): remove stories_beta.tsx from tsconfig.json in this module
 const blueBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',
@@ -69,9 +30,9 @@ const plainSection: CSSObject = {
   justifyContent: 'space-between',
 };
 
-storiesOf('Canvas Kit/Button/Icon Buttons', module)
+storiesOf('Canvas Kit/Button/Icon Button', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Clickable', () => (
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
       <h3>Square Icon Buttons</h3>
@@ -155,21 +116,6 @@ storiesOf('Canvas Kit/Button/Icon Buttons', module)
         <IconButton disabled={true} buttonType={IconButton.Types.InverseFilled}>
           <SystemIcon icon={activityStreamIcon} />
         </IconButton>
-      </div>
-      <h1 className="section-label">Icon Button Toggles</h1>
-      <h3>Square Icon Buttons</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
-      <h3>Default Icon Buttons</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
-      <h3>Filled Icon Buttons</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.Filled} />
-      <h3>Inverse Icon Buttons</h3>
-      <div className={css(blueBackground)}>
-        <ToggleIconButtonWrapper buttonType={IconButton.Types.Inverse} />
-      </div>
-      <h3>Inverse Filled Icon Buttons</h3>
-      <div className={css(blueBackground)}>
-        <ToggleIconButtonWrapper buttonType={IconButton.Types.InverseFilled} />
       </div>
     </div>
   ));

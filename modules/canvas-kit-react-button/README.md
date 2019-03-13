@@ -144,16 +144,7 @@ import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 
 ---
 
-#### `toggled: boolean | undefined`
-
-> If defined as a boolean, then it manages the button state: on (`true`) or off (`false`). This is a
-> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component. If
-> left `undefined` then the button is not considered toggle-able (`aria-pressed` is `undefined`) and
-> will act as a normal button.
-
-Default: `undefined`
-
----
+### Optional
 
 #### `buttonType: IconButtonTypes`
 
@@ -183,9 +174,85 @@ Default: `IconButtonTypes.Square`
 | `Small` (Square Icon Type)  | 32px x 32px, 24px Icon Size   | True       |
 | `Medium` (Square Icon Type) | 40px x 40px, 24px Icon Size   | False      |
 
+---
+
+#### `toggled: boolean | undefined`
+
+> If defined as a boolean, then it manages the button state: on (`true`) or off (`false`). This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) `button` component. If
+> left `undefined` then the button is not considered toggle-able (`aria-pressed` is `undefined`) and
+> will act as a normal button.
+
+Default: `undefined`
+
+---
+
 #### `onToggleChange: (toggled: boolean | undefined) => void`
 
 > The callback that is fired when a button toggle prop changes This is true when the toggle changes
 > from `true` to `false` but also if you disable the toggle-ability of a button (in other words, if
 > `toggle` changes from a `boolean` to `undefined`). This is important because the `aria-pressed`
 > attribute for accessibility is goverened by whether or not the `toggle` prop is defined.
+
+---
+
+#### `value: string`
+
+> Value of the button. Must be unique if used within an IconButtonToggleGroup.
+
+# Icon Button Toggle Group
+
+> Group of buttons containing an icon. This is a
+> [_controlled_](https://reactjs.org/docs/forms.html#controlled-components) component.
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {IconButton, IconButtonToggleGroup} from '@workday/canvas-kit-react-button';
+import {listViewIcon, worksheetsIcon} from '@workday/canvas-system-icons-web';
+
+<IconButtonToggleGroup>
+  <IconButton icon={listViewIcon} value="list-view" />
+  <IconButton icon={worksheetsIcon} value="table-view" />
+</IconButtonToggleGroup>;
+```
+
+**Note:** while managing state using a unique `value` for each `IconButton` child is encouraged, you
+can also use indexes and omit the `value` field. It is strongly recommended to not mix these two
+methods.
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+#### `children: React.ReactElement<IconButton>[]`
+
+> Icon buttons to toggle between.
+
+---
+
+### Optional
+
+#### `value: string | number`
+
+> Identify which item is selected (toggled=true).  
+> If a string is passed, the IconButton with the corresponding value will be selected.  
+> If a number is passed, the IconButton with the corresponding index will be selected.
+
+---
+
+#### `isRTL: boolean`
+
+> Identify whether to render from right to left
+
+---
+
+#### `onChange: (value:string | number)=> void`
+
+> Callback function when a toggle button is selected. The value (if defined) or the index of the
+> button will be returned.

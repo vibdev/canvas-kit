@@ -10,6 +10,8 @@
     "spec",
     "stories.tsx",
     "stories_beta.tsx",
-    "stories_icon.tsx"
+    "stories_icon.tsx",
+    "stories_iconButton.tsx",
+    "stories_iconButtonToggle.tsx"
   ]
 }

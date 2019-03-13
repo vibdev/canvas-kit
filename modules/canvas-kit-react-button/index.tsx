@@ -5,4 +5,5 @@ export {default as Button, beta_Button, ButtonProps} from './lib/Button';
 export {default as IconButton} from './lib/IconButton';
 export {default as DropdownButton} from './lib/DropdownButton';
 export {default as TextButton} from './lib/TextButton';
+export {default as IconButtonToggleGroup} from './lib/IconButtonToggleGroup';
 export * from './lib/types';
