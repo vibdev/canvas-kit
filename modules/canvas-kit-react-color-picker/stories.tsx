@@ -40,6 +40,7 @@ export default class CustomColorInputWrapper extends React.Component<
   };
 
   private validColorChange = (colorHex: string) => {
+    console.warn('colorHex', colorHex);
     this.setState({
       color: colorHex,
     });

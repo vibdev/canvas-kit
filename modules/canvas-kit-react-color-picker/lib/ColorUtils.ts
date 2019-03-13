@@ -1,43 +1,4 @@
 import {colors} from '@workday/canvas-kit-react-core';
-// import chroma from 'chroma-js';
-
-const isValidHexCharacter = (character: string): boolean => {
-  return /[a-fA-F0-9]/.test(character);
-};
-
-const stringByConvertingToValidHexValue = (value: string, current: string): string => {
-  const first = value.slice(0, 1);
-  const tail = value.slice(1);
-  const last = value.slice(value.length - 1);
-  if (value === '') {
-    return value;
-  }
-  if (first === '#') {
-    if (value.length === 1) {
-      return current;
-    } else {
-      if (tail.length <= 6) {
-        if (isValidHexCharacter(last)) {
-          return tail;
-        }
-      } else {
-        if (isValidHexCharacter(tail)) {
-          return tail;
-        }
-      }
-    }
-  }
-  if (value.length <= 6) {
-    if (isValidHexCharacter(last)) {
-      return value;
-    }
-  } else {
-    if (isValidHexCharacter(value)) {
-      return value;
-    }
-  }
-  return current;
-};
 
 const hexToRgb = (hex: string) => {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
@@ -74,13 +35,4 @@ const pickDarkOrLightColor = (color: string) => {
   }
 };
 
-const isValidHexValue = (hexCode: string): boolean => {
-  return hexCode.length > 6 ? false : /(^#?[0-9A-F]{3}$)|(^#?[0-9A-F]{6}$)/i.test(hexCode);
-};
-
-export {
-  isValidHexCharacter,
-  isValidHexValue,
-  stringByConvertingToValidHexValue,
-  pickDarkOrLightColor,
-};
+export {pickDarkOrLightColor};

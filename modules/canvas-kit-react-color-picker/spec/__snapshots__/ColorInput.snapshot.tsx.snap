@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`] = `
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,6 +13,7 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   position: absolute;
   left: 36px;
   top: 10px;
+  color: #5e6a75;
 }
 
 .emotion-2 {
@@ -57,12 +58,47 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   border-radius: 2px;
 }
 
+.emotion-6 {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  top: 8px;
+}
+
+.emotion-6 svg {
+  display: block;
+}
+
+.emotion-6 .wd-icon-fill {
+  fill: #000;
+}
+
+.emotion-6:hover .wd-icon-fill {
+  fill: #000;
+}
+
+.emotion-6 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-6:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-6 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6:hover .wd-icon-background {
+  fill: transparent;
+}
+
 <div
   data-whatinput="initial"
   data-whatintent={null}
 >
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     <span
       className="emotion-0 emotion-1"
@@ -71,8 +107,10 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
     </span>
     <input
       className="emotion-2 emotion-3"
+      maxLength={6}
       onChange={[Function]}
       placeholder="FFFFFF"
+      spellCheck={false}
       type="text"
       value="ffffff"
     />
@@ -80,7 +118,15 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
       className="emotion-4 emotion-5"
       style={
         Object {
-          "backgroundColor": "",
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <span
+      className="emotion-6"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
         }
       }
     />
@@ -89,7 +135,7 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
 `;
 
 exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`] = `
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,6 +147,7 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   position: absolute;
   left: 36px;
   top: 10px;
+  color: #5e6a75;
 }
 
 .emotion-2 {
@@ -145,12 +192,47 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   border-radius: 2px;
 }
 
+.emotion-6 {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  top: 8px;
+}
+
+.emotion-6 svg {
+  display: block;
+}
+
+.emotion-6 .wd-icon-fill {
+  fill: #f6f7f8;
+}
+
+.emotion-6:hover .wd-icon-fill {
+  fill: #f6f7f8;
+}
+
+.emotion-6 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-6:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-6 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6:hover .wd-icon-background {
+  fill: transparent;
+}
+
 <div
   data-whatinput="initial"
   data-whatintent={null}
 >
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     <span
       className="emotion-0 emotion-1"
@@ -159,8 +241,10 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
     </span>
     <input
       className="emotion-2 emotion-3"
+      maxLength={6}
       onChange={[Function]}
       placeholder="FFFFFF"
+      spellCheck={false}
       type="text"
       value="e6e"
     />
@@ -168,7 +252,15 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
       className="emotion-4 emotion-5"
       style={
         Object {
-          "backgroundColor": "",
+          "backgroundColor": "#e6e",
+        }
+      }
+    />
+    <span
+      className="emotion-6"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
         }
       }
     />
@@ -189,6 +281,7 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  color: #5e6a75;
 }
 
 .emotion-2 {
@@ -247,8 +340,10 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
     </span>
     <input
       className="emotion-2 emotion-3"
+      maxLength={6}
       onChange={[Function]}
       placeholder="FFFFFF"
+      spellCheck={false}
       type="text"
       value=""
     />
@@ -277,6 +372,7 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  color: #5e6a75;
 }
 
 .emotion-2 {
@@ -335,8 +431,10 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
     </span>
     <input
       className="emotion-2 emotion-3"
+      maxLength={6}
       onChange={[Function]}
       placeholder="FFFFFF"
+      spellCheck={false}
       type="text"
       value="e6e"
     />
@@ -344,7 +442,7 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
       className="emotion-4 emotion-5"
       style={
         Object {
-          "backgroundColor": "",
+          "backgroundColor": "e6e",
         }
       }
     />
@@ -365,6 +463,7 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  color: #5e6a75;
 }
 
 .emotion-2 {
@@ -423,8 +522,10 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
     </span>
     <input
       className="emotion-2 emotion-3"
+      maxLength={6}
       onChange={[Function]}
       placeholder="FFFFFF"
+      spellCheck={false}
       type="text"
       value="e6e"
     />
@@ -432,7 +533,7 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
       className="emotion-4 emotion-5"
       style={
         Object {
-          "backgroundColor": "",
+          "backgroundColor": "#e6e",
         }
       }
     />

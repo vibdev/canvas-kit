@@ -6,15 +6,10 @@ import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {
-  isValidHexValue,
+  // isValidHexValue,
   pickDarkOrLightColor,
-  stringByConvertingToValidHexValue,
+  // stringByConvertingToValidHexValue,
 } from './ColorUtils';
-
-export interface ColorInputState {
-  potentialHexValue: string;
-  isContinuableHexValue: boolean;
-}
 
 export interface ColorInputProps {
   onChange: (color: string) => void;
@@ -80,17 +75,11 @@ const swatchCheckIcon = css({
   top: swatchCheckIconSpacing,
 });
 
-export default class ColorInput extends React.Component<ColorInputProps, ColorInputState> {
-  state = {
-    potentialHexValue: '',
-    isContinuableHexValue: false,
-  };
-
+export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
     const {showSwatchTileCheckIcon, value} = this.props;
-    const {isContinuableHexValue, potentialHexValue} = this.state;
-    const validValue = value && value.slice(0, 1) === '#' ? value.substring(1) : value;
-
+    const validValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
+    console.warn(value);
     return (
       <InputProvider>
         <ColorInputContainer>
@@ -101,13 +90,14 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
             placeholder="FFFFFF"
             value={validValue}
             maxLength={6}
+            spellCheck={false}
           />
           <SwatchTile
             style={{
-              backgroundColor: `${isContinuableHexValue ? '' : potentialHexValue}`,
+              backgroundColor: `${this.isValidHex(value) ? value : ''}`,
             }}
           />
-          {showSwatchTileCheckIcon && potentialHexValue && !isContinuableHexValue ? (
+          {showSwatchTileCheckIcon && this.isValidHex(value) ? (
             <SystemIcon
               fill={pickDarkOrLightColor(value)}
               fillHover={pickDarkOrLightColor(value)}
@@ -120,39 +110,17 @@ export default class ColorInput extends React.Component<ColorInputProps, ColorIn
     );
   }
 
-  public componentDidUpdate(prevProps: ColorInputProps, prevState: ColorInputState) {
-    if (prevState.potentialHexValue !== this.state.potentialHexValue) {
-      this.props.onValidColorChange(this.state.potentialHexValue);
-    }
-  }
-
   private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const inputValue = stringByConvertingToValidHexValue(evt.target.value, this.props.value);
-    const isValidInput = isValidHexValue(inputValue);
-    const threeCharacterValidHexCode = isValidHexValue(inputValue.substring(0, 3));
-    const moreThanThreeCharactersValidHexValue =
-      threeCharacterValidHexCode && (inputValue.length === 4 || inputValue.length === 5);
-    let potentialHexValue: string;
-    let isContinuableHexValue = false;
+    const value = evt.target.value;
 
-    if (isValidInput) {
-      potentialHexValue = `#${inputValue}`;
-    } else {
-      isContinuableHexValue = moreThanThreeCharactersValidHexValue;
+    this.props.onChange(value);
 
-      if (isContinuableHexValue) {
-        potentialHexValue = inputValue;
-      } else {
-        potentialHexValue = '';
-      }
+    if (this.isValidHex(value) && value.slice(0, 1) !== '#') {
+      this.props.onValidColorChange(`#${value}`);
     }
-    const validHexValue = isValidInput || isContinuableHexValue ? potentialHexValue : '';
+  };
 
-    this.setState({
-      potentialHexValue: validHexValue,
-      isContinuableHexValue,
-    });
-
-    this.props.onChange(evt.target.value);
+  private isValidHex = (value: string) => {
+    return /(^#?[0-9A-F]{3}$)|(^#?[0-9A-F]{6}$)/i.test(value);
   };
 }
