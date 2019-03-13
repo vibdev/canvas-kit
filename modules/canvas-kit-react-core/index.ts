@@ -4,6 +4,7 @@ import depth, {CanvasDepth, CanvasDepthValue} from './lib/depth';
 import spacing, {
   spacingNumbers,
   space,
+  SpaceProps,
   CanvasSpacingNumbers,
   CanvasSpacing,
   CanvasSpacingValue,
@@ -29,6 +30,7 @@ export {
   depth,
   spacing,
   space,
+  SpaceProps,
   spacingNumbers,
   type,
   fontFamily,

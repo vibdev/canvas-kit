@@ -109,11 +109,7 @@ const paddingY: SpaceStyle = {
   direction: ['Top', 'Bottom'],
 };
 
-export interface DomainProp {
-  [key: string]: SpaceStyle;
-}
-
-const spacingProps: DomainProp = {
+const spacingProps = {
   m: margin,
   mt: marginTop,
   mr: marginRight,
@@ -130,22 +126,32 @@ const spacingProps: DomainProp = {
   py: paddingY,
 };
 
-const spacingReg = /^[mp][trblxy]?$/;
+type SpaceProp = keyof typeof spacingProps;
+export type StyleValueTypes = string | number;
+export type SpaceProps = {[p in SpaceProp]?: StyleValueTypes};
 
-export const space = (props: any) => {
+export const space = (props: SpaceProps) => {
+  const spacingReg = /^[mp][trblxy]?$/;
   const keys = Object.keys(props)
     .filter(key => spacingReg.test(key))
     .sort();
-  const styles = {} as CSSObject;
 
-  keys.forEach(key => {
-    const value = stripUnit(props[key]);
+  const styles: CSSObject = {};
+
+  keys.forEach((key: SpaceProp) => {
+    const value = props[key];
+
+    if (typeof value === 'undefined') {
+      return;
+    }
+
+    const numericValue = typeof value === 'string' ? stripUnit(value) : value;
     const style = spacingProps[key];
 
     style.direction.forEach(d => {
       const cssAttribute = `${style.prop}${d}`;
 
-      styles[cssAttribute] = `${value}px`;
+      styles[cssAttribute] = `${numericValue}px`;
     });
   });
 
