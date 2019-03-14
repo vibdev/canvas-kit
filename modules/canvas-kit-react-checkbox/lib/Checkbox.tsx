@@ -21,6 +21,8 @@ const RippleRadius = 11;
 
 const CheckboxContainer = styled('div')({
   position: 'relative',
+  height: checkboxHeight,
+  width: checkboxWidth,
   marginBottom: checkboxSpacing,
 });
 

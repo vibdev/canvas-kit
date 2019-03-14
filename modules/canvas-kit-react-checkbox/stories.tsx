@@ -8,7 +8,6 @@ import README from './README.md';
 
 interface CheckboxSwitchWrapperState {
   isChecked: boolean;
-  label: string;
 }
 
 class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperState> {
