@@ -21,24 +21,33 @@ describe('ColorInput', () => {
     const component = mount(
       <ColorInput onChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
     );
+
     const event = {
-      target: {value: 'e6e'},
+      currentTarget: {value: 'e6e'},
     };
-    const input = component.find('input');
-    input.simulate('change', event);
-    expect(onChangeMock).toBeCalledWith('e6e');
+    component.prop('onChange')(event);
+    expect(onChangeMock).toBeCalledWith(event);
+  });
+  test('should call onChange prop onChange with stripped hash', () => {
+    const onChangeMock = jest.fn();
+    const component = mount(
+      <ColorInput onChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
+    );
+    component.setProps({value: '#e6e'});
+
+    expect(component.find('input').props().value).toBe('e6e');
   });
   test('should call onValidColorChange prop onChange with valid hex value', () => {
-    const onValidColorChange = jest.fn();
+    const onValidColorChangeMock = jest.fn();
     const component = mount(
-      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChange} value={''} />
+      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChangeMock} value={'#e6e'} />
     );
     const event = {
-      target: {value: 'e6e'},
+      target: {value: '#e6e'},
     };
     const input = component.find('input');
     input.simulate('change', event);
-    expect(onValidColorChange).toBeCalledWith('#e6e');
+    expect(onValidColorChangeMock).toBeCalledWith('#e6e');
   });
   test('should not call onValidColorChange prop onChange if hex code is not valid', () => {
     const onValidColorChange = jest.fn();
@@ -51,5 +60,11 @@ describe('ColorInput', () => {
     const input = component.find('input');
     input.simulate('change', event);
     expect(onValidColorChange).toHaveBeenCalledTimes(0);
+  });
+  test('should remove hash', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={'#e6e'} />
+    );
+    expect(component.find('input').props().value).toBe('e6e');
   });
 });

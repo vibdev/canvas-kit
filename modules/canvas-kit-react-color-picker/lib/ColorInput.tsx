@@ -1,43 +1,50 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {colors, spacing, type, InputProvider} from '@workday/canvas-kit-react-core';
+import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor} from './ColorUtils';
 
 export interface ColorInputProps {
-  onChange: (color: string) => void;
-  onValidColorChange: (color: string) => void;
   value: string;
-  showSwatchTileCheckIcon?: boolean;
+  showCheck?: boolean;
+  disabled?: boolean;
+  onChange?: (value: string) => void;
+  onValidColorChange?: (color: string) => void;
 }
 
 const swatchTileSpacing = spacing.xxs;
 const swatchTileSize = 20;
 const swatchCheckIconSpacing = 8;
+const colorInputWidth = 111;
 
-const CustomHexInput = styled('input')({
-  margin: spacing.zero,
-  height: spacing.xl,
-  WebkitAppearance: 'none',
-  MozAppearance: 'none',
-  borderColor: 'transparent',
-  borderRadius: '4px',
-  border: `1px solid ${colors.frenchVanilla500}`,
-  boxSizing: 'border-box',
-  paddingLeft: '46px',
-  ...type.body,
-  marginRight: spacing.xxs,
-  [`[data-whatinput='mouse'] &:focus,
-  [data-whatinput='keyboard'] &:focus,
-  [data-whatinput='pointer'] &:focus`]: {
-    outline: 'none',
+const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled'>>(
+  {
+    margin: spacing.zero,
+    height: spacing.xl,
+    WebkitAppearance: 'none',
+    MozAppearance: 'none',
     borderColor: 'transparent',
-    ...focusRing(2, 0),
+    borderRadius: '4px',
+    border: `1px solid ${colors.frenchVanilla500}`,
+    boxSizing: 'border-box',
+    paddingLeft: '46px',
+    paddingRight: spacing.s,
+    width: colorInputWidth,
+    ...type.body,
+    '&:not([disabled]):focus': {
+      outline: 'none',
+      borderColor: 'transparent',
+      ...focusRing(2, 0, true, true),
+    },
   },
-});
+  ({disabled}) => ({
+    backgroundColor: disabled ? colors.soap200 : '',
+    cursor: disabled ? 'not-allowed' : 'cursor',
+  })
+);
 
 const ColorInputContainer = styled('div')({
   display: 'flex',
@@ -72,46 +79,57 @@ const swatchCheckIcon = css({
 });
 
 export default class ColorInput extends React.Component<ColorInputProps> {
+  state = {
+    lastValidHex: '',
+  };
   public render() {
-    const {showSwatchTileCheckIcon, value} = this.props;
+    const {disabled, showCheck, value} = this.props;
     const strippedHashValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
+    const setLimit = value.slice(0, 1) !== '#' ? 7 : 6;
+
     return (
-      <InputProvider>
-        <ColorInputContainer>
-          <PoundSignPrefix>#</PoundSignPrefix>
-          <CustomHexInput
-            onChange={this.onChange}
-            type="text"
-            placeholder="FFFFFF"
-            value={strippedHashValue}
-            maxLength={6}
-            spellCheck={false}
+      <ColorInputContainer>
+        <PoundSignPrefix>#</PoundSignPrefix>
+        <CustomHexInput
+          onChange={this.handleChange}
+          type="text"
+          placeholder="FFFFFF"
+          value={strippedHashValue}
+          spellCheck={false}
+          maxLength={setLimit}
+          disabled={disabled}
+        />
+        <SwatchTile
+          style={{
+            backgroundColor: `${this.isValidHex(value) ? value : ''}`,
+          }}
+        />
+        {showCheck && this.isValidHex(value) ? (
+          <SystemIcon
+            fill={pickDarkOrLightColor(value)}
+            fillHover={pickDarkOrLightColor(value)}
+            className={swatchCheckIcon}
+            icon={checkSmallIcon}
           />
-          <SwatchTile
-            style={{
-              backgroundColor: `${this.isValidHex(value) ? value : ''}`,
-            }}
-          />
-          {showSwatchTileCheckIcon && this.isValidHex(value) ? (
-            <SystemIcon
-              fill={pickDarkOrLightColor(value)}
-              fillHover={pickDarkOrLightColor(value)}
-              className={swatchCheckIcon}
-              icon={checkSmallIcon}
-            />
-          ) : null}
-        </ColorInputContainer>
-      </InputProvider>
+        ) : null}
+      </ColorInputContainer>
     );
   }
 
-  private onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const value = evt.target.value;
+  private handleChange = (e: React.SyntheticEvent<HTMLInputElement>): void => {
+    let value = e.currentTarget.value;
+    if (value.slice(0, 1) === '#') {
+      value = value.replace('#', '');
+    }
 
-    this.props.onChange(value);
+    if (this.props.onChange) {
+      this.props.onChange(value);
+    }
 
-    if (this.isValidHex(value) && value.slice(0, 1) !== '#') {
-      this.props.onValidColorChange(`#${value}`);
+    if (this.isValidHex(value)) {
+      if (this.props.onValidColorChange) {
+        this.props.onValidColorChange(`#${value}`);
+      }
     }
   };
 

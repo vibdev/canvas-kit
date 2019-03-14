@@ -24,7 +24,7 @@ describe('ColorInput Snapshots', () => {
   test('renders a light checkIcon if hex value is dark', () => {
     const component = renderer.create(
       <ColorInput
-        showSwatchTileCheckIcon={true}
+        showCheck={true}
         onChange={jest.fn()}
         onValidColorChange={jest.fn()}
         value={'#e6e'}
@@ -35,11 +35,28 @@ describe('ColorInput Snapshots', () => {
   test('renders a dark checkIcon if hex value is light', () => {
     const component = renderer.create(
       <ColorInput
-        showSwatchTileCheckIcon={true}
+        showCheck={true}
         onChange={jest.fn()}
         onValidColorChange={jest.fn()}
         value={'#ffffff'}
       />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders a disabled input', () => {
+    const component = renderer.create(
+      <ColorInput
+        disabled={true}
+        onChange={jest.fn()}
+        onValidColorChange={jest.fn()}
+        value={'#ffffff'}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders valid empty color input', () => {
+    const component = renderer.create(
+      <ColorInput disabled={false} onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
     expect(component).toMatchSnapshot();
   });

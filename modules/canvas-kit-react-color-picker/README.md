@@ -22,7 +22,7 @@ import * as React from 'react';
 import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 <ColorInput
-  showSwatchTileCheckIcon={true}
+  showCheck={true}
   onChange={this.onChange}
   value={this.state.color}
   onValidColorChange={this.validColorChange}
@@ -37,6 +37,20 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 ### Required
 
+#### `value: string`
+
+> The value entered by the user into the color input
+
+---
+
+### Optional
+
+#### `showCheck: boolean`
+
+> Optionally show a check icon when a custom hex color has been selected
+
+Default: `false`
+
 #### `onChange: (color: string) => void`
 
 > A onChange callback that passes up the value entered by the user
@@ -49,16 +63,10 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 ---
 
-#### `value: string`
+#### `disabled:boolean`
 
-> The value entered by the user into the color input
-
----
-
-### Optional
-
-#### `showSwatchTileCheckIcon: boolean`
-
-> Optionally show a check icon when a custom hex color has been selected
+> Optionally disable the input
 
 Default: `false`
+
+---

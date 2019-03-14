@@ -23,10 +23,11 @@ export default class CustomColorInputWrapper extends React.Component<
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
-          showSwatchTileCheckIcon={true}
+          showCheck={true}
           onChange={this.onChange}
           value={this.state.color}
           onValidColorChange={this.validColorChange}
+          disabled={false}
         />
         <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
       </div>
