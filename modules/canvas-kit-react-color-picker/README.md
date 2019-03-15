@@ -57,10 +57,10 @@ All standard input attributes are available and can be passed to the input field
 
 Default: `false`
 
-#### `onChange: (color: string) => void`
+#### `onChange: (e: React.ChangeEvent<HTMLInputElement>) => void`
 
-> A onChange callback that passes up the value entered by the user. Should be used to control the
-> input.
+> A onChange callback from the input. Value can be accessed from `e.currentTarget.value`. Should be
+> used to control the input.
 
 ---
 

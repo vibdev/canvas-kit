@@ -37,9 +37,9 @@ export default class CustomColorInputWrapper extends React.Component<
     );
   }
 
-  private onChange = (color: string) => {
+  private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({
-      color: color,
+      color: e.currentTarget.value,
     });
   };
 

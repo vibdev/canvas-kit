@@ -7,14 +7,12 @@ import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor, expandHex} from './ColorUtils';
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-
 export interface ColorInputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'>,
+  extends React.InputHTMLAttributes<HTMLInputElement>,
     GrowthBehavior {
   value: string;
   showCheck?: boolean;
-  onChange?: (color: string) => void;
+  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
   onValidColorChange?: (color: string) => void;
 }
 
@@ -114,11 +112,11 @@ export default class ColorInput extends React.Component<ColorInputProps> {
     );
   }
 
-  private handleChange = (e: React.SyntheticEvent<HTMLInputElement>): void => {
+  private handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const value = this.formatValue(e.currentTarget.value);
 
     if (this.props.onChange) {
-      this.props.onChange(value);
+      this.props.onChange(e);
     }
 
     if (this.isValidHex(value) && this.props.onValidColorChange) {
