@@ -2071,10 +2071,22 @@
   dependencies:
     "@workday/design-assets-types" "0.2.1"
 
+"@workday/canvas-system-icons-web@^0.16.34":
+  version "0.16.34"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.34.tgz#afe351028c6e48889ee3d23cb6a211ee6603ccb1"
+  integrity sha1-r+NRAoxuSIie49I8tqIR7mYDzLE=
+  dependencies:
+    "@workday/design-assets-types" "0.2.3"
+
 "@workday/design-assets-types@0.2.1", "@workday/design-assets-types@^0.2.1":
   version "0.2.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/design-assets-types/-/@workday/design-assets-types-0.2.1.tgz#0a087758c6f4774e1e5714c883440a995b04efaf"
   integrity sha1-Cgh3WMb0d04eVxTIg0QKmVsE768=
+
+"@workday/design-assets-types@0.2.3":
+  version "0.2.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-local/@workday/design-assets-types/-/@workday/design-assets-types-0.2.3.tgz#bf541b9199c2b02ac72595fa98739294ff7dde21"
+  integrity sha1-v1QbkZnCsCrHJZX6mHOSlP993iE=
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
