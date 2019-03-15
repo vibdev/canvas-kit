@@ -94,7 +94,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           placeholder="FFFFFF"
           value={this.formatValue(value)}
           spellCheck={false}
-          maxLength={7}
+          maxLength={7} // 7 to allow pasting with a hash
           {...otherProps}
         />
         <SwatchTile
