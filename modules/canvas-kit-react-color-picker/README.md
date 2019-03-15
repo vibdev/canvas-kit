@@ -15,6 +15,10 @@ or
 yarn add @workday/canvas-kit-color-picker
 ```
 
+# Color Input
+
+A controlled input for accepting typed/pasted hex codes.
+
 ## Usage
 
 ```tsx
@@ -55,10 +59,12 @@ Default: `false`
 
 #### `onChange: (color: string) => void`
 
-> A onChange callback that passes up the value entered by the user
+> A onChange callback that passes up the value entered by the user. Should be used to control the
+> input.
 
 ---
 
 #### `onValidColorChange: (color: string) => void`
 
-> A callback that passes up the valid hex value typed by the user
+> A callback that passes up the valid hex value typed by the user. This is always prefixed with a
+> hash, and is always the expanded hex value (e.g. "03F" > "#0033FF").
