@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.2.4...@workday/canvas-kit-react@1.3.0) (2019-03-15)
+
+
+### Bug Fixes
+
+* **univeral:** add color input to universal ([5f875d8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/5f875d8))
+* **universal:** alphabetize ([6a7aa4c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/6a7aa4c))
+
+
+### Features
+
+* **colorInput:** add color input to export ([061c4f3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/061c4f3))
+
+
+
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.2.3...@workday/canvas-kit-react@1.2.4) (2019-03-13)
 
