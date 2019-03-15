@@ -1,13 +1,15 @@
 import {colors} from '@workday/canvas-kit-react-core';
 
-const hexToRgb = (hex: string) => {
-  // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+export const expandHex = (hex: string) => {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  const rgb = hex.replace(shorthandRegex, function(m: string, r: string, g: string, b: string) {
+  return hex.replace(shorthandRegex, function(m: string, r: string, g: string, b: string) {
     return r + r + g + g + b + b;
   });
+};
 
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(rgb);
+const hexToRgb = (hex: string) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(expandHex(hex));
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -22,7 +24,7 @@ const hexToRgb = (hex: string) => {
  * Chooses luminance color depending on the rgb value. Eventually should be replaced
  * by by Chroma 2.0
  */
-const pickDarkOrLightColor = (color: string) => {
+export const pickDarkOrLightColor = (color: string) => {
   const rgbColor = hexToRgb(color);
   if (rgbColor) {
     const r: number = rgbColor.r;
@@ -36,5 +38,3 @@ const pickDarkOrLightColor = (color: string) => {
     return;
   }
 };
-
-export {pickDarkOrLightColor};

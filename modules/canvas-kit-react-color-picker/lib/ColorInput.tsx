@@ -5,7 +5,7 @@ import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {pickDarkOrLightColor} from './ColorUtils';
+import {pickDarkOrLightColor, expandHex} from './ColorUtils';
 
 export interface ColorInputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -114,14 +114,14 @@ export default class ColorInput extends React.Component<ColorInputProps> {
   }
 
   private handleChange = (e: React.SyntheticEvent<HTMLInputElement>): void => {
-    const value = e.currentTarget.value;
+    const value = this.formatValue(e.currentTarget.value);
 
     if (this.props.onColorChange) {
-      this.props.onColorChange(this.formatValue(value));
+      this.props.onColorChange(value);
     }
 
     if (this.isValidHex(value) && this.props.onValidColorChange) {
-      this.props.onValidColorChange(`#${value}`);
+      this.props.onValidColorChange(`#${expandHex(value)}`);
     }
   };
 

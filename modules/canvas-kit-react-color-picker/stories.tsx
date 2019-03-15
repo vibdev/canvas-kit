@@ -9,6 +9,7 @@ import README from './README.md';
 
 interface CustomColorInputWrapperState {
   color: string;
+  validColor: string;
 }
 
 export default class CustomColorInputWrapper extends React.Component<
@@ -17,6 +18,7 @@ export default class CustomColorInputWrapper extends React.Component<
 > {
   state = {
     color: '',
+    validColor: '',
   };
 
   public render() {
@@ -30,7 +32,7 @@ export default class CustomColorInputWrapper extends React.Component<
           disabled={false}
           grow={false}
         />
-        <h3 style={{color: this.state.color}}>Change My Text Color</h3>
+        <h3 style={{color: this.state.validColor}}>Change My Text Color</h3>
       </div>
     );
   }
@@ -43,7 +45,7 @@ export default class CustomColorInputWrapper extends React.Component<
 
   private validColorChange = (colorHex: string) => {
     this.setState({
-      color: colorHex,
+      validColor: colorHex,
     });
   };
 }
