@@ -26,7 +26,7 @@ export default class CustomColorInputWrapper extends React.Component<
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
           showCheck={true}
-          onColorChange={this.onChange}
+          onChange={this.onChange}
           value={this.state.color}
           onValidColorChange={this.validColorChange}
           disabled={false}

@@ -10,7 +10,7 @@ describe('ColorInput', () => {
 
   test('should update value onChange', () => {
     const component = mount(
-      <ColorInput onColorChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={''} />
     );
     expect(component.find('input').props().value).toBe('');
     component.setProps({value: 'e6e'});
@@ -19,19 +19,19 @@ describe('ColorInput', () => {
   test('should call onChange prop onChange with value', () => {
     const onChangeMock = jest.fn();
     const component = mount(
-      <ColorInput onColorChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
+      <ColorInput onChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
     );
 
     const event = {
       currentTarget: {value: 'e6e'},
     };
-    component.prop('onColorChange')(event);
+    component.prop('onChange')(event);
     expect(onChangeMock).toBeCalledWith(event);
   });
   test('should call onChange prop onChange with stripped hash', () => {
     const onChangeMock = jest.fn();
     const component = mount(
-      <ColorInput onColorChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
+      <ColorInput onChange={onChangeMock} onValidColorChange={jest.fn()} value={''} />
     );
     component.setProps({value: '#e6e'});
 
@@ -40,23 +40,19 @@ describe('ColorInput', () => {
   test('should call onValidColorChange prop onChange with valid hex value', () => {
     const onValidColorChangeMock = jest.fn();
     const component = mount(
-      <ColorInput
-        onColorChange={jest.fn()}
-        onValidColorChange={onValidColorChangeMock}
-        value={'#e6e'}
-      />
+      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChangeMock} value={'#e6e'} />
     );
     const event = {
       target: {value: '#e6e'},
     };
     const input = component.find('input');
     input.simulate('change', event);
-    expect(onValidColorChangeMock).toBeCalledWith('#e6e');
+    expect(onValidColorChangeMock).toBeCalledWith('#ee66ee');
   });
   test('should not call onValidColorChange prop onChange if hex code is not valid', () => {
     const onValidColorChange = jest.fn();
     const component = mount(
-      <ColorInput onColorChange={jest.fn()} onValidColorChange={onValidColorChange} value={''} />
+      <ColorInput onChange={jest.fn()} onValidColorChange={onValidColorChange} value={''} />
     );
     const event = {
       target: {value: 'e6ee'},
@@ -67,7 +63,7 @@ describe('ColorInput', () => {
   });
   test('should remove hash', () => {
     const component = mount(
-      <ColorInput onColorChange={jest.fn()} onValidColorChange={jest.fn()} value={'#e6e'} />
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={'#e6e'} />
     );
     expect(component.find('input').props().value).toBe('e6e');
   });

@@ -7,13 +7,14 @@ import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor, expandHex} from './ColorUtils';
 
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
 export interface ColorInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'>,
     GrowthBehavior {
   value: string;
   showCheck?: boolean;
-  grow?: boolean;
-  onColorChange?: (color: string) => void;
+  onChange?: (color: string) => void;
   onValidColorChange?: (color: string) => void;
 }
 
@@ -82,7 +83,7 @@ const swatchCheckIcon = css({
 
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
-    const {showCheck, value, onColorChange, onValidColorChange, ...otherProps} = this.props;
+    const {showCheck, value, onChange, onValidColorChange, ...otherProps} = this.props;
 
     return (
       <ColorInputContainer>
@@ -116,8 +117,8 @@ export default class ColorInput extends React.Component<ColorInputProps> {
   private handleChange = (e: React.SyntheticEvent<HTMLInputElement>): void => {
     const value = this.formatValue(e.currentTarget.value);
 
-    if (this.props.onColorChange) {
-      this.props.onColorChange(value);
+    if (this.props.onChange) {
+      this.props.onChange(value);
     }
 
     if (this.isValidHex(value) && this.props.onValidColorChange) {
