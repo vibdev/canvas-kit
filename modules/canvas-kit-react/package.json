@@ -38,6 +38,7 @@
     "@workday/canvas-kit-react-avatar": "^0.4.2",
     "@workday/canvas-kit-react-button": "^0.19.3",
     "@workday/canvas-kit-react-card": "^0.3.1",
+    "@workday/canvas-kit-react-color-picker": "^0.0.0",
     "@workday/canvas-kit-react-common": "^0.3.2",
     "@workday/canvas-kit-react-cookie-banner": "^0.4.3",
     "@workday/canvas-kit-react-core": "^1.7.1",
