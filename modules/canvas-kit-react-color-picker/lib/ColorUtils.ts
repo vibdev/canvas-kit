@@ -29,7 +29,9 @@ const pickDarkOrLightColor = (color: string) => {
     const g: number = rgbColor.g;
     const b: number = rgbColor.b;
     /** Based on : https://www.w3.org/TR/WCAG20-TECHS/G18.html */
-    return r * 0.299 + g * 0.587 + b * 0.114 > 186 ? '#000' : colors.soap100;
+    return r * 0.299 + g * 0.587 + b * 0.114 > 186
+      ? colors.blackPepper600
+      : colors.frenchVanilla100;
   } else {
     return;
   }

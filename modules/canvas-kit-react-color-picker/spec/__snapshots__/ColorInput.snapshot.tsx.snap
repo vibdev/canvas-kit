@@ -13,7 +13,11 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -27,14 +31,13 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -71,11 +74,11 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
 }
 
 .emotion-6 .wd-icon-fill {
-  fill: #000;
+  fill: #000000;
 }
 
 .emotion-6:hover .wd-icon-fill {
-  fill: #000;
+  fill: #000000;
 }
 
 .emotion-6 .wd-icon-accent {
@@ -105,7 +108,7 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   <input
     className="emotion-2 emotion-3"
     maxLength={6}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -143,7 +146,11 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-4 {
@@ -171,14 +178,13 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #f0f1f2;
-  cursor: not-allowed;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -201,7 +207,7 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
     className="emotion-2 emotion-3"
     disabled={true}
     maxLength={6}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -231,7 +237,11 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -245,14 +255,13 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -289,11 +298,11 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
 }
 
 .emotion-6 .wd-icon-fill {
-  fill: #f6f7f8;
+  fill: #ffffff;
 }
 
 .emotion-6:hover .wd-icon-fill {
-  fill: #f6f7f8;
+  fill: #ffffff;
 }
 
 .emotion-6 .wd-icon-accent {
@@ -323,7 +332,7 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   <input
     className="emotion-2 emotion-3"
     maxLength={6}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -361,7 +370,11 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -375,14 +388,13 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -418,7 +430,7 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   <input
     className="emotion-2 emotion-3"
     maxLength={7}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -448,7 +460,11 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -462,14 +478,13 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -506,7 +521,7 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
     className="emotion-2 emotion-3"
     disabled={false}
     maxLength={7}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -536,7 +551,11 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -550,14 +569,13 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -593,7 +611,7 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   <input
     className="emotion-2 emotion-3"
     maxLength={7}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"
@@ -623,7 +641,11 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   position: absolute;
   left: 36px;
   top: 10px;
+  font-size: 14px;
   color: #5e6a75;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-2 {
@@ -637,14 +659,13 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   box-sizing: border-box;
   padding-left: 46px;
   padding-right: 16px;
-  width: 111px;
+  width: 116px;
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
-  cursor: cursor;
 }
 
 .emotion-2:not([disabled]):focus {
@@ -680,7 +701,7 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   <input
     className="emotion-2 emotion-3"
     maxLength={6}
-    onChange={[Function]}
+    onChange={[MockFunction]}
     placeholder="FFFFFF"
     spellCheck={false}
     type="text"

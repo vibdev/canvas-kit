@@ -24,12 +24,13 @@ export default class CustomColorInputWrapper extends React.Component<
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
           showCheck={true}
-          onChange={this.onChange}
+          onColorChange={this.onChange}
           value={this.state.color}
           onValidColorChange={this.validColorChange}
           disabled={false}
+          grow={false}
         />
-        <h3 style={{color: `${this.state.color}`}}>Change My Text Color</h3>
+        <h3 style={{color: this.state.color}}>Change My Text Color</h3>
       </div>
     );
   }

@@ -1,27 +1,29 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {focusRing} from '@workday/canvas-kit-react-common';
+import {focusRing, GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor} from './ColorUtils';
 
-export interface ColorInputProps {
+export interface ColorInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement>,
+    GrowthBehavior {
   value: string;
   showCheck?: boolean;
-  disabled?: boolean;
-  onChange?: (value: string) => void;
+  grow?: boolean;
+  onColorChange?: (color: string) => void;
   onValidColorChange?: (color: string) => void;
 }
 
 const swatchTileSpacing = spacing.xxs;
 const swatchTileSize = 20;
 const swatchCheckIconSpacing = 8;
-const colorInputWidth = 111;
+const colorInputWidth = 116;
 
-const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled'>>(
-  {
+const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled' | 'grow'>>(
+  ({grow}) => ({
     margin: spacing.zero,
     height: spacing.xl,
     WebkitAppearance: 'none',
@@ -32,17 +34,16 @@ const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled'>>(
     boxSizing: 'border-box',
     paddingLeft: '46px',
     paddingRight: spacing.s,
-    width: colorInputWidth,
+    width: grow ? '100%' : colorInputWidth,
     ...type.body,
     '&:not([disabled]):focus': {
       outline: 'none',
       borderColor: 'transparent',
       ...focusRing(2, 0, true, true),
     },
-  },
+  }),
   ({disabled}) => ({
     backgroundColor: disabled ? colors.soap200 : '',
-    cursor: disabled ? 'not-allowed' : 'cursor',
   })
 );
 
@@ -55,6 +56,7 @@ const PoundSignPrefix = styled('span')({
   position: 'absolute',
   left: 36,
   top: 10,
+  ...type.body,
   ...type.variant.hint,
 });
 
@@ -79,13 +81,10 @@ const swatchCheckIcon = css({
 });
 
 export default class ColorInput extends React.Component<ColorInputProps> {
-  state = {
-    lastValidHex: '',
-  };
   public render() {
-    const {disabled, showCheck, value} = this.props;
+    const {showCheck, value, onColorChange, onValidColorChange, ...otherProps} = this.props;
     const strippedHashValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
-    const setLimit = value.slice(0, 1) !== '#' ? 7 : 6;
+    const limit = value.slice(0, 1) !== '#' || !this.isValidHex(value) ? 7 : 6;
 
     return (
       <ColorInputContainer>
@@ -96,8 +95,8 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           placeholder="FFFFFF"
           value={strippedHashValue}
           spellCheck={false}
-          maxLength={setLimit}
-          disabled={disabled}
+          maxLength={limit}
+          {...otherProps}
         />
         <SwatchTile
           style={{
@@ -121,15 +120,12 @@ export default class ColorInput extends React.Component<ColorInputProps> {
     if (value.slice(0, 1) === '#') {
       value = value.replace('#', '');
     }
-
-    if (this.props.onChange) {
-      this.props.onChange(value);
+    if (this.props.onColorChange) {
+      this.props.onColorChange(value);
     }
 
-    if (this.isValidHex(value)) {
-      if (this.props.onValidColorChange) {
-        this.props.onValidColorChange(`#${value}`);
-      }
+    if (this.isValidHex(value) && this.props.onValidColorChange) {
+      this.props.onValidColorChange(`#${value}`);
     }
   };
 

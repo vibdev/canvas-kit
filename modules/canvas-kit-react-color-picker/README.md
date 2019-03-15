@@ -35,6 +35,8 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 ## Component Props
 
+All standard input attributes are available and can be passed to the input field.
+
 ### Required
 
 #### `value: string`
@@ -60,13 +62,3 @@ Default: `false`
 #### `onValidColorChange: (color: string) => void`
 
 > A callback that passes up the valid hex value typed by the user
-
----
-
-#### `disabled:boolean`
-
-> Optionally disable the input
-
-Default: `false`
-
----
