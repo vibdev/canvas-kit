@@ -83,8 +83,6 @@ const swatchCheckIcon = css({
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
     const {showCheck, value, onColorChange, onValidColorChange, ...otherProps} = this.props;
-    const strippedHashValue = value.slice(0, 1) === '#' ? value.substring(1) : value;
-    const limit = value.slice(0, 1) !== '#' || !this.isValidHex(value) ? 7 : 6;
 
     return (
       <ColorInputContainer>
@@ -93,9 +91,9 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           onChange={this.handleChange}
           type="text"
           placeholder="FFFFFF"
-          value={strippedHashValue}
+          value={this.formatValue(value)}
           spellCheck={false}
-          maxLength={limit}
+          maxLength={7}
           {...otherProps}
         />
         <SwatchTile
@@ -116,12 +114,10 @@ export default class ColorInput extends React.Component<ColorInputProps> {
   }
 
   private handleChange = (e: React.SyntheticEvent<HTMLInputElement>): void => {
-    let value = e.currentTarget.value;
-    if (value.slice(0, 1) === '#') {
-      value = value.replace('#', '');
-    }
+    const value = e.currentTarget.value;
+
     if (this.props.onColorChange) {
-      this.props.onColorChange(value);
+      this.props.onColorChange(this.formatValue(value));
     }
 
     if (this.isValidHex(value) && this.props.onValidColorChange) {
@@ -131,5 +127,9 @@ export default class ColorInput extends React.Component<ColorInputProps> {
 
   private isValidHex = (value: string) => {
     return /(^#?[0-9A-F]{3}$)|(^#?[0-9A-F]{6}$)/i.test(value);
+  };
+
+  private formatValue = (value: string) => {
+    return value.replace(/#/g, '').substring(0, 6);
   };
 }
