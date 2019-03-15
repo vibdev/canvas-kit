@@ -51,11 +51,11 @@ All standard input attributes are available and can be passed to the input field
 
 ### Optional
 
-#### `showCheck: boolean`
+#### `inputRef: React.Ref<HTMLInputElement>`
 
-> Optionally show a check icon when a custom hex color has been selected
+> A ref to the input element. This allows you to imperatively focus on the color input if needed.
 
-Default: `false`
+---
 
 #### `onChange: (e: React.ChangeEvent<HTMLInputElement>) => void`
 
@@ -68,3 +68,11 @@ Default: `false`
 
 > A callback that passes up the valid hex value typed by the user. This is always prefixed with a
 > hash, and is always the expanded hex value (e.g. "03F" > "#0033FF").
+
+---
+
+#### `showCheck: boolean`
+
+> Optionally show a check icon when a custom hex color has been selected
+
+Default: `false`

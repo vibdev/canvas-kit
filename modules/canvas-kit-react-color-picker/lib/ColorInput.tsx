@@ -11,6 +11,7 @@ export interface ColorInputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
     GrowthBehavior {
   value: string;
+  inputRef?: React.Ref<HTMLInputElement>;
   showCheck?: boolean;
   onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
   onValidColorChange?: (color: string) => void;
@@ -81,13 +82,14 @@ const swatchCheckIcon = css({
 
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
-    const {showCheck, value, onChange, onValidColorChange, ...otherProps} = this.props;
+    const {showCheck, value, onChange, onValidColorChange, inputRef, ...otherProps} = this.props;
     const formattedValue = this.formatValue(value);
 
     return (
       <ColorInputContainer>
         <PoundSignPrefix>#</PoundSignPrefix>
         <CustomHexInput
+          innerRef={inputRef}
           onChange={this.handleChange}
           type="text"
           placeholder="FFFFFF"
