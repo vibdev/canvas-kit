@@ -82,6 +82,7 @@ const swatchCheckIcon = css({
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
     const {showCheck, value, onChange, onValidColorChange, ...otherProps} = this.props;
+    const formattedValue = this.formatValue(value);
 
     return (
       <ColorInputContainer>
@@ -90,14 +91,14 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           onChange={this.handleChange}
           type="text"
           placeholder="FFFFFF"
-          value={this.formatValue(value)}
+          value={formattedValue}
           spellCheck={false}
           maxLength={7} // 7 to allow pasting with a hash
           {...otherProps}
         />
         <SwatchTile
           style={{
-            backgroundColor: `${this.isValidHex(value) ? value : ''}`,
+            backgroundColor: this.isValidHex(value) ? `#${formattedValue}` : '',
           }}
         />
         {showCheck && this.isValidHex(value) ? (
