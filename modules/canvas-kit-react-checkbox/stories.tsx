@@ -8,7 +8,10 @@ import README from './README.md';
 
 interface CheckboxSwitchWrapperState {
   isChecked: boolean;
+  hasError: boolean;
+  hasAlert: boolean;
   label: string;
+  message: string;
   id: string;
 }
 
@@ -17,8 +20,11 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
     super(props);
     this.state = {
       id: '1',
-      isChecked: true,
+      isChecked: false,
+      hasError: false,
+      hasAlert: false,
       label: 'This is a checkbox',
+      message: 'This is a message',
     };
     this.handleCheck = this.handleCheck.bind(this);
   }
