@@ -1,8 +1,10 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import {focusRing} from '@workday/canvas-kit-react-common';
 import {colors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
+import {blockchainIcon} from '@workday/canvas-accent-icons-web';
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
@@ -38,16 +40,21 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       outline: 'none',
     },
     // I wonder if this should be replaced by a event where we look at if the Input is on focus/hover and then use these as props
-    '&:focus ~ div:first-of-type, &:active ~ div:first-of-type, &:focus&:hover ~ div:first-of-type, &:active&:hover ~ div:first-of-type': {
-      borderColor: colors.blueberry400,
-      borderWidth: '2px',
+    '&:focus, &:active, &focus:hover, &:active:hover': {
+      '& ~ div:first-of-type': {
+        ...focusRing(0, 0),
+        borderColor: colors.blueberry400,
+        borderWidth: '2px',
+      },
+      '&:checked ~ div:first-of-type': {
+        ...focusRing(2, 2),
+      },
     },
     '&:hover ~ div:nth-of-type(2)': {
       boxShadow: '0 0 0 ' + RippleRadius + 'px ' + colors.soap200,
     },
   },
   ({disabled, checked}) => ({
-    cursor: disabled ? 'not-allowed' : 'pointer',
     '&:hover ~ div:first-of-type': {
       borderColor: checked ? colors.blueberry400 : colors.licorice200,
     },
@@ -56,7 +63,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
 
 const CheckboxBackground = styled('div')<Pick<CheckboxProps, 'checked' | 'disabled'>>(
   {
-    backgroundColor: 'white',
+    backgroundColor: colors.frenchVanilla100,
     boxSizing: 'border-box',
     position: 'absolute',
     display: 'flex',
@@ -87,7 +94,7 @@ const Ripple = styled('div')({
   width: checkboxWidth,
   height: checkboxHeight,
   boxShadow: '0 0 0 0 ' + colors.soap200,
-  transition: 'box-shadow 200ms ease',
+  transition: 'box-shadow 200ms ease-out',
   borderRadius: 999,
   zIndex: -999,
 });
