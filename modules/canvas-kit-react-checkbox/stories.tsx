@@ -8,13 +8,17 @@ import README from './README.md';
 
 interface CheckboxSwitchWrapperState {
   isChecked: boolean;
+  label: string;
+  id: string;
 }
 
 class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperState> {
   public constructor(props: {}) {
     super(props);
     this.state = {
+      id: '1',
       isChecked: true,
+      label: 'This is a checkbox',
     };
     this.handleCheck = this.handleCheck.bind(this);
   }
@@ -22,7 +26,13 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
   public render() {
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <Checkbox disabled={false} checked={this.state.isChecked} onChange={this.handleCheck} />
+        <Checkbox
+          id={this.state.id}
+          disabled={false}
+          checked={this.state.isChecked}
+          onChange={this.handleCheck}
+          label={this.state.label}
+        />
       </div>
     );
   }

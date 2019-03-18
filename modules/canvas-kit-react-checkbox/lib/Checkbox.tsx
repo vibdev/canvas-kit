@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
-import {colors} from '@workday/canvas-kit-react-core';
+import {colors, typeColors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
-import {blockchainIcon} from '@workday/canvas-accent-icons-web';
+import CanvasSpacing from '@workday/canvas-space-web';
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
@@ -13,6 +13,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   onChange?: (e: React.SyntheticEvent) => void;
   value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
+  label?: string;
 }
 
 const checkboxWidth = 18;
@@ -22,9 +23,7 @@ const checkboxBorderRadius = 2;
 const RippleRadius = 11;
 
 const CheckboxContainer = styled('div')({
-  position: 'relative',
-  height: checkboxHeight,
-  width: checkboxWidth,
+  position: 'absolute',
   marginBottom: checkboxSpacing,
 });
 
@@ -35,11 +34,9 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     width: checkboxWidth,
     borderRadius: checkboxBorderRadius,
     margin: 0,
-    opacity: 0,
     '&:focus, &:active': {
       outline: 'none',
     },
-    // I wonder if this should be replaced by a event where we look at if the Input is on focus/hover and then use these as props
     '&:focus, &:active, &focus:hover, &:active:hover': {
       '& ~ div:first-of-type': {
         ...focusRing(0, 0),
@@ -50,7 +47,17 @@ const CheckboxInput = styled('input')<CheckboxProps>(
         ...focusRing(2, 2),
       },
     },
-    '&:hover ~ div:nth-of-type(2)': {
+    '&::after': {
+      display: 'block',
+      content: '""',
+      width: checkboxWidth,
+      height: checkboxHeight,
+      boxShadow: '0 0 0 0 ' + colors.soap200,
+      transition: 'box-shadow 200ms ease-out',
+      borderRadius: 999,
+      zIndex: -999,
+    },
+    '&:hover::after': {
       boxShadow: '0 0 0 ' + RippleRadius + 'px ' + colors.soap200,
     },
   },
@@ -88,17 +95,6 @@ const CheckboxBackground = styled('div')<Pick<CheckboxProps, 'checked' | 'disabl
   })
 );
 
-// This should live somewhere else, maybe in canvas-kit-react-common
-const Ripple = styled('div')({
-  position: 'absolute',
-  width: checkboxWidth,
-  height: checkboxHeight,
-  boxShadow: '0 0 0 0 ' + colors.soap200,
-  transition: 'box-shadow 200ms ease-out',
-  borderRadius: 999,
-  zIndex: -999,
-});
-
 const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   {
     position: 'absolute',
@@ -113,13 +109,23 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   })
 );
 
+const CheckboxLabel = styled('label')<CheckboxProps>({
+  fontSize: '14px',
+  fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
+  color: typeColors.body,
+  lineHeight: '20px',
+  fontWeight: 500,
+  marginLeft: checkboxWidth + checkboxSpacing,
+  display: 'block',
+});
+
 export default class ToggleSwitch extends React.Component<CheckboxProps> {
   public static defaultProps = {
     checked: false,
   };
 
   public render() {
-    const {checked, disabled, id, inputRef, onChange, value, ...otherProps} = this.props;
+    const {checked, disabled, id, inputRef, onChange, value, label, ...otherProps} = this.props;
 
     return (
       <CheckboxContainer>
@@ -140,7 +146,7 @@ export default class ToggleSwitch extends React.Component<CheckboxProps> {
             <SystemIcon icon={checkSmallIcon} color={colors.frenchVanilla100} />
           </CheckboxCheck>
         </CheckboxBackground>
-        <Ripple />
+        <CheckboxLabel for={id}>{label}</CheckboxLabel>
       </CheckboxContainer>
     );
   }
