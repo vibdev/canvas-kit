@@ -4,7 +4,7 @@ cat << EOM
 This utility will walk you through creating a new canvas-kit module.
 You will need to manually add dependencies after the fact.
 
-After adding dependencies, use \`lerna bootstrap\` in the root of
+After adding dependencies, use \`yarn\` in the root of
 the project to bootstrap all dependencies across all modules.
 
 Press ^C at any time to quit.
@@ -117,7 +117,7 @@ echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
 /// <reference path="../../typings.d.ts" />
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
+import {storiesOf} from '@storybook/react'
 import withReadme from 'storybook-readme/with-readme'
 
 import MyComponent from './index' // tslint:disable-line:import-name
@@ -160,6 +160,6 @@ yarn.lock
 
 EOF
 
-# Bootstrap Lerna
+# Install dependencies
 echo -e "\nInstalling dependencies\n"
-`lerna bootstrap`
+yarn
