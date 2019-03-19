@@ -13,3 +13,4 @@ export * from '@workday/canvas-kit-react-loading-animation';
 export * from '@workday/canvas-kit-react-page-header';
 export * from '@workday/canvas-kit-react-table';
 export * from '@workday/canvas-kit-react-toggle';
+export * from '@workday/canvas-kit-react-skeleton';

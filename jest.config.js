@@ -17,6 +17,7 @@ module.exports = {
     '**/canvas-kit-react-table/**/*.{tsx,}',
     '**/canvas-kit-react-toggle/**/*.{tsx,}',
     '**/canvas-kit-react-loading-animation/**/*.{tsx,}',
+    '**/canvas-kit-react-skeleton/**/*.{tsx,}',
     '**/canvas-kit-react-page-header/**/*.{tsx,}',
     '**/canvas-kit-react-header/**/*.{tsx,}',
     '**/canvas-kit-react-icon/**/*.{tsx,}',
