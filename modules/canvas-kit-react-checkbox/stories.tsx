@@ -11,7 +11,8 @@ interface CheckboxSwitchWrapperState {
   hasError: boolean;
   hasAlert: boolean;
   label: string;
-  message: string;
+  messageTitle: string;
+  messageContent: string;
   id: string;
 }
 
@@ -21,10 +22,11 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
     this.state = {
       id: '1',
       isChecked: false,
-      hasError: false,
-      hasAlert: false,
+      // hasError: true,
+      // hasAlert: false,
       label: 'This is a checkbox',
-      message: 'This is a message',
+      // messageTitle: 'Alert:',
+      // messageContent: 'This is a message',
     };
     this.handleCheck = this.handleCheck.bind(this);
   }
@@ -38,6 +40,10 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
           checked={this.state.isChecked}
           onChange={this.handleCheck}
           label={this.state.label}
+          hasError={this.state.hasError}
+          hasAlert={this.state.hasAlert}
+          messageTitle={this.state.messageTitle}
+          messageContent={this.state.messageContent}
         />
       </div>
     );

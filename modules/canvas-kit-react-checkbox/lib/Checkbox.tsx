@@ -16,14 +16,15 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
   label?: string;
-  message?: string;
+  messageTitle?: string;
+  messageContent?: string;
 }
 
-const checkboxWidth = 18;
+const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
 const checkboxSpacing = 11;
-const checkboxBorderRadius = 2;
-const RippleRadius = 11;
+const checkboxWidth = 18;
+const rippleRadius = 11;
 
 const CheckboxContainer = styled('div')({
   marginBottom: checkboxSpacing,
@@ -31,11 +32,11 @@ const CheckboxContainer = styled('div')({
 
 const CheckboxInput = styled('input')<CheckboxProps>(
   {
-    position: 'absolute',
-    height: checkboxHeight,
-    width: checkboxWidth,
     borderRadius: checkboxBorderRadius,
+    height: checkboxHeight,
     margin: 0,
+    position: 'absolute',
+    width: checkboxWidth,
     '&:focus, &:active': {
       outline: 'none',
     },
@@ -50,17 +51,17 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       },
     },
     '&::after': {
-      display: 'block',
-      content: '""',
-      width: checkboxWidth,
-      height: checkboxHeight,
-      boxShadow: '0 0 0 0 ' + colors.soap200,
-      transition: 'box-shadow 200ms ease-out',
       borderRadius: 999,
+      boxShadow: '0 0 0 0 ' + colors.soap200,
+      content: '""',
+      display: 'block',
+      height: checkboxHeight,
+      transition: 'box-shadow 200ms ease-out',
+      width: checkboxWidth,
       zIndex: -999,
     },
     '&:hover::after': {
-      boxShadow: '0 0 0 ' + RippleRadius + 'px ' + colors.soap200,
+      boxShadow: '0 0 0 ' + rippleRadius + 'px ' + colors.soap200,
     },
   },
   ({checked}) => ({
@@ -75,19 +76,19 @@ const CheckboxInput = styled('input')<CheckboxProps>(
 
 const CheckboxBackground = styled('div')<CheckboxProps>(
   {
-    backgroundColor: colors.frenchVanilla100,
-    boxSizing: 'border-box',
-    position: 'absolute',
-    display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    pointerEvents: 'none',
-    width: checkboxWidth,
-    height: checkboxHeight,
-    borderStyle: 'solid',
+    backgroundColor: colors.frenchVanilla100,
     borderRadius: checkboxBorderRadius,
+    borderStyle: 'solid',
+    boxSizing: 'border-box',
+    display: 'flex',
+    height: checkboxHeight,
+    justifyContent: 'center',
     padding: '0px 2px',
+    pointerEvents: 'none',
+    position: 'absolute',
     transition: 'border 200ms ease, background 200ms',
+    width: checkboxWidth,
   },
   ({checked, disabled, hasError, hasAlert}) => ({
     borderWidth: hasError ? '2px' : hasAlert ? '2px' : '1px',
@@ -100,19 +101,19 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
           : colors.licorice100,
     backgroundColor: checked ? colors.blueberry400 : disabled ? colors.soap100 : 'white',
     '&:hover': {
-      borderColor: checked ? colors.blueberry400 : colors.licorice100,
       backgroundColor: checked ? colors.blueberry400 : disabled ? colors.soap100 : 'white',
+      borderColor: checked ? colors.blueberry400 : colors.licorice100,
     },
   })
 );
 
 const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   {
-    position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
-    transition: 'transform 200ms ease, opacity 200ms ease',
     pointerEvents: 'none',
+    position: 'absolute',
+    transition: 'transform 200ms ease, opacity 200ms ease',
   },
   ({checked}) => ({
     opacity: checked ? 1 : 0,
@@ -121,55 +122,64 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
 );
 
 const CheckboxLabel = styled('label')({
-  fontSize: '14px',
-  fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
   color: typeColors.body,
-  lineHeight: '20px',
-  fontWeight: 500,
-  marginLeft: checkboxWidth + checkboxSpacing,
+  fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
+  fontSize: '14px',
+  fontWeight: 400,
   display: 'block',
+  lineHeight: '20px',
+  marginLeft: checkboxWidth + checkboxSpacing,
 });
 
-const CheckboxMessage = styled('div')<Pick<CheckboxProps, 'message' | 'hasError' | 'hasAlert'>>(
+const CheckboxMessage = styled('div')<
+  Pick<CheckboxProps, 'messageContent' | 'hasError' | 'hasAlert'>
+>(
   {
-    fontSize: '13px',
-    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
     color: typeColors.body,
-    lineHeight: '20px',
-    fontWeight: 400,
-    marginLeft: checkboxWidth + checkboxSpacing,
     display: 'block',
+    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
+    fontSize: '13px',
+    lineHeight: '20px',
+    marginLeft: checkboxWidth + checkboxSpacing,
   },
-  ({message, hasError, hasAlert}) => ({
-    '&::before': {
-      content: hasError ? '"Error: "' : hasAlert ? '"Alert: "' : '""',
-      fontWeight: 500,
-    },
-    display: message === '' ? 'none' : hasError ? 'block' : hasAlert ? 'block' : 'none',
+  ({messageContent, hasError, hasAlert}) => ({
+    display: messageContent === '' ? 'none' : hasError ? 'block' : hasAlert ? 'block' : 'none',
+  })
+);
+
+const CheckboxMessageTitle = styled('div')<Pick<CheckboxProps, 'messageTitle'>>(
+  {
+    fontWeight: 500,
+    marginRight: '5px',
+  },
+  ({messageTitle}) => ({
+    display: messageTitle === '' ? 'none' : 'inline-block',
   })
 );
 
 export default class Checkbox extends React.Component<CheckboxProps> {
   public static defaultProps = {
     checked: false,
-    hasError: false,
     hasAlert: false,
-    message: '',
+    hasError: false,
+    messageContent: '',
+    messageTitle: '',
     label: '',
   };
 
   public render() {
     const {
       checked,
-      hasError,
-      hasAlert,
       disabled,
+      hasAlert,
+      hasError,
       id,
       inputRef,
+      messageContent,
+      messageTitle,
+      label,
       onChange,
       value,
-      label,
-      message,
       ...otherProps
     } = this.props;
 
@@ -190,16 +200,17 @@ export default class Checkbox extends React.Component<CheckboxProps> {
         <CheckboxBackground
           checked={checked}
           disabled={disabled}
-          hasError={hasError}
           hasAlert={hasAlert}
+          hasError={hasError}
         >
           <CheckboxCheck checked={checked}>
             <SystemIcon icon={checkSmallIcon} color={colors.frenchVanilla100} />
           </CheckboxCheck>
         </CheckboxBackground>
         <CheckboxLabel for={id}>{label}</CheckboxLabel>
-        <CheckboxMessage hasError={hasError} hasAlert={hasAlert} message={message}>
-          {message}
+        <CheckboxMessage hasError={hasError} hasAlert={hasAlert} messageContent={messageContent}>
+          <CheckboxMessageTitle messageTitle={messageTitle}>{messageTitle}</CheckboxMessageTitle>
+          {messageContent}
         </CheckboxMessage>
       </CheckboxContainer>
     );
