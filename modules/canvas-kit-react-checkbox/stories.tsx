@@ -7,13 +7,9 @@ import Checkbox from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 interface CheckboxSwitchWrapperState {
-  isChecked: boolean;
-  hasError: boolean;
-  hasAlert: boolean;
-  label: string;
-  messageTitle: string;
-  messageContent: string;
   id: string;
+  isChecked: boolean;
+  label: string;
 }
 
 class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperState> {
@@ -22,11 +18,7 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
     this.state = {
       id: '1',
       isChecked: false,
-      // hasError: true,
-      // hasAlert: false,
       label: 'This is a checkbox',
-      // messageTitle: 'Alert:',
-      // messageContent: 'This is a message',
     };
     this.handleCheck = this.handleCheck.bind(this);
   }
@@ -35,15 +27,11 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <Checkbox
-          id={this.state.id}
           disabled={false}
           checked={this.state.isChecked}
-          onChange={this.handleCheck}
+          id={this.state.id}
           label={this.state.label}
-          hasError={this.state.hasError}
-          hasAlert={this.state.hasAlert}
-          messageTitle={this.state.messageTitle}
-          messageContent={this.state.messageContent}
+          onChange={this.handleCheck}
         />
       </div>
     );
