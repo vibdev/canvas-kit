@@ -4,7 +4,6 @@ import {focusRing} from '@workday/canvas-kit-react-common';
 import {colors, typeColors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
-import CanvasSpacing from '@workday/canvas-space-web';
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
