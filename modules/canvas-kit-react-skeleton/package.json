@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-skeleton",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A component that renders a skeleton.",
   "homepage": "https://workdaydesign.com",
   "author": "Kendall Gassner <kendall.gassner@workday.com>",
