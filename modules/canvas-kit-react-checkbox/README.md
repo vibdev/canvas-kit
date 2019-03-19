@@ -53,7 +53,13 @@ Default: `false`
 
 #### `id: string`
 
-> The HTML attribute `id` for the underlying input checkbox component.
+> The HTML attribute `id` for the underlying input checkbox and label component.
+
+---
+
+#### `id: label`
+
+> The content of the label associated to the input checkbox component.
 
 ---
 

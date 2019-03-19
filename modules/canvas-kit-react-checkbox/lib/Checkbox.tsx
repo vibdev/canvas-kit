@@ -7,16 +7,12 @@ import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
-  hasError?: boolean;
-  hasAlert?: boolean;
   disabled?: boolean;
   id?: string;
   onChange?: (e: React.SyntheticEvent) => void;
   value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
   label?: string;
-  messageTitle?: string;
-  messageContent?: string;
 }
 
 const checkboxBorderRadius = 2;
@@ -79,6 +75,7 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     backgroundColor: colors.frenchVanilla100,
     borderRadius: checkboxBorderRadius,
     borderStyle: 'solid',
+    borderWidth: '1px',
     boxSizing: 'border-box',
     display: 'flex',
     height: checkboxHeight,
@@ -89,15 +86,9 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     transition: 'border 200ms ease, background 200ms',
     width: checkboxWidth,
   },
-  ({checked, disabled, hasError, hasAlert}) => ({
-    borderWidth: hasError ? '2px' : hasAlert ? '2px' : '1px',
-    borderColor: checked
-      ? colors.blueberry400
-      : hasError
-        ? colors.cinnamon500
-        : hasAlert
-          ? colors.cantaloupe400
-          : colors.licorice100,
+  ({checked, disabled}) => ({
+    cursor: disabled ? 'default' : 'pointer',
+    borderColor: checked ? colors.blueberry400 : colors.licorice100,
     backgroundColor: checked ? colors.blueberry400 : disabled ? colors.soap100 : 'white',
     '&:hover': {
       backgroundColor: checked ? colors.blueberry400 : disabled ? colors.soap100 : 'white',
@@ -130,57 +121,14 @@ const CheckboxLabel = styled('label')({
   marginLeft: checkboxWidth + checkboxSpacing,
 });
 
-const CheckboxMessage = styled('div')<
-  Pick<CheckboxProps, 'messageContent' | 'hasError' | 'hasAlert'>
->(
-  {
-    color: typeColors.body,
-    display: 'block',
-    fontFamily: '"Roboto", "Helvetica Neue", "Helvetica", Arial, sans-serif',
-    fontSize: '13px',
-    lineHeight: '20px',
-    marginLeft: checkboxWidth + checkboxSpacing,
-  },
-  ({messageContent, hasError, hasAlert}) => ({
-    display: messageContent === '' ? 'none' : hasError ? 'block' : hasAlert ? 'block' : 'none',
-  })
-);
-
-const CheckboxMessageTitle = styled('div')<Pick<CheckboxProps, 'messageTitle'>>(
-  {
-    fontWeight: 500,
-    marginRight: '5px',
-  },
-  ({messageTitle}) => ({
-    display: messageTitle === '' ? 'none' : 'inline-block',
-  })
-);
-
 export default class Checkbox extends React.Component<CheckboxProps> {
   public static defaultProps = {
     checked: false,
-    hasAlert: false,
-    hasError: false,
-    messageContent: '',
-    messageTitle: '',
     label: '',
   };
 
   public render() {
-    const {
-      checked,
-      disabled,
-      hasAlert,
-      hasError,
-      id,
-      inputRef,
-      messageContent,
-      messageTitle,
-      label,
-      onChange,
-      value,
-      ...otherProps
-    } = this.props;
+    const {checked, disabled, id, inputRef, label, onChange, value, ...otherProps} = this.props;
 
     return (
       <CheckboxContainer>
@@ -196,21 +144,12 @@ export default class Checkbox extends React.Component<CheckboxProps> {
           value={value}
           {...otherProps}
         />
-        <CheckboxBackground
-          checked={checked}
-          disabled={disabled}
-          hasAlert={hasAlert}
-          hasError={hasError}
-        >
+        <CheckboxBackground checked={checked} disabled={disabled}>
           <CheckboxCheck checked={checked}>
             <SystemIcon icon={checkSmallIcon} color={colors.frenchVanilla100} />
           </CheckboxCheck>
         </CheckboxBackground>
         <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>
-        <CheckboxMessage hasError={hasError} hasAlert={hasAlert} messageContent={messageContent}>
-          <CheckboxMessageTitle messageTitle={messageTitle}>{messageTitle}</CheckboxMessageTitle>
-          {messageContent}
-        </CheckboxMessage>
       </CheckboxContainer>
     );
   }
