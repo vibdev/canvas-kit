@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Snapshots renders as expected 1`] = `
+.emotion-13 {
+  margin-bottom: 11px;
+}
+
+.emotion-0 {
+  border-radius: 2px;
+  height: 18px;
+  margin: 0;
+  position: absolute;
+  width: 18px;
+}
+
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+}
+
+.emotion-0:focus ~ div:first-of-type,
+.emotion-0:active ~ div:first-of-type,
+.emotion-0focus:hover ~ div:first-of-type,
+.emotion-0:active:hover ~ div:first-of-type {
+  -webkit-animation: animation-s6lrth 100ms;
+  animation: animation-s6lrth 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  border-color: #0875e1;
+  border-width: 2px;
+}
+
+.emotion-0:focus:checked ~ div:first-of-type,
+.emotion-0:active:checked ~ div:first-of-type,
+.emotion-0focus:hover:checked ~ div:first-of-type,
+.emotion-0:active:hover:checked ~ div:first-of-type {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+.emotion-0::after {
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #f0f1f2;
+  content: "";
+  display: block;
+  height: 18px;
+  -webkit-transition: box-shadow 200ms ease-out;
+  transition: box-shadow 200ms ease-out;
+  width: 18px;
+  z-index: -999;
+}
+
+.emotion-0:hover::after {
+  box-shadow: 0 0 0 11px #f0f1f2;
+}
+
+.emotion-0:hover ~ div:first-of-type {
+  border-color: #7b858f;
+}
+
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 18px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0px 2px;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: border 200ms ease,background 200ms;
+  transition: border 200ms ease,background 200ms;
+  width: 18px;
+  border-width: 1px;
+  border-color: #a1aab3;
+  background-color: white;
+}
+
+.emotion-5:hover {
+  background-color: white;
+  border-color: #a1aab3;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 svg {
+  display: block;
+}
+
+.emotion-2 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-2:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-2 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-2:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-2 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-2:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-7 {
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  line-height: 20px;
+  margin-left: 29px;
+}
+
+.emotion-11 {
+  color: #494949;
+  display: block;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin-left: 29px;
+  display: none;
+}
+
+.emotion-9 {
+  font-weight: 500;
+  margin-right: 5px;
+  display: none;
+}
+
+<div
+  className="emotion-13 emotion-14"
+>
+  <input
+    checked={false}
+    className="emotion-0 emotion-1"
+    onChange={[Function]}
+    role="checkbox"
+    tabIndex={0}
+    type="checkbox"
+  />
+  <div
+    checked={false}
+    className="emotion-5 emotion-6"
+  >
+    <div
+      checked={false}
+      className="emotion-3 emotion-4"
+    >
+      <span
+        className="emotion-2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </div>
+  </div>
+  <label
+    className="emotion-7 emotion-8"
+  >
+    
+  </label>
+  <div
+    className="emotion-11 emotion-12"
+  >
+    <div
+      className="emotion-9 emotion-10"
+    >
+      
+    </div>
+    
+  </div>
+</div>
+`;
