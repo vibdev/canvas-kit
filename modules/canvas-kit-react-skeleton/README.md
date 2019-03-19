@@ -139,7 +139,7 @@ import * as React from 'react';
 import {Skeleton, SkeletonText} from '@workday/canvas-kit-react-skeleton';
 
 <Skeleton>
-  <SkeletonText lineCount={2} />
+  <SkeletonText lineCount={3} />
 </Skeleton>;
 ```
 
@@ -151,11 +151,13 @@ import {Skeleton, SkeletonText} from '@workday/canvas-kit-react-skeleton';
 
 ### Required
 
+> None
+
+### Optional
+
 #### `lineCount: number`
 
 > The number of "lines" that it will display. If there's more than one line, then the last line will
 > have a width of `60%`
 
-### Optional
-
-> None
+Default: `2`
