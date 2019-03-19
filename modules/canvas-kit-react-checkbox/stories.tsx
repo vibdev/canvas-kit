@@ -27,7 +27,7 @@ class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperSta
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <Checkbox
-          disabled={true}
+          disabled={false}
           checked={this.state.isChecked}
           id={this.state.id}
           label={this.state.label}
