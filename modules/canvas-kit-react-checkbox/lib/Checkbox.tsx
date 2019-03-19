@@ -206,7 +206,7 @@ export default class Checkbox extends React.Component<CheckboxProps> {
             <SystemIcon icon={checkSmallIcon} color={colors.frenchVanilla100} />
           </CheckboxCheck>
         </CheckboxBackground>
-        <CheckboxLabel for={id}>{label}</CheckboxLabel>
+        <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>
         <CheckboxMessage hasError={hasError} hasAlert={hasAlert} messageContent={messageContent}>
           <CheckboxMessageTitle messageTitle={messageTitle}>{messageTitle}</CheckboxMessageTitle>
           {messageContent}
