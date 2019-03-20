@@ -8,7 +8,7 @@ import Hint from './Hint';
 
 export interface TextFieldProps extends TextInputProps {
   label: React.ReactNode;
-  hintText: React.ReactNode;
+  hintText?: React.ReactNode;
 }
 
 const InputContainer = styled('div')({
