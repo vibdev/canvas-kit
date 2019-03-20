@@ -19,6 +19,7 @@ const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
 const checkboxSpacing = 11;
 const checkboxWidth = 18;
+const checkboxTapArea = 24;
 const rippleRadius = 11;
 
 const CheckboxContainer = styled('div')({
@@ -28,11 +29,11 @@ const CheckboxContainer = styled('div')({
 const CheckboxInput = styled('input')<CheckboxProps>(
   {
     borderRadius: checkboxBorderRadius,
-    height: checkboxHeight,
+    height: checkboxTapArea,
     margin: 0,
+    marginTop: '-3px',
     position: 'absolute',
-    width: checkboxWidth,
-    border: '1px solid yellow',
+    width: checkboxTapArea,
     '&:focus, &:active': {
       outline: 'none',
     },
@@ -52,6 +53,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       content: '""',
       display: 'block',
       height: checkboxHeight,
+      marginTop: '3px',
       transition: 'box-shadow 150ms ease-out',
       width: checkboxWidth,
       zIndex: -999,
