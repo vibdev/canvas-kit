@@ -1,81 +1,48 @@
 import * as React from 'react';
-import styled from 'react-emotion';
-import {canvas} from '@workday/canvas-kit-react';
-import {border, transitions} from 'polished';
-import {ErrorType} from './types';
-import {Interpolation} from 'create-emotion-styled';
+import {canvas, SystemIcon} from '@workday/canvas-kit-react';
+import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
+import TextInput, {TextInputBaseProps} from './TextInputBase';
+import InputIconContainer from './InputIconContainer';
+import {ErrorType, LabelPosition} from './types';
 
-export interface TextInputProps {
-  disabled?: boolean;
-  error?: ErrorType;
-  innerRef?: React.Ref<HTMLInputElement>;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  placeholder?: string;
-  readOnly?: boolean;
-  type: string;
-  value?: any;
+export interface TextInputProps extends TextInputBaseProps {
+  labelPosition?: LabelPosition;
 }
 
-export const textInputStyles: Interpolation<TextInputProps> = [
-  canvas.type.body,
-  {
-    ...transitions('0.2s box-shadow'),
-    ...border(1, 'solid', canvas.colors.licorice200),
-    display: 'block',
-    backgroundColor: canvas.inputColors.background,
-    borderRadius: 4,
-    boxSizing: 'border-box',
-    color: canvas.typeColors.body,
-    height: 40,
-    minWidth: 280,
-    padding: canvas.spacing.xxs, // Compensate for border
-    '&::placeholder': {
-      color: canvas.typeColors.hint,
-    },
-    '&:focus:not([disabled])': {
-      borderColor: canvas.inputColors.focusBorder,
-      boxShadow: `inset 0 0 0 1px ${canvas.inputColors.focusBorder}`,
-      outline: 'none',
-    },
-    '&:disabled': {
-      backgroundColor: canvas.colors.soap100,
-      borderColor: canvas.colors.licorice100,
-      color: canvas.colors.licorice100,
-      '&::placeholder': {
-        color: canvas.colors.licorice100,
-      },
-    },
-  },
-  ({error}) => {
-    switch (error) {
-      case ErrorType.Error:
-        return {
-          borderColor: canvas.inputColors.error.border,
-          boxShadow: `inset 0 0 0 1px ${canvas.inputColors.error.border}`,
-        };
-      case ErrorType.Alert:
-        return {
-          borderColor: canvas.inputColors.warning.border,
-          boxShadow: `inset 0 0 0 1px ${canvas.inputColors.warning.border}`,
-        };
-      default:
-        return {};
-    }
-  },
-];
-
-const Input = styled('input')<TextInputProps>(...textInputStyles);
-
-export default class TextInput extends React.Component<TextInputProps> {
+export default class Input extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
+  static LabelPosition = LabelPosition;
 
-  static defaultProps = {
-    type: 'text',
-  };
+  render() {
+    const {error, labelPosition} = this.props;
 
-  public render() {
-    const {inputProps, ...componentProps} = this.props;
-    return <Input {...componentProps} {...inputProps} />;
+    let icon: React.ReactElement<SystemIcon> | undefined;
+    switch (error) {
+      case ErrorType.Alert:
+        icon = (
+          <SystemIcon
+            icon={exclamationTriangleIcon}
+            color={canvas.inputColors.warning.message}
+            colorHover={canvas.inputColors.warning.message}
+          />
+        );
+        break;
+      case ErrorType.Error:
+        icon = (
+          <SystemIcon
+            icon={exclamationCircleIcon}
+            color={canvas.inputColors.error.border}
+            colorHover={canvas.inputColors.error.border}
+          />
+        );
+        break;
+      default:
+    }
+
+    return (
+      <InputIconContainer labelPosition={labelPosition} icon={icon}>
+        <TextInput {...this.props} />
+      </InputIconContainer>
+    );
   }
 }
