@@ -43,7 +43,7 @@ export default class Input extends React.Component<TextInputProps> {
 
     return (
       <InputIconContainer labelPosition={labelPosition} icon={icon}>
-        <TextInput {...inputProps} />
+        <TextInput hasIcon={typeof icon !== 'undefined'} {...inputProps} />
       </InputIconContainer>
     );
   }

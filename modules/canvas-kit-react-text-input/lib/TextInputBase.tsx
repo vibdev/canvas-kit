@@ -1,6 +1,13 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {colors, inputColors, type, typeColors, spacing} from '@workday/canvas-kit-react-core';
+import {
+  colors,
+  inputColors,
+  type,
+  typeColors,
+  spacing,
+  spacingNumbers,
+} from '@workday/canvas-kit-react-core';
 import {border, transitions} from 'polished';
 import {ErrorType} from './types';
 import {Interpolation} from 'create-emotion-styled';
@@ -8,6 +15,7 @@ import {Interpolation} from 'create-emotion-styled';
 export interface TextInputBaseProps {
   disabled?: boolean;
   error?: ErrorType;
+  hasIcon?: boolean;
   innerRef?: React.Ref<HTMLInputElement>;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
@@ -61,6 +69,16 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
         };
       default:
         return {};
+    }
+  },
+  ({hasIcon}) => {
+    // Icon padding left + icon width + icon padding right
+    const iconPadding = spacingNumbers.xxxs + spacingNumbers.m + spacingNumbers.xxs;
+
+    if (hasIcon) {
+      return {paddingRight: iconPadding};
+    } else {
+      return {};
     }
   },
 ];
