@@ -158,7 +158,7 @@ timestamps {
             dir(repoBaseDir) {
               try {
                 echo 'npm publish & uploading to s3'
-                sh('./node_modules/.bin/canvas-kit-build publish-monorepo')
+                sh('yarn run lerna publish')
                 sh('git push origin master') //Git Release
               } catch (Exception e) {
                 // should have a fallback/unpublish/lerna "undo"

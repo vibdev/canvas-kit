@@ -2,10 +2,6 @@
 
 cat << EOM
 This utility will walk you through creating a new canvas-kit module.
-You will need to manually add dependencies after the fact.
-
-After adding dependencies, use \`yarn\` in the root of
-the project to bootstrap all dependencies across all modules.
 
 Press ^C at any time to quit.
 
@@ -160,6 +156,6 @@ yarn.lock
 
 EOF
 
-# Install dependencies
+# Install deps using Yarn workspaces (instead of Lerna bootstrap)
 echo -e "\nInstalling dependencies\n"
-yarn
+`yarn`

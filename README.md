@@ -18,7 +18,7 @@ consistent with [Workday's design principles](https://design.workday.com/).
 1.  Run `yarn create-module`
 2.  Enter in a module name, description and author
 3.  (optional) Add any required dependencies on other modules
-4.  (optional) If you added any extra dependencies, run `lerna bootstrap`
+4.  (optional) If you added any extra dependencies, run `yarn`
 5.  Start Storybook `yarn start`
 6.  Navigate to [http://localhost:9001/](http://localhost:9001/) and find your new module's story
 7.  Begin editing your new React component in `modules/canvas-kit-react-<NAME>/index.js`!
