@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {canvas} from '@workday/canvas-kit-react';
+import {colors, inputColors, type, typeColors, spacing} from '@workday/canvas-kit-react-core';
 import {border, transitions} from 'polished';
 import {ErrorType} from './types';
 import {Interpolation} from 'create-emotion-styled';
@@ -18,32 +18,32 @@ export interface TextInputBaseProps {
 }
 
 export const textInputStyles: Interpolation<TextInputBaseProps> = [
-  canvas.type.body,
+  type.body,
   {
     ...transitions('0.2s box-shadow'),
-    ...border(1, 'solid', canvas.colors.licorice200),
+    ...border(1, 'solid', colors.licorice200),
     display: 'block',
-    backgroundColor: canvas.inputColors.background,
+    backgroundColor: inputColors.background,
     borderRadius: 4,
     boxSizing: 'border-box',
-    color: canvas.typeColors.body,
+    color: typeColors.body,
     height: 40,
     minWidth: 280,
-    padding: canvas.spacing.xxs, // Compensate for border
+    padding: spacing.xxs, // Compensate for border
     '&::placeholder': {
-      color: canvas.typeColors.hint,
+      color: typeColors.hint,
     },
     '&:focus:not([disabled])': {
-      borderColor: canvas.inputColors.focusBorder,
-      boxShadow: `inset 0 0 0 1px ${canvas.inputColors.focusBorder}`,
+      borderColor: inputColors.focusBorder,
+      boxShadow: `inset 0 0 0 1px ${inputColors.focusBorder}`,
       outline: 'none',
     },
     '&:disabled': {
-      backgroundColor: canvas.colors.soap100,
-      borderColor: canvas.colors.licorice100,
-      color: canvas.colors.licorice100,
+      backgroundColor: colors.soap100,
+      borderColor: colors.licorice100,
+      color: colors.licorice100,
       '&::placeholder': {
-        color: canvas.colors.licorice100,
+        color: colors.licorice100,
       },
     },
   },
@@ -51,13 +51,13 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
     switch (error) {
       case ErrorType.Error:
         return {
-          borderColor: canvas.inputColors.error.border,
-          boxShadow: `inset 0 0 0 1px ${canvas.inputColors.error.border}`,
+          borderColor: inputColors.error.border,
+          boxShadow: `inset 0 0 0 1px ${inputColors.error.border}`,
         };
       case ErrorType.Alert:
         return {
-          borderColor: canvas.inputColors.warning.border,
-          boxShadow: `inset 0 0 0 1px ${canvas.inputColors.warning.border}`,
+          borderColor: inputColors.warning.border,
+          boxShadow: `inset 0 0 0 1px ${inputColors.warning.border}`,
         };
       default:
         return {};

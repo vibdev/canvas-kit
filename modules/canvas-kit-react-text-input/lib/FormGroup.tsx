@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {canvas} from '@workday/canvas-kit-react';
+import {spacing} from '@workday/canvas-kit-react-core';
 import {LabelPosition} from './types';
 
 export interface FormGroupProps {
@@ -10,12 +10,12 @@ export interface FormGroupProps {
 const GroupComponent = styled('div')<FormGroupProps>(({labelPosition}) => {
   if (labelPosition === LabelPosition.Left) {
     return {
-      marginBottom: canvas.spacing.m,
+      marginBottom: spacing.m,
     };
   }
 
   return {
-    marginBottom: canvas.spacing.s,
+    marginBottom: spacing.s,
   };
 });
 

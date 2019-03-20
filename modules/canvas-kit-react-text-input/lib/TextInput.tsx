@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {canvas, SystemIcon} from '@workday/canvas-kit-react';
+import {inputColors} from '@workday/canvas-kit-react-core';
+import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import TextInput, {TextInputBaseProps} from './TextInputBase';
 import InputIconContainer from './InputIconContainer';
@@ -23,8 +24,8 @@ export default class Input extends React.Component<TextInputProps> {
         icon = (
           <SystemIcon
             icon={exclamationTriangleIcon}
-            color={canvas.inputColors.warning.message}
-            colorHover={canvas.inputColors.warning.message}
+            color={inputColors.warning.message}
+            colorHover={inputColors.warning.message}
           />
         );
         break;
@@ -32,8 +33,8 @@ export default class Input extends React.Component<TextInputProps> {
         icon = (
           <SystemIcon
             icon={exclamationCircleIcon}
-            color={canvas.inputColors.error.border}
-            colorHover={canvas.inputColors.error.border}
+            color={inputColors.error.border}
+            colorHover={inputColors.error.border}
           />
         );
         break;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {canvas} from '@workday/canvas-kit-react';
+import {spacing, type} from '@workday/canvas-kit-react-core';
 import {LabelPosition} from './types';
 
 export interface LabelProps {
@@ -11,25 +11,21 @@ export interface LabelProps {
   position: LabelPosition;
 }
 
-const LabelComponent = styled('label')<LabelProps>(
-  canvas.type.body,
-  canvas.type.variant.label,
-  ({position}) => {
-    if (position === LabelPosition.Left) {
-      return {
-        display: 'inline-block',
-        verticalAlign: 'top',
-        marginTop: 10, // Input height - font line height / 2
-        marginRight: canvas.spacing.l,
-      };
-    }
-
+const LabelComponent = styled('label')<LabelProps>(type.body, type.variant.label, ({position}) => {
+  if (position === LabelPosition.Left) {
     return {
-      display: 'block',
-      marginBottom: canvas.spacing.xxxs,
+      display: 'inline-block',
+      verticalAlign: 'top',
+      marginTop: 10, // Input height - font line height / 2
+      marginRight: spacing.l,
     };
   }
-);
+
+  return {
+    display: 'block',
+    marginBottom: spacing.xxxs,
+  };
+});
 
 export default class Label extends React.Component<LabelProps> {
   static Position = LabelPosition;
