@@ -57,7 +57,7 @@ Default: `false`
 
 ---
 
-#### `id: label`
+#### `label: string`
 
 > The content of the label associated to the input checkbox component.
 
