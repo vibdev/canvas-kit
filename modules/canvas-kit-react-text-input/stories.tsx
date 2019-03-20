@@ -72,7 +72,7 @@ storiesOf('Canvas Kit/Inputs/Text Input', module)
   .add('Alert', () => Inputs.Alert)
   .add('Error', () => Inputs.Error);
 
-storiesOf('Canvas Kit/Inputs/Text Field', module)
+storiesOf('Canvas Kit/Inputs/Text Field/Top Label', module)
   .addDecorator(sectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field {...Inputs.Plain.props} />)
@@ -81,6 +81,28 @@ storiesOf('Canvas Kit/Inputs/Text Field', module)
   .add('Disabled with placeholder', () => <Field {...Inputs.DisabledPlaceholder.props} />)
   .add('Alert', () => <Field {...Inputs.Alert.props} />)
   .add('Error', () => <Field {...Inputs.Error.props} />);
+
+storiesOf('Canvas Kit/Inputs/Text Field/Left Label', module)
+  .addDecorator(sectionDecorator('Text Field'))
+  .addDecorator(withReadme(README))
+  .add('Plain', () => (
+    <Field {...Inputs.Plain.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('With placeholder', () => (
+    <Field {...Inputs.Placeholder.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('Disabled', () => (
+    <Field {...Inputs.Disabled.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('Disabled with placeholder', () => (
+    <Field {...Inputs.DisabledPlaceholder.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('Alert', () => (
+    <Field {...Inputs.Alert.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('Error', () => (
+    <Field {...Inputs.Error.props} labelPosition={TextField.LabelPosition.Left} />
+  ));
 
 storiesOf('Canvas Kit/Inputs/Hint', module)
   .addDecorator(sectionDecorator('Hint'))

@@ -18,6 +18,7 @@ const LabelComponent = styled('label')<LabelProps>(type.body, type.variant.label
       verticalAlign: 'top',
       marginTop: 10, // Input height - font line height / 2
       marginRight: spacing.l,
+      width: 180,
     };
   }
 
