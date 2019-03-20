@@ -5,7 +5,7 @@ import TextField from './lib/TextField';
 import TextInput from './lib/TextInput';
 import TextInputBase from './lib/TextInputBase';
 
-export default TextInput;
+export default TextField;
 export {Hint, InputIconContainer, Label, TextField, TextInput, TextInputBase};
 export * from './lib/Hint';
 export * from './lib/InputIconContainer';
