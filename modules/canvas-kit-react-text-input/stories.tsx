@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {TextInput} from './index'; // tslint:disable-line:import-name
+import {TextInput, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {TextInputProps} from './lib/TextInput';
 
@@ -51,3 +51,12 @@ storiesOf('Canvas Kit/Inputs/Text Inputs/Unlabeled', module)
   .add('Disabled with placeholder', () => Inputs.DisabledPlaceholder)
   .add('Alert', () => Inputs.Alert)
   .add('Error', () => Inputs.Error);
+
+storiesOf('Canvas Kit/Inputs/Hint', module)
+  .addDecorator(sectionDecorator)
+  .addDecorator(withReadme(README))
+  .add('Plain', () => <Hint>Password must be 8 characters long.</Hint>)
+  .add('Alert', () => <Hint error={Hint.ErrorType.Alert}>Password must be 8 characters long.</Hint>)
+  .add('Error', () => (
+    <Hint error={Hint.ErrorType.Error}>Password must be 8 characters long.</Hint>
+  ));
