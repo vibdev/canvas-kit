@@ -14,7 +14,8 @@ export default class Input extends React.Component<TextInputProps> {
   static LabelPosition = LabelPosition;
 
   render() {
-    const {error, labelPosition} = this.props;
+    const {labelPosition, ...inputProps} = this.props;
+    const {error} = inputProps;
 
     let icon: React.ReactElement<SystemIcon> | undefined;
     switch (error) {
@@ -41,7 +42,7 @@ export default class Input extends React.Component<TextInputProps> {
 
     return (
       <InputIconContainer labelPosition={labelPosition} icon={icon}>
-        <TextInput {...this.props} />
+        <TextInput {...inputProps} />
       </InputIconContainer>
     );
   }

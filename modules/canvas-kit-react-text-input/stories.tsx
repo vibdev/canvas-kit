@@ -3,16 +3,17 @@ import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {TextInput, Hint} from './index'; // tslint:disable-line:import-name
+import {TextField, TextInput, Hint, TextInputProps, TextFieldProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
-import {TextInputProps} from './lib/TextInput';
 
-const sectionDecorator: StoryDecorator = storyFn => (
-  <div className="story">
-    <h1 className="section-label">Text Input</h1>
-    {storyFn()}
-  </div>
-);
+const sectionDecorator: (t: string) => StoryDecorator = title => {
+  return storyFn => (
+    <div className="story">
+      <h1 className="section-label">{title}</h1>
+      {storyFn()}
+    </div>
+  );
+};
 
 class Input extends React.Component<TextInputProps, {}> {
   static defaultProps = {
@@ -33,17 +34,36 @@ class Input extends React.Component<TextInputProps, {}> {
   }
 }
 
+class Field extends React.Component<TextFieldProps, {}> {
+  static defaultProps = {
+    type: 'text',
+  };
+
+  state = {
+    value: this.props.value,
+  };
+
+  onChange: React.ChangeEventHandler<HTMLInputElement> = e => {
+    this.setState({value: e.target.value});
+  };
+
+  public render() {
+    const {value, ...props} = this.props;
+    return <TextField label="Label" {...props} value={this.state.value} onChange={this.onChange} />;
+  }
+}
+
 const Inputs = {
   Plain: <Input />,
   Placeholder: <Input placeholder="Placeholder" />,
-  Disabled: <Input placeholder="Placeholder" disabled={true} />,
+  Disabled: <Input disabled={true} />,
   DisabledPlaceholder: <Input placeholder="Placeholder" disabled={true} />,
   Alert: <Input error={TextInput.ErrorType.Alert} value="Alert" />,
   Error: <Input error={TextInput.ErrorType.Error} value="Error" />,
 };
 
-storiesOf('Canvas Kit/Inputs/Text Inputs/Unlabeled', module)
-  .addDecorator(sectionDecorator)
+storiesOf('Canvas Kit/Inputs/Text Input', module)
+  .addDecorator(sectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)
   .add('With placeholder', () => Inputs.Placeholder)
@@ -52,8 +72,18 @@ storiesOf('Canvas Kit/Inputs/Text Inputs/Unlabeled', module)
   .add('Alert', () => Inputs.Alert)
   .add('Error', () => Inputs.Error);
 
+storiesOf('Canvas Kit/Inputs/Text Field', module)
+  .addDecorator(sectionDecorator('Text Field'))
+  .addDecorator(withReadme(README))
+  .add('Plain', () => <Field {...Inputs.Plain.props} />)
+  .add('With placeholder', () => <Field {...Inputs.Placeholder.props} />)
+  .add('Disabled', () => <Field {...Inputs.Disabled.props} />)
+  .add('Disabled with placeholder', () => <Field {...Inputs.DisabledPlaceholder.props} />)
+  .add('Alert', () => <Field {...Inputs.Alert.props} />)
+  .add('Error', () => <Field {...Inputs.Error.props} />);
+
 storiesOf('Canvas Kit/Inputs/Hint', module)
-  .addDecorator(sectionDecorator)
+  .addDecorator(sectionDecorator('Hint'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Hint>Password must be 8 characters long.</Hint>)
   .add('Alert', () => <Hint error={Hint.ErrorType.Alert}>Password must be 8 characters long.</Hint>)
