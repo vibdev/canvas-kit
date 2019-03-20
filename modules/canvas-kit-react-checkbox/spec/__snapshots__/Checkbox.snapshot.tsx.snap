@@ -11,6 +11,7 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   margin: 0;
   position: absolute;
   width: 18px;
+  border: 1px solid yellow;
 }
 
 .emotion-0:focus,
@@ -44,8 +45,8 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   content: "";
   display: block;
   height: 18px;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
   width: 18px;
   z-index: -999;
 }
@@ -201,63 +202,6 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   margin-bottom: 11px;
 }
 
-.emotion-0 {
-  border-radius: 2px;
-  height: 18px;
-  margin: 0;
-  position: absolute;
-  width: 18px;
-}
-
-.emotion-0:focus,
-.emotion-0:active {
-  outline: none;
-}
-
-.emotion-0:focus ~ div:first-of-type,
-.emotion-0:active ~ div:first-of-type,
-.emotion-0focus:hover ~ div:first-of-type,
-.emotion-0:active:hover ~ div:first-of-type {
-  -webkit-animation: animation-s6lrth 100ms;
-  animation: animation-s6lrth 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
-  border-color: #0875e1;
-  border-width: 2px;
-}
-
-.emotion-0:focus:checked ~ div:first-of-type,
-.emotion-0:active:checked ~ div:first-of-type,
-.emotion-0focus:hover:checked ~ div:first-of-type,
-.emotion-0:active:hover:checked ~ div:first-of-type {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
-}
-
-.emotion-0::after {
-  border-radius: 999px;
-  box-shadow: 0 0 0 0 #f0f1f2;
-  content: "";
-  display: block;
-  height: 18px;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
-  width: 18px;
-  z-index: -999;
-}
-
-.emotion-0:hover::after {
-  box-shadow: 0 0 0 11px #f0f1f2;
-}
-
-.emotion-0:hover ~ div:first-of-type {
-  border-color: #0875e1;
-}
-
-.emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #0875e1;
-}
-
 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -319,6 +263,64 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   margin-left: 29px;
 }
 
+.emotion-0 {
+  border-radius: 2px;
+  height: 18px;
+  margin: 0;
+  position: absolute;
+  width: 18px;
+  border: 1px solid yellow;
+}
+
+.emotion-0:focus,
+.emotion-0:active {
+  outline: none;
+}
+
+.emotion-0:focus ~ div:first-of-type,
+.emotion-0:active ~ div:first-of-type,
+.emotion-0focus:hover ~ div:first-of-type,
+.emotion-0:active:hover ~ div:first-of-type {
+  -webkit-animation: animation-s6lrth 100ms;
+  animation: animation-s6lrth 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  border-color: #0875e1;
+  border-width: 2px;
+}
+
+.emotion-0:focus:checked ~ div:first-of-type,
+.emotion-0:active:checked ~ div:first-of-type,
+.emotion-0focus:hover:checked ~ div:first-of-type,
+.emotion-0:active:hover:checked ~ div:first-of-type {
+  -webkit-animation: animation-72u8ku 100ms;
+  animation: animation-72u8ku 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+}
+
+.emotion-0::after {
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #f0f1f2;
+  content: "";
+  display: block;
+  height: 18px;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  width: 18px;
+  z-index: -999;
+}
+
+.emotion-0:hover::after {
+  box-shadow: 0 0 0 11px #f0f1f2;
+}
+
+.emotion-0:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #7b858f;
+}
+
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -344,7 +346,6 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  cursor: default;
   border-color: #0875e1;
   background-color: #0875e1;
 }
@@ -445,6 +446,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   margin: 0;
   position: absolute;
   width: 18px;
+  border: 1px solid yellow;
 }
 
 .emotion-0:focus,
@@ -478,8 +480,8 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   content: "";
   display: block;
   height: 18px;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
   width: 18px;
   z-index: -999;
 }
@@ -493,7 +495,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #0875e1;
+  border-color: #7b858f;
 }
 
 .emotion-5 {
@@ -521,7 +523,6 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  cursor: default;
   border-color: #a1aab3;
   background-color: #f6f7f8;
 }
@@ -635,12 +636,32 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   margin-left: 29px;
 }
 
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
 .emotion-0 {
   border-radius: 2px;
   height: 18px;
   margin: 0;
   position: absolute;
   width: 18px;
+  border: 1px solid yellow;
 }
 
 .emotion-0:focus,
@@ -674,8 +695,8 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   content: "";
   display: block;
   height: 18px;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
   width: 18px;
   z-index: -999;
 }
@@ -690,25 +711,6 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 
 .emotion-0:focus:hover ~ div:first-of-type {
   border-color: #0875e1;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  pointer-events: none;
-  position: absolute;
-  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
-  -webkit-transition: transform 200ms ease,opacity 200ms ease;
-  transition: transform 200ms ease,opacity 200ms ease;
-  opacity: 0;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
 }
 
 .emotion-5 {

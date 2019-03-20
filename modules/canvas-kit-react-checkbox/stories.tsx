@@ -6,39 +6,29 @@ import withReadme from 'storybook-readme/with-readme';
 import Checkbox from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-interface CheckboxSwitchWrapperState {
-  id: string;
-  isChecked: boolean;
-  label: string;
-}
+class CheckboxWrapper extends React.Component {
+  state = {
+    id: '1',
+    isChecked: false,
+    label: 'This is a checkbox',
+  };
 
-class CheckboxSwitchWrapper extends React.Component<{}, CheckboxSwitchWrapperState> {
-  public constructor(props: {}) {
-    super(props);
-    this.state = {
-      id: '1',
-      isChecked: false,
-      label: 'This is a checkbox',
-    };
-    this.handleCheck = this.handleCheck.bind(this);
-  }
+  handleCheck = () => {
+    this.setState(prevState => ({
+      isChecked: !this.state.isChecked,
+    }));
+  };
 
-  public render() {
+  render() {
     return (
-      <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <Checkbox
-          disabled={false}
-          checked={this.state.isChecked}
-          id={this.state.id}
-          label={this.state.label}
-          onChange={this.handleCheck}
-        />
-      </div>
+      <Checkbox
+        disabled={false}
+        checked={this.state.isChecked}
+        id={this.state.id}
+        label={this.state.label}
+        onChange={this.handleCheck}
+      />
     );
-  }
-
-  private handleCheck() {
-    this.setState({isChecked: !this.state.isChecked});
   }
 }
 
@@ -47,6 +37,8 @@ storiesOf('Canvas Kit/Checkbox', module)
   .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Checkbox</h1>
-      <CheckboxSwitchWrapper />
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <CheckboxWrapper />
+      </div>
     </div>
   ));

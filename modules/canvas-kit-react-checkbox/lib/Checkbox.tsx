@@ -32,6 +32,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     margin: 0,
     position: 'absolute',
     width: checkboxWidth,
+    border: '1px solid yellow',
     '&:focus, &:active': {
       outline: 'none',
     },
@@ -51,7 +52,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       content: '""',
       display: 'block',
       height: checkboxHeight,
-      transition: 'box-shadow 200ms ease-out',
+      transition: 'box-shadow 150ms ease-out',
       width: checkboxWidth,
       zIndex: -999,
     },
@@ -59,12 +60,12 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       boxShadow: '0 0 0 ' + rippleRadius + 'px ' + colors.soap200,
     },
   },
-  ({checked}) => ({
+  ({checked, disabled}) => ({
     '&:hover ~ div:first-of-type': {
       borderColor: checked ? colors.blueberry400 : colors.licorice200,
     },
     '&:focus:hover ~ div:first-of-type': {
-      borderColor: colors.blueberry400,
+      borderColor: disabled ? colors.licorice200 : colors.blueberry400,
     },
   })
 );
@@ -87,7 +88,7 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     width: checkboxWidth,
   },
   ({checked, disabled}) => ({
-    cursor: disabled ? 'default' : 'pointer',
+    cursor: disabled ? undefined : 'pointer',
     borderColor: checked ? colors.blueberry400 : colors.licorice100,
     backgroundColor: checked ? colors.blueberry400 : disabled ? colors.soap100 : 'white',
     '&:hover': {
