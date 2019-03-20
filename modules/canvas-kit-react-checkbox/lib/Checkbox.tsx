@@ -9,17 +9,17 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
   disabled?: boolean;
   id?: string;
-  onChange?: (e: React.SyntheticEvent) => void;
-  value?: string;
   inputRef?: React.Ref<HTMLInputElement>;
   label?: string;
+  onChange?: (e: React.SyntheticEvent) => void;
+  value?: string;
 }
 
 const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
 const checkboxSpacing = 11;
-const checkboxWidth = 18;
 const checkboxTapArea = 24;
+const checkboxWidth = 18;
 const rippleRadius = 11;
 
 const CheckboxContainer = styled('div')({
