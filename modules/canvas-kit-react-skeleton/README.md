@@ -1,9 +1,7 @@
 # Canvas Kit Skeleton
 
-A component that renders a skeleton. The skeleton component takes in children mock-ups and displays
-them. The skeleton will display an animated sheen over its children to indicate loading. The
-component wraps its children in aria-hidden containers and displays an aria-live status specifying
-that the content is loading.
+A component that renders a skeleton (a placeholder for future content). The skeleton component takes
+in children skeleton components and displays them with an animated sheen to indicate loading.
 
 ## Installation
 
@@ -16,6 +14,11 @@ or
 ```sh
 yarn add @workday/canvas-kit-react-skeleton
 ```
+
+# Skeleton
+
+This component places its children in a `div` marked with the `aria-hidden` attribute and displays
+an `aria-live` status to specify that the content is loading.
 
 ## Usage
 
@@ -36,8 +39,8 @@ import {
 </Skeleton>;
 ```
 
-> Note: the `Hello!` will show up this allows the flexibility for users to create any additional
-> Skeletons they may need.
+> Note: In this example, non-Skeleton elements like `<h1>Hello!</h1>` will still show. This allows
+> the flexibility for users to create more custom Skeletons.
 
 ## Static Properties
 
@@ -47,18 +50,50 @@ import {
 
 > None
 
-# SkeletonShape
+# SkeletonHeader
 
-A component that renders a shape mock-up. The ability to alter the borderRadius, width, and height
-of the component allows users to create rectangles, circles, and ovals.
+A component that renders a header placeholder for a skeleton. This component has a width of `100%`
+and fixed height of `28px`.
 
 ## Usage
 
 ```tsx
 import * as React from 'react';
-import {SkeletonShape} from '@workday/canvas-kit-react-skeleton';
+import {Skeleton, SkeletonHeader} from '@workday/canvas-kit-react-skeleton';
 
-<SkeletonShape width={50} height={50} borderRadius={99} />;
+<Skeleton>
+  <SkeletonHeader />
+</Skeleton>;
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+> None
+
+# SkeletonShape
+
+A component that renders a general shape placeholder for a skeleton. It gives the ability to alter
+the borderRadius, width, and height to make various rectangular and circular shapes.
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {Skeleton, SkeletonShape} from '@workday/canvas-kit-react-skeleton';
+
+<Skeleton>
+  <SkeletonShape width={50} height={50} borderRadius={99} />
+</Skeleton>;
 ```
 
 ## Static Properties
@@ -75,64 +110,37 @@ import {SkeletonShape} from '@workday/canvas-kit-react-skeleton';
 
 #### `width: number | string`
 
-> The width of the skeletonShape. SkeletonShape width in `px` or `%`.
+> The width of the shape in `px` or `%`.
 
 Default: `"100%"`
 
 #### `height: number | string`
 
-> The height of the skeletonShape. SkeletonShape height in `px` or `%`.
+> The height of the shape in `px` or `%`.
 
 Default: `"100%"`
 
 #### `borderRadius: number | string`
 
-> The borderRadius of the skeletonShape in `px` or `%`.
+> The borderRadius of the shape in `px` or `%`.
 
 Default: `0`
 
-# SkeletonHeader
-
-A component that renders a header mock-up. The header mock-up will have a width of `100%` and height
-of `28px`.
-
-## Usage
-
-```tsx
-import * as React from 'react';
-import {SkeletonHeader} from '@workday/canvas-kit-react-skeleton';
-
-<SkeletonHeader />;
-```
-
-## Static Properties
-
-> None
-
-## Component Props
-
-### Required
-
-> None
-
-### Optional
-
-> None
-
 # SkeletonText
 
-A component that renders a text mock-up. This component might be used to portray a single line of
-text `<span>`, for example, or a `<p>` paragraph of text. The text mock-up will have a width of
-`100%` and height of `21px`. If there is more then one line of text the last line of the
-SkeletonText will have a width of '60%'.
+A component that renders a text placeholder for a skeleton. Each line has a width of `100%` and a
+fixed height of `21px`. If there is more then one line of text the last line of the SkeletonText
+will have a width of `60%`.
 
 ## Usage
 
 ```tsx
 import * as React from 'react';
-import {SkeletonText} from '@workday/canvas-kit-react-skeleton';
+import {Skeleton, SkeletonText} from '@workday/canvas-kit-react-skeleton';
 
-<SkeletonText lineCount={2} />;
+<Skeleton>
+  <SkeletonText lineCount={2} />
+</Skeleton>;
 ```
 
 ## Static Properties
@@ -145,7 +153,8 @@ import {SkeletonText} from '@workday/canvas-kit-react-skeleton';
 
 #### `lineCount: number`
 
-> The number of lines the skeletonText will display.
+> The number of "lines" that it will display. If there's more than one line, then the last line will
+> have a width of `60%`
 
 ### Optional
 

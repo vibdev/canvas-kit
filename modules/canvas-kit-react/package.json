@@ -48,6 +48,7 @@
     "@workday/canvas-kit-react-icon": "^1.5.1",
     "@workday/canvas-kit-react-loading-animation": "^0.2.1",
     "@workday/canvas-kit-react-page-header": "^0.2.2",
+    "@workday/canvas-kit-react-skeleton": "^0.0.2",
     "@workday/canvas-kit-react-table": "^1.1.1",
     "@workday/canvas-kit-react-toggle": "^0.1.3"
   }
