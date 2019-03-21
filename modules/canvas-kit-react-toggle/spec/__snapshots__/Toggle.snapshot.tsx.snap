@@ -46,7 +46,6 @@ exports[`Toggle Snapshots renders as expected 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -92,7 +91,6 @@ exports[`Toggle Snapshots renders toggle disabled checked 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -178,7 +176,6 @@ exports[`Toggle Snapshots renders toggle disabled unchecked 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -302,7 +299,6 @@ exports[`Toggle Snapshots renders toggle on 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -386,7 +382,6 @@ exports[`Toggle Snapshots renders toggle with custom prop 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -475,7 +470,6 @@ exports[`Toggle Snapshots renders toggle with id 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -563,7 +557,6 @@ exports[`Toggle Snapshots renders toggle with name and value 1`] = `
 }
 
 .emotion-2 {
-  position: absolute;
   width: 12px;
   height: 12px;
   border-radius: 999px;

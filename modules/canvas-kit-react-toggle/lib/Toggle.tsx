@@ -59,7 +59,6 @@ const ToggleBackground = styled('div')<Pick<ToggleProps, 'checked' | 'disabled'>
 );
 
 const ToggleCircle = styled('div')<Pick<ToggleProps, 'checked'>>(({checked}) => ({
-  position: 'absolute',
   width: circleSize,
   height: circleSize,
   borderRadius: 999,
