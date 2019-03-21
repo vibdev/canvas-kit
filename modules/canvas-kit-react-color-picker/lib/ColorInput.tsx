@@ -100,13 +100,13 @@ export default class ColorInput extends React.Component<ColorInputProps> {
         />
         <SwatchTile
           style={{
-            backgroundColor: this.isValidHex(value) ? `#${formattedValue}` : '',
+            backgroundColor: this.isValidHex(formattedValue) ? `#${formattedValue}` : '',
           }}
         />
-        {showCheck && this.isValidHex(value) ? (
+        {showCheck && this.isValidHex(formattedValue) ? (
           <SystemIcon
-            fill={pickDarkOrLightColor(value)}
-            fillHover={pickDarkOrLightColor(value)}
+            fill={pickDarkOrLightColor(formattedValue)}
+            fillHover={pickDarkOrLightColor(formattedValue)}
             className={swatchCheckIcon}
             icon={checkSmallIcon}
           />

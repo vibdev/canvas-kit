@@ -67,4 +67,21 @@ describe('ColorInput', () => {
     );
     expect(component.find('input').props().value).toBe('e6e');
   });
+  test('should allow only 6 non-# characters as the value', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={'#123456789'} />
+    );
+    expect(component.find('input').props().value).toBe('123456');
+  });
+  test('should show the checkmark after the valid hex value has been formatted', () => {
+    const component = mount(
+      <ColorInput onChange={jest.fn()} onValidColorChange={jest.fn()} value={'#123456789'} />
+    );
+    expect(
+      component
+        .find('div[className^="css"]')
+        .at(1) // This div the background of the color preview/checkmark bit
+        .prop('style')
+    ).toHaveProperty('backgroundColor', '#123456');
+  });
 });
