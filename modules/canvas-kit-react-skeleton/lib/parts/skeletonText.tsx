@@ -27,6 +27,10 @@ const Line = styled('div')<{
 });
 
 export default class SkeletonText extends React.Component<SkeletonTextProps> {
+  static defaultProps = {
+    lineCount: 2,
+  };
+
   render(): React.ReactNode {
     const {lineCount} = this.props;
     return lineCount > 0 ? <TextContainer>{this.createTextLines()}</TextContainer> : null;
