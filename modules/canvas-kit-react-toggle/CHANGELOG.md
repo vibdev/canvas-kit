@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.1.3...@workday/canvas-kit-react-toggle@0.1.4) (2019-03-21)
+
+
+### Bug Fixes
+
+* **toggle:** fix styling issues in IE11 ([#278](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/issues/278)) ([dd73f77](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/commits/dd73f77))
+
+
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toggle/compare/@workday/canvas-kit-react-toggle@0.1.2...@workday/canvas-kit-react-toggle@0.1.3) (2019-03-01)
 
