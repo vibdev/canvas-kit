@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.1.1...@workday/canvas-kit-react-color-picker@0.1.2) (2019-03-21)
+
+
+### Bug Fixes
+
+* **colorInput:** Fix overflow of value in color picker widget ([#273](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/issues/273)) ([7ffe0b5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/7ffe0b5))
+
+
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.1.0...@workday/canvas-kit-react-color-picker@0.1.1) (2019-03-19)
 
