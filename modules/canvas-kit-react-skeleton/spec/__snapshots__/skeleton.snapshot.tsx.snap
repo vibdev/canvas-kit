@@ -11,7 +11,7 @@ exports[`Skeleton Single Span 1`] = `
 .emotion-0 {
   -webkit-animation: animation-3qt75e 5s ease-in-out infinite;
   animation: animation-3qt75e 5s ease-in-out infinite;
-  background: linear-gradient(130deg,transparent 45%,#ffffff,transparent 55%);
+  background: linear-gradient(130deg,rgba(255,255,255,0) 45%,#ffffff,rgba(255,255,255,0) 55%);
   background-repeat: no-repeat;
   background-size: 10px 10px;
   width: 10px;
