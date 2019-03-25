@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-skeleton",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A component that renders a skeleton.",
   "homepage": "https://workdaydesign.com",
   "author": "Kendall Gassner <kendall.gassner@workday.com>",
@@ -37,7 +37,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-core": "^1.7.1",
+    "@workday/canvas-kit-react-core": "^1.8.0",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   }

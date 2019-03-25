@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.7.1...@workday/canvas-kit-react-core@1.8.0) (2019-03-25)
+
+
+### Features
+
+* **spacing:** initial spacing margin and padding commit ([6dbe0f7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/6dbe0f7))
+* add types to spacing ([be85776](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/be85776))
+
+
+
+
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.7.0...@workday/canvas-kit-react-core@1.7.1) (2019-02-26)
 

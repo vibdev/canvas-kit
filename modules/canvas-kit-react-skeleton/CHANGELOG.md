@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-skeleton/compare/@workday/canvas-kit-react-skeleton@0.0.4...@workday/canvas-kit-react-skeleton@0.0.5) (2019-03-25)
+
+
+### Bug Fixes
+
+* **skeleton:** transparent does not work safari browser ([1ca35ea](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-skeleton/commits/1ca35ea))
+
+
+
+
+
 ## [0.0.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-skeleton/compare/@workday/canvas-kit-react-skeleton@0.0.3...@workday/canvas-kit-react-skeleton@0.0.4) (2019-03-21)
 
 
