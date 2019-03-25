@@ -9,19 +9,27 @@ describe('Toggle Snapshots', () => {
   });
   test('renders popover with close icon', () => {
     const component = renderer.create(
-      <Popover onClose={jest.fn()} paddingSize={PopoverPadding.s} />
+      <Popover handleClose={jest.fn()} paddingSize={PopoverPadding.s} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders popover different padding', () => {
     const component = renderer.create(
-      <Popover onClose={jest.fn()} paddingSize={PopoverPadding.l} />
+      <Popover handleClose={jest.fn()} paddingSize={PopoverPadding.l} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders popover with children elements', () => {
     const component = renderer.create(
-      <Popover onClose={jest.fn()} paddingSize={PopoverPadding.zero}>
+      <Popover handleClose={jest.fn()} paddingSize={PopoverPadding.zero}>
+        <span>hello world</span>
+      </Popover>
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders without close icon', () => {
+    const component = renderer.create(
+      <Popover paddingSize={PopoverPadding.zero}>
         <span>hello world</span>
       </Popover>
     );

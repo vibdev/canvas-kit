@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import Popper from '@material-ui/core/Popper';
 
-import {beta_Button as Button} from '@workday/canvas-kit-react-button';
+import {Button} from '@workday/canvas-kit-react-button';
 import {Popover} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {PopoverPadding} from './lib/Popover';
@@ -21,16 +21,15 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
   };
   public render() {
     const {anchorEl, open} = this.state;
-    const id = open ? 'simple-popper' : '';
     return (
       <div style={{display: 'flex', justifyContent: 'center'}}>
-        <Button onClick={this.handleClick}>Show Popover</Button>
-        <Popper placement={'bottom'} id={id} open={open} anchorEl={anchorEl}>
+        <Button onClick={this.handleClick}>Open Popover</Button>
+        <Popper placement={'bottom'} open={open} anchorEl={anchorEl}>
           <Popover
             width={300}
             heading={'Popover Title'}
-            paddingSize={PopoverPadding.s}
-            onClose={this.handleClose}
+            paddingSize={PopoverPadding.l}
+            handleClose={this.handleClose}
           >
             <div style={{marginBottom: '24px'}}>
               This is the content of a popover. You can add whatever you'd like in here.
@@ -66,11 +65,11 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
   };
 }
 
-storiesOf('Canvas Kit/Popup', module)
+storiesOf('Canvas Kit/Popover', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Popup</h1>
+      <h1 className="section-label">Popover</h1>
       <PopoverWrapper />
     </div>
   ));

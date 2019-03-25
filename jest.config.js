@@ -14,7 +14,7 @@ module.exports = {
     // '**/canvas-kit-react-fonts/**/*.{tsx,}',
     '**/canvas-kit-react-icon/**/*.{tsx,}',
     '**/canvas-kit-react-page-header/**/*.{tsx,}',
-    '**/canvas-kit-react-popup/**/*.{tsx,}',
+    '**/canvas-kit-react-popover/**/*.{tsx,}',
     '**/canvas-kit-react-table/**/*.{tsx,}',
     '**/canvas-kit-react-toggle/**/*.{tsx,}',
     '**/canvas-kit-react-loading-animation/**/*.{tsx,}',

@@ -1,6 +1,8 @@
 # Canvas Kit Popover
 
-A popover component that allows you to render content above another.
+A popover component that allows you to render content above another. Note: In our example we use
+Material UIs popper component to wrap our popover component and position it, which is a wrapper to
+Popper.js. For reference: https://material-ui.com/api/popper/
 
 ## Installation
 
@@ -11,16 +13,27 @@ yarn add @workday/canvas-kit-react
 or
 
 ```sh
-yarn add @workday/canvas-kit-react-popup
+yarn add @workday/canvas-kit-react-popover
 ```
 
 ## Usage
 
 ```tsx
 import * as React from 'react';
-import {Toggle} from '@workday/canvas-kit-react-toggle';
+import Popper from '@material-ui/core/Popper';
+import {Popover, PopoverPadding} from '@workday/canvas-kit-react-popover';
 
-<Toggle disabled={false} checked={checked} onChange={this.handleCheck} />;
+// We use Popper from Material UI for our positioning
+<Popper placement={'bottom'} open={this.state.open} anchorEl={anchorEl}>
+  <Popover
+    width={300}
+    heading={'Popover Title'}
+    paddingSize={PopoverPadding.l}
+    handleClose={this.handleClose}
+  >
+    {this.props.children}
+  </Popover>
+</Popper>;
 ```
 
 ## Static Properties
@@ -31,45 +44,36 @@ import {Toggle} from '@workday/canvas-kit-react-toggle';
 
 ### Required
 
-> None
+### `paddingSize: PopoverPadding`
+
+> You can choose between zero, s, l for your padding
+
+---
 
 ### Optional
 
-#### `checked: boolean`
+#### `handleClose: () => void`
 
-> Whether or not the toggle is on (`true`) or off (`false`)
-
-Default: `false`
+> Callback to handle close of your popover and any other event when the popover is closed.
 
 ---
 
-#### `disabled: boolean`
+#### `width: number | string`
 
-> Whether or not the toggle is disabled (not able to be switched on or off)
+> Width of the card.
 
-Default: `false`
-
----
-
-#### `id: string`
-
-> The HTML attribute `id` for the underlying input checkbox component.
+Default: `null`
 
 ---
 
-#### `onChange: (e: React.SyntheticEvent<HTMLInputElement>) => void`
+#### `depth: CanvasDepthValue`
 
-> A callback that gets called everytime the toggle checked state changes.
+> Depth of the card. Style imported from `@workday/canvas-kit-react-core`.
 
----
+Default: `depth[2]`
 
-#### `value: string`
+#### `heading: ReactNode`
 
-> The `value` attribute of the input checkbox.
+> Heading at the top of the card.
 
----
-
-#### `inputRef: React.Ref<HTMLInputElement>`
-
-> A ref to the underlying input checkbox element. Use this to imperatively toggle or focus this
-> component.
+Default: `null`

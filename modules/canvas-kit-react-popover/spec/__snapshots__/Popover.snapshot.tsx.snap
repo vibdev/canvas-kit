@@ -3,6 +3,7 @@
 exports[`Toggle Snapshots renders as expected 1`] = `
 .emotion-4 {
   position: relative;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
@@ -35,23 +36,24 @@ exports[`Toggle Snapshots renders as expected 1`] = `
 `;
 
 exports[`Toggle Snapshots renders popover different padding 1`] = `
-.emotion-1 {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-}
-
-.emotion-6 {
+.emotion-7 {
   position: relative;
+  background-color: #ffffff;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
 }
 
 .emotion-0 {
@@ -86,7 +88,7 @@ exports[`Toggle Snapshots renders popover different padding 1`] = `
   fill: transparent;
 }
 
-.emotion-4 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -95,10 +97,10 @@ exports[`Toggle Snapshots renders popover different padding 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
 >
   <div
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -111,33 +113,34 @@ exports[`Toggle Snapshots renders popover different padding 1`] = `
     />
   </div>
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     />
   </div>
 </div>
 `;
 
 exports[`Toggle Snapshots renders popover with children elements 1`] = `
-.emotion-1 {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-}
-
-.emotion-6 {
+.emotion-7 {
   position: relative;
+  background-color: #ffffff;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
 }
 
 .emotion-0 {
@@ -172,7 +175,7 @@ exports[`Toggle Snapshots renders popover with children elements 1`] = `
   fill: transparent;
 }
 
-.emotion-4 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -181,10 +184,10 @@ exports[`Toggle Snapshots renders popover with children elements 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
 >
   <div
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -197,10 +200,10 @@ exports[`Toggle Snapshots renders popover with children elements 1`] = `
     />
   </div>
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       <span>
         hello world
@@ -211,18 +214,12 @@ exports[`Toggle Snapshots renders popover with children elements 1`] = `
 `;
 
 exports[`Toggle Snapshots renders popover with close icon 1`] = `
-.emotion-1 {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-}
-
-.emotion-6 {
+.emotion-7 {
   position: relative;
+  background-color: #ffffff;
 }
 
-.emotion-4 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -230,12 +227,19 @@ exports[`Toggle Snapshots renders popover with close icon 1`] = `
   padding: 16px;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-size: 14px;
   color: #494949;
   font-weight: 400;
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
 }
 
 .emotion-0 {
@@ -271,10 +275,10 @@ exports[`Toggle Snapshots renders popover with close icon 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
 >
   <div
-    className="emotion-1"
+    className="emotion-1 emotion-2"
   >
     <span
       className="emotion-0"
@@ -287,21 +291,22 @@ exports[`Toggle Snapshots renders popover with close icon 1`] = `
     />
   </div>
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     />
   </div>
 </div>
 `;
 
-exports[`Toggle Snapshots renders popover with different props 1`] = `
-.emotion-6 {
+exports[`Toggle Snapshots renders without close icon 1`] = `
+.emotion-4 {
   position: relative;
+  background-color: #ffffff;
 }
 
-.emotion-2 {
+.emotion-0 {
   font-size: 14px;
   color: #494949;
   font-weight: 400;
@@ -309,38 +314,22 @@ exports[`Toggle Snapshots renders popover with different props 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 0px;
-  width: 300px;
-}
-
-.emotion-0 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  color: #333333;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-bottom: 24px;
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-4 emotion-5"
 >
   <div
-    className="emotion-4 emotion-5"
-    width={300}
+    className="emotion-2 emotion-3"
   >
     <div
       className="emotion-0 emotion-1"
-    >
-      Title
-    </div>
-    <div
-      className="emotion-2 emotion-3"
     >
       <span>
         hello world
