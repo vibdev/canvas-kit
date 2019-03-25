@@ -1,7 +1,7 @@
 {
-  "name": "@workday/canvas-kit-react-popup",
+  "name": "@workday/canvas-kit-react-popover",
   "version": "0.0.0",
-  "description": "Popup to display some content on top of another",
+  "description": "Popover to display some content on top of another",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
   "license": "Apache-2.0",
@@ -11,7 +11,7 @@
   "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popover"
   },
   "files": [
     "dist/",
@@ -31,7 +31,7 @@
     "react",
     "components",
     "workday",
-    "popup"
+    "popover"
   ],
   "devDependencies": {
     "@material-ui/core": "^3.9.2"
