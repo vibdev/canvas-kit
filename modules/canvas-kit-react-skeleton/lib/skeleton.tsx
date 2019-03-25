@@ -19,9 +19,9 @@ const SkeletonAnimator = styled('div')<{diagonal: number; topPosition: number; w
 
     return {
       animation: `${backgroundPositionAnimation} ${DURATION}s ease-in-out infinite`,
-      background: `linear-gradient(130deg, transparent ${TRANSPARENCY_POSITION}%, ${
+      background: `linear-gradient(130deg, rgba(255,255,255,0) ${TRANSPARENCY_POSITION}%, ${
         canvas.colors.frenchVanilla100
-      }, transparent ${TRANSPARENCY_POSITION + WHITE_SHEEN_WIDTH}%)`,
+      }, rgba(255,255,255,0)  ${TRANSPARENCY_POSITION + WHITE_SHEEN_WIDTH}%)`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: `${diagonal}px ${diagonal}px`,
       width: diagonal,
