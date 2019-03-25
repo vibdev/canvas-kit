@@ -2,10 +2,10 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import canvas, {
+  colors,
   iconColors,
   inputColors,
-  commonColors,
-  typeColors,
+  InputProvider,
 } from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
@@ -23,14 +23,14 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
 const checkboxTapArea = 24;
-const checkboxSpacingBottom = checkboxTapArea + 8;
+const checkboxContainerHeight = checkboxTapArea + 8;
 const checkboxSpacingRight = 5;
 const checkboxWidth = 18;
 const rippleRadius = (40 - checkboxWidth) / 2;
 
 const CheckboxContainer = styled('div')({
   display: 'block',
-  height: checkboxSpacingBottom,
+  height: checkboxContainerHeight,
 });
 
 const CheckboxInputWrapper = styled('div')({
@@ -38,7 +38,7 @@ const CheckboxInputWrapper = styled('div')({
   width: checkboxTapArea,
   '&::after': {
     borderRadius: 999,
-    boxShadow: '0 0 0 0 ' + commonColors.backgroundAlt,
+    boxShadow: '0 0 0 0 ' + colors.soap200,
     content: '""',
     display: 'inline-block',
     height: checkboxHeight,
@@ -47,7 +47,7 @@ const CheckboxInputWrapper = styled('div')({
     zIndex: 1,
   },
   '&:hover::after': {
-    boxShadow: '0 0 0 ' + rippleRadius + 'px ' + commonColors.backgroundAlt,
+    boxShadow: '0 0 0 ' + rippleRadius + 'px ' + colors.soap200,
   },
 });
 
@@ -68,21 +68,21 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     '&:focus, &:active, &focus:hover, &:active:hover': {
       '& ~ div:first-of-type': {
         ...focusRing(0, 0),
-        borderColor: typeColors.link,
+        borderColor: colors.blueberry400,
         borderWidth: '2px',
         zIndex: 2,
       },
-      '&:checked ~ div:first-of-type': {
-        ...focusRing(2, 2),
-      },
+    },
+    '[data-whatinput="keyboard"] &:focus ~ div:first-of-type': {
+      ...focusRing(2, 2),
     },
   },
   ({checked, disabled}) => ({
     '&:hover ~ div:first-of-type': {
-      borderColor: checked ? typeColors.link : inputColors.hoverBorder,
+      borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
     },
     '&:focus:hover ~ div:first-of-type': {
-      borderColor: disabled ? inputColors.hoverBorder : typeColors.link,
+      borderColor: disabled ? inputColors.hoverBorder : colors.blueberry400,
     },
   })
 );
@@ -90,7 +90,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
 const CheckboxBackground = styled('div')<CheckboxProps>(
   {
     alignItems: 'center',
-    backgroundColor: commonColors.background,
+    backgroundColor: colors.frenchVanilla100,
     borderRadius: checkboxBorderRadius,
     borderStyle: 'solid',
     borderWidth: '1px',
@@ -106,11 +106,19 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
   },
   ({checked, disabled}) => ({
     cursor: disabled ? undefined : 'pointer',
-    borderColor: checked ? typeColors.link : inputColors.border,
-    backgroundColor: checked ? typeColors.link : disabled ? inputColors.disabled : 'white',
+    borderColor: checked ? colors.blueberry400 : inputColors.border,
+    backgroundColor: checked
+      ? colors.blueberry400
+      : disabled
+        ? inputColors.disabled.background
+        : 'white',
     '&:hover': {
-      backgroundColor: checked ? typeColors.link : disabled ? inputColors.disabled : 'white',
-      borderColor: checked ? typeColors.link : inputColors.border,
+      backgroundColor: checked
+        ? colors.blueberry400
+        : disabled
+          ? inputColors.disabled.background
+          : 'white',
+      borderColor: checked ? colors.blueberry400 : inputColors.border,
     },
   })
 );
@@ -136,15 +144,6 @@ const CheckboxLabel = styled('label')({
   verticalAlign: '3px',
 });
 
-// Show or hide the label component based on wheter or not a label is specified
-export function CheckboxLabelComponent(props: {label: React.ReactNode; id: string | undefined}) {
-  if (!props.label) {
-    return null;
-  }
-
-  return <CheckboxLabel htmlFor={props.id}>{props.label}</CheckboxLabel>;
-}
-
 export default class Checkbox extends React.Component<CheckboxProps> {
   public static defaultProps = {
     checked: false,
@@ -155,28 +154,39 @@ export default class Checkbox extends React.Component<CheckboxProps> {
     const {checked, disabled, id, inputRef, label, onChange, value, ...otherProps} = this.props;
 
     return (
-      <CheckboxContainer>
-        <CheckboxInputWrapper>
-          <CheckboxInput
-            checked={checked}
-            disabled={disabled}
-            id={id}
-            innerRef={inputRef}
-            onChange={onChange}
-            role="checkbox"
-            tabIndex={0}
-            type="checkbox"
-            value={value}
-            {...otherProps}
-          />
-          <CheckboxBackground checked={checked} disabled={disabled}>
-            <CheckboxCheck checked={checked}>
-              <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
-            </CheckboxCheck>
-          </CheckboxBackground>
-        </CheckboxInputWrapper>
-        <CheckboxLabelComponent id={id} label={label} />
-      </CheckboxContainer>
+      <InputProvider>
+        <CheckboxContainer>
+          <CheckboxInputWrapper>
+            <CheckboxInput
+              checked={checked}
+              disabled={disabled}
+              id={id}
+              innerRef={inputRef}
+              onChange={onChange}
+              role="checkbox"
+              tabIndex={0}
+              type="checkbox"
+              value={value}
+              {...otherProps}
+            />
+            <CheckboxBackground checked={checked} disabled={disabled}>
+              <CheckboxCheck checked={checked}>
+                <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
+              </CheckboxCheck>
+            </CheckboxBackground>
+          </CheckboxInputWrapper>
+          <CheckboxLabelComponent id={id} label={label} />
+        </CheckboxContainer>
+      </InputProvider>
     );
   }
+}
+
+// Show or hide the label component based on wheter or not a label is specified
+export function CheckboxLabelComponent(props: {label: React.ReactNode; id: string | undefined}) {
+  if (!props.label) {
+    return null;
+  }
+
+  return <CheckboxLabel htmlFor={props.id}>{props.label}</CheckboxLabel>;
 }
