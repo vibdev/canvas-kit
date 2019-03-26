@@ -56,6 +56,10 @@ const CheckboxInputWrapper = styled('div')({
   },
 });
 
+/**
+ * Note: `~ div:first-of-type` refers to `CheckboxBackground`
+ * and was easier to use than a component selector in this case.
+ */
 const CheckboxInput = styled('input')<CheckboxProps>(
   {
     borderRadius: checkboxBorderRadius,
