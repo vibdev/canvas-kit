@@ -181,8 +181,6 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
         checked={true}
         className="emotion-0 emotion-1"
         disabled={false}
-        role="checkbox"
-        tabIndex={0}
         type="checkbox"
       />
       <div
@@ -390,8 +388,6 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
         checked={true}
         className="emotion-0 emotion-1"
         disabled={true}
-        role="checkbox"
-        tabIndex={0}
         type="checkbox"
       />
       <div
@@ -599,8 +595,6 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
         checked={false}
         className="emotion-0 emotion-1"
         disabled={true}
-        role="checkbox"
-        tabIndex={0}
         type="checkbox"
       />
       <div
@@ -809,8 +803,6 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
         checked={false}
         className="emotion-0 emotion-1"
         disabled={false}
-        role="checkbox"
-        tabIndex={0}
         type="checkbox"
       />
       <div

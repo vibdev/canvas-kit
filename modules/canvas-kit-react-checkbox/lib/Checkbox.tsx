@@ -165,8 +165,6 @@ export default class Checkbox extends React.Component<CheckboxProps> {
               id={id}
               innerRef={inputRef}
               onChange={onChange}
-              role="checkbox"
-              tabIndex={0}
               type="checkbox"
               value={value}
               {...otherProps}
