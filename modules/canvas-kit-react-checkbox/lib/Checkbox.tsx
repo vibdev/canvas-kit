@@ -6,6 +6,7 @@ import canvas, {
   iconColors,
   inputColors,
   InputProvider,
+  spacingNumbers as spacing,
 } from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
@@ -22,20 +23,25 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 
 const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
-const checkboxTapArea = canvas.spacing.m;
-const checkboxSpacingRight = 11;
-const checkboxSpacingBottom = 10;
+const checkboxTapArea = spacing.m;
+const checkboxContainerHeight = checkboxTapArea + spacing.xxs;
+const checkboxLabelDistance = spacing.xs;
 const checkboxWidth = 18;
 const rippleRadius = (40 - checkboxWidth) / 2;
 
 const CheckboxContainer = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  marginBottom: checkboxSpacingBottom,
+  height: checkboxContainerHeight,
 });
 
+/**
+ * Using a wrapper prevents the browser default behavior of trigging
+ * :hover on the checkbox when you hover on it's corresponding label.
+ * This stops the ripple from showing when you hover on the label.
+ */
 const CheckboxInputWrapper = styled('div')({
-  display: 'inline-block',
+  height: checkboxHeight,
   '&::after': {
     borderRadius: 999,
     boxShadow: '0 0 0 0 ' + colors.soap200,
@@ -53,15 +59,14 @@ const CheckboxInputWrapper = styled('div')({
 
 const CheckboxInput = styled('input')<CheckboxProps>(
   {
-    display: 'inline-block',
     borderRadius: checkboxBorderRadius,
+    width: checkboxTapArea,
     height: checkboxTapArea,
     margin: 0,
     marginTop: '-3px',
     marginLeft: '-3px',
     position: 'absolute',
     opacity: 0,
-    width: checkboxTapArea,
     '&:focus, &:active': {
       outline: 'none',
     },
@@ -141,9 +146,7 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
 
 const CheckboxLabel = styled('label')({
   ...canvas.type.body,
-  display: 'inline-block',
-  marginLeft: checkboxSpacingRight,
-  marginTop: '-4px',
+  marginLeft: checkboxLabelDistance,
 });
 
 export default class Checkbox extends React.Component<CheckboxProps> {
