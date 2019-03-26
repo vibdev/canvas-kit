@@ -22,20 +22,20 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 
 const checkboxBorderRadius = 2;
 const checkboxHeight = 18;
-const checkboxTapArea = 24;
-const checkboxContainerHeight = checkboxTapArea + 8;
-const checkboxSpacingRight = 5;
+const checkboxTapArea = canvas.spacing.m;
+const checkboxSpacingRight = 11;
+const checkboxSpacingBottom = 10;
 const checkboxWidth = 18;
 const rippleRadius = (40 - checkboxWidth) / 2;
 
 const CheckboxContainer = styled('div')({
-  display: 'block',
-  height: checkboxContainerHeight,
+  display: 'flex',
+  alignItems: 'center',
+  marginBottom: checkboxSpacingBottom,
 });
 
 const CheckboxInputWrapper = styled('div')({
   display: 'inline-block',
-  width: checkboxTapArea,
   '&::after': {
     borderRadius: 999,
     boxShadow: '0 0 0 0 ' + colors.soap200,
@@ -67,17 +67,20 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     },
     '&:focus, &:active, &focus:hover, &:active:hover': {
       '& ~ div:first-of-type': {
-        ...focusRing(0, 0),
         borderColor: colors.blueberry400,
         borderWidth: '2px',
         zIndex: 2,
       },
     },
-    '[data-whatinput="keyboard"] &:focus ~ div:first-of-type': {
+    '&:checked:focus ~ div:first-of-type': {
       ...focusRing(2, 2),
+    },
+    '[data-whatinput="mouse"] &:focus ~ div:first-of-type, [data-whatinput="touch"] &:focus ~ div:first-of-type, [data-whatinput="touch"] &:focus ~ div:first-of-type': {
+      ...focusRing(0, 0),
     },
   },
   ({checked, disabled}) => ({
+    cursor: disabled ? undefined : 'pointer',
     '&:hover ~ div:first-of-type': {
       borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
     },
@@ -105,7 +108,6 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     width: checkboxWidth,
   },
   ({checked, disabled}) => ({
-    cursor: disabled ? undefined : 'pointer',
     borderColor: checked ? colors.blueberry400 : inputColors.border,
     backgroundColor: checked
       ? colors.blueberry400
@@ -141,7 +143,7 @@ const CheckboxLabel = styled('label')({
   ...canvas.type.body,
   display: 'inline-block',
   marginLeft: checkboxSpacingRight,
-  verticalAlign: '3px',
+  marginTop: '-4px',
 });
 
 export default class Checkbox extends React.Component<CheckboxProps> {
@@ -175,18 +177,9 @@ export default class Checkbox extends React.Component<CheckboxProps> {
               </CheckboxCheck>
             </CheckboxBackground>
           </CheckboxInputWrapper>
-          <CheckboxLabelComponent id={id} label={label} />
+          {label && <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>}
         </CheckboxContainer>
       </InputProvider>
     );
   }
-}
-
-// Show or hide the label component based on wheter or not a label is specified
-export function CheckboxLabelComponent(props: {label: React.ReactNode; id: string | undefined}) {
-  if (!props.label) {
-    return null;
-  }
-
-  return <CheckboxLabel htmlFor={props.id}>{props.label}</CheckboxLabel>;
 }
