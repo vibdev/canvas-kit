@@ -5,7 +5,6 @@ import canvas, {
   colors,
   iconColors,
   inputColors,
-  InputProvider,
   spacingNumbers as spacing,
 } from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
@@ -159,28 +158,26 @@ export default class Checkbox extends React.Component<CheckboxProps> {
     const {checked, disabled, id, inputRef, label, onChange, value, ...otherProps} = this.props;
 
     return (
-      <InputProvider>
-        <CheckboxContainer>
-          <CheckboxInputWrapper>
-            <CheckboxInput
-              checked={checked}
-              disabled={disabled}
-              id={id}
-              innerRef={inputRef}
-              onChange={onChange}
-              type="checkbox"
-              value={value}
-              {...otherProps}
-            />
-            <CheckboxBackground checked={checked} disabled={disabled}>
-              <CheckboxCheck checked={checked}>
-                <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
-              </CheckboxCheck>
-            </CheckboxBackground>
-          </CheckboxInputWrapper>
-          {label && <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>}
-        </CheckboxContainer>
-      </InputProvider>
+      <CheckboxContainer>
+        <CheckboxInputWrapper>
+          <CheckboxInput
+            checked={checked}
+            disabled={disabled}
+            id={id}
+            innerRef={inputRef}
+            onChange={onChange}
+            type="checkbox"
+            value={value}
+            {...otherProps}
+          />
+          <CheckboxBackground checked={checked} disabled={disabled}>
+            <CheckboxCheck checked={checked}>
+              <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
+            </CheckboxCheck>
+          </CheckboxBackground>
+        </CheckboxInputWrapper>
+        {label && <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>}
+      </CheckboxContainer>
     );
   }
 }

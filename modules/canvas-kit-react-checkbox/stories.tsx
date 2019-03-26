@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 
 import Checkbox from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -33,6 +34,7 @@ class CheckboxWrapper extends React.Component {
 }
 
 storiesOf('Canvas Kit/Checkbox', module)
+  .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
