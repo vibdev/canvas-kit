@@ -13,7 +13,7 @@ yarn add @workday/canvas-kit-react
 or
 
 ```sh
-yarn add @workday/canvas-kit-react-popover
+yarn add @workday/canvas-kit-react-popup
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add @workday/canvas-kit-react-popover
 ```tsx
 import * as React from 'react';
 import Popper from '@material-ui/core/Popper';
-import {Popover, PopoverPadding} from '@workday/canvas-kit-react-popover';
+import {Popover, PopoverPadding} from '@workday/canvas-kit-react-popup';
 
 // We use Popper from Material UI for our positioning
 <Popper placement={'bottom'} open={this.state.open} anchorEl={anchorEl}>
