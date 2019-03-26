@@ -39,6 +39,7 @@
     "@workday/canvas-kit-react-banner": "^0.1.1",
     "@workday/canvas-kit-react-button": "^0.20.6",
     "@workday/canvas-kit-react-card": "^0.3.8",
+    "@workday/canvas-kit-react-checkbox": "^0.0.1",
     "@workday/canvas-kit-react-color-picker": "^0.1.5",
     "@workday/canvas-kit-react-common": "^0.3.11",
     "@workday/canvas-kit-react-cookie-banner": "^0.4.17",
