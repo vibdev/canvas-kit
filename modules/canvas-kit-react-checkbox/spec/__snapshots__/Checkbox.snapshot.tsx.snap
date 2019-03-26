@@ -10,11 +10,11 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 32px;
 }
 
 .emotion-7 {
-  display: inline-block;
+  height: 18px;
 }
 
 .emotion-7::after {
@@ -34,15 +34,14 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 }
 
 .emotion-0 {
-  display: inline-block;
   border-radius: 2px;
+  width: 24px;
   height: 24px;
   margin: 0;
   margin-top: -3px;
   margin-left: -3px;
   position: absolute;
   opacity: 0;
-  width: 24px;
   cursor: pointer;
 }
 
@@ -66,19 +65,23 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-s6lrth 100ms;
   animation: animation-s6lrth 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
-}
-
-.emotion-0:hover ~ div:first-of-type {
+  border-width: 1px;
   border-color: #0875e1;
 }
 
-.emotion-0:focus:hover ~ div:first-of-type {
+[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #0875e1;
 }
 
@@ -168,43 +171,38 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 }
 
 <div
-  data-whatinput="initial"
-  data-whatintent={null}
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-9 emotion-10"
+    className="emotion-7 emotion-8"
   >
+    <input
+      checked={true}
+      className="emotion-0 emotion-1"
+      disabled={false}
+      type="checkbox"
+    />
     <div
-      className="emotion-7 emotion-8"
+      checked={true}
+      className="emotion-5 emotion-6"
+      disabled={false}
     >
-      <input
-        checked={true}
-        className="emotion-0 emotion-1"
-        disabled={false}
-        type="checkbox"
-      />
       <div
         checked={true}
-        className="emotion-5 emotion-6"
-        disabled={false}
+        className="emotion-3 emotion-4"
       >
-        <div
-          checked={true}
-          className="emotion-3 emotion-4"
-        >
-          <span
-            className="emotion-2"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
+        <span
+          className="emotion-2"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
-          />
-        </div>
+          }
+        />
       </div>
     </div>
-    
   </div>
+  
 </div>
 `;
 
@@ -218,11 +216,11 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 32px;
 }
 
 .emotion-7 {
-  display: inline-block;
+  height: 18px;
 }
 
 .emotion-7::after {
@@ -327,15 +325,14 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0 {
-  display: inline-block;
   border-radius: 2px;
+  width: 24px;
   height: 24px;
   margin: 0;
   margin-top: -3px;
   margin-left: -3px;
   position: absolute;
   opacity: 0;
-  width: 24px;
 }
 
 .emotion-0:focus,
@@ -358,60 +355,59 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #7b858f;
+}
+
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-s6lrth 100ms;
   animation: animation-s6lrth 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
-}
-
-.emotion-0:hover ~ div:first-of-type {
+  border-width: 1px;
   border-color: #0875e1;
 }
 
-.emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
+  border-color: #0875e1;
 }
 
 <div
-  data-whatinput="initial"
-  data-whatintent={null}
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-9 emotion-10"
+    className="emotion-7 emotion-8"
   >
+    <input
+      checked={true}
+      className="emotion-0 emotion-1"
+      disabled={true}
+      type="checkbox"
+    />
     <div
-      className="emotion-7 emotion-8"
+      checked={true}
+      className="emotion-5 emotion-6"
+      disabled={true}
     >
-      <input
-        checked={true}
-        className="emotion-0 emotion-1"
-        disabled={true}
-        type="checkbox"
-      />
       <div
         checked={true}
-        className="emotion-5 emotion-6"
-        disabled={true}
+        className="emotion-3 emotion-4"
       >
-        <div
-          checked={true}
-          className="emotion-3 emotion-4"
-        >
-          <span
-            className="emotion-2"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
+        <span
+          className="emotion-2"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
-          />
-        </div>
+          }
+        />
       </div>
     </div>
-    
   </div>
+  
 </div>
 `;
 
@@ -425,11 +421,11 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 32px;
 }
 
 .emotion-7 {
-  display: inline-block;
+  height: 18px;
 }
 
 .emotion-7::after {
@@ -481,15 +477,14 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0 {
-  display: inline-block;
   border-radius: 2px;
+  width: 24px;
   height: 24px;
   margin: 0;
   margin-top: -3px;
   margin-left: -3px;
   position: absolute;
   opacity: 0;
-  width: 24px;
 }
 
 .emotion-0:focus,
@@ -512,20 +507,24 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #7b858f;
+}
+
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-s6lrth 100ms;
   animation: animation-s6lrth 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  border-width: 1px;
+  border-color: #a1aab3;
 }
 
-.emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
-}
-
-.emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
+  border-color: #a1aab3;
 }
 
 .emotion-5 {
@@ -559,7 +558,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 
 .emotion-5:hover {
   background-color: #f6f7f8;
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 .emotion-3 {
@@ -582,43 +581,38 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 <div
-  data-whatinput="initial"
-  data-whatintent={null}
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-9 emotion-10"
+    className="emotion-7 emotion-8"
   >
+    <input
+      checked={false}
+      className="emotion-0 emotion-1"
+      disabled={true}
+      type="checkbox"
+    />
     <div
-      className="emotion-7 emotion-8"
+      checked={false}
+      className="emotion-5 emotion-6"
+      disabled={true}
     >
-      <input
-        checked={false}
-        className="emotion-0 emotion-1"
-        disabled={true}
-        type="checkbox"
-      />
       <div
         checked={false}
-        className="emotion-5 emotion-6"
-        disabled={true}
+        className="emotion-3 emotion-4"
       >
-        <div
-          checked={false}
-          className="emotion-3 emotion-4"
-        >
-          <span
-            className="emotion-2"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
+        <span
+          className="emotion-2"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
-          />
-        </div>
+          }
+        />
       </div>
     </div>
-    
   </div>
+  
 </div>
 `;
 
@@ -632,11 +626,11 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 32px;
 }
 
 .emotion-7 {
-  display: inline-block;
+  height: 18px;
 }
 
 .emotion-7::after {
@@ -707,15 +701,14 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 }
 
 .emotion-0 {
-  display: inline-block;
   border-radius: 2px;
+  width: 24px;
   height: 24px;
   margin: 0;
   margin-top: -3px;
   margin-left: -3px;
   position: absolute;
   opacity: 0;
-  width: 24px;
   cursor: pointer;
 }
 
@@ -739,20 +732,24 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
 }
 
+.emotion-0:focus:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-s6lrth 100ms;
   animation: animation-s6lrth 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  border-width: 1px;
+  border-color: #a1aab3;
 }
 
-.emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
-}
-
-.emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #0875e1;
+[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
+[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
+  border-color: #a1aab3;
 }
 
 .emotion-5 {
@@ -786,46 +783,41 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 
 .emotion-5:hover {
   background-color: white;
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 <div
-  data-whatinput="initial"
-  data-whatintent={null}
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-9 emotion-10"
+    className="emotion-7 emotion-8"
   >
+    <input
+      checked={false}
+      className="emotion-0 emotion-1"
+      disabled={false}
+      type="checkbox"
+    />
     <div
-      className="emotion-7 emotion-8"
+      checked={false}
+      className="emotion-5 emotion-6"
+      disabled={false}
     >
-      <input
-        checked={false}
-        className="emotion-0 emotion-1"
-        disabled={false}
-        type="checkbox"
-      />
       <div
         checked={false}
-        className="emotion-5 emotion-6"
-        disabled={false}
+        className="emotion-3 emotion-4"
       >
-        <div
-          checked={false}
-          className="emotion-3 emotion-4"
-        >
-          <span
-            className="emotion-2"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
+        <span
+          className="emotion-2"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.314 6.828l1.06 1.061a.5.5 0 0 1 0 .707l-7.778 7.778a.5.5 0 0 1-.707 0L6.354 12.84a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l2.122 2.12 6.364-6.364a.5.5 0 0 1 .707 0z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
-          />
-        </div>
+          }
+        />
       </div>
     </div>
-    
   </div>
+  
 </div>
 `;
