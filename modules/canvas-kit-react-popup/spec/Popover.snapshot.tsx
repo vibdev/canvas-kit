@@ -2,7 +2,7 @@ import * as React from 'react';
 import Popover, {PopoverPadding} from '../lib/Popover';
 import * as renderer from 'react-test-renderer';
 
-describe('Toggle Snapshots', () => {
+describe('Popover Snapshots', () => {
   test('renders as expected', () => {
     const component = renderer.create(<Popover paddingSize={PopoverPadding.s} />);
     expect(component).toMatchSnapshot();
@@ -13,7 +13,7 @@ describe('Toggle Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
-  test('renders popover different padding', () => {
+  test('renders popover with different padding', () => {
     const component = renderer.create(
       <Popover handleClose={jest.fn()} paddingSize={PopoverPadding.l} />
     );
@@ -27,7 +27,7 @@ describe('Toggle Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
-  test('renders without close icon', () => {
+  test('renders popover without close icon', () => {
     const component = renderer.create(
       <Popover paddingSize={PopoverPadding.zero}>
         <span>hello world</span>
