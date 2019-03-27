@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover Snapshots renders as expected 1`] = `
+.emotion-4 {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.emotion-2 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Popover Snapshots renders popover with children elements 1`] = `
+.emotion-7 {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-5 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 0px;
+}
+
+<div
+  className="emotion-7 emotion-8"
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <span
+      className="emotion-0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+      onClick={[MockFunction]}
+    />
+  </div>
+  <div
+    className="emotion-5 emotion-6"
+  >
+    <div
+      className="emotion-3 emotion-4"
+    >
+      <span>
+        hello world
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Popover Snapshots renders popover with close icon 1`] = `
+.emotion-7 {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.emotion-5 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<div
+  className="emotion-7 emotion-8"
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <span
+      className="emotion-0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+      onClick={[MockFunction]}
+    />
+  </div>
+  <div
+    className="emotion-5 emotion-6"
+  >
+    <div
+      className="emotion-3 emotion-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`Popover Snapshots renders popover with different padding 1`] = `
+.emotion-7 {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.emotion-3 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  top: 8px;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-5 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 32px;
+}
+
+<div
+  className="emotion-7 emotion-8"
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <span
+      className="emotion-0"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+      onClick={[MockFunction]}
+    />
+  </div>
+  <div
+    className="emotion-5 emotion-6"
+  >
+    <div
+      className="emotion-3 emotion-4"
+    />
+  </div>
+</div>
+`;
+
+exports[`Popover Snapshots renders popover without close icon 1`] = `
+.emotion-4 {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-2 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 0px;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <span>
+        hello world
+      </span>
+    </div>
+  </div>
+</div>
+`;
