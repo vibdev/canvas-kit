@@ -412,7 +412,7 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
   outline: none;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }

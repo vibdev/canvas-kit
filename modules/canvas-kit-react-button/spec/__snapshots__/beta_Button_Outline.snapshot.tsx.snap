@@ -136,9 +136,9 @@ exports[`Button (Outline) Snapshots renders a large, growing outline primary but
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -1119,9 +1119,9 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button 1`] 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -1269,9 +1269,9 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -1441,9 +1441,9 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-3 {
@@ -1648,9 +1648,9 @@ exports[`Button (Outline) Snapshots renders a large, outline primary button wit
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-3 {
@@ -1894,9 +1894,9 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button 1`
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -2061,9 +2061,9 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -2261,9 +2261,9 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -2485,9 +2485,9 @@ exports[`Button (Outline) Snapshots renders a large, outline secondary button wi
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -3487,9 +3487,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button 1`]
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -3637,9 +3637,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -3847,9 +3847,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-3 {
@@ -4054,9 +4054,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline primary button wit
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-3 {
@@ -4264,9 +4264,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button 1
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -4432,9 +4432,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -4632,9 +4632,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -4857,9 +4857,9 @@ exports[`Button (Outline) Snapshots renders a medium, outline secondary button w
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -5180,9 +5180,9 @@ exports[`Button (Outline) Snapshots renders a small, outline primary button 1`] 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -5347,9 +5347,9 @@ exports[`Button (Outline) Snapshots renders a small, outline secondary button 1`
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button

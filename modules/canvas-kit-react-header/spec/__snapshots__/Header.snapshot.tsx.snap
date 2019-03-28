@@ -1062,7 +1062,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 .emotion-11:not([disabled]):focus,
 .emotion-11:not([disabled]):active {
   outline: none;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
@@ -4719,7 +4719,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
 .emotion-13:not([disabled]):focus,
 .emotion-13:not([disabled]):active {
   outline: none;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
@@ -5302,7 +5302,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
 .emotion-11:not([disabled]):focus,
 .emotion-11:not([disabled]):active {
   outline: none;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
