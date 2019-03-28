@@ -9,20 +9,21 @@ export interface InputIconContainerProps {
   labelPosition?: LabelPosition;
 }
 
-const Container = styled('div')<InputIconContainerProps>(({labelPosition}) => {
-  if (labelPosition === LabelPosition.Left) {
-    return {
-      display: 'inline-block',
-    };
+const InputContainer = styled('div')<InputIconContainerProps>(
+  {
+    display: 'inline-block',
+    position: 'relative',
+  },
+  ({labelPosition}) => {
+    if (labelPosition === LabelPosition.Left) {
+      return {
+        display: 'inline-block',
+      };
+    }
+
+    return {};
   }
-
-  return {};
-});
-
-const InputContainer = styled('div')({
-  display: 'inline-block',
-  position: 'relative',
-});
+);
 
 const IconContainer = styled('div')({
   position: 'absolute',
@@ -35,12 +36,10 @@ const InputIconContainer: React.SFC<InputIconContainerProps> = ({
   icon,
   labelPosition,
 }) => (
-  <Container labelPosition={labelPosition}>
-    <InputContainer>
-      {children}
-      {icon && <IconContainer>{icon}</IconContainer>}
-    </InputContainer>
-  </Container>
+  <InputContainer labelPosition={labelPosition}>
+    {children}
+    {icon && <IconContainer>{icon}</IconContainer>}
+  </InputContainer>
 );
 
 export default InputIconContainer;
