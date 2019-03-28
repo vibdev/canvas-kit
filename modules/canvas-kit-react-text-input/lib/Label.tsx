@@ -1,38 +1,41 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {spacing, type} from '@workday/canvas-kit-react-core';
-import {LabelPosition} from './types';
+import {LabelPosition, LabelPositionBehavior} from './types';
 
-export interface LabelProps {
+export interface LabelProps extends LabelPositionBehavior {
   form?: string;
   htmlFor?: string;
   innerRef?: React.Ref<HTMLLabelElement>;
   labelProps?: React.LabelHTMLAttributes<HTMLLabelElement>;
-  position: LabelPosition;
 }
 
-const LabelComponent = styled('label')<LabelProps>(type.body, type.variant.label, ({position}) => {
-  if (position === LabelPosition.Left) {
+const LabelComponent = styled('label')<LabelProps>(
+  type.body,
+  type.variant.label,
+  ({labelPosition}) => {
+    if (labelPosition === LabelPosition.Left) {
+      return {
+        display: 'inline-block',
+        verticalAlign: 'top',
+        marginTop: 10, // Input height - font line height / 2
+        marginRight: spacing.l,
+        width: 180,
+      };
+    }
+
     return {
-      display: 'inline-block',
-      verticalAlign: 'top',
-      marginTop: 10, // Input height - font line height / 2
-      marginRight: spacing.l,
-      width: 180,
+      display: 'block',
+      marginBottom: spacing.xxxs,
     };
   }
-
-  return {
-    display: 'block',
-    marginBottom: spacing.xxxs,
-  };
-});
+);
 
 export default class Label extends React.Component<LabelProps> {
   static Position = LabelPosition;
 
   static defaultProps = {
-    position: Label.Position.Top,
+    labelPosition: Label.Position.Top,
   };
 
   public render() {

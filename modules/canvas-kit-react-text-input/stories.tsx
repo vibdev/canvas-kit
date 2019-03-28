@@ -60,6 +60,8 @@ const Inputs = {
   DisabledPlaceholder: <Input placeholder="Placeholder" disabled={true} />,
   Alert: <Input error={TextInput.ErrorType.Alert} value="Alert" />,
   Error: <Input error={TextInput.ErrorType.Error} value="Error" />,
+  Grow: <Input placeholder="Placeholder" grow={true} />,
+  GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
 };
 
 storiesOf('Canvas Kit/Inputs/Text Input', module)
@@ -70,7 +72,9 @@ storiesOf('Canvas Kit/Inputs/Text Input', module)
   .add('Disabled', () => Inputs.Disabled)
   .add('Disabled with placeholder', () => Inputs.DisabledPlaceholder)
   .add('Alert', () => Inputs.Alert)
-  .add('Error', () => Inputs.Error);
+  .add('Error', () => Inputs.Error)
+  .add('Grow', () => Inputs.Grow)
+  .add('Grow - Error', () => Inputs.GrowError);
 
 storiesOf('Canvas Kit/Inputs/Text Field/Top Label', module)
   .addDecorator(sectionDecorator('Text Field'))
@@ -80,7 +84,9 @@ storiesOf('Canvas Kit/Inputs/Text Field/Top Label', module)
   .add('Disabled', () => <Field {...Inputs.Disabled.props} />)
   .add('Disabled with placeholder', () => <Field {...Inputs.DisabledPlaceholder.props} />)
   .add('Alert', () => <Field {...Inputs.Alert.props} />)
-  .add('Error', () => <Field {...Inputs.Error.props} />);
+  .add('Error', () => <Field {...Inputs.Error.props} />)
+  .add('Grow', () => <Field {...Inputs.Grow.props} />)
+  .add('Grow - Error', () => <Field {...Inputs.GrowError.props} />);
 
 storiesOf('Canvas Kit/Inputs/Text Field/Left Label', module)
   .addDecorator(sectionDecorator('Text Field'))
@@ -102,6 +108,10 @@ storiesOf('Canvas Kit/Inputs/Text Field/Left Label', module)
   ))
   .add('Error', () => (
     <Field {...Inputs.Error.props} labelPosition={TextField.LabelPosition.Left} />
+  ))
+  .add('Grow', () => <Field {...Inputs.Grow.props} labelPosition={TextField.LabelPosition.Left} />)
+  .add('Grow - Error', () => (
+    <Field {...Inputs.GrowError.props} labelPosition={TextField.LabelPosition.Left} />
   ));
 
 storiesOf('Canvas Kit/Inputs/Hint', module)
