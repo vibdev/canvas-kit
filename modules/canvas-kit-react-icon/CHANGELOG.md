@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.5.2...@workday/canvas-kit-react-icon@1.5.3) (2019-03-28)
+
+
+### Bug Fixes
+
+* Update to latest design asset packages ([eac6271](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/commits/eac6271))
+
+
+
+
+
 ## [1.5.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-icon/compare/@workday/canvas-kit-react-icon@1.5.1...@workday/canvas-kit-react-icon@1.5.2) (2019-03-25)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-icon

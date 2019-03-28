@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.8.0...@workday/canvas-kit-react-core@1.8.1) (2019-03-28)
+
+
+### Bug Fixes
+
+* Update to latest design asset packages ([eac6271](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/eac6271))
+
+
+
+
+
 # [1.8.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.7.1...@workday/canvas-kit-react-core@1.8.0) (2019-03-25)
 
 
