@@ -7,7 +7,7 @@ import {xIcon} from '@workday/canvas-system-icons-web';
 
 export enum PopoverPadding {
   zero = '0px',
-  s = '24px',
+  s = '16px',
   l = '32px',
 }
 
@@ -25,6 +25,7 @@ const Container = styled('div')({
   position: 'relative',
   backgroundColor: colors.frenchVanilla100,
 });
+
 const CloseIconContainer = styled('div')({
   position: 'absolute',
   right: closeIconSpacing,

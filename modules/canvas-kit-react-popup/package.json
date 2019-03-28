@@ -36,6 +36,12 @@
   "devDependencies": {
     "@material-ui/core": "^3.9.2"
   },
+  "dependencies": {
+    "@workday/canvas-kit-react-button": "^0.19.4",
+    "@workday/canvas-kit-react-core": "^1.8.0",
+    "emotion": "^9.2.12",
+    "react-emotion": "^9.2.12"
+  },
   "peerDependencies": {
     "react": ">= 15 < 17"
   }
