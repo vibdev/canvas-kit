@@ -69,11 +69,17 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
         return {
           borderColor: inputColors.error.border,
           boxShadow: `inset 0 0 0 1px ${inputColors.error.border}`,
+          '&:hover': {
+            borderColor: inputColors.error.border,
+          },
         };
       case ErrorType.Alert:
         return {
           borderColor: inputColors.warning.border,
           boxShadow: `inset 0 0 0 1px ${inputColors.warning.border}`,
+          '&:hover': {
+            borderColor: inputColors.warning.border,
+          },
         };
       default:
         return {};
