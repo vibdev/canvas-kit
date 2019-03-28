@@ -27,7 +27,7 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
           <Popover
             width={300}
             heading={'Popover Title'}
-            padding={Popover.PopoverPadding.l}
+            padding={Popover.padding.s}
             handleClose={this.handleClose}
           >
             <div style={{marginBottom: '24px'}}>

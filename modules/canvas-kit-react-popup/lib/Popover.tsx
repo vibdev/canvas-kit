@@ -2,13 +2,13 @@ import * as React from 'react';
 import Card from '@workday/canvas-kit-react-card';
 import styled from 'react-emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
-import {spacing, CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
+import {CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
 import {xIcon} from '@workday/canvas-system-icons-web';
 
 export enum PopoverPadding {
-  zero = spacing.zero,
-  s = spacing.s,
-  l = spacing.l,
+  zero = '0px',
+  s = '24px',
+  l = '32px',
 }
 
 export interface PopoverProps {
@@ -33,9 +33,9 @@ const CloseIconContainer = styled('div')({
 });
 
 export default class Popover extends React.Component<PopoverProps> {
-  static PopoverPadding = PopoverPadding;
+  static padding = PopoverPadding;
   static defaultProps = {
-    padding: PopoverPadding.l,
+    padding: Popover.padding.l,
   };
   public render() {
     const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;
