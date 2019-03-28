@@ -17,6 +17,14 @@ export interface ColumnProps {
 }
 
 const ColumnContainer = styled('div')<ColumnProps>(
+  {
+    '&:first-child': {
+      paddingLeft: 0,
+    },
+    '&:last-child': {
+      paddingRight: 0,
+    },
+  },
   ({spacing}) => {
     if (spacing === 0) {
       return;
