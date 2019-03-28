@@ -46,15 +46,18 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
     '&::placeholder': {
       color: typeColors.hint,
     },
+    '&:hover': {
+      borderColor: inputColors.hoverBorder,
+    },
     '&:focus:not([disabled])': {
       borderColor: inputColors.focusBorder,
       boxShadow: `inset 0 0 0 1px ${inputColors.focusBorder}`,
       outline: 'none',
     },
     '&:disabled': {
-      backgroundColor: colors.soap100,
-      borderColor: colors.licorice100,
-      color: colors.licorice100,
+      backgroundColor: inputColors.disabled.background,
+      borderColor: inputColors.disabled.border,
+      color: inputColors.disabled.text,
       '&::placeholder': {
         color: colors.licorice100,
       },
