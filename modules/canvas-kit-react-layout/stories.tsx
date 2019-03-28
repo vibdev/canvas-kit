@@ -76,7 +76,7 @@ storiesOf('Canvas Kit/Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Fixed Column Widths</h1>
+      <h1 className="section-label">12 Column Grid Widths</h1>
       <div>
         <Layout>
           <Layout.Column columns={4}>
@@ -87,17 +87,28 @@ storiesOf('Canvas Kit/Layout', module)
           </Layout.Column>
         </Layout>
       </div>
+      <h1 className="section-label">Fixed Column Widths</h1>
+      <div>
+        <Layout>
+          <Layout.Column width={'400px'}>
+            <Card heading="400px Fixed Width" />
+          </Layout.Column>
+          <Layout.Column>
+            <Card heading="Responsive Column" />
+          </Layout.Column>
+        </Layout>
+      </div>
       <h1 className="section-label">Custom Spacing</h1>
       <div>
         <Layout spacing={60}>
           <Layout.Column spacing={0}>
-            <Card heading="Custom spacing (0px)" />
+            <Card heading="Custom Spacing (0px)" />
           </Layout.Column>
           <Layout.Column>
-            <Card heading="Custom spacing (60px)" />
+            <Card heading="Custom Spacing (60px)" />
           </Layout.Column>
           <Layout.Column>
-            <Card heading="Custom spacing (60px)" />
+            <Card heading="Custom Spacing (60px)" />
           </Layout.Column>
         </Layout>
       </div>

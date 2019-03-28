@@ -14,6 +14,10 @@ export interface ColumnProps {
    * Widths of columns.
    */
   columns?: number;
+  /**
+   * Fixed width of columns
+   */
+  width?: number | string;
 }
 
 const ColumnContainer = styled('div')<ColumnProps>(
@@ -36,12 +40,16 @@ const ColumnContainer = styled('div')<ColumnProps>(
 
     return {padding: `0 ${spacing}px`};
   },
-  ({columns}) => {
-    if (!columns) {
-      return {flex: 1};
+  ({columns, width}) => {
+    if (width) {
+      return {width};
     }
 
-    return {width: `${(columns / 12) * 100}%`};
+    if (columns) {
+      return {width: `${(columns / 12) * 100}%`};
+    }
+
+    return {flex: 1};
   }
 );
 
