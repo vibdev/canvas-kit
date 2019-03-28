@@ -34,7 +34,7 @@
     "color-picker"
   ],
   "dependencies": {
-    "@workday/canvas-system-icons-web": "^0.16.34"
+    "@workday/canvas-system-icons-web": "^0.16.39"
   },
   "peerDependencies": {
     "react": ">= 15 < 17"
