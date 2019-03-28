@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {Interpolation} from 'create-emotion-styled';
-import {border, transitions} from 'polished';
 import {
   colors,
   inputColors,
@@ -34,15 +33,14 @@ export interface TextInputProps extends TextInputBaseProps {
 export const textInputStyles: Interpolation<TextInputBaseProps> = [
   type.body,
   {
-    ...transitions('0.2s box-shadow'),
-    ...border(1, 'solid', colors.licorice200),
+    border: `1px solid ${inputColors.border}`,
     display: 'block',
     backgroundColor: inputColors.background,
     borderRadius: 4,
     boxSizing: 'border-box',
-    color: typeColors.body,
     height: 40,
     minWidth: 280,
+    transitions: '0.2s box-shadow',
     padding: spacingNumbers.xxs, // Compensate for border
     '&::placeholder': {
       color: typeColors.hint,

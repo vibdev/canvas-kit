@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {spacing, type} from '@workday/canvas-kit-react-core';
-import {margin} from 'polished';
 import {ErrorType} from './types';
 
 export interface HintProps {
@@ -10,7 +9,7 @@ export interface HintProps {
 
 const Label = styled('span')(type.body2, type.variant.label);
 
-const Message = styled('p')(type.body2, margin(spacing.xxs, 0, 0));
+const Message = styled('p')(type.body2, {margin: `${spacing.xxs} 0 0`});
 
 export default class Hint extends React.Component<HintProps> {
   static ErrorType = ErrorType;
