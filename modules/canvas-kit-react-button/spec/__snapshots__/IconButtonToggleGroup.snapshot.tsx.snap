@@ -143,9 +143,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 .emotion-4:focus.emotion-4:hover,
@@ -179,9 +179,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 }
 
 .emotion-4:not([disabled]):focus {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-4:hover {
@@ -347,9 +347,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 <div
@@ -562,9 +562,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 .emotion-4:focus.emotion-4:hover,
@@ -598,9 +598,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 }
 
 .emotion-4:not([disabled]):focus {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-4:hover {
@@ -766,9 +766,9 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 <div
@@ -980,9 +980,9 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 .emotion-1:focus.emotion-1:hover,
@@ -1016,9 +1016,9 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 }
 
 .emotion-1:not([disabled]):focus {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1:hover {
@@ -1184,9 +1184,9 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1lvxwzr 100ms;
-  animation: animation-1lvxwzr 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #005cb9;
+  -webkit-animation: animation-cw31kw 100ms;
+  animation: animation-cw31kw 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
 }
 
 <div

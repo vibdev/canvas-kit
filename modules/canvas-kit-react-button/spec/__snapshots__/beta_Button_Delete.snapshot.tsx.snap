@@ -78,9 +78,9 @@ exports[`Button (Delete) Snapshots (beta) renders a large, delete button 1`] = `
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -208,9 +208,9 @@ exports[`Button (Delete) Snapshots (beta) renders a large, growing delete button
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -302,9 +302,9 @@ exports[`Button (Delete) Snapshots (beta) renders a medium, delete button 1`] = 
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -413,9 +413,9 @@ exports[`Button (Delete) Snapshots (beta) renders a small, delete button 1`] = `
 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {

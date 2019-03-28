@@ -119,9 +119,9 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1 {
@@ -390,9 +390,9 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <button
@@ -535,9 +535,9 @@ exports[`Button (Highlight) Snapshots renders a large, highlight button with an 
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1 {
@@ -801,9 +801,9 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 .emotion-5:not([disabled]):focus,
 .emotion-5:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1 {
@@ -1008,9 +1008,9 @@ exports[`Button (Highlight) Snapshots renders a medium, highlight button with an
 .emotion-7:not([disabled]):focus,
 .emotion-7:not([disabled]):active {
   border-color: transparent;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1 {

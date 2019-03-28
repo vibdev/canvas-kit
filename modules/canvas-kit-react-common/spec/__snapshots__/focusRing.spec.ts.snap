@@ -16,13 +16,13 @@ Object {
 
 exports[`focusRing returns default animation and box shadow 1`] = `
 Object {
-  "animation": "animation-bvpr5k 100ms",
-  "boxShadow": "0 0 0 0px #ffffff, 0 0 0 2px #005cb9",
+  "animation": "animation-os2b9x 100ms",
+  "boxShadow": "0 0 0 0px #ffffff, 0 0 0 2px #0875e1",
 }
 `;
 
 exports[`focusRing returns no animation 1`] = `
 Object {
-  "boxShadow": "0 0 0 0px #ffffff, 0 0 0 2px #005cb9",
+  "boxShadow": "0 0 0 0px #ffffff, 0 0 0 2px #0875e1",
 }
 `;

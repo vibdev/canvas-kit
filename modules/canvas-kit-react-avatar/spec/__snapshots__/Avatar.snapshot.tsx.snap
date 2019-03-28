@@ -32,9 +32,9 @@ exports[`Button Snapshots renders a large Avatar 1`] = `
 
 .emotion-1:not([disabled]):focus {
   outline: none;
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 [data-whatinput='mouse'] .emotion-1:focus,
@@ -130,9 +130,9 @@ exports[`Button Snapshots renders a large avatar with a photo 1`] = `
 
 .emotion-0:not([disabled]):focus {
   outline: none;
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 [data-whatinput='mouse'] .emotion-0:focus,
@@ -187,9 +187,9 @@ exports[`Button Snapshots renders a large, dark Avatar 1`] = `
 
 .emotion-1:not([disabled]):focus {
   outline: none;
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 [data-whatinput='mouse'] .emotion-1:focus,
@@ -285,9 +285,9 @@ exports[`Button Snapshots renders an avatar with a photo 1`] = `
 
 .emotion-0:not([disabled]):focus {
   outline: none;
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 [data-whatinput='mouse'] .emotion-0:focus,
@@ -342,9 +342,9 @@ exports[`Button Snapshots renders as expected 1`] = `
 
 .emotion-1:not([disabled]):focus {
   outline: none;
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 [data-whatinput='mouse'] .emotion-1:focus,

@@ -43,9 +43,9 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
@@ -190,9 +190,9 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 <div
@@ -267,9 +267,9 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
@@ -400,9 +400,9 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
@@ -490,9 +490,9 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
@@ -581,9 +581,9 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
@@ -671,9 +671,9 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
 .emotion-2:not([disabled]):focus {
   outline: none;
   border-color: transparent;
-  -webkit-animation: animation-13y144u 100ms;
-  animation: animation-13y144u 100ms;
-  box-shadow: inset 0 0 0 2px #005cb9;
+  -webkit-animation: animation-6c7mlq 100ms;
+  animation: animation-6c7mlq 100ms;
+  box-shadow: inset 0 0 0 2px #0875e1;
 }
 
 .emotion-4 {
