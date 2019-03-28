@@ -19,7 +19,7 @@ storiesOf('Canvas Kit/Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Full Page with gutter & Spacing</h1>
+      <h1 className="section-label">Full Page with gutter & spacing</h1>
       <div>
         <Layout>
           <Layout.Column>
@@ -84,6 +84,20 @@ storiesOf('Canvas Kit/Layout', module)
           </Layout.Column>
           <Layout.Column columns={8}>
             <Card heading="8 Columns" />
+          </Layout.Column>
+        </Layout>
+      </div>
+      <h1 className="section-label">Custom Spacing</h1>
+      <div>
+        <Layout spacing={60}>
+          <Layout.Column spacing={0}>
+            <Card heading="Custom spacing (0px)" />
+          </Layout.Column>
+          <Layout.Column>
+            <Card heading="Custom spacing (60px)" />
+          </Layout.Column>
+          <Layout.Column>
+            <Card heading="Custom spacing (60px)" />
           </Layout.Column>
         </Layout>
       </div>

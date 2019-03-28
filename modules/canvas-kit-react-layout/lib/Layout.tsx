@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {GenericStyle} from '@workday/canvas-kit-react-common';
-import Column from './Column';
+import Column, {ColumnProps} from './Column';
 
 export interface LayoutProps {
   /**
@@ -9,7 +9,7 @@ export interface LayoutProps {
    */
   children: React.ReactNode;
   /**
-   * Spacing of layout.
+   * Spacing of layout children.
    */
   spacing?: number;
   /**
@@ -58,7 +58,30 @@ export default class Layout extends React.Component<LayoutProps> {
   };
 
   public static Column = Column;
+
+  private renderChildren(children: React.ReactNode): React.ReactNode {
+    return React.Children.map(children, child => {
+      if (!React.isValidElement(child)) {
+        return child;
+      }
+
+      if (typeof child.type === typeof Column) {
+        if (child.props.spacing || child.props.spacing === 0) {
+          return child;
+        }
+
+        return React.cloneElement(child as React.ReactElement<ColumnProps>, {
+          spacing: this.props.spacing,
+        });
+      }
+
+      return child;
+    });
+  }
+
   public render() {
-    return <LayoutContainer {...this.props}>{this.props.children}</LayoutContainer>;
+    return (
+      <LayoutContainer {...this.props}>{this.renderChildren(this.props.children)}</LayoutContainer>
+    );
   }
 }

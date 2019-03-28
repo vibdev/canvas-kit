@@ -2,8 +2,17 @@ import * as React from 'react';
 import styled from 'react-emotion';
 
 export interface ColumnProps {
+  /**
+   * Column cannot be empty.
+   */
   children: React.ReactNode;
+  /**
+   * Spacing of columns.
+   */
   spacing?: number;
+  /**
+   * Widths of columns.
+   */
   columns?: number;
 }
 
@@ -13,7 +22,11 @@ const ColumnContainer = styled('div')<ColumnProps>(
       return;
     }
 
-    return {padding: `${spacing}px`};
+    if (!spacing) {
+      return {padding: `0 12px`};
+    }
+
+    return {padding: `0 ${spacing}px`};
   },
   ({columns}) => {
     if (!columns) {
@@ -25,10 +38,6 @@ const ColumnContainer = styled('div')<ColumnProps>(
 );
 
 export default class Column extends React.Component<ColumnProps> {
-  static defaultProps = {
-    spacing: 12,
-  };
-
   public render() {
     return <ColumnContainer {...this.props}>{this.props.children}</ColumnContainer>;
   }
