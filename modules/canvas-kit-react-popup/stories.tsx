@@ -7,7 +7,6 @@ import Popper from '@material-ui/core/Popper';
 import {Button} from '@workday/canvas-kit-react-button';
 import {Popover} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
-import {PopoverPadding} from './lib/Popover';
 
 interface PopoverWrapperState {
   open: boolean;
@@ -28,7 +27,7 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
           <Popover
             width={300}
             heading={'Popover Title'}
-            paddingSize={PopoverPadding.l}
+            padding={Popover.PopoverPadding.l}
             handleClose={this.handleClose}
           >
             <div style={{marginBottom: '24px'}}>
@@ -65,9 +64,9 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
   };
 }
 
-storiesOf('Canvas Kit/Popover', module)
+storiesOf('Canvas Kit/Popup', module)
   .addDecorator(withReadme(README))
-  .add('Default', () => (
+  .add('Popover', () => (
     <div className="story">
       <h1 className="section-label">Popover</h1>
       <PopoverWrapper />
