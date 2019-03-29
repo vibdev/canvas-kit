@@ -6,15 +6,15 @@ import Popper from '@material-ui/core/Popper';
 import Fade from '@material-ui/core/Fade';
 
 import {Button} from '@workday/canvas-kit-react-button';
-import {Popover} from './index'; // tslint:disable-line:import-name
+import {Popup} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-interface PopoverWrapperState {
+interface PopupWrapperState {
   open: boolean;
   anchorEl: HTMLElement | null;
 }
 
-class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
+class PopupWrapper extends React.Component<{}, PopupWrapperState> {
   state = {
     open: false,
     anchorEl: null,
@@ -23,26 +23,22 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
     const {anchorEl, open} = this.state;
     return (
       <div style={{display: 'flex', justifyContent: 'center'}}>
-        <Button onClick={this.handleClick}>Open Popover</Button>
-        <Popper placement={'bottom'} open={open} anchorEl={anchorEl} transition={true}>
-          {({TransitionProps}) => (
-            <Fade {...TransitionProps} timeout={250}>
-              <Popover
-                width={300}
-                heading={'Popover Title'}
-                padding={Popover.padding.l}
-                handleClose={this.handleClose}
-              >
-                <div style={{marginBottom: '24px'}}>
-                  This is the content of a popover. You can add whatever you'd like in here.
-                </div>
+        <Button onClick={this.handleClick}>Open Popup</Button>
+        <Popper placement={'bottom'} open={open} anchorEl={anchorEl}>
+          <Popup
+            width={300}
+            heading={'Popup Title'}
+            padding={Popup.padding.s}
+            handleClose={this.handleClose}
+          >
+            <div style={{marginBottom: '24px'}}>
+              This is the content of a Popup. You can add whatever you'd like in here.
+            </div>
 
-                <Button onClick={this.handleSubmit} buttonType={Button.Types.Primary}>
-                  Submit
-                </Button>
-              </Popover>
-            </Fade>
-          )}
+            <Button onClick={this.handleSubmit} buttonType={Button.Types.Primary}>
+              Submit
+            </Button>
+          </Popup>
         </Popper>
       </div>
     );
@@ -71,9 +67,9 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
 
 storiesOf('Canvas Kit/Popup', module)
   .addDecorator(withReadme(README))
-  .add('Popover', () => (
+  .add('Popup', () => (
     <div className="story">
-      <h1 className="section-label">Popover</h1>
-      <PopoverWrapper />
+      <h1 className="section-label">Popup</h1>
+      <PopupWrapper />
     </div>
   ));

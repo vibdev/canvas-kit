@@ -5,14 +5,14 @@ import {IconButton} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
 import {xIcon} from '@workday/canvas-system-icons-web';
 
-export enum PopoverPadding {
+export enum PopupPadding {
   zero = '0px',
   s = '16px',
   l = '32px',
 }
 
-export interface PopoverProps {
-  padding?: PopoverPadding;
+export interface PopupProps {
+  padding?: PopupPadding;
   handleClose?: () => void;
   width?: number | string;
   heading?: React.ReactNode;
@@ -32,10 +32,10 @@ const CloseIconContainer = styled('div')({
   top: closeIconSpacing,
 });
 
-export default class Popover extends React.Component<PopoverProps> {
-  static padding = PopoverPadding;
+export default class Popup extends React.Component<PopupProps> {
+  static padding = PopupPadding;
   static defaultProps = {
-    padding: Popover.padding.l,
+    padding: Popup.padding.l,
   };
   public render() {
     const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;

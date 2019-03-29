@@ -1,5 +1,5 @@
-import Popover from './lib/Popover';
+import Popup from './lib/Popup';
 
-export default Popover;
-export {Popover};
-export * from './lib/Popover';
+export default Popup;
+export {Popup};
+export * from './lib/Popup';

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popover Snapshots renders as expected 1`] = `
+exports[`Popup Snapshots renders as expected 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
@@ -35,7 +35,7 @@ exports[`Popover Snapshots renders as expected 1`] = `
 </div>
 `;
 
-exports[`Popover Snapshots renders popover with children elements 1`] = `
+exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
@@ -246,7 +246,7 @@ exports[`Popover Snapshots renders popover with children elements 1`] = `
 </div>
 `;
 
-exports[`Popover Snapshots renders popover with close icon 1`] = `
+exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
@@ -453,7 +453,7 @@ exports[`Popover Snapshots renders popover with close icon 1`] = `
 </div>
 `;
 
-exports[`Popover Snapshots renders popover with different padding 1`] = `
+exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
@@ -660,7 +660,7 @@ exports[`Popover Snapshots renders popover with different padding 1`] = `
 </div>
 `;
 
-exports[`Popover Snapshots renders popover without close icon 1`] = `
+exports[`Popup Snapshots renders Popup without close icon 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;

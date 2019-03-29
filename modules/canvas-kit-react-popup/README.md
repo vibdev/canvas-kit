@@ -1,7 +1,7 @@
-# Canvas Kit Popover
+# Canvas Kit Popup
 
-A popover component that allows you to render content above another. Note: In our example we use
-Material UIs popper component to wrap our popover component and position it, which is a wrapper to
+A Popup component that allows you to render content above another. Note: In our example we use
+Material UIs popper component to wrap our Popup component and position it, which is a wrapper to
 Popper.js. For reference: https://material-ui.com/api/popper/
 
 ## Installation
@@ -21,18 +21,18 @@ yarn add @workday/canvas-kit-react-popup
 ```tsx
 import * as React from 'react';
 import Popper from '@material-ui/core/Popper';
-import {Popover} from '@workday/canvas-kit-react-popup';
+import {Popup} from '@workday/canvas-kit-react-popup';
 
 // We use Popper from Material UI for our positioning
 <Popper placement={'bottom'} open={this.state.open} anchorEl={anchorEl}>
-  <Popover
+  <Popup
     width={300}
-    heading={'Popover Title'}
-    paddingSize={PopoverPadding.l}
+    heading={'Popup Title'}
+    paddingSize={PopupPadding.l}
     handleClose={this.handleClose}
   >
     {this.props.children}
-  </Popover>
+  </Popup>
 </Popper>;
 ```
 
@@ -44,7 +44,7 @@ import {Popover} from '@workday/canvas-kit-react-popup';
 
 ### Required
 
-### `paddingSize: PopoverPadding`
+### `paddingSize: PopupPadding`
 
 > You can choose between zero, s, l for your padding
 
@@ -54,7 +54,7 @@ import {Popover} from '@workday/canvas-kit-react-popup';
 
 #### `handleClose: () => void`
 
-> Callback to handle close of your popover and any other event when the popover is closed.
+> Callback to handle close of your Popup and any other event when the Popup is closed.
 
 ---
 
