@@ -7,7 +7,7 @@ export interface LayoutProps {
   /**
    * Layout cannot be empty.
    */
-  children: React.ReactNode;
+  children: React.ReactElement<ColumnProps>[] | React.ReactNode;
   /**
    * Spacing of layout children.
    */
@@ -59,29 +59,27 @@ export default class Layout extends React.Component<LayoutProps> {
 
   public static Column = Column;
 
-  private renderChildren(children: React.ReactNode): React.ReactNode {
-    return React.Children.map(children, child => {
-      if (!React.isValidElement(child)) {
+  private renderChild = (child: React.ReactElement<ColumnProps>): React.ReactNode => {
+    if (typeof child.type === typeof Column) {
+      const childProps = child.props;
+
+      if (childProps.spacing || childProps.spacing === 0) {
         return child;
       }
 
-      if (typeof child.type === typeof Column) {
-        if (child.props.spacing || child.props.spacing === 0) {
-          return child;
-        }
+      return React.cloneElement(child as React.ReactElement<ColumnProps>, {
+        spacing: this.props.spacing,
+      });
+    }
 
-        return React.cloneElement(child as React.ReactElement<ColumnProps>, {
-          spacing: this.props.spacing,
-        });
-      }
-
-      return child;
-    });
-  }
+    return child;
+  };
 
   public render() {
     return (
-      <LayoutContainer {...this.props}>{this.renderChildren(this.props.children)}</LayoutContainer>
+      <LayoutContainer {...this.props}>
+        {React.Children.map(this.props.children, this.renderChild)}
+      </LayoutContainer>
     );
   }
 }
