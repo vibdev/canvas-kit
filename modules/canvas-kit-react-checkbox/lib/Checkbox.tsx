@@ -91,7 +91,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     },
     [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
       [data-whatinput="touch"] &:focus ~ div:first-of-type,
-      [data-whatinput="touch"] &:focus ~ div:first-of-type`]: {
+      [data-whatinput="pointer"] &:focus ~ div:first-of-type`]: {
       ...focusRing(0, 0),
       borderWidth: '1px',
       borderColor: checked ? colors.blueberry400 : inputColors.border,
