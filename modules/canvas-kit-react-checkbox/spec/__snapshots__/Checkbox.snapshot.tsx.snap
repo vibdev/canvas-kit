@@ -71,17 +71,11 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
-  border-color: #0875e1;
-}
-
-[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #0875e1;
 }
 
@@ -179,6 +173,7 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 >
   <div
     className="emotion-7 emotion-8"
+    disabled={false}
   >
     <input
       checked={true}
@@ -223,26 +218,6 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   height: 32px;
 }
 
-.emotion-7 {
-  height: 18px;
-}
-
-.emotion-7::after {
-  border-radius: 999px;
-  box-shadow: 0 0 0 0 #f0f1f2;
-  content: "";
-  display: inline-block;
-  height: 18px;
-  -webkit-transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-  width: 18px;
-  z-index: 1;
-}
-
-.emotion-7:hover::after {
-  box-shadow: 0 0 0 11px #f0f1f2;
-}
-
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -328,6 +303,22 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   fill: transparent;
 }
 
+.emotion-7 {
+  height: 18px;
+}
+
+.emotion-7::after {
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #f0f1f2;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  width: 18px;
+  z-index: 1;
+}
+
 .emotion-0 {
   border-radius: 2px;
   width: 24px;
@@ -360,22 +351,16 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
-  border-color: #0875e1;
-}
-
-[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #0875e1;
 }
 
@@ -388,6 +373,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 >
   <div
     className="emotion-7 emotion-8"
+    disabled={true}
   >
     <input
       checked={true}
@@ -432,26 +418,6 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   height: 32px;
 }
 
-.emotion-7 {
-  height: 18px;
-}
-
-.emotion-7::after {
-  border-radius: 999px;
-  box-shadow: 0 0 0 0 #f0f1f2;
-  content: "";
-  display: inline-block;
-  height: 18px;
-  -webkit-transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-  width: 18px;
-  z-index: 1;
-}
-
-.emotion-7:hover::after {
-  box-shadow: 0 0 0 11px #f0f1f2;
-}
-
 .emotion-2 {
   display: inline-block;
 }
@@ -482,6 +448,22 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 
 .emotion-2:hover .wd-icon-background {
   fill: transparent;
+}
+
+.emotion-7 {
+  height: 18px;
+}
+
+.emotion-7::after {
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #f0f1f2;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  width: 18px;
+  z-index: 1;
 }
 
 .emotion-0 {
@@ -516,12 +498,12 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
@@ -529,14 +511,8 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   border-color: #a1aab3;
 }
 
-[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
-  border-color: #a1aab3;
-}
-
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
 }
 
 .emotion-5 {
@@ -597,6 +573,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 >
   <div
     className="emotion-7 emotion-8"
+    disabled={true}
   >
     <input
       checked={false}
@@ -750,17 +727,11 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
-  border-color: #a1aab3;
-}
-
-[data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #a1aab3;
 }
 
@@ -807,6 +778,7 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 >
   <div
     className="emotion-7 emotion-8"
+    disabled={false}
   >
     <input
       checked={false}
