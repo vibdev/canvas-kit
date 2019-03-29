@@ -39,22 +39,26 @@ const CheckboxContainer = styled('div')({
  * :hover on the checkbox when you hover on it's corresponding label.
  * This stops the ripple from showing when you hover on the label.
  */
-const CheckboxInputWrapper = styled('div')({
-  height: checkboxHeight,
-  '&::after': {
-    borderRadius: 999,
-    boxShadow: '0 0 0 0 ' + colors.soap200,
-    content: '""',
-    display: 'inline-block',
+const CheckboxInputWrapper = styled('div')<Pick<CheckboxProps, 'disabled'>>(
+  {
     height: checkboxHeight,
-    transition: 'box-shadow 150ms ease-out',
-    width: checkboxWidth,
-    zIndex: 1,
+    '&::after': {
+      borderRadius: 999,
+      boxShadow: '0 0 0 0 ' + colors.soap200,
+      content: '""',
+      display: 'inline-block',
+      height: checkboxHeight,
+      transition: 'box-shadow 150ms ease-out',
+      width: checkboxWidth,
+      zIndex: 1,
+    },
   },
-  '&:hover::after': {
-    boxShadow: '0 0 0 ' + rippleRadius + 'px ' + colors.soap200,
-  },
-});
+  ({disabled}) => ({
+    '&:hover::after': {
+      boxShadow: disabled ? undefined : '0 0 0 ' + rippleRadius + 'px ' + colors.soap200,
+    },
+  })
+);
 
 /**
  * Note: `~ div:first-of-type` refers to `CheckboxBackground`
@@ -87,17 +91,21 @@ const CheckboxInput = styled('input')<CheckboxProps>(
   ({checked, disabled}) => ({
     cursor: disabled ? undefined : 'pointer',
     '&:focus:hover ~ div:first-of-type': {
-      borderColor: disabled ? inputColors.hoverBorder : colors.blueberry400,
+      borderColor: disabled ? inputColors.border : colors.blueberry400,
     },
     [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
       [data-whatinput="touch"] &:focus ~ div:first-of-type,
-      [data-whatinput="touch"] &:focus ~ div:first-of-type`]: {
+      [data-whatinput="pointer"] &:focus ~ div:first-of-type`]: {
       ...focusRing(0, 0),
       borderWidth: '1px',
       borderColor: checked ? colors.blueberry400 : inputColors.border,
-      '&:hover': {
-        borderColor: checked ? colors.blueberry400 : inputColors.border,
-      },
+    },
+    [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
+      borderColor: checked
+        ? colors.blueberry400
+        : disabled
+          ? inputColors.border
+          : inputColors.hoverBorder,
     },
   })
 );
@@ -167,7 +175,7 @@ export default class Checkbox extends React.Component<CheckboxProps> {
 
     return (
       <CheckboxContainer>
-        <CheckboxInputWrapper>
+        <CheckboxInputWrapper disabled={disabled}>
           <CheckboxInput
             checked={checked}
             disabled={disabled}
