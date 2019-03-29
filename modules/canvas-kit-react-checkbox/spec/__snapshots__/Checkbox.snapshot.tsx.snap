@@ -60,9 +60,9 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 }
 
 .emotion-0:checked:focus ~ div:first-of-type {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
@@ -72,9 +72,9 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
-  -webkit-animation: animation-s6lrth 100ms;
-  animation: animation-s6lrth 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  -webkit-animation: animation-1swfa1h 100ms;
+  animation: animation-1swfa1h 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
   border-color: #0875e1;
 }
@@ -350,9 +350,9 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:checked:focus ~ div:first-of-type {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
@@ -362,9 +362,9 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
-  -webkit-animation: animation-s6lrth 100ms;
-  animation: animation-s6lrth 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  -webkit-animation: animation-1swfa1h 100ms;
+  animation: animation-1swfa1h 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
   border-color: #0875e1;
 }
@@ -502,9 +502,9 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:checked:focus ~ div:first-of-type {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
@@ -514,9 +514,9 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
-  -webkit-animation: animation-s6lrth 100ms;
-  animation: animation-s6lrth 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  -webkit-animation: animation-1swfa1h 100ms;
+  animation: animation-1swfa1h 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
   border-color: #a1aab3;
 }
@@ -727,9 +727,9 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 }
 
 .emotion-0:checked:focus ~ div:first-of-type {
-  -webkit-animation: animation-72u8ku 100ms;
-  animation: animation-72u8ku 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #005cb9;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
@@ -739,9 +739,9 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
-  -webkit-animation: animation-s6lrth 100ms;
-  animation: animation-s6lrth 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #005cb9;
+  -webkit-animation: animation-1swfa1h 100ms;
+  animation: animation-1swfa1h 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
   border-color: #a1aab3;
 }
