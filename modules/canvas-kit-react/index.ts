@@ -15,3 +15,4 @@ export * from '@workday/canvas-kit-react-popup';
 export * from '@workday/canvas-kit-react-table';
 export * from '@workday/canvas-kit-react-toggle';
 export * from '@workday/canvas-kit-react-skeleton';
+export * from '@workday/canvas-kit-react-layout';
