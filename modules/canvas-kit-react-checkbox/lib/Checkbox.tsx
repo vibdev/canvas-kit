@@ -99,6 +99,9 @@ const CheckboxInput = styled('input')<CheckboxProps>(
         borderColor: checked ? colors.blueberry400 : inputColors.border,
       },
     },
+    [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
+      borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
+    },
   })
 );
 

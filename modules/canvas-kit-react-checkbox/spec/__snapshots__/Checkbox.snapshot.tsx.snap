@@ -85,6 +85,10 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   border-color: #0875e1;
 }
 
+[data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
 .emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -375,6 +379,10 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   border-color: #0875e1;
 }
 
+[data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  border-color: #0875e1;
+}
+
 <div
   className="emotion-9 emotion-10"
 >
@@ -525,6 +533,10 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #a1aab3;
+}
+
+[data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  border-color: #7b858f;
 }
 
 .emotion-5 {
@@ -750,6 +762,10 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #a1aab3;
+}
+
+[data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  border-color: #7b858f;
 }
 
 .emotion-5 {
