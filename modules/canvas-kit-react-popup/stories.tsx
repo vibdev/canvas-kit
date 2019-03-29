@@ -3,6 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import Popper from '@material-ui/core/Popper';
+import Fade from '@material-ui/core/Fade';
 
 import {Button} from '@workday/canvas-kit-react-button';
 import {Popover} from './index'; // tslint:disable-line:import-name
@@ -23,21 +24,25 @@ class PopoverWrapper extends React.Component<{}, PopoverWrapperState> {
     return (
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <Button onClick={this.handleClick}>Open Popover</Button>
-        <Popper placement={'bottom'} open={open} anchorEl={anchorEl}>
-          <Popover
-            width={300}
-            heading={'Popover Title'}
-            padding={Popover.padding.s}
-            handleClose={this.handleClose}
-          >
-            <div style={{marginBottom: '24px'}}>
-              This is the content of a popover. You can add whatever you'd like in here.
-            </div>
+        <Popper placement={'bottom'} open={open} anchorEl={anchorEl} transition={true}>
+          {({TransitionProps}) => (
+            <Fade {...TransitionProps} timeout={250}>
+              <Popover
+                width={300}
+                heading={'Popover Title'}
+                padding={Popover.padding.l}
+                handleClose={this.handleClose}
+              >
+                <div style={{marginBottom: '24px'}}>
+                  This is the content of a popover. You can add whatever you'd like in here.
+                </div>
 
-            <Button onClick={this.handleSubmit} buttonType={Button.Types.Primary}>
-              Submit
-            </Button>
-          </Popover>
+                <Button onClick={this.handleSubmit} buttonType={Button.Types.Primary}>
+                  Submit
+                </Button>
+              </Popover>
+            </Fade>
+          )}
         </Popper>
       </div>
     );

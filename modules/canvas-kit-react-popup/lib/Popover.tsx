@@ -29,7 +29,6 @@ const Container = styled('div')({
 const CloseIconContainer = styled('div')({
   position: 'absolute',
   right: closeIconSpacing,
-  cursor: 'pointer',
   top: closeIconSpacing,
 });
 

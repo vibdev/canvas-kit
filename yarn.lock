@@ -2432,7 +2432,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-transition-group@^2.0.8":
+"@types/react-transition-group@^2.0.16", "@types/react-transition-group@^2.0.8":
   version "2.0.16"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react-transition-group/-/react-transition-group-2.0.16.tgz#2dcb9e396ab385ee19c4af1c9caa469a14cd042f"
   integrity sha1-LcueOWqzhe4ZxK8cnKpGmhTNBC8=
