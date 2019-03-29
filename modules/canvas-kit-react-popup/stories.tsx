@@ -3,7 +3,6 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import Popper from '@material-ui/core/Popper';
-import Fade from '@material-ui/core/Fade';
 
 import {Button} from '@workday/canvas-kit-react-button';
 import {Popup} from './index'; // tslint:disable-line:import-name

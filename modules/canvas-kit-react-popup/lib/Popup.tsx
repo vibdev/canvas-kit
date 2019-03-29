@@ -4,11 +4,18 @@ import styled from 'react-emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
 import {xIcon} from '@workday/canvas-system-icons-web';
+import {keyframes} from 'emotion';
+import {CSSObject} from 'create-emotion';
 
 export enum PopupPadding {
   zero = '0px',
   s = '16px',
   l = '32px',
+}
+
+export interface PopoupOrigin {
+  horizontal: 'left' | 'center' | 'right' | number;
+  vertical: 'top' | 'center' | 'bottom' | number;
 }
 
 export interface PopupProps {
@@ -17,14 +24,31 @@ export interface PopupProps {
   width?: number | string;
   heading?: React.ReactNode;
   depth?: CanvasDepthValue;
+  transformOrigin?: PopoupOrigin | CSSObject;
 }
 
 const closeIconSpacing = 12;
 
-const Container = styled('div')({
-  position: 'relative',
-  backgroundColor: colors.frenchVanilla100,
-});
+const popupAnimation = keyframes`
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+`;
+const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
+  {
+    position: 'relative',
+    backgroundColor: colors.frenchVanilla100,
+    animation: popupAnimation,
+    animationDuration: '250ms',
+    animationTimingFunction: 'ease-out',
+  },
+  ({transformOrigin}) => ({
+    transformOrigin: transformOrigin ? transformOrigin : 'center',
+  })
+);
 
 const CloseIconContainer = styled('div')({
   position: 'absolute',

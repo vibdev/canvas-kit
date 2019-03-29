@@ -1,44 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popup Snapshots renders as expected 1`] = `
-.emotion-2 {
-  position: relative;
-  background-color: #ffffff;
-}
-
-.emotion-1 {
-  border: 1px solid #ced3d9;
-  border-radius: 3px;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
-  padding: 16px;
-}
-
-.emotion-0 {
-  font-size: 14px;
-  color: #494949;
-  font-weight: 400;
-  line-height: 20px;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-}
-
-<div
-  className="emotion-2 emotion-3"
->
-  <div
-    className="emotion-1"
-  >
-    <div
-      className="emotion-0"
-    />
-  </div>
-</div>
-`;
-
 exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
+  -webkit-animation: animation-1acbpvw;
+  animation: animation-1acbpvw;
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .emotion-4 {
@@ -52,7 +26,6 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-2 {
   position: absolute;
   right: 12px;
-  cursor: pointer;
   top: 12px;
 }
 
@@ -167,9 +140,9 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -250,6 +223,15 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
+  -webkit-animation: animation-1acbpvw;
+  animation: animation-1acbpvw;
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .emotion-5 {
@@ -271,7 +253,6 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-2 {
   position: absolute;
   right: 12px;
-  cursor: pointer;
   top: 12px;
 }
 
@@ -386,9 +367,9 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -457,6 +438,15 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
+  -webkit-animation: animation-1acbpvw;
+  animation: animation-1acbpvw;
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .emotion-4 {
@@ -470,7 +460,6 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-2 {
   position: absolute;
   right: 12px;
-  cursor: pointer;
   top: 12px;
 }
 
@@ -585,9 +574,9 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-bvpr5k 100ms;
-  animation: animation-bvpr5k 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #005cb9;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -664,6 +653,15 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
+  -webkit-animation: animation-1acbpvw;
+  animation: animation-1acbpvw;
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .emotion-0 {
@@ -695,6 +693,50 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
         hello world
       </span>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Popup Snapshots renders as expected 1`] = `
+.emotion-2 {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-animation: animation-1acbpvw;
+  animation: animation-1acbpvw;
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+.emotion-1 {
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-0"
+    />
   </div>
 </div>
 `;
