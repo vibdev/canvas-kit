@@ -87,7 +87,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
   ({checked, disabled}) => ({
     cursor: disabled ? undefined : 'pointer',
     '&:focus:hover ~ div:first-of-type': {
-      borderColor: disabled ? inputColors.hoverBorder : colors.blueberry400,
+      borderColor: disabled ? inputColors.border : colors.blueberry400,
     },
     [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
       [data-whatinput="touch"] &:focus ~ div:first-of-type,
@@ -95,12 +95,13 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       ...focusRing(0, 0),
       borderWidth: '1px',
       borderColor: checked ? colors.blueberry400 : inputColors.border,
-      '&:hover': {
-        borderColor: checked ? colors.blueberry400 : inputColors.border,
-      },
     },
     [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
-      borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
+      borderColor: checked
+        ? colors.blueberry400
+        : disabled
+          ? inputColors.border
+          : inputColors.hoverBorder,
     },
   })
 );
