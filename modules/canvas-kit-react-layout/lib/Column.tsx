@@ -5,7 +5,7 @@ export interface ColumnProps {
   /**
    * Column cannot be empty.
    */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /**
    * Spacing of columns.
    */
