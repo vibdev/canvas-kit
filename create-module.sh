@@ -18,7 +18,7 @@ read -p "Module name (@workday/canvas-kit-react-<NAME>): " name
 path="./modules/canvas-kit-react-$name"
 
 if [ -d "$path" ]; then
-  echo -e "${RED}Module with name 'canvas-kit-$name' already exists."
+  echo -e "${RED}Module with name 'canvas-kit-react-$name' already exists."
   exit 1
 fi
 
@@ -158,4 +158,4 @@ EOF
 
 # Install deps using Yarn workspaces (instead of Lerna bootstrap)
 echo -e "\nInstalling dependencies\n"
-`yarn`
+yarn
