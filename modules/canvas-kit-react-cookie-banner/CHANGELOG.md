@@ -3,22 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.4.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.4.6...@workday/canvas-kit-react-cookie-banner@0.4.8) (2019-03-29)
-
-**Note:** Version bump only for package @workday/canvas-kit-react-cookie-banner
-
-
-
-
-
-## [0.4.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.4.6...@workday/canvas-kit-react-cookie-banner@0.4.7) (2019-03-29)
-
-**Note:** Version bump only for package @workday/canvas-kit-react-cookie-banner
-
-
-
-
-
 ## [0.4.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.4.5...@workday/canvas-kit-react-cookie-banner@0.4.6) (2019-03-29)
 
 
