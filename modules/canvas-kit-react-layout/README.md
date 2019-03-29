@@ -13,7 +13,14 @@ different workday specific layouts. Layouts should be used to create the main la
 ```tsx
 import {Layout} from '@workday/canvas-kit-react-layout';
 
-<Layout>...</Layout>;
+// Basic
+<Layout>...</Layout>
+
+// No spacing and no gutter
+<Layout gutter={0} spacing={0}>...</Layout>
+
+// Gutter layout
+<Layout content={true}>...</Layout>
 ```
 
 ## Static Properties
@@ -22,36 +29,95 @@ import {Layout} from '@workday/canvas-kit-react-layout';
 
 ## Component Props
 
-#### `spacing: Canvas Spacing`
+### Required
+
+> None
+
+---
+
+### Optional
+
+#### `spacing: number`
 
 > The spacing around columns
 
-#### `gutter: Canvas Spacing`
+---
+
+#### `gutter: number`
 
 > The padding of the outside container
 
+Default: `12`
+
+---
+
+#### `content: boolean`
+
+> If the max width of container is 1280px
+
+---
+
 # Column
 
-> 12 column grid layout
+> The column acts as a pillar for building layouts. Columns widths can be fluid, 12 columns, or a
+> fixed. Columns should be used exclusively with `Layout` to build the main page layouts.
 
 ```tsx
 import {Layout} from '@workday/canvas-kit-react-layout';
 
+// Fluid layouts
 <Layout>
-  <Layout.Column>...</Layout.Column>
-</Layout>;
+  <Layout.Column />
+  <Layout.Column />
+</Layout>
+
+// 12 column layouts
+<Layout>
+  <Layout.Column columns={4}/>
+  <Layout.Column columns={8}/>
+</Layout>
+
+// Fixed column width
+<Layout>
+  <Layout.Column width={'400px'}/>
+  <Layout.Column columns={8}/>
+</Layout>
+
+// Custom spacing
+<Layout>
+  <Layout.Column spacing={0}/>
+  <Layout.Column />
+</Layout>
 ```
+
+## Static Properties
+
+> None
 
 ## Component Props
 
-#### `width: Canvas Spacing`
+### Required
+
+> None
+
+---
+
+### Optional
+
+#### `width: number | string`
 
 > The width of the columns
 
-#### `spacing: Canvas Sizing`
+---
+
+#### `columns: number (1 through 12)`
+
+> The size of the 12 column grid
+
+---
+
+#### `spacing: number`
 
 > The left and right padding for the column (inherits from Layout prop)
 
-#### `content: boolean`
-
-> If the column includes content padding
+Default: `12`
