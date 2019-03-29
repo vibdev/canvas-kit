@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-toggle",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Canvas-styled toggle switch",
   "homepage": "https://workdaydesign.com",
   "license": "Apache-2.0",
@@ -36,8 +36,8 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.3.4",
-    "@workday/canvas-kit-react-core": "^1.8.1",
+    "@workday/canvas-kit-react-common": "^0.3.5",
+    "@workday/canvas-kit-react-core": "^1.8.2",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   }

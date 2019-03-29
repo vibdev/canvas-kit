@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.2.0...@workday/canvas-kit-react-fonts@0.2.1) (2019-03-29)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-fonts
+
+
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fonts/compare/@workday/canvas-kit-react-fonts@0.1.5...@workday/canvas-kit-react-fonts@0.2.0) (2019-02-26)
 
