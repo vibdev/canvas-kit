@@ -72,6 +72,16 @@ Default: `null`
 
 Default: `depth[2]`
 
+---
+
+#### `transformOrigin: PopoupOrigin`
+
+> Origin from which the popup will animate from
+
+Default: `top center`
+
+---
+
 #### `heading: ReactNode`
 
 > Heading at the top of the card.
