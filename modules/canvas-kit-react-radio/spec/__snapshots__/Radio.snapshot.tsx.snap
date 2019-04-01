@@ -18,7 +18,7 @@ exports[`Radio Snapshots renders as expected 1`] = `
 }
 
 .emotion-6::after {
-  border-radius: 999px;
+  border-radius: 100%;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -250,7 +250,7 @@ exports[`Radio Snapshots renders as expected 2`] = `
 }
 
 .emotion-6::after {
-  border-radius: 999px;
+  border-radius: 100%;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -363,7 +363,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 }
 
 .emotion-6::after {
-  border-radius: 999px;
+  border-radius: 100%;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -533,7 +533,7 @@ exports[`Radio Snapshots renders as expected 4`] = `
 }
 
 .emotion-6::after {
-  border-radius: 999px;
+  border-radius: 100%;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;

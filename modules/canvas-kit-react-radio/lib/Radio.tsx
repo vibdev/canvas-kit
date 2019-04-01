@@ -42,7 +42,7 @@ const RadioInputWrapper = styled('div')<Pick<RadioProps, 'disabled'>>(
   {
     height: radioHeight,
     '&::after': {
-      borderRadius: 999,
+      borderRadius: '100%',
       boxShadow: '0 0 0 0 ' + colors.soap200,
       content: '""',
       display: 'inline-block',
