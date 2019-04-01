@@ -16,11 +16,6 @@ export interface RadioGroupProps {
   value?: string | number;
 
   /**
-   * Internationalization config
-   */
-  isRTL?: boolean;
-
-  /**
    * Callback function when a button is selected, optional.
    * If the selected button has a value, it will be returned.
    * Otherwise, the index of the button in the group will be returned.
@@ -36,7 +31,7 @@ export default class RadioGroup extends React.Component<RadioGroupProps> {
   };
 
   render(): React.ReactNode {
-    const children = this.props.isRTL ? [...this.props.children].reverse() : this.props.children;
+    const children = this.props.children;
     return <Container>{React.Children.map(children, this.renderChild)}</Container>;
   }
 

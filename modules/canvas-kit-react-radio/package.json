@@ -1,7 +1,7 @@
 {
   "name": "@workday/canvas-kit-react-radio",
   "version": "0.0.1",
-  "description": "A Canvas-styled radio input",
+  "description": "A Canvas-styled radio",
   "homepage": "https://workdaydesign.com",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",

@@ -18,7 +18,7 @@ exports[`Radio Snapshots renders as expected 1`] = `
 }
 
 .emotion-6::after {
-  border-radius: 100%;
+  border-radius: 999px;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -137,6 +137,9 @@ exports[`Radio Snapshots renders as expected 1`] = `
   height: 8px;
   pointer-events: none;
   position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
   width: 8px;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -149,6 +152,7 @@ exports[`Radio Snapshots renders as expected 1`] = `
 >
   <div
     className="emotion-6 emotion-7"
+    disabled={false}
   >
     <input
       checked={true}
@@ -182,26 +186,6 @@ exports[`Radio Snapshots renders as expected 2`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 32px;
-}
-
-.emotion-6 {
-  height: 18px;
-}
-
-.emotion-6::after {
-  border-radius: 100%;
-  box-shadow: 0 0 0 0 #f0f1f2;
-  content: "";
-  display: inline-block;
-  height: 18px;
-  -webkit-transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-  width: 18px;
-  z-index: 1;
-}
-
-.emotion-6:hover::after {
-  box-shadow: 0 0 0 11px #f0f1f2;
 }
 
 .emotion-4 {
@@ -251,11 +235,30 @@ exports[`Radio Snapshots renders as expected 2`] = `
   height: 8px;
   pointer-events: none;
   position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
   width: 8px;
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+
+.emotion-6 {
+  height: 18px;
+}
+
+.emotion-6::after {
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #f0f1f2;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  -webkit-transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  width: 18px;
+  z-index: 1;
 }
 
 .emotion-0 {
@@ -290,7 +293,7 @@ exports[`Radio Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -319,6 +322,7 @@ exports[`Radio Snapshots renders as expected 2`] = `
 >
   <div
     className="emotion-6 emotion-7"
+    disabled={true}
   >
     <input
       checked={true}
@@ -359,7 +363,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 }
 
 .emotion-6::after {
-  border-radius: 100%;
+  border-radius: 999px;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -368,10 +372,6 @@ exports[`Radio Snapshots renders as expected 3`] = `
   transition: box-shadow 150ms ease-out;
   width: 18px;
   z-index: 1;
-}
-
-.emotion-6:hover::after {
-  box-shadow: 0 0 0 11px #f0f1f2;
 }
 
 .emotion-0 {
@@ -406,7 +406,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -426,7 +426,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #a1aab3;
   border-width: 1px;
 }
 
@@ -477,6 +477,9 @@ exports[`Radio Snapshots renders as expected 3`] = `
   height: 8px;
   pointer-events: none;
   position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
   width: 8px;
   opacity: 0;
   -webkit-transform: scale(0.5);
@@ -489,6 +492,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 >
   <div
     className="emotion-6 emotion-7"
+    disabled={true}
   >
     <input
       checked={false}
@@ -529,7 +533,7 @@ exports[`Radio Snapshots renders as expected 4`] = `
 }
 
 .emotion-6::after {
-  border-radius: 100%;
+  border-radius: 999px;
   box-shadow: 0 0 0 0 #f0f1f2;
   content: "";
   display: inline-block;
@@ -557,6 +561,9 @@ exports[`Radio Snapshots renders as expected 4`] = `
   height: 8px;
   pointer-events: none;
   position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
+  -webkit-transition: transform 200ms ease,opacity 200ms ease;
+  transition: transform 200ms ease,opacity 200ms ease;
   width: 8px;
   opacity: 0;
   -webkit-transform: scale(0.5);
@@ -660,6 +667,7 @@ exports[`Radio Snapshots renders as expected 4`] = `
 >
   <div
     className="emotion-6 emotion-7"
+    disabled={false}
   >
     <input
       checked={false}
