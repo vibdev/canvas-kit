@@ -5,7 +5,6 @@ import {IconButton} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
 import {xIcon} from '@workday/canvas-system-icons-web';
 import {keyframes} from 'emotion';
-import {CSSObject} from 'create-emotion';
 
 export enum PopupPadding {
   zero = '0px',
@@ -14,8 +13,8 @@ export enum PopupPadding {
 }
 
 export interface PopoupOrigin {
-  horizontal: 'left' | 'center' | 'right' | number;
-  vertical: 'top' | 'center' | 'bottom' | number;
+  horizontal: 'left' | 'center' | 'right';
+  vertical: 'top' | 'center' | 'bottom';
 }
 
 export interface PopupProps {
@@ -24,7 +23,8 @@ export interface PopupProps {
   width?: number | string;
   heading?: React.ReactNode;
   depth?: CanvasDepthValue;
-  transformOrigin?: PopoupOrigin | CSSObject;
+  transformOrigin?: string | number | (string | number)[] | undefined;
+  transform?: string | string[] | undefined;
 }
 
 const closeIconSpacing = 12;
@@ -37,7 +37,7 @@ const popupAnimation = keyframes`
   opacity: 1;
 }
 `;
-const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
+const Container = styled('div')<Pick<PopupProps, 'transformOrigin' | 'transform'>>(
   {
     position: 'relative',
     backgroundColor: colors.frenchVanilla100,
@@ -45,7 +45,8 @@ const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
     animationDuration: '250ms',
     animationTimingFunction: 'ease-out',
   },
-  ({transformOrigin}) => ({
+  ({transformOrigin, transform}) => ({
+    transform: transform ? transform : '',
     transformOrigin: transformOrigin ? transformOrigin : 'center',
   })
 );

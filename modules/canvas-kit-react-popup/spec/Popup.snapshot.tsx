@@ -31,4 +31,16 @@ describe('Popup Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders Popup with transformOrigin', () => {
+    const component = renderer.create(
+      <Popup
+        transformOrigin={'top left'}
+        transform={'translateY(10px)'}
+        padding={Popup.padding.zero}
+      >
+        <span>hello world</span>
+      </Popup>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
