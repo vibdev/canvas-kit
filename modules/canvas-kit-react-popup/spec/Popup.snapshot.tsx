@@ -33,11 +33,7 @@ describe('Popup Snapshots', () => {
   });
   test('renders Popup with transformOrigin', () => {
     const component = renderer.create(
-      <Popup
-        transformOrigin={'top left'}
-        transform={'translateY(10px)'}
-        padding={Popup.padding.zero}
-      >
+      <Popup transformOrigin={{vertical: 'top', horizontal: 'center'}} padding={Popup.padding.zero}>
         <span>hello world</span>
       </Popup>
     );

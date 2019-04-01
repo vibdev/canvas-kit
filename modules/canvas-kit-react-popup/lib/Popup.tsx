@@ -12,14 +12,18 @@ export enum PopupPadding {
   l = '32px',
 }
 
+export interface PopoupOrigin {
+  horizontal: 'left' | 'center' | 'right';
+  vertical: 'top' | 'center' | 'bottom';
+}
+
 export interface PopupProps {
   padding?: PopupPadding;
   handleClose?: () => void;
   width?: number | string;
   heading?: React.ReactNode;
   depth?: CanvasDepthValue;
-  transformOrigin?: string | number | (string | number)[] | undefined;
-  transform?: string | string[] | undefined;
+  transformOrigin?: PopoupOrigin;
 }
 
 const closeIconSpacing = 12;
@@ -27,22 +31,25 @@ const closeIconSpacing = 12;
 const popupAnimation = keyframes`
 0% {
   opacity: 0;
+  transform: scale(0);
 }
 100% {
   opacity: 1;
+  transform: scale(1);
 }
 `;
-const Container = styled('div')<Pick<PopupProps, 'transformOrigin' | 'transform'>>(
+const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
   {
     position: 'relative',
     backgroundColor: colors.frenchVanilla100,
     animation: popupAnimation,
-    animationDuration: '250ms',
+    animationDuration: '150ms',
     animationTimingFunction: 'ease-out',
   },
-  ({transformOrigin, transform}) => ({
-    transform: transform ? transform : '',
-    transformOrigin: transformOrigin ? transformOrigin : 'center',
+  ({transformOrigin}) => ({
+    transformOrigin: transformOrigin
+      ? `${transformOrigin.vertical} ${transformOrigin.horizontal}`
+      : 'top center',
   })
 );
 
@@ -53,6 +60,7 @@ const CloseIconContainer = styled('div')({
 });
 
 export default class Popup extends React.Component<PopupProps> {
+  // static PopupOrigin = Popup.PopupOrigin;
   static padding = PopupPadding;
   static defaultProps = {
     padding: Popup.padding.l,

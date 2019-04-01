@@ -4,18 +4,15 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transform: px;
-  -ms-transform: px;
-  transform: px;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
 
 .emotion-4 {
@@ -226,18 +223,15 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transform: px;
-  -ms-transform: px;
-  transform: px;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
 
 .emotion-5 {
@@ -444,18 +438,15 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transform: px;
-  -ms-transform: px;
-  transform: px;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
 
 .emotion-4 {
@@ -659,6 +650,20 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 `;
 
 exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
+.emotion-2 {
+  position: relative;
+  background-color: #ffffff;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
 .emotion-0 {
   font-size: 14px;
   color: #494949;
@@ -675,26 +680,8 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
   padding: 0px;
 }
 
-.emotion-2 {
-  position: relative;
-  background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-transform: translateY(10px);
-  -ms-transform: translateY(10px);
-  transform: translateY(10px);
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-}
-
 <div
   className="emotion-2 emotion-3"
-  transform="translateY(10px)"
 >
   <div
     className="emotion-1"
@@ -714,18 +701,15 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transform: px;
-  -ms-transform: px;
-  transform: px;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
 
 .emotion-0 {
@@ -765,18 +749,15 @@ exports[`Popup Snapshots renders as expected 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1acbpvw;
-  animation: animation-1acbpvw;
-  -webkit-animation-duration: 250ms;
-  animation-duration: 250ms;
+  -webkit-animation: animation-16z06qj;
+  animation: animation-16z06qj;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  -webkit-transform: px;
-  -ms-transform: px;
-  transform: px;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
 }
 
 .emotion-1 {
