@@ -89,7 +89,7 @@ Default: `false`
 
 ```tsx
 import * as React from 'react';
-import {radioButton, radionButtonGroup} from '@workday/canvas-kit-react-radio';
+import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 
 <RadioGroup>
   <Radio id="1" name="contact" value="email" label="E-mail" />
