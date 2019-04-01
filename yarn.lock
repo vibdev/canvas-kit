@@ -1762,9 +1762,9 @@
     write-file-atomic "^2.3.0"
 
 "@material-ui/core@^3.9.2":
-  version "3.9.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@material-ui/core/-/core-3.9.2.tgz#41ed1a470e981d199829eb5d9317a671c66a6f7d"
-  integrity sha1-Qe0aRw6YHRmYKetdkxemccZqb30=
+  version "3.9.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@material-ui/core/-/core-3.9.3.tgz#d378c1f4beb18df9a534ca7258c2c33fb8e0e51f"
+  integrity sha1-03jB9L6xjfmlNMpyWMLDP7jg5R8=
   dependencies:
     "@babel/runtime" "^7.2.0"
     "@material-ui/system" "^3.0.0-alpha.0"
@@ -2432,7 +2432,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-transition-group@^2.0.16", "@types/react-transition-group@^2.0.8":
+"@types/react-transition-group@^2.0.8":
   version "2.0.16"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/react-transition-group/-/react-transition-group-2.0.16.tgz#2dcb9e396ab385ee19c4af1c9caa469a14cd042f"
   integrity sha1-LcueOWqzhe4ZxK8cnKpGmhTNBC8=
@@ -14183,9 +14183,9 @@ react-is@^16.5.2:
   integrity sha1-4qe3w/XUgGLrdp/LEjUF65KHIuM=
 
 react-is@^16.6.3, react-is@^16.7.0:
-  version "16.8.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-is/-/react-is-16.8.5.tgz#c54ac229dd66b5afe0de5acbe47647c3da692ff8"
-  integrity sha1-xUrCKd1mta/g3lrL5HZHw9ppL/g=
+  version "16.8.6"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+  integrity sha1-W7weLSkUHJ+9/tRWND/ivEMKahY=
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -14304,9 +14304,9 @@ react-transition-group@^2.0.0, react-transition-group@^2.5.0:
     react-lifecycles-compat "^3.0.4"
 
 react-transition-group@^2.2.1:
-  version "2.7.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-transition-group/-/react-transition-group-2.7.0.tgz#60ca3bb2bf83fe71c50816a936e985ce7b8134dc"
-  integrity sha1-YMo7sr+D/nHFCBapNumFznuBNNw=
+  version "2.7.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-transition-group/-/react-transition-group-2.7.1.tgz#1fe6d54e811e8f9dfd329aa836b39d9cd16587cb"
+  integrity sha1-H+bVToEej539MpqoNrOdnNFlh8s=
   dependencies:
     dom-helpers "^3.3.1"
     loose-envify "^1.4.0"
