@@ -7,7 +7,7 @@ import canvas, {
   spacingNumbers as spacing,
 } from '@workday/canvas-kit-react-core';
 
-export interface RadioButtonProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   checked: boolean;
   disabled?: boolean;
   id?: string;
@@ -27,7 +27,7 @@ const radioLabelDistance = spacing.xs;
 const radioWidth = 18;
 const rippleRadius = (40 - radioWidth) / 2;
 
-const RadioButtonContainer = styled('div')({
+const RadioContainer = styled('div')({
   display: 'flex',
   alignItems: 'center',
   height: radioContainerHeight,
@@ -38,7 +38,7 @@ const RadioButtonContainer = styled('div')({
  * :hover on the radio when you hover on it's corresponding label.
  * This stops the ripple from showing when you hover on the label.
  */
-const RadioButtonInputWrapper = styled('div')<Pick<RadioButtonProps, 'disabled'>>(
+const RadioInputWrapper = styled('div')<Pick<RadioProps, 'disabled'>>(
   {
     height: radioHeight,
     '&::after': {
@@ -60,10 +60,10 @@ const RadioButtonInputWrapper = styled('div')<Pick<RadioButtonProps, 'disabled'>
 );
 
 /**
- * Note: `~ div:first-of-type` refers to `RadioButtonBackground`
+ * Note: `~ div:first-of-type` refers to `RadioBackground`
  * and was easier to use than a component selector in this case.
  */
-const RadioButtonInput = styled('input')<RadioButtonProps>(
+const RadioInput = styled('input')<RadioProps>(
   {
     borderRadius: radioBorderRadius,
     width: radioTapArea,
@@ -113,7 +113,7 @@ const RadioButtonInput = styled('input')<RadioButtonProps>(
   })
 );
 
-const RadioButtonBackground = styled('div')<RadioButtonProps>(
+const RadioBackground = styled('div')<RadioProps>(
   {
     alignItems: 'center',
     backgroundColor: colors.frenchVanilla100,
@@ -148,7 +148,7 @@ const RadioButtonBackground = styled('div')<RadioButtonProps>(
   })
 );
 
-const RadioButtonCheck = styled('div')<Pick<RadioButtonProps, 'checked'>>(
+const RadioCheck = styled('div')<Pick<RadioProps, 'checked'>>(
   {
     backgroundColor: colors.frenchVanilla100,
     borderRadius: radioBorderRadius,
@@ -166,12 +166,12 @@ const RadioButtonCheck = styled('div')<Pick<RadioButtonProps, 'checked'>>(
   })
 );
 
-const RadioButtonLabel = styled('label')({
+const RadioLabel = styled('label')({
   ...canvas.type.body,
   marginLeft: radioLabelDistance,
 });
 
-export default class RadioButton extends React.Component<RadioButtonProps> {
+export default class Radio extends React.Component<RadioProps> {
   public static defaultProps = {
     checked: false,
     label: '',
@@ -191,9 +191,9 @@ export default class RadioButton extends React.Component<RadioButtonProps> {
     } = this.props;
 
     return (
-      <RadioButtonContainer>
-        <RadioButtonInputWrapper disabled={disabled}>
-          <RadioButtonInput
+      <RadioContainer>
+        <RadioInputWrapper disabled={disabled}>
+          <RadioInput
             checked={checked}
             disabled={disabled}
             id={id}
@@ -204,12 +204,12 @@ export default class RadioButton extends React.Component<RadioButtonProps> {
             value={value}
             {...otherProps}
           />
-          <RadioButtonBackground checked={checked} disabled={disabled}>
-            <RadioButtonCheck checked={checked} />
-          </RadioButtonBackground>
-        </RadioButtonInputWrapper>
-        {label && <RadioButtonLabel htmlFor={id}>{label}</RadioButtonLabel>}
-      </RadioButtonContainer>
+          <RadioBackground checked={checked} disabled={disabled}>
+            <RadioCheck checked={checked} />
+          </RadioBackground>
+        </RadioInputWrapper>
+        {label && <RadioLabel htmlFor={id}>{label}</RadioLabel>}
+      </RadioContainer>
     );
   }
 }
