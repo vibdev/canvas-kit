@@ -53,7 +53,8 @@ Default: `false`
 
 #### `id: string`
 
-> The HTML attribute `id` for the underlying radio input and label component.
+> The HTML attribute `id` for the underlying radio input and label component. This is required if
+> `label` is defined.
 
 ---
 
@@ -130,3 +131,10 @@ encouraged.
 
 > Callback function when a radio input is selected. The value (if defined) or the index of the input
 > will be returned.
+
+---
+
+#### `name: string`
+
+> If specified, will be passed as the common `name` prop to all `Radio` children. This enables you
+> to avoid specifying `name` on each child.

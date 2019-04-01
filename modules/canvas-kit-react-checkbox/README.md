@@ -53,7 +53,8 @@ Default: `false`
 
 #### `id: string`
 
-> The HTML attribute `id` for the underlying input checkbox and label component.
+> The HTML attribute `id` for the underlying input checkbox and label component. This is required if
+> `label` is defined.
 
 ---
 
