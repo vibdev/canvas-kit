@@ -12,11 +12,6 @@ export enum PopupPadding {
   l = '32px',
 }
 
-export interface PopoupOrigin {
-  horizontal: 'left' | 'center' | 'right';
-  vertical: 'top' | 'center' | 'bottom';
-}
-
 export interface PopupProps {
   padding?: PopupPadding;
   handleClose?: () => void;
