@@ -31,64 +31,62 @@ exports[`LoadingSpinner Snapshots renders a LoadingSpinner with a different colo
   animation: .8s linear infinite animation-1eh1san;
 }
 
-.emotion-0 div {
-  background: #bdbdbd;
-}
-
 .emotion-0 div:nth-child(1) {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
   top: 14.7px;
   left: 0px;
 }
 
 .emotion-0 div:nth-child(2) {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
   top: 4.306px;
   left: 4.306px;
 }
 
 .emotion-0 div:nth-child(3) {
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
   top: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(4) {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
   top: 4.306px;
   right: 4.306px;
 }
 
 .emotion-0 div:nth-child(5) {
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
   top: 14.7px;
   right: 0px;
 }
 
 .emotion-0 div:nth-child(6) {
-  -webkit-animation-delay: .8s;
-  animation-delay: .8s;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
   right: 4.306px;
   bottom: 4.306px;
 }
 
 .emotion-0 div:nth-child(7) {
-  -webkit-animation-delay: .9s;
-  animation-delay: .9s;
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
   bottom: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(8) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   bottom: 4.306px;
   left: 4.306px;
+}
+
+.emotion-0 div {
+  background: #bdbdbd;
 }
 
 <div
@@ -139,64 +137,62 @@ exports[`LoadingSpinner Snapshots renders a larger LoadingSpinner 1`] = `
   animation: .8s linear infinite animation-1eh1san;
 }
 
-.emotion-0 div {
-  background: #004387;
-}
-
 .emotion-0 div:nth-child(1) {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
   top: 14.7px;
   left: 0px;
 }
 
 .emotion-0 div:nth-child(2) {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
   top: 4.306px;
   left: 4.306px;
 }
 
 .emotion-0 div:nth-child(3) {
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
   top: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(4) {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
   top: 4.306px;
   right: 4.306px;
 }
 
 .emotion-0 div:nth-child(5) {
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
   top: 14.7px;
   right: 0px;
 }
 
 .emotion-0 div:nth-child(6) {
-  -webkit-animation-delay: .8s;
-  animation-delay: .8s;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
   right: 4.306px;
   bottom: 4.306px;
 }
 
 .emotion-0 div:nth-child(7) {
-  -webkit-animation-delay: .9s;
-  animation-delay: .9s;
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
   bottom: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(8) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   bottom: 4.306px;
   left: 4.306px;
+}
+
+.emotion-0 div {
+  background: #004387;
 }
 
 <div
@@ -247,64 +243,62 @@ exports[`LoadingSpinner Snapshots renders as expected 1`] = `
   animation: .8s linear infinite animation-1eh1san;
 }
 
-.emotion-0 div {
-  background: #004387;
-}
-
 .emotion-0 div:nth-child(1) {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
   top: 14.7px;
   left: 0px;
 }
 
 .emotion-0 div:nth-child(2) {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
   top: 4.306px;
   left: 4.306px;
 }
 
 .emotion-0 div:nth-child(3) {
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
   top: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(4) {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
   top: 4.306px;
   right: 4.306px;
 }
 
 .emotion-0 div:nth-child(5) {
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  -webkit-animation-delay: .4s;
+  animation-delay: .4s;
   top: 14.7px;
   right: 0px;
 }
 
 .emotion-0 div:nth-child(6) {
-  -webkit-animation-delay: .8s;
-  animation-delay: .8s;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
   right: 4.306px;
   bottom: 4.306px;
 }
 
 .emotion-0 div:nth-child(7) {
-  -webkit-animation-delay: .9s;
-  animation-delay: .9s;
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
   bottom: 0px;
   left: 14.7px;
 }
 
 .emotion-0 div:nth-child(8) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   bottom: 4.306px;
   left: 4.306px;
+}
+
+.emotion-0 div {
+  background: #004387;
 }
 
 <div
