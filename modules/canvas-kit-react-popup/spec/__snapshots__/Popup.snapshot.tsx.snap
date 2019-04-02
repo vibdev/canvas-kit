@@ -4,8 +4,8 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -25,8 +25,8 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 .emotion-2 {
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 8px;
+  top: 8px;
 }
 
 .emotion-1 {
@@ -54,7 +54,6 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -83,7 +82,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -92,14 +91,13 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: transparent;
-  border-color: transparent;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -112,7 +110,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -140,9 +138,9 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -223,8 +221,8 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -252,8 +250,8 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 .emotion-2 {
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 8px;
+  top: 8px;
 }
 
 .emotion-1 {
@@ -281,7 +279,6 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -310,7 +307,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -319,14 +316,13 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: transparent;
-  border-color: transparent;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -339,7 +335,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -367,9 +363,9 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -438,8 +434,8 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -459,8 +455,8 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 .emotion-2 {
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 8px;
+  top: 8px;
 }
 
 .emotion-1 {
@@ -488,7 +484,6 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -517,7 +512,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -526,14 +521,13 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: transparent;
-  border-color: transparent;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -546,7 +540,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: transparent;
+  background-color: #e8ebed;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -574,9 +568,9 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -653,8 +647,8 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -701,8 +695,8 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -749,8 +743,8 @@ exports[`Popup Snapshots renders as expected 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1uo5ts2;
-  animation: animation-1uo5ts2;
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;

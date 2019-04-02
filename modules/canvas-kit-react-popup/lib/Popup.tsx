@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@workday/canvas-kit-react-card';
 import styled from 'react-emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
-import {CanvasDepthValue, colors} from '@workday/canvas-kit-react-core';
+import {CanvasDepthValue, colors, spacing} from '@workday/canvas-kit-react-core';
 import {xIcon} from '@workday/canvas-system-icons-web';
 import {keyframes} from 'emotion';
 
@@ -26,7 +26,7 @@ export interface PopupProps {
   depth?: CanvasDepthValue;
 }
 
-const closeIconSpacing = 12;
+const closeIconSpacing = spacing.xxs;
 
 const popupAnimation = keyframes`
 0% {
@@ -77,7 +77,7 @@ export default class Popup extends React.Component<PopupProps> {
       <Container {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
-            <IconButton buttonType={IconButton.Types.Plain} onClick={handleClose} icon={xIcon} />
+            <IconButton buttonType={IconButton.Types.Default} onClick={handleClose} icon={xIcon} />
           </CloseIconContainer>
         )}
         <Card depth={depth} heading={heading} width={width} padding={padding}>
