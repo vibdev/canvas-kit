@@ -17,10 +17,6 @@ storiesOf('Canvas Kit/Loading Animation', module)
   .add('LoadingSpinner', () => (
     <div className="story">
       <h1 className="section-label">Loading Spinner</h1>
-      <div
-        style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50vh'}}
-      >
-        <LoadingSpinner />
-      </div>
+      <LoadingSpinner />
     </div>
   ));
