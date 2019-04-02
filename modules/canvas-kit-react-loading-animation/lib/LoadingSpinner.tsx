@@ -35,11 +35,6 @@ const Spinner = styled('div')<Pick<LoadingSpinnerProps, 'scale' | 'color'>>(
     position: 'relative' as 'relative',
     width: spinnerSize,
     height: spinnerSize,
-  },
-  ({scale}) => ({
-    transform: `scale(${scale || '1'})`,
-  }),
-  {
     div: {
       position: 'absolute',
       width: dotSize,
@@ -47,13 +42,6 @@ const Spinner = styled('div')<Pick<LoadingSpinnerProps, 'scale' | 'color'>>(
       borderRadius: '50%',
       animation: `.8s linear infinite ${spinnerAnimation}`,
     },
-  },
-  ({color}) => ({
-    div: {
-      background: color || colors.blueberry600,
-    },
-  }),
-  {
     'div:nth-child(1)': {
       animationDelay: '.3s',
       top: '14.7px',
@@ -94,7 +82,13 @@ const Spinner = styled('div')<Pick<LoadingSpinnerProps, 'scale' | 'color'>>(
       bottom: '4.306px',
       left: '4.306px',
     },
-  }
+  },
+  ({scale, color}) => ({
+    transform: `scale(${scale || '1'})`,
+    div: {
+      background: color || colors.blueberry600,
+    },
+  })
 );
 
 /**
