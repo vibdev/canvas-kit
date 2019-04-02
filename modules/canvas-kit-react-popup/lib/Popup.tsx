@@ -18,12 +18,12 @@ export interface PopoupOrigin {
 }
 
 export interface PopupProps {
-  padding?: PopupPadding;
+  padding: PopupPadding;
+  transformOrigin: PopoupOrigin;
   handleClose?: () => void;
   width?: number | string;
   heading?: React.ReactNode;
   depth?: CanvasDepthValue;
-  transformOrigin?: PopoupOrigin;
 }
 
 const closeIconSpacing = 12;
