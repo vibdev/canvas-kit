@@ -62,4 +62,24 @@ import {LoadingSpinner} from '@workday/canvas-kit-react-loading-animation';
 
 ### Optional
 
-> None
+#### `color: string`
+
+> The color of the spinner
+
+Default: colors.blueberry600
+
+---
+
+#### `scale: number`
+
+> Adjust the scale of the spinner
+
+Default: 1
+
+---
+
+#### `className: string`
+
+> Optional className to adjust container styles
+
+Default: none
