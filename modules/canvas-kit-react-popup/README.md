@@ -1,8 +1,10 @@
 # Canvas Kit Popup
 
-A Popup component that allows you to render content above another. Note: In our example we use
-Material UIs popper component to wrap our Popup component and position it, which is a wrapper to
-Popper.js. For reference: https://material-ui.com/api/popper/
+A Popup component that allows you to render content above another.
+
+Note: This popup does not include a positioning engined. In our example we use Material UIs popper
+component to wrap our Popup component and position it, which is a wrapper to Popper.js. For
+reference: https://material-ui.com/api/popper/
 
 ## Installation
 
@@ -28,7 +30,7 @@ import {Popup} from '@workday/canvas-kit-react-popup';
   <Popup
     width={300}
     heading={'Popup Title'}
-    paddingSize={PopupPadding.l}
+    paddingSize={Popup.padding.l}
     handleClose={this.handleClose}
   >
     {this.props.children}
@@ -44,13 +46,23 @@ import {Popup} from '@workday/canvas-kit-react-popup';
 
 ### Required
 
-### `paddingSize: PopupPadding`
-
-> You can choose between zero, s, l for your padding
+> None
 
 ---
 
 ### Optional
+
+### `paddingSize: PopupPadding`
+
+> You can choose between zero, s, l for your padding
+
+Default: `PopupPadding.l`
+
+| Name   | Size (px) |
+| ------ | --------- |
+| `zero` | 0         |
+| `s`    | 16        |
+| `l`    | 32        |
 
 #### `handleClose: () => void`
 
@@ -61,8 +73,6 @@ import {Popup} from '@workday/canvas-kit-react-popup';
 #### `width: number | string`
 
 > Width of the card.
-
-Default: `null`
 
 ---
 
@@ -78,12 +88,17 @@ Default: `depth[2]`
 
 > Origin from which the popup will animate from
 
-Default: `top center`
+Default:
+
+```js
+{
+  horizontal: 'center',
+  vertical: 'top',
+}
+```
 
 ---
 
 #### `heading: ReactNode`
 
 > Heading at the top of the card.
-
-Default: `null`
