@@ -64,7 +64,12 @@ export default class Popup extends React.Component<PopupProps> {
   static padding = PopupPadding;
   static defaultProps = {
     padding: Popup.padding.l,
+    transformOrigin: {
+      horizontal: 'center',
+      vertical: 'top',
+    },
   };
+
   public render() {
     const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;
     return (
