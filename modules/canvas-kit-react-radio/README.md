@@ -91,16 +91,13 @@ Default: `false`
 import * as React from 'react';
 import {radioButton, radionButtonGroup} from '@workday/canvas-kit-react-radio';
 
-<RadioGroup>
-  <Radio id="1" name="contact" value="email" label="E-mail" />
-  <Radio id="2" name="contact" value="phone" label="Phone" />
-  <Radio id="3" name="contact" value="fax" label="Fax (disabled)" disabled={true} />
-  <Radio id="4" name="contact" value="mail" label="Mail" />
+<RadioGroup name="contact">
+  <Radio id="1" value="email" label="E-mail" />
+  <Radio id="2" value="phone" label="Phone" />
+  <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
+  <Radio id="4" value="mail" label="Mail" />
 </RadioGroup>;
 ```
-
-**Note:** while managing state using a unique `value` and a common `name` for each `Radio` child is
-encouraged.
 
 ## Static Properties
 

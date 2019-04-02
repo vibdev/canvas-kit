@@ -15,6 +15,8 @@ export interface RadioGroupProps {
    */
   value?: string | number;
 
+  name?: string;
+
   /**
    * Callback function when a button is selected, optional.
    * If the selected button has a value, it will be returned.
@@ -42,9 +44,11 @@ export default class RadioGroup extends React.Component<RadioGroupProps> {
         typeof this.props.value === 'number'
           ? index === this.props.value
           : childProps.value === this.props.value;
+      const name = this.props.name ? this.props.name : childProps.name;
 
       return React.cloneElement(child, {
         checked,
+        name,
         onClick: this.onButtonClick.bind(this, childProps.onClick, index),
       });
     }

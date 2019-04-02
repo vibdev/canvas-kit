@@ -38,11 +38,11 @@ storiesOf('Canvas Kit/Radio', module)
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <RadioGroupWrapper>
-          <RadioGroup>
-            <Radio id="1" name="contact" value="email" label="E-mail" />
-            <Radio id="2" name="contact" value="phone" label="Phone" />
-            <Radio id="3" name="contact" value="fax" label="Fax (disabled)" disabled={true} />
-            <Radio id="4" name="contact" value="mail" label="Mail" />
+          <RadioGroup name="contact">
+            <Radio id="1" value="email" label="E-mail" />
+            <Radio id="2" value="phone" label="Phone" />
+            <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
+            <Radio id="4" value="mail" label="Mail" />
           </RadioGroup>
         </RadioGroupWrapper>
       </div>
