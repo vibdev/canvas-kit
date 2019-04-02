@@ -61,7 +61,6 @@ const CloseIconContainer = styled('div')({
 });
 
 export default class Popup extends React.Component<PopupProps> {
-  // static PopupOrigin = Popup.PopupOrigin;
   static padding = PopupPadding;
   static defaultProps = {
     padding: Popup.padding.l,
