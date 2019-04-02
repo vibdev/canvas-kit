@@ -103,22 +103,13 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
 
 const Input = styled('input')<TextInputBaseProps>(...textInputStyles);
 
-class TextInputBase extends React.Component<TextInputBaseProps> {
+export default class TextInput extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
+  static LabelPosition = LabelPosition;
 
   static defaultProps = {
     type: 'text',
   };
-
-  public render() {
-    const {inputProps, ...componentProps} = this.props;
-    return <Input {...componentProps} {...inputProps} />;
-  }
-}
-
-export default class TextInput extends React.Component<TextInputProps> {
-  static ErrorType = ErrorType;
-  static LabelPosition = LabelPosition;
 
   render() {
     const {labelPosition, grow, ...inputProps} = this.props;
@@ -130,8 +121,8 @@ export default class TextInput extends React.Component<TextInputProps> {
         icon = (
           <SystemIcon
             icon={exclamationTriangleIcon}
-            color={inputColors.warning.message}
-            colorHover={inputColors.warning.message}
+            color={inputColors.warning.icon}
+            colorHover={inputColors.warning.icon}
           />
         );
         break;
@@ -139,8 +130,8 @@ export default class TextInput extends React.Component<TextInputProps> {
         icon = (
           <SystemIcon
             icon={exclamationCircleIcon}
-            color={inputColors.error.border}
-            colorHover={inputColors.error.border}
+            color={inputColors.error.icon}
+            colorHover={inputColors.error.icon}
           />
         );
         break;
@@ -149,7 +140,7 @@ export default class TextInput extends React.Component<TextInputProps> {
 
     return (
       <InputIconContainer icon={icon} grow={grow}>
-        <TextInputBase hasIcon={typeof icon !== 'undefined'} {...inputProps} grow={grow} />
+        <Input hasIcon={typeof icon !== 'undefined'} {...inputProps} grow={grow} />
       </InputIconContainer>
     );
   }
