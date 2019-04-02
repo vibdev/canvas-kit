@@ -23,7 +23,7 @@ export interface TextInputBaseProps extends GrowthBehavior {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   readOnly?: boolean;
-  type: string;
+  type?: string;
   value?: any;
 }
 
