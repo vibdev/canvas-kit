@@ -53,7 +53,8 @@ Default: `false`
 
 #### `id: string`
 
-> The HTML attribute `id` for the underlying radio input and label component.
+> The HTML attribute `id` for the underlying radio input and label component. This is required if
+> `label` is defined.
 
 ---
 
@@ -89,7 +90,7 @@ Default: `false`
 
 ```tsx
 import * as React from 'react';
-import {radioButton, radionButtonGroup} from '@workday/canvas-kit-react-radio';
+import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 
 <RadioGroup name="contact">
   <Radio id="1" value="email" label="E-mail" />
@@ -127,3 +128,10 @@ import {radioButton, radionButtonGroup} from '@workday/canvas-kit-react-radio';
 
 > Callback function when a radio input is selected. The value (if defined) or the index of the input
 > will be returned.
+
+---
+
+#### `name: string`
+
+> If specified, will be passed as the common `name` prop to all `Radio` children. This enables you
+> to avoid specifying `name` on each child.
