@@ -41,7 +41,7 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
     boxSizing: 'border-box',
     height: 40,
     minWidth: 280,
-    transitions: '0.2s box-shadow',
+    transition: '0.2s box-shadow, 0.2s border-color',
     padding: spacingNumbers.xxs, // Compensate for border
     '&::placeholder': {
       color: typeColors.hint,
