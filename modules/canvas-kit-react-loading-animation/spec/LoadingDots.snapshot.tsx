@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import LoadingAnimation from '../lib/LoadingAnimation';
+import LoadingDots from '../lib/LoadingDots';
 
-describe('LoadingAnimation Snapshots', () => {
+describe('LoadingDots Snapshots', () => {
   test('renders as expected', () => {
-    const component = renderer.create(<LoadingAnimation />);
+    const component = renderer.create(<LoadingDots />);
     expect(component).toMatchSnapshot();
   });
 });

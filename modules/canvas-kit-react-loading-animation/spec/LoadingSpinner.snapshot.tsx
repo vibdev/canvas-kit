@@ -12,12 +12,6 @@ describe('LoadingSpinner Snapshots', () => {
     const component = renderer.create(<LoadingSpinner scale={1.5} />);
     expect(component).toMatchSnapshot();
   });
-  test('renders a LoadingSpinner with a className', () => {
-    const component = renderer.create(
-      <LoadingSpinner className={'loading-spinner-container'} scale={1.5} />
-    );
-    expect(component).toMatchSnapshot();
-  });
   test('renders a LoadingSpinner with a different color', () => {
     const component = renderer.create(<LoadingSpinner color={colors.frenchVanilla400} />);
     expect(component).toMatchSnapshot();

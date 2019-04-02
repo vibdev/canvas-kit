@@ -60,7 +60,7 @@ const Container = styled('div')({
 /**
  * A simple component that displays three horizontal dots, to be used when some data is loading.
  */
-export default function LoadingAnimation() {
+export default function LoadingDots() {
   return (
     <Container>
       <LoadingAnimationDot animationDelay={0} />
