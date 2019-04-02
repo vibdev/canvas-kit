@@ -22,6 +22,7 @@ module.exports = {
     '**/canvas-kit-react-header/**/*.{tsx,}',
     '**/canvas-kit-react-icon/**/*.{tsx,}',
     '**/canvas-kit-react-button/**/*.{tsx,}',
+    '**/canvas-kit-react-popup/**/*.{tsx,}',
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories*.{ts,tsx,js,jsx}',
   ],
