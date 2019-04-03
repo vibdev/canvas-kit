@@ -35,149 +35,118 @@ export interface CanvasType extends CanvasTypeHierarchy {
   [key: string]: CanvasTypeHierarchy | CSSProperties;
 }
 
-// Data Viz
-const dataViz1: CSSProperties = {
-  fontSize: '56px',
-  color: typeColors.heading,
-  fontWeight: 300,
-  lineHeight: '68px',
-};
-
-const dataViz2: CSSProperties = {
-  fontSize: '34px',
-  color: typeColors.heading,
-  fontWeight: 300,
-  lineHeight: '40px',
-};
-
-// Headers
-const h1: CSSProperties = {
-  fontWeight: 500,
-  fontSize: '28px',
-  lineHeight: '36px',
-  color: typeColors.heading,
-};
-
-const h2: CSSProperties = {
-  fontWeight: 700,
-  fontSize: '24px',
-  lineHeight: '32px',
-  color: typeColors.heading,
-};
-
-const h3: CSSProperties = {
-  fontWeight: 700,
-  fontSize: '20px',
-  lineHeight: '28px',
-  color: typeColors.heading,
-};
-
-const h4: CSSProperties = {
-  fontWeight: 700,
-  fontSize: '16px',
-  lineHeight: '24px',
-  color: typeColors.heading,
-};
-
-const h5: CSSProperties = {
-  fontWeight: 400,
-  fontSize: '16px',
-  lineHeight: '24px',
-  color: typeColors.heading,
-};
-
-// Body
-const body: CSSProperties = {
-  fontSize: '14px',
-  color: typeColors.body,
-  fontWeight: 400,
-  lineHeight: '20px',
-};
-
-const body2: CSSProperties = {
-  ...body,
-  fontSize: '13px',
-} as CSSProperties;
-
-const small: CSSProperties = {
-  ...body,
-  fontSize: '12px',
-  lineHeight: '16px',
-} as CSSProperties;
-
-// Variations
-const label: CSSProperties = {
-  fontWeight: 500,
-} as CSSProperties;
-
-const button: CSSProperties = {
-  fontWeight: 500,
-} as CSSProperties;
-
-const caps: CSSProperties = {
-  fontWeight: 700,
-  textTransform: 'uppercase',
-} as CSSProperties;
-
-const hint: CSSProperties = {
-  color: typeColors.hint,
-} as CSSProperties;
-
-const error: CSSProperties = {
-  color: statusColors.error,
-} as CSSProperties;
-
-const inverse: CSSProperties = {
-  color: typeColors.inverse,
-};
-
-const mono: CSSProperties = {
-  fontFamily: monoFontFamily,
-};
-
-const link: CSSProperties = {
-  textDecoration: 'none',
-  color: typeColors.link,
-  cursor: 'pointer',
-  '&:hover, &:active': {
-    textDecoration: 'underline',
-    color: typeColors.link,
+const hierarchy: CanvasTypeHierarchy = {
+  dataViz1: {
+    fontSize: '56px',
+    lineHeight: '68px',
+    fontWeight: 300,
+    color: typeColors.heading,
   },
-  '&:focus': {
-    background: canvasColors.blueberry100,
-    textDecoration: 'underline',
-    outline: `2px solid ${canvasColors.blueberry100}`,
+  dataViz2: {
+    fontSize: '34px',
+    lineHeight: '40px',
+    fontWeight: 300,
+    color: typeColors.heading,
+  },
+  h1: {
+    fontSize: '28px',
+    lineHeight: '36px',
+    fontWeight: 500,
+    color: typeColors.heading,
+  },
+  h2: {
+    fontSize: '24px',
+    lineHeight: '32px',
+    fontWeight: 700,
+    color: typeColors.heading,
+  },
+  h3: {
+    fontSize: '20px',
+    lineHeight: '28px',
+    fontWeight: 700,
+    color: typeColors.heading,
+  },
+  h4: {
+    fontSize: '16px',
+    lineHeight: '24px',
+    fontWeight: 700,
+    color: typeColors.heading,
+  },
+  h5: {
+    fontSize: '16px',
+    lineHeight: '24px',
+    fontWeight: 400,
+    color: typeColors.heading,
+  },
+  body: {
+    fontSize: '14px',
+    lineHeight: '20px',
+    fontWeight: 400,
+    color: typeColors.body,
+  },
+  body2: {
+    fontSize: '13px',
+    lineHeight: '20px',
+    fontWeight: 400,
+    color: typeColors.body,
+  },
+  small: {
+    fontSize: '12px',
+    lineHeight: '16px',
+    fontWeight: 400,
+    color: typeColors.body,
+  },
+};
+
+// Add fontFamily to each level of hierarchy
+Object.keys(hierarchy).forEach(key => {
+  hierarchy[key] = {...hierarchy[key], fontFamily};
+});
+
+const variants: CanvasTypeVariant = {
+  label: {
+    fontWeight: 500,
+  },
+  button: {
+    fontWeight: 500,
+  },
+  caps: {
+    fontWeight: 700,
+    textTransform: 'uppercase',
+  },
+  hint: {
+    color: typeColors.hint,
+  },
+  error: {
+    color: statusColors.error,
+  },
+  inverse: {
+    color: typeColors.inverse,
+  },
+  mono: {
+    fontFamily: monoFontFamily,
+  },
+  link: {
+    textDecoration: 'none',
+    color: typeColors.link,
+    cursor: 'pointer',
+    '&:hover, &:active': {
+      textDecoration: 'underline',
+      color: typeColors.link,
+    },
+    '&:focus': {
+      background: canvasColors.blueberry100,
+      textDecoration: 'underline',
+      outline: `2px solid ${canvasColors.blueberry100}`,
+    },
   },
 };
 
 const type: CanvasType = {
-  dataViz1,
-  dataViz2,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  body,
-  body2,
-  small,
+  ...hierarchy,
   variant: {
-    label,
-    button,
-    caps,
-    hint,
-    error,
-    inverse,
-    mono,
-    link,
+    ...variants,
   },
 };
-
-Object.keys(type).forEach(key => {
-  if (key === 'variant') {
-    return;
-  }
-  type[key] = {...type[key], fontFamily} as CSSProperties;
-});
 
 export default type;
