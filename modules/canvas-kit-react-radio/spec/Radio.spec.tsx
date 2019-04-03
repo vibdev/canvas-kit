@@ -47,24 +47,3 @@ describe('Radio Input', () => {
     component.unmount();
   });
 });
-
-describe('Radio Button Accessibility', () => {
-  const cb = jest.fn();
-  afterEach(() => {
-    cb.mockReset();
-  });
-
-  test('enabled radio input should NOT have disabled attribute set', () => {
-    const component = mount(<Radio disabled={false} onChange={cb} />);
-
-    expect(component.find('input').props().disabled).toBe(false);
-    component.unmount();
-  });
-
-  test('disabled radio input should have disabled attribute set', () => {
-    const component = mount(<Radio disabled={true} onChange={cb} />);
-
-    expect(component.find('input').props().disabled).toBe(true);
-    component.unmount();
-  });
-});
