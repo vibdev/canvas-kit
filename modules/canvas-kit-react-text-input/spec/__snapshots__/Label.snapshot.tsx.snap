@@ -8,6 +8,7 @@ exports[`Label Snapshots renders as expected 1`] = `
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   font-weight: 500;
+  line-height: initial;
   display: block;
   margin-bottom: 4px;
 }
@@ -25,6 +26,7 @@ exports[`Label Snapshots renders left label 1`] = `
   line-height: 20px;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   font-weight: 500;
+  line-height: initial;
   display: inline-block;
   vertical-align: top;
   margin-top: 10px;
