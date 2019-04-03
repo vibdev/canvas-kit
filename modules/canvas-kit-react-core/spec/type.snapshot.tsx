@@ -1,11 +1,7 @@
-/// <reference path="../../typings.d.ts" />
 import * as React from 'react';
-import styled, {css} from 'react-emotion';
-import {storiesOf} from '@storybook/react';
-import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
-import canvas, {space, spacing} from './index'; // tslint:disable-line:import-name
-import README from './README.md';
+import * as renderer from 'react-test-renderer';
+import {css} from 'react-emotion';
+import canvas from '../index';
 
 export const inverseStyle = {
   display: 'inline-block',
@@ -14,7 +10,7 @@ export const inverseStyle = {
   borderRadius: '3px',
 };
 export const type = (hierarchy: any) => (
-  <div style={{margin: '0 !important'}}>
+  <div>
     <h1 style={hierarchy.h1}>H1 Header</h1>
     <h2 style={hierarchy.h2}>H2 Header</h2>
     <h3 style={hierarchy.h3}>H3 Header</h3>
@@ -67,68 +63,25 @@ export const type = (hierarchy: any) => (
   </div>
 );
 
-storiesOf('Canvas Kit/Core', module)
-  .addDecorator(withReadme(README))
-  .addDecorator(InputProviderDecorator)
-  .add('Space', () => {
-    const Box = styled('div')(space);
-
-    return (
-      <div className="story">
-        <h1 className="section-label">Space</h1>
-        <div>
-          <Box style={{border: '1px solid #eee'}} p={spacing.xl} pb={64} m={40} mx={10}>
-            Margin and Padding
-          </Box>
-        </div>
+describe('Type Snapshots', () => {
+  test('renders current type hierarchy', () => {
+    const component = renderer.create(
+      <div>
+        <h1 style={canvas.type.dataViz1}>Data Viz 1 Header</h1>
+        <h1 style={canvas.type.dataViz2}>Data Viz 2 Header</h1>
+        {type(canvas.type)}
       </div>
     );
-  })
-  .add('Depth', () => {
-    const Card = styled('div')({
-      width: 200,
-      height: 200,
-      margin: 20,
-      borderRadius: 3,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    });
-
-    return (
-      <div className="story">
-        <h1 className="section-label">Depth</h1>
-        <div style={{display: 'flex'}}>
-          <Card style={canvas.depth.inset}>Depth -1</Card>
-          <Card style={canvas.depth['1']}>Depth 1</Card>
-          <Card style={canvas.depth['2']}>Depth 2</Card>
-          <Card style={canvas.depth['3']}>Depth 3</Card>
-          <Card style={canvas.depth['4']}>Depth 4</Card>
-        </div>
-      </div>
-    );
-  })
-  .add('Type', () => {
-    return (
-      <div className="story">
-        <h1 className="section-label">Type</h1>
-        <section>
-          <h1 style={canvas.type.dataViz1}>Data Viz 1 Header</h1>
-          <h1 style={canvas.type.dataViz2}>Data Viz 2 Header</h1>
-          {type(canvas.type)}
-        </section>
-      </div>
-    );
-  })
-  .add('Type (Beta)', () => {
-    return (
-      <div className="story">
-        <h1 className="section-label">Type (Beta)</h1>
-        <section>
-          <h1 style={canvas.beta_type.brand1}>Brand 1 Header</h1>
-          <h1 style={canvas.beta_type.brand2}>Brand 2 Header</h1>
-          {type(canvas.beta_type)}
-        </section>
-      </div>
-    );
+    expect(component).toMatchSnapshot();
   });
+  test('renders beta type hierarchy', () => {
+    const component = renderer.create(
+      <div>
+        <h1 style={canvas.beta_type.brand1}>Brand 1 Header</h1>
+        <h1 style={canvas.beta_type.brand2}>Brand 2 Header</h1>
+        {type(canvas.beta_type)}
+      </div>
+    );
+    expect(component).toMatchSnapshot();
+  });
+});
