@@ -3,14 +3,14 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {MyComponent} from './index'; // tslint:disable-line:import-name
+import {Label} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Input', module)
+storiesOf('Canvas Kit/Input/Common', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Label', () => (
     <div className="story">
-      <h1 className="section-label">Input Common</h1>
-      <MyComponent />
+      <h1 className="section-label">Label</h1>
+      <Label>Label</Label>
     </div>
   ));

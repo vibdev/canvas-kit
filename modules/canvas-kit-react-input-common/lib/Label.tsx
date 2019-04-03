@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {spacing, type} from '@workday/canvas-kit-react-core';
-import {LabelPosition, LabelPositionBehavior} from '@workday/canvas-kit-react-input-common';
+import {LabelPosition, LabelPositionBehavior} from './types';
 
 export interface LabelProps extends LabelPositionBehavior {
   form?: string;

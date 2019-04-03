@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {
+  Label,
   LabelPosition,
   ErrorType,
   LabelPositionBehavior,
 } from '@workday/canvas-kit-react-input-common';
 import FormGroup from './FormGroup';
-import Label from './Label';
 import TextInput, {TextInputProps} from './TextInput';
 import Hint from './Hint';
 
