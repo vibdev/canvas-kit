@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import Radio from '../lib/Radio';
 import RadioGroup from '../lib/RadioGroup';
 
-describe('Icon Button Toggle', () => {
+describe('Radio', () => {
   const cb = jest.fn();
   afterEach(() => {
     cb.mockReset();
@@ -16,36 +16,28 @@ describe('Icon Button Toggle', () => {
         <Radio id="2" value="phone" label="Phone" />
       </RadioGroup>
     );
-    expect(component.find('input').length).toEqual(2);
 
-    component
-      .find('input')
-      .at(0)
-      .simulate('click');
+    const inputs = component.find('input');
+
+    expect(inputs.length).toEqual(2);
+    expect(inputs.get(0).props.name).toEqual('contact');
+    expect(inputs.get(1).props.name).toEqual('contact');
   });
 
-  test('renders two radios with disabled radio', () => {
+  test('can switch to a different radio', () => {
     const component = mount(
-      <RadioGroup name="contact">
+      <RadioGroup name="contact" onChange={cb}>
         <Radio id="1" value="email" label="E-mail" />
         <Radio id="2" value="phone" label="Phone" />
-        <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
-        <span /> {/* ensure random elements don't break anything */}
       </RadioGroup>
     );
 
-    expect(component.find('input').length).toEqual(3);
-
-    // clicking on a disabled radio shouldn't trigger callback
     component
       .find('input')
       .at(1)
-      .simulate('click');
+      .simulate('change');
 
-    // clicking on an active radio should trigger callback
-    component
-      .find('input')
-      .at(0)
-      .simulate('click');
+    expect(cb.mock.calls.length).toBe(1);
+    expect(cb.mock.calls[0][0]).toBe('phone');
   });
 });
