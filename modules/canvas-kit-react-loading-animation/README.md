@@ -14,13 +14,15 @@ or
 yarn add @workday/canvas-kit-react-loading-animation
 ```
 
+# LoadingDots
+
 ## Usage
 
 ```tsx
 import * as React from 'react';
-import {LoadingAnimation} from '@workday/canvas-kit-react-loading-animation';
+import {LoadingDots} from '@workday/canvas-kit-react-loading-animation';
 
-<LoadingAnimation />;
+<LoadingDots />;
 ```
 
 ## Static Properties
@@ -36,3 +38,40 @@ import {LoadingAnimation} from '@workday/canvas-kit-react-loading-animation';
 ### Optional
 
 > None
+
+# LoadingSpinner
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {LoadingSpinner} from '@workday/canvas-kit-react-loading-animation';
+
+<LoadingSpinner />;
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+#### `color: string`
+
+> The color of the spinner
+
+Default: colors.blueberry400
+
+---
+
+#### `scale: number`
+
+> Adjust the scale of the spinner
+
+Default: 1

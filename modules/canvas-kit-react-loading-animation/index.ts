@@ -1,5 +1,7 @@
-import LoadingAnimation from './lib/LoadingAnimation';
+import LoadingDots from './lib/LoadingDots';
+import LoadingSpinner from './lib/LoadingSpinner';
 
-export default LoadingAnimation;
-export {LoadingAnimation};
-export * from './lib/LoadingAnimation';
+export {LoadingDots as LoadingAnimation, LoadingDots, LoadingSpinner};
+export default LoadingDots;
+export * from './lib/LoadingDots';
+export * from './lib/LoadingSpinner';

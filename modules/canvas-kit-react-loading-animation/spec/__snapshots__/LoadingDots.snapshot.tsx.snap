@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingAnimation Snapshots renders as expected 1`] = `
+exports[`LoadingDots Snapshots renders as expected 1`] = `
 .emotion-6 {
   display: inline-block;
 }
