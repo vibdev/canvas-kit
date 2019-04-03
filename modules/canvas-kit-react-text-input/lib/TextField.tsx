@@ -8,7 +8,7 @@ import TextInput, {TextInputProps} from './TextInput';
 import Hint from './Hint';
 
 export interface TextFieldProps extends TextInputProps {
-  label: React.ReactNode;
+  label?: React.ReactNode;
   hintText?: React.ReactNode;
 }
 
