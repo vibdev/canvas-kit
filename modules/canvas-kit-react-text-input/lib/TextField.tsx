@@ -2,13 +2,13 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {
+  FormGroup,
   Hint,
   Label,
   LabelPosition,
   LabelPositionBehavior,
   ErrorType,
 } from '@workday/canvas-kit-react-input-common';
-import FormGroup from './FormGroup';
 import TextInput, {TextInputProps} from './TextInput';
 
 export interface TextFieldProps extends TextInputProps {
