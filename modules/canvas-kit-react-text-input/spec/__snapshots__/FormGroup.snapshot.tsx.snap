@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormGroup Snapshots renders as expected 1`] = `
+.emotion-0 {
+  margin-bottom: 16px;
+}
+
+<div
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`FormGroup Snapshots renders left label 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+<div
+  className="emotion-0 emotion-1"
+/>
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Snapshots renders as expected 1`] = `
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+<label
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Label Snapshots renders left label 1`] = `
+.emotion-0 {
+  font-size: 14px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-right: 32px;
+  width: 180px;
+}
+
+<label
+  className="emotion-0 emotion-1"
+/>
+`;

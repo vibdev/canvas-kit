@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hint Snapshots renders as expected 1`] = `
+.emotion-0 {
+  font-size: 13px;
+  color: #494949;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  margin: 8px 0 0;
+}
+
+<p
+  className="emotion-0 emotion-1"
+/>
+`;
