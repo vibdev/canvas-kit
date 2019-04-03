@@ -64,7 +64,7 @@ const Inputs = {
   GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
 };
 
-storiesOf('Canvas Kit/Inputs/Text Input', module)
+storiesOf('Canvas Kit/Input/Text Input', module)
   .addDecorator(sectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)
@@ -76,7 +76,7 @@ storiesOf('Canvas Kit/Inputs/Text Input', module)
   .add('Grow', () => Inputs.Grow)
   .add('Grow - Error', () => Inputs.GrowError);
 
-storiesOf('Canvas Kit/Inputs/Text Field/Top Label', module)
+storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
   .addDecorator(sectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field {...Inputs.Plain.props} />)
@@ -88,7 +88,7 @@ storiesOf('Canvas Kit/Inputs/Text Field/Top Label', module)
   .add('Grow', () => <Field {...Inputs.Grow.props} />)
   .add('Grow - Error', () => <Field {...Inputs.GrowError.props} />);
 
-storiesOf('Canvas Kit/Inputs/Text Field/Left Label', module)
+storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
   .addDecorator(sectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => (
@@ -114,7 +114,7 @@ storiesOf('Canvas Kit/Inputs/Text Field/Left Label', module)
     <Field {...Inputs.GrowError.props} labelPosition={TextField.LabelPosition.Left} />
   ));
 
-storiesOf('Canvas Kit/Inputs/Hint', module)
+storiesOf('Canvas Kit/Input/Hint', module)
   .addDecorator(sectionDecorator('Hint'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Hint>Password must be 8 characters long.</Hint>)
