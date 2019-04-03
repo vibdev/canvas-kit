@@ -85,7 +85,7 @@ const Spinner = styled('div')<Pick<LoadingSpinnerProps, 'scale' | 'color'>>(
   ({scale, color}) => ({
     transform: `scale(${scale || '1'})`,
     div: {
-      background: color || colors.blueberry600,
+      background: color || colors.blueberry400,
     },
   })
 );
