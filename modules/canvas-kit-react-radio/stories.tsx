@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 
-import Radio, {RadioGroup, RadioGroupProps} from './index'; // tslint:disable-line:import-name
+import Radio, {RadioGroup} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 // Wrapper to add state mgmt to RadioGroups
