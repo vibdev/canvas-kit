@@ -2,14 +2,14 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {
+  Hint,
   Label,
   LabelPosition,
-  ErrorType,
   LabelPositionBehavior,
+  ErrorType,
 } from '@workday/canvas-kit-react-input-common';
 import FormGroup from './FormGroup';
 import TextInput, {TextInputProps} from './TextInput';
-import Hint from './Hint';
 
 export interface TextFieldProps extends TextInputProps {
   label?: React.ReactNode;

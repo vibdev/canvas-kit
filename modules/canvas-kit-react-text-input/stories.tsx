@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {TextField, TextInput, Hint, TextInputProps, TextFieldProps} from './index'; // tslint:disable-line:import-name
+import {TextField, TextInput, TextInputProps, TextFieldProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 const sectionDecorator: (t: string) => StoryDecorator = title => {
@@ -112,13 +112,4 @@ storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
   .add('Grow', () => <Field {...Inputs.Grow.props} labelPosition={TextField.LabelPosition.Left} />)
   .add('Grow - Error', () => (
     <Field {...Inputs.GrowError.props} labelPosition={TextField.LabelPosition.Left} />
-  ));
-
-storiesOf('Canvas Kit/Input/Hint', module)
-  .addDecorator(sectionDecorator('Hint'))
-  .addDecorator(withReadme(README))
-  .add('Plain', () => <Hint>Password must be 8 characters long.</Hint>)
-  .add('Alert', () => <Hint error={Hint.ErrorType.Alert}>Password must be 8 characters long.</Hint>)
-  .add('Error', () => (
-    <Hint error={Hint.ErrorType.Error}>Password must be 8 characters long.</Hint>
   ));
