@@ -55,21 +55,4 @@ describe('Radio', () => {
     expect(inputs.length).toEqual(3);
     expect(inputs.get(1).props.disabled).toBe(true);
   });
-
-  test('can not switch to a different radio if it is disabled', () => {
-    const component = mount(
-      <RadioGroup name="contact" onChange={cb}>
-        <Radio id="1" value="email" label="E-mail" />
-        <Radio id="2" value="phone" label="Phone" disabled={true} />
-        <Radio id="3" value="fax" label="Fax" />
-      </RadioGroup>
-    );
-
-    component
-      .find('input')
-      .at(1)
-      .simulate('change');
-
-    // expect(cb.mock.calls.length).toBe(0);
-  });
 });
