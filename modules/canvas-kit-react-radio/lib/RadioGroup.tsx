@@ -49,20 +49,20 @@ export default class RadioGroup extends React.Component<RadioGroupProps> {
       return React.cloneElement(child, {
         checked,
         name,
-        onClick: this.onButtonClick.bind(this, childProps.onClick, index),
+        onChange: this.onRadioChange.bind(this, childProps.onChange, index),
       });
     }
 
     return child;
   };
 
-  private onButtonClick = (
-    existingOnClick: (e: React.SyntheticEvent) => void | undefined,
+  private onRadioChange = (
+    existingOnChange: (e: React.SyntheticEvent) => void | undefined,
     index: number,
     event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    if (existingOnClick) {
-      existingOnClick(event);
+    if (existingOnChange) {
+      existingOnChange(event);
     }
 
     const target = event.currentTarget;
