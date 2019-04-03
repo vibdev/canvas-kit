@@ -66,7 +66,7 @@ import {LoadingSpinner} from '@workday/canvas-kit-react-loading-animation';
 
 > The color of the spinner
 
-Default: colors.blueberry600
+Default: colors.blueberry400
 
 ---
 
