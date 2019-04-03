@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {spacing} from '@workday/canvas-kit-react-core';
-import {LabelPosition} from './types';
+import {LabelPosition} from '@workday/canvas-kit-react-input-common';
 
 export interface FormGroupProps extends GrowthBehavior {
   labelPosition?: LabelPosition;

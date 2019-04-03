@@ -1,7 +1,11 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
-import {LabelPosition, ErrorType, LabelPositionBehavior} from './types';
+import {
+  LabelPosition,
+  ErrorType,
+  LabelPositionBehavior,
+} from '@workday/canvas-kit-react-input-common';
 import FormGroup from './FormGroup';
 import Label from './Label';
 import TextInput, {TextInputProps} from './TextInput';
