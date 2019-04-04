@@ -1,40 +1,14 @@
 import * as React from 'react';
-import styled from 'react-emotion';
-import {GrowthBehavior} from '@workday/canvas-kit-react-common';
 import {
-  FormGroup,
-  Hint,
-  Label,
+  FormField,
+  FormFieldProps,
   LabelPosition,
-  LabelPositionBehavior,
   ErrorType,
 } from '@workday/canvas-kit-react-input-common';
 import TextInput, {TextInputProps} from './TextInput';
 
-export interface TextFieldProps extends TextInputProps {
-  label?: React.ReactNode;
-  hintText?: React.ReactNode;
-}
-
-const TextFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBehavior>(
-  ({grow, labelPosition}) => {
-    if (grow) {
-      if (labelPosition === LabelPosition.Left) {
-        return {
-          flexGrow: 1,
-        };
-      }
-
-      return {
-        display: 'block',
-      };
-    }
-
-    return {
-      display: 'inline-block',
-    };
-  }
-);
+export type TextFieldProps = Pick<FormFieldProps, Exclude<keyof FormFieldProps, 'input'>> &
+  TextInputProps;
 
 export default class TextField extends React.Component<TextFieldProps> {
   static LabelPosition = LabelPosition;
@@ -49,13 +23,14 @@ export default class TextField extends React.Component<TextFieldProps> {
     const {labelPosition, error} = inputProps;
 
     return (
-      <FormGroup labelPosition={labelPosition}>
-        {typeof label === 'string' ? <Label labelPosition={labelPosition}>{label}</Label> : label}
-        <TextFieldInputContainer grow={grow} labelPosition={labelPosition}>
-          <TextInput grow={grow} {...inputProps} />
-          {hintText && <Hint error={error}>{hintText}</Hint>}
-        </TextFieldInputContainer>
-      </FormGroup>
+      <FormField
+        input={<TextInput grow={grow} {...inputProps} />}
+        label={label}
+        hintText={hintText}
+        grow={grow}
+        labelPosition={labelPosition}
+        error={error}
+      />
     );
   }
 }
