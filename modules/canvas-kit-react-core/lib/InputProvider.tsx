@@ -109,6 +109,7 @@ const detectWheel = () => {
   let wheelType;
 
   // Modern browsers support "wheel"
+  /* istanbul ignore else for coverage */
   if ('onwheel' in document.createElement('div')) {
     wheelType = 'wheel';
   } else {
@@ -136,18 +137,21 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       storedInput = window.sessionStorage.getItem('what-input') as InputType;
       storedIntent = window.sessionStorage.getItem('what-intent') as InputType;
     } catch (e) {
+      /* istanbul ignore next line for coverage */
       console.warn('Failed to retrieve input status from session storage' + e);
     }
 
     // Check for passive event listener support
     let supportsPassive;
     try {
+      /* istanbul ignore next function for coverage */
       const opts = Object.defineProperty({}, 'passive', {
         get: () => {
           supportsPassive = true;
         },
       });
 
+      /* istanbul ignore next function for coverage */
       const stub = () => {
         return;
       };
@@ -155,6 +159,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       window.addEventListener('test', stub, opts);
       window.removeEventListener('test', stub, opts);
     } catch (e) {
+      /* istanbul ignore next line for coverage */
       console.warn('Browser does not support passive event listeners');
     }
 
@@ -185,6 +190,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
       window.sessionStorage.setItem('what-input', this.state.currentInput);
       window.sessionStorage.setItem('what-intent', this.state.currentIntent);
     } catch (e) {
+      /* istanbul ignore next line for coverage */
       console.warn('Failed to set input status in session storage' + e);
     }
   }
@@ -205,6 +211,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
   }
 
   enableListeners(enable: boolean) {
+    /* istanbul ignore if for coverage */
     if (typeof window === 'undefined') {
       return;
     }
@@ -252,6 +259,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
 
   setInput(event: InputEvent) {
     // only execute if the event buffer timer isn't running
+    /* istanbul ignore if for coverage */
     if (this.state.isBuffering) {
       return;
     }
@@ -282,6 +290,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
         activeElem.nodeName &&
         formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1;
 
+      /* istanbul ignore else for coverage */
       if (notFormInput) {
         this.setState({currentIntent: value});
       }
@@ -295,6 +304,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
 
     // only execute if the event buffer timer isn't running
     // or scrolling isn't happening
+    /* istanbul ignore else for coverage */
     if (!this.state.isBuffering && !this.state.isScrolling) {
       const eventType = event.type as keyof typeof inputEventMap;
       let value = inputEventMap[eventType];
@@ -317,6 +327,7 @@ export default class InputProvider extends React.Component<InputProviderProps, I
 
     this.setState({isBuffering: true});
 
+    /* istanbul ignore next function for coverage */
     this.eventTimer = window.setTimeout(() => {
       this.setState({isBuffering: false});
     },                                  100);

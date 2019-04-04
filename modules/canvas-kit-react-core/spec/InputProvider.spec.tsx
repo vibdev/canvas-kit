@@ -6,7 +6,8 @@ const testInput = (
   mockEvent: {type: string},
   expectedInputType?: InputType,
   expectedIntentType?: InputType,
-  shimWindowProps?: {[key: string]: boolean}
+  shimWindowProps?: {[key: string]: boolean},
+  provideIntent: boolean = true
 ) => {
   // https://github.com/airbnb/enzyme/issues/426#issuecomment-228601631
   const map: any = {};
@@ -23,7 +24,7 @@ const testInput = (
     }
   }
 
-  const component = mount(<InputProvider provideIntent={true} />);
+  const component = mount(<InputProvider provideIntent={provideIntent} />);
   const eventType = mockEvent.type!;
 
   // Reset window environment
@@ -39,7 +40,9 @@ const testInput = (
   // in the test to immitate an environment required for certain event types (e.g. IE10)
   map[eventType](mockEvent);
 
-  if (expectedInputType) {
+  if (!provideIntent) {
+    expect(component.getDOMNode().getAttribute('data-whatinput')).toBe(expectedInputType);
+  } else if (expectedInputType) {
     expect(component.getDOMNode().getAttribute('data-whatinput')).toBe(expectedInputType);
     expect(component.getDOMNode().getAttribute('data-whatintent')).toBe(expectedInputType);
   } else if (expectedIntentType) {
@@ -89,12 +92,12 @@ describe('InputProvider', () => {
 
   // NOTE: It was hard to shim the `mousewheel` and `DOMMouseScroll` events, so we only test `wheel`
 
-  test(`keydown event should result in keyboard input/intent`, () => {
+  test(`keydown event should result in keyboard input`, () => {
     const eventType = InputEventType.KeyDown;
     const expectedInputType = InputType.Keyboard;
     const mockEvent = getMockInputEvent(eventType, expectedInputType);
 
-    testInput(mockEvent, expectedInputType);
+    testInput(mockEvent, expectedInputType, undefined, undefined, false);
   });
   test(`keyup event should result in keyboard input/intent`, () => {
     const eventType = InputEventType.KeyUp;
