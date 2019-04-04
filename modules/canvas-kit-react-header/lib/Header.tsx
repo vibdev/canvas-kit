@@ -5,10 +5,12 @@ import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
+import {IconButton} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
 import throttle from 'lodash/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
+import {HTMLAttributes} from 'enzyme';
 
 export interface HeaderProps {
   /**
@@ -190,7 +192,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       height: '100%',
 
       '> *': {
-        marginLeft: spacing.m,
+        marginLeft: spacing.s,
       },
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
@@ -316,21 +318,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
    * @returns {React.ReactNode} The child/children to be rendered
    */
   private renderChildren(children: React.ReactNode): React.ReactNode {
-    if (React.Children.count(children) && this.state.screenSize !== 'lg') {
-      // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
-      const hamburgerIconProps = {
-        color: themes[this.props.themeColor].systemIcon.color,
-        colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-        icon: justifyIcon,
-        onClick: this.props.onMenuClick,
-      };
-
-      // TODO: This needs to get changed to IconButton when we get it restyled for headers
-      return (
-        <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
-      );
-    }
-
     return React.Children.map(children, child => {
       if (!React.isValidElement(child)) {
         return child;
@@ -347,11 +334,16 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         });
       }
 
+      // Support old method using SystemIcon (before we had IconButton)
       if (child.type === SystemIcon) {
-        return React.cloneElement(child as React.ReactElement<SystemIconProps>, {
-          color: themes[this.props.themeColor].systemIcon.color,
-          colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-        });
+        return React.cloneElement(
+          child as React.ReactElement<SystemIconProps | Pick<HTMLAttributes, 'style'>>,
+          {
+            color: themes[this.props.themeColor].systemIcon.color,
+            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+            style: {padding: spacing.xxs}, // Make the size match an IconButton
+          }
+        );
       }
 
       return child;
@@ -384,8 +376,10 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     // TODO: This needs to get changed to IconButton when we get it restyled for headers
     const collapseMenu = this.props.children && this.state.screenSize !== 'lg';
     const hamburgerIconProps = {
-      color: themes[this.props.themeColor].systemIcon.color,
-      colorHover: themes[this.props.themeColor].systemIcon.colorHover,
+      buttonType:
+        this.props.themeColor === HeaderTheme.White
+          ? IconButton.Types.Default
+          : IconButton.Types.Inverse,
       icon: justifyIcon,
       onClick: this.props.onMenuClick,
     };
@@ -412,7 +406,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         )}
         <ChildrenSlot {...props} centeredNav={centeredNav}>
           {collapseMenu ? (
-            <SystemIcon {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
+            <IconButton {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
           ) : (
             this.renderChildren(this.props.children)
           )}

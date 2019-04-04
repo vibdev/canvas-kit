@@ -6,6 +6,7 @@ import {HeaderHeight, HeaderTheme} from '../shared/types';
 import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {IconButton} from '@workday/canvas-kit-react-button';
 import {searchIcon, xIcon} from '@workday/canvas-system-icons-web';
 
 export type SearchProps = {
@@ -66,6 +67,7 @@ const SearchContainer = styled('form')<SearchProps>(
           position: 'absolute',
           background: colors.frenchVanilla100,
           maxWidth: 'unset',
+          zIndex: 1,
           '&.search-enter': {
             opacity: 0,
           },
@@ -197,9 +199,11 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.setState({focused: focus});
   }
 
-  _renderCollapsed(iconColor: string) {
-    const iconColorHover =
-      this.props.themeColor === HeaderTheme.White ? colors.licorice500 : colors.blueberry100;
+  _renderCollapsed() {
+    const iconButtonType =
+      this.props.themeColor === HeaderTheme.White
+        ? IconButton.Types.Default
+        : IconButton.Types.Inverse;
 
     const collapsedIconStyle = {
       marginLeft: spacing.s,
@@ -216,10 +220,9 @@ export class Search extends React.Component<SearchProps, SearchState> {
 
     return (
       <React.Fragment>
-        <SystemIcon
+        <IconButton
           icon={searchIcon}
-          color={iconColor}
-          colorHover={iconColorHover}
+          buttonType={iconButtonType}
           style={collapsedIconStyle}
           onClick={this.openMobileSearch}
         />
@@ -240,11 +243,10 @@ export class Search extends React.Component<SearchProps, SearchState> {
               onFocus={this.setFocused.bind(this, true)}
               onBlur={this.setFocused.bind(this, false)}
             />
-            <SystemIcon
+            <IconButton
               icon={xIcon}
+              buttonType={IconButton.Types.Default}
               style={{...iconStyle, ...closeIconStyle}}
-              color={colors.licorice200}
-              colorHover={colors.licorice500}
               onClick={this.closeMobileSearch}
             />
           </SearchContainer>
@@ -256,14 +258,14 @@ export class Search extends React.Component<SearchProps, SearchState> {
   render() {
     const {onSearchSubmit, ...props} = this.props;
 
+    if (props.collapse) {
+      return this._renderCollapsed();
+    }
+
     const iconColor =
       props.themeColor === HeaderTheme.White || this.state.focused
         ? colors.licorice200
         : colors.frenchVanilla100;
-
-    if (props.collapse) {
-      return this._renderCollapsed(iconColor);
-    }
 
     return (
       <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
