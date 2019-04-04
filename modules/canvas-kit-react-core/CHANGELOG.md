@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.8.3...@workday/canvas-kit-react-core@1.9.0) (2019-04-04)
+
+
+### Features
+
+* **type:** Add new beta type hierarchy ([c06fdf1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/c06fdf1))
+* **type:** Update story to include beta type ([b9cf14b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/b9cf14b))
+
+
+
+
+
 ## [1.8.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.8.2...@workday/canvas-kit-react-core@1.8.3) (2019-04-04)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-core

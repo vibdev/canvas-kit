@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-page-header",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Canvas page header component",
   "homepage": "https://workdaydesign.com",
   "author": "Lynn Chyi <lynn.chyi@workday.com>",
@@ -37,9 +37,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.3.6",
-    "@workday/canvas-kit-react-core": "^1.8.3",
-    "@workday/canvas-kit-react-icon": "^1.5.5",
+    "@workday/canvas-kit-react-common": "^0.3.7",
+    "@workday/canvas-kit-react-core": "^1.9.0",
+    "@workday/canvas-kit-react-icon": "^1.5.6",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   },
