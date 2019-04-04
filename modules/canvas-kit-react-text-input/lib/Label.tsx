@@ -13,9 +13,6 @@ export interface LabelProps extends LabelPositionBehavior {
 const LabelComponent = styled('label')<LabelProps>(
   type.body,
   type.variant.label,
-  {
-    lineHeight: 'initial',
-  },
   ({labelPosition}) => {
     if (labelPosition === LabelPosition.Left) {
       return {
