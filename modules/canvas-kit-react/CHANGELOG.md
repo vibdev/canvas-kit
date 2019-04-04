@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.15](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.14...@workday/canvas-kit-react@1.3.15) (2019-04-04)
+
+
+### Bug Fixes
+
+* **bundle:** add missing dependency for popup ([9e948b0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/9e948b0))
+
+
+
+
+
 ## [1.3.14](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.13...@workday/canvas-kit-react@1.3.14) (2019-04-04)
 
 **Note:** Version bump only for package @workday/canvas-kit-react
