@@ -17,9 +17,9 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 .emotion-4 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -242,9 +242,9 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 .emotion-4 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -447,9 +447,9 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 .emotion-4 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -660,9 +660,9 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -708,9 +708,9 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -764,9 +764,9 @@ exports[`Popup Snapshots renders as expected 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 

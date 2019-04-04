@@ -34,9 +34,9 @@ exports[`Page Header Snapshots renders a basic PageHeader as expected 1`] = `
 }
 
 .emotion-0 {
-  font-weight: 500;
   font-size: 28px;
   line-height: 36px;
+  font-weight: 500;
   color: #ffffff;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px 0;
@@ -85,9 +85,9 @@ exports[`Page Header Snapshots renders a marketing context PageHeader as expecte
 }
 
 .emotion-0 {
-  font-weight: 500;
   font-size: 28px;
   line-height: 36px;
+  font-weight: 500;
   color: #ffffff;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px 0;

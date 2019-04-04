@@ -3,9 +3,9 @@
 exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
 .emotion-6 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #ffffff;
   border-top: 1px solid #dfe2e6;
@@ -207,9 +207,9 @@ exports[`Cookie Banner Snapshots renders a CookieBanner 1`] = `
 exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
 .emotion-8 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #ffffff;
   border-top: 1px solid #dfe2e6;
@@ -385,9 +385,9 @@ exports[`Cookie Banner Snapshots renders a CookieBanner with settings 1`] = `
 
 .emotion-2 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   margin-right: 16px;
   border: 0;
@@ -568,9 +568,9 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner 1`] = `
 
 .emotion-6 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #ffffff;
   border-top: 1px solid #dfe2e6;
@@ -775,9 +775,9 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
 
 .emotion-8 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #ffffff;
   border-top: 1px solid #dfe2e6;
@@ -823,9 +823,9 @@ exports[`Cookie Banner Snapshots renders a closed CookieBanner with settings 1`]
 
 .emotion-2 {
   font-size: 13px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   margin-right: 16px;
   border: 0;

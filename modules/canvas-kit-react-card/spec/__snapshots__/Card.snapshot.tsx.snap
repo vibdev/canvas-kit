@@ -3,9 +3,9 @@
 exports[`Card Snapshots renders a card with depth 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -39,16 +39,16 @@ exports[`Card Snapshots renders a card with heading 1`] = `
 
 .emotion-2 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
 .emotion-0 {
-  font-weight: 700;
   font-size: 20px;
   line-height: 28px;
+  font-weight: 700;
   color: #333333;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   margin-bottom: 24px;
@@ -73,9 +73,9 @@ exports[`Card Snapshots renders a card with heading 1`] = `
 exports[`Card Snapshots renders a card with height 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -103,9 +103,9 @@ exports[`Card Snapshots renders a card with height 1`] = `
 exports[`Card Snapshots renders a card with padding 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -131,9 +131,9 @@ exports[`Card Snapshots renders a card with padding 1`] = `
 exports[`Card Snapshots renders a card with width 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -169,9 +169,9 @@ exports[`Card Snapshots renders as expected 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 

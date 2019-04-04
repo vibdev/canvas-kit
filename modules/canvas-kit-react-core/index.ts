@@ -10,6 +10,7 @@ import spacing, {
   CanvasSpacingValue,
 } from './lib/spacing';
 import type, {fontFamily, monoFontFamily, CanvasType} from './lib/type';
+import beta_type from './lib/beta_type';
 import InputProvider from './lib/InputProvider';
 import {CSSProperties} from './lib/types';
 
@@ -19,6 +20,7 @@ const canvas = {
   depth,
   spacing,
   type,
+  beta_type,
   fontFamily,
   monoFontFamily,
   ...semanticColors,
@@ -33,6 +35,7 @@ export {
   SpaceProps,
   spacingNumbers,
   type,
+  beta_type,
   fontFamily,
   monoFontFamily,
   BrandingColors,

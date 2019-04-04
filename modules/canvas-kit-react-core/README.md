@@ -198,90 +198,98 @@ depth['2'];
 Type styles are available as objects to use alone or with
 [Emotion](https://github.com/emotion-js/emotion).
 
+Our type module is a combination of hierarchy and variants. The hierarchy has the font size, weight,
+etc. for different levels of type (e.g. `canvas.type.h1`, `canvas.type.body`, etc.). The variants
+(e.g. `canvas.type.variant.label`) are applied to a hierarchy level to achieve certain styling.
+Variants only come their augmenting styles and a base type object is required.
+
+| Hierarchy Levels |
+| ---------------- |
+| `dataViz1`       |
+| `dataViz2`       |
+| `h1`             |
+| `h2`             |
+| `h3`             |
+| `h4`             |
+| `h5`             |
+| `body`           |
+| `body2`          |
+| `small`          |
+
+| Variants  |
+| --------- |
+| `label`   |
+| `button`  |
+| `caps`    |
+| `hint`    |
+| `error`   |
+| `inverse` |
+| `mono`    |
+| `link`    |
+
+#### Disclaimer
+
+> A new type hierarchy is in the process of being introduced into our products. You can find more
+> info about it in the [Beta Type Hierarchy](#beta-type-hierarchy) section. We plan to maintain both
+> hierarchies for a short time, but there will be a breaking change when we replace the current one
+> with the new one.
+
 ## Usage
+
+If you're working in emotion, you can simply spread the type objects to use their styles.
 
 ```tsx
 import {type} from '@workday/canvas-kit-react-core';
+
+const MyLabel = styled('label')({
+  ...type.body,
+  ...type.variant.label,
+});
 ```
 
-### Headings
-
-> Modifies font size and weight.
+If you are only using one object, you can do this inline with the `style` attribute.
 
 ```tsx
-<h1 style={canvas.type.h1}>H1 Header</h1>
-<h2 style={canvas.type.h2}>H2 Header</h2>
-<h3 style={canvas.type.h3}>H3 Header</h3>
-<h4 style={canvas.type.h4}>H4 Header</h4>
-<h5 style={canvas.type.h5}>H5 Header</h5>
+import {type} from '@workday/canvas-kit-react-core';
+
+<h1 style={type.h1}>H1 Header</h1>;
 ```
 
-### Body
+To combine objects inline, you can also use emotion's `css` function.
 
 ```tsx
-<p style={canvas.type.body}>Body text</p>
-<p style={canvas.type.body2}>Smaller body text</p>
+import {type} from '@workday/canvas-kit-react-core';
+
+<label className={css(canvas.type.body, canvas.type.variant.label)}>Label Text</label>;
 ```
 
-### Small
+## Beta Type Hierarchy
+
+> As stated above, a new type hierarchy is in the process of being introduced into our products. It
+> relies on larger font sizes/weights to increase legibility and promote reducing density in UI
+> design. Other than the visual size and weight changes across every level of hierarchy, there are a
+> few naming changes: `type.dataViz1` and `type.dataViz2` have been renamed to `type.brand1` and
+> `type.brand2`, respectively.
+
+### Usage
+
+The usage is the same as the current hierarchy, you just need a different import.
 
 ```tsx
-<p style={canvas.type.small}>Smallest body text</p>
+import {beta_type} from '@workday/canvas-kit-react-core';
+
+const MyLabel = styled('label')({
+  ...type.body,
+  ...type.variant.label,
+});
 ```
 
-### Variations
+### Breaking Change
 
-> You can modify any of the type hierarchy with the below variations:
-
-#### Labels
-
-```tsx
-<label className={css(canvas.type.body, canvas.type.variant.label)}>Label Text</label>
-```
-
-#### Buttons
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.button)}>Button Text</span>
-```
-
-#### Caps
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.caps)}>Caps Text</span>
-```
-
-#### Hint
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.hint)}>Hint Text</span>
-```
-
-#### Error
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.error)}>Error Text</span>
-```
-
-#### Link
-
-```tsx
-<a href="#" className={css(canvas.type.body, canvas.type.variant.link)}>
-  Link Text
-</a>
-```
-
-#### Mono
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.mono)}>Mono Text</span>
-```
-
-#### Inverse
-
-```tsx
-<span className={css(canvas.type.body, canvas.type.variant.inverse)}>Inverse Text</span>
-```
+> When the breaking change is made, anyone using the current type guide will need to update the
+> references for `dataViz1` and `dataViz2`, and adjust any references they want to keep at the same
+> size (since the text will automatically get large). For those already using `beta_type`, they
+> simply need to drop `beta_` from their import.
 
 # Input Provider
 
