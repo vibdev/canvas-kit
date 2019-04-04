@@ -13,9 +13,9 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -279,9 +279,9 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -547,9 +547,9 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -760,9 +760,9 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1023,9 +1023,9 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 
 .emotion-11 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -1168,9 +1168,9 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1491,9 +1491,9 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1757,9 +1757,9 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2065,9 +2065,9 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2373,9 +2373,9 @@ exports[`Dub Header Snapshots renders a header with system icon children 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2706,9 +2706,9 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3148,9 +3148,9 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3213,9 +3213,9 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3685,9 +3685,9 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3741,9 +3741,9 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
 
 .emotion-11 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -4058,9 +4058,9 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4323,9 +4323,9 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4417,9 +4417,9 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4680,9 +4680,9 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
 
 .emotion-13 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -5009,9 +5009,9 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5263,9 +5263,9 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
 
 .emotion-11 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -5339,9 +5339,9 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5651,9 +5651,9 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5987,9 +5987,9 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6284,9 +6284,9 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6591,9 +6591,9 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6898,9 +6898,9 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7191,9 +7191,9 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7465,9 +7465,9 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7703,9 +7703,9 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
   align-items: center;
   box-sizing: border-box;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

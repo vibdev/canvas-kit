@@ -95,9 +95,9 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
 
 .emotion-1 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -234,9 +234,9 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
 
 .emotion-1 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;
@@ -373,9 +373,9 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
 
 .emotion-1 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 44px;

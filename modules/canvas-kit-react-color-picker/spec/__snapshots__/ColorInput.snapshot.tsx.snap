@@ -14,9 +14,9 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -33,9 +33,9 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
@@ -147,9 +147,9 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -180,9 +180,9 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: #f0f1f2;
 }
@@ -238,9 +238,9 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -257,9 +257,9 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
@@ -371,9 +371,9 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -390,9 +390,9 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
@@ -461,9 +461,9 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -480,9 +480,9 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
@@ -552,9 +552,9 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -571,9 +571,9 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
@@ -642,9 +642,9 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   left: 36px;
   top: 10px;
   font-size: 14px;
-  color: #5e6a75;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -661,9 +661,9 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
   padding-right: 16px;
   width: 116px;
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   background-color: px;
 }
