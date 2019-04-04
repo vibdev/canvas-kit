@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import Header from '../lib/Header';
+import {IconButton} from '@workday/canvas-kit-react-button';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {notificationsIcon} from '@workday/canvas-system-icons-web';
+import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 
 const nav = (
   <nav>
@@ -69,11 +70,12 @@ describe('Dub Header Snapshots', () => {
     expect(tree.centered).toMatchSnapshot();
   });
 
-  test('renders a header with system icon children', () => {
+  test('renders a header with SystemIcon and IconButton children', () => {
     const tree = renderer
       .create(
         <Header>
           <SystemIcon icon={notificationsIcon} />
+          <IconButton icon={inboxIcon} />
         </Header>
       )
       .toJSON();
@@ -89,7 +91,7 @@ describe('Dub Header Snapshots', () => {
     const tree = renderer
       .create(
         <Header onSearchSubmit={cb}>
-          <SystemIcon icon={notificationsIcon} />
+          <IconButton icon={notificationsIcon} />
         </Header>
       )
       .toJSON();
@@ -166,7 +168,7 @@ describe('Full Header Snapshots', () => {
     const tree = renderer
       .create(
         <Header variant={Header.Variant.Full}>
-          <SystemIcon icon={notificationsIcon} />
+          <IconButton icon={notificationsIcon} />
         </Header>
       )
       .toJSON();
@@ -193,7 +195,7 @@ describe('Full Header Snapshots', () => {
     const tree = renderer
       .create(
         <Header variant={Header.Variant.Full} themeColor={Header.Theme.Blue} onSearchSubmit={cb}>
-          <SystemIcon icon={notificationsIcon} />
+          <IconButton icon={notificationsIcon} />
         </Header>
       )
       .toJSON();

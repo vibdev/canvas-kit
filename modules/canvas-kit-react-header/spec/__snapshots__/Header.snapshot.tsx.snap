@@ -92,7 +92,7 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -358,7 +358,7 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -534,6 +534,432 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 </div>
 `;
 
+exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton children 1`] = `
+.emotion-14 {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 64px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
+  color: #333333;
+}
+
+.emotion-8 {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-6 {
+  display: inline-block;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 64px;
+  background: none;
+}
+
+.emotion-0 {
+  padding: 0 16px;
+  margin-right: 16px;
+  border-right: 1px solid #dfe2e6;
+}
+
+.emotion-2 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 32px;
+  white-space: nowrap;
+  color: #005cb9;
+}
+
+.emotion-12 {
+  margin-right: 24px;
+}
+
+.emotion-12 > .canvas-header--menu-icon {
+  cursor: pointer;
+}
+
+@media (min-width:320px) {
+  .emotion-12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .emotion-12 > * {
+    margin-left: 16px;
+  }
+
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .emotion-12 > *:last-child {
+    margin-right: 0;
+  }
+
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:1120px) {
+  .emotion-12 {
+    -webkit-box-flex: unset;
+    -webkit-flex-grow: unset;
+    -ms-flex-positive: unset;
+    flex-grow: unset;
+  }
+}
+
+.emotion-12 nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: inherit;
+  margin-left: 40px;
+}
+
+.emotion-12 nav ul {
+  color: #333333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: inherit;
+}
+
+.emotion-12 nav ul:hover {
+  color: #7b858f;
+}
+
+.emotion-12 nav ul li {
+  box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 16px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+  height: inherit;
+  -webkit-transition: color 150ms ease-out 0s;
+  transition: color 150ms ease-out 0s;
+  cursor: pointer;
+}
+
+.emotion-12 nav ul li:first-child {
+  margin-left: 0;
+}
+
+.emotion-12 nav ul li:last-child {
+  margin-right: 0;
+}
+
+.emotion-12 nav ul li a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 nav ul li a:visited {
+  color: inherit;
+}
+
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
+  color: #333333;
+}
+
+.emotion-12 nav ul li.current {
+  color: #005cb9;
+}
+
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
+  color: #005cb9;
+}
+
+.emotion-12 nav ul li.current:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: #0875e1;
+  border-radius: 3px 3px 0 0;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+}
+
+.emotion-10 {
+  display: inline-block;
+}
+
+.emotion-10 svg {
+  display: block;
+}
+
+.emotion-10 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-10:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-10 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-10:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-10 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-10:hover .wd-icon-background {
+  fill: transparent;
+}
+
+<div
+  className="emotion-14 emotion-15"
+>
+  <div
+    className="emotion-8 emotion-9"
+  >
+    <span>
+      <div
+        className="emotion-6 emotion-7"
+      >
+        <div
+          className="emotion-4 emotion-5"
+          title=""
+        >
+          <span
+            className="emotion-0 emotion-1"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<svg width=\\"32px\\" height=\\"32px\\" viewBox=\\"0 0 32 32\\" version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"> <g id=\\"favicon-32x32\\" stroke=\\"none\\" stroke-width=\\"1\\" fill=\\"none\\" fill-rule=\\"evenodd\\"> <path d=\\"M5.58458798,11.2 C5.44377852,11.2 5.30078598,11.1808226 5.15848805,11.1407609 C4.31621133,10.9030014 3.82382478,10.0192348 4.05850721,9.16669416 C4.09274206,9.04279413 4.12886232,8.91939613 4.16676874,8.797203 C5.79505793,3.53536773 10.5519169,0 16.0034954,0 C21.4483261,0 26.2033989,3.52964464 27.8358558,8.78294546 C27.8717776,8.89841145 27.9065086,9.01578513 27.9394535,9.13376125 C28.1782044,9.98529781 27.6895886,10.8713738 26.848205,11.1127479 C26.0076152,11.3543228 25.131699,10.8596263 24.8931466,10.0080898 C24.8683387,9.92003442 24.8428362,9.83268189 24.8158453,9.74583139 C23.5997636,5.83314089 20.0585894,3.20513501 16.0034954,3.20513501 C11.9434398,3.20513501 8.40087632,5.83735791 7.18836699,9.75526948 C7.16058218,9.84533295 7.13388892,9.93609926 7.10878336,10.0273676 C6.91359505,10.7359271 6.27732287,11.2 5.58458798,11.2\\" id=\\"Fill-1\\" fill=\\"#F38B00\\"></path> <path d=\\"M27.3337042,15.6 L25.1552325,15.6 C24.846619,15.6 24.5784778,15.8098977 24.5078773,16.1068985 L21.5795139,28.0738354 C21.5392425,28.0743298 18.3527806,16.1164887 18.3527806,16.1164887 C18.2717357,15.8121717 17.9925475,15.6 17.6732887,15.6 L14.2987262,15.6 C13.9957367,15.6 13.7308091,15.8012961 13.6537813,16.0900909 L10.4441207,28.1250493 C10.3254155,28.0494149 7.49175516,16.1068985 7.49175516,16.1068985 C7.42105425,15.8098977 7.15301345,15.6 6.84439996,15.6 L4.66753503,15.6 C4.23067572,15.6 3.91161778,16.0069425 4.02198753,16.4234752 L8.01608676,31.5090193 C8.0920099,31.7961333 8.35322164,31.9974294 8.65339922,32 L11.947921,31.9948588 C12.2502076,31.9943645 12.5138296,31.7957378 12.5912591,31.507734 C13.1542553,29.417062 15.9298685,18.8437746 15.9298685,18.8437746 C15.9298685,18.8437746 18.8453772,29.4167654 19.4082729,31.507734 C19.4858029,31.7957378 19.7494249,31.9943645 20.051611,31.9948588 L23.3462332,32 C23.6464108,31.9974294 23.9076225,31.7961333 23.9836461,31.5090193 L27.9780466,16.4218933 C28.0882155,16.0060527 27.7698606,15.6 27.3337042,15.6\\" id=\\"Fill-4\\" fill=\\"#005CB9\\"></path> </g> </svg>",
+              }
+            }
+            title=""
+          />
+          <h3
+            className="emotion-2 emotion-3"
+            title=""
+          >
+            
+          </h3>
+        </div>
+      </div>
+    </span>
+  </div>
+  <div
+    className="emotion-12 emotion-13"
+  >
+    <button
+      className="canvas-header--menu-icon emotion-11"
+      tabIndex={0}
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Dub Header Snapshots renders a header with a custom brand element 1`] = `
 .emotion-4 {
   overflow: hidden;
@@ -594,7 +1020,7 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   }
 
   .emotion-2 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-2 > *:not(.canvas-header--menu-icon) {
@@ -839,7 +1265,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   }
 
   .emotion-15 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-15 > *:not(.canvas-header--menu-icon) {
@@ -1156,7 +1582,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with content with a search bar 1`] = `
-.emotion-14 {
+.emotion-16 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1221,16 +1647,16 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   color: #005cb9;
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-right: 24px;
 }
 
-.emotion-12 > .canvas-header--menu-icon {
+.emotion-14 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-12 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1246,21 +1672,21 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
     height: 100%;
   }
 
-  .emotion-12 > * {
-    margin-left: 24px;
+  .emotion-14 > * {
+    margin-left: 16px;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-12 > *:last-child {
+  .emotion-14 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1269,7 +1695,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 }
 
 @media (min-width:1120px) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -1277,7 +1703,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   }
 }
 
-.emotion-12 nav {
+.emotion-14 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1294,7 +1720,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   margin-left: 40px;
 }
 
-.emotion-12 nav ul {
+.emotion-14 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1314,11 +1740,11 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   height: inherit;
 }
 
-.emotion-12 nav ul:hover {
+.emotion-14 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-12 nav ul li {
+.emotion-14 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -1339,39 +1765,39 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   cursor: pointer;
 }
 
-.emotion-12 nav ul li:first-child {
+.emotion-14 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-12 nav ul li:last-child {
+.emotion-14 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-12 nav ul li a {
+.emotion-14 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12 nav ul li a:visited {
+.emotion-14 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-12 nav ul li:hover,
-.emotion-12 nav ul li:active {
+.emotion-14 nav ul li:hover,
+.emotion-14 nav ul li:active {
   color: #333333;
 }
 
-.emotion-12 nav ul li.current {
+.emotion-14 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:hover,
-.emotion-12 nav ul li.current:active {
+.emotion-14 nav ul li.current:hover,
+.emotion-14 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:after {
+.emotion-14 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1380,6 +1806,120 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   width: 100%;
   background-color: #0875e1;
   border-radius: 3px 3px 0 0;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-10 {
@@ -1415,7 +1955,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 }
 
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-16 emotion-17"
 >
   <div
     className="emotion-8 emotion-9"
@@ -1447,13 +1987,8 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
       </div>
     </span>
   </div>
-  <span
-    className="emotion-10"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
+  <button
+    className="emotion-11"
     onClick={[Function]}
     style={
       Object {
@@ -1461,19 +1996,32 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
         "marginLeft": "16px",
       }
     }
-  />
-  <div
-    className="emotion-12 emotion-13"
   >
     <span
-      className="emotion-10 canvas-header--menu-icon"
+      className="emotion-10"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
         }
       }
-      tabIndex={0}
     />
+  </button>
+  <div
+    className="emotion-14 emotion-15"
+  >
+    <button
+      className="canvas-header--menu-icon emotion-11"
+      tabIndex={0}
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
@@ -1570,7 +2118,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -1745,7 +2293,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
-.emotion-13 {
+.emotion-14 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1810,16 +2358,16 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   color: #005cb9;
 }
 
-.emotion-11 {
+.emotion-12 {
   margin-right: 24px;
 }
 
-.emotion-11 > .canvas-header--menu-icon {
+.emotion-12 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-11 {
+  .emotion-12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1835,21 +2383,21 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
     height: 100%;
   }
 
-  .emotion-11 > * {
-    margin-left: 24px;
+  .emotion-12 > * {
+    margin-left: 16px;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-11 > *:last-child {
+  .emotion-12 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1858,7 +2406,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-11 {
+  .emotion-12 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -1866,7 +2414,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   }
 }
 
-.emotion-11 nav {
+.emotion-12 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1883,7 +2431,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   margin-left: 40px;
 }
 
-.emotion-11 nav ul {
+.emotion-12 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1903,11 +2451,11 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   height: inherit;
 }
 
-.emotion-11 nav ul:hover {
+.emotion-12 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-11 nav ul li {
+.emotion-12 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -1928,39 +2476,39 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-12 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-12 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-12 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-12 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
   color: #333333;
 }
 
-.emotion-11 nav ul li.current {
+.emotion-12 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:after {
+.emotion-12 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1969,6 +2517,120 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   width: 100%;
   background-color: #0875e1;
   border-radius: 3px 3px 0 0;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-10 {
@@ -2004,7 +2666,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-14 emotion-15"
 >
   <div
     className="emotion-8 emotion-9"
@@ -2037,23 +2699,27 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
     </span>
   </div>
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-12 emotion-13"
   >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-        }
-      }
+    <button
+      className="canvas-header--menu-icon emotion-11"
       tabIndex={0}
-    />
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
 
 exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
-.emotion-13 {
+.emotion-14 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2118,6 +2784,120 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   color: #005cb9;
 }
 
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+}
+
 .emotion-10 {
   display: inline-block;
 }
@@ -2150,16 +2930,16 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   fill: transparent;
 }
 
-.emotion-11 {
+.emotion-12 {
   margin-right: 24px;
 }
 
-.emotion-11 > .canvas-header--menu-icon {
+.emotion-12 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-11 {
+  .emotion-12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2175,21 +2955,21 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
     height: 100%;
   }
 
-  .emotion-11 > * {
-    margin-left: 24px;
+  .emotion-12 > * {
+    margin-left: 16px;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-11 > *:last-child {
+  .emotion-12 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2198,7 +2978,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-11 {
+  .emotion-12 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -2206,7 +2986,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   }
 }
 
-.emotion-11 nav {
+.emotion-12 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2223,7 +3003,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   margin-left: 40px;
 }
 
-.emotion-11 nav ul {
+.emotion-12 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2243,11 +3023,11 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   height: inherit;
 }
 
-.emotion-11 nav ul:hover {
+.emotion-12 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-11 nav ul li {
+.emotion-12 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -2268,39 +3048,39 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-12 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-12 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-12 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-12 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
   color: #333333;
 }
 
-.emotion-11 nav ul li.current {
+.emotion-12 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:after {
+.emotion-12 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2312,7 +3092,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-14 emotion-15"
 >
   <div
     className="emotion-8 emotion-9"
@@ -2345,325 +3125,21 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
     </span>
   </div>
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-12 emotion-13"
   >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-        }
-      }
+    <button
+      className="canvas-header--menu-icon emotion-11"
       tabIndex={0}
-    />
-  </div>
-</div>
-`;
-
-exports[`Dub Header Snapshots renders a header with system icon children 1`] = `
-.emotion-13 {
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  height: 64px;
-  background: #ffffff;
-  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.08);
-  color: #333333;
-}
-
-.emotion-8 {
-  height: 100%;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.emotion-6 {
-  display: inline-block;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 64px;
-  background: none;
-}
-
-.emotion-0 {
-  padding: 0 16px;
-  margin-right: 16px;
-  border-right: 1px solid #dfe2e6;
-}
-
-.emotion-2 {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 400;
-  padding-right: 32px;
-  white-space: nowrap;
-  color: #005cb9;
-}
-
-.emotion-11 {
-  margin-right: 24px;
-}
-
-.emotion-11 > .canvas-header--menu-icon {
-  cursor: pointer;
-}
-
-@media (min-width:320px) {
-  .emotion-11 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    height: 100%;
-  }
-
-  .emotion-11 > * {
-    margin-left: 24px;
-  }
-
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
-    display: none;
-  }
-}
-
-@media (min-width:768px) {
-  .emotion-11 > *:last-child {
-    margin-right: 0;
-  }
-
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width:1120px) {
-  .emotion-11 {
-    -webkit-box-flex: unset;
-    -webkit-flex-grow: unset;
-    -ms-flex-positive: unset;
-    flex-grow: unset;
-  }
-}
-
-.emotion-11 nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: inherit;
-  margin-left: 40px;
-}
-
-.emotion-11 nav ul {
-  color: #333333;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  height: inherit;
-}
-
-.emotion-11 nav ul:hover {
-  color: #7b858f;
-}
-
-.emotion-11 nav ul li {
-  box-sizing: border-box;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
-  font-size: 14px;
-  font-weight: 700;
-  height: inherit;
-  -webkit-transition: color 150ms ease-out 0s;
-  transition: color 150ms ease-out 0s;
-  cursor: pointer;
-}
-
-.emotion-11 nav ul li:first-child {
-  margin-left: 0;
-}
-
-.emotion-11 nav ul li:last-child {
-  margin-right: 0;
-}
-
-.emotion-11 nav ul li a {
-  color: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 nav ul li a:visited {
-  color: inherit;
-}
-
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
-  color: #333333;
-}
-
-.emotion-11 nav ul li.current {
-  color: #005cb9;
-}
-
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
-  color: #005cb9;
-}
-
-.emotion-11 nav ul li.current:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  height: 4px;
-  width: 100%;
-  background-color: #0875e1;
-  border-radius: 3px 3px 0 0;
-}
-
-.emotion-10 {
-  display: inline-block;
-}
-
-.emotion-10 svg {
-  display: block;
-}
-
-.emotion-10 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-10:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-10 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-10:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-10 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-10:hover .wd-icon-background {
-  fill: transparent;
-}
-
-<div
-  className="emotion-13 emotion-14"
->
-  <div
-    className="emotion-8 emotion-9"
-  >
-    <span>
-      <div
-        className="emotion-6 emotion-7"
-      >
-        <div
-          className="emotion-4 emotion-5"
-          title=""
-        >
-          <span
-            className="emotion-0 emotion-1"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg width=\\"32px\\" height=\\"32px\\" viewBox=\\"0 0 32 32\\" version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" xmlns:xlink=\\"http://www.w3.org/1999/xlink\\"> <g id=\\"favicon-32x32\\" stroke=\\"none\\" stroke-width=\\"1\\" fill=\\"none\\" fill-rule=\\"evenodd\\"> <path d=\\"M5.58458798,11.2 C5.44377852,11.2 5.30078598,11.1808226 5.15848805,11.1407609 C4.31621133,10.9030014 3.82382478,10.0192348 4.05850721,9.16669416 C4.09274206,9.04279413 4.12886232,8.91939613 4.16676874,8.797203 C5.79505793,3.53536773 10.5519169,0 16.0034954,0 C21.4483261,0 26.2033989,3.52964464 27.8358558,8.78294546 C27.8717776,8.89841145 27.9065086,9.01578513 27.9394535,9.13376125 C28.1782044,9.98529781 27.6895886,10.8713738 26.848205,11.1127479 C26.0076152,11.3543228 25.131699,10.8596263 24.8931466,10.0080898 C24.8683387,9.92003442 24.8428362,9.83268189 24.8158453,9.74583139 C23.5997636,5.83314089 20.0585894,3.20513501 16.0034954,3.20513501 C11.9434398,3.20513501 8.40087632,5.83735791 7.18836699,9.75526948 C7.16058218,9.84533295 7.13388892,9.93609926 7.10878336,10.0273676 C6.91359505,10.7359271 6.27732287,11.2 5.58458798,11.2\\" id=\\"Fill-1\\" fill=\\"#F38B00\\"></path> <path d=\\"M27.3337042,15.6 L25.1552325,15.6 C24.846619,15.6 24.5784778,15.8098977 24.5078773,16.1068985 L21.5795139,28.0738354 C21.5392425,28.0743298 18.3527806,16.1164887 18.3527806,16.1164887 C18.2717357,15.8121717 17.9925475,15.6 17.6732887,15.6 L14.2987262,15.6 C13.9957367,15.6 13.7308091,15.8012961 13.6537813,16.0900909 L10.4441207,28.1250493 C10.3254155,28.0494149 7.49175516,16.1068985 7.49175516,16.1068985 C7.42105425,15.8098977 7.15301345,15.6 6.84439996,15.6 L4.66753503,15.6 C4.23067572,15.6 3.91161778,16.0069425 4.02198753,16.4234752 L8.01608676,31.5090193 C8.0920099,31.7961333 8.35322164,31.9974294 8.65339922,32 L11.947921,31.9948588 C12.2502076,31.9943645 12.5138296,31.7957378 12.5912591,31.507734 C13.1542553,29.417062 15.9298685,18.8437746 15.9298685,18.8437746 C15.9298685,18.8437746 18.8453772,29.4167654 19.4082729,31.507734 C19.4858029,31.7957378 19.7494249,31.9943645 20.051611,31.9948588 L23.3462332,32 C23.6464108,31.9974294 23.9076225,31.7961333 23.9836461,31.5090193 L27.9780466,16.4218933 C28.0882155,16.0060527 27.7698606,15.6 27.3337042,15.6\\" id=\\"Fill-4\\" fill=\\"#005CB9\\"></path> </g> </svg>",
-              }
-            }
-            title=""
-          />
-          <h3
-            className="emotion-2 emotion-3"
-            title=""
-          >
-            
-          </h3>
-        </div>
-      </div>
-    </span>
-  </div>
-  <div
-    className="emotion-11 emotion-12"
-  >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
         }
-      }
-      tabIndex={0}
-    />
+      />
+    </button>
   </div>
 </div>
 `;
@@ -2760,7 +3236,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -3001,7 +3477,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -3292,7 +3768,7 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -3505,7 +3981,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   }
 
   .emotion-15 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-15 > *:not(.canvas-header--menu-icon) {
@@ -3911,7 +4387,7 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -4176,7 +4652,7 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -4496,7 +4972,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   }
 
   .emotion-17 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-17 > *:not(.canvas-header--menu-icon) {
@@ -4862,7 +5338,7 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
   }
 
   .emotion-2 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-2 > *:not(.canvas-header--menu-icon) {
@@ -5079,7 +5555,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   }
 
   .emotion-15 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-15 > *:not(.canvas-header--menu-icon) {
@@ -5460,16 +5936,16 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   display: inline-block;
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-right: 24px;
 }
 
-.emotion-12 > .canvas-header--menu-icon {
+.emotion-14 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-12 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5485,21 +5961,21 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
     height: 100%;
   }
 
-  .emotion-12 > * {
-    margin-left: 24px;
+  .emotion-14 > * {
+    margin-left: 16px;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-12 > *:last-child {
+  .emotion-14 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5508,7 +5984,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
 }
 
 @media (min-width:1120px) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -5516,7 +5992,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   }
 }
 
-.emotion-12 nav {
+.emotion-14 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5533,7 +6009,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   margin-left: 40px;
 }
 
-.emotion-12 nav ul {
+.emotion-14 nav ul {
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5553,11 +6029,11 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   height: inherit;
 }
 
-.emotion-12 nav ul:hover {
+.emotion-14 nav ul:hover {
   color: rgba(255,255,255,0.5);
 }
 
-.emotion-12 nav ul li {
+.emotion-14 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -5578,39 +6054,39 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   cursor: pointer;
 }
 
-.emotion-12 nav ul li:first-child {
+.emotion-14 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-12 nav ul li:last-child {
+.emotion-14 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-12 nav ul li a {
+.emotion-14 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12 nav ul li a:visited {
+.emotion-14 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-12 nav ul li:hover,
-.emotion-12 nav ul li:active {
+.emotion-14 nav ul li:hover,
+.emotion-14 nav ul li:active {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current {
+.emotion-14 nav ul li.current {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current:hover,
-.emotion-12 nav ul li.current:active {
+.emotion-14 nav ul li.current:hover,
+.emotion-14 nav ul li.current:active {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current:after {
+.emotion-14 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5619,6 +6095,38 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   width: 100%;
   background-color: #ffffff;
   border-radius: 3px 3px 0 0;
+}
+
+.emotion-10 {
+  display: inline-block;
+}
+
+.emotion-10 svg {
+  display: block;
+}
+
+.emotion-10 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-10:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-10 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-10:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-10 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-10:hover .wd-icon-background {
+  fill: transparent;
 }
 
 .emotion-4 {
@@ -5639,7 +6147,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   border-right: none;
 }
 
-.emotion-14 {
+.emotion-16 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5673,72 +6181,104 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   color: #ffffff;
 }
 
-.emotion-10 {
-  display: inline-block;
-}
-
-.emotion-10 svg {
-  display: block;
-}
-
-.emotion-10 .wd-icon-fill {
-  fill: #ffffff;
-}
-
-.emotion-10:hover .wd-icon-fill {
-  fill: #d7eafc;
-}
-
-.emotion-10 .wd-icon-accent {
-  fill: #ffffff;
-}
-
-.emotion-10:hover .wd-icon-accent {
-  fill: #d7eafc;
-}
-
-.emotion-10 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-10:hover .wd-icon-background {
-  fill: transparent;
-}
-
 .emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
   display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-11 svg {
-  display: block;
-}
-
-.emotion-11 .wd-icon-fill {
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
   fill: #ffffff;
 }
 
-.emotion-11:hover .wd-icon-fill {
-  fill: #a6d2ff;
+.emotion-11:hover:focus {
+  background-color: rgba(0,0,0,0.2);
 }
 
-.emotion-11 .wd-icon-accent {
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.emotion-11:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
   fill: #ffffff;
 }
 
-.emotion-11:hover .wd-icon-accent {
-  fill: #a6d2ff;
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
 }
 
-.emotion-11 .wd-icon-background {
-  fill: transparent;
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: rgba(255,255,255,0.75);
 }
 
-.emotion-11:hover .wd-icon-background {
-  fill: transparent;
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-sqg0p9 100ms;
+  animation: animation-sqg0p9 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #ffffff;
 }
 
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-16 emotion-17"
 >
   <div
     className="emotion-8 emotion-9"
@@ -5770,13 +6310,8 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
       </div>
     </span>
   </div>
-  <span
-    className="emotion-10"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
+  <button
+    className="emotion-11"
     onClick={[Function]}
     style={
       Object {
@@ -5784,19 +6319,32 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
         "marginLeft": "16px",
       }
     }
-  />
-  <div
-    className="emotion-12 emotion-13"
   >
     <span
-      className="emotion-11 canvas-header--menu-icon"
+      className="emotion-10"
       dangerouslySetInnerHTML={
         Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
         }
       }
-      tabIndex={0}
     />
+  </button>
+  <div
+    className="emotion-14 emotion-15"
+  >
+    <button
+      className="canvas-header--menu-icon emotion-11"
+      tabIndex={0}
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
@@ -5840,7 +6388,7 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -6079,16 +6627,16 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   display: inline-block;
 }
 
-.emotion-11 {
+.emotion-12 {
   margin-right: 24px;
 }
 
-.emotion-11 > .canvas-header--menu-icon {
+.emotion-12 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-11 {
+  .emotion-12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6104,21 +6652,21 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
     height: 100%;
   }
 
-  .emotion-11 > * {
-    margin-left: 24px;
+  .emotion-12 > * {
+    margin-left: 16px;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-11 > *:last-child {
+  .emotion-12 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6127,7 +6675,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-11 {
+  .emotion-12 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -6135,7 +6683,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   }
 }
 
-.emotion-11 nav {
+.emotion-12 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6152,7 +6700,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   margin-left: 40px;
 }
 
-.emotion-11 nav ul {
+.emotion-12 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6172,11 +6720,11 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   height: inherit;
 }
 
-.emotion-11 nav ul:hover {
+.emotion-12 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-11 nav ul li {
+.emotion-12 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -6197,39 +6745,39 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-12 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-12 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-12 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-12 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
   color: #333333;
 }
 
-.emotion-11 nav ul li.current {
+.emotion-12 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:after {
+.emotion-12 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6238,6 +6786,120 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   width: 100%;
   background-color: #0875e1;
   border-radius: 3px 3px 0 0;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-10 {
@@ -6272,7 +6934,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   fill: transparent;
 }
 
-.emotion-13 {
+.emotion-14 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6325,7 +6987,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-14 emotion-15"
 >
   <div
     className="emotion-8 emotion-9"
@@ -6358,17 +7020,21 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
     </span>
   </div>
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-12 emotion-13"
   >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-        }
-      }
+    <button
+      className="canvas-header--menu-icon emotion-11"
       tabIndex={0}
-    />
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
@@ -6386,6 +7052,120 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   display: inline-block;
 }
 
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+}
+
 .emotion-10 {
   display: inline-block;
 }
@@ -6418,16 +7198,16 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   fill: transparent;
 }
 
-.emotion-11 {
+.emotion-12 {
   margin-right: 24px;
 }
 
-.emotion-11 > .canvas-header--menu-icon {
+.emotion-12 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-11 {
+  .emotion-12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6443,21 +7223,21 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
     height: 100%;
   }
 
-  .emotion-11 > * {
-    margin-left: 24px;
+  .emotion-12 > * {
+    margin-left: 16px;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-11 > *:last-child {
+  .emotion-12 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6466,7 +7246,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-11 {
+  .emotion-12 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -6474,7 +7254,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   }
 }
 
-.emotion-11 nav {
+.emotion-12 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6491,7 +7271,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   margin-left: 40px;
 }
 
-.emotion-11 nav ul {
+.emotion-12 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6511,11 +7291,11 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   height: inherit;
 }
 
-.emotion-11 nav ul:hover {
+.emotion-12 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-11 nav ul li {
+.emotion-12 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -6536,39 +7316,39 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-12 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-12 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-12 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-12 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
   color: #333333;
 }
 
-.emotion-11 nav ul li.current {
+.emotion-12 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:after {
+.emotion-12 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6579,7 +7359,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6632,7 +7412,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-14 emotion-15"
 >
   <div
     className="emotion-8 emotion-9"
@@ -6665,17 +7445,21 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
     </span>
   </div>
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-12 emotion-13"
   >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-        }
-      }
+    <button
+      className="canvas-header--menu-icon emotion-11"
       tabIndex={0}
-    />
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
@@ -6693,16 +7477,16 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   display: inline-block;
 }
 
-.emotion-11 {
+.emotion-12 {
   margin-right: 24px;
 }
 
-.emotion-11 > .canvas-header--menu-icon {
+.emotion-12 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-11 {
+  .emotion-12 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6718,21 +7502,21 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
     height: 100%;
   }
 
-  .emotion-11 > * {
-    margin-left: 24px;
+  .emotion-12 > * {
+    margin-left: 16px;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-11 > *:last-child {
+  .emotion-12 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-11 > *:not(.canvas-header--menu-icon) {
+  .emotion-12 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6741,7 +7525,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 }
 
 @media (min-width:1120px) {
-  .emotion-11 {
+  .emotion-12 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -6749,7 +7533,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   }
 }
 
-.emotion-11 nav {
+.emotion-12 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6766,7 +7550,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   margin-left: 40px;
 }
 
-.emotion-11 nav ul {
+.emotion-12 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6786,11 +7570,11 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   height: inherit;
 }
 
-.emotion-11 nav ul:hover {
+.emotion-12 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-11 nav ul li {
+.emotion-12 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -6811,39 +7595,39 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-12 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-12 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-12 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-12 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-11 nav ul li:hover,
-.emotion-11 nav ul li:active {
+.emotion-12 nav ul li:hover,
+.emotion-12 nav ul li:active {
   color: #333333;
 }
 
-.emotion-11 nav ul li.current {
+.emotion-12 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:hover,
-.emotion-11 nav ul li.current:active {
+.emotion-12 nav ul li.current:hover,
+.emotion-12 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-11 nav ul li.current:after {
+.emotion-12 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6852,6 +7636,120 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   width: 100%;
   background-color: #0875e1;
   border-radius: 3px 3px 0 0;
+}
+
+.emotion-11 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.emotion-11:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-11 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-11 span .wd-icon-fill,
+.emotion-11 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-11:focus {
+  background-color: #ffffff;
+}
+
+.emotion-11:focus span .wd-icon-fill,
+.emotion-11:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-11:hover:focus {
+  background-color: #e8ebed;
+}
+
+.emotion-11:active,
+.emotion-11:focus:active,
+.emotion-11:hover:active {
+  background-color: #dfe2e6;
+}
+
+.emotion-11:active span .wd-icon-fill,
+.emotion-11:focus:active span .wd-icon-fill,
+.emotion-11:hover:active span .wd-icon-fill,
+.emotion-11:active span .wd-icon-accent,
+.emotion-11:focus:active span .wd-icon-accent,
+.emotion-11:hover:active span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:hover {
+  background-color: #e8ebed;
+}
+
+.emotion-11:hover span .wd-icon-fill,
+.emotion-11:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-11:disabled,
+.emotion-11:active:disabled,
+.emotion-11:focus:disabled,
+.emotion-11:hover:disabled {
+  background-color: transparent;
+}
+
+.emotion-11:disabled span .wd-icon-fill,
+.emotion-11:active:disabled span .wd-icon-fill,
+.emotion-11:focus:disabled span .wd-icon-fill,
+.emotion-11:hover:disabled span .wd-icon-fill,
+.emotion-11:disabled span .wd-icon-accent,
+.emotion-11:active:disabled span .wd-icon-accent,
+.emotion-11:focus:disabled span .wd-icon-accent,
+.emotion-11:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-11:not([disabled]):focus,
+.emotion-11:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-10 {
@@ -6886,7 +7784,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   fill: transparent;
 }
 
-.emotion-13 {
+.emotion-14 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6939,7 +7837,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-14 emotion-15"
 >
   <div
     className="emotion-8 emotion-9"
@@ -6972,17 +7870,21 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
     </span>
   </div>
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-12 emotion-13"
   >
-    <span
-      className="emotion-10 canvas-header--menu-icon"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-        }
-      }
+    <button
+      className="canvas-header--menu-icon emotion-11"
       tabIndex={0}
-    />
+    >
+      <span
+        className="emotion-10"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-justify wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M3 6.505C3 6.226 3.228 6 3.5 6h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0 10c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99zm0-5c0-.279.228-.505.5-.505h17c.276 0 .5.214.5.505v.99a.505.505 0 0 1-.5.505h-17a.495.495 0 0 1-.5-.505v-.99z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
   </div>
 </div>
 `;
@@ -7026,7 +7928,7 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -7291,7 +8193,7 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {
@@ -7556,7 +8458,7 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
   }
 
   .emotion-10 > * {
-    margin-left: 24px;
+    margin-left: 16px;
   }
 
   .emotion-10 > *:not(.canvas-header--menu-icon) {

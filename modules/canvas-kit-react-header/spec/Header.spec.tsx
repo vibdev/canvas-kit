@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Header from '../lib/Header';
 import {shallow, mount} from 'enzyme';
+import {IconButton} from '@workday/canvas-kit-react-button';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {activityStreamIcon, justifyIcon} from '@workday/canvas-system-icons-web';
 import {themes} from '../lib/shared/themes';
@@ -144,11 +145,11 @@ describe('Header', () => {
       expect(renderedIcon.props().icon).toBe(activityStreamIcon);
     });
 
-    test('Renders a child hamburger menu (SystemIcon) when width is at "sm" breakpoint', () => {
+    test('Renders a child hamburger menu (IconButton) when width is at "sm" breakpoint', () => {
       window.resizeBy(319, 768);
 
       const wrapper = mount<Header>(<Header>{icon}</Header>);
-      const renderedIcon = wrapper.find(SystemIcon).first();
+      const renderedIcon = wrapper.find(IconButton).first();
 
       expect(wrapper.state().screenSize).toBe('sm');
       expect(renderedIcon.props().icon).toBe(justifyIcon);
