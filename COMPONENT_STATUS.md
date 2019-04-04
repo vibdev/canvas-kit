@@ -39,7 +39,7 @@ part of Canvas.
 | Numeric Input                                                   |                    |                                                                                    |
 | Menu                                                            |                    |                                                                                    |
 | [Page Header](modules/canvas-kit-react-page-header)             | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/page-header)     |
-| Pop Up                                                          |                    |                                                                                    |
+| [Pop Up](modules/canvas-kit-react-popup)  | :white_check_mark: |                                                                                    |
 | Progress Bar                                                    |                    |                                                                                    |
 | Radio Buttons                                                   |                    |   [:blue_book:](https://design.workday.com/guidelines/components/radio-buttons)    |
 | Rich Text Editor                                                |                    |  [:blue_book:](https://design.workday.com/guidelines/components/rich-text-editor)  |
