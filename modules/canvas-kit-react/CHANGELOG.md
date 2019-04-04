@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.11...@workday/canvas-kit-react@1.3.12) (2019-04-04)
+
+
+### Bug Fixes
+
+* **bundle:** correct loading animation version ([74e53b2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/74e53b2))
+
+
+
+
+
 ## [1.3.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.10...@workday/canvas-kit-react@1.3.11) (2019-04-02)
 
 

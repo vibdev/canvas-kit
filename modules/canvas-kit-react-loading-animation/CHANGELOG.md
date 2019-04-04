@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/compare/@workday/canvas-kit-react-loading-animation@0.2.4...@workday/canvas-kit-react-loading-animation@0.4.0) (2019-04-04)
+
+
+### Bug Fixes
+
+* add documentation ([c2574b2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/c2574b2))
+* **loading-anim:** Move story back to top left ([f854752](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/f854752))
+* **loading-anim:** Remove initial delay ([a154af7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/a154af7))
+* **loading-animation:** Export with new name as well ([939b771](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/939b771))
+* **loading-animation:** Group prop styles together ([3c9c09e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/3c9c09e))
+* **loadingSpinner:** remove classname prop and clean up styles, rename component ([d7afe87](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/d7afe87))
+
+
+### Features
+
+* loading spinner ([db61f64](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/commits/db61f64))
+
+
+
+
+
 ## [0.2.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/compare/@workday/canvas-kit-react-loading-animation@0.2.3...@workday/canvas-kit-react-loading-animation@0.2.4) (2019-03-29)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-loading-animation
