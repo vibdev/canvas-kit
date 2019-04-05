@@ -11,7 +11,7 @@ export interface FormFieldProps extends GrowthBehavior {
   label?: React.ReactNode;
   hintText?: React.ReactNode;
   error?: ErrorType;
-  input: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const FormGroup = styled('div')<LabelPositionBehavior>(({labelPosition}) => {
@@ -56,14 +56,14 @@ export default class FormField extends React.Component<FormFieldProps> {
   };
 
   render() {
-    const {label, hintText, grow, input, ...inputProps} = this.props;
+    const {label, hintText, grow, children, ...inputProps} = this.props;
     const {labelPosition, error} = inputProps;
 
     return (
       <FormGroup labelPosition={labelPosition}>
         {typeof label === 'string' ? <Label labelPosition={labelPosition}>{label}</Label> : label}
         <FormFieldInputContainer grow={grow} labelPosition={labelPosition}>
-          {input}
+          {children}
           {hintText && <Hint error={error}>{hintText}</Hint>}
         </FormFieldInputContainer>
       </FormGroup>
