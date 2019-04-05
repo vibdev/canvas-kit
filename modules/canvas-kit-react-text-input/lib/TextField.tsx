@@ -4,7 +4,7 @@ import {
   FormFieldProps,
   LabelPosition,
   ErrorType,
-} from '@workday/canvas-kit-react-input-common';
+} from '@workday/canvas-kit-react-form-field';
 import TextInput, {TextInputProps} from './TextInput';
 
 export type TextFieldProps = Pick<FormFieldProps, Exclude<keyof FormFieldProps, 'input'>> &
