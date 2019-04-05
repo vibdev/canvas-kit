@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@types/react-transition-group": "^2.0.14",
+    "@workday/canvas-kit-react-button": "^0.19.8",
     "@workday/canvas-kit-react-common": "^0.3.7",
     "@workday/canvas-kit-react-core": "^1.9.0",
     "@workday/canvas-kit-react-icon": "^1.5.6",
@@ -51,7 +52,6 @@
   "devDependencies": {
     "@types/chroma-js": "^1.4.0",
     "@types/lodash": "^4.14.121",
-    "@workday/canvas-kit-react-avatar": "^0.4.7",
-    "@workday/canvas-kit-react-button": "^0.19.8"
+    "@workday/canvas-kit-react-avatar": "^0.4.7"
   }
 }

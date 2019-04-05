@@ -32,7 +32,7 @@ This component renders a responsive, Canvas-style header.
 import * as React from 'react';
 import {Header} from '@workday/canvas-kit-react-header';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {IconButton} from '@workday/canvas-kit-react-button';
 import {notificationsIcon} from '@workday/canvas-system-icons-web';
 import {Button} from '@workday/canvas-kit-react-button';
 
@@ -53,9 +53,7 @@ import {Button} from '@workday/canvas-kit-react-button';
       </li>
     </ul>
   </nav>
-  <a href="#">
-    <SystemIcon icon={notificationsIcon} />
-  </a>
+  <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
   <Avatar
     onClick={() => {
       alert('clicked avatar');
@@ -75,6 +73,8 @@ import {Button} from '@workday/canvas-kit-react-button';
 > to the `<li>` element containing the current page link.
 
 ### `SystemIcon`
+
+_Deprecated (but supported) - please use `IconButton` instead._
 
 > The Header also looks for Canvas `SystemIcon` components and augments them with the correct
 > `color` and `colorHover` props so you won't have to worry about the contrast in relation to the
@@ -167,7 +167,8 @@ Default: `DubLogoTitle` (for "Dub" variants) or `WorkdayLogoTitle` (for "Full" v
 >
 > - The `nav` element collapses into a hamburger icon menu after the screen width falls below the
 >   `lg` breakpoint
-> - Any `SystemIcon` collapses after the screen width falls below the `md` breakpoint
+> - Any `IconButton` or `SystemIcon` collapses after the screen width falls below the `md`
+>   breakpoint
 > - _`sm` may be reserved for future functionality_
 
 Default:
