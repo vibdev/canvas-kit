@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import {spacing} from '@workday/canvas-kit-react-core';
 import {GrowthBehavior} from '@workday/canvas-kit-react-common';
-import FormGroup from './FormGroup';
 import Hint from './Hint';
 import Label from './Label';
 import {LabelPosition, LabelPositionBehavior, ErrorType} from './types';
@@ -13,6 +13,19 @@ export interface FormFieldProps extends GrowthBehavior {
   error?: ErrorType;
   input: React.ReactNode;
 }
+
+const FormGroup = styled('div')<LabelPositionBehavior>(({labelPosition}) => {
+  if (labelPosition === LabelPosition.Left) {
+    return {
+      display: 'flex',
+      marginBottom: spacing.m,
+    };
+  }
+
+  return {
+    marginBottom: spacing.s,
+  };
+});
 
 const FormFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBehavior>(
   ({grow, labelPosition}) => {
