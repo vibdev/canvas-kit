@@ -2,8 +2,9 @@
 import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import FormField, {LabelPosition} from '@workday/canvas-kit-react-form-field';
 
-import {TextField, TextInput, TextInputProps, TextFieldProps} from './index'; // tslint:disable-line:import-name
+import {TextInput, TextInputProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 const sectionDecorator: (t: string) => StoryDecorator = title => {
@@ -34,24 +35,14 @@ class Input extends React.Component<TextInputProps, {}> {
   }
 }
 
-class Field extends React.Component<TextFieldProps, {}> {
-  static defaultProps = {
-    type: 'text',
-  };
-
-  state = {
-    value: this.props.value,
-  };
-
-  onChange: React.ChangeEventHandler<HTMLInputElement> = e => {
-    this.setState({value: e.target.value});
-  };
-
-  public render() {
-    const {value, ...props} = this.props;
-    return <TextField label="Label" {...props} value={this.state.value} onChange={this.onChange} />;
-  }
-}
+const Field: React.SFC<{grow?: boolean; labelPosition?: LabelPosition}> = ({
+  children,
+  ...props
+}) => (
+  <FormField label="Label" {...props}>
+    {children}
+  </FormField>
+);
 
 const Inputs = {
   Plain: <Input />,
@@ -79,37 +70,37 @@ storiesOf('Canvas Kit/Input/Text Input', module)
 storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
   .addDecorator(sectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => <Field {...Inputs.Plain.props} />)
-  .add('With placeholder', () => <Field {...Inputs.Placeholder.props} />)
-  .add('Disabled', () => <Field {...Inputs.Disabled.props} />)
-  .add('Disabled with placeholder', () => <Field {...Inputs.DisabledPlaceholder.props} />)
-  .add('Alert', () => <Field {...Inputs.Alert.props} />)
-  .add('Error', () => <Field {...Inputs.Error.props} />)
-  .add('Grow', () => <Field {...Inputs.Grow.props} />)
-  .add('Grow - Error', () => <Field {...Inputs.GrowError.props} />);
+  .add('Plain', () => <Field>{Inputs.Plain}</Field>)
+  .add('With placeholder', () => <Field>{Inputs.Placeholder}</Field>)
+  .add('Disabled', () => <Field>{Inputs.Disabled}</Field>)
+  .add('Disabled with placeholder', () => <Field>{Inputs.DisabledPlaceholder}</Field>)
+  .add('Alert', () => <Field>{Inputs.Alert}</Field>)
+  .add('Error', () => <Field>{Inputs.Error}</Field>)
+  .add('Grow', () => <Field grow={true}>{Inputs.Grow}</Field>)
+  .add('Grow - Error', () => <Field grow={true}>{Inputs.GrowError}</Field>);
 
 storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
   .addDecorator(sectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => (
-    <Field {...Inputs.Plain.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
+  .add('Plain', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Plain}</Field>)
   .add('With placeholder', () => (
-    <Field {...Inputs.Placeholder.props} labelPosition={TextField.LabelPosition.Left} />
+    <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Placeholder}</Field>
   ))
   .add('Disabled', () => (
-    <Field {...Inputs.Disabled.props} labelPosition={TextField.LabelPosition.Left} />
+    <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Disabled}</Field>
   ))
   .add('Disabled with placeholder', () => (
-    <Field {...Inputs.DisabledPlaceholder.props} labelPosition={TextField.LabelPosition.Left} />
+    <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.DisabledPlaceholder}</Field>
   ))
-  .add('Alert', () => (
-    <Field {...Inputs.Alert.props} labelPosition={TextField.LabelPosition.Left} />
+  .add('Alert', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Alert}</Field>)
+  .add('Error', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Error}</Field>)
+  .add('Grow', () => (
+    <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
+      {Inputs.Grow}
+    </Field>
   ))
-  .add('Error', () => (
-    <Field {...Inputs.Error.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Grow', () => <Field {...Inputs.Grow.props} labelPosition={TextField.LabelPosition.Left} />)
   .add('Grow - Error', () => (
-    <Field {...Inputs.GrowError.props} labelPosition={TextField.LabelPosition.Left} />
+    <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
+      {Inputs.GrowError}
+    </Field>
   ));
