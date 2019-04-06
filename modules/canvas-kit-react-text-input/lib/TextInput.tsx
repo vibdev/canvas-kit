@@ -14,7 +14,7 @@ import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-sy
 import {ErrorType, LabelPosition} from '@workday/canvas-kit-react-form-field';
 import InputIconContainer from './InputIconContainer';
 
-export interface TextInputBaseProps extends GrowthBehavior {
+export interface TextInputProps extends GrowthBehavior {
   disabled?: boolean;
   error?: ErrorType;
   hasIcon?: boolean;
@@ -27,11 +27,7 @@ export interface TextInputBaseProps extends GrowthBehavior {
   value?: any;
 }
 
-export interface TextInputProps extends TextInputBaseProps {
-  labelPosition?: LabelPosition;
-}
-
-export const textInputStyles: Interpolation<TextInputBaseProps> = [
+export const textInputStyles: Interpolation<TextInputProps> = [
   type.body,
   {
     border: `1px solid ${inputColors.border}`,
@@ -101,7 +97,7 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
     },
 ];
 
-const Input = styled('input')<TextInputBaseProps>(...textInputStyles);
+const Input = styled('input')<TextInputProps>(...textInputStyles);
 
 export default class TextInput extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
@@ -112,7 +108,7 @@ export default class TextInput extends React.Component<TextInputProps> {
   };
 
   render() {
-    const {labelPosition, grow, ...inputProps} = this.props;
+    const {grow, ...inputProps} = this.props;
     const {error} = inputProps;
 
     let icon: React.ReactElement<SystemIcon> | undefined;
