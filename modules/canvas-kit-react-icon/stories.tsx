@@ -58,16 +58,4 @@ storiesOf('Canvas Kit/Icon', module)
       <br />
       <SystemIcon icon={activityStreamIcon} size={48} />
     </div>
-  ))
-  .add('Graphic', () => (
-    <div className="story">
-      <h1 className="section-label">Graphic</h1>
-      <Graphic src={badgeAchievementGraphic} />
-      <Graphic src={badgeAchievementGraphic} width={80} />
-      <br />
-      <Graphic src={emptyStateCheckmarkCircleGraphic} />
-      <div style={{width: 500}}>
-        <Graphic src={emptyStateCheckmarkCircleGraphic} grow={true} />
-      </div>
-    </div>
   ));
