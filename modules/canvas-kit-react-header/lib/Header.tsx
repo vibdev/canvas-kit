@@ -334,16 +334,15 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         });
       }
 
-      // Support old method using SystemIcon (before we had IconButton)
+      // Convert old method of SystemIcon into IconButton
       if (child.type === SystemIcon) {
-        return React.cloneElement(
-          child as React.ReactElement<SystemIconProps | Pick<HTMLAttributes, 'style'>>,
-          {
-            color: themes[this.props.themeColor].systemIcon.color,
-            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-            style: {padding: spacing.xxs}, // Make the size match an IconButton
-          }
-        );
+        const iconButtonType =
+          this.props.themeColor === HeaderTheme.White
+            ? IconButton.Types.Default
+            : IconButton.Types.Inverse;
+        const icon = (child.props as SystemIconProps).icon;
+
+        return <IconButton buttonType={iconButtonType} icon={icon} />;
       }
 
       return child;
