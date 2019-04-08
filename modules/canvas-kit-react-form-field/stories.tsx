@@ -7,6 +7,7 @@ import Radio from '@workday/canvas-kit-react-radio';
 
 import FormField, {FormFieldProps, Label, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
+import {CheckboxWrapper} from '../canvas-kit-react-checkbox/stories';
 import {RadioGroupWrapper} from '../canvas-kit-react-radio/stories';
 import {Input as TextInput, Inputs} from '../canvas-kit-react-text-input/stories';
 
@@ -137,6 +138,30 @@ storiesOf('Canvas Kit/Form Field/Radio', module)
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <Field labelPosition={FormField.LabelPosition.Left}>
           <Radio id="1" value="email" label="E-mail" />
+        </Field>
+      </div>
+    </div>
+  ));
+
+storiesOf('Canvas Kit/Form Field/Checkbox', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Top Label', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field>
+          <CheckboxWrapper />
+        </Field>
+      </div>
+    </div>
+  ))
+  .add('Left Label', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field labelPosition={FormField.LabelPosition.Left}>
+          <CheckboxWrapper />
         </Field>
       </div>
     </div>
