@@ -45,6 +45,14 @@ const FormFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBeha
       };
     }
 
+    if (labelPosition === LabelPosition.Left) {
+      return {
+        display: 'inline-flex',
+        minHeight: 40,
+        alignItems: 'center',
+      };
+    }
+
     return {
       display: 'inline-block',
     };
