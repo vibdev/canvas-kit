@@ -1,21 +1,12 @@
 /// <reference path="../../typings.d.ts" />
 import * as React from 'react';
-import {storiesOf, StoryDecorator} from '@storybook/react';
+import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
 import FormField, {FormFieldProps} from '@workday/canvas-kit-react-form-field';
 
 import {TextInput, TextInputProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
-
-const sectionDecorator: (t: string) => StoryDecorator = title => {
-  return storyFn => (
-    <div className="story">
-      <h1 className="section-label">{title}</h1>
-      {storyFn()}
-    </div>
-  );
-};
 
 class Input extends React.Component<TextInputProps, {}> {
   static defaultProps = {
@@ -65,7 +56,7 @@ const Inputs = {
 
 storiesOf('Canvas Kit/Input/Base/Text Input', module)
   .addDecorator(InputProviderDecorator)
-  .addDecorator(sectionDecorator('Text Input'))
+  .addDecorator(SectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)
   .add('With placeholder', () => Inputs.Placeholder)
@@ -77,7 +68,7 @@ storiesOf('Canvas Kit/Input/Base/Text Input', module)
   .add('Grow - Error', () => Inputs.GrowError);
 
 storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
-  .addDecorator(sectionDecorator('Text Field'))
+  .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field>{Inputs.Plain}</Field>)
   .add('With placeholder', () => <Field>{Inputs.Placeholder}</Field>)
@@ -97,7 +88,7 @@ storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
   ));
 
 storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
-  .addDecorator(sectionDecorator('Text Field'))
+  .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Plain}</Field>)
   .add('With placeholder', () => (
