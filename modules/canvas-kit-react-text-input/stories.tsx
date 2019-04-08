@@ -36,15 +36,19 @@ class Input extends React.Component<TextInputProps, {}> {
   }
 }
 
-const Field = ({children, ...props}: FormFieldProps) => (
-  <FormField label="Label" {...props}>
-    {children}
-  </FormField>
-);
+class Field extends React.Component<FormFieldProps> {
+  static defaultProps = {
+    labelPosition: FormField.LabelPosition.Top,
+  };
 
-Field.defaultProps = {
-  labelPosition: FormField.LabelPosition.Top,
-};
+  render() {
+    return (
+      <FormField label="Label" {...this.props}>
+        {this.props.children}
+      </FormField>
+    );
+  }
+}
 
 const hintText = 'Helpful text goes here.';
 
