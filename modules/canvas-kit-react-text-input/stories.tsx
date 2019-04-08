@@ -55,7 +55,7 @@ const Inputs = {
   GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
 };
 
-storiesOf('Canvas Kit/Input/Text Input', module)
+storiesOf('Canvas Kit/Input/Base/Text Input', module)
   .addDecorator(sectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)

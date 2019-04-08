@@ -33,7 +33,7 @@ class CheckboxWrapper extends React.Component {
   }
 }
 
-storiesOf('Canvas Kit/Input/Checkbox', module)
+storiesOf('Canvas Kit/Input/Base/Checkbox', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (

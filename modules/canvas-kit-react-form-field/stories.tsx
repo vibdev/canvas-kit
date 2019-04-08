@@ -6,7 +6,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {Label, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Input/Common', module)
+storiesOf('Canvas Kit/Input/Base', module)
   .addDecorator(withReadme(README))
   .add('Label', () => (
     <div className="story">

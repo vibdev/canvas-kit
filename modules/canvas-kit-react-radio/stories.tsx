@@ -33,7 +33,7 @@ export class RadioGroupWrapper extends React.Component<{}, RadioGroupWrapperStat
   };
 }
 
-storiesOf('Canvas Kit/Radio', module)
+storiesOf('Canvas Kit/Input/Base/Radio', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (
