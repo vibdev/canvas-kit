@@ -60,10 +60,18 @@ export default class FormField extends React.Component<FormFieldProps> {
   };
 
   private renderChildren = (child: React.ReactChild): React.ReactNode => {
-    if (this.props.grow && React.isValidElement<GrowthBehavior>(child)) {
-      return React.cloneElement(child, {
-        grow: true,
-      });
+    if (React.isValidElement<any>(child)) {
+      const props: GrowthBehavior & ErrorBehavior = {};
+
+      if (this.props.grow && React.isValidElement<GrowthBehavior>(child)) {
+        props.grow = this.props.grow;
+      }
+
+      if (typeof this.props.error !== 'undefined' && React.isValidElement<ErrorBehavior>(child)) {
+        props.error = this.props.error;
+      }
+
+      return React.cloneElement(child, props);
     }
 
     return child;

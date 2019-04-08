@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import FormField, {LabelPosition} from '@workday/canvas-kit-react-form-field';
+import FormField, {FormFieldProps} from '@workday/canvas-kit-react-form-field';
 
 import {TextInput, TextInputProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -35,14 +35,17 @@ class Input extends React.Component<TextInputProps, {}> {
   }
 }
 
-const Field: React.SFC<{grow?: boolean; labelPosition?: LabelPosition}> = ({
-  children,
-  ...props
-}) => (
+const Field = ({children, ...props}: FormFieldProps) => (
   <FormField label="Label" {...props}>
     {children}
   </FormField>
 );
+
+Field.defaultProps = {
+  labelPosition: FormField.LabelPosition.Top,
+};
+
+const hintText = 'Helpful text goes here.';
 
 const Inputs = {
   Plain: <Input />,
@@ -82,8 +85,8 @@ storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
     </Field>
   ))
   .add('Grow - Error', () => (
-    <Field grow={true}>
-      <Input {...Inputs.Error.props} />
+    <Field grow={true} error={FormField.ErrorType.Error} hintText={hintText}>
+      <Input {...Inputs.Placeholder.props} />
     </Field>
   ));
 
@@ -108,7 +111,12 @@ storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
     </Field>
   ))
   .add('Grow - Error', () => (
-    <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
-      <Input {...Inputs.Error.props} />
+    <Field
+      labelPosition={FormField.LabelPosition.Left}
+      grow={true}
+      error={FormField.ErrorType.Error}
+      hintText={hintText}
+    >
+      <Input {...Inputs.Placeholder.props} />
     </Field>
   ));
