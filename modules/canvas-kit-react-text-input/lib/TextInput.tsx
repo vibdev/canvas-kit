@@ -11,7 +11,7 @@ import {
 } from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
-import {ErrorType, LabelPosition} from '@workday/canvas-kit-react-form-field';
+import {ErrorType} from '@workday/canvas-kit-react-form-field';
 import InputIconContainer from './InputIconContainer';
 
 export interface TextInputProps extends GrowthBehavior {
@@ -101,7 +101,6 @@ const Input = styled('input')<TextInputProps>(...textInputStyles);
 
 export default class TextInput extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
-  static LabelPosition = LabelPosition;
 
   static defaultProps = {
     type: 'text',
