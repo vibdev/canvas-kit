@@ -46,7 +46,7 @@ storiesOf('Canvas Kit/Input/Base/Radio', module)
     </div>
   ));
 
-storiesOf('Canvas Kit/Input/Radio Field', module)
+storiesOf('Canvas Kit/Input/Radio Group Field', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Top Label', () => (
@@ -65,6 +65,30 @@ storiesOf('Canvas Kit/Input/Radio Field', module)
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField labelPosition={FormField.LabelPosition.Left} label="Radio Field">
           <RadioGroupWrapper />
+        </FormField>
+      </div>
+    </div>
+  ));
+
+storiesOf('Canvas Kit/Input/Radio Field', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Top Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <FormField label="Radio Field">
+          <Radio id="1" value="email" label="E-mail" />
+        </FormField>
+      </div>
+    </div>
+  ))
+  .add('Left Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <FormField labelPosition={FormField.LabelPosition.Left} label="Radio Field">
+          <Radio id="1" value="email" label="E-mail" />
         </FormField>
       </div>
     </div>
