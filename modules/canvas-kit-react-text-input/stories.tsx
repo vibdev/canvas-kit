@@ -2,6 +2,7 @@
 import * as React from 'react';
 import {storiesOf, StoryDecorator} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 import FormField, {FormFieldProps} from '@workday/canvas-kit-react-form-field';
 
 import {TextInput, TextInputProps} from './index'; // tslint:disable-line:import-name
@@ -59,6 +60,7 @@ const Inputs = {
 };
 
 storiesOf('Canvas Kit/Input/Base/Text Input', module)
+  .addDecorator(InputProviderDecorator)
   .addDecorator(sectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)
