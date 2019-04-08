@@ -6,12 +6,8 @@ import {colors} from '@workday/canvas-kit-react-core';
 import {shieldIcon} from '@workday/canvas-accent-icons-web';
 import {benefitsIcon} from '@workday/canvas-applet-icons-web';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
-import {
-  badgeAchievementGraphic,
-  emptyStateCheckmarkCircleGraphic,
-} from '@workday/canvas-graphics-web';
 
-import {AccentIcon, AppletIcon, SystemIcon, Graphic} from './index';
+import {AccentIcon, AppletIcon, SystemIcon} from './index';
 import README from './README.md';
 
 storiesOf('Canvas Kit/Icon', module)
