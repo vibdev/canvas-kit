@@ -76,8 +76,16 @@ storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
   .add('Disabled with placeholder', () => <Field>{Inputs.DisabledPlaceholder}</Field>)
   .add('Alert', () => <Field>{Inputs.Alert}</Field>)
   .add('Error', () => <Field>{Inputs.Error}</Field>)
-  .add('Grow', () => <Field grow={true}>{Inputs.Grow}</Field>)
-  .add('Grow - Error', () => <Field grow={true}>{Inputs.GrowError}</Field>);
+  .add('Grow', () => (
+    <Field grow={true}>
+      <Input {...Inputs.Placeholder.props} />
+    </Field>
+  ))
+  .add('Grow - Error', () => (
+    <Field grow={true}>
+      <Input {...Inputs.Error.props} />
+    </Field>
+  ));
 
 storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
   .addDecorator(sectionDecorator('Text Field'))
@@ -96,11 +104,11 @@ storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
   .add('Error', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Error}</Field>)
   .add('Grow', () => (
     <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
-      {Inputs.Grow}
+      <Input {...Inputs.Placeholder.props} />
     </Field>
   ))
   .add('Grow - Error', () => (
     <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
-      {Inputs.GrowError}
+      <Input {...Inputs.Error.props} />
     </Field>
   ));

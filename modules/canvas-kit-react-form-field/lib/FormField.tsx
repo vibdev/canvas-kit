@@ -14,6 +14,10 @@ export interface FormFieldProps extends GrowthBehavior {
   children: React.ReactNode;
 }
 
+export interface ErrorBehavior {
+  error?: ErrorType;
+}
+
 const FormGroup = styled('div')<LabelPositionBehavior>(({labelPosition}) => {
   if (labelPosition === LabelPosition.Left) {
     return {
@@ -55,6 +59,16 @@ export default class FormField extends React.Component<FormFieldProps> {
     labelPosition: FormField.LabelPosition.Top,
   };
 
+  private renderChildren = (child: React.ReactChild): React.ReactNode => {
+    if (this.props.grow && React.isValidElement<GrowthBehavior>(child)) {
+      return React.cloneElement(child, {
+        grow: true,
+      });
+    }
+
+    return child;
+  };
+
   render() {
     const {label, hintText, grow, children, ...inputProps} = this.props;
     const {labelPosition, error} = inputProps;
@@ -63,7 +77,7 @@ export default class FormField extends React.Component<FormFieldProps> {
       <FormGroup labelPosition={labelPosition}>
         {typeof label === 'string' ? <Label labelPosition={labelPosition}>{label}</Label> : label}
         <FormFieldInputContainer grow={grow} labelPosition={labelPosition}>
-          {children}
+          {React.Children.map(children, this.renderChildren)}
           {hintText && <Hint error={error}>{hintText}</Hint>}
         </FormFieldInputContainer>
       </FormGroup>
