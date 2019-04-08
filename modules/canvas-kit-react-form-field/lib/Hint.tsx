@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import {ErrorType} from '@workday/canvas-kit-react-common';
 import {spacing, type} from '@workday/canvas-kit-react-core';
-import {ErrorType} from './types';
 
 export interface HintProps {
   error?: ErrorType;

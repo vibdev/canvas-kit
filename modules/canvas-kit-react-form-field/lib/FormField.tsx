@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {spacing} from '@workday/canvas-kit-react-core';
-import {GrowthBehavior} from '@workday/canvas-kit-react-common';
+import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
 import Hint from './Hint';
 import Label from './Label';
-import {LabelPosition, LabelPositionBehavior, ErrorType} from './types';
+import {LabelPosition, LabelPositionBehavior} from './types';
 
 export interface FormFieldProps extends GrowthBehavior {
   labelPosition: LabelPosition;

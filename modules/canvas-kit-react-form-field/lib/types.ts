@@ -3,11 +3,6 @@ export enum LabelPosition {
   Left,
 }
 
-export enum ErrorType {
-  Error,
-  Alert,
-}
-
 export interface LabelPositionBehavior {
   labelPosition?: LabelPosition;
 }
