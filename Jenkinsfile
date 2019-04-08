@@ -17,6 +17,11 @@ def awsProfileStorybook = "jenkinsprs"
 timestamps {
   provisionPod(dockerImage: 'docker-dev-artifactory.workday.com/design/jenkins-slaves/node8-awscli') {
     node(getNames()) {
+      ifBranch.isMaster {
+        properties ([
+          disableConcurrentBuilds()
+        ])
+      }
       ws(workspaceDir) {
 
         stage('Code Checkout') {
