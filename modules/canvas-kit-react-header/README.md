@@ -36,7 +36,7 @@ import {IconButton} from '@workday/canvas-kit-react-button';
 import {notificationsIcon} from '@workday/canvas-system-icons-web';
 import {Button} from '@workday/canvas-kit-react-button';
 
-<Header title="Blue Header" themeColor={Header.Theme.Blue} brandUrl="#">
+<Header title="Header" brandUrl="#">
   <nav>
     <ul>
       <li className="current">
