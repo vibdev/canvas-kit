@@ -3,7 +3,6 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
-import FormField from '@workday/canvas-kit-react-form-field';
 
 import Radio, {RadioGroup} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
@@ -34,7 +33,7 @@ export class RadioGroupWrapper extends React.Component<{}, RadioGroupWrapperStat
   };
 }
 
-storiesOf('Canvas Kit/Input/Base/Radio', module)
+storiesOf('Canvas Kit/Input/Radio', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (
@@ -42,54 +41,6 @@ storiesOf('Canvas Kit/Input/Base/Radio', module)
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <RadioGroupWrapper />
-      </div>
-    </div>
-  ));
-
-storiesOf('Canvas Kit/Input/Radio Group Field', module)
-  .addDecorator(InputProviderDecorator)
-  .addDecorator(withReadme(README))
-  .add('Top Label', () => (
-    <div className="story">
-      <h1 className="section-label">Radio</h1>
-      <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <FormField label="Radio Field">
-          <RadioGroupWrapper />
-        </FormField>
-      </div>
-    </div>
-  ))
-  .add('Left Label', () => (
-    <div className="story">
-      <h1 className="section-label">Radio</h1>
-      <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <FormField labelPosition={FormField.LabelPosition.Left} label="Radio Field">
-          <RadioGroupWrapper />
-        </FormField>
-      </div>
-    </div>
-  ));
-
-storiesOf('Canvas Kit/Input/Radio Field', module)
-  .addDecorator(InputProviderDecorator)
-  .addDecorator(withReadme(README))
-  .add('Top Label', () => (
-    <div className="story">
-      <h1 className="section-label">Radio</h1>
-      <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <FormField label="Radio Field">
-          <Radio id="1" value="email" label="E-mail" />
-        </FormField>
-      </div>
-    </div>
-  ))
-  .add('Left Label', () => (
-    <div className="story">
-      <h1 className="section-label">Radio</h1>
-      <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <FormField labelPosition={FormField.LabelPosition.Left} label="Radio Field">
-          <Radio id="1" value="email" label="E-mail" />
-        </FormField>
       </div>
     </div>
   ));

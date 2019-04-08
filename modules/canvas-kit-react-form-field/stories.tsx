@@ -2,10 +2,12 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {SectionDecorator} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
+import Radio from '@workday/canvas-kit-react-radio';
 
 import FormField, {FormFieldProps, Label, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
+import {RadioGroupWrapper} from '../canvas-kit-react-radio/stories';
 import {Input as TextInput, Inputs} from '../canvas-kit-react-text-input/stories';
 
 storiesOf('Canvas Kit/Input', module)
@@ -90,4 +92,52 @@ storiesOf('Canvas Kit/Form Field/Text/Left Label', module)
     >
       <TextInput {...Inputs.Placeholder.props} />
     </Field>
+  ));
+
+storiesOf('Canvas Kit/Form Field/Radio Group', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Top Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field>
+          <RadioGroupWrapper />
+        </Field>
+      </div>
+    </div>
+  ))
+  .add('Left Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field labelPosition={FormField.LabelPosition.Left}>
+          <RadioGroupWrapper />
+        </Field>
+      </div>
+    </div>
+  ));
+
+storiesOf('Canvas Kit/Form Field/Radio', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Top Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field>
+          <Radio id="1" value="email" label="E-mail" />
+        </Field>
+      </div>
+    </div>
+  ))
+  .add('Left Label', () => (
+    <div className="story">
+      <h1 className="section-label">Radio</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Field labelPosition={FormField.LabelPosition.Left}>
+          <Radio id="1" value="email" label="E-mail" />
+        </Field>
+      </div>
+    </div>
   ));
