@@ -2,11 +2,18 @@ import * as React from 'react';
 import {shallow} from 'enzyme';
 import Graphic, {graphicStyles} from '../lib/Graphic';
 import Svg from '../lib/Svg';
-import {badgeAchievementGraphic} from '@workday/canvas-graphics-web';
+import {CanvasGraphic, CanvasIconTypes} from '@workday/design-assets-types';
 
 describe('Graphic', () => {
   test('Icon is of type graphic', () => {
-    const component = shallow(<Graphic src={badgeAchievementGraphic} />);
+    const mockGraphic: CanvasGraphic = {
+      name: 'mockGraphic',
+      type: CanvasIconTypes.Graphic,
+      svg: '<svg></svg>',
+      filename: 'mock-graphic.svg',
+    };
+
+    const component = shallow(<Graphic src={mockGraphic} />);
     expect(component.find(Svg).prop('type')).toEqual('graphic');
     component.unmount();
   });
