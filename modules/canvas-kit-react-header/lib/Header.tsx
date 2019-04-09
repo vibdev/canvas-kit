@@ -59,6 +59,8 @@ export interface HeaderState {
   screenSize: keyof HeaderProps['breakpoints'];
 }
 
+const childrenSpacing = spacing.s;
+
 const HeaderShell = styled('div')<HeaderProps>(
   {
     overflow: 'hidden',
@@ -191,7 +193,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       height: '100%',
 
       '> *': {
-        marginLeft: spacing.s,
+        marginLeft: childrenSpacing,
       },
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
@@ -350,7 +352,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         (child.props as IconButtonProps).buttonType === IconButton.Types.Plain
       ) {
         return React.cloneElement(child as React.ReactElement<IconButtonProps>, {
-          style: {margin: 0, marginLeft: undefined},
+          style: {margin: `0 0 0 ${childrenSpacing}`},
         });
       }
 
