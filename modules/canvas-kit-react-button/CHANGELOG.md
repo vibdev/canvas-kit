@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.19.9...@workday/canvas-kit-react-button@0.20.0) (2019-04-09)
+
+
+### Features
+
+* **button:** Export missing props from button ([76e3172](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/76e3172))
+
+
+
+
+
 ## [0.19.9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.19.8...@workday/canvas-kit-react-button@0.19.9) (2019-04-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-button

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.3.10...@workday/canvas-kit-react-header@0.4.0) (2019-04-09)
+
+
+### Bug Fixes
+
+* **header:** Remove nested focus for system icons in anchor links ([8034f32](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/8034f32))
+* **header:** Update stories to use IconButtons ([c7c026e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/c7c026e))
+* **header:** Use correct left margin for plain IconButtons ([ee821ae](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/ee821ae))
+
+
+### Features
+
+* **header:** Negate negative margin for plain icon buttons ([80aa883](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/80aa883))
+
+
+
+
+
 ## [0.3.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.3.9...@workday/canvas-kit-react-header@0.3.10) (2019-04-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-header
