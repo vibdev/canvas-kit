@@ -4,7 +4,6 @@ import {shallow, mount} from 'enzyme';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {activityStreamIcon, justifyIcon} from '@workday/canvas-system-icons-web';
-import {themes} from '../lib/shared/themes';
 
 declare global {
   interface Window {
