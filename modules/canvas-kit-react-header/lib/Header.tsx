@@ -5,12 +5,11 @@ import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
-import {IconButton} from '@workday/canvas-kit-react-button';
+import {IconButton, IconButtonProps} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
 import throttle from 'lodash/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
-import {HTMLAttributes} from 'enzyme';
 
 export interface HeaderProps {
   /**
@@ -343,6 +342,16 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         const icon = (child.props as SystemIconProps).icon;
 
         return <IconButton buttonType={iconButtonType} icon={icon} />;
+      }
+
+      // Plain icon buttons have negative margin that we need to negate.
+      if (
+        child.type === IconButton &&
+        (child.props as IconButtonProps).buttonType === IconButton.Types.Plain
+      ) {
+        return React.cloneElement(child as React.ReactElement<IconButtonProps>, {
+          style: {margin: 0, marginLeft: undefined},
+        });
       }
 
       return child;
