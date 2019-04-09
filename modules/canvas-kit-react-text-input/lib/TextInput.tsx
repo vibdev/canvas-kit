@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {Interpolation} from 'create-emotion-styled';
-import {GrowthBehavior} from '@workday/canvas-kit-react-common';
+import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
 import {
   colors,
   inputColors,
@@ -12,9 +12,8 @@ import {
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import InputIconContainer from './InputIconContainer';
-import {ErrorType, LabelPosition} from './types';
 
-export interface TextInputBaseProps extends GrowthBehavior {
+export interface TextInputProps extends GrowthBehavior {
   disabled?: boolean;
   error?: ErrorType;
   hasIcon?: boolean;
@@ -27,11 +26,7 @@ export interface TextInputBaseProps extends GrowthBehavior {
   value?: any;
 }
 
-export interface TextInputProps extends TextInputBaseProps {
-  labelPosition?: LabelPosition;
-}
-
-export const textInputStyles: Interpolation<TextInputBaseProps> = [
+export const textInputStyles: Interpolation<TextInputProps> = [
   type.body,
   {
     border: `1px solid ${inputColors.border}`,
@@ -101,18 +96,17 @@ export const textInputStyles: Interpolation<TextInputBaseProps> = [
     },
 ];
 
-const Input = styled('input')<TextInputBaseProps>(...textInputStyles);
+const Input = styled('input')<TextInputProps>(...textInputStyles);
 
 export default class TextInput extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
-  static LabelPosition = LabelPosition;
 
   static defaultProps = {
     type: 'text',
   };
 
   render() {
-    const {labelPosition, grow, ...inputProps} = this.props;
+    const {grow, ...inputProps} = this.props;
     const {error} = inputProps;
 
     let icon: React.ReactElement<SystemIcon> | undefined;

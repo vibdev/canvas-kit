@@ -7,11 +7,10 @@ import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 import Checkbox from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-class CheckboxWrapper extends React.Component {
+export class CheckboxWrapper extends React.Component {
   state = {
     id: '1',
     isChecked: false,
-    label: 'This is a checkbox',
   };
 
   handleCheck = () => {
@@ -26,7 +25,7 @@ class CheckboxWrapper extends React.Component {
         disabled={false}
         checked={this.state.isChecked}
         id={this.state.id}
-        label={this.state.label}
+        label="Checkbox option"
         onChange={this.handleCheck}
       />
     );

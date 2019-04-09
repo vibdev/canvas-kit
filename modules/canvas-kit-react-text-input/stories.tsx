@@ -1,21 +1,13 @@
 /// <reference path="../../typings.d.ts" />
 import * as React from 'react';
-import {storiesOf, StoryDecorator} from '@storybook/react';
+import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
 
-import {TextField, TextInput, Hint, TextInputProps, TextFieldProps} from './index'; // tslint:disable-line:import-name
+import {TextInput, TextInputProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-const sectionDecorator: (t: string) => StoryDecorator = title => {
-  return storyFn => (
-    <div className="story">
-      <h1 className="section-label">{title}</h1>
-      {storyFn()}
-    </div>
-  );
-};
-
-class Input extends React.Component<TextInputProps, {}> {
+export class Input extends React.Component<TextInputProps, {}> {
   static defaultProps = {
     type: 'text',
   };
@@ -34,26 +26,7 @@ class Input extends React.Component<TextInputProps, {}> {
   }
 }
 
-class Field extends React.Component<TextFieldProps, {}> {
-  static defaultProps = {
-    type: 'text',
-  };
-
-  state = {
-    value: this.props.value,
-  };
-
-  onChange: React.ChangeEventHandler<HTMLInputElement> = e => {
-    this.setState({value: e.target.value});
-  };
-
-  public render() {
-    const {value, ...props} = this.props;
-    return <TextField label="Label" {...props} value={this.state.value} onChange={this.onChange} />;
-  }
-}
-
-const Inputs = {
+export const Inputs = {
   Plain: <Input />,
   Placeholder: <Input placeholder="Placeholder" />,
   Disabled: <Input disabled={true} />,
@@ -64,8 +37,9 @@ const Inputs = {
   GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
 };
 
-storiesOf('Canvas Kit/Input/Text Input', module)
-  .addDecorator(sectionDecorator('Text Input'))
+storiesOf('Canvas Kit/Text Input', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(SectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
   .add('Plain', () => Inputs.Plain)
   .add('With placeholder', () => Inputs.Placeholder)
@@ -75,50 +49,3 @@ storiesOf('Canvas Kit/Input/Text Input', module)
   .add('Error', () => Inputs.Error)
   .add('Grow', () => Inputs.Grow)
   .add('Grow - Error', () => Inputs.GrowError);
-
-storiesOf('Canvas Kit/Input/Text Field/Top Label', module)
-  .addDecorator(sectionDecorator('Text Field'))
-  .addDecorator(withReadme(README))
-  .add('Plain', () => <Field {...Inputs.Plain.props} />)
-  .add('With placeholder', () => <Field {...Inputs.Placeholder.props} />)
-  .add('Disabled', () => <Field {...Inputs.Disabled.props} />)
-  .add('Disabled with placeholder', () => <Field {...Inputs.DisabledPlaceholder.props} />)
-  .add('Alert', () => <Field {...Inputs.Alert.props} />)
-  .add('Error', () => <Field {...Inputs.Error.props} />)
-  .add('Grow', () => <Field {...Inputs.Grow.props} />)
-  .add('Grow - Error', () => <Field {...Inputs.GrowError.props} />);
-
-storiesOf('Canvas Kit/Input/Text Field/Left Label', module)
-  .addDecorator(sectionDecorator('Text Field'))
-  .addDecorator(withReadme(README))
-  .add('Plain', () => (
-    <Field {...Inputs.Plain.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('With placeholder', () => (
-    <Field {...Inputs.Placeholder.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Disabled', () => (
-    <Field {...Inputs.Disabled.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Disabled with placeholder', () => (
-    <Field {...Inputs.DisabledPlaceholder.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Alert', () => (
-    <Field {...Inputs.Alert.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Error', () => (
-    <Field {...Inputs.Error.props} labelPosition={TextField.LabelPosition.Left} />
-  ))
-  .add('Grow', () => <Field {...Inputs.Grow.props} labelPosition={TextField.LabelPosition.Left} />)
-  .add('Grow - Error', () => (
-    <Field {...Inputs.GrowError.props} labelPosition={TextField.LabelPosition.Left} />
-  ));
-
-storiesOf('Canvas Kit/Input/Hint', module)
-  .addDecorator(sectionDecorator('Hint'))
-  .addDecorator(withReadme(README))
-  .add('Plain', () => <Hint>Password must be 8 characters long.</Hint>)
-  .add('Alert', () => <Hint error={Hint.ErrorType.Alert}>Password must be 8 characters long.</Hint>)
-  .add('Error', () => (
-    <Hint error={Hint.ErrorType.Error}>Password must be 8 characters long.</Hint>
-  ));

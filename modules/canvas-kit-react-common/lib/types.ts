@@ -15,3 +15,11 @@ export interface TransformOrigin {
   horizontal: 'left' | 'center' | 'right';
   vertical: 'top' | 'center' | 'bottom';
 }
+
+/**
+ * Error types
+ */
+export enum ErrorType {
+  Error,
+  Alert,
+}
