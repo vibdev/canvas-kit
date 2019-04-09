@@ -3,33 +3,22 @@ import Tooltip from '../lib/Tooltip';
 import * as React from 'react';
 jest.mock('react-dom');
 describe('Tooltip Snapshots', () => {
-  test('renders a tooltip with a title', () => {
+  test('renders a tooltip with a child element', () => {
     const container = renderer.create(
       <div>
-        <Tooltip title="world">
-          <div>hello</div>
+        <Tooltip>
+          <div>I'm being hovered</div>
         </Tooltip>
       </div>
     );
     const tree = container.toJSON();
     expect(tree).toMatchSnapshot();
   });
-  test('renders a tooltip with a carrot', () => {
+  test('renders a tooltip with a different transformOrigin', () => {
     const container = renderer.create(
       <div>
-        <Tooltip title="world" showTriangle={true}>
-          <div>hello</div>
-        </Tooltip>
-      </div>
-    );
-    const tree = container.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  test('renders a tooltip positioned at the top', () => {
-    const container = renderer.create(
-      <div>
-        <Tooltip title="world" showTriangle={true} tooltipPosition="top">
-          <div>hello</div>
+        <Tooltip transformOrigin={{horizontal: 'center', vertical: 'top'}}>
+          <div>Delete</div>
         </Tooltip>
       </div>
     );

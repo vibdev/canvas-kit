@@ -1,25 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tooltip Snapshots renders a tooltip positioned at the top 1`] = `
+exports[`Tooltip Snapshots renders a tooltip with a child element 1`] = `
+.emotion-0 {
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(0,0,0,.8);
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 6px;
+  -webkit-transition-delay: 5s;
+  transition-delay: 5s;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.emotion-0 a {
+  color: #ffffff;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div>
-  <div>
-    hello
+  <div
+    className="emotion-0 emotion-1"
+    role="tooltip"
+  >
+    <div>
+      I'm being hovered
+    </div>
   </div>
 </div>
 `;
 
-exports[`Tooltip Snapshots renders a tooltip with a carrot 1`] = `
-<div>
-  <div>
-    hello
-  </div>
-</div>
-`;
+exports[`Tooltip Snapshots renders a tooltip with a different transformOrigin 1`] = `
+.emotion-0 {
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(0,0,0,.8);
+  -webkit-animation: animation-ao8nm6;
+  animation: animation-ao8nm6;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 6px;
+  -webkit-transition-delay: 5s;
+  transition-delay: 5s;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
 
-exports[`Tooltip Snapshots renders a tooltip with a title 1`] = `
+.emotion-0 a {
+  color: #ffffff;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div>
-  <div>
-    hello
+  <div
+    className="emotion-0 emotion-1"
+    role="tooltip"
+  >
+    <div>
+      Delete
+    </div>
   </div>
 </div>
 `;
