@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, {keyframes} from 'react-emotion';
-import {canvas} from '@workday/canvas-kit-react';
+import canvas from '@workday/canvas-kit-react-core';
 
 const TRANSPARENCY_POSITION = 45;
 const WHITE_SHEEN_WIDTH = 10;
