@@ -328,7 +328,30 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
       type Props = {children: React.ReactNode};
       const propsChildren = (child as React.ReactElement<Props>).props.children;
+      const singleChild =
+        React.Children.count(propsChildren) === 1 && (propsChildren as React.ReactElement<any>);
+      const iconButtonType =
+        this.props.themeColor === HeaderTheme.White
+          ? IconButton.Types.Default
+          : IconButton.Types.Inverse;
 
+      // Convert old method of SystemIcon into IconButton. If SystemIcon is within a link, make sure it's passed through
+      if (child.type === 'a' && singleChild && singleChild.type === SystemIcon) {
+        const href = (child.props as React.AnchorHTMLAttributes<HTMLAnchorElement>).href;
+        const iconButtonProps = {
+          onClick: () => {
+            if (href) {
+              window.location.href = href;
+            }
+          },
+          buttonType: iconButtonType,
+          icon: (singleChild.props as SystemIconProps).icon,
+        };
+
+        return <IconButton {...iconButtonProps} />;
+      }
+
+      // If child has children, render them
       if (React.Children.count(propsChildren)) {
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
@@ -337,10 +360,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
       // Convert old method of SystemIcon into IconButton
       if (child.type === SystemIcon) {
-        const iconButtonType =
-          this.props.themeColor === HeaderTheme.White
-            ? IconButton.Types.Default
-            : IconButton.Types.Inverse;
         const icon = (child.props as SystemIconProps).icon;
 
         return <IconButton buttonType={iconButtonType} icon={icon} />;

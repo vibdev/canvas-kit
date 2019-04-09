@@ -75,7 +75,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <div className={containerStyle}>
         <Header title="Icons Only" brandUrl="#" onSearchSubmit={handleSearchSubmitTest}>
           {/* Test states and padding on various types of icons */}
-          <a href="#">
+          <a href="/">
             <SystemIcon icon={notificationsIcon} />
           </a>
           <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
