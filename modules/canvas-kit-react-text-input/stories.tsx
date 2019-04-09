@@ -37,7 +37,7 @@ export const Inputs = {
   GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
 };
 
-storiesOf('Canvas Kit/Input/Text Input', module)
+storiesOf('Canvas Kit/Text Input', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(SectionDecorator('Text Input'))
   .addDecorator(withReadme(README))

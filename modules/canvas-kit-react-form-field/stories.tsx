@@ -11,7 +11,7 @@ import {CheckboxWrapper} from '../canvas-kit-react-checkbox/stories';
 import {RadioGroupWrapper} from '../canvas-kit-react-radio/stories';
 import {Input as TextInput, Inputs} from '../canvas-kit-react-text-input/stories';
 
-storiesOf('Canvas Kit/Input', module)
+storiesOf('Canvas Kit/Form Field', module)
   .addDecorator(withReadme(README))
   .add('Label', () => (
     <div className="story">
@@ -44,7 +44,7 @@ class Field extends React.Component<FormFieldProps> {
 
 const hintText = 'Helpful text goes here.';
 
-storiesOf('Canvas Kit/Form Field/Text/Top Label', module)
+storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
   .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field>{Inputs.Plain}</Field>)
@@ -64,7 +64,7 @@ storiesOf('Canvas Kit/Form Field/Text/Top Label', module)
     </Field>
   ));
 
-storiesOf('Canvas Kit/Form Field/Text/Left Label', module)
+storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
   .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Plain}</Field>)
