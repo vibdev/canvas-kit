@@ -135,6 +135,7 @@ describe('Header', () => {
       expect(wrapper.find(IconButton)).toHaveLength(1);
       expect(renderedIcon.props().icon).toBe(activityStreamIcon);
       expect(renderedIcon.props().buttonType).toBe(IconButton.Types.Inverse);
+      expect(renderedIcon.props().onClick).toBeTruthy();
     });
 
     test('Renders a child hamburger menu (IconButton) when width is at "sm" breakpoint', () => {
