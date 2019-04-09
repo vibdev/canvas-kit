@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-popup",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Popup to display some content on top of another",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
@@ -37,7 +37,7 @@
     "@material-ui/core": "^3.9.2"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-button": "^0.19.8",
+    "@workday/canvas-kit-react-button": "^0.19.9",
     "@workday/canvas-kit-react-core": "^1.9.0",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
