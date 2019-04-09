@@ -36,7 +36,7 @@ import {IconButton} from '@workday/canvas-kit-react-button';
 import {notificationsIcon} from '@workday/canvas-system-icons-web';
 import {Button} from '@workday/canvas-kit-react-button';
 
-<Header title="Blue Header" themeColor={Header.Theme.Blue} brandUrl="#">
+<Header title="Header" brandUrl="#">
   <nav>
     <ul>
       <li className="current">
@@ -76,9 +76,8 @@ import {Button} from '@workday/canvas-kit-react-button';
 
 _Deprecated (but supported) - please use `IconButton` instead._
 
-> The Header also looks for Canvas `SystemIcon` components and augments them with the correct
-> `color` and `colorHover` props so you won't have to worry about the contrast in relation to the
-> Header `themeColor`.
+> The Header supports Canvas `SystemIcon` components, but will convert them into an `IconButton`
+> with the correct styling for the theme you've provided.
 
 ### A Note About `Buttons`
 

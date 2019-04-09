@@ -5,12 +5,11 @@ import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
 import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
-import {IconButton} from '@workday/canvas-kit-react-button';
+import {IconButton, IconButtonProps} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
 import throttle from 'lodash/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
-import {HTMLAttributes} from 'enzyme';
 
 export interface HeaderProps {
   /**
@@ -59,6 +58,8 @@ export interface HeaderProps {
 export interface HeaderState {
   screenSize: keyof HeaderProps['breakpoints'];
 }
+
+const childrenSpacing = spacing.s;
 
 const HeaderShell = styled('div')<HeaderProps>(
   {
@@ -192,7 +193,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       height: '100%',
 
       '> *': {
-        marginLeft: spacing.s,
+        marginLeft: childrenSpacing,
       },
       '> *:not(.canvas-header--menu-icon)': {
         display: 'none',
@@ -327,23 +328,51 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
       type Props = {children: React.ReactNode};
       const propsChildren = (child as React.ReactElement<Props>).props.children;
+      const singleChild =
+        React.Children.count(propsChildren) === 1 && (propsChildren as React.ReactElement<any>);
+      const iconButtonType =
+        this.props.themeColor === HeaderTheme.White
+          ? IconButton.Types.Default
+          : IconButton.Types.Inverse;
 
+      // Convert old method of SystemIcon into IconButton. If SystemIcon is within a link, make sure it's passed through
+      if (child.type === 'a' && singleChild && singleChild.type === SystemIcon) {
+        const href = (child.props as React.AnchorHTMLAttributes<HTMLAnchorElement>).href;
+        const iconButtonProps = {
+          onClick: () => {
+            if (href) {
+              window.location.href = href;
+            }
+          },
+          buttonType: iconButtonType,
+          icon: (singleChild.props as SystemIconProps).icon,
+        };
+
+        return <IconButton {...iconButtonProps} />;
+      }
+
+      // If child has children, render them
       if (React.Children.count(propsChildren)) {
         return React.cloneElement(child as React.ReactElement<Props>, {
           children: this.renderChildren(propsChildren),
         });
       }
 
-      // Support old method using SystemIcon (before we had IconButton)
+      // Convert old method of SystemIcon into IconButton
       if (child.type === SystemIcon) {
-        return React.cloneElement(
-          child as React.ReactElement<SystemIconProps | Pick<HTMLAttributes, 'style'>>,
-          {
-            color: themes[this.props.themeColor].systemIcon.color,
-            colorHover: themes[this.props.themeColor].systemIcon.colorHover,
-            style: {padding: spacing.xxs}, // Make the size match an IconButton
-          }
-        );
+        const icon = (child.props as SystemIconProps).icon;
+
+        return <IconButton buttonType={iconButtonType} icon={icon} />;
+      }
+
+      // Plain icon buttons have negative margin that we need to negate.
+      if (
+        child.type === IconButton &&
+        (child.props as IconButtonProps).buttonType === IconButton.Types.Plain
+      ) {
+        return React.cloneElement(child as React.ReactElement<IconButtonProps>, {
+          style: {margin: `0 0 0 ${childrenSpacing}`},
+        });
       }
 
       return child;

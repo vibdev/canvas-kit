@@ -4,7 +4,6 @@ import {shallow, mount} from 'enzyme';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {activityStreamIcon, justifyIcon} from '@workday/canvas-system-icons-web';
-import {themes} from '../lib/shared/themes';
 
 declare global {
   interface Window {
@@ -96,8 +95,6 @@ describe('Header', () => {
   });
 
   describe('How Header children render', () => {
-    const icon = <SystemIcon icon={activityStreamIcon} />;
-
     beforeEach(() => {
       window.resizeBy(1280, 1024);
     });
@@ -123,32 +120,32 @@ describe('Header', () => {
       ).toBeTruthy();
     });
 
-    test('Automatically alters child SystemIcon color and colorHover', () => {
+    test('Converts SystemIcons into IconButtons matching theme', () => {
       const theme = Header.Theme.Blue;
-
-      const expectedColors = {
-        color: themes[theme].systemIcon.color,
-        colorHover: themes[theme].systemIcon.colorHover,
-      };
 
       const wrapper = mount<Header>(
         <Header themeColor={theme}>
-          <a href="#">{icon}</a>
+          <a href="#">
+            <SystemIcon icon={activityStreamIcon} />
+          </a>
         </Header>
       );
-      const renderedIcon = wrapper.find(SystemIcon).first();
+      const renderedIcon = wrapper.find(IconButton).first();
 
-      expect(wrapper.state().screenSize).toBe('lg');
-      expect(wrapper.find(SystemIcon)).toHaveLength(1);
-      expect(renderedIcon.props().color).toBe(expectedColors.color);
-      expect(renderedIcon.props().colorHover).toBe(expectedColors.colorHover);
+      expect(wrapper.find(IconButton)).toHaveLength(1);
       expect(renderedIcon.props().icon).toBe(activityStreamIcon);
+      expect(renderedIcon.props().buttonType).toBe(IconButton.Types.Inverse);
+      expect(renderedIcon.props().onClick).toBeTruthy();
     });
 
     test('Renders a child hamburger menu (IconButton) when width is at "sm" breakpoint', () => {
       window.resizeBy(319, 768);
 
-      const wrapper = mount<Header>(<Header>{icon}</Header>);
+      const wrapper = mount<Header>(
+        <Header>
+          <IconButton icon={activityStreamIcon} />
+        </Header>
+      );
       const renderedIcon = wrapper.find(IconButton).first();
 
       expect(wrapper.state().screenSize).toBe('sm');

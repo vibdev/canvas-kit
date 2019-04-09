@@ -9,7 +9,7 @@ import {Avatar} from '@workday/canvas-kit-react-avatar';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {Button} from '@workday/canvas-kit-react-button';
+import {Button, IconButton} from '@workday/canvas-kit-react-button';
 import chroma from 'chroma-js';
 import README from './README.md';
 import bgImg from './static/workday-bg.jpg';
@@ -74,12 +74,12 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
       <div className={containerStyle}>
         <Header title="Icons Only" brandUrl="#" onSearchSubmit={handleSearchSubmitTest}>
-          <a href="#">
+          {/* Test states and padding on various types of icons */}
+          <a href="/">
             <SystemIcon icon={notificationsIcon} />
           </a>
-          <a href="#">
-            <SystemIcon icon={inboxIcon} />
-          </a>
+          <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
+          <IconButton icon={inboxIcon} buttonType={IconButton.Types.Plain} />
           <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
@@ -93,9 +93,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
           <Avatar onClick={handleAvatarClickTest} />
           <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
@@ -117,12 +115,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
-          <a href="#">
-            <SystemIcon icon={inboxIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
+          <IconButton buttonType={IconButton.Types.Default} icon={inboxIcon} />
           <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
@@ -137,12 +131,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
-          <a href="#">
-            <SystemIcon icon={inboxIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
+          <IconButton buttonType={IconButton.Types.Default} icon={inboxIcon} />
           <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
@@ -156,12 +146,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
-          <a href="#">
-            <SystemIcon icon={inboxIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
+          <IconButton buttonType={IconButton.Types.Inverse} icon={inboxIcon} />
           <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
@@ -193,9 +179,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           onMenuClick={handleMenuClickTest}
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
           <Avatar onClick={handleAvatarClickTest} />
           <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
@@ -204,9 +188,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} title="" themeColor={Header.Theme.Blue} brandUrl="#">
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
           <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
@@ -219,9 +201,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           brandUrl="#"
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
           <Avatar onClick={handleAvatarClickTest} />
         </Header>
       </div>
@@ -235,12 +215,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
           brandUrl="#"
         >
           {nav}
-          <a href="#">
-            <SystemIcon icon={notificationsIcon} />
-          </a>
-          <a href="#">
-            <SystemIcon icon={inboxIcon} />
-          </a>
+          <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
+          <IconButton buttonType={IconButton.Types.Default} icon={inboxIcon} />
           <Button buttonType={Button.Types.Primary}>Logout</Button>
         </Header>
       </div>
@@ -256,9 +232,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         onMenuClick={handleMenuClickTest}
       >
         {nav}
-        <a href="#">
-          <SystemIcon icon={notificationsIcon} />
-        </a>
+        <IconButton buttonType={IconButton.Types.Inverse} icon={notificationsIcon} />
         <Avatar onClick={handleAvatarClickTest} />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
@@ -267,9 +241,7 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </Header>
       <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>
         {nav}
-        <a href="#">
-          <SystemIcon icon={notificationsIcon} />
-        </a>
+        <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
         <Avatar onClick={handleAvatarClickTest} />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
@@ -277,12 +249,8 @@ storiesOf('Canvas Kit/Header/Marketing', module)
         title="Icons Drop Later"
         breakpoints={{...Header.defaultProps.breakpoints, md: 640, lg: 1140}}
       >
-        <a href="#">
-          <SystemIcon icon={notificationsIcon} />
-        </a>
-        <a href="#">
-          <SystemIcon icon={inboxIcon} />
-        </a>
+        <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
+        <IconButton buttonType={IconButton.Types.Default} icon={inboxIcon} />
         <Button buttonType={Button.Types.Primary}>Logout</Button>
       </Header>
     </div>
