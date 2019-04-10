@@ -19,8 +19,8 @@ import {Layout} from '@workday/canvas-kit-react-layout';
 // No spacing and no gutter
 <Layout gutter={0} spacing={0}>...</Layout>
 
-// Gutter layout
-<Layout content={true}>...</Layout>
+// Layout with a max container width
+<Layout capWidth={true}>...</Layout>
 ```
 
 ## Static Properties
