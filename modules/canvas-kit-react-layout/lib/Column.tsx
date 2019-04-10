@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import canvas from '@workday/canvas-kit-react-core';
 
 export interface ColumnProps {
   /**
@@ -35,7 +36,7 @@ const ColumnContainer = styled('div')<ColumnProps>(
     }
 
     if (!spacing) {
-      return {padding: `0 12px`};
+      return {padding: `0 ${canvas.spacing.xs}`};
     }
 
     return {padding: `0 ${spacing}px`};

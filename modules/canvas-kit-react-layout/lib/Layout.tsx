@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {GenericStyle} from '@workday/canvas-kit-react-common';
 import Column, {ColumnProps} from './Column';
+import canvas from '@workday/canvas-kit-react-core';
 
 export interface LayoutProps {
   /**
@@ -15,7 +16,7 @@ export interface LayoutProps {
   /**
    * Gutter of layout
    */
-  gutter?: number;
+  gutter?: number | string;
   /**
    * Content spacing
    */
@@ -38,7 +39,7 @@ const LayoutContainer = styled('div')<LayoutProps>(
       return;
     }
 
-    return {padding: `0 ${gutter}px`};
+    return {padding: `0 ${gutter}`};
   },
   ({content}) => {
     if (!content) {
@@ -54,7 +55,7 @@ const LayoutContainer = styled('div')<LayoutProps>(
 
 export default class Layout extends React.Component<LayoutProps> {
   static defaultProps = {
-    gutter: 12,
+    gutter: canvas.spacing.xs,
   };
 
   public static Column = Column;
