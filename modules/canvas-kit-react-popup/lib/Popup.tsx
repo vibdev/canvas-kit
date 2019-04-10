@@ -3,6 +3,7 @@ import Card from '@workday/canvas-kit-react-card';
 import styled from 'react-emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors, spacing} from '@workday/canvas-kit-react-core';
+import {TransformOrigin} from '@workday/canvas-kit-react-common';
 import {xIcon} from '@workday/canvas-system-icons-web';
 import {keyframes} from 'emotion';
 
@@ -12,14 +13,9 @@ export enum PopupPadding {
   l = '32px',
 }
 
-export interface PopoupOrigin {
-  horizontal: 'left' | 'center' | 'right';
-  vertical: 'top' | 'center' | 'bottom';
-}
-
 export interface PopupProps {
   padding: PopupPadding;
-  transformOrigin: PopoupOrigin;
+  transformOrigin: TransformOrigin;
   handleClose?: () => void;
   width?: number | string;
   heading?: React.ReactNode;

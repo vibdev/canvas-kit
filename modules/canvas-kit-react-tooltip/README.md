@@ -23,19 +23,53 @@ yarn add @workday/canvas-kit-react-tooltip
 ```tsx
 import * as React from 'react';
 import Popper from '@material-ui/core/Popper';
-import {Tooltip} from '@workday/canvas-kit-react-tooltip';
+import Tooltip from '@workday/canvas-kit-react-tooltip';
 
-// We use Popper from Material UI for our positioning
-<div
-    ref={this.tooltipRef}
-    onMouseEnter={this.onMouseEnter}
-    onMouseLeave={this.onMouseLeave}
->
-    <IconButton buttonType={IconButton.Types.Default} icon={xIcon} />
-</div>
-<Popper placement={'bottom'} open={this.state.open} anchorEl={anchorEl}>
-  <Tooltip>{this.props.children}</Tooltip>
-</Popper>;
+class TooltipExample extends React.Component<{}, TooltipExampleState> {
+  private tooltipRef: React.RefObject<HTMLDivElement>;
+  public constructor(props: {}) {
+    super(props);
+    this.tooltipRef = React.createRef();
+    this.state = {
+      open: false,
+      anchorEl: null,
+    };
+  }
+
+  public render() {
+    const {open} = this.state;
+    return (
+      <div>
+        <div
+          style={{display: 'inline-flex'}}
+          ref={this.tooltipRef}
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
+        >
+          Hover Over Me
+        </div>
+        <Popper open={open} anchorEl={this.state.anchorEl} placement={'bottom'}>
+          <Tooltip>
+            <div>Close</div>
+          </Tooltip>
+        </Popper>
+      </div>
+    );
+  }
+
+  private onMouseLeave = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
+  private onMouseEnter = () => {
+    this.setState({
+      open: true,
+      anchorEl: this.tooltipRef.current,
+    });
+  };
+}
 ```
 
 ## Static Properties
@@ -52,7 +86,7 @@ import {Tooltip} from '@workday/canvas-kit-react-tooltip';
 
 ### Optional
 
-#### `transformOrigin: PopoupOrigin`
+#### `transformOrigin: TransformOrigin`
 
 > Origin from which the popup will animate from
 
@@ -67,13 +101,13 @@ Default:
 
 ---
 
-#### `onMouseEnter: () => void`
+#### `onMouseEnter: (e: React.MouseEvent) => void`
 
 > Callback to handle onMouseEnter of the tooltip
 
 ---
 
-#### `onMouseLeave: () => void`
+#### `onMouseLeave: (e: React.MouseEvent) => void`
 
 > Callback to handle onMouseLeave of the tooltip
 

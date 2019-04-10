@@ -1,23 +1,19 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
+import {TransformOrigin} from '@workday/canvas-kit-react-common';
 import {keyframes} from 'emotion';
 
-export interface TooltipOrigin {
-  horizontal: 'left' | 'center' | 'right';
-  vertical: 'top' | 'center' | 'bottom';
-}
-
 export interface TooltipProps {
-  transformOrigin?: TooltipOrigin;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+  transformOrigin?: TransformOrigin;
+  onMouseEnter?: (e: React.MouseEvent) => void;
+  onMouseLeave?: (e: React.MouseEvent) => void;
 }
 
 const tooltipAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   100% {
     opacity: 1;
@@ -25,18 +21,17 @@ const tooltipAnimation = keyframes`
   }
   `;
 
-const Tooltip = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
+const TooltipContainer = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
   {
     borderRadius: spacing.xxxs,
     padding: spacing.xxs,
-    backgroundColor: 'rgb(0,0,0,.8)',
+    backgroundColor: 'rgba(0,0,0,.85)',
     animation: tooltipAnimation,
     animationDuration: '150ms',
     animationTimingFunction: 'ease-out',
     color: colors.frenchVanilla100,
     fontSize: 13,
     margin: 6,
-    transitionDelay: '5s',
     a: {
       color: colors.frenchVanilla100,
       textDecoration: 'underline',
@@ -49,18 +44,18 @@ const Tooltip = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
   })
 );
 
-export default class TooltipTest extends React.Component<TooltipProps, {}> {
+export default class Tooltip extends React.Component<TooltipProps, {}> {
   public render() {
     const {onMouseEnter, onMouseLeave, ...otherProps} = this.props;
     return (
-      <Tooltip
+      <TooltipContainer
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         {...otherProps}
         role="tooltip"
       >
         {this.props.children}
-      </Tooltip>
+      </TooltipContainer>
     );
   }
 }

@@ -28,7 +28,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
   public render() {
     const {open} = this.state;
     return (
-      <>
+      <div>
         <h3>Default Tooltip</h3>
         <div
           style={{display: 'inline-flex'}}
@@ -43,7 +43,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
             <div>Close</div>
           </Tooltip>
         </Popper>
-      </>
+      </div>
     );
   }
 
