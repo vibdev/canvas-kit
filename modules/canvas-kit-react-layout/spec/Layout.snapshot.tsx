@@ -21,6 +21,24 @@ describe('Layout Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
 
+  test('renders a layout with capWidth', () => {
+    const component = renderer.create(
+      <Layout capWidth={true}>
+        <Layout.Column />
+      </Layout>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders a layout with an empty div', () => {
+    const component = renderer.create(
+      <Layout>
+        <></>
+      </Layout>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
   test('renders a layout with fluid columns', () => {
     const component = renderer.create(
       <Layout>
