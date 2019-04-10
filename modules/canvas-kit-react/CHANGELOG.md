@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.19...@workday/canvas-kit-react@1.4.0) (2019-04-10)
+
+
+### Features
+
+* **layouts:** added layout to CKR index ([af4b53b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/af4b53b))
+
+
+
+
+
 ## [1.3.19](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.18...@workday/canvas-kit-react@1.3.19) (2019-04-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react
