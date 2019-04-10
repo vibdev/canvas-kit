@@ -60,7 +60,9 @@ Default: `12`
 # Column
 
 > The column acts as a pillar for building layouts. Columns widths can be fluid, 12 columns, or a
-> fixed. Columns should be used exclusively with `Layout` to build the main page layouts.
+> fixed. Columns should be used exclusively with `Layout` to build the main page layouts. `width`
+> and `columns` props are mutually exclusive. The `width` prop will take precedence over the
+> `columns` prop.
 
 ```tsx
 import {Layout} from '@workday/canvas-kit-react-layout';
@@ -106,7 +108,7 @@ import {Layout} from '@workday/canvas-kit-react-layout';
 
 #### `width: number | string`
 
-> The width of the columns
+> The width of the columns. This will take precedence over the `columns` prop.
 
 ---
 
