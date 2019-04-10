@@ -18,9 +18,9 @@ export interface LayoutProps {
    */
   gutter?: number | string;
   /**
-   * Content spacing
+   * If there should be a max-width
    */
-  content?: boolean;
+  capWidth?: boolean;
 }
 
 const LayoutStyles: GenericStyle = {
@@ -41,8 +41,8 @@ const LayoutContainer = styled('div')<LayoutProps>(
 
     return {padding: `0 ${gutter}`};
   },
-  ({content}) => {
-    if (!content) {
+  ({capWidth}) => {
+    if (!capWidth) {
       return;
     }
 

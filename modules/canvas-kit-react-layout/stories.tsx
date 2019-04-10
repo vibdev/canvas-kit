@@ -9,7 +9,7 @@ import README from './README.md';
 
 storiesOf('Canvas Kit/Layout', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Grid Layout', () => (
     <div className="story">
       <h1 className="section-label">Full Page</h1>
       <div>
@@ -27,11 +27,11 @@ storiesOf('Canvas Kit/Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Full Page with content spacing</h1>
+      <h1 className="section-label">Full Page with a max width</h1>
       <div>
-        <Layout content={true}>
+        <Layout capWidth={true}>
           <Layout.Column>
-            <Card heading="Full Page Layout with content spacing" />
+            <Card heading="Full Page Layout with max width" />
           </Layout.Column>
         </Layout>
       </div>

@@ -51,7 +51,7 @@ Default: `12`
 
 ---
 
-#### `content: boolean`
+#### `capWidth: boolean`
 
 > If the max width of container is 1280px
 
