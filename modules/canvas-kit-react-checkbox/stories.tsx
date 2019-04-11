@@ -7,7 +7,7 @@ import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
 import Checkbox from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-export class CheckboxWrapper extends React.Component {
+export class CheckboxWrapper extends React.Component<{disabled?: boolean}> {
   state = {
     id: '1',
     isChecked: false,
@@ -20,9 +20,10 @@ export class CheckboxWrapper extends React.Component {
   };
 
   render() {
+    const {disabled} = this.props;
     return (
       <Checkbox
-        disabled={false}
+        disabled={disabled}
         checked={this.state.isChecked}
         id={this.state.id}
         label="Checkbox option"
@@ -40,6 +41,14 @@ storiesOf('Canvas Kit/Checkbox', module)
       <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <CheckboxWrapper />
+      </div>
+    </div>
+  ))
+  .add('Disabled', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <CheckboxWrapper disabled={true} />
       </div>
     </div>
   ));

@@ -159,10 +159,13 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   })
 );
 
-const CheckboxLabel = styled('label')({
-  ...canvas.type.body,
-  marginLeft: checkboxLabelDistance,
-});
+const CheckboxLabel = styled('label')<{disabled?: boolean}>(
+  {
+    ...canvas.type.body,
+    marginLeft: checkboxLabelDistance,
+  },
+  ({disabled}) => disabled && canvas.type.variant.hint
+);
 
 export default class Checkbox extends React.Component<CheckboxProps> {
   public static defaultProps = {
@@ -192,7 +195,11 @@ export default class Checkbox extends React.Component<CheckboxProps> {
             </CheckboxCheck>
           </CheckboxBackground>
         </CheckboxInputWrapper>
-        {label && <CheckboxLabel htmlFor={id}>{label}</CheckboxLabel>}
+        {label && (
+          <CheckboxLabel htmlFor={id} disabled={disabled}>
+            {label}
+          </CheckboxLabel>
+        )}
       </CheckboxContainer>
     );
   }
