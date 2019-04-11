@@ -17,8 +17,7 @@ export interface TextInputProps extends GrowthBehavior {
   disabled?: boolean;
   error?: ErrorType;
   hasIcon?: boolean;
-  innerRef?: React.Ref<HTMLInputElement>;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  inputRef?: React.Ref<HTMLInputElement>;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   readOnly?: boolean;
@@ -106,7 +105,7 @@ export default class TextInput extends React.Component<TextInputProps> {
   };
 
   render() {
-    const {grow, ...inputProps} = this.props;
+    const {grow, inputRef, ...inputProps} = this.props;
     const {error} = inputProps;
 
     let icon: React.ReactElement<SystemIcon> | undefined;
@@ -134,7 +133,12 @@ export default class TextInput extends React.Component<TextInputProps> {
 
     return (
       <InputIconContainer icon={icon} grow={grow}>
-        <Input hasIcon={typeof icon !== 'undefined'} {...inputProps} grow={grow} />
+        <Input
+          hasIcon={typeof icon !== 'undefined'}
+          innerRef={inputRef}
+          grow={grow}
+          {...inputProps}
+        />
       </InputIconContainer>
     );
   }
