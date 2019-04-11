@@ -166,10 +166,13 @@ const RadioCheck = styled('div')<Pick<RadioProps, 'checked'>>(
   })
 );
 
-const RadioLabel = styled('label')({
-  ...canvas.type.body,
-  marginLeft: radioLabelDistance,
-});
+const RadioLabel = styled('label')<{disabled?: boolean}>(
+  {
+    ...canvas.type.body,
+    marginLeft: radioLabelDistance,
+  },
+  ({disabled}) => disabled && canvas.type.variant.hint
+);
 
 export default class Radio extends React.Component<RadioProps> {
   public static defaultProps = {
@@ -208,7 +211,11 @@ export default class Radio extends React.Component<RadioProps> {
             <RadioCheck checked={checked} />
           </RadioBackground>
         </RadioInputWrapper>
-        {label && <RadioLabel htmlFor={id}>{label}</RadioLabel>}
+        {label && (
+          <RadioLabel htmlFor={id} disabled={disabled}>
+            {label}
+          </RadioLabel>
+        )}
       </RadioContainer>
     );
   }
