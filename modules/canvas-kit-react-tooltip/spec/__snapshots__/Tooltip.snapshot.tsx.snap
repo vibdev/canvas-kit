@@ -13,7 +13,7 @@ exports[`Tooltip Snapshots renders a tooltip with a child element 1`] = `
   animation-timing-function: ease-out;
   color: #ffffff;
   font-size: 13px;
-  margin: 6px;
+  margin: 4px;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -50,7 +50,7 @@ exports[`Tooltip Snapshots renders a tooltip with a different transformOrigin 1`
   animation-timing-function: ease-out;
   color: #ffffff;
   font-size: 13px;
-  margin: 6px;
+  margin: 4px;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;

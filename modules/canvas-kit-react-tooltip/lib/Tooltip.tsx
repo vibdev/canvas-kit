@@ -31,7 +31,7 @@ const TooltipContainer = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
     animationTimingFunction: 'ease-out',
     color: colors.frenchVanilla100,
     fontSize: 13,
-    margin: 6,
+    margin: spacing.xxxs,
     a: {
       color: colors.frenchVanilla100,
       textDecoration: 'underline',
