@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.0...@workday/canvas-kit-react@1.4.1) (2019-04-12)
+
+
+### Bug Fixes
+
+* **layouts:** added layouts as a dependency in universal module ([0158bf4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/0158bf4))
+
+
+
+
+
 # [1.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.3.19...@workday/canvas-kit-react@1.4.0) (2019-04-10)
 
 
