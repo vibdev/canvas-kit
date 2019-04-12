@@ -46,6 +46,7 @@
     "@workday/canvas-kit-react-fonts": "^0.2.1",
     "@workday/canvas-kit-react-header": "^0.4.0",
     "@workday/canvas-kit-react-icon": "^1.5.7",
+    "@workday/canvas-kit-react-layout": "^0.1.0",
     "@workday/canvas-kit-react-loading-animation": "^0.4.2",
     "@workday/canvas-kit-react-page-header": "^0.2.8",
     "@workday/canvas-kit-react-popup": "^0.1.4",
