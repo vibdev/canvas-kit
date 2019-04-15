@@ -23,6 +23,7 @@ const tooltipAnimation = keyframes`
 
 const TooltipContainer = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
   {
+    display: 'inline-flex',
     borderRadius: spacing.xxxs,
     padding: spacing.xxs,
     backgroundColor: 'rgba(0,0,0,.85)',

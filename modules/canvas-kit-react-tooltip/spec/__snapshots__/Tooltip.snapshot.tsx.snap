@@ -2,6 +2,10 @@
 
 exports[`Tooltip Snapshots renders a tooltip with a child element 1`] = `
 .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 4px;
   padding: 8px;
   background-color: rgba(0,0,0,.85);
@@ -39,6 +43,10 @@ exports[`Tooltip Snapshots renders a tooltip with a child element 1`] = `
 
 exports[`Tooltip Snapshots renders a tooltip with a different transformOrigin 1`] = `
 .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 4px;
   padding: 8px;
   background-color: rgba(0,0,0,.85);
