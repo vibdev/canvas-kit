@@ -13,7 +13,9 @@ import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import InputIconContainer from './InputIconContainer';
 
-export interface TextInputProps extends GrowthBehavior {
+export interface TextInputProps
+  extends GrowthBehavior,
+    React.InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   error?: ErrorType;
   hasIcon?: boolean;
@@ -105,8 +107,7 @@ export default class TextInput extends React.Component<TextInputProps> {
   };
 
   render() {
-    const {grow, inputRef, ...inputProps} = this.props;
-    const {error} = inputProps;
+    const {grow, inputRef, error, ...inputProps} = this.props;
 
     let icon: React.ReactElement<SystemIcon> | undefined;
     switch (error) {
@@ -137,6 +138,7 @@ export default class TextInput extends React.Component<TextInputProps> {
           hasIcon={typeof icon !== 'undefined'}
           innerRef={inputRef}
           grow={grow}
+          error={error}
           {...inputProps}
         />
       </InputIconContainer>
