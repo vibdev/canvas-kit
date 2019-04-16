@@ -46,6 +46,7 @@ const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
     animation: popupAnimation,
     animationDuration: '150ms',
     animationTimingFunction: 'ease-out',
+    width: 'min-content',
   },
   ({transformOrigin}) => ({
     transformOrigin: transformOrigin
@@ -73,7 +74,7 @@ export default class Popup extends React.Component<PopupProps> {
   public render() {
     const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;
     return (
-      <Container {...otherProps}>
+      <Container role="dialog" {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
             <IconButton buttonType={IconButton.Types.Default} onClick={handleClose} icon={xIcon} />
