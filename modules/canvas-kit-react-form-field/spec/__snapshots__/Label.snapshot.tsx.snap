@@ -3,9 +3,9 @@
 exports[`Label Snapshots renders as expected 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   font-weight: 500;
   display: block;
@@ -20,9 +20,9 @@ exports[`Label Snapshots renders as expected 1`] = `
 exports[`Label Snapshots renders left label 1`] = `
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   font-weight: 500;
   display: inline-block;

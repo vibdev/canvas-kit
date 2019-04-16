@@ -12,43 +12,11 @@ exports[`TextInput Snapshots alert 1`] = `
   right: 8px;
 }
 
-.emotion-2 {
-  display: inline-block;
-}
-
-.emotion-2 svg {
-  display: block;
-}
-
-.emotion-2 .wd-icon-fill {
-  fill: #de2e21;
-}
-
-.emotion-2:hover .wd-icon-fill {
-  fill: #de2e21;
-}
-
-.emotion-2 .wd-icon-accent {
-  fill: #de2e21;
-}
-
-.emotion-2:hover .wd-icon-accent {
-  fill: #de2e21;
-}
-
-.emotion-2 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-2:hover .wd-icon-background {
-  fill: transparent;
-}
-
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   border: 1px solid #a1aab3;
   display: block;
@@ -117,6 +85,38 @@ exports[`TextInput Snapshots alert 1`] = `
   border-color: #ffa126;
 }
 
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 svg {
+  display: block;
+}
+
+.emotion-2 .wd-icon-fill {
+  fill: #f38b00;
+}
+
+.emotion-2:hover .wd-icon-fill {
+  fill: #f38b00;
+}
+
+.emotion-2 .wd-icon-accent {
+  fill: #f38b00;
+}
+
+.emotion-2:hover .wd-icon-accent {
+  fill: #f38b00;
+}
+
+.emotion-2 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-2:hover .wd-icon-background {
+  fill: transparent;
+}
+
 <div
   className="emotion-5 emotion-6"
 >
@@ -147,9 +147,9 @@ exports[`TextInput Snapshots error 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   border: 1px solid #a1aab3;
   display: block;
@@ -286,9 +286,9 @@ exports[`TextInput Snapshots grow 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   border: 1px solid #a1aab3;
   display: block;
@@ -369,9 +369,9 @@ exports[`TextInput Snapshots renders as expected 1`] = `
 
 .emotion-0 {
   font-size: 14px;
-  color: #494949;
-  font-weight: 400;
   line-height: 20px;
+  font-weight: 400;
+  color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   border: 1px solid #a1aab3;
   display: block;
