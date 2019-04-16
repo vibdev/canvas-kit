@@ -188,6 +188,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 <div
   className="emotion-6 emotion-7"
+  role="dialog"
 >
   <div
     className="emotion-2 emotion-3"
@@ -408,6 +409,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 <div
   className="emotion-6 emotion-7"
+  role="dialog"
 >
   <div
     className="emotion-2 emotion-3"
@@ -624,6 +626,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 <div
   className="emotion-6 emotion-7"
+  role="dialog"
 >
   <div
     className="emotion-2 emotion-3"
@@ -688,6 +691,7 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
 
 <div
   className="emotion-2 emotion-3"
+  role="dialog"
 >
   <div
     className="emotion-1"
@@ -739,6 +743,7 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 
 <div
   className="emotion-2 emotion-3"
+  role="dialog"
 >
   <div
     className="emotion-1"
@@ -790,6 +795,7 @@ exports[`Popup Snapshots renders as expected 1`] = `
 
 <div
   className="emotion-2 emotion-3"
+  role="dialog"
 >
   <div
     className="emotion-1"

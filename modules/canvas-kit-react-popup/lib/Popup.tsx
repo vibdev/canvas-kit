@@ -74,7 +74,7 @@ export default class Popup extends React.Component<PopupProps> {
   public render() {
     const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;
     return (
-      <Container {...otherProps}>
+      <Container role="dialog" {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
             <IconButton buttonType={IconButton.Types.Default} onClick={handleClose} icon={xIcon} />
