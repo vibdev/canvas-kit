@@ -14,39 +14,23 @@ or
 yarn add @workday/canvas-kit-react-text-input
 ```
 
-# TextField
-
-For convenience, this is a composed component combining the Label, TextInput, and Hint components.
+# TextInput
 
 ## Usage
 
 ```tsx
 import * as React from 'react';
-import {TextField} from '@workday/canvas-kit-react-text-input';
+import TextInput from '@workday/canvas-kit-react-text-input';
 
-<TextField
-  label="Label"
-  labelPosition={TextField.LabelPosition.Left}
-  placeholder="Placeholder"
-  value={this.state.value}
-  onChange={() => {}}
-/>;
+<TextInput placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
 ```
 
 ## Static Properties
 
-#### `LabelPosition: LabelPosition`
-
-```tsx
-<Label labelPosition={TextField.LabelPosition.Left} />
-```
-
----
-
 #### `ErrorType: ErrorType`
 
 ```tsx
-<Label error={TextField.ErrorType.Alert} />
+<TextInput error={TextInput.ErrorType.Alert} />
 ```
 
 ## Component Props
@@ -89,40 +73,11 @@ Default: `false`
 
 ---
 
-#### `hintText: React.ReactNode`
-
-> The message displayed below the input field.
-
-Default: `undefined`
-
----
-
-#### `innerRef: React.Ref<HTMLInputElement>`
+#### `inputRef: React.Ref<HTMLInputElement>`
 
 > The ref callback for the inner input element.
 
 Default: `undefined`
-
----
-
-#### `inputProps: React.InputHTMLAttributes<HTMLInputElement>`
-
-> Props applied to the native input element.
-
-Default: `undefined`
-
----
-
-#### `labelPosition: LabelPosition`
-
-> The position of the label relative to the input field.
-
-| Position |
-| -------- |
-| Top      |
-| Left     |
-
-Default: `LabelPosition.Top`
 
 ---
 
