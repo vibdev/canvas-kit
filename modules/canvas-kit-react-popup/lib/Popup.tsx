@@ -46,6 +46,7 @@ const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
     animation: popupAnimation,
     animationDuration: '150ms',
     animationTimingFunction: 'ease-out',
+    width: 'min-content',
   },
   ({transformOrigin}) => ({
     transformOrigin: transformOrigin

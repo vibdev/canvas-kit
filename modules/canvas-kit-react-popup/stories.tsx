@@ -22,20 +22,29 @@ class PopupWrapper extends React.Component<{}, PopupWrapperState> {
     const {anchorEl, open} = this.state;
     return (
       <div style={{display: 'flex', justifyContent: 'center'}}>
-        <Button onClick={this.handleClick}>Open Popup</Button>
+        <Button buttonType={Button.Types.Delete} onClick={this.handleClick}>
+          Delete Item
+        </Button>
         <Popper placement={'bottom'} open={open} anchorEl={anchorEl}>
           <Popup
-            width={300}
-            heading={'Popup Title'}
+            width={400}
+            heading={'Delete Item'}
             padding={Popup.padding.s}
             handleClose={this.handleClose}
           >
             <div style={{marginBottom: '24px'}}>
-              This is the content of a Popup. You can add whatever you'd like in here.
+              Are you sure you'd like to delete the item titled 'My Item'?
             </div>
 
-            <Button onClick={this.handleSubmit} buttonType={Button.Types.Primary}>
-              Submit
+            <Button
+              style={{marginRight: '16px'}}
+              onClick={this.handleSubmit}
+              buttonType={Button.Types.Delete}
+            >
+              Delete
+            </Button>
+            <Button onClick={this.handleSubmit} buttonType={Button.Types.Secondary}>
+              Cancel
             </Button>
           </Popup>
         </Popper>
