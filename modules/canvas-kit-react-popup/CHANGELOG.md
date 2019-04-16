@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.4...@workday/canvas-kit-react-popup@0.1.5) (2019-04-16)
+
+
+### Bug Fixes
+
+* **popup:** make story like a real example and update styles ([f793a21](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/f793a21))
+* add role dialog ([607219c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/607219c))
+
+
+
+
+
 ## [0.1.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.3...@workday/canvas-kit-react-popup@0.1.4) (2019-04-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-popup
