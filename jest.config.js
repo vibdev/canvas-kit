@@ -7,6 +7,7 @@ module.exports = {
     'modules/**/*.{tsx,}',
     '!**/canvas-kit-react-header/**/lib/Header.tsx',
     '!**/canvas-kit-react-common/**/InputProviderDecorator.tsx',
+    '!**/canvas-kit-react-common/**/SectionDecorator.tsx',
     '!**/index.{ts,tsx,js,jsx}',
     '!**/stories*.{ts,tsx,js,jsx}',
   ],
