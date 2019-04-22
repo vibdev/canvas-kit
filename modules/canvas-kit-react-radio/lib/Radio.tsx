@@ -169,9 +169,9 @@ const RadioCheck = styled('div')<Pick<RadioProps, 'checked'>>(
 const RadioLabel = styled('label')<{disabled?: boolean}>(
   {
     ...canvas.type.body,
-    marginLeft: radioLabelDistance,
+    paddingLeft: radioLabelDistance,
   },
-  ({disabled}) => disabled && canvas.type.variant.hint
+  ({disabled}) => (disabled ? canvas.type.variant.hint : {cursor: 'pointer'})
 );
 
 export default class Radio extends React.Component<RadioProps> {
