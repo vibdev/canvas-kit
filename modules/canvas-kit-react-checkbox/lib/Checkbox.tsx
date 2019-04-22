@@ -162,9 +162,9 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
 const CheckboxLabel = styled('label')<{disabled?: boolean}>(
   {
     ...canvas.type.body,
-    marginLeft: checkboxLabelDistance,
+    paddingLeft: checkboxLabelDistance,
   },
-  ({disabled}) => disabled && canvas.type.variant.hint
+  ({disabled}) => (disabled ? canvas.type.variant.hint : {cursor: 'pointer'})
 );
 
 export default class Checkbox extends React.Component<CheckboxProps> {
