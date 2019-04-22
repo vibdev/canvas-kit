@@ -18,7 +18,7 @@ exports[`TextInput Snapshots alert 1`] = `
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  border: 1px solid #a1aab3;
+  border: 1px solid #7b858f;
   display: block;
   background-color: #ffffff;
   border-radius: 4px;
@@ -50,7 +50,7 @@ exports[`TextInput Snapshots alert 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-0:focus:not([disabled]) {
@@ -151,7 +151,7 @@ exports[`TextInput Snapshots error 1`] = `
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  border: 1px solid #a1aab3;
+  border: 1px solid #7b858f;
   display: block;
   background-color: #ffffff;
   border-radius: 4px;
@@ -183,7 +183,7 @@ exports[`TextInput Snapshots error 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-0:focus:not([disabled]) {
@@ -290,7 +290,7 @@ exports[`TextInput Snapshots grow 1`] = `
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  border: 1px solid #a1aab3;
+  border: 1px solid #7b858f;
   display: block;
   background-color: #ffffff;
   border-radius: 4px;
@@ -320,7 +320,7 @@ exports[`TextInput Snapshots grow 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-0:focus:not([disabled]) {
@@ -373,7 +373,7 @@ exports[`TextInput Snapshots renders as expected 1`] = `
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  border: 1px solid #a1aab3;
+  border: 1px solid #7b858f;
   display: block;
   background-color: #ffffff;
   border-radius: 4px;
@@ -402,7 +402,7 @@ exports[`TextInput Snapshots renders as expected 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-0:focus:not([disabled]) {

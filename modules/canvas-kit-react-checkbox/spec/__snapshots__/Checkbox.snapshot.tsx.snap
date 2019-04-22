@@ -351,7 +351,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -498,7 +498,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -508,11 +508,11 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 .emotion-5 {
@@ -540,13 +540,13 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  border-color: #a1aab3;
+  border-color: #7b858f;
   background-color: #f6f7f8;
 }
 
 .emotion-5:hover {
   background-color: #f6f7f8;
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-3 {
@@ -732,11 +732,11 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
   border-width: 1px;
-  border-color: #a1aab3;
+  border-color: #7b858f;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 .emotion-5 {
@@ -764,13 +764,13 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  border-color: #a1aab3;
+  border-color: #7b858f;
   background-color: white;
 }
 
 .emotion-5:hover {
   background-color: white;
-  border-color: #7b858f;
+  border-color: #5e6a75;
 }
 
 <div
