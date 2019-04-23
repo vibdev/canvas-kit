@@ -43,8 +43,10 @@ class TooltipExample extends React.Component<{}, TooltipExampleState> {
         <div
           style={{display: 'inline-flex'}}
           ref={this.tooltipRef}
-          onMouseEnter={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}
+          onMouseEnter={this.open}
+          onMouseLeave={this.close}
+          onFocus={this.open}
+          onBlur={this.close}
         >
           Hover Over Me
         </div>
@@ -57,13 +59,13 @@ class TooltipExample extends React.Component<{}, TooltipExampleState> {
     );
   }
 
-  private onMouseLeave = () => {
+  private close = () => {
     this.setState({
       open: false,
     });
   };
 
-  private onMouseEnter = () => {
+  private open = () => {
     this.setState({
       open: true,
       anchorEl: this.tooltipRef.current,

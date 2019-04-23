@@ -33,8 +33,10 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
         <div
           style={{display: 'inline-flex'}}
           ref={this.tooltipRef}
-          onMouseEnter={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}
+          onMouseEnter={this.open}
+          onMouseLeave={this.close}
+          onFocus={this.open}
+          onBlur={this.close}
         >
           <IconButton buttonType={IconButton.Types.Default} icon={xIcon} />
         </div>
@@ -47,13 +49,13 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
     );
   }
 
-  private onMouseLeave = () => {
+  private close = () => {
     this.setState({
       open: false,
     });
   };
 
-  private onMouseEnter = () => {
+  private open = () => {
     this.setState({
       open: true,
       anchorEl: this.tooltipRef.current,
