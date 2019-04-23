@@ -13,7 +13,7 @@ export interface TooltipProps {
 const tooltipAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: scale(0.6);
+    transform: scale(0.8);
   }
   100% {
     opacity: 1;
