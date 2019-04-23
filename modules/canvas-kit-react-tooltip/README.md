@@ -51,9 +51,7 @@ class TooltipExample extends React.Component<{}, TooltipExampleState> {
           Hover Over Me
         </div>
         <Popper open={open} anchorEl={this.state.anchorEl} placement={'bottom'}>
-          <Tooltip>
-            <div>Close</div>
-          </Tooltip>
+          <Tooltip>Close</Tooltip>
         </Popper>
       </div>
     );

@@ -41,9 +41,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
           <IconButton buttonType={IconButton.Types.Default} icon={xIcon} />
         </div>
         <Popper open={open} anchorEl={this.state.anchorEl} placement={'bottom'}>
-          <Tooltip>
-            <div>Close</div>
-          </Tooltip>
+          <Tooltip>Close</Tooltip>
         </Popper>
       </div>
     );
