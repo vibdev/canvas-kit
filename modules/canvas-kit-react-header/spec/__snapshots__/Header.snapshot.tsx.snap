@@ -523,7 +523,7 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton children 1`] = `
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -578,16 +578,16 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   line-height: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -604,21 +604,21 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -627,7 +627,7 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -635,7 +635,7 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -652,7 +652,7 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -672,11 +672,11 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -697,39 +697,39 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -887,7 +887,7 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -915,10 +915,10 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -1622,7 +1622,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with content with a search bar 1`] = `
-.emotion-14 {
+.emotion-16 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1677,16 +1677,16 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   line-height: 0;
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-right: 24px;
 }
 
-.emotion-12 > .canvas-header--menu-icon {
+.emotion-14 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-12 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1703,21 +1703,21 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
     margin-right: 24px;
   }
 
-  .emotion-12 > * {
+  .emotion-14 > * {
     margin-left: 16px;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-12 > *:last-child {
+  .emotion-14 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1726,7 +1726,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 }
 
 @media (min-width:1120px) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -1734,7 +1734,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   }
 }
 
-.emotion-12 nav {
+.emotion-14 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1751,7 +1751,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   margin-left: 40px;
 }
 
-.emotion-12 nav ul {
+.emotion-14 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1771,11 +1771,11 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   height: inherit;
 }
 
-.emotion-12 nav ul:hover {
+.emotion-14 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-12 nav ul li {
+.emotion-14 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -1796,39 +1796,39 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   cursor: pointer;
 }
 
-.emotion-12 nav ul li:first-child {
+.emotion-14 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-12 nav ul li:last-child {
+.emotion-14 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-12 nav ul li a {
+.emotion-14 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12 nav ul li a:visited {
+.emotion-14 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-12 nav ul li:hover,
-.emotion-12 nav ul li:active {
+.emotion-14 nav ul li:hover,
+.emotion-14 nav ul li:active {
   color: #333333;
 }
 
-.emotion-12 nav ul li.current {
+.emotion-14 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:hover,
-.emotion-12 nav ul li.current:active {
+.emotion-14 nav ul li.current:hover,
+.emotion-14 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:after {
+.emotion-14 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1986,7 +1986,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 }
 
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-16 emotion-17"
 >
   <div
     className="emotion-6 emotion-7"
@@ -2014,7 +2014,7 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
     </span>
   </div>
   <button
-    className="emotion-9"
+    className="emotion-9 emotion-10"
     onClick={[Function]}
     style={
       Object {
@@ -2033,10 +2033,10 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
     />
   </button>
   <div
-    className="emotion-12 emotion-13"
+    className="emotion-14 emotion-15"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -2304,7 +2304,7 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2359,16 +2359,16 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   line-height: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2385,21 +2385,21 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2408,7 +2408,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -2416,7 +2416,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2433,7 +2433,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2453,11 +2453,11 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -2478,39 +2478,39 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2668,7 +2668,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -2696,10 +2696,10 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -2715,7 +2715,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 `;
 
 exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2916,16 +2916,16 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   fill: transparent;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2942,21 +2942,21 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2965,7 +2965,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -2973,7 +2973,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2990,7 +2990,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3010,11 +3010,11 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -3035,39 +3035,39 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3079,7 +3079,7 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -3107,10 +3107,10 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -6076,16 +6076,16 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   display: inline-block;
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-right: 24px;
 }
 
-.emotion-12 > .canvas-header--menu-icon {
+.emotion-14 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-12 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6102,21 +6102,21 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
     margin-right: 24px;
   }
 
-  .emotion-12 > * {
+  .emotion-14 > * {
     margin-left: 16px;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-12 > *:last-child {
+  .emotion-14 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6125,7 +6125,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
 }
 
 @media (min-width:1120px) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -6133,7 +6133,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   }
 }
 
-.emotion-12 nav {
+.emotion-14 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6150,7 +6150,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   margin-left: 40px;
 }
 
-.emotion-12 nav ul {
+.emotion-14 nav ul {
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6170,11 +6170,11 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   height: inherit;
 }
 
-.emotion-12 nav ul:hover {
+.emotion-14 nav ul:hover {
   color: rgba(255,255,255,0.5);
 }
 
-.emotion-12 nav ul li {
+.emotion-14 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -6195,39 +6195,39 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   cursor: pointer;
 }
 
-.emotion-12 nav ul li:first-child {
+.emotion-14 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-12 nav ul li:last-child {
+.emotion-14 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-12 nav ul li a {
+.emotion-14 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12 nav ul li a:visited {
+.emotion-14 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-12 nav ul li:hover,
-.emotion-12 nav ul li:active {
+.emotion-14 nav ul li:hover,
+.emotion-14 nav ul li:active {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current {
+.emotion-14 nav ul li.current {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current:hover,
-.emotion-12 nav ul li.current:active {
+.emotion-14 nav ul li.current:hover,
+.emotion-14 nav ul li.current:active {
   color: #ffffff;
 }
 
-.emotion-12 nav ul li.current:after {
+.emotion-14 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6291,7 +6291,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   line-height: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6413,7 +6413,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
 }
 
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-16 emotion-17"
 >
   <div
     className="emotion-6 emotion-7"
@@ -6441,7 +6441,7 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
     </span>
   </div>
   <button
-    className="emotion-9"
+    className="emotion-9 emotion-10"
     onClick={[Function]}
     style={
       Object {
@@ -6460,10 +6460,10 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
     />
   </button>
   <div
-    className="emotion-12 emotion-13"
+    className="emotion-14 emotion-15"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -6746,16 +6746,16 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   display: inline-block;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6772,21 +6772,21 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6795,7 +6795,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -6803,7 +6803,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6820,7 +6820,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6840,11 +6840,11 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -6865,39 +6865,39 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -7054,7 +7054,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   fill: transparent;
 }
 
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7101,7 +7101,7 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -7129,10 +7129,10 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -7306,16 +7306,16 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   fill: transparent;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7332,21 +7332,21 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7355,7 +7355,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -7363,7 +7363,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7380,7 +7380,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7400,11 +7400,11 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -7425,39 +7425,39 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -7468,7 +7468,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7515,7 +7515,7 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -7543,10 +7543,10 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -7574,16 +7574,16 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   display: inline-block;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-right: 24px;
 }
 
-.emotion-10 > .canvas-header--menu-icon {
+.emotion-11 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-10 {
+  .emotion-11 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7600,21 +7600,21 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
     margin-right: 24px;
   }
 
-  .emotion-10 > * {
+  .emotion-11 > * {
     margin-left: 16px;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-10 > *:last-child {
+  .emotion-11 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-10 > *:not(.canvas-header--menu-icon) {
+  .emotion-11 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7623,7 +7623,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 }
 
 @media (min-width:1120px) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -7631,7 +7631,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   }
 }
 
-.emotion-10 nav {
+.emotion-11 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7648,7 +7648,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   margin-left: 40px;
 }
 
-.emotion-10 nav ul {
+.emotion-11 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7668,11 +7668,11 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   height: inherit;
 }
 
-.emotion-10 nav ul:hover {
+.emotion-11 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-10 nav ul li {
+.emotion-11 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -7693,39 +7693,39 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-11 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-11 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-11 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-11 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-10 nav ul li:hover,
-.emotion-10 nav ul li:active {
+.emotion-11 nav ul li:hover,
+.emotion-11 nav ul li:active {
   color: #333333;
 }
 
-.emotion-10 nav ul li.current {
+.emotion-11 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:hover,
-.emotion-10 nav ul li.current:active {
+.emotion-11 nav ul li.current:hover,
+.emotion-11 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-10 nav ul li.current:after {
+.emotion-11 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -7882,7 +7882,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   fill: transparent;
 }
 
-.emotion-12 {
+.emotion-13 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7929,7 +7929,7 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-13 emotion-14"
 >
   <div
     className="emotion-6 emotion-7"
@@ -7957,10 +7957,10 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
     </span>
   </div>
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-11 emotion-12"
   >
     <button
-      className="canvas-header--menu-icon emotion-9"
+      className="canvas-header--menu-icon emotion-9 emotion-10"
     >
       <span
         className="emotion-8"

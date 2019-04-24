@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconButton children 1`] = `
-.emotion-16 {
+.emotion-18 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,16 +56,16 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   line-height: 0;
 }
 
-.emotion-14 {
+.emotion-16 {
   margin-right: 24px;
 }
 
-.emotion-14 > .canvas-header--menu-icon {
+.emotion-16 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:0px) {
-  .emotion-14 {
+  .emotion-16 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -82,21 +82,21 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
     margin-right: 24px;
   }
 
-  .emotion-14 > * {
+  .emotion-16 > * {
     margin-left: 16px;
   }
 
-  .emotion-14 > *:not(.canvas-header--menu-icon) {
+  .emotion-16 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:1px) {
-  .emotion-14 > *:last-child {
+  .emotion-16 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-14 > *:not(.canvas-header--menu-icon) {
+  .emotion-16 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -105,7 +105,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
 }
 
 @media (min-width:600px) {
-  .emotion-14 {
+  .emotion-16 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -113,7 +113,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   }
 }
 
-.emotion-14 nav {
+.emotion-16 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +130,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   margin-left: 40px;
 }
 
-.emotion-14 nav ul {
+.emotion-16 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -150,11 +150,11 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   height: inherit;
 }
 
-.emotion-14 nav ul:hover {
+.emotion-16 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-14 nav ul li {
+.emotion-16 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -175,39 +175,39 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   cursor: pointer;
 }
 
-.emotion-14 nav ul li:first-child {
+.emotion-16 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-14 nav ul li:last-child {
+.emotion-16 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-14 nav ul li a {
+.emotion-16 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-14 nav ul li a:visited {
+.emotion-16 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-14 nav ul li:hover,
-.emotion-14 nav ul li:active {
+.emotion-16 nav ul li:hover,
+.emotion-16 nav ul li:active {
   color: #333333;
 }
 
-.emotion-14 nav ul li.current {
+.emotion-16 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-14 nav ul li.current:hover,
-.emotion-14 nav ul li.current:active {
+.emotion-16 nav ul li.current:hover,
+.emotion-16 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-14 nav ul li.current:after {
+.emotion-16 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -366,7 +366,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -390,66 +390,66 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   background-color: #e8ebed;
 }
 
-.emotion-13 img {
+.emotion-15 img {
   width: 100%;
   height: 100%;
 }
 
-.emotion-13:not([disabled]):focus {
+.emotion-15:not([disabled]):focus {
   outline: none;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-[data-whatinput='mouse'] .emotion-13:focus,
-[data-whatinput='touch'] .emotion-13:focus,
-[data-whatinput='pointer'] .emotion-13:focus {
+[data-whatinput='mouse'] .emotion-15:focus,
+[data-whatinput='touch'] .emotion-15:focus,
+[data-whatinput='pointer'] .emotion-15:focus {
   outline: none;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
-.emotion-12 {
+.emotion-14 {
   display: inline-block;
 }
 
-.emotion-12 svg {
+.emotion-14 svg {
   display: block;
 }
 
-.emotion-12 .wd-icon-fill {
+.emotion-14 .wd-icon-fill {
   fill: #4a5561;
 }
 
-.emotion-12:hover .wd-icon-fill {
+.emotion-14:hover .wd-icon-fill {
   fill: #4a5561;
 }
 
-.emotion-12 .wd-icon-accent {
+.emotion-14 .wd-icon-accent {
   fill: #4a5561;
 }
 
-.emotion-12:hover .wd-icon-accent {
+.emotion-14:hover .wd-icon-accent {
   fill: #4a5561;
 }
 
-.emotion-12 .wd-icon-background {
+.emotion-14 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-12:hover .wd-icon-background {
+.emotion-14:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-12 svg {
+.emotion-14 svg {
   width: 20px;
   height: 20px;
 }
 
 <div
-  className="emotion-16 emotion-17"
+  className="emotion-18 emotion-19"
 >
   <div
     className="emotion-6 emotion-7"
@@ -474,10 +474,10 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
     </span>
   </div>
   <div
-    className="emotion-14 emotion-15"
+    className="emotion-16 emotion-17"
   >
     <button
-      className="emotion-9"
+      className="emotion-9 emotion-10"
       style={
         Object {
           "margin": "0 0 0 16px",
@@ -494,7 +494,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
       />
     </button>
     <button
-      className="emotion-9"
+      className="emotion-9 emotion-10"
       style={
         Object {
           "margin": "0 0 0 16px",
@@ -511,12 +511,12 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
       />
     </button>
     <button
-      className="emotion-13"
+      className="emotion-15"
       disabled={true}
       size={32}
     >
       <span
-        className="emotion-12"
+        className="emotion-14"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-user wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M20 20.491a.503.503 0 0 1-.496.505H4.496A.493.493 0 0 1 4 20.49v-1.495C4 16 6.246 13.8 8.756 12.683 7.682 11.675 7 10.174 7 8.5 7 5.462 9.239 3 12 3s5 2.462 5 5.499c0 1.675-.68 3.175-1.755 4.183C17.758 13.797 20 15.995 20 18.996v1.495zM6.083 18.996H18c0-2.996-2.5-4.999-6-4.999s-6 2.003-5.917 5zM12 11.998c1.657 0 3-1.567 3-3.5C15 6.567 13.657 5 12 5S9 6.566 9 8.499c0 1.932 1.343 3.499 3 3.499z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -1000,7 +1000,7 @@ exports[`App GlobalHeader Snapshots renders a header with a search bar 1`] = `
 `;
 
 exports[`App GlobalHeader Snapshots renders a header with content with a search bar 1`] = `
-.emotion-24 {
+.emotion-26 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1047,16 +1047,16 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   line-height: 0;
 }
 
-.emotion-22 {
+.emotion-24 {
   margin-right: 24px;
 }
 
-.emotion-22 > .canvas-header--menu-icon {
+.emotion-24 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:0px) {
-  .emotion-22 {
+  .emotion-24 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1073,21 +1073,21 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
     margin-right: 24px;
   }
 
-  .emotion-22 > * {
+  .emotion-24 > * {
     margin-left: 16px;
   }
 
-  .emotion-22 > *:not(.canvas-header--menu-icon) {
+  .emotion-24 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:1px) {
-  .emotion-22 > *:last-child {
+  .emotion-24 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-22 > *:not(.canvas-header--menu-icon) {
+  .emotion-24 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1096,7 +1096,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
 }
 
 @media (min-width:600px) {
-  .emotion-22 {
+  .emotion-24 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -1104,7 +1104,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   }
 }
 
-.emotion-22 nav {
+.emotion-24 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1121,7 +1121,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   margin-left: 40px;
 }
 
-.emotion-22 nav ul {
+.emotion-24 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1141,11 +1141,11 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   height: inherit;
 }
 
-.emotion-22 nav ul:hover {
+.emotion-24 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-22 nav ul li {
+.emotion-24 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -1166,39 +1166,39 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   cursor: pointer;
 }
 
-.emotion-22 nav ul li:first-child {
+.emotion-24 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-22 nav ul li:last-child {
+.emotion-24 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-22 nav ul li a {
+.emotion-24 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-22 nav ul li a:visited {
+.emotion-24 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-22 nav ul li:hover,
-.emotion-22 nav ul li:active {
+.emotion-24 nav ul li:hover,
+.emotion-24 nav ul li:active {
   color: #333333;
 }
 
-.emotion-22 nav ul li.current {
+.emotion-24 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-22 nav ul li.current:hover,
-.emotion-22 nav ul li.current:active {
+.emotion-24 nav ul li.current:hover,
+.emotion-24 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-22 nav ul li.current:after {
+.emotion-24 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1357,7 +1357,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1381,60 +1381,60 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   background-color: #e8ebed;
 }
 
-.emotion-21 img {
+.emotion-23 img {
   width: 100%;
   height: 100%;
 }
 
-.emotion-21:not([disabled]):focus {
+.emotion-23:not([disabled]):focus {
   outline: none;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-[data-whatinput='mouse'] .emotion-21:focus,
-[data-whatinput='touch'] .emotion-21:focus,
-[data-whatinput='pointer'] .emotion-21:focus {
+[data-whatinput='mouse'] .emotion-23:focus,
+[data-whatinput='touch'] .emotion-23:focus,
+[data-whatinput='pointer'] .emotion-23:focus {
   outline: none;
   box-shadow: none;
   -webkit-animation: none;
   animation: none;
 }
 
-.emotion-20 {
+.emotion-22 {
   display: inline-block;
 }
 
-.emotion-20 svg {
+.emotion-22 svg {
   display: block;
 }
 
-.emotion-20 .wd-icon-fill {
+.emotion-22 .wd-icon-fill {
   fill: #4a5561;
 }
 
-.emotion-20:hover .wd-icon-fill {
+.emotion-22:hover .wd-icon-fill {
   fill: #4a5561;
 }
 
-.emotion-20 .wd-icon-accent {
+.emotion-22 .wd-icon-accent {
   fill: #4a5561;
 }
 
-.emotion-20:hover .wd-icon-accent {
+.emotion-22:hover .wd-icon-accent {
   fill: #4a5561;
 }
 
-.emotion-20 .wd-icon-background {
+.emotion-22 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-20:hover .wd-icon-background {
+.emotion-22:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-20 svg {
+.emotion-22 svg {
   width: 20px;
   height: 20px;
 }
@@ -1584,7 +1584,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
 }
 
 <div
-  className="emotion-24 emotion-25"
+  className="emotion-26 emotion-27"
 >
   <div
     className="emotion-6 emotion-7"
@@ -1658,10 +1658,10 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
     </span>
   </form>
   <div
-    className="emotion-22 emotion-23"
+    className="emotion-24 emotion-25"
   >
     <button
-      className="emotion-17"
+      className="emotion-17 emotion-18"
       style={
         Object {
           "margin": "0 0 0 16px",
@@ -1678,7 +1678,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
       />
     </button>
     <button
-      className="emotion-17"
+      className="emotion-17 emotion-18"
       style={
         Object {
           "margin": "0 0 0 16px",
@@ -1695,12 +1695,12 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
       />
     </button>
     <button
-      className="emotion-21"
+      className="emotion-23"
       disabled={true}
       size={32}
     >
       <span
-        className="emotion-20"
+        className="emotion-22"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-user wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M20 20.491a.503.503 0 0 1-.496.505H4.496A.493.493 0 0 1 4 20.49v-1.495C4 16 6.246 13.8 8.756 12.683 7.682 11.675 7 10.174 7 8.5 7 5.462 9.239 3 12 3s5 2.462 5 5.499c0 1.675-.68 3.175-1.755 4.183C17.758 13.797 20 15.995 20 18.996v1.495zM6.083 18.996H18c0-2.996-2.5-4.999-6-4.999s-6 2.003-5.917 5zM12 11.998c1.657 0 3-1.567 3-3.5C15 6.567 13.657 5 12 5S9 6.566 9 8.499c0 1.932 1.343 3.499 3 3.499z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -1962,7 +1962,7 @@ exports[`App GlobalHeader Snapshots renders an app header 1`] = `
 `;
 
 exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`] = `
-.emotion-14 {
+.emotion-16 {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1999,16 +1999,16 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   display: inline-block;
 }
 
-.emotion-12 {
+.emotion-14 {
   margin-right: 24px;
 }
 
-.emotion-12 > .canvas-header--menu-icon {
+.emotion-14 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:0px) {
-  .emotion-12 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2025,21 +2025,21 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
     margin-right: 24px;
   }
 
-  .emotion-12 > * {
+  .emotion-14 > * {
     margin-left: 16px;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:1px) {
-  .emotion-12 > *:last-child {
+  .emotion-14 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-12 > *:not(.canvas-header--menu-icon) {
+  .emotion-14 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2048,7 +2048,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
 }
 
 @media (min-width:600px) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -2056,7 +2056,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   }
 }
 
-.emotion-12 nav {
+.emotion-14 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2073,7 +2073,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   margin-left: 40px;
 }
 
-.emotion-12 nav ul {
+.emotion-14 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2093,11 +2093,11 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   height: inherit;
 }
 
-.emotion-12 nav ul:hover {
+.emotion-14 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-12 nav ul li {
+.emotion-14 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -2118,39 +2118,39 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   cursor: pointer;
 }
 
-.emotion-12 nav ul li:first-child {
+.emotion-14 nav ul li:first-child {
   margin-left: 0;
 }
 
-.emotion-12 nav ul li:last-child {
+.emotion-14 nav ul li:last-child {
   margin-right: 0;
 }
 
-.emotion-12 nav ul li a {
+.emotion-14 nav ul li a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-12 nav ul li a:visited {
+.emotion-14 nav ul li a:visited {
   color: inherit;
 }
 
-.emotion-12 nav ul li:hover,
-.emotion-12 nav ul li:active {
+.emotion-14 nav ul li:hover,
+.emotion-14 nav ul li:active {
   color: #333333;
 }
 
-.emotion-12 nav ul li.current {
+.emotion-14 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:hover,
-.emotion-12 nav ul li.current:active {
+.emotion-14 nav ul li.current:hover,
+.emotion-14 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-12 nav ul li.current:after {
+.emotion-14 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2329,7 +2329,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
 }
 
 <div
-  className="emotion-14 emotion-15"
+  className="emotion-16 emotion-17"
 >
   <div
     className="emotion-6 emotion-7"
@@ -2357,10 +2357,10 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
     </span>
   </div>
   <div
-    className="emotion-12 emotion-13"
+    className="emotion-14 emotion-15"
   >
     <button
-      className="emotion-9"
+      className="emotion-9 emotion-10"
     >
       <span
         className="emotion-8"
@@ -2372,7 +2372,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
       />
     </button>
     <button
-      className="emotion-9"
+      className="emotion-9 emotion-10"
     >
       <span
         className="emotion-8"

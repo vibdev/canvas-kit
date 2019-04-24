@@ -21,9 +21,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist && mkdirp dist",
-    "build:cjs": "tsc --outDir dist/commonjs --module commonjs --declaration",
+    "build:cjs": "babel --no-babelrc --plugins babel-plugin-transform-es2015-modules-commonjs dist/es6 --out-dir dist/commonjs  --copy-files",
     "build:es6": "tsc --outDir dist/es6 --declaration",
-    "build": "npm-run-all clean --parallel build:cjs build:es6"
+    "build:babel": "babel --no-babelrc --plugins babel-plugin-emotion dist --out-dir dist",
+    "build": "npm-run-all --sequential clean build:es6 build:babel build:cjs"
   },
   "keywords": [
     "canvas",

@@ -148,7 +148,7 @@ exports[`Header Search Snapshots Renders a collapsed search bar 1`] = `
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   onClick={[Function]}
   style={
     Object {
@@ -2040,7 +2040,7 @@ exports[`Header Search Snapshots renders themed, collapsed search bars: <Search 
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   onClick={[Function]}
   style={
     Object {
@@ -2190,7 +2190,7 @@ exports[`Header Search Snapshots renders themed, collapsed search bars: <Search 
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   onClick={[Function]}
   style={
     Object {
@@ -2358,7 +2358,7 @@ exports[`Header Search Snapshots renders themed, collapsed search bars: <Search 
 }
 
 <button
-  className="emotion-1"
+  className="emotion-1 emotion-2"
   onClick={[Function]}
   style={
     Object {
