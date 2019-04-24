@@ -53,8 +53,10 @@
     "@workday/canvas-kit-react-loading-animation": "^0.4.4",
     "@workday/canvas-kit-react-page-header": "^0.2.12",
     "@workday/canvas-kit-react-popup": "^0.1.12",
+    "@workday/canvas-kit-react-radio": "^0.0.1",
     "@workday/canvas-kit-react-skeleton": "^0.0.12",
     "@workday/canvas-kit-react-table": "^1.1.8",
+    "@workday/canvas-kit-react-text-area": "^0.0.0",
     "@workday/canvas-kit-react-text-input": "^0.0.0",
     "@workday/canvas-kit-react-toggle": "^0.1.13",
     "@workday/canvas-kit-react-tooltip": "^0.1.1"
