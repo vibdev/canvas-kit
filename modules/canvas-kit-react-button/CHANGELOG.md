@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.0...@workday/canvas-kit-react-button@0.20.1) (2019-04-24)
+
+
+### Bug Fixes
+
+* **babel:** babelify es6 output in button component ([#319](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/issues/319)) ([bd3e720](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/bd3e720))
+
+
+
+
+
 # [0.20.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.19.9...@workday/canvas-kit-react-button@0.20.0) (2019-04-09)
 
 

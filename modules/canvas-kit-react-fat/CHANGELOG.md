@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.7.11...@workday/canvas-kit-react-fat@0.7.12) (2019-04-24)
+
+
+### Bug Fixes
+
+* **babel:** babelify es6 output in button component ([#319](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/issues/319)) ([bd3e720](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/bd3e720))
+
+
+
+
+
 ## [0.7.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.7.10...@workday/canvas-kit-react-fat@0.7.11) (2019-04-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-fat
