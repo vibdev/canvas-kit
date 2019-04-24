@@ -5,8 +5,9 @@ export enum HeaderTheme {
 }
 
 export enum HeaderVariant {
-  Full,
   Dub,
+  Full,
+  Global,
 }
 
 export enum HeaderHeight {

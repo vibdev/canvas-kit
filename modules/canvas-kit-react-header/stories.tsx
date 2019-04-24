@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import styled from 'react-emotion';
 import {css, cx} from 'emotion';
-import {Header, DubLogoTitle} from './index';
+import {GlobalHeader, Header, DubLogoTitle, WorkdayLogoTitle} from './index';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
@@ -13,6 +13,7 @@ import {Button, IconButton} from '@workday/canvas-kit-react-button';
 import chroma from 'chroma-js';
 import README from './README.md';
 import bgImg from './static/workday-bg.jpg';
+import {HeaderVariant} from './lib/shared/types';
 
 const containerStyle = css({
   backgroundColor: colors.soap100,
@@ -64,11 +65,58 @@ const nav = (
   </nav>
 );
 
-storiesOf('Canvas Kit/Header/Marketing', module)
+storiesOf('Canvas Kit/Header', module)
   .addDecorator(withReadme(README))
-  .add('Dub', () => (
+  .add('Global', () => (
     <div className="story">
-      <h1 className="section-label">"Dub" Header</h1>
+      <h1 className="section-label">"Global" Header</h1>
+      <div className={containerStyle}>
+        <GlobalHeader
+          brand={
+            <a href="#">
+              <DubLogoTitle themeColor={Header.Theme.White} />
+            </a>
+          }
+          menuToggle={
+            <Avatar
+              onClick={handleMenuClickTest}
+              url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
+            />
+          }
+          onSearchSubmit={handleSearchSubmitTest}
+        >
+          <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
+          <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
+          <Avatar
+            onClick={handleAvatarClickTest}
+            url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
+          />
+        </GlobalHeader>
+      </div>
+      <div className={containerStyle}>
+        <GlobalHeader
+          brand={<WorkdayLogoTitle variant={HeaderVariant.Global} />}
+          menuToggle={<Avatar onClick={handleMenuClickTest} />}
+          onSearchSubmit={handleSearchSubmitTest}
+          breakpoint={700}
+        >
+          <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
+          <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
+          <Avatar onClick={handleAvatarClickTest} />
+        </GlobalHeader>
+      </div>
+      <div className={containerStyle}>
+        <GlobalHeader onSearchSubmit={handleSearchSubmitTest} onMenuClick={handleMenuClickTest}>
+          <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
+          <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
+          <Avatar onClick={handleAvatarClickTest} />
+        </GlobalHeader>
+      </div>
+    </div>
+  ))
+  .add('Generic - Dub', () => (
+    <div className="story">
+      <h1 className="section-label">Generic - "Dub" Header</h1>
       <div className={containerStyle}>
         <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
@@ -153,9 +201,9 @@ storiesOf('Canvas Kit/Header/Marketing', module)
       </div>
     </div>
   ))
-  .add('Full', () => (
+  .add('Generic - Full', () => (
     <div className="story">
-      <h1 className="section-label">"Full" Header</h1>
+      <h1 className="section-label">Generic - "Full" Header</h1>
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} />
       </div>

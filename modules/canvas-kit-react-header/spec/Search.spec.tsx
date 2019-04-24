@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Search} from '../lib/parts/Search';
 import {mount} from 'enzyme';
+import {HeaderTheme} from '../lib/shared/types';
 
 describe('Header Search', () => {
   const cb = jest.fn();
@@ -54,6 +55,74 @@ describe('Header Search', () => {
 
     component.find('input').simulate('focus');
     expect(component.state('focused')).toBe(true);
+    component.unmount();
+  });
+
+  test('Hovering input should update state', () => {
+    const component = mount(<Search onSearchSubmit={cb} />);
+
+    component.find('input').simulate('mouseEnter');
+    expect(component.state('hovered')).toBe(true);
+    component.find('input').simulate('mouseLeave');
+    expect(component.state('hovered')).toBe(false);
+    component.unmount();
+  });
+
+  test('Hovering and focusing input should update state', () => {
+    const component = mount(<Search onSearchSubmit={cb} />);
+
+    component.find('input').simulate('mouseEnter');
+    expect(component.state('hovered')).toBe(true);
+    component.find('input').simulate('focus');
+    expect(component.state('focused')).toBe(true);
+    component.unmount();
+  });
+
+  test('Focussing input should update state', () => {
+    const component = mount(<Search onSearchSubmit={cb} themeColor={HeaderTheme.Blue} />);
+
+    component.find('input').simulate('focus');
+    expect(component.state('focused')).toBe(true);
+    component.unmount();
+  });
+
+  test('Hovering input should update state', () => {
+    const component = mount(<Search onSearchSubmit={cb} themeColor={HeaderTheme.Blue} />);
+
+    component.find('input').simulate('mouseEnter');
+    expect(component.state('hovered')).toBe(true);
+    component.find('input').simulate('mouseLeave');
+    expect(component.state('hovered')).toBe(false);
+    component.unmount();
+  });
+
+  test('Hovering and focusing input should update state', () => {
+    const component = mount(<Search onSearchSubmit={cb} themeColor={HeaderTheme.Blue} />);
+
+    component.find('input').simulate('mouseEnter');
+    expect(component.state('hovered')).toBe(true);
+    component.find('input').simulate('focus');
+    expect(component.state('focused')).toBe(true);
+    component.unmount();
+  });
+
+  test('Input with value', () => {
+    const component = mount(<Search value="Hello World" />);
+    expect(component.state('value')).toBe('Hello World');
+    component.unmount();
+  });
+
+  test('Input with changing value', () => {
+    const component = mount(<Search value="Hello World" />);
+    component.find('input').simulate('change', {target: {value: 'Foo Bar'}});
+    expect(component.state('value')).toBe('Foo Bar');
+    component.unmount();
+  });
+
+  test('Clear Search Input', () => {
+    const component = mount(<Search value="Hello World" />);
+    component.find('span.reset-input').simulate('click');
+    expect(component.state('value')).toBe('');
     component.unmount();
   });
 });

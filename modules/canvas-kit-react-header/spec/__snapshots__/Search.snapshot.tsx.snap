@@ -168,293 +168,54 @@ exports[`Header Search Snapshots Renders a collapsed search bar 1`] = `
 </button>
 `;
 
-exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 1`] = `
+exports[`Header Search Snapshots Renders a search bar with a value 1`] = `
 .emotion-3 {
-  position: relative;
-  margin-left: 24px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: block;
-}
-
-.emotion-0 {
   display: inline-block;
 }
 
-.emotion-0 svg {
+.emotion-3 svg {
   display: block;
 }
 
-.emotion-0 .wd-icon-fill {
-  fill: #ffffff;
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
 }
 
-.emotion-0:hover .wd-icon-fill {
-  fill: #ffffff;
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
 }
 
-.emotion-0 .wd-icon-accent {
-  fill: #ffffff;
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
 }
 
-.emotion-0:hover .wd-icon-accent {
-  fill: #ffffff;
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
 }
 
-.emotion-0 .wd-icon-background {
+.emotion-3 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-0:hover .wd-icon-background {
+.emotion-3:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-1 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  padding: 12px;
-  padding-left: 44px;
-  max-width: 320px;
-  min-width: 120px;
-  width: 100%;
-  height: 40px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: none;
-  -webkit-appearance: none;
-  -webkit-transition: background 150ms;
-  transition: background 150ms;
-  background: rgba(0,0,0,0.2);
-  color: #ffffff;
-}
-
-.emotion-1::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1::-moz-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1::placeholder {
-  color: #ffffff;
-}
-
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  outline: none;
-  background: #ffffff;
-  color: #494949;
-}
-
-.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-1:not([disabled]):active::-webkit-input-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus::-moz-placeholder,
-.emotion-1:not([disabled]):active::-moz-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus:-ms-input-placeholder,
-.emotion-1:not([disabled]):active:-ms-input-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus::placeholder,
-.emotion-1:not([disabled]):active::placeholder {
-  color: #5e6a75;
-}
-
-<form
-  className="emotion-3 emotion-4"
-  onSubmit={[Function]}
-  placeholder="Search"
->
-  <span
-    className="emotion-0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
-    style={
-      Object {
-        "left": "12px",
-        "position": "absolute",
-        "top": "50%",
-        "transform": "translateY(-50%)",
-      }
-    }
-  />
-  <input
-    className="emotion-1 emotion-2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    placeholder="Search"
-    type="search"
-  />
-</form>
-`;
-
-exports[`Header Search Snapshots renders themed search bars: <Search /> with transparent theme applied 1`] = `
-.emotion-3 {
+.emotion-6 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  display: block;
-}
-
-.emotion-0 {
-  display: inline-block;
-}
-
-.emotion-0 svg {
-  display: block;
-}
-
-.emotion-0 .wd-icon-fill {
-  fill: #ffffff;
-}
-
-.emotion-0:hover .wd-icon-fill {
-  fill: #ffffff;
-}
-
-.emotion-0 .wd-icon-accent {
-  fill: #ffffff;
-}
-
-.emotion-0:hover .wd-icon-accent {
-  fill: #ffffff;
-}
-
-.emotion-0 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-0:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-1 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  padding: 12px;
-  padding-left: 44px;
-  max-width: 320px;
-  min-width: 120px;
-  width: 100%;
-  height: 40px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: none;
-  -webkit-appearance: none;
-  -webkit-transition: background 150ms;
-  transition: background 150ms;
-  background: rgba(0,0,0,0.2);
-  color: #ffffff;
-}
-
-.emotion-1::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1::-moz-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.emotion-1::placeholder {
-  color: #ffffff;
-}
-
-.emotion-1:not([disabled]):focus,
-.emotion-1:not([disabled]):active {
-  outline: none;
-  background: #ffffff;
-  color: #494949;
-}
-
-.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-1:not([disabled]):active::-webkit-input-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus::-moz-placeholder,
-.emotion-1:not([disabled]):active::-moz-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus:-ms-input-placeholder,
-.emotion-1:not([disabled]):active:-ms-input-placeholder {
-  color: #5e6a75;
-}
-
-.emotion-1:not([disabled]):focus::placeholder,
-.emotion-1:not([disabled]):active::placeholder {
-  color: #5e6a75;
-}
-
-<form
-  className="emotion-3 emotion-4"
-  onSubmit={[Function]}
-  placeholder="Search"
->
-  <span
-    className="emotion-0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-      }
-    }
-    style={
-      Object {
-        "left": "12px",
-        "position": "absolute",
-        "top": "50%",
-        "transform": "translateY(-50%)",
-      }
-    }
-  />
-  <input
-    className="emotion-1 emotion-2"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    placeholder="Search"
-    type="search"
-  />
-</form>
-`;
-
-exports[`Header Search Snapshots renders themed search bars: <Search /> with white theme applied 1`] = `
-.emotion-3 {
-  position: relative;
-  margin-left: 24px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0 {
@@ -496,12 +257,12 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
-  padding-left: 44px;
-  max-width: 320px;
+  padding-left: 40px;
+  max-width: 480px;
   min-width: 120px;
   width: 100%;
   height: 40px;
-  border-radius: 3px;
+  border-radius: 4px;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: none;
@@ -509,6 +270,10 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
   transition: background 150ms;
   background: #f0f1f2;
   color: #494949;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
 }
 
 .emotion-1::-webkit-input-placeholder {
@@ -555,8 +320,462 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
   color: #5e6a75;
 }
 
+.emotion-1:not([disabled]):hover {
+  background: #e8ebed;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: block;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
 <form
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+  value="Hello World"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value="Hello World"
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value="Hello World"
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots Renders a search bar with a value 2`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):hover {
+  background: #e8ebed;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: block;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+  value="Hello World"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value="Hello World"
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value="Hello World"
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 1`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
   onSubmit={[Function]}
   placeholder="Search"
 >
@@ -569,7 +788,8 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
     }
     style={
       Object {
-        "left": "12px",
+        "left": "8px",
+        "pointerEvents": "none",
         "position": "absolute",
         "top": "50%",
         "transform": "translateY(-50%)",
@@ -579,10 +799,1114 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
   <input
     className="emotion-1 emotion-2"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     placeholder="Search"
     type="search"
+    value=""
   />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with blue theme applied 2`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with transparent theme applied 1`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with transparent theme applied 2`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #ffffff;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.emotion-1::placeholder {
+  color: #ffffff;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  background: #ffffff;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with white theme applied 1`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):hover {
+  background: #e8ebed;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
+</form>
+`;
+
+exports[`Header Search Snapshots renders themed search bars: <Search /> with white theme applied 2`] = `
+.emotion-3 {
+  display: inline-block;
+}
+
+.emotion-3 svg {
+  display: block;
+}
+
+.emotion-3 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-3:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-3 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-3:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  position: relative;
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+}
+
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-0 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0:hover .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-0 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding: 12px;
+  padding-left: 40px;
+  max-width: 480px;
+  min-width: 120px;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-transition: background 150ms;
+  transition: background 150ms;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1::-webkit-search-cancel-button {
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus,
+.emotion-1:not([disabled]):active {
+  outline: none;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  background: #f0f1f2;
+  color: #494949;
+}
+
+.emotion-1:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-1:not([disabled]):active::-webkit-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::-moz-placeholder,
+.emotion-1:not([disabled]):active::-moz-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus:-ms-input-placeholder,
+.emotion-1:not([disabled]):active:-ms-input-placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):focus::placeholder,
+.emotion-1:not([disabled]):active::placeholder {
+  color: #5e6a75;
+}
+
+.emotion-1:not([disabled]):hover {
+  background: #e8ebed;
+}
+
+.emotion-4 {
+  border-radius: 24px;
+  height: 24px;
+  margin-left: -32px;
+  margin-right: 8px;
+  width: 24px;
+  display: none;
+}
+
+.emotion-4:hover {
+  cursor: pointer;
+}
+
+<form
+  className="emotion-6 emotion-7"
+  onSubmit={[Function]}
+  placeholder="Search"
+>
+  <span
+    className="emotion-0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+      }
+    }
+    style={
+      Object {
+        "left": "8px",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "50%",
+        "transform": "translateY(-50%)",
+      }
+    }
+  />
+  <input
+    className="emotion-1 emotion-2"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    placeholder="Search"
+    type="search"
+    value=""
+  />
+  <span
+    aria-label="Reset Search Input"
+    className="reset-input emotion-4 emotion-5"
+    onClick={[Function]}
+    value=""
+  >
+    <span
+      className="emotion-3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+        }
+      }
+    />
+  </span>
 </form>
 `;
 

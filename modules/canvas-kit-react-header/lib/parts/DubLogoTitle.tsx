@@ -13,7 +13,7 @@ export type DubTitleProps = {
   /**
    * The title to display in the header. Not used if `brand` is provided
    */
-  title: string;
+  title?: string;
   /**
    * The background color/gradient to be used behind the logo
    */
@@ -29,6 +29,7 @@ const Lockup = styled('div')<DubTitleProps>(
     display: 'flex',
     alignItems: 'center',
     height: HeaderHeight.Small,
+    paddingLeft: spacing.m,
   },
   ({bgColor}) => ({
     background: bgColor ? bgColor : 'none',
@@ -37,24 +38,16 @@ const Lockup = styled('div')<DubTitleProps>(
 
 const Title = styled('h3')<DubTitleProps>(
   {
-    display: 'inline-block',
     fontSize: '20px',
     fontWeight: 400,
+    padding: `${spacing.xxs} ${spacing.s}`,
     paddingRight: spacing.l,
+    marginLeft: spacing.s,
     'white-space': 'nowrap',
   },
   ({themeColor}) => ({
     color: themeColor === HeaderTheme.White ? colors.blueberry500 : colors.frenchVanilla100,
-  })
-);
-
-const DubLogo = styled('span')<DubTitleProps>(
-  {
-    padding: `0 ${spacing.s}`,
-    marginRight: spacing.s,
-  },
-  ({themeColor}) => ({
-    borderRight: `1px solid ${
+    borderLeft: `1px solid ${
       themeColor === HeaderTheme.White
         ? colors.soap400
         : chroma(colors.frenchVanilla100)
@@ -63,6 +56,10 @@ const DubLogo = styled('span')<DubTitleProps>(
     }`,
   })
 );
+
+const DubLogo = styled('div')<DubTitleProps>({
+  lineHeight: 0,
+});
 
 export class DubLogoTitle extends React.Component<DubTitleProps> {
   static defaultProps = {
@@ -79,7 +76,7 @@ export class DubLogoTitle extends React.Component<DubTitleProps> {
               __html: this.props.themeColor === HeaderTheme.White ? dubLogoBlue : dubLogoWhite,
             }}
           />
-          <Title {...this.props}>{this.props.title}</Title>
+          {this.props.title && <Title {...this.props}>{this.props.title}</Title>}
         </Lockup>
       </LockupContainer>
     );

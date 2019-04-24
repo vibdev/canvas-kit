@@ -6,7 +6,6 @@ For a full suite of examples, have a look at the [Header Stories](./stories.tsx)
 
 ## Coming Soon
 
-- Product App Header
 - Search Support
 - Mobile Expanded Nav
 
@@ -201,6 +200,80 @@ Default:
 
 > A flag to highlight the search on the left beside the logo. Will only work if `onSearchSubmit` is
 > provided.
+
+# Global Header
+
+The Global Header (or App Header) is used for Workday applications.
+
+## Usage
+
+```tsx
+import {GlobalHeader, DubLogoTitle} from '@workday/canvas-kit-react-header';
+import {Avatar} from '@workday/canvas-kit-react-avatar';
+import {IconButton} from '@workday/canvas-kit-react-button';
+import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
+
+const HeaderBrand = () => <DubLogoTitle themeColor={Header.Theme.White} />
+const HeaderAvatar = () => <Avatar onClick={handleMenuClick} url="https://my.cdn.amazonaws.com/assets/avatar_pic.png" />
+const handleSearchSubmit = query => console.log("Submitted query: ", query)
+const openMenu = e => console.log("Menu opened")
+
+/**
+ * In this instance, the right-most child will be an Avatar component, when the GlobalHeader
+ * shrinks below the specified breakpoint (720 in this case), the children get replaced by a menuToggle.
+ * For most GlobalHeader implementations, the menuToggle is also the Avatar component.
+ */
+<GlobalHeader
+  brand={<HeaderBrand />}
+  menuToggle={<HeaderAvatar />}
+  onMenuClick={openMenu}
+  onSearchSubmit={handleSearchSubmit}
+  breakpoint={720}
+>
+  <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
+  <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
+  <HeaderAvatar />
+</GlobalHeader>
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+> None
+
+### Optional
+
+#### `brand: React.ReactNode`
+
+> If specified, this replaces the contents of the Dub logo and title. Used for replacing Dub + title
+> with a branded element and/or for adding custon design elements next to the Dub + title lockup.
+
+Default: `<DubLogoTitle />`
+
+#### `menuToggle: React.ReactNode`
+
+> _Note: This `menuToggle` slot only appears when the screen size shrinks below the `breakpoint`._
+>
+> For most `GlobalHeader` implementations, this is generally the same as the users' `Avatar`. If not
+> specified, `menuToggle` defaults to a "hamburger" menu icon or "justify" icon.
+
+Default: `justifyIcon` from `@workday/canvas-system-icons-web`
+
+#### `onMenuClick: (React.SyntheticEvent) => void`
+
+> A click handler for when the user clicks the `menuToggle` element.
+
+Default: `<DubLogoTitle />`
+
+#### `onSearchSubmit: React.ReactNode`
+
+> A function that accepts a `React.SyntheticEvent` for when the user submits from the search input.
+> A search input will not be rendered if this is not provided.
 
 # "Dub" Logo and Title
 

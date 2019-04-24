@@ -7,7 +7,7 @@ import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-c
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {IconButton} from '@workday/canvas-kit-react-button';
-import {searchIcon, xIcon} from '@workday/canvas-system-icons-web';
+import {searchIcon, xIcon, xSmallIcon} from '@workday/canvas-system-icons-web';
 
 export type SearchProps = {
   /**
@@ -38,7 +38,9 @@ export type SearchProps = {
 
 export interface SearchState {
   mobileToggle: boolean;
+  value: string;
   focused: boolean;
+  hovered: boolean;
 }
 
 const mobileTransitionDuration = 250;
@@ -48,13 +50,14 @@ const SearchContainer = styled('form')<SearchProps>(
     position: 'relative',
     marginLeft: spacing.m,
     flexGrow: 1,
-    display: 'block',
+    display: 'flex',
+    alignItems: 'center',
   },
   ({rightAlign, collapse}) => {
     const rightAlignStyles: CSSObject = rightAlign
       ? {
           display: 'flex',
-          maxWidth: spacingNumbers.l * 10,
+          maxWidth: '480px',
         }
       : {};
     const collapseStyles: CSSObject = collapse
@@ -92,16 +95,19 @@ const SearchInput = styled('input')<SearchProps>(
   type.body,
   {
     padding: spacing.xs,
-    paddingLeft: spacingNumbers.xl + spacingNumbers.xxxs,
-    maxWidth: spacingNumbers.l * 10,
+    paddingLeft: spacing.xl,
+    maxWidth: '480px',
     minWidth: spacingNumbers.xs * 10,
     width: '100%',
     height: '40px',
-    borderRadius: '3px',
+    borderRadius: '4px',
     boxSizing: 'border-box',
     border: 'none',
     WebkitAppearance: 'none',
     transition: 'background 150ms',
+    '&::-webkit-search-cancel-button': {
+      display: 'none',
+    },
   },
   ({themeColor, collapse}) => {
     const inputColors = getInputColors(themeColor, collapse!);
@@ -116,6 +122,9 @@ const SearchInput = styled('input')<SearchProps>(
           '&::placeholder': {
             color: colors.licorice300,
           },
+        },
+        '&:hover': {
+          background: themeColor === HeaderTheme.White && !collapse ? colors.soap300 : undefined,
         },
       },
     };
@@ -151,8 +160,24 @@ const iconStyle: React.CSSProperties = {
   position: 'absolute',
   top: '50%',
   transform: 'translateY(-50%)',
-  left: spacing.xs,
+  left: spacing.xxs,
 };
+
+const SearchReset = styled('span')<Pick<SearchState, 'value'>>(
+  {
+    borderRadius: 24,
+    height: 24,
+    marginLeft: -(24 + 8),
+    marginRight: 8,
+    width: 24,
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  ({value}) => ({
+    display: value ? 'block' : 'none',
+  })
+);
 
 export class Search extends React.Component<SearchProps, SearchState> {
   static defaultProps = {
@@ -173,6 +198,8 @@ export class Search extends React.Component<SearchProps, SearchState> {
     this.state = {
       mobileToggle: false,
       focused: false,
+      hovered: false,
+      value: this.props.value ? this.props.value : '',
     };
   }
 
@@ -198,6 +225,18 @@ export class Search extends React.Component<SearchProps, SearchState> {
   setFocused(focus: boolean) {
     this.setState({focused: focus});
   }
+
+  handleHover(hover: boolean) {
+    this.setState({hovered: hover});
+  }
+
+  handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    this.setState({value: e.target.value});
+  };
+
+  resetSearchInput = (): void => {
+    this.setState({value: ''});
+  };
 
   _renderCollapsed() {
     const iconButtonType =
@@ -242,9 +281,12 @@ export class Search extends React.Component<SearchProps, SearchState> {
               innerRef={this.inputRef}
               onFocus={this.setFocused.bind(this, true)}
               onBlur={this.setFocused.bind(this, false)}
+              onChange={this.handleSearchInputChange}
+              value={this.state.value}
             />
             <IconButton
               icon={xIcon}
+              type="button"
               buttonType={IconButton.Types.Default}
               style={{...iconStyle, ...closeIconStyle}}
               onClick={this.closeMobileSearch}
@@ -263,20 +305,53 @@ export class Search extends React.Component<SearchProps, SearchState> {
     }
 
     const iconColor =
-      props.themeColor === HeaderTheme.White || this.state.focused
-        ? colors.licorice200
-        : colors.frenchVanilla100;
+      this.state.hovered && this.state.focused && props.themeColor === HeaderTheme.White
+        ? colors.licorice500
+        : this.state.hovered && this.state.focused
+          ? colors.licorice500
+          : this.state.focused && props.themeColor === HeaderTheme.White
+            ? colors.licorice500
+            : this.state.focused
+              ? colors.licorice500
+              : this.state.hovered && props.themeColor === HeaderTheme.White
+                ? colors.licorice500
+                : this.state.hovered
+                  ? colors.frenchVanilla100
+                  : props.themeColor === HeaderTheme.White
+                    ? colors.licorice200
+                    : colors.frenchVanilla100;
 
     return (
       <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
-        <SystemIcon icon={searchIcon} style={iconStyle} color={iconColor} colorHover={iconColor} />
+        <SystemIcon
+          icon={searchIcon}
+          style={{...iconStyle, pointerEvents: 'none'}}
+          color={iconColor}
+          colorHover={iconColor}
+        />
         <SearchInput
           {...props}
           type="search"
+          value={this.state.value}
           innerRef={this.inputRef}
+          onMouseEnter={() => this.handleHover(true)}
+          onMouseLeave={() => this.handleHover(false)}
+          onChange={this.handleSearchInputChange}
           onFocus={this.setFocused.bind(this, true)}
           onBlur={this.setFocused.bind(this, false)}
         />
+        <SearchReset
+          aria-label="Reset Search Input"
+          className="reset-input"
+          value={this.state.value}
+          onClick={this.resetSearchInput}
+        >
+          <SystemIcon
+            icon={xSmallIcon}
+            color={colors.licorice200}
+            colorHover={colors.licorice500}
+          />
+        </SearchReset>
       </SearchContainer>
     );
   }

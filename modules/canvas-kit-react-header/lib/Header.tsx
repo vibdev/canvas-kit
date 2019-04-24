@@ -13,6 +13,10 @@ import {makeMq} from '@workday/canvas-kit-react-common';
 
 export interface HeaderProps {
   /**
+   * A React node that will replace the menuToggle if provided.
+   */
+  menuToggle?: React.ReactNode;
+  /**
    * A HeaderTheme enum indicating which theme to use (White, Blue or Transparent)
    */
   themeColor: HeaderTheme;
@@ -73,7 +77,8 @@ const HeaderShell = styled('div')<HeaderProps>(
     position: 'relative',
   },
   ({variant, themeColor}) => ({
-    height: variant === HeaderVariant.Dub ? HeaderHeight.Small : HeaderHeight.Large,
+    // Only the variant Full has a large header, all the other one (Dub, Global) have a small header height
+    height: variant === HeaderVariant.Full ? HeaderHeight.Large : HeaderHeight.Small,
     background: themes[themeColor].background,
     ...themes[themeColor].depth,
     color: themes[themeColor].color,
@@ -191,6 +196,7 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
       alignItems: 'center',
       justifyContent: 'flex-end',
       height: '100%',
+      marginRight: spacing.m,
 
       '> *': {
         marginLeft: childrenSpacing,
@@ -216,23 +222,59 @@ const ChildrenSlot = styled('div')<HeaderProps>(({centeredNav = false, variant, 
 
 class Brand extends React.Component<HeaderProps> {
   render() {
-    return (
-      <span>
-        {this.props.variant === HeaderVariant.Dub &&
-          (this.props.brand || (
-            <DubLogoTitle
-              title={this.props.title ? this.props.title : ''}
-              themeColor={this.props.themeColor}
-            />
-          ))}
-        {this.props.variant === HeaderVariant.Full &&
-          (this.props.brand || (
-            <WorkdayLogoTitle
-              title={this.props.title ? this.props.title : ''}
-              themeColor={this.props.themeColor}
-            />
-          ))}
-      </span>
+    switch (this.props.variant) {
+      case HeaderVariant.Global: {
+        return <span>{this.props.brand}</span>;
+      }
+      case HeaderVariant.Full: {
+        return (
+          <span>
+            {this.props.brand || (
+              <WorkdayLogoTitle
+                title={this.props.title ? this.props.title : ''}
+                themeColor={this.props.themeColor}
+              />
+            )}
+          </span>
+        );
+      }
+      // HeaderVariant.Dub is default
+      default: {
+        return (
+          <span>
+            {this.props.brand || (
+              <DubLogoTitle
+                title={this.props.title ? this.props.title : ''}
+                themeColor={this.props.themeColor}
+              />
+            )}
+          </span>
+        );
+      }
+    }
+  }
+}
+
+class MenuIconButton extends React.Component<HeaderProps> {
+  render() {
+    const menuIconButtonProps = {
+      buttonType:
+        this.props.themeColor === HeaderTheme.White
+          ? IconButton.Types.Default
+          : IconButton.Types.Inverse,
+      icon: justifyIcon,
+    };
+
+    const menuSlot =
+      this.props.menuToggle &&
+      React.cloneElement(this.props.menuToggle as React.ReactElement<any>, {
+        onClick: this.props.onMenuClick,
+      });
+
+    return this.props.menuToggle ? (
+      menuSlot
+    ) : (
+      <IconButton {...menuIconButtonProps} className="canvas-header--menu-icon" />
     );
   }
 }
@@ -404,14 +446,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     // Screen size is smaller than our largest breakpoint so turn nav into a hamburger
     // TODO: This needs to get changed to IconButton when we get it restyled for headers
     const collapseMenu = this.props.children && this.state.screenSize !== 'lg';
-    const hamburgerIconProps = {
-      buttonType:
-        this.props.themeColor === HeaderTheme.White
-          ? IconButton.Types.Default
-          : IconButton.Types.Inverse,
-      icon: justifyIcon,
-      onClick: this.props.onMenuClick,
-    };
 
     return (
       <HeaderShell {...props}>
@@ -434,11 +468,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           />
         )}
         <ChildrenSlot {...props} centeredNav={centeredNav}>
-          {collapseMenu ? (
-            <IconButton {...hamburgerIconProps} className="canvas-header--menu-icon" tabIndex={0} />
-          ) : (
-            this.renderChildren(this.props.children)
-          )}
+          {collapseMenu ? <MenuIconButton {...props} /> : this.renderChildren(this.props.children)}
         </ChildrenSlot>
       </HeaderShell>
     );
