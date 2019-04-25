@@ -84,7 +84,7 @@ Default: `depth[2]`
 
 ---
 
-#### `transformOrigin: PopoupOrigin`
+#### `transformOrigin: TransformOrigin`
 
 > Origin from which the popup will animate from
 
