@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.4...@workday/canvas-kit-react@1.4.5) (2019-04-25)
+
+
+### Bug Fixes
+
+* add tooltip to global dependency ([589fb0d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/589fb0d))
+* add tooltip to package and update styles ([abfa955](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/abfa955))
+
+
+
+
+
 ## [1.4.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.3...@workday/canvas-kit-react@1.4.4) (2019-04-24)
 
 **Note:** Version bump only for package @workday/canvas-kit-react

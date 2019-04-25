@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.6...@workday/canvas-kit-react-popup@0.1.7) (2019-04-25)
+
+
+### Bug Fixes
+
+* update snaps for popup ([96d712a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/96d712a))
+* **popup:** fix story ([d7fa030](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/d7fa030))
+* **tooltips:** fix styling and readme ([495beca](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/495beca))
+
+
+
+
+
 ## [0.1.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.5...@workday/canvas-kit-react-popup@0.1.6) (2019-04-24)
 
 
