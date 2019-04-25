@@ -45,9 +45,8 @@ const TooltipContainer = styled('div')<TooltipProps>(
 
 export default class Tooltip extends React.Component<TooltipProps, {}> {
   public render() {
-    const {...otherProps} = this.props;
     return (
-      <TooltipContainer {...otherProps} role="tooltip">
+      <TooltipContainer {...this.props} role="tooltip">
         {this.props.children}
       </TooltipContainer>
     );
