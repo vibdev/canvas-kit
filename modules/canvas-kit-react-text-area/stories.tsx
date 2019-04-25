@@ -5,6 +5,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
 
 import {TextArea, TextAreaProps} from './index'; // tslint:disable-line:import-name
+import {TextAreaResize} from './lib/shared/types';
 import README from './README.md';
 
 export class Input extends React.Component<TextAreaProps, {}> {
@@ -29,12 +30,13 @@ export class Input extends React.Component<TextAreaProps, {}> {
 export const TextAreas = {
   Plain: <TextArea />,
   Placeholder: <TextArea placeholder="Placeholder" />,
+  XResize: <TextArea placeholder="Resizable Horizontally" resize={TextAreaResize.Horizontal} />,
+  YResize: <TextArea placeholder="Resizable Vertically" resize={TextAreaResize.Vertical} />,
+  NoResize: <TextArea placeholder="Not Resizable" resize={TextAreaResize.None} />,
+  XYResize: <TextArea placeholder="Resizable" resize={TextAreaResize.Both} />,
   Disabled: <TextArea disabled={true} />,
   DisabledPlaceholder: <TextArea placeholder="Placeholder" disabled={true} />,
-  Alert: <TextArea error={TextArea.ErrorType.Alert} defaultValue="Alert" />,
-  Error: <TextArea error={TextArea.ErrorType.Error} defaultValue="Error" />,
   Grow: <TextArea placeholder="Placeholder" grow={true} />,
-  GrowError: <TextArea placeholder="Placeholder" grow={true} error={TextArea.ErrorType.Error} />,
 };
 
 storiesOf('Canvas Kit/Text Area', module)
@@ -45,7 +47,8 @@ storiesOf('Canvas Kit/Text Area', module)
   .add('With placeholder', () => TextAreas.Placeholder)
   .add('Disabled', () => TextAreas.Disabled)
   .add('Disabled with placeholder', () => TextAreas.DisabledPlaceholder)
-  .add('Alert', () => TextAreas.Alert)
-  .add('Error', () => TextAreas.Error)
   .add('Grow', () => TextAreas.Grow)
-  .add('Grow - Error', () => TextAreas.GrowError);
+  .add('Resizable Horizontally', () => TextAreas.XResize)
+  .add('Resizable Vertically', () => TextAreas.YResize)
+  .add('Not Resizable', () => TextAreas.NoResize)
+  .add('Resizable', () => TextAreas.XYResize);
