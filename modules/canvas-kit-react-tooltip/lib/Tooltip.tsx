@@ -6,8 +6,6 @@ import {keyframes} from 'emotion';
 
 export interface TooltipProps {
   transformOrigin?: TransformOrigin;
-  onMouseEnter?: (e: React.MouseEvent) => void;
-  onMouseLeave?: (e: React.MouseEvent) => void;
 }
 
 const tooltipAnimation = keyframes`
@@ -21,7 +19,7 @@ const tooltipAnimation = keyframes`
   }
   `;
 
-const TooltipContainer = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
+const TooltipContainer = styled('div')<TooltipProps>(
   {
     display: 'inline-flex',
     borderRadius: spacing.xxxs,
@@ -47,14 +45,9 @@ const TooltipContainer = styled('div')<Pick<TooltipProps, 'transformOrigin'>>(
 
 export default class Tooltip extends React.Component<TooltipProps, {}> {
   public render() {
-    const {onMouseEnter, onMouseLeave, ...otherProps} = this.props;
+    const {...otherProps} = this.props;
     return (
-      <TooltipContainer
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        {...otherProps}
-        role="tooltip"
-      >
+      <TooltipContainer {...otherProps} role="tooltip">
         {this.props.children}
       </TooltipContainer>
     );

@@ -98,17 +98,3 @@ Default:
   vertical: 'top',
 }
 ```
-
----
-
-#### `onMouseEnter: (e: React.MouseEvent) => void`
-
-> Callback to handle onMouseEnter of the tooltip
-
----
-
-#### `onMouseLeave: (e: React.MouseEvent) => void`
-
-> Callback to handle onMouseLeave of the tooltip
-
----
