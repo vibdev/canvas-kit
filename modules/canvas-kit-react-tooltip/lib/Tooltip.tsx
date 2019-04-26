@@ -1,23 +1,27 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {TransformOrigin} from '@workday/canvas-kit-react-common';
+import {TransformOrigin, getTranslateFromOrigin} from '@workday/canvas-kit-react-common';
 import {keyframes} from 'emotion';
 
 export interface TooltipProps {
   transformOrigin: TransformOrigin;
 }
 
-const tooltipAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+const tooltipAnimation = (transformOrigin: TransformOrigin) => {
+  const translate = getTranslateFromOrigin(transformOrigin, spacing.xxxs);
+
+  return keyframes`
+    0% {
+      opacity: 0;
+      transform: translate(${translate.x}px, ${translate.y}px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
   `;
+};
 
 const TooltipContainer = styled('div')<TooltipProps>(
   {
@@ -25,9 +29,6 @@ const TooltipContainer = styled('div')<TooltipProps>(
     borderRadius: spacing.xxxs,
     padding: spacing.xxs,
     backgroundColor: 'rgba(0,0,0,.85)',
-    animation: tooltipAnimation,
-    animationDuration: '150ms',
-    animationTimingFunction: 'ease-out',
     color: colors.frenchVanilla100,
     fontSize: 13,
     margin: spacing.xxxs,
@@ -37,6 +38,9 @@ const TooltipContainer = styled('div')<TooltipProps>(
     },
   },
   ({transformOrigin}) => ({
+    animation: tooltipAnimation(transformOrigin),
+    animationDuration: '150ms',
+    animationTimingFunction: 'ease-out',
     transformOrigin: transformOrigin
       ? `${transformOrigin.vertical} ${transformOrigin.horizontal}`
       : 'top center',
