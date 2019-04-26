@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-tooltip/compare/@workday/canvas-kit-react-tooltip@0.1.0...@workday/canvas-kit-react-tooltip@0.1.1) (2019-04-26)
+
+
+### Bug Fixes
+
+* **tooltip:** Add defaultProp for transform origin ([3ff1654](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-tooltip/commits/3ff1654))
+
+
+
+
+
 # 0.1.0 (2019-04-25)
 
 
