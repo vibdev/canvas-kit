@@ -5,7 +5,7 @@ import {TransformOrigin} from '@workday/canvas-kit-react-common';
 import {keyframes} from 'emotion';
 
 export interface TooltipProps {
-  transformOrigin?: TransformOrigin;
+  transformOrigin: TransformOrigin;
 }
 
 const tooltipAnimation = keyframes`
@@ -44,6 +44,13 @@ const TooltipContainer = styled('div')<TooltipProps>(
 );
 
 export default class Tooltip extends React.Component<TooltipProps, {}> {
+  static defaultProps = {
+    transformOrigin: {
+      horizontal: 'center',
+      vertical: 'bottom',
+    },
+  };
+
   public render() {
     return (
       <TooltipContainer {...this.props} role="tooltip">
