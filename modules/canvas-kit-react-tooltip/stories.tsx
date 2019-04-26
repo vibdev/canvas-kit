@@ -29,7 +29,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
     const {open} = this.state;
     return (
       <div>
-        <h3>Default Tooltip</h3>
+        <h3>Hover on the icon</h3>
         <div
           style={{display: 'inline-flex'}}
           ref={this.tooltipRef}
@@ -40,7 +40,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
         >
           <IconButton buttonType={IconButton.Types.Default} icon={xIcon} />
         </div>
-        <Popper open={open} anchorEl={this.state.anchorEl} placement={'bottom'}>
+        <Popper open={open} anchorEl={this.state.anchorEl} placement={'top'}>
           <Tooltip>Close</Tooltip>
         </Popper>
       </div>

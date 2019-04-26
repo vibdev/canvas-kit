@@ -4,15 +4,12 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 .emotion-7 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -225,15 +222,12 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 .emotion-7 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -442,15 +436,12 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 .emotion-7 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -659,15 +650,12 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -711,15 +699,12 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -763,15 +748,12 @@ exports[`Popup Snapshots renders as expected 1`] = `
 .emotion-2 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  -webkit-animation: animation-1htt9yb;
+  animation: animation-1htt9yb;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;

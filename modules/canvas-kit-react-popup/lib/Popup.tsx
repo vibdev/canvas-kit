@@ -3,7 +3,7 @@ import Card from '@workday/canvas-kit-react-card';
 import styled from 'react-emotion';
 import {IconButton} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors, spacing} from '@workday/canvas-kit-react-core';
-import {TransformOrigin} from '@workday/canvas-kit-react-common';
+import {TransformOrigin, getTranslateFromOrigin} from '@workday/canvas-kit-react-common';
 import {xIcon} from '@workday/canvas-system-icons-web';
 import {keyframes} from 'emotion';
 
@@ -24,27 +24,30 @@ export interface PopupProps {
 
 const closeIconSpacing = spacing.xxs;
 
-const popupAnimation = keyframes`
-0% {
-  opacity: 0;
-  transform: scale(0.8);
-}
-100% {
-  opacity: 1;
-  transform: scale(1);
-}
-`;
+const popupAnimation = (transformOrigin: TransformOrigin) => {
+  const translate = getTranslateFromOrigin(transformOrigin, spacing.xxs);
+
+  return keyframes`
+    0% {
+      opacity: 0;
+      transform: translate(${translate.x}px, ${translate.y}px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  `;
+};
 
 const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
   {
     position: 'relative',
     backgroundColor: colors.frenchVanilla100,
-    animation: popupAnimation,
-    animationDuration: '150ms',
-    animationTimingFunction: 'ease-out',
-    width: 'min-content',
   },
   ({transformOrigin}) => ({
+    animation: popupAnimation(transformOrigin),
+    animationDuration: '150ms',
+    animationTimingFunction: 'ease-out',
     transformOrigin: transformOrigin
       ? `${transformOrigin.vertical} ${transformOrigin.horizontal}`
       : 'top center',

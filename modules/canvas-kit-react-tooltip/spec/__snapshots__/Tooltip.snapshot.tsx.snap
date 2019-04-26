@@ -9,18 +9,18 @@ exports[`Tooltip Snapshots renders a tooltip with a child element 1`] = `
   border-radius: 4px;
   padding: 8px;
   background-color: rgba(0,0,0,.85);
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 4px;
+  -webkit-animation: animation-ttfnet;
+  animation: animation-ttfnet;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  color: #ffffff;
-  font-size: 13px;
-  margin: 4px;
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
-  transform-origin: top center;
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
 }
 
 .emotion-0 a {
@@ -46,15 +46,15 @@ exports[`Tooltip Snapshots renders a tooltip with a different transformOrigin 1`
   border-radius: 4px;
   padding: 8px;
   background-color: rgba(0,0,0,.85);
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 4px;
+  -webkit-animation: animation-4n2zzm;
+  animation: animation-4n2zzm;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  color: #ffffff;
-  font-size: 13px;
-  margin: 4px;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
@@ -83,15 +83,15 @@ exports[`Tooltip Snapshots renders a tooltip with a link 1`] = `
   border-radius: 4px;
   padding: 8px;
   background-color: rgba(0,0,0,.85);
-  -webkit-animation: animation-ao8nm6;
-  animation: animation-ao8nm6;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 4px;
+  -webkit-animation: animation-4n2zzm;
+  animation: animation-4n2zzm;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
-  color: #ffffff;
-  font-size: 13px;
-  margin: 4px;
   -webkit-transform-origin: top center;
   -ms-transform-origin: top center;
   transform-origin: top center;
