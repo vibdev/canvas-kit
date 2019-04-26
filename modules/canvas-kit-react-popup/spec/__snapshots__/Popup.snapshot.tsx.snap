@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Popup Snapshots renders Popup with children elements 1`] = `
-.emotion-7 {
+.emotion-6 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-1htt9yb;
@@ -15,7 +15,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
   transform-origin: top center;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -23,10 +23,10 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -54,6 +54,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
+  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -82,7 +83,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -91,13 +92,14 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #dfe2e6;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -110,7 +112,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -138,9 +140,9 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -175,7 +177,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
   fill: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -184,14 +186,14 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-6 emotion-7"
   role="dialog"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-2 emotion-3"
   >
     <button
-      className="emotion-1 emotion-2"
+      className="emotion-1"
       onClick={[MockFunction]}
     >
       <span
@@ -205,10 +207,10 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-5"
   >
     <div
-      className="emotion-5"
+      className="emotion-4"
     >
       <span>
         hello world
@@ -219,7 +221,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 `;
 
 exports[`Popup Snapshots renders Popup with close icon 1`] = `
-.emotion-7 {
+.emotion-6 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-1htt9yb;
@@ -233,7 +235,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
   transform-origin: top center;
 }
 
-.emotion-6 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -241,7 +243,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
   padding: 16px;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -249,10 +251,10 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -280,6 +282,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
+  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -308,7 +311,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -317,13 +320,14 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #dfe2e6;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -336,7 +340,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -364,9 +368,9 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -402,14 +406,14 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-6 emotion-7"
   role="dialog"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-2 emotion-3"
   >
     <button
-      className="emotion-1 emotion-2"
+      className="emotion-1"
       onClick={[MockFunction]}
     >
       <span
@@ -423,17 +427,17 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-5"
   >
     <div
-      className="emotion-5"
+      className="emotion-4"
     />
   </div>
 </div>
 `;
 
 exports[`Popup Snapshots renders Popup with different padding 1`] = `
-.emotion-7 {
+.emotion-6 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-1htt9yb;
@@ -447,7 +451,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
   transform-origin: top center;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -455,10 +459,10 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -486,6 +490,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
+  margin: -8px;
   width: 40px;
   height: 40px;
 }
@@ -514,7 +519,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:focus {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -523,13 +528,14 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #dfe2e6;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -542,7 +548,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: transparent;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -570,9 +576,9 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-0 {
@@ -607,7 +613,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
   fill: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -616,14 +622,14 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-6 emotion-7"
   role="dialog"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-2 emotion-3"
   >
     <button
-      className="emotion-1 emotion-2"
+      className="emotion-1"
       onClick={[MockFunction]}
     >
       <span
@@ -637,10 +643,10 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-5"
   >
     <div
-      className="emotion-5"
+      className="emotion-4"
     />
   </div>
 </div>

@@ -22,7 +22,7 @@ export interface PopupProps {
   depth?: CanvasDepthValue;
 }
 
-const closeIconSpacing = spacing.xxs;
+const closeIconSpacing = 12;
 
 const popupAnimation = (transformOrigin: TransformOrigin) => {
   const translate = getTranslateFromOrigin(transformOrigin, spacing.xxs);
@@ -74,7 +74,7 @@ export default class Popup extends React.Component<PopupProps> {
       <Container role="dialog" {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
-            <IconButton buttonType={IconButton.Types.Default} onClick={handleClose} icon={xIcon} />
+            <IconButton buttonType={IconButton.Types.Plain} onClick={handleClose} icon={xIcon} />
           </CloseIconContainer>
         )}
         <Card depth={depth} heading={heading} width={width} padding={padding}>
