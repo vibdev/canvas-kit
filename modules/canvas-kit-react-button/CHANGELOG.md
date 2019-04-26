@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.3...@workday/canvas-kit-react-button@0.20.4) (2019-04-26)
+
+
+### Bug Fixes
+
+* **beta-button:** Add correct defaultProps to beta_Button ([6a64248](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6a64248))
+
+
+
+
+
 ## [0.20.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.2...@workday/canvas-kit-react-button@0.20.3) (2019-04-26)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-button
