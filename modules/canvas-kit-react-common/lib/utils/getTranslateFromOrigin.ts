@@ -20,10 +20,10 @@ const translateMap: translateMapType = {
 };
 
 /**
- * Generates a media queries given a set of named breakpoints
- * @param {Object} breakpoints Object of key-value pairs where the key is the name of
- * the breakpoint size and the value is the min-width of that breakpoint
- * @returns {Object} A set of CSS media queries for each breakpoint size
+ * Gets the x and y distance values needed to translate from a given transform origin to 0,0
+ * @param {Object} transformOrigin The origin of the transform (i.e. top left)
+ * @param {string} distance The distance to translate (as a canvas spacing value).
+ * @returns {Object} An object with the x and y distance values needed to translate.
  */
 export const getTranslateFromOrigin = (
   transformOrigin: TransformOrigin,
