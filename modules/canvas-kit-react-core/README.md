@@ -276,7 +276,7 @@ import {type} from '@workday/canvas-kit-react-core';
 The usage is the same as the current hierarchy, you just need a different import.
 
 ```tsx
-import {beta_type} from '@workday/canvas-kit-react-core';
+import {beta_type as type} from '@workday/canvas-kit-react-core';
 
 const MyLabel = styled('label')({
   ...type.body,
