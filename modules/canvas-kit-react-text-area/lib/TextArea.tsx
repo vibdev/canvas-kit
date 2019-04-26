@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {GrowthBehavior} from '@workday/canvas-kit-react-common';
-import {TextAreaResize} from './shared/types';
+import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
 import {
   colors,
   inputColors,
@@ -14,6 +13,7 @@ export interface TextAreaProps
   extends GrowthBehavior,
     React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   disabled?: boolean;
+  error?: ErrorType;
   inputRef?: React.Ref<HTMLTextAreaElement>;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   placeholder?: string;
@@ -23,16 +23,21 @@ export interface TextAreaProps
   value?: any;
 }
 
+export enum TextAreaResize {
+  None = 'none',
+  Both = 'both',
+  Horizontal = 'horizontal',
+  Vertical = 'vertical',
+}
+
 const TextArea = styled('textarea')<TextAreaProps>(
   {
     ...type.body,
-    border: `1px solid ${inputColors.border}`,
     display: 'block',
     backgroundColor: inputColors.background,
     borderRadius: 4,
     boxSizing: 'border-box',
-    height: 64,
-    minHeight: 40,
+    minHeight: 64,
     minWidth: 280,
     transition: '0.2s box-shadow, 0.2s border-color',
     padding: spacingNumbers.xxs, // Compensate for border
@@ -41,9 +46,6 @@ const TextArea = styled('textarea')<TextAreaProps>(
     },
     '&::placeholder': {
       color: typeColors.hint,
-    },
-    '&:hover': {
-      borderColor: inputColors.hoverBorder,
     },
     '&:focus:not([disabled])': {
       borderColor: inputColors.focusBorder,
@@ -59,13 +61,24 @@ const TextArea = styled('textarea')<TextAreaProps>(
       },
     },
   },
-  ({resize, grow}) => ({
+  ({resize, grow, error}) => ({
     width: grow ? '100%' : undefined,
     resize: grow ? TextAreaResize.Vertical : resize,
+    border:
+      error === ErrorType.Error
+        ? `1px solid ${inputColors.error.border}`
+        : `1px solid ${inputColors.border}`,
+    boxShadow:
+      error === ErrorType.Error ? `inset 0 0 0 1px ${inputColors.error.border}` : undefined,
+    '&:hover': {
+      borderColor: error === ErrorType.Error ? inputColors.error.border : inputColors.hoverBorder,
+    },
   })
 );
 
 export default class TextInput extends React.Component<TextAreaProps> {
+  static ErrorType = ErrorType;
+
   static defaultProps = {
     type: 'text',
     resize: TextAreaResize.Both,

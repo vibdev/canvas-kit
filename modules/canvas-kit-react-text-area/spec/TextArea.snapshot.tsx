@@ -12,4 +12,9 @@ describe('TextArea Snapshots', () => {
     const component = renderer.create(<TextArea grow={true} />);
     expect(component).toMatchSnapshot();
   });
+
+  test('error', () => {
+    const component = renderer.create(<TextArea error={TextArea.ErrorType.Error} />);
+    expect(component).toMatchSnapshot();
+  });
 });

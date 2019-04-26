@@ -4,8 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
 
-import {TextArea, TextAreaProps} from './index'; // tslint:disable-line:import-name
-import {TextAreaResize} from './lib/shared/types';
+import {TextArea, TextAreaProps, TextAreaResize} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 export class Input extends React.Component<TextAreaProps, {}> {
@@ -36,6 +35,7 @@ export const TextAreas = {
   XYResize: <TextArea placeholder="Resizable" resize={TextAreaResize.Both} />,
   Disabled: <TextArea disabled={true} />,
   DisabledPlaceholder: <TextArea placeholder="Placeholder" disabled={true} />,
+  Error: <TextArea error={TextArea.ErrorType.Error} value="Error" />,
   Grow: <TextArea placeholder="Placeholder" grow={true} />,
 };
 
@@ -47,6 +47,7 @@ storiesOf('Canvas Kit/Text Area', module)
   .add('With placeholder', () => TextAreas.Placeholder)
   .add('Disabled', () => TextAreas.Disabled)
   .add('Disabled with placeholder', () => TextAreas.DisabledPlaceholder)
+  .add('Error', () => TextAreas.Error)
   .add('Grow', () => TextAreas.Grow)
   .add('Resizable Horizontally', () => TextAreas.XResize)
   .add('Resizable Vertically', () => TextAreas.YResize)
