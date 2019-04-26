@@ -19,7 +19,6 @@ export interface TextAreaProps
   placeholder?: string;
   readOnly?: boolean;
   resize: TextAreaResize;
-  type?: string;
   value?: any;
 }
 

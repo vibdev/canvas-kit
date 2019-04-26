@@ -53,33 +53,23 @@ Default: `false`
 
 > The type of error to display, if any.
 
-| Type  | Description                     |
-| ----- | ------------------------------- |
-| Error | Red outline with error icon.    |
-| Alert | Yellow outline with alert icon. |
+| Type  | Description                  |
+| ----- | ---------------------------- |
+| Error | Red outline with error icon. |
 
 Default: `undefined`
 
 ---
 
-#### `hasIcon: boolean`
+#### `inputRef: React.Ref<HTMLTextAreaElement>`
 
-> Whether or not the text area will have an icon displayed. If yes, extra padding will be added to
-> the right.
-
-Default: `false`
-
----
-
-#### `inputRef: React.Ref<HTMLAreaElement>`
-
-> The ref callback for the inner input element.
+> The ref callback for the inner text area element.
 
 Default: `undefined`
 
 ---
 
-#### `onChange: React.ChangeEventHandler<HTMLAreaElement>`
+#### `onChange: React.ChangeEventHandler<HTMLTextAreaElement>`
 
 > The callback fired when the value is changed.
 
@@ -103,18 +93,19 @@ Default: `false`
 
 ---
 
-#### `type: string`
+#### `value: any`
 
-> HTML5 input type
+> Text Area value
 
-Default: `text`
+Default: `undefined`
 
 ---
 
-#### `value: any`
+#### `resize: TextAreaResize`
 
-> Area value
+> Set resize constraints on the text area
 
-Default: `undefined`
+Default: `TextAreaResize.Both` Other options: `TextAreaResize.None`, `TextAreaResize.Vertical`,
+`TextAreaResize.Horizontal`
 
 ---
