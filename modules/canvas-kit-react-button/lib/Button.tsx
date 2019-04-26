@@ -73,6 +73,12 @@ export class beta_Button extends React.Component<ButtonProps<BetaButtonTypes>> {
   public static Types = BetaButtonTypes;
   public static Sizes = ButtonSizes;
 
+  static defaultProps = {
+    buttonSize: ButtonSizes.Medium,
+    buttonType: BetaButtonTypes.Secondary,
+    grow: false,
+  };
+
   render() {
     // TODO (beta button): Move this logic back into Button compponent
     // Restrict Hightlight button to only being sized Large, Medium with an Icon
