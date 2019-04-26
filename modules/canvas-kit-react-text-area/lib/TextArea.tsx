@@ -79,7 +79,6 @@ export default class TextInput extends React.Component<TextAreaProps> {
   static ErrorType = ErrorType;
 
   static defaultProps = {
-    type: 'text',
     resize: TextAreaResize.Both,
   };
 
