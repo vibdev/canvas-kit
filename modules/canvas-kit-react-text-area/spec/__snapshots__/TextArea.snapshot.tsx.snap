@@ -75,7 +75,6 @@ exports[`TextArea Snapshots error 1`] = `
 
 <textarea
   className="emotion-0 emotion-1"
-  type="text"
 />
 `;
 
@@ -154,7 +153,6 @@ exports[`TextArea Snapshots grow 1`] = `
 
 <textarea
   className="emotion-0 emotion-1"
-  type="text"
 />
 `;
 
@@ -232,6 +230,5 @@ exports[`TextArea Snapshots renders as expected 1`] = `
 
 <textarea
   className="emotion-0 emotion-1"
-  type="text"
 />
 `;
