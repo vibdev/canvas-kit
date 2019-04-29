@@ -192,7 +192,8 @@ Default: `24`
 
 #### `color: string`
 
-> Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property if defined.
+> Icon color. This will define `accent` and `fill`. `accent` and `fill` will override this property
+> if defined.
 
 Default: `colors.primary.iconStandard`
 

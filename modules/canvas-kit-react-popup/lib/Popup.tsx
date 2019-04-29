@@ -48,9 +48,7 @@ const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
     animation: popupAnimation(transformOrigin),
     animationDuration: '150ms',
     animationTimingFunction: 'ease-out',
-    transformOrigin: transformOrigin
-      ? `${transformOrigin.vertical} ${transformOrigin.horizontal}`
-      : 'top center',
+    transformOrigin: `${transformOrigin.vertical} ${transformOrigin.horizontal}`,
   })
 );
 
