@@ -44,7 +44,7 @@ const TextArea = styled('textarea')<TextAreaProps>(
       display: 'none',
     },
     '&::placeholder': {
-      color: typeColors.hint,
+      color: inputColors.placeholder,
     },
     '&:focus:not([disabled])': {
       borderColor: inputColors.focusBorder,
@@ -56,7 +56,7 @@ const TextArea = styled('textarea')<TextAreaProps>(
       borderColor: inputColors.disabled.border,
       color: inputColors.disabled.text,
       '&::placeholder': {
-        color: colors.licorice100,
+        color: inputColors.disabled.text,
       },
     },
   },
