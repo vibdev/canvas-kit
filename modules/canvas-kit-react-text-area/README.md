@@ -1,6 +1,6 @@
 # Canvas Kit Text Area
 
-Canvas-styled React text input components.
+Canvas-styled React textarea component.
 
 ## Installation
 
@@ -53,11 +53,10 @@ Default: `false`
 
 > The type of error to display, if any.
 
-| Type  | Description                  |
-| ----- | ---------------------------- |
-| Error | Red outline with error icon. |
-
-Default: `undefined`
+| Type  | Description                     |
+| ----- | ------------------------------- |
+| Error | Red outline with error icon.    |
+| Alert | Yellow outline with alert icon. |
 
 ---
 
@@ -65,15 +64,11 @@ Default: `undefined`
 
 > The ref callback for the inner text area element.
 
-Default: `undefined`
-
 ---
 
 #### `onChange: React.ChangeEventHandler<HTMLTextAreaElement>`
 
 > The callback fired when the value is changed.
-
-Default: `undefined`
 
 ---
 
@@ -97,15 +92,19 @@ Default: `false`
 
 > Text Area value
 
-Default: `undefined`
-
 ---
 
 #### `resize: TextAreaResize`
 
 > Set resize constraints on the text area
 
-Default: `TextAreaResize.Both` Other options: `TextAreaResize.None`, `TextAreaResize.Vertical`,
-`TextAreaResize.Horizontal`
+| Direction                 |
+| ------------------------- |
+| TextAreaResize.Both       |
+| TextAreaResize.None       |
+| TextAreaResize.Vertical   |
+| TextAreaResize.Horizontal |
+
+Default: `TextAreaResize.Both`
 
 ---
