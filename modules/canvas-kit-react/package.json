@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@workday/canvas-kit-react-avatar": "^0.4.12",
+    "@workday/canvas-kit-react-banner": "^0.1.0",
     "@workday/canvas-kit-react-button": "^0.20.6",
     "@workday/canvas-kit-react-card": "^0.3.8",
     "@workday/canvas-kit-react-color-picker": "^0.1.5",
