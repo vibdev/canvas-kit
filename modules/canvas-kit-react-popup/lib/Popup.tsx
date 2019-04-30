@@ -22,7 +22,7 @@ export interface PopupProps {
   depth?: CanvasDepthValue;
 }
 
-const closeIconSpacing = 12;
+const closeIconSpacing = spacing.xs;
 
 const popupAnimation = (transformOrigin: TransformOrigin) => {
   const translate = getTranslateFromOrigin(transformOrigin, spacing.xxs);
