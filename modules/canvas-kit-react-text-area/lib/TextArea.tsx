@@ -1,13 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
-import {
-  colors,
-  inputColors,
-  spacingNumbers,
-  type,
-  typeColors,
-} from '@workday/canvas-kit-react-core';
+import {inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 
 export interface TextAreaProps
   extends GrowthBehavior,
@@ -18,11 +12,11 @@ export interface TextAreaProps
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   placeholder?: string;
   readOnly?: boolean;
-  resize: TextAreaResize;
+  resize: ResizeDirection;
   value?: any;
 }
 
-export enum TextAreaResize {
+export enum ResizeDirection {
   None = 'none',
   Both = 'both',
   Horizontal = 'horizontal',
@@ -62,7 +56,7 @@ const TextArea = styled('textarea')<TextAreaProps>(
   },
   ({resize, grow, error}) => ({
     width: grow ? '100%' : undefined,
-    resize: grow ? TextAreaResize.Vertical : resize,
+    resize: grow ? ResizeDirection.Vertical : resize,
     border:
       error === ErrorType.Error
         ? `1px solid ${inputColors.error.border}`
@@ -79,7 +73,7 @@ export default class TextInput extends React.Component<TextAreaProps> {
   static ErrorType = ErrorType;
 
   static defaultProps = {
-    resize: TextAreaResize.Both,
+    resize: ResizeDirection.Both,
   };
 
   render() {

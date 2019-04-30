@@ -94,17 +94,17 @@ Default: `false`
 
 ---
 
-#### `resize: TextAreaResize`
+#### `resize: TextArea.ResizeDirection`
 
 > Set resize constraints on the text area
 
-| Direction                 |
-| ------------------------- |
-| TextAreaResize.Both       |
-| TextAreaResize.None       |
-| TextAreaResize.Vertical   |
-| TextAreaResize.Horizontal |
+| Direction                           |
+| ----------------------------------- |
+| TextArea.ResizeDirection.Both       |
+| TextArea.ResizeDirection.None       |
+| TextArea.ResizeDirection.Vertical   |
+| TextArea.ResizeDirection.Horizontal |
 
-Default: `TextAreaResize.Both`
+Default: `TextArea.ResizeDirection.Both`
 
 ---
