@@ -94,19 +94,24 @@ const RadioInput = styled('input')<RadioProps>(
     },
     [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
       [data-whatinput="touch"] &:focus ~ div:first-of-type,
-      [data-whatinput="touch"] &:focus ~ div:first-of-type`]: {
+      [data-whatinput="pointer"] &:focus ~ div:first-of-type`]: {
       ...focusRing(0, 0),
       borderWidth: '1px',
       borderColor: checked ? colors.blueberry400 : inputColors.border,
       '&:hover': {
-        borderColor: checked ? colors.blueberry400 : inputColors.border,
+        borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
       },
     },
     [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
+      backgroundColor: checked
+        ? colors.blueberry400
+        : disabled
+          ? inputColors.disabled.background
+          : 'white',
       borderColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.border
+          ? inputColors.disabled.border
           : inputColors.hoverBorder,
       borderWidth: '1px',
     },
@@ -131,20 +136,16 @@ const RadioBackground = styled('div')<RadioProps>(
     width: radioWidth,
   },
   ({checked, disabled}) => ({
-    borderColor: checked ? colors.blueberry400 : inputColors.border,
+    borderColor: checked
+      ? colors.blueberry400
+      : disabled
+        ? inputColors.disabled.border
+        : inputColors.border,
     backgroundColor: checked
       ? colors.blueberry400
       : disabled
         ? inputColors.disabled.background
         : 'white',
-    '&:hover': {
-      backgroundColor: checked
-        ? colors.blueberry400
-        : disabled
-          ? inputColors.disabled.background
-          : 'white',
-      borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
-    },
   })
 );
 
@@ -171,7 +172,7 @@ const RadioLabel = styled('label')<{disabled?: boolean}>(
     ...canvas.type.body,
     paddingLeft: radioLabelDistance,
   },
-  ({disabled}) => (disabled ? canvas.type.variant.hint : {cursor: 'pointer'})
+  ({disabled}) => (disabled ? {color: inputColors.disabled.text} : {cursor: 'pointer'})
 );
 
 export default class Radio extends React.Component<RadioProps> {

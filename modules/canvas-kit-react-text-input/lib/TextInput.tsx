@@ -2,13 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {Interpolation} from 'create-emotion-styled';
 import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
-import {
-  colors,
-  inputColors,
-  spacingNumbers,
-  type,
-  typeColors,
-} from '@workday/canvas-kit-react-core';
+import {colors, inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import InputIconContainer from './InputIconContainer';
@@ -40,10 +34,10 @@ export const textInputStyles: Interpolation<TextInputProps> = [
     transition: '0.2s box-shadow, 0.2s border-color',
     padding: spacingNumbers.xxs, // Compensate for border
     '&::placeholder': {
-      color: typeColors.hint,
+      color: inputColors.placeholder,
     },
     '&:hover': {
-      borderColor: inputColors.hoverBorder,
+      borderColor: colors.licorice500,
     },
     '&:focus:not([disabled])': {
       borderColor: inputColors.focusBorder,
@@ -55,7 +49,7 @@ export const textInputStyles: Interpolation<TextInputProps> = [
       borderColor: inputColors.disabled.border,
       color: inputColors.disabled.text,
       '&::placeholder': {
-        color: colors.licorice100,
+        color: inputColors.disabled.text,
       },
     },
   },

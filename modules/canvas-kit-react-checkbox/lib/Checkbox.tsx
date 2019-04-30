@@ -91,7 +91,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
   ({checked, disabled}) => ({
     cursor: disabled ? undefined : 'pointer',
     '&:focus:hover ~ div:first-of-type': {
-      borderColor: disabled ? inputColors.border : colors.blueberry400,
+      borderColor: disabled ? inputColors.disabled.border : colors.blueberry400,
     },
     [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
       [data-whatinput="touch"] &:focus ~ div:first-of-type,
@@ -101,10 +101,15 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       borderColor: checked ? colors.blueberry400 : inputColors.border,
     },
     [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
+      backgroundColor: checked
+        ? colors.blueberry400
+        : disabled
+          ? inputColors.disabled.background
+          : 'white',
       borderColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.border
+          ? inputColors.disabled.border
           : inputColors.hoverBorder,
     },
   })
@@ -128,20 +133,16 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     width: checkboxWidth,
   },
   ({checked, disabled}) => ({
-    borderColor: checked ? colors.blueberry400 : inputColors.border,
+    borderColor: checked
+      ? colors.blueberry400
+      : disabled
+        ? inputColors.disabled.border
+        : inputColors.border,
     backgroundColor: checked
       ? colors.blueberry400
       : disabled
         ? inputColors.disabled.background
         : 'white',
-    '&:hover': {
-      backgroundColor: checked
-        ? colors.blueberry400
-        : disabled
-          ? inputColors.disabled.background
-          : 'white',
-      borderColor: checked ? colors.blueberry400 : inputColors.hoverBorder,
-    },
   })
 );
 
@@ -164,7 +165,7 @@ const CheckboxLabel = styled('label')<{disabled?: boolean}>(
     ...canvas.type.body,
     paddingLeft: checkboxLabelDistance,
   },
-  ({disabled}) => (disabled ? canvas.type.variant.hint : {cursor: 'pointer'})
+  ({disabled}) => (disabled ? {color: inputColors.disabled.text} : {cursor: 'pointer'})
 );
 
 export default class Checkbox extends React.Component<CheckboxProps> {
