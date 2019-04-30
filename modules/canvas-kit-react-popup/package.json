@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-popup",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Popup to display some content on top of another",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",

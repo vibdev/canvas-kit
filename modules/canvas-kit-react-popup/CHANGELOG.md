@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.11...@workday/canvas-kit-react-popup@0.1.12) (2019-04-30)
+
+
+### Bug Fixes
+
+* **popup:** close icon styling ([216840f](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/216840f))
+* **popup:** Use spacing for value ([e7d08dd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/e7d08dd))
+
+
+
+
+
 ## [0.1.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.10...@workday/canvas-kit-react-popup@0.1.11) (2019-04-29)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-popup
