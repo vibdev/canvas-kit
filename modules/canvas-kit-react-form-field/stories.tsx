@@ -51,8 +51,16 @@ storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
   .add('With placeholder', () => <Field>{Inputs.Placeholder}</Field>)
   .add('Disabled', () => <Field>{Inputs.Disabled}</Field>)
   .add('Disabled with placeholder', () => <Field>{Inputs.DisabledPlaceholder}</Field>)
-  .add('Alert', () => <Field>{Inputs.Alert}</Field>)
-  .add('Error', () => <Field>{Inputs.Error}</Field>)
+  .add('Alert', () => (
+    <Field error={FormField.ErrorType.Alert} hintText={hintText}>
+      {Inputs.Alert}
+    </Field>
+  ))
+  .add('Error', () => (
+    <Field error={FormField.ErrorType.Error} hintText={hintText}>
+      {Inputs.Error}
+    </Field>
+  ))
   .add('Grow', () => (
     <Field grow={true}>
       <TextInput {...Inputs.Placeholder.props} />
@@ -77,8 +85,24 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
   .add('Disabled with placeholder', () => (
     <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.DisabledPlaceholder}</Field>
   ))
-  .add('Alert', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Alert}</Field>)
-  .add('Error', () => <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.Error}</Field>)
+  .add('Alert', () => (
+    <Field
+      labelPosition={FormField.LabelPosition.Left}
+      error={FormField.ErrorType.Error}
+      hintText={hintText}
+    >
+      {Inputs.Alert}
+    </Field>
+  ))
+  .add('Error', () => (
+    <Field
+      labelPosition={FormField.LabelPosition.Left}
+      error={FormField.ErrorType.Alert}
+      hintText={hintText}
+    >
+      {Inputs.Error}
+    </Field>
+  ))
   .add('Grow', () => (
     <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
       <TextInput {...Inputs.Placeholder.props} />

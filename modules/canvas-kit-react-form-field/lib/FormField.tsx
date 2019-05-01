@@ -50,6 +50,7 @@ const FormFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBeha
         display: 'inline-flex',
         minHeight: 40,
         alignItems: 'center',
+        flexWrap: 'wrap',
       };
     }
 

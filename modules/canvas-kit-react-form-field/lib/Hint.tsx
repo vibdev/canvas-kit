@@ -9,7 +9,7 @@ export interface HintProps {
 
 const Label = styled('span')(type.body2, type.variant.label);
 
-const Message = styled('p')(type.body2, {margin: `${spacing.xxs} 0 0`});
+const Message = styled('p')(type.body2, {width: '100%', margin: `${spacing.xxs} 0 0`});
 
 export default class Hint extends React.Component<HintProps> {
   static ErrorType = ErrorType;

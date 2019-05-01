@@ -94,7 +94,7 @@ Default: `false`
 
 #### `hintText: React.ReactNode`
 
-> The message displayed below the input field.
+> The message displayed below the input field. Required if `error` is defined.
 
 Default: `undefined`
 
