@@ -12,11 +12,15 @@ describe('Checkbox Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
   test('renders as expected', () => {
-    const component = renderer.create(<Checkbox checked={false} disabled={true} />);
+    const component = renderer.create(
+      <Checkbox checked={false} disabled={true} label="checkbox" />
+    );
     expect(component).toMatchSnapshot();
   });
   test('renders as expected', () => {
-    const component = renderer.create(<Checkbox checked={false} disabled={false} />);
+    const component = renderer.create(
+      <Checkbox checked={false} disabled={false} label="checkbox" />
+    );
     expect(component).toMatchSnapshot();
   });
 });
