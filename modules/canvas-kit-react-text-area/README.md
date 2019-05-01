@@ -94,7 +94,7 @@ Default: `false`
 
 ---
 
-#### `resize: TextArea.ResizeDirection`
+#### `resize: TextAreaResizeDirection`
 
 > Set resize constraints on the text area
 

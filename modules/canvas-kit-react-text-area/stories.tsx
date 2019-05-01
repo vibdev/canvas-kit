@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-react-common';
 
-import {TextArea, TextAreaProps, ResizeDirection} from './index'; // tslint:disable-line:import-name
+import {TextArea, TextAreaProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 export class Input extends React.Component<TextAreaProps, {}> {
@@ -29,10 +29,14 @@ export class Input extends React.Component<TextAreaProps, {}> {
 export const TextAreas = {
   Plain: <TextArea />,
   Placeholder: <TextArea placeholder="Placeholder" />,
-  XResize: <TextArea placeholder="Resizable Horizontally" resize={ResizeDirection.Horizontal} />,
-  YResize: <TextArea placeholder="Resizable Vertically" resize={ResizeDirection.Vertical} />,
-  NoResize: <TextArea placeholder="Not Resizable" resize={ResizeDirection.None} />,
-  XYResize: <TextArea placeholder="Resizable" resize={ResizeDirection.Both} />,
+  XResize: (
+    <TextArea placeholder="Resizable Horizontally" resize={TextArea.ResizeDirection.Horizontal} />
+  ),
+  YResize: (
+    <TextArea placeholder="Resizable Vertically" resize={TextArea.ResizeDirection.Vertical} />
+  ),
+  NoResize: <TextArea placeholder="Not Resizable" resize={TextArea.ResizeDirection.None} />,
+  XYResize: <TextArea placeholder="Resizable" resize={TextArea.ResizeDirection.Both} />,
   Disabled: <TextArea disabled={true} />,
   DisabledPlaceholder: <TextArea placeholder="Placeholder" disabled={true} />,
   Error: <TextArea error={TextArea.ErrorType.Error} value="Error" />,

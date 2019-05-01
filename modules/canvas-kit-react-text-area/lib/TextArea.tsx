@@ -12,11 +12,11 @@ export interface TextAreaProps
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   placeholder?: string;
   readOnly?: boolean;
-  resize: ResizeDirection;
+  resize: TextAreaResizeDirection;
   value?: any;
 }
 
-export enum ResizeDirection {
+export enum TextAreaResizeDirection {
   None = 'none',
   Both = 'both',
   Horizontal = 'horizontal',
@@ -56,7 +56,7 @@ const TextAreaContainer = styled('textarea')<TextAreaProps>(
   },
   ({resize, grow, error}) => ({
     width: grow ? '100%' : undefined,
-    resize: grow ? ResizeDirection.Vertical : resize,
+    resize: grow ? TextAreaResizeDirection.Vertical : resize,
     border:
       error === ErrorType.Error
         ? `1px solid ${inputColors.error.border}`
@@ -71,10 +71,10 @@ const TextAreaContainer = styled('textarea')<TextAreaProps>(
 
 export default class TextArea extends React.Component<TextAreaProps> {
   static ErrorType = ErrorType;
-  static ResizeDirection = ResizeDirection;
+  static ResizeDirection = TextAreaResizeDirection;
 
   static defaultProps = {
-    resize: ResizeDirection.Both,
+    resize: TextAreaResizeDirection.Both,
   };
 
   render() {
