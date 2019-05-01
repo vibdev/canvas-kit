@@ -4,10 +4,7 @@ import {spacing, type} from '@workday/canvas-kit-react-core';
 import {LabelPosition, LabelPositionBehavior} from './types';
 
 export interface LabelProps extends LabelPositionBehavior {
-  form?: string;
-  htmlFor?: string;
-  innerRef?: React.Ref<HTMLLabelElement>;
-  labelProps?: React.LabelHTMLAttributes<HTMLLabelElement>;
+  labelPosition: LabelPosition;
 }
 
 const LabelComponent = styled('label')<LabelProps>(
@@ -39,7 +36,7 @@ export default class Label extends React.Component<LabelProps> {
   };
 
   public render() {
-    const {labelProps, ...props} = this.props;
-    return <LabelComponent {...props} {...labelProps} />;
+    const {...props} = this.props;
+    return <LabelComponent {...props} />;
   }
 }
