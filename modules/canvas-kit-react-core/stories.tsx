@@ -67,7 +67,7 @@ export const type = (hierarchy: any) => (
   </div>
 );
 
-storiesOf('Canvas Kit/Core', module)
+storiesOf('Core', module)
   .addDecorator(withReadme(README))
   .addDecorator(InputProviderDecorator)
   .add('Space', () => {

@@ -59,7 +59,7 @@ class BannerContainer extends React.Component<Props, State> {
   }
 }
 
-storiesOf('Canvas Kit/Cookie Banner', module)
+storiesOf('Cookie Banner', module)
   .addDecorator(withReadme(README))
   .add('Full', () => (
     <div className="story">

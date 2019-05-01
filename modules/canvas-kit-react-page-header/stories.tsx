@@ -9,7 +9,7 @@ import README from './README.md';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exportIcon, fullscreenIcon} from '@workday/canvas-system-icons-web';
 
-storiesOf('Canvas Kit/Page Header', module)
+storiesOf('Page Header', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">

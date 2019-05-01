@@ -73,7 +73,7 @@ class PopupWrapper extends React.Component<{}, PopupWrapperState> {
   };
 }
 
-storiesOf('Canvas Kit/Popup', module)
+storiesOf('Popup', module)
   .addDecorator(withReadme(README))
   .add('Popup', () => (
     <div className="story">

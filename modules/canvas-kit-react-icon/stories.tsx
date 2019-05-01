@@ -21,7 +21,7 @@ const graphicExample: CanvasGraphic = {
   tags: [],
 };
 
-storiesOf('Canvas Kit/Icon', module)
+storiesOf('Icon', module)
   .addDecorator(withReadme(README))
   .add('Accent Icon', () => (
     <div className="story">

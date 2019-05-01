@@ -32,7 +32,7 @@ class ToggleSwitchWrapper extends React.Component<{}, ToggleSwitchWrapperState> 
   }
 }
 
-storiesOf('Canvas Kit/Toggle', module)
+storiesOf('Toggle', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">

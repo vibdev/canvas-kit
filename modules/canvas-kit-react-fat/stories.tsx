@@ -7,7 +7,7 @@ import {Button, ButtonTypes} from '@workday/canvas-kit-react-button';
 import {FloatingActionToolbar} from './index';
 import README from './README.md';
 
-storiesOf('Canvas Kit/Floating Action Toolbar', module)
+storiesOf('Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
   .add('Two Button', () => (
     <div className="story">

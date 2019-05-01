@@ -36,7 +36,7 @@ const buttonContainer = {
   },
 };
 
-storiesOf('Canvas Kit/Button/Beta', module)
+storiesOf('Button/Beta', module)
   .addDecorator(withReadme(README))
   .add('Buttons', () => (
     <div className="story">

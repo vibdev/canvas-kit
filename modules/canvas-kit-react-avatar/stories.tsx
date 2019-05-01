@@ -7,7 +7,7 @@ import {InputProviderDecorator} from '../../utils/storybook';
 import Avatar from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Avatar', module)
+storiesOf('Avatar', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('All', () => (

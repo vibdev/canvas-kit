@@ -6,7 +6,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {Table, TableRow} from './index';
 import README from './README.md';
 
-storiesOf('Canvas Kit/Table', module)
+storiesOf('Table', module)
   .addDecorator(withReadme(README))
   .add('All', () => {
     const columns = ['ID', 'Name', 'Position', 'Location'];

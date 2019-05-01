@@ -30,7 +30,7 @@ const plainSection: CSSObject = {
   justifyContent: 'space-between',
 };
 
-storiesOf('Canvas Kit/Button/Icon Button', module)
+storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
   .add('Clickable', () => (
     <div className="story">
