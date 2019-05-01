@@ -77,7 +77,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     '&:focus, &:active': {
       outline: 'none',
     },
-    '&:focus, &:active, &focus:hover, &:active:hover': {
+    '&:focus, &focus:hover': {
       '& ~ div:first-of-type': {
         borderColor: colors.blueberry400,
         borderWidth: '2px',
