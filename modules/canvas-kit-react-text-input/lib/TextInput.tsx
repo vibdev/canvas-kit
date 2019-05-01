@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {Interpolation} from 'create-emotion-styled';
 import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
-import {inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
+import {colors, inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import InputIconContainer from './InputIconContainer';
@@ -54,26 +54,30 @@ export const textInputStyles: Interpolation<TextInputProps> = [
     },
   },
   ({error}) => {
-    switch (error) {
-      case ErrorType.Error:
-        return {
-          borderColor: inputColors.error.border,
-          boxShadow: `inset 0 0 0 1px ${inputColors.error.border}`,
-          '&:hover': {
-            borderColor: inputColors.error.border,
-          },
-        };
-      case ErrorType.Alert:
-        return {
-          borderColor: inputColors.warning.border,
-          boxShadow: `inset 0 0 0 1px ${inputColors.warning.border}`,
-          '&:hover': {
-            borderColor: inputColors.warning.border,
-          },
-        };
-      default:
-        return {};
+    let errorBorderColor;
+
+    if (error === ErrorType.Error) {
+      errorBorderColor = inputColors.error.border;
+    } else if (error === ErrorType.Alert) {
+      errorBorderColor = inputColors.warning.border;
+    } else {
+      return {};
     }
+
+    return {
+      borderColor: errorBorderColor,
+      transition: '100ms box-shadow',
+      boxShadow: `inset 0 0 0 1px ${errorBorderColor}`,
+      '&:hover': {
+        borderColor: errorBorderColor,
+      },
+      '&:focus:not([disabled])': {
+        borderColor: errorBorderColor,
+        boxShadow: `inset 0 0 0 1px ${errorBorderColor},
+          0 0 0 2px ${colors.frenchVanilla100},
+          0 0 0 4px ${inputColors.focusBorder}`,
+      },
+    };
   },
   ({hasIcon}) => {
     // Icon padding left + icon width + icon padding right
