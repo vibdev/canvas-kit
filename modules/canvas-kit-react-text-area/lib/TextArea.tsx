@@ -23,7 +23,7 @@ export enum ResizeDirection {
   Vertical = 'vertical',
 }
 
-const TextArea = styled('textarea')<TextAreaProps>(
+const TextAreaContainer = styled('textarea')<TextAreaProps>(
   {
     ...type.body,
     display: 'block',
@@ -69,8 +69,9 @@ const TextArea = styled('textarea')<TextAreaProps>(
   })
 );
 
-export default class TextInput extends React.Component<TextAreaProps> {
+export default class TextArea extends React.Component<TextAreaProps> {
   static ErrorType = ErrorType;
+  static ResizeDirection = ResizeDirection;
 
   static defaultProps = {
     resize: ResizeDirection.Both,
@@ -79,6 +80,6 @@ export default class TextInput extends React.Component<TextAreaProps> {
   render() {
     const {grow, inputRef, resize, ...inputProps} = this.props;
 
-    return <TextArea innerRef={inputRef} grow={grow} resize={resize} {...inputProps} />;
+    return <TextAreaContainer innerRef={inputRef} grow={grow} resize={resize} {...inputProps} />;
   }
 }
