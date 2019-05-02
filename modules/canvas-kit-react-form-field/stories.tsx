@@ -10,6 +10,7 @@ import README from './README.md';
 import {CheckboxWrapper} from '../canvas-kit-react-checkbox/stories';
 import {RadioGroupWrapper} from '../canvas-kit-react-radio/stories';
 import {Input as TextInput, Inputs} from '../canvas-kit-react-text-input/stories';
+import {TextAreaWrapper as TextArea, TextAreas} from '../canvas-kit-react-text-area/stories';
 
 storiesOf('Canvas Kit/Form Field', module)
   .addDecorator(withReadme(README))
@@ -104,6 +105,64 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
       error={FormField.ErrorType.Error}
     >
       <TextInput {...Inputs.Placeholder.props} />
+    </Field>
+  ));
+
+storiesOf('Canvas Kit/Form Field/Text Area/Top Label', module)
+  .addDecorator(SectionDecorator('Text Area Field'))
+  .addDecorator(withReadme(README))
+  .add('Plain', () => <Field>{TextAreas.Plain}</Field>)
+  .add('With placeholder', () => <Field>{TextAreas.Placeholder}</Field>)
+  .add('Disabled', () => <Field>{TextAreas.Disabled}</Field>)
+  .add('Disabled with placeholder', () => <Field>{TextAreas.DisabledPlaceholder}</Field>)
+  .add('Alert', () => <Field error={FormField.ErrorType.Alert}>{TextAreas.Alert}</Field>)
+  .add('Error', () => <Field error={FormField.ErrorType.Error}>{TextAreas.Error}</Field>)
+  .add('Grow', () => (
+    <Field grow={true}>
+      <TextArea {...TextAreas.Placeholder.props} />
+    </Field>
+  ))
+  .add('Grow - Error', () => (
+    <Field grow={true} error={FormField.ErrorType.Error}>
+      <TextArea {...TextAreas.Placeholder.props} />
+    </Field>
+  ));
+
+storiesOf('Canvas Kit/Form Field/Text Area/Left Label', module)
+  .addDecorator(SectionDecorator('Text Area Field'))
+  .addDecorator(withReadme(README))
+  .add('Plain', () => <Field labelPosition={FormField.LabelPosition.Left}>{TextAreas.Plain}</Field>)
+  .add('With placeholder', () => (
+    <Field labelPosition={FormField.LabelPosition.Left}>{TextAreas.Placeholder}</Field>
+  ))
+  .add('Disabled', () => (
+    <Field labelPosition={FormField.LabelPosition.Left}>{TextAreas.Disabled}</Field>
+  ))
+  .add('Disabled with placeholder', () => (
+    <Field labelPosition={FormField.LabelPosition.Left}>{TextAreas.DisabledPlaceholder}</Field>
+  ))
+  .add('Alert', () => (
+    <Field labelPosition={FormField.LabelPosition.Left} error={FormField.ErrorType.Alert}>
+      {TextAreas.Alert}
+    </Field>
+  ))
+  .add('Error', () => (
+    <Field labelPosition={FormField.LabelPosition.Left} error={FormField.ErrorType.Error}>
+      {TextAreas.Error}
+    </Field>
+  ))
+  .add('Grow', () => (
+    <Field labelPosition={FormField.LabelPosition.Left} grow={true}>
+      <TextArea {...TextAreas.Placeholder.props} />
+    </Field>
+  ))
+  .add('Grow - Error', () => (
+    <Field
+      labelPosition={FormField.LabelPosition.Left}
+      grow={true}
+      error={FormField.ErrorType.Error}
+    >
+      <TextArea {...TextAreas.Placeholder.props} />
     </Field>
   ));
 

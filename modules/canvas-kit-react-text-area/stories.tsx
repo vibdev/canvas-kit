@@ -7,7 +7,7 @@ import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-reac
 import {TextArea, TextAreaProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-export class Input extends React.Component<TextAreaProps, {}> {
+export class TextAreaWrapper extends React.Component<TextAreaProps, {}> {
   static defaultProps = {
     type: 'text',
   };
@@ -39,6 +39,7 @@ export const TextAreas = {
   XYResize: <TextArea placeholder="Resizable" resize={TextArea.ResizeDirection.Both} />,
   Disabled: <TextArea disabled={true} />,
   DisabledPlaceholder: <TextArea placeholder="Placeholder" disabled={true} />,
+  Alert: <TextArea error={TextArea.ErrorType.Alert} value="Alert" />,
   Error: <TextArea error={TextArea.ErrorType.Error} value="Error" />,
   Grow: <TextArea placeholder="Placeholder" grow={true} />,
 };
