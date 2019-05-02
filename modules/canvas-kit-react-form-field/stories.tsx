@@ -184,7 +184,7 @@ storiesOf('Canvas Kit/Form Field/Radio Group', module)
     <div className="story">
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <Field>
+        <Field useFieldset={true}>
           <RadioGroupWrapper />
         </Field>
       </div>
@@ -194,7 +194,7 @@ storiesOf('Canvas Kit/Form Field/Radio Group', module)
     <div className="story">
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <Field labelPosition={FormField.LabelPosition.Left}>
+        <Field labelPosition={FormField.LabelPosition.Left} useFieldset={true}>
           <RadioGroupWrapper />
         </Field>
       </div>

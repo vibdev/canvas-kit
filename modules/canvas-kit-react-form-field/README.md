@@ -132,6 +132,18 @@ Default: `undefined`
 
 Default: `LabelPosition.Top`
 
+---
+
+#### `useFieldset: boolean`
+
+> If true, FormField uses a `fieldset` and a `legend` element instead of a div and a label. This is
+> required for accessibility on radio groups. If you're using a `RadioGroup` inside of FormField,
+> make sure you set this to true.
+
+Default: `false`
+
+---
+
 # Hint
 
 > Component implementing hint text styling for forms.
@@ -169,6 +181,8 @@ import {Hint} from '@workday/canvas-kit-react-form-field';
 | Alert | Yellow outline with alert icon. |
 
 Default: `undefined`
+
+---
 
 # Label
 

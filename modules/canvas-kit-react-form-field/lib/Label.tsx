@@ -5,14 +5,18 @@ import {LabelPosition, LabelPositionBehavior} from './types';
 
 export interface LabelProps extends LabelPositionBehavior {
   labelPosition: LabelPosition;
+  isLegend: boolean;
   htmlFor?: string;
 }
 
-const LabelComponent = styled('label')<LabelProps>(
-  type.body,
-  type.variant.label,
-  ({labelPosition}) => {
-    if (labelPosition === LabelPosition.Left) {
+const labelStyles = [
+  {
+    ...type.body,
+    ...type.variant.label,
+    padding: 0,
+  },
+  (props: LabelProps) => {
+    if (props.labelPosition === LabelPosition.Left) {
       return {
         display: 'inline-block',
         verticalAlign: 'top',
@@ -26,18 +30,24 @@ const LabelComponent = styled('label')<LabelProps>(
       display: 'block',
       marginBottom: spacing.xxxs,
     };
-  }
-);
+  },
+];
+
+// Used inside the fieldset component instead of a label for accessible radio groups
+const LegendComponent = styled('legend')<LabelProps>(...labelStyles);
+const LabelComponent = styled('label')<LabelProps>(...labelStyles);
 
 export default class Label extends React.Component<LabelProps> {
   static Position = LabelPosition;
 
   static defaultProps = {
     labelPosition: Label.Position.Top,
+    isLegend: false,
   };
 
   public render() {
     const {...props} = this.props;
-    return <LabelComponent {...props} />;
+
+    return <>{props.isLegend ? <LegendComponent {...props} /> : <LabelComponent {...props} />}</>;
   }
 }

@@ -13,6 +13,7 @@ export interface FormFieldProps extends GrowthBehavior {
   hintId?: string;
   inputId?: string;
   error?: ErrorType;
+  useFieldset?: boolean;
   children: React.ReactNode;
 }
 
@@ -20,18 +21,31 @@ export interface ErrorBehavior {
   error?: ErrorType;
 }
 
-const FormGroup = styled('div')<LabelPositionBehavior>(({labelPosition}) => {
-  if (labelPosition === LabelPosition.Left) {
-    return {
-      display: 'flex',
-      marginBottom: spacing.m,
-    };
-  }
+const formFieldContainerStyles = [
+  (props: Partial<FormFieldProps>) => {
+    if (props.labelPosition === LabelPosition.Left) {
+      return {
+        display: 'flex',
+        marginBottom: spacing.m,
+      };
+    }
 
-  return {
-    marginBottom: spacing.s,
-  };
-});
+    return {
+      marginBottom: spacing.s,
+    };
+  },
+];
+
+// Use a fieldset element instead of a div for accessible radio groups
+const FormFieldFieldsetContainer = styled('fieldset')<LabelPositionBehavior>(
+  ...formFieldContainerStyles,
+  {
+    padding: 0,
+    margin: `0 0 ${spacing.s} 0`,
+    border: 0,
+  }
+);
+const FormFieldContainer = styled('div')<LabelPositionBehavior>(...formFieldContainerStyles);
 
 const FormFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBehavior>(
   ({grow, labelPosition}) => {
@@ -68,6 +82,7 @@ export default class FormField extends React.Component<FormFieldProps> {
 
   static defaultProps = {
     labelPosition: FormField.LabelPosition.Top,
+    useFieldset: false,
   };
 
   private renderChildren = (child: React.ReactChild): React.ReactNode => {
@@ -101,18 +116,30 @@ export default class FormField extends React.Component<FormFieldProps> {
   };
 
   render() {
-    const {label, hintText, hintId, inputId, grow, children, ...inputProps} = this.props;
+    const {
+      label,
+      hintText,
+      hintId,
+      inputId,
+      grow,
+      children,
+      useFieldset,
+      ...inputProps
+    } = this.props;
     const {labelPosition, error} = inputProps;
 
+    const Container = useFieldset ? FormFieldFieldsetContainer : FormFieldContainer;
+
     return (
-      <FormGroup labelPosition={labelPosition}>
+      <Container labelPosition={labelPosition}>
         {typeof label === 'string' ? (
-          <Label labelPosition={labelPosition} htmlFor={inputId}>
+          <Label labelPosition={labelPosition} htmlFor={inputId} isLegend={useFieldset}>
             {label}
           </Label>
         ) : (
           label
         )}
+
         <FormFieldInputContainer grow={grow} labelPosition={labelPosition}>
           {React.Children.map(children, this.renderChildren)}
           {hintText && (
@@ -121,7 +148,7 @@ export default class FormField extends React.Component<FormFieldProps> {
             </Hint>
           )}
         </FormFieldInputContainer>
-      </FormGroup>
+      </Container>
     );
   }
 }

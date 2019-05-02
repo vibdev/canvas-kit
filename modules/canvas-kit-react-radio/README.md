@@ -110,6 +110,12 @@ Default: `false`
 
 ## Usage
 
+#### Simple Example
+
+**Note:** While a base radio group component is provided in this package, it is **not accessible**
+when used as is. It should be used in tandem with
+[`FormField`](../canvas-kit-react-form-field/README.md) to be made fully accessible (see below).
+
 ```tsx
 import * as React from 'react';
 import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
@@ -120,6 +126,23 @@ import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
   <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
   <Radio id="4" value="mail" label="Mail" />
 </RadioGroup>;
+```
+
+#### Accessible Example
+
+```tsx
+import * as React from 'react';
+import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
+import FormField from '@workday/canvas-kit-react-form-field';
+
+<FormField label="My Field" useFieldset={true}>
+  <RadioGroup name="contact">
+    <Radio id="1" value="email" label="E-mail" />
+    <Radio id="2" value="phone" label="Phone" />
+    <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
+    <Radio id="4" value="mail" label="Mail" />
+  </RadioGroup>
+</FormField>;
 ```
 
 ## Static Properties
