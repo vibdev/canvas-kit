@@ -11,6 +11,7 @@ export interface FormFieldProps extends GrowthBehavior {
   label?: React.ReactNode;
   hintText?: React.ReactNode;
   hintId?: string;
+  inputId?: string;
   error?: ErrorType;
   children: React.ReactNode;
 }
@@ -89,6 +90,10 @@ export default class FormField extends React.Component<FormFieldProps> {
         }
       }
 
+      if (!child.props.id && this.props.inputId) {
+        props.id = this.props.inputId;
+      }
+
       return React.cloneElement(child, props);
     }
 
@@ -96,12 +101,18 @@ export default class FormField extends React.Component<FormFieldProps> {
   };
 
   render() {
-    const {label, hintText, hintId, grow, children, ...inputProps} = this.props;
+    const {label, hintText, hintId, inputId, grow, children, ...inputProps} = this.props;
     const {labelPosition, error} = inputProps;
 
     return (
       <FormGroup labelPosition={labelPosition}>
-        {typeof label === 'string' ? <Label labelPosition={labelPosition}>{label}</Label> : label}
+        {typeof label === 'string' ? (
+          <Label labelPosition={labelPosition} htmlFor={inputId}>
+            {label}
+          </Label>
+        ) : (
+          label
+        )}
         <FormFieldInputContainer grow={grow} labelPosition={labelPosition}>
           {React.Children.map(children, this.renderChildren)}
           {hintText && (

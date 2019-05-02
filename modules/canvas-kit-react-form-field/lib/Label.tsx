@@ -5,6 +5,7 @@ import {LabelPosition, LabelPositionBehavior} from './types';
 
 export interface LabelProps extends LabelPositionBehavior {
   labelPosition: LabelPosition;
+  htmlFor?: string;
 }
 
 const LabelComponent = styled('label')<LabelProps>(

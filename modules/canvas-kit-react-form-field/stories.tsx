@@ -35,15 +35,26 @@ class Field extends React.Component<FormFieldProps> {
   };
 
   render() {
-    let hintText, hintId;
+    let hintText, hintId, inputId;
+    const reactChild = this.props.children as React.ReactElement<any>;
 
     if (typeof this.props.error !== 'undefined') {
       hintText = 'Helpful text goes here.';
       hintId = 'error-desc-id';
     }
 
+    if (reactChild.props.id) {
+      inputId = reactChild.props.id;
+    }
+
     return (
-      <FormField label="Label" {...this.props} hintText={hintText} hintId={hintId}>
+      <FormField
+        label="Label"
+        {...this.props}
+        hintText={hintText}
+        hintId={hintId}
+        inputId={inputId}
+      >
         {this.props.children}
       </FormField>
     );

@@ -113,6 +113,13 @@ Default: `undefined`
 
 ---
 
+#### `inputId: string`
+
+> The ID of the input child. If an ID is not specified on the input child, this will be used as it's
+> ID. Used for label's `htmlFor` attribute. This is required for accessiblity if `label` is defined.
+
+---
+
 #### `labelPosition: LabelPosition`
 
 > The position of the label relative to the input field.
@@ -199,3 +206,9 @@ import {Label} from '@workday/canvas-kit-react-form-field';
 | Left | Display label blocked on top of input         |
 
 Default: `LabelPosition.Top`
+
+---
+
+#### `htmlFor: string`
+
+> The ID of the input being labelled. This is required for accessiblity.

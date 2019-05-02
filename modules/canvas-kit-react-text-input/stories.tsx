@@ -27,14 +27,23 @@ export class Input extends React.Component<TextInputProps, {}> {
 }
 
 export const Inputs = {
-  Plain: <Input />,
-  Placeholder: <Input placeholder="Placeholder" />,
-  Disabled: <Input disabled={true} />,
-  DisabledPlaceholder: <Input placeholder="Placeholder" disabled={true} />,
-  Alert: <Input error={TextInput.ErrorType.Alert} value="Alert" />,
-  Error: <Input error={TextInput.ErrorType.Error} value="Error" />,
-  Grow: <Input placeholder="Placeholder" grow={true} />,
-  GrowError: <Input placeholder="Placeholder" grow={true} error={TextInput.ErrorType.Error} />,
+  Plain: <Input id="input-plain" />,
+  Placeholder: <Input placeholder="Placeholder" id="input-placeholder" />,
+  Disabled: <Input disabled={true} id="input-disabled" />,
+  DisabledPlaceholder: (
+    <Input placeholder="Placeholder" id="input-disabled-placeholder" disabled={true} />
+  ),
+  Alert: <Input error={TextInput.ErrorType.Alert} id="input-alert" value="Alert" />,
+  Error: <Input error={TextInput.ErrorType.Error} id="input-error" value="Error" />,
+  Grow: <Input placeholder="Placeholder" id="input-grow" grow={true} />,
+  GrowError: (
+    <Input
+      placeholder="Placeholder"
+      id="input-grow-error"
+      grow={true}
+      error={TextInput.ErrorType.Error}
+    />
+  ),
 };
 
 storiesOf('Canvas Kit/Text Input', module)

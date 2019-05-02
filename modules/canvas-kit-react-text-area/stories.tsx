@@ -27,21 +27,39 @@ export class TextAreaWrapper extends React.Component<TextAreaProps, {}> {
 }
 
 export const TextAreas = {
-  Plain: <TextArea />,
-  Placeholder: <TextArea placeholder="Placeholder" />,
+  Plain: <TextArea id="textarea-plain" />,
+  Placeholder: <TextArea placeholder="Placeholder" id="textarea-placeholder" />,
   XResize: (
-    <TextArea placeholder="Resizable Horizontally" resize={TextArea.ResizeDirection.Horizontal} />
+    <TextArea
+      placeholder="Resizable Horizontally"
+      id="textarea-xresize"
+      resize={TextArea.ResizeDirection.Horizontal}
+    />
   ),
   YResize: (
-    <TextArea placeholder="Resizable Vertically" resize={TextArea.ResizeDirection.Vertical} />
+    <TextArea
+      placeholder="Resizable Vertically"
+      id="textarea-yresize"
+      resize={TextArea.ResizeDirection.Vertical}
+    />
   ),
-  NoResize: <TextArea placeholder="Not Resizable" resize={TextArea.ResizeDirection.None} />,
-  XYResize: <TextArea placeholder="Resizable" resize={TextArea.ResizeDirection.Both} />,
-  Disabled: <TextArea disabled={true} />,
-  DisabledPlaceholder: <TextArea placeholder="Placeholder" disabled={true} />,
-  Alert: <TextArea error={TextArea.ErrorType.Alert} value="Alert" />,
-  Error: <TextArea error={TextArea.ErrorType.Error} value="Error" />,
-  Grow: <TextArea placeholder="Placeholder" grow={true} />,
+  NoResize: (
+    <TextArea
+      placeholder="Not Resizable"
+      id="textarea-no-resize"
+      resize={TextArea.ResizeDirection.None}
+    />
+  ),
+  XYResize: (
+    <TextArea placeholder="Resizable" id="textarea-resize" resize={TextArea.ResizeDirection.Both} />
+  ),
+  Disabled: <TextArea disabled={true} id="textarea-disabled" />,
+  DisabledPlaceholder: (
+    <TextArea placeholder="Placeholder" id="textarea-disabled-placeholder" disabled={true} />
+  ),
+  Alert: <TextArea error={TextArea.ErrorType.Alert} id="textarea-alert" value="Alert" />,
+  Error: <TextArea error={TextArea.ErrorType.Error} id="textarea-error" value="Error" />,
+  Grow: <TextArea placeholder="Placeholder" id="textarea-grow" grow={true} />,
 };
 
 storiesOf('Canvas Kit/Text Area', module)
