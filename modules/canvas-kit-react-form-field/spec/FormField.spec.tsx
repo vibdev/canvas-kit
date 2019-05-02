@@ -43,6 +43,43 @@ describe('FormField', () => {
     component.unmount();
   });
 
+  test('Set aria-describedby', () => {
+    const InputComponent: React.SFC<GrowthBehavior> = () => <input type="text" />;
+    const hintText = 'Hint Text';
+    const hintId = 'hint-id';
+    const component = mount(
+      <FormField error={FormField.ErrorType.Error} hintText={hintText} hintId={hintId}>
+        <InputComponent />
+      </FormField>
+    );
+
+    expect(
+      component
+        .find('Hint')
+        .at(0)
+        .prop('id')
+    ).toEqual(hintId);
+    expect(component.find(InputComponent).prop('aria-describedby')).toEqual(hintId);
+
+    component.unmount();
+  });
+
+  test('Sets id on input & htmlFor on label', () => {
+    const InputComponent: React.SFC = () => <input type="text" />;
+    const inputId = 'input-id';
+
+    const component = mount(
+      <FormField inputId={inputId} label="Label">
+        <InputComponent />
+      </FormField>
+    );
+
+    expect(component.find(InputComponent).prop('id')).toEqual(inputId);
+    expect(component.find('Label').prop('htmlFor')).toEqual(inputId);
+
+    component.unmount();
+  });
+
   test('Sets grow prop', () => {
     const InputComponent: React.SFC<GrowthBehavior> = () => <input type="text" />;
 
@@ -57,7 +94,7 @@ describe('FormField', () => {
     component.unmount();
   });
 
-  test('Sets error prop', () => {
+  test('Sets error prop with aria label', () => {
     const InputComponent: React.SFC<ErrorBehavior> = () => <input type="text" />;
 
     const component = mount(
@@ -67,6 +104,7 @@ describe('FormField', () => {
     );
 
     expect(component.find(InputComponent).props().error).toEqual(FormField.ErrorType.Error);
+    expect(component.find(InputComponent).props()['aria-invalid']).toBeTruthy();
 
     component.unmount();
   });
@@ -75,6 +113,21 @@ describe('FormField', () => {
     const component = mount(<FormField>Text</FormField>);
 
     expect(component.children().text()).toBe('Text');
+
+    component.unmount();
+  });
+
+  test('Uses fieldset and legend when useFieldset=true (for RadioGroup)', () => {
+    const InputComponent: React.SFC<ErrorBehavior> = () => <input type="text" />;
+
+    const component = mount(
+      <FormField useFieldset={true} label="Label">
+        <InputComponent />
+      </FormField>
+    );
+
+    expect(component.find('fieldset')).toHaveLength(1);
+    expect(component.find('legend')).toHaveLength(1);
 
     component.unmount();
   });
