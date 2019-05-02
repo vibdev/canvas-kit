@@ -2,6 +2,10 @@
 
 Input of type radio
 
+Coming soon:
+
+- Error/Alert handling
+
 ## Installation
 
 ```sh
@@ -16,11 +20,29 @@ yarn add @workday/canvas-kit-react-radio
 
 ## Usage
 
+#### Simple Example
+
+**Note:** While a base radio component is provided in this package, it is **not accessible** when
+used as is. It should be used in tandem with [`FormField`](../canvas-kit-react-form-field/README.md)
+to be made fully accessible (see below).
+
 ```tsx
 import * as React from 'react';
-import {Radio} from '@workday/canvas-kit-react-radio';
+import Radio from '@workday/canvas-kit-react-radio';
 
 <Radio disabled={false} checked={checked} onChange={this.handleCheck} />;
+```
+
+#### Accessible Example
+
+```tsx
+import * as React from 'react';
+import Radio from '@workday/canvas-kit-react-radio';
+import FormField from '@workday/canvas-kit-react-form-field';
+
+<FormField label="My Field" inputId="my-radio-field">
+  <Radio disabled={false} checked={checked} onChange={this.handleCheck} />;
+</FormField>;
 ```
 
 ## Static Properties

@@ -18,11 +18,41 @@ yarn add @workday/canvas-kit-react-text-input
 
 ## Usage
 
+#### Simple Example
+
+**Note:** While a base input component is provided in this package, it is **not accessible** when
+used as is. It should be used in tandem with [`FormField`](../canvas-kit-react-form-field/README.md)
+to be made fully accessible (see below).
+
 ```tsx
 import * as React from 'react';
 import TextInput from '@workday/canvas-kit-react-text-input';
 
 <TextInput placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+```
+
+#### Accessible Example
+
+```tsx
+import * as React from 'react';
+import TextInput from '@workday/canvas-kit-react-text-input';
+import FormField from '@workday/canvas-kit-react-form-field';
+
+// Accessible default state
+<FormField label="My Field" inputId="my-input-field">
+  <TextInput placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+</FormField>
+
+// Accessible error state
+<FormField
+  label="My Field"
+  inputId="my-input-field"
+  hintText="Helpful text to resolve error"
+  hintId="my-input-field-error"
+  error={FormField.ErrorType.Error}
+>
+  <TextInput placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+</FormField>
 ```
 
 ## Static Properties

@@ -16,13 +16,41 @@ yarn add @workday/canvas-kit-react-text-area
 
 # TextArea
 
-## Usage
+#### Simple Example
+
+**Note:** While a base textarea component is provided in this package, it is **not accessible** when
+used as is. It should be used in tandem with [`FormField`](../canvas-kit-react-form-field/README.md)
+to be made fully accessible (see below).
 
 ```tsx
 import * as React from 'react';
 import TextArea from '@workday/canvas-kit-react-text-area';
 
 <TextArea placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+```
+
+#### Accessible Example
+
+```tsx
+import * as React from 'react';
+import TextArea from '@workday/canvas-kit-react-text-textarea';
+import FormField from '@workday/canvas-kit-react-form-field';
+
+// Accessible default state
+<FormField label="My Field" inputId="my-textarea-field">
+  <TextArea placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+</FormField>
+
+// Accessible error state
+<FormField
+  label="My Field"
+  inputId="my-textarea-field"
+  hintText="Helpful text to resolve error"
+  hintId="my-textarea-field-error"
+  error={FormField.ErrorType.Error}
+>
+  <TextArea placeholder="Placeholder" value={this.state.value} onChange={() => {}} />;
+</FormField>
 ```
 
 ## Static Properties

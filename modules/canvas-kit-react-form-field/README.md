@@ -1,6 +1,7 @@
 # Canvas Kit Form Field
 
-Form field component with complementary elements for form inputs.
+Form field wrapper component that makes inputs accessible. It also includes complementary elements
+for form inputs (labels, errors, etc.).
 
 ## Installation
 
@@ -25,10 +26,10 @@ import TextInput from '@workday/canvas-kit-react-text-input';
 
 <FormField
   label="Label"
-  labelPosition={FormField.LabelPosition.Left}
-  grow={true}
+  inputId="my-input-field"
   error={FormField.ErrorType.Error}
-  hintText="This field is reuqired."
+  hintText="This field is required."
+  hintId="my-input-field-error"
 >
   <TextInput value={this.state.value} onChange={() => {}}/>
 </FormField>
