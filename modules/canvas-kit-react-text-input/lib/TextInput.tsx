@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {Interpolation} from 'create-emotion-styled';
 import {CSSObject} from 'create-emotion';
 import {GrowthBehavior, ErrorType, GenericStyle} from '@workday/canvas-kit-react-common';
 import {colors, inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
@@ -56,7 +55,7 @@ function getErrorStyle(error: ErrorType): CSSObject {
   };
 }
 
-const textInputGenericStyles: TextInputGenericStyle = {
+export const textInputStyles: TextInputGenericStyle = {
   classname: 'text-input',
   styles: {
     ...type.body,
@@ -97,13 +96,13 @@ const textInputGenericStyles: TextInputGenericStyle = {
   },
 };
 
-export const textInputStyles: Interpolation<TextInputProps> = [
-  textInputGenericStyles.styles,
+const Input = styled('input')<TextInputProps>(
+  textInputStyles.styles,
   ({error}) => {
     if (error === ErrorType.Error) {
-      return textInputGenericStyles.variants.states.error;
+      return textInputStyles.variants.states.error;
     } else if (error === ErrorType.Alert) {
-      return textInputGenericStyles.variants.states.alert;
+      return textInputStyles.variants.states.alert;
     } else {
       return {};
     }
@@ -121,10 +120,8 @@ export const textInputStyles: Interpolation<TextInputProps> = [
   ({grow}) =>
     grow && {
       width: '100%',
-    },
-];
-
-const Input = styled('input')<TextInputProps>(...textInputStyles);
+    }
+);
 
 export default class TextInput extends React.Component<TextInputProps> {
   static ErrorType = ErrorType;
