@@ -100,6 +100,13 @@ Default: `undefined`
 
 ---
 
+#### `hintId: string`
+
+> The ID of message displayed below the input field. Required for accessibile aria-definedby
+> attribute. Required if `error` and `hintText` are defined.
+
+---
+
 #### `label: string`
 
 > The label text displayed for the input.

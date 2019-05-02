@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import {ErrorType} from '@workday/canvas-kit-react-common';
 import {spacing, type} from '@workday/canvas-kit-react-core';
 
-export interface HintProps {
+export interface HintProps extends React.HTMLAttributes<HTMLParagraphElement> {
   error?: ErrorType;
 }
 
@@ -29,7 +29,7 @@ export default class Hint extends React.Component<HintProps> {
     }
 
     return (
-      <Message>
+      <Message {...this.props}>
         {typeof error !== 'undefined' && <Label>{errorLabel && `${errorLabel}: `}</Label>}
         {children}
       </Message>

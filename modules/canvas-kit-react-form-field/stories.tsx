@@ -34,15 +34,20 @@ class Field extends React.Component<FormFieldProps> {
   };
 
   render() {
+    let hintText, hintId;
+
+    if (typeof this.props.error !== 'undefined') {
+      hintText = 'Helpful text goes here.';
+      hintId = 'error-desc-id';
+    }
+
     return (
-      <FormField label="Label" {...this.props}>
+      <FormField label="Label" {...this.props} hintText={hintText} hintId={hintId}>
         {this.props.children}
       </FormField>
     );
   }
 }
-
-const hintText = 'Helpful text goes here.';
 
 storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
   .addDecorator(SectionDecorator('Text Field'))
@@ -51,23 +56,15 @@ storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
   .add('With placeholder', () => <Field>{Inputs.Placeholder}</Field>)
   .add('Disabled', () => <Field>{Inputs.Disabled}</Field>)
   .add('Disabled with placeholder', () => <Field>{Inputs.DisabledPlaceholder}</Field>)
-  .add('Alert', () => (
-    <Field error={FormField.ErrorType.Alert} hintText={hintText}>
-      {Inputs.Alert}
-    </Field>
-  ))
-  .add('Error', () => (
-    <Field error={FormField.ErrorType.Error} hintText={hintText}>
-      {Inputs.Error}
-    </Field>
-  ))
+  .add('Alert', () => <Field error={FormField.ErrorType.Alert}>{Inputs.Alert}</Field>)
+  .add('Error', () => <Field error={FormField.ErrorType.Error}>{Inputs.Error}</Field>)
   .add('Grow', () => (
     <Field grow={true}>
       <TextInput {...Inputs.Placeholder.props} />
     </Field>
   ))
   .add('Grow - Error', () => (
-    <Field grow={true} error={FormField.ErrorType.Error} hintText={hintText}>
+    <Field grow={true} error={FormField.ErrorType.Error}>
       <TextInput {...Inputs.Placeholder.props} />
     </Field>
   ));
@@ -86,20 +83,12 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
     <Field labelPosition={FormField.LabelPosition.Left}>{Inputs.DisabledPlaceholder}</Field>
   ))
   .add('Alert', () => (
-    <Field
-      labelPosition={FormField.LabelPosition.Left}
-      error={FormField.ErrorType.Alert}
-      hintText={hintText}
-    >
+    <Field labelPosition={FormField.LabelPosition.Left} error={FormField.ErrorType.Alert}>
       {Inputs.Alert}
     </Field>
   ))
   .add('Error', () => (
-    <Field
-      labelPosition={FormField.LabelPosition.Left}
-      error={FormField.ErrorType.Error}
-      hintText={hintText}
-    >
+    <Field labelPosition={FormField.LabelPosition.Left} error={FormField.ErrorType.Error}>
       {Inputs.Error}
     </Field>
   ))
@@ -113,7 +102,6 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
       labelPosition={FormField.LabelPosition.Left}
       grow={true}
       error={FormField.ErrorType.Error}
-      hintText={hintText}
     >
       <TextInput {...Inputs.Placeholder.props} />
     </Field>

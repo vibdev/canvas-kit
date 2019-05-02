@@ -10,6 +10,7 @@ export interface FormFieldProps extends GrowthBehavior {
   labelPosition: LabelPosition;
   label?: React.ReactNode;
   hintText?: React.ReactNode;
+  hintId?: string;
   error?: ErrorType;
   children: React.ReactNode;
 }
@@ -79,6 +80,10 @@ export default class FormField extends React.Component<FormFieldProps> {
       if (typeof this.props.error !== 'undefined' && React.isValidElement<ErrorBehavior>(child)) {
         props.error = this.props.error;
 
+        if (this.props.hintId) {
+          props['aria-describedby'] = this.props.hintId;
+        }
+
         if (this.props.error === ErrorType.Error) {
           props['aria-invalid'] = true;
         }
@@ -91,7 +96,7 @@ export default class FormField extends React.Component<FormFieldProps> {
   };
 
   render() {
-    const {label, hintText, grow, children, ...inputProps} = this.props;
+    const {label, hintText, hintId, grow, children, ...inputProps} = this.props;
     const {labelPosition, error} = inputProps;
 
     return (
@@ -99,7 +104,11 @@ export default class FormField extends React.Component<FormFieldProps> {
         {typeof label === 'string' ? <Label labelPosition={labelPosition}>{label}</Label> : label}
         <FormFieldInputContainer grow={grow} labelPosition={labelPosition}>
           {React.Children.map(children, this.renderChildren)}
-          {hintText && <Hint error={error}>{hintText}</Hint>}
+          {hintText && (
+            <Hint error={error} id={hintId}>
+              {hintText}
+            </Hint>
+          )}
         </FormFieldInputContainer>
       </FormGroup>
     );
