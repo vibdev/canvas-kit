@@ -71,7 +71,7 @@ exports[`Radio Snapshots renders as expected 1`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
@@ -81,11 +81,12 @@ exports[`Radio Snapshots renders as expected 1`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #0875e1;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  background-color: #0875e1;
   border-color: #0875e1;
   border-width: 1px;
 }
@@ -117,11 +118,6 @@ exports[`Radio Snapshots renders as expected 1`] = `
   width: 18px;
   border-color: #0875e1;
   background-color: #0875e1;
-}
-
-.emotion-4:hover {
-  background-color: #0875e1;
-  border-color: #0875e1;
 }
 
 .emotion-2 {
@@ -217,11 +213,6 @@ exports[`Radio Snapshots renders as expected 2`] = `
   background-color: #0875e1;
 }
 
-.emotion-4:hover {
-  background-color: #0875e1;
-  border-color: #0875e1;
-}
-
 .emotion-2 {
   background-color: #ffffff;
   border-radius: 9px;
@@ -298,7 +289,7 @@ exports[`Radio Snapshots renders as expected 2`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
@@ -308,11 +299,12 @@ exports[`Radio Snapshots renders as expected 2`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type:hover {
   border-color: #0875e1;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  background-color: #0875e1;
   border-color: #0875e1;
   border-width: 1px;
 }
@@ -411,7 +403,7 @@ exports[`Radio Snapshots renders as expected 3`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
@@ -421,12 +413,13 @@ exports[`Radio Snapshots renders as expected 3`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
-  border-color: #7b858f;
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type:hover {
+  border-color: #333d47;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  background-color: #f6f7f8;
+  border-color: #b9c0c7;
   border-width: 1px;
 }
 
@@ -455,13 +448,8 @@ exports[`Radio Snapshots renders as expected 3`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  border-color: #7b858f;
+  border-color: #b9c0c7;
   background-color: #f6f7f8;
-}
-
-.emotion-4:hover {
-  background-color: #f6f7f8;
-  border-color: #5e6a75;
 }
 
 .emotion-2 {
@@ -609,7 +597,7 @@ exports[`Radio Snapshots renders as expected 4`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type {
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type {
   -webkit-animation: animation-1swfa1h 100ms;
   animation: animation-1swfa1h 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 0px #0875e1;
@@ -619,12 +607,13 @@ exports[`Radio Snapshots renders as expected 4`] = `
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type:hover,
 [data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover,
-[data-whatinput="touch"] .emotion-0:focus ~ div:first-of-type:hover {
-  border-color: #7b858f;
+[data-whatinput="pointer"] .emotion-0:focus ~ div:first-of-type:hover {
+  border-color: #333d47;
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #5e6a75;
+  background-color: white;
+  border-color: #333d47;
   border-width: 1px;
 }
 
@@ -655,11 +644,6 @@ exports[`Radio Snapshots renders as expected 4`] = `
   width: 18px;
   border-color: #7b858f;
   background-color: white;
-}
-
-.emotion-4:hover {
-  background-color: white;
-  border-color: #5e6a75;
 }
 
 <div

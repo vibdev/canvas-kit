@@ -7,6 +7,7 @@ exports[`Hint Snapshots renders as expected 1`] = `
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  width: 100%;
   margin: 8px 0 0;
 }
 

@@ -51,9 +51,7 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 }
 
 .emotion-0:focus ~ div:first-of-type,
-.emotion-0:active ~ div:first-of-type,
-.emotion-0focus:hover ~ div:first-of-type,
-.emotion-0:active:hover ~ div:first-of-type {
+.emotion-0focus:hover ~ div:first-of-type {
   border-color: #0875e1;
   border-width: 2px;
   z-index: 2;
@@ -80,6 +78,7 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  background-color: #0875e1;
   border-color: #0875e1;
 }
 
@@ -110,11 +109,6 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   width: 18px;
   border-color: #0875e1;
   background-color: #0875e1;
-}
-
-.emotion-5:hover {
-  background-color: #0875e1;
-  border-color: #0875e1;
 }
 
 .emotion-3 {
@@ -247,11 +241,6 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   background-color: #0875e1;
 }
 
-.emotion-5:hover {
-  background-color: #0875e1;
-  border-color: #0875e1;
-}
-
 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -336,9 +325,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:focus ~ div:first-of-type,
-.emotion-0:active ~ div:first-of-type,
-.emotion-0focus:hover ~ div:first-of-type,
-.emotion-0:active:hover ~ div:first-of-type {
+.emotion-0focus:hover ~ div:first-of-type {
   border-color: #0875e1;
   border-width: 2px;
   z-index: 2;
@@ -351,7 +338,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #b9c0c7;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -365,6 +352,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
+  background-color: #0875e1;
   border-color: #0875e1;
 }
 
@@ -406,7 +394,7 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
 `;
 
 exports[`Checkbox Snapshots renders as expected 3`] = `
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -483,9 +471,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus ~ div:first-of-type,
-.emotion-0:active ~ div:first-of-type,
-.emotion-0focus:hover ~ div:first-of-type,
-.emotion-0:active:hover ~ div:first-of-type {
+.emotion-0focus:hover ~ div:first-of-type {
   border-color: #0875e1;
   border-width: 2px;
   z-index: 2;
@@ -498,7 +484,7 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 .emotion-0:focus:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  border-color: #b9c0c7;
 }
 
 [data-whatinput="mouse"] .emotion-0:focus ~ div:first-of-type,
@@ -512,7 +498,8 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #7b858f;
+  background-color: #f6f7f8;
+  border-color: #b9c0c7;
 }
 
 .emotion-5 {
@@ -540,13 +527,8 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-transition: border 200ms ease,background 200ms;
   transition: border 200ms ease,background 200ms;
   width: 18px;
-  border-color: #7b858f;
+  border-color: #b9c0c7;
   background-color: #f6f7f8;
-}
-
-.emotion-5:hover {
-  background-color: #f6f7f8;
-  border-color: #5e6a75;
 }
 
 .emotion-3 {
@@ -568,8 +550,18 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   transform: scale(0.5);
 }
 
+.emotion-9 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding-left: 12px;
+  color: #a1aab3;
+}
+
 <div
-  className="emotion-9 emotion-10"
+  className="emotion-11 emotion-12"
 >
   <div
     className="emotion-7 emotion-8"
@@ -601,12 +593,17 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
       </div>
     </div>
   </div>
-  
+  <label
+    className="emotion-9 emotion-10"
+    disabled={true}
+  >
+    checkbox
+  </label>
 </div>
 `;
 
 exports[`Checkbox Snapshots renders as expected 4`] = `
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -707,9 +704,7 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 }
 
 .emotion-0:focus ~ div:first-of-type,
-.emotion-0:active ~ div:first-of-type,
-.emotion-0focus:hover ~ div:first-of-type,
-.emotion-0:active:hover ~ div:first-of-type {
+.emotion-0focus:hover ~ div:first-of-type {
   border-color: #0875e1;
   border-width: 2px;
   z-index: 2;
@@ -736,7 +731,8 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
 }
 
 [data-whatinput="mouse"] .emotion-0:hover ~ div:first-of-type {
-  border-color: #5e6a75;
+  background-color: white;
+  border-color: #333d47;
 }
 
 .emotion-5 {
@@ -768,13 +764,18 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   background-color: white;
 }
 
-.emotion-5:hover {
-  background-color: white;
-  border-color: #5e6a75;
+.emotion-9 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  padding-left: 12px;
+  cursor: pointer;
 }
 
 <div
-  className="emotion-9 emotion-10"
+  className="emotion-11 emotion-12"
 >
   <div
     className="emotion-7 emotion-8"
@@ -806,6 +807,11 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
       </div>
     </div>
   </div>
-  
+  <label
+    className="emotion-9 emotion-10"
+    disabled={false}
+  >
+    checkbox
+  </label>
 </div>
 `;

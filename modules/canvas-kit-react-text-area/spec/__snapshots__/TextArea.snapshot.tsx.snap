@@ -49,7 +49,7 @@ exports[`TextArea Snapshots error 1`] = `
 
 .emotion-0:disabled {
   background-color: #f6f7f8;
-  border-color: #a1aab3;
+  border-color: #b9c0c7;
   color: #a1aab3;
 }
 
@@ -127,7 +127,7 @@ exports[`TextArea Snapshots grow 1`] = `
 
 .emotion-0:disabled {
   background-color: #f6f7f8;
-  border-color: #a1aab3;
+  border-color: #b9c0c7;
   color: #a1aab3;
 }
 
@@ -148,7 +148,7 @@ exports[`TextArea Snapshots grow 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #5e6a75;
+  border-color: #333d47;
 }
 
 <textarea
@@ -204,7 +204,7 @@ exports[`TextArea Snapshots renders as expected 1`] = `
 
 .emotion-0:disabled {
   background-color: #f6f7f8;
-  border-color: #a1aab3;
+  border-color: #b9c0c7;
   color: #a1aab3;
 }
 
@@ -225,7 +225,7 @@ exports[`TextArea Snapshots renders as expected 1`] = `
 }
 
 .emotion-0:hover {
-  border-color: #5e6a75;
+  border-color: #333d47;
 }
 
 <textarea
