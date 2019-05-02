@@ -7,7 +7,7 @@ import {InputProviderDecorator, SectionDecorator} from '@workday/canvas-kit-reac
 import {TextArea, TextAreaProps} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-export class TextAreaWrapper extends React.Component<TextAreaProps, {}> {
+export class TextAreaWrapper extends React.Component<Partial<TextAreaProps>, {}> {
   static defaultProps = {
     type: 'text',
   };
@@ -27,39 +27,43 @@ export class TextAreaWrapper extends React.Component<TextAreaProps, {}> {
 }
 
 export const TextAreas = {
-  Plain: <TextArea id="textarea-plain" />,
-  Placeholder: <TextArea placeholder="Placeholder" id="textarea-placeholder" />,
+  Plain: <TextAreaWrapper id="textarea-plain" />,
+  Placeholder: <TextAreaWrapper placeholder="Placeholder" id="textarea-placeholder" />,
   XResize: (
-    <TextArea
+    <TextAreaWrapper
       placeholder="Resizable Horizontally"
       id="textarea-xresize"
       resize={TextArea.ResizeDirection.Horizontal}
     />
   ),
   YResize: (
-    <TextArea
+    <TextAreaWrapper
       placeholder="Resizable Vertically"
       id="textarea-yresize"
       resize={TextArea.ResizeDirection.Vertical}
     />
   ),
   NoResize: (
-    <TextArea
+    <TextAreaWrapper
       placeholder="Not Resizable"
       id="textarea-no-resize"
       resize={TextArea.ResizeDirection.None}
     />
   ),
   XYResize: (
-    <TextArea placeholder="Resizable" id="textarea-resize" resize={TextArea.ResizeDirection.Both} />
+    <TextAreaWrapper
+      placeholder="Resizable"
+      id="textarea-resize"
+      resize={TextArea.ResizeDirection.Both}
+    />
   ),
-  Disabled: <TextArea disabled={true} id="textarea-disabled" />,
+  Disabled: <TextAreaWrapper disabled={true} id="textarea-disabled" />,
   DisabledPlaceholder: (
-    <TextArea placeholder="Placeholder" id="textarea-disabled-placeholder" disabled={true} />
+    <TextAreaWrapper placeholder="Placeholder" id="textarea-disabled-placeholder" disabled={true} />
   ),
-  Alert: <TextArea error={TextArea.ErrorType.Alert} id="textarea-alert" value="Alert" />,
-  Error: <TextArea error={TextArea.ErrorType.Error} id="textarea-error" value="Error" />,
-  Grow: <TextArea placeholder="Placeholder" id="textarea-grow" grow={true} />,
+  Alert: <TextAreaWrapper error={TextArea.ErrorType.Alert} id="textarea-alert" value="Alert" />,
+  Error: <TextAreaWrapper error={TextArea.ErrorType.Error} id="textarea-error" value="Error" />,
+  Grow: <TextAreaWrapper placeholder="Placeholder" id="textarea-grow" grow={true} />,
 };
 
 storiesOf('Canvas Kit/Text Area', module)
