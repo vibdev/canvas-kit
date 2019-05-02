@@ -88,7 +88,7 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
   .add('Alert', () => (
     <Field
       labelPosition={FormField.LabelPosition.Left}
-      error={FormField.ErrorType.Error}
+      error={FormField.ErrorType.Alert}
       hintText={hintText}
     >
       {Inputs.Alert}
@@ -97,7 +97,7 @@ storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
   .add('Error', () => (
     <Field
       labelPosition={FormField.LabelPosition.Left}
-      error={FormField.ErrorType.Alert}
+      error={FormField.ErrorType.Error}
       hintText={hintText}
     >
       {Inputs.Error}
