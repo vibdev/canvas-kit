@@ -87,7 +87,9 @@ export default class FormField extends React.Component<FormFieldProps> {
 
   private renderChildren = (child: React.ReactChild): React.ReactNode => {
     if (React.isValidElement<any>(child)) {
-      const props: GrowthBehavior & ErrorBehavior & React.HTMLAttributes<HTMLInputElement> = {};
+      const props: GrowthBehavior & ErrorBehavior & React.HTMLAttributes<HTMLInputElement> = {
+        ...child.props,
+      };
 
       if (this.props.grow && React.isValidElement<GrowthBehavior>(child)) {
         props.grow = this.props.grow;

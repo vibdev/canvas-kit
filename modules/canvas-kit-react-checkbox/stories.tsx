@@ -9,27 +9,31 @@ import README from './README.md';
 
 export class CheckboxWrapper extends React.Component<{disabled?: boolean}> {
   state = {
-    id: '1',
-    isChecked: false,
+    checked: false,
   };
 
-  handleCheck = () => {
+  onChange = () => {
     this.setState(prevState => ({
-      isChecked: !this.state.isChecked,
+      checked: !this.state.checked,
     }));
   };
 
+  renderChildren = (child: React.ReactNode) => {
+    if (React.isValidElement<any>(child)) {
+      const {children, ...props} = this.props;
+      const childProps = {
+        ...props,
+        ...child.props,
+        checked: this.state.checked,
+        onChange: this.onChange,
+      };
+      return React.cloneElement(child, childProps);
+    }
+    return child;
+  };
+
   render() {
-    const {disabled} = this.props;
-    return (
-      <Checkbox
-        disabled={disabled}
-        checked={this.state.isChecked}
-        id={this.state.id}
-        label="Checkbox option"
-        onChange={this.handleCheck}
-      />
-    );
+    return React.Children.map(this.props.children, this.renderChildren);
   }
 }
 
@@ -40,7 +44,9 @@ storiesOf('Canvas Kit/Checkbox', module)
     <div className="story">
       <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <CheckboxWrapper />
+        <CheckboxWrapper>
+          <Checkbox id="1" label="Checkbox option" />
+        </CheckboxWrapper>
       </div>
     </div>
   ))
@@ -48,7 +54,9 @@ storiesOf('Canvas Kit/Checkbox', module)
     <div className="story">
       <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        <CheckboxWrapper disabled={true} />
+        <CheckboxWrapper>
+          <Checkbox disabled={true} id="1" label="Checkbox option" />
+        </CheckboxWrapper>
       </div>
     </div>
   ));
