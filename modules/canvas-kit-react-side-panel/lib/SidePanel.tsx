@@ -1,0 +1,92 @@
+import * as React from 'react';
+import styled from 'react-emotion';
+import {colors, spacing, type} from '@workday/canvas-kit-react-core';
+// import {makeMq} from '@workday/canvas-kit-react-common';
+import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
+import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
+
+export interface SidePanelProps {
+  title?: string | React.ReactNode;
+  onClickHandler?: () => void;
+  openRight?: boolean;
+  openLeft?: boolean;
+  open?: boolean;
+  breakpoint: {
+    [key: string]: number;
+    default: number;
+  };
+}
+
+const openSidePanelWidth = 300;
+
+const Title = styled('h2')({
+  ...type.h2,
+  marginTop: spacing.zero,
+});
+
+const SidePanelToggleContainer = styled('div')({
+  position: 'absolute',
+  bottom: spacing.s,
+});
+
+const SidePanelContainer = styled('div')<SidePanelProps>(
+  {
+    height: '100%',
+    boxSizing: 'border-box',
+    display: 'flex',
+    flexDirection: 'column',
+    transition: 'width 150ms ease-out 0s',
+    position: 'absolute',
+  },
+  ({open, openRight, openLeft}) => ({
+    boxShadow: !open ? '0 8px 16px -8px rgba(0, 0, 0, 0.16)' : '',
+    backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
+    width: open ? openSidePanelWidth : spacing.xl,
+    padding: open ? spacing.m : spacing.zero,
+    right: openRight && !openLeft ? spacing.zero : '',
+    left: openLeft && !openRight ? spacing.zero : '',
+    alignItems: open ? '' : 'center',
+    [`${SidePanelToggleContainer}`]: {
+      right: open && !openRight ? spacing.s : '',
+      left: openRight && open ? spacing.s : '',
+    },
+  })
+);
+
+export default class MyComponent extends React.Component<SidePanelProps> {
+  static defaultProps = {
+    breakpoint: {
+      default: 924,
+    },
+  };
+  public render() {
+    const {breakpoint, title, onClickHandler, open, openRight, openLeft} = this.props;
+    let toggleButtonDirection;
+    if (!openRight) {
+      toggleButtonDirection = open ? arrowLeftIcon : arrowRightIcon;
+    } else {
+      toggleButtonDirection = open ? arrowRightIcon : arrowLeftIcon;
+    }
+    return (
+      <SidePanelContainer
+        openLeft={openLeft}
+        openRight={openRight}
+        breakpoint={breakpoint}
+        open={open}
+      >
+        {title && open ? <Title>{title}</Title> : null}
+        {this.props.children}
+        {onClickHandler && (
+          <SidePanelToggleContainer>
+            <IconButton
+              buttonSize={ButtonSizes.Small}
+              onClick={onClickHandler}
+              icon={toggleButtonDirection}
+              buttonType={IconButton.Types.Filled}
+            />
+          </SidePanelToggleContainer>
+        )}
+      </SidePanelContainer>
+    );
+  }
+}
