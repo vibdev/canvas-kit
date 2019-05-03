@@ -8,7 +8,6 @@ import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 
 import FormField, {Label, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
-import {CheckboxWrapper} from '../canvas-kit-react-checkbox/stories';
 
 storiesOf('Canvas Kit/Form Field', module)
   .addDecorator(withReadme(README))
@@ -73,7 +72,11 @@ storiesOf('Canvas Kit/Form Field/Radio', module)
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label">
-          <Radio id="1" value="email" label="E-mail" />
+          <ControlledComponentWrapper
+            controlledProp={ControlledComponentWrapper.ControlledProp.Checked}
+          >
+            <Radio id="1" value="email" label="E-mail" />
+          </ControlledComponentWrapper>
         </FormField>
       </div>
     </div>
@@ -83,7 +86,11 @@ storiesOf('Canvas Kit/Form Field/Radio', module)
       <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" labelPosition={FormField.LabelPosition.Left}>
-          <Radio id="1" value="email" label="E-mail" />
+          <ControlledComponentWrapper
+            controlledProp={ControlledComponentWrapper.ControlledProp.Checked}
+          >
+            <Radio id="1" value="email" label="E-mail" />
+          </ControlledComponentWrapper>
         </FormField>
       </div>
     </div>
@@ -97,9 +104,11 @@ storiesOf('Canvas Kit/Form Field/Checkbox', module)
       <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="My Field" inputId="my-checkbox-field">
-          <CheckboxWrapper>
+          <ControlledComponentWrapper
+            controlledProp={ControlledComponentWrapper.ControlledProp.Checked}
+          >
             <Checkbox id="1" label="Checkbox option" />
-          </CheckboxWrapper>
+          </ControlledComponentWrapper>
         </FormField>
       </div>
     </div>
@@ -113,9 +122,11 @@ storiesOf('Canvas Kit/Form Field/Checkbox', module)
           inputId="my-checkbox-field"
           labelPosition={FormField.LabelPosition.Left}
         >
-          <CheckboxWrapper>
+          <ControlledComponentWrapper
+            controlledProp={ControlledComponentWrapper.ControlledProp.Checked}
+          >
             <Checkbox id="1" label="Checkbox option" />
-          </CheckboxWrapper>
+          </ControlledComponentWrapper>
         </FormField>
       </div>
     </div>
