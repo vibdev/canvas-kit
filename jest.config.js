@@ -6,6 +6,7 @@ module.exports = {
   collectCoverageFrom: [
     'modules/**/*.{tsx,}',
     '!**/canvas-kit-react-header/**/lib/Header.tsx',
+    '!**/canvas-kit-react-common/**/ControlledComponentWrapper.tsx',
     '!**/canvas-kit-react-common/**/InputProviderDecorator.tsx',
     '!**/canvas-kit-react-common/**/SectionDecorator.tsx',
     '!**/index.{ts,tsx,js,jsx}',
