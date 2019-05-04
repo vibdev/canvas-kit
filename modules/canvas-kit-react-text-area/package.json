@@ -1,9 +1,9 @@
 {
-  "name": "@workday/canvas-kit-react-core",
-  "version": "1.9.2",
-  "description": "A group of core primitives (i.e. colors, text, etc.)",
+  "name": "@workday/canvas-kit-react-text-area",
+  "version": "0.0.0",
+  "description": "Canvas-styled text area",
   "homepage": "https://workdaydesign.com",
-  "author": "Alex Nicholls",
+  "author": "Stephane Rangaya <stephane@workday.com>",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -11,12 +11,12 @@
   "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-text-area"
   },
   "files": [
     "dist/",
     "lib/",
-    "index.tsx"
+    "index.ts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,15 +31,9 @@
     "react",
     "components",
     "workday",
-    "core"
+    "text-area"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
-  },
-  "dependencies": {
-    "@workday/canvas-colors-web": "^0.17.12",
-    "@workday/canvas-depth-web": "^0.16.3",
-    "@workday/canvas-space-web": "^0.15.5",
-    "emotion": "^9.2.6"
   }
 }

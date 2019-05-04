@@ -330,6 +330,12 @@ type updates from the events above, the intent type will also be updated to the 
 
 ## Usage
 
+As an external consumer, you should reference the following example.
+
+If you are contributing a component, you must add the necessary styling (see below) and use the
+[`InputProviderDecorator`](#storybook-decorator) in your stories. _DO NOT_ wrap any canvas kit
+components in an `InputProvider`.
+
 ```tsx
 import * as React from 'react';
 import {InputProvider} from '@workday/canvas-kit-react-core';
