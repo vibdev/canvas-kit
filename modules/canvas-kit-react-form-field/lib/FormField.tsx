@@ -21,31 +21,25 @@ export interface ErrorBehavior {
   error?: ErrorType;
 }
 
-const formFieldContainerStyles = [
-  (props: Partial<FormFieldProps>) => {
-    if (props.labelPosition === LabelPosition.Left) {
-      return {
-        display: 'flex',
-        marginBottom: spacing.m,
-      };
-    }
+// Use a fieldset element for accessible radio groups
+const FormFieldFieldsetContainer = styled('fieldset')<LabelPositionBehavior>({
+  padding: 0,
+  margin: 0,
+  border: 0,
+});
 
+const FormFieldContainer = styled('div')<LabelPositionBehavior>(({labelPosition}) => {
+  if (labelPosition === LabelPosition.Left) {
     return {
-      marginBottom: spacing.s,
+      display: 'flex',
+      marginBottom: spacing.m,
     };
-  },
-];
-
-// Use a fieldset element instead of a div for accessible radio groups
-const FormFieldFieldsetContainer = styled('fieldset')<LabelPositionBehavior>(
-  ...formFieldContainerStyles,
-  {
-    padding: 0,
-    margin: `0 0 ${spacing.s} 0`,
-    border: 0,
   }
-);
-const FormFieldContainer = styled('div')<LabelPositionBehavior>(...formFieldContainerStyles);
+
+  return {
+    marginBottom: spacing.s,
+  };
+});
 
 const FormFieldInputContainer = styled('div')<GrowthBehavior & LabelPositionBehavior>(
   ({grow, labelPosition}) => {
@@ -130,10 +124,8 @@ export default class FormField extends React.Component<FormFieldProps> {
     } = this.props;
     const {labelPosition, error} = inputProps;
 
-    const Container = useFieldset ? FormFieldFieldsetContainer : FormFieldContainer;
-
-    return (
-      <Container labelPosition={labelPosition}>
+    const field = (
+      <FormFieldContainer labelPosition={labelPosition}>
         {typeof label === 'string' ? (
           <Label labelPosition={labelPosition} htmlFor={inputId} isLegend={useFieldset}>
             {label}
@@ -150,7 +142,9 @@ export default class FormField extends React.Component<FormFieldProps> {
             </Hint>
           )}
         </FormFieldInputContainer>
-      </Container>
+      </FormFieldContainer>
     );
+
+    return useFieldset ? <FormFieldFieldsetContainer>{field}</FormFieldFieldsetContainer> : field;
   }
 }
