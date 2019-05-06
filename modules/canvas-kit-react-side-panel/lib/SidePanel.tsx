@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {colors, spacing, type} from '@workday/canvas-kit-react-core';
-// import {makeMq} from '@workday/canvas-kit-react-common';
+import {colors, spacing, type, CanvasSpacingValue} from '@workday/canvas-kit-react-core';
 import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
 
@@ -10,11 +9,8 @@ export interface SidePanelProps {
   onClickHandler?: () => void;
   openRight?: boolean;
   openLeft?: boolean;
-  open?: boolean;
-  breakpoint: {
-    [key: string]: number;
-    default: number;
-  };
+  open: boolean;
+  padding?: CanvasSpacingValue;
 }
 
 const openSidePanelWidth = 300;
@@ -38,11 +34,11 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
     transition: 'width 150ms ease-out 0s',
     position: 'absolute',
   },
-  ({open, openRight, openLeft}) => ({
+  ({open, openRight, openLeft, padding}) => ({
     boxShadow: !open ? '0 8px 16px -8px rgba(0, 0, 0, 0.16)' : '',
     backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
     width: open ? openSidePanelWidth : spacing.xl,
-    padding: open ? spacing.m : spacing.zero,
+    padding: open ? padding || spacing.m : spacing.zero,
     right: openRight && !openLeft ? spacing.zero : '',
     left: openLeft && !openRight ? spacing.zero : '',
     alignItems: open ? '' : 'center',
@@ -60,7 +56,7 @@ export default class MyComponent extends React.Component<SidePanelProps> {
     },
   };
   public render() {
-    const {breakpoint, title, onClickHandler, open, openRight, openLeft} = this.props;
+    const {title, onClickHandler, open, openRight, openLeft, padding} = this.props;
     let toggleButtonDirection;
     if (!openRight) {
       toggleButtonDirection = open ? arrowLeftIcon : arrowRightIcon;
@@ -69,9 +65,11 @@ export default class MyComponent extends React.Component<SidePanelProps> {
     }
     return (
       <SidePanelContainer
+        aria-expanded={open}
+        aria-orientation="vertical"
+        padding={padding}
         openLeft={openLeft}
         openRight={openRight}
-        breakpoint={breakpoint}
         open={open}
       >
         {title && open ? <Title>{title}</Title> : null}
