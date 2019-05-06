@@ -17,6 +17,7 @@ export * from '@workday/canvas-kit-react-popup';
 export * from '@workday/canvas-kit-react-radio';
 export * from '@workday/canvas-kit-react-skeleton';
 export * from '@workday/canvas-kit-react-table';
+export * from '@workday/canvas-kit-react-text-area';
 export * from '@workday/canvas-kit-react-text-input';
 export * from '@workday/canvas-kit-react-toggle';
 export * from '@workday/canvas-kit-react-tooltip';
