@@ -104,7 +104,7 @@ describe('FormField', () => {
     );
 
     expect(component.find(InputComponent).props().error).toEqual(FormField.ErrorType.Error);
-    expect(component.find(InputComponent).props()['aria-invalid']).toBeTruthy();
+    expect(component.find(InputComponent).prop('aria-invalid')).toBeTruthy();
 
     component.unmount();
   });
