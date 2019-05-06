@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.5.0...@workday/canvas-kit-react@1.5.1) (2019-05-06)
+
+
+### Bug Fixes
+
+* **textarea:** add to base module ([ae52953](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/ae52953))
+
+
+
+
+
 # [1.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.11...@workday/canvas-kit-react@1.5.0) (2019-05-06)
 
 
