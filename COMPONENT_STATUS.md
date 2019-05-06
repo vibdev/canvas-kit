@@ -23,7 +23,7 @@ part of Canvas.
 | [Button - Icon](modules/canvas-kit-react-button)                | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Button - Text](modules/canvas-kit-react-button)                | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Card](modules/canvas-kit-react-card)                           | :white_check_mark: |                                                                                    |
-| Checkbox                                                        |                    |    [:blue_book:](https://design.workday.com/guidelines/components/check-boxes)     |
+| Checkbox                                                        | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/check-boxes)     |
 | Color Picker                                                    |                    |                                                                                    |
 | Context Menu                                                    |                    |                                                                                    |
 | [Cookie Banner](modules/canvas-kit-react-cookie-banner)         | :white_check_mark: |                                                                                    |
@@ -44,10 +44,10 @@ part of Canvas.
 | Radio Buttons                                                   |                    |   [:blue_book:](https://design.workday.com/guidelines/components/radio-buttons)    |
 | Rich Text Editor                                                |                    |  [:blue_book:](https://design.workday.com/guidelines/components/rich-text-editor)  |
 | Slider                                                          |                    |                                                                                    |
-| [Table](modules/canvas-kit-react-table)                         | :white_check_mark: |       [:blue_book:](https://design.workday.com/guidelines/components/grids)        |
+| [Table](modules/canvas-kit-react-table)                         | :white_check_mark: |       [:blue_book:](https://design.workday.com/guidelines/components/tables)        |
 | Tabs                                                            |                    |        [:blue_book:](https://design.workday.com/guidelines/components/tabs)        |
 | Toast                                                           |                    |                                                                                    |
-| Tooltip                                                         |                    |                                                                                    |
-| Text Area                                                       |                    |                                                                                    |
-| Text Input                                                      |                    |    [:blue_book:](https://design.workday.com/guidelines/components/text-inputs)     |
+| Tooltip                                                         |  :white_check_mark: |                                                                                    |
+| Text Area                                                       | :white_check_mark: |                                                                                    |
+| Text Input                                                      | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/text-inputs)     |
 | [Toggle Switch](modules/canvas-kit-react-toggle)                | :white_check_mark: |                                                                                    |  |
