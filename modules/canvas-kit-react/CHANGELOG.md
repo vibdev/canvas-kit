@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.11...@workday/canvas-kit-react@1.5.0) (2019-05-06)
+
+
+### Bug Fixes
+
+* **inputs:** add radio, form field, and checkbox to base ([f23a21e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/f23a21e))
+
+
+### Features
+
+* **checkbox:** Add checkbox to universal module ([4f45c5d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/4f45c5d))
+* **text-input:** add to base module ([92dec11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/92dec11))
+* **TextArea:** create component ([c3cc1c2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/c3cc1c2))
+
+
+
+
+
 ## [1.4.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.4.10...@workday/canvas-kit-react@1.4.11) (2019-04-30)
 
 **Note:** Version bump only for package @workday/canvas-kit-react

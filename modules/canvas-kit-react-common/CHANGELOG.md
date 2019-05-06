@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.3.11...@workday/canvas-kit-react-common@0.4.0) (2019-05-06)
+
+
+### Features
+
+* **common:** Add a component for controlling components with value/onChange ([60d50f3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/60d50f3))
+* **common:** Add checkbox support to ControlledComponentWrapper ([54c78fb](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/54c78fb))
+
+
+
+
+
 ## [0.3.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.3.10...@workday/canvas-kit-react-common@0.3.11) (2019-04-29)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-common
