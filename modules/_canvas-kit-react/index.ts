@@ -15,6 +15,7 @@ export * from '@workday/canvas-kit-react-loading-animation';
 export * from '@workday/canvas-kit-react-page-header';
 export * from '@workday/canvas-kit-react-popup';
 export * from '@workday/canvas-kit-react-radio';
+export * from '@workday/canvas-kit-react-side-panel';
 export * from '@workday/canvas-kit-react-skeleton';
 export * from '@workday/canvas-kit-react-table';
 export * from '@workday/canvas-kit-react-text-area';

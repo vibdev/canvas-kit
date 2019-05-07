@@ -21,14 +21,76 @@ yarn add @workday/canvas-kit-side-panel
 
 ```tsx
 import * as React from 'react';
-import SidePanel from '@workday/canvas-kit-side-panel';
+import {
+  Button,
+  ButtonTypes,
+  IconButton,
+  IconButtonTypes,
+  ButtonSizes,
+} from '@workday/canvas-kit-react-button';
+import SidePanel from '@workday/canvas-kit-react-side-panel';
 
-<ColorInput
-  showCheck={true}
-  onChange={this.onChange}
-  value={this.state.color}
-  onValidColorChange={this.validColorChange}
-/>;
+interface SidePanelState {
+  open: boolean;
+  isResponsive: boolean;
+}
+
+class SidePanelExample extends React.Component<{}, SidePanelState> {
+  public state = {
+    open: true,
+    isResponsive: true,
+  };
+  public componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+  public componentWillUnmount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+  public render() {
+    const {open} = this.state;
+    return (
+      <SidePanel open={open} onClickHandler={this.onClick} title={'Side Panel Header'}>
+        {open ? (
+          <Button buttonType={ButtonTypes.Primary}>Add New</Button>
+        ) : (
+          <IconButton buttonSize={ButtonSizes.Small} buttonType={IconButtonTypes.Filled}>
+            <SystemIcon icon={plusIcon} />
+          </IconButton>
+        )}
+        <ul>
+          <li className={listItemStyles}>{open && <span>Home</span>}</li>
+          <li className={listItemStyles}>{open && <span>Favorites</span>}</li>
+          <li className={listItemStyles}>{open && <span>Items</span>}</li>
+        </ul>
+      </SidePanel>
+    );
+  }
+
+  private onClick = () => {
+    const threshold = window.innerWidth > 924;
+    const isResponsive = (threshold && !this.state.open) || (!threshold && this.state.open);
+    this.setState({
+      open: !this.state.open,
+      isResponsive,
+    });
+  };
+
+  private handleResize = () => {
+    const threshold = window.innerWidth > 924;
+    if (this.state.isResponsive) {
+      if (threshold && !this.state.open) {
+        this.setState({
+          open: true,
+        });
+      }
+      if (!threshold && this.state.open) {
+        this.setState({
+          open: false,
+        });
+      }
+    }
+  };
+}
 ```
 
 ## Static Properties
@@ -41,36 +103,44 @@ All standard input attributes are available and can be passed to the input field
 
 ### Required
 
-#### `value: string`
+#### `open: boolean`
 
-> The value entered by the user into the color input
+> Determines if the side panel is open or closed.
 
 ---
 
 ### Optional
 
-#### `inputRef: React.Ref<HTMLInputElement>`
+#### `onClickHandler: () => void`
 
-> A ref to the input element. This allows you to imperatively focus on the color input if needed.
-
----
-
-#### `onChange: (e: React.ChangeEvent<HTMLInputElement>) => void`
-
-> A onChange callback from the input. Value can be accessed from `e.currentTarget.value`. Should be
-> used to control the input.
+> Callback that handles clicking toggle button to open or close side panel.
 
 ---
 
-#### `onValidColorChange: (color: string) => void`
+#### `title: string | React.ReactNode`
 
-> A callback that passes up the valid hex value typed by the user. This is always prefixed with a
-> hash, and is always the expanded hex value (e.g. "03F" > "#0033FF").
+> Custom title or element to display as a header to the side panel.
 
 ---
 
-#### `showCheck: boolean`
+#### `openRight: boolean`
 
-> Optionally show a check icon when a custom hex color has been selected
+> Determines if the side panel opens from the right
 
-Default: `false`
+---
+
+#### `openLeft: boolean`
+
+> Determines if the side panel opens from the left
+
+Default: `true`
+
+---
+
+#### `padding: CanvasSpacingValue`
+
+> Adjust padding of the side panel.
+
+Default: `24px` when it's open and `0px` when it's closed
+
+---

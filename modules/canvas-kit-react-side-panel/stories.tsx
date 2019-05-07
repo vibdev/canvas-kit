@@ -18,13 +18,11 @@ import {
   IconButtonTypes,
   ButtonSizes,
 } from '@workday/canvas-kit-react-button';
-// import {notificationsIcon} from '@workday/canvas-system-icons-web';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
 
 interface SidePanelState {
   open: boolean;
   isResponsive: boolean;
-  windowWasOpenTheLastTimeWeLookedYo: boolean;
 }
 
 const ListItem = styled('li')({
@@ -60,7 +58,6 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   public state = {
     open: true,
     isResponsive: true,
-    windowWasOpenTheLastTimeWeLookedYo: true,
   };
   public componentDidMount() {
     window.addEventListener('resize', this.handleResize);

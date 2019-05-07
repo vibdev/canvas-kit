@@ -5,11 +5,11 @@ import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
 
 export interface SidePanelProps {
-  title?: string | React.ReactNode;
+  open: boolean;
   onClickHandler?: () => void;
+  title?: string | React.ReactNode;
   openRight?: boolean;
   openLeft?: boolean;
-  open: boolean;
   padding?: CanvasSpacingValue;
 }
 
