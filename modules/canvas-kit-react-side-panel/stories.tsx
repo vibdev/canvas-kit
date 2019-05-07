@@ -6,7 +6,7 @@ import {homeIcon, starIcon, rocketIcon, plusIcon} from '@workday/canvas-system-i
 import styled from 'react-emotion';
 import {css} from 'emotion';
 
-import {colors, type, spacing} from '@workday/canvas-kit-react-core';
+import {colors, type} from '@workday/canvas-kit-react-core';
 import SidePanel from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';

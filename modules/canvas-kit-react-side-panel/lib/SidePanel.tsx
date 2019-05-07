@@ -75,7 +75,7 @@ export default class MyComponent extends React.Component<SidePanelProps> {
               buttonSize={ButtonSizes.Small}
               onClick={onClickHandler}
               icon={toggleButtonDirection}
-              buttonType={IconButton.Types.Filled}
+              buttonType={IconButton.Types.Plain}
             />
           </SidePanelToggleContainer>
         )}
