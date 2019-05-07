@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@types/chroma-js": "^1.4.0",
-    "@types/lodash": "^4.14.121",
+    "@types/lodash": "^4.14.123",
     "@workday/canvas-kit-react-avatar": "^0.4.13"
   }
 }
