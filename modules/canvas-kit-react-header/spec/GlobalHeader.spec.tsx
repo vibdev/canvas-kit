@@ -1,6 +1,6 @@
 import * as React from 'react';
 import GlobalHeader from '../lib/GlobalHeader';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 declare global {
   interface Window {
@@ -71,5 +71,24 @@ describe('GlobalHeader', () => {
           .contains('Test')
       ).toBeTruthy();
     });
+  });
+
+  test('getScreenSize should call onBreakpointChange event handler with current screen size', () => {
+    jest.useFakeTimers();
+
+    const largeBreakpoint = 30
+    const mockFunction = jest.fn();
+    mount<GlobalHeader>(<GlobalHeader breakpoint={largeBreakpoint} onBreakpointChange={mockFunction} />);
+
+    window.resizeBy(25, 25);
+    expect(mockFunction).toHaveBeenCalledTimes(1);
+    expect(mockFunction).toHaveBeenCalledWith('md');
+    mockFunction.mockReset();
+
+    jest.runAllTimers();
+
+    window.resizeBy(35, 35);
+    expect(mockFunction).toHaveBeenCalledTimes(1);
+    expect(mockFunction).toHaveBeenCalledWith('lg');
   });
 });

@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
-import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
+import {HeaderTheme, HeaderVariant, HeaderHeight, BreakpointType} from './shared/types';
 import {IconButton, IconButtonProps} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
@@ -57,6 +57,10 @@ export interface HeaderProps {
     md: number;
     lg: number;
   };
+  /**
+   * An event handler function that gets called when the screen size changes to a different breakpoint key
+   */
+  onBreakpointChange?: (key: BreakpointType | string) => void;
 }
 
 export interface HeaderState {
@@ -336,6 +340,10 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         this.setState({
           screenSize: currentScreenSize,
         });
+
+        if (this.props.onBreakpointChange) {
+          this.props.onBreakpointChange(currentScreenSize)
+        }
       }
     });
   }
@@ -422,7 +430,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
-    const {onMenuClick, onSearchSubmit, ...props} = this.props;
+    const {onBreakpointChange, onMenuClick, onSearchSubmit, ...props} = this.props;
 
     /* Push everything to the right if:
        - on tablet and mobile screens

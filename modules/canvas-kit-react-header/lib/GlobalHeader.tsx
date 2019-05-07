@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from './Header';
-import {HeaderVariant} from './shared/types';
+import {HeaderVariant, BreakpointType} from './shared/types';
 import {DubLogoTitle} from './parts';
 
 export interface GlobalHeaderProps {
@@ -24,6 +24,10 @@ export interface GlobalHeaderProps {
    * An object that allows for custom specified breakpoint
    */
   breakpoint: number;
+  /**
+   * An event handler function that gets called when the screen size changes to a different breakpoint key
+   */
+  onBreakpointChange?: (key: BreakpointType | string) => void;
 }
 
 export default class GlobalHeader extends React.Component<GlobalHeaderProps> {
@@ -45,6 +49,7 @@ export default class GlobalHeader extends React.Component<GlobalHeaderProps> {
         onMenuClick={this.props.onMenuClick}
         variant={HeaderVariant.Global}
         breakpoints={breakpoints}
+        onBreakpointChange={this.props.onBreakpointChange}
       >
         {this.props.children}
       </Header>

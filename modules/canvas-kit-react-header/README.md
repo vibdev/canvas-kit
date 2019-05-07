@@ -201,6 +201,10 @@ Default:
 > A flag to highlight the search on the left beside the logo. Will only work if `onSearchSubmit` is
 > provided.
 
+#### `onBreakpointChange: (BreakpointType | string) => void`
+
+> If specified, this callback is executed after the screen size changes with the new breakpoint key
+
 # Global Header
 
 The Global Header (or App Header) is used for Workday applications.
@@ -217,6 +221,7 @@ const HeaderBrand = () => <DubLogoTitle themeColor={Header.Theme.White} />
 const HeaderAvatar = () => <Avatar onClick={handleMenuClick} url="https://my.cdn.amazonaws.com/assets/avatar_pic.png" />
 const handleSearchSubmit = query => console.log("Submitted query: ", query)
 const openMenu = e => console.log("Menu opened")
+const handleBreakpointChange = key => console.log(`Breakpoint change: ${key}`)
 
 /**
  * In this instance, the right-most child will be an Avatar component, when the GlobalHeader
@@ -229,6 +234,7 @@ const openMenu = e => console.log("Menu opened")
   onMenuClick={openMenu}
   onSearchSubmit={handleSearchSubmit}
   breakpoint={720}
+  onBreakpointChange={handleBreakpointChange}
 >
   <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
   <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
@@ -274,6 +280,10 @@ Default: `<DubLogoTitle />`
 
 > A function that accepts a `React.SyntheticEvent` for when the user submits from the search input.
 > A search input will not be rendered if this is not provided.
+
+#### `onBreakpointChange: (BreakpointType | string) => void`
+
+> If specified, this callback is executed after the screen size changes with the new breakpoint key
 
 # "Dub" Logo and Title
 
