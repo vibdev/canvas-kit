@@ -29,7 +29,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.2.2":
+"@babel/core@^7.1.0", "@babel/core@^7.2.2", "@babel/core@^7.4.3":
   version "7.4.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/core/-/core-7.4.4.tgz#84055750b05fcd50f9915a826b44fa347a825250"
   integrity sha1-hAVXULBfzVD5kVqCa0T6NHqCUlA=
@@ -253,7 +253,7 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.2.2", "@babel/parser@^7.4.4":
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.3", "@babel/parser@^7.2.2", "@babel/parser@^7.4.4":
   version "7.4.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/parser/-/parser-7.4.4.tgz#5977129431b8fe33471730d255ce8654ae1250b6"
   integrity sha1-WXcSlDG4/jNHFzDSVc6GVK4SULY=
@@ -275,7 +275,7 @@
     "@babel/helper-create-class-features-plugin" "^7.3.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-proposal-class-properties@^7.3.0", "@babel/plugin-proposal-class-properties@^7.3.3":
+"@babel/plugin-proposal-class-properties@^7.3.0":
   version "7.4.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.4.4.tgz#93a6486eed86d53452ab9bab35e368e9461198ce"
   integrity sha1-k6ZIbu2G1TRSq5urNeNo6UYRmM4=
@@ -500,10 +500,18 @@
     "@babel/helper-builder-binary-assignment-operator-visitor" "^7.1.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-flow-strip-types@7.2.3", "@babel/plugin-transform-flow-strip-types@^7.0.0":
+"@babel/plugin-transform-flow-strip-types@7.2.3":
   version "7.2.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.2.3.tgz#e3ac2a594948454e7431c7db33e1d02d51b5cd69"
   integrity sha1-46wqWUlIRU50McfbM+HQLVG1zWk=
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-flow" "^7.2.0"
+
+"@babel/plugin-transform-flow-strip-types@^7.0.0":
+  version "7.4.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.4.4.tgz#d267a081f49a8705fc9146de0768c6b58dccd8f7"
+  integrity sha1-0meggfSahwX8kUbeB2jGtY3M2Pc=
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-flow" "^7.2.0"
@@ -775,7 +783,7 @@
     js-levenshtein "^1.1.3"
     semver "^5.3.0"
 
-"@babel/preset-env@^7.3.1", "@babel/preset-env@^7.4.1":
+"@babel/preset-env@^7.3.1", "@babel/preset-env@^7.4.1", "@babel/preset-env@^7.4.3":
   version "7.4.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/preset-env/-/preset-env-7.4.4.tgz#b6f6825bfb27b3e1394ca3de4f926482722c1d6f"
   integrity sha1-tvaCW/sns+E5TKPeT5JkgnIsHW8=
@@ -916,7 +924,7 @@
     globals "^11.1.0"
     lodash "^4.17.11"
 
-"@babel/types@^7.0.0", "@babel/types@^7.1.6", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.4.4":
+"@babel/types@^7.0.0", "@babel/types@^7.1.6", "@babel/types@^7.2.0", "@babel/types@^7.2.2", "@babel/types@^7.3.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4":
   version "7.4.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@babel/types/-/types-7.4.4.tgz#8db9e9a629bb7c29370009b4b779ed93fe57d5f0"
   integrity sha1-jbnppim7fCk3AAm0t3ntk/5X1fA=
@@ -960,7 +968,7 @@
     "@emotion/utils" "0.11.1"
     "@emotion/weak-memoize" "0.2.2"
 
-"@emotion/core@^10.0.7", "@emotion/core@^10.0.9":
+"@emotion/core@^10.0.7":
   version "10.0.10"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@emotion/core/-/core-10.0.10.tgz#8d3114e5a2f8b178a7067c603a2937516f180b08"
   integrity sha1-jTEU5aL4sXinBnxgOik3UW8YCwg=
@@ -1991,71 +1999,71 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@storybook/addon-actions@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-actions/-/addon-actions-5.1.0-alpha.36.tgz#90307a8fe98031f9cfa7b1e572ed0ad40ab33996"
-  integrity sha1-kDB6j+mAMfnPp7Hlcu0K1AqzOZY=
+"@storybook/addon-actions@^5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-actions/-/addon-actions-5.0.11.tgz#7ca6d6ce9400b9b97f2699935edade88905767c3"
+  integrity sha1-fKbWzpQAubl/JpmTXtreiJBXZ8M=
   dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/api" "5.1.0-alpha.36"
-    "@storybook/components" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/theming" "5.0.11"
     core-js "^2.6.5"
     fast-deep-equal "^2.0.1"
     global "^4.3.2"
     lodash "^4.17.11"
-    polished "^3.0.0"
-    prop-types "^15.7.2"
-    react "^16.8.4"
-    react-inspector "^2.3.1"
+    make-error "^1.3.5"
+    polished "^2.3.3"
+    prop-types "^15.6.2"
+    react "^16.8.1"
+    react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-knobs@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-knobs/-/addon-knobs-5.1.0-alpha.36.tgz#fcb97fb8f5896279bfedda709f1dcab9e6092ca5"
-  integrity sha1-/Ll/uPWJYnm/7dpwnx3KueYJLKU=
+"@storybook/addon-knobs@^5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-knobs/-/addon-knobs-5.0.11.tgz#1f093560ceec78f4906e0575ded0ac03b4494b09"
+  integrity sha1-Hwk1YM7sePSQbgV13tCsA7RJSwk=
   dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/client-api" "5.1.0-alpha.36"
-    "@storybook/components" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/theming" "5.0.11"
     copy-to-clipboard "^3.0.8"
     core-js "^2.6.5"
     escape-html "^1.0.3"
     fast-deep-equal "^2.0.1"
     global "^4.3.2"
     lodash.debounce "^4.0.8"
-    prop-types "^15.7.2"
-    qs "^6.6.0"
+    prop-types "^15.6.2"
+    qs "^6.5.2"
     react-color "^2.17.0"
     react-lifecycles-compat "^3.0.4"
-    react-select "^2.2.0"
+    react-select "^2.3.0"
+    util-deprecate "^1.0.2"
 
-"@storybook/addon-options@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-options/-/addon-options-5.1.0-alpha.36.tgz#74b6b2e3c3ef108bcee752dafd1249a96ff1ee54"
-  integrity sha1-dLay48PvEIvO51La/RJJqW/x7lQ=
+"@storybook/addon-options@^5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-options/-/addon-options-5.0.11.tgz#fea3b1b92e64c2321efa52fac67772043126cc66"
+  integrity sha1-/qOxuS5kwjIe+lL6xndyBDEmzGY=
   dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
     core-js "^2.6.5"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-viewport@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-viewport/-/addon-viewport-5.1.0-alpha.36.tgz#b1957b8bf432a51a0d0c45a691da6a124399702f"
-  integrity sha1-sZV7i/QypRoNDEWmkdpqEkOZcC8=
+"@storybook/addon-viewport@^5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addon-viewport/-/addon-viewport-5.0.11.tgz#93b1d6db2c06b7a9282ee96a9a4d1dd2c4ba8849"
+  integrity sha1-k7HW2ywGt6koLulqmk0d0sS6iEk=
   dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/components" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/theming" "5.0.11"
     core-js "^2.6.5"
     global "^4.3.2"
     memoizerific "^1.11.3"
-    prop-types "^15.7.2"
+    prop-types "^15.6.2"
     util-deprecate "^1.0.2"
 
 "@storybook/addons@5.0.11":
@@ -2069,52 +2077,16 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/addons/-/addons-5.1.0-alpha.36.tgz#d8aaeb22c8300974a2f9b67965b2e395fa2ed3e6"
-  integrity sha1-2KrrIsgwCXSi+bZ5ZbLjlfou0+Y=
+"@storybook/channel-postmessage@5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/channel-postmessage/-/channel-postmessage-5.0.11.tgz#0f63ddfc699936c96a054b002e1b544bc4540f95"
+  integrity sha1-D2Pd/GmZNslqBUsALhtUS8RUD5U=
   dependencies:
-    "@storybook/api" "5.1.0-alpha.36"
-    "@storybook/channels" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
+    "@storybook/channels" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
     core-js "^2.6.5"
     global "^4.3.2"
-    util-deprecate "^1.0.2"
-
-"@storybook/api@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/api/-/api-5.1.0-alpha.36.tgz#e0d6912fe05f2cf2f10c69fc32bc60d48f99e0fe"
-  integrity sha1-4NaRL+BfLPLxDGn8Mrxg1I+Z4P4=
-  dependencies:
-    "@storybook/channels" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/router" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
-    core-js "^2.6.5"
-    fast-deep-equal "^2.0.1"
-    global "^4.3.2"
-    lodash.isequal "^4.5.0"
-    lodash.mergewith "^4.6.1"
-    lodash.pick "^4.4.0"
-    memoizerific "^1.11.3"
-    prop-types "^15.6.2"
-    react "^16.7.0"
-    semver "^6.0.0"
-    store2 "^2.7.1"
-    telejson "^2.1.1"
-    util-deprecate "^1.0.2"
-
-"@storybook/channel-postmessage@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/channel-postmessage/-/channel-postmessage-5.1.0-alpha.36.tgz#0864d3509e171f1c84ec0c67a8ebb07588043896"
-  integrity sha1-CGTTUJ4XHxyE7AxnqOuwdYgEOJY=
-  dependencies:
-    "@storybook/channels" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    core-js "^2.6.5"
-    global "^4.3.2"
-    telejson "^2.1.1"
+    telejson "^2.1.0"
 
 "@storybook/channels@5.0.11":
   version "5.0.11"
@@ -2123,22 +2095,15 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/channels@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/channels/-/channels-5.1.0-alpha.36.tgz#7bf2bc70cbe7cfa8210f04e532d10f47fd40b1d8"
-  integrity sha1-e/K8cMvnz6ghDwTlMtEPR/1Asdg=
+"@storybook/client-api@5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/client-api/-/client-api-5.0.11.tgz#b0b0ab3ce77320752a4966d17e3eb709ffe554b2"
+  integrity sha1-sLCrPOdzIHUqSWbRfj63Cf/lVLI=
   dependencies:
-    core-js "^2.6.5"
-
-"@storybook/client-api@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/client-api/-/client-api-5.1.0-alpha.36.tgz#761b5154a6f2fe56472442ec615c9fb6726329bb"
-  integrity sha1-dhtRVKby/lZHJELsYVyftnJjKbs=
-  dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/router" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/router" "5.0.11"
     common-tags "^1.8.0"
     core-js "^2.6.5"
     eventemitter3 "^3.1.0"
@@ -2148,7 +2113,7 @@
     lodash.isequal "^4.5.0"
     lodash.mergewith "^4.6.1"
     memoizerific "^1.11.3"
-    qs "^6.6.0"
+    qs "^6.5.2"
 
 "@storybook/client-logger@5.0.11":
   version "5.0.11"
@@ -2157,39 +2122,7 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/client-logger@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/client-logger/-/client-logger-5.1.0-alpha.36.tgz#d714c6d1712731c91406cbf2215141ad2768c54f"
-  integrity sha1-1xTG0XEnMckUBsvyIVFBrSdoxU8=
-  dependencies:
-    core-js "^2.6.5"
-
-"@storybook/components@5.1.0-alpha.36", "@storybook/components@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/components/-/components-5.1.0-alpha.36.tgz#21795b25c72ee8c74c1fed15a5925ff06f3a0cd5"
-  integrity sha1-IXlbJccu6MdMH+0VpZJf8G86DNU=
-  dependencies:
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
-    core-js "^2.6.5"
-    global "^4.3.2"
-    js-beautify "^1.8.9"
-    markdown-to-jsx "^6.9.1"
-    memoizerific "^1.11.3"
-    polished "^3.0.0"
-    popper.js "^1.14.7"
-    prop-types "^15.7.2"
-    react "^16.8.4"
-    react-dom "^16.8.4"
-    react-focus-lock "^1.18.3"
-    react-helmet-async "^0.2.0"
-    react-popper-tooltip "^2.8.0"
-    react-syntax-highlighter "^8.0.1"
-    react-textarea-autosize "^7.1.0"
-    recompose "^0.30.0"
-    simplebar-react "^0.1.5"
-
-"@storybook/components@^5.0.6":
+"@storybook/components@5.0.11", "@storybook/components@^5.0.11", "@storybook/components@^5.0.6":
   version "5.0.11"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/components/-/components-5.0.11.tgz#0cf3aad5df92bae9d896a4d6cc376d4445bbe27f"
   integrity sha1-DPOq1d+SuunYlqTWzDdtREW74n8=
@@ -2227,50 +2160,44 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/core-events@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/core-events/-/core-events-5.1.0-alpha.36.tgz#5e2b1208a1723f923ae47bac37294c12d0eb88b7"
-  integrity sha1-XisSCKFyP5I65HusNylMEtDriLc=
+"@storybook/core@5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/core/-/core-5.0.11.tgz#e941cf18ef62ee962607d1fb24c57b9cafc88cfd"
+  integrity sha1-6UHPGO9i7pYmB9H7JMV7nK/IjP0=
   dependencies:
-    core-js "^2.6.5"
-
-"@storybook/core@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/core/-/core-5.1.0-alpha.36.tgz#2b71192ced1271afcd9eea57cc904c7cd6430353"
-  integrity sha1-K3EZLO0Sca/NnupXzJBMfNZDA1M=
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "^7.3.3"
+    "@babel/plugin-proposal-class-properties" "^7.3.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-transform-react-constant-elements" "^7.2.0"
     "@babel/preset-env" "^7.4.1"
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/channel-postmessage" "5.1.0-alpha.36"
-    "@storybook/client-api" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/node-logger" "5.1.0-alpha.36"
-    "@storybook/router" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
-    "@storybook/ui" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/channel-postmessage" "5.0.11"
+    "@storybook/client-api" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/node-logger" "5.0.11"
+    "@storybook/router" "5.0.11"
+    "@storybook/theming" "5.0.11"
+    "@storybook/ui" "5.0.11"
     airbnb-js-shims "^1 || ^2"
-    autoprefixer "^9.4.9"
+    autoprefixer "^9.4.7"
     babel-plugin-add-react-displayname "^0.0.5"
-    babel-plugin-emotion "^10.0.9"
+    babel-plugin-emotion "^10.0.7"
     babel-plugin-macros "^2.4.5"
     babel-preset-minify "^0.5.0 || 0.6.0-alpha.5"
-    boxen "^3.0.0"
+    boxen "^2.1.0"
     case-sensitive-paths-webpack-plugin "^2.2.0"
     chalk "^2.4.2"
+    child-process-promise "^2.2.1"
     cli-table3 "0.5.1"
     commander "^2.19.0"
     common-tags "^1.8.0"
     core-js "^2.6.5"
-    css-loader "^2.1.1"
-    detect-port "^1.3.0"
+    css-loader "^2.1.0"
+    detect-port "^1.2.3"
     dotenv-webpack "^1.7.0"
     ejs "^2.6.1"
-    express "^4.16.4"
+    express "^4.16.3"
     file-loader "^3.0.1"
     file-system-cache "^1.0.5"
     find-cache-dir "^2.0.0"
@@ -2282,32 +2209,35 @@
     ip "^1.1.5"
     json5 "^2.1.0"
     lazy-universal-dotenv "^2.0.0"
-    node-fetch "^2.3.0"
-    open "^6.1.0"
+    node-fetch "^2.2.0"
+    object.omit "^3.0.0"
+    opn "^5.4.0"
     postcss-flexbugs-fixes "^4.1.0"
     postcss-loader "^3.0.0"
     pretty-hrtime "^1.0.3"
-    qs "^6.6.0"
+    prop-types "^15.6.2"
     raw-loader "^1.0.0"
-    react-dev-utils "^8.0.0"
+    react-dev-utils "^7.0.0"
     regenerator-runtime "^0.12.1"
     resolve "^1.10.0"
     resolve-from "^4.0.0"
-    semver "^6.0.0"
+    semver "^5.6.0"
     serve-favicon "^2.5.0"
-    shelljs "^0.8.3"
+    shelljs "^0.8.2"
+    spawn-promise "^0.1.8"
     style-loader "^0.23.1"
-    terser-webpack-plugin "^1.2.2"
+    svg-url-loader "^2.3.2"
+    terser-webpack-plugin "^1.2.1"
     url-loader "^1.1.2"
     util-deprecate "^1.0.2"
-    webpack "^4.28.0"
-    webpack-dev-middleware "^3.6.0"
+    webpack "^4.29.0"
+    webpack-dev-middleware "^3.5.1"
     webpack-hot-middleware "^2.24.3"
 
-"@storybook/node-logger@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/node-logger/-/node-logger-5.1.0-alpha.36.tgz#9f4d858d3db565cf1a23026ad56d51641c9665a8"
-  integrity sha1-n02FjT21Zc8aIwJq1W1RZByWZag=
+"@storybook/node-logger@5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/node-logger/-/node-logger-5.0.11.tgz#7c97e667295ce7d75af1a14878e83c0cd475c2ba"
+  integrity sha1-fJfmZylc59da8aFIeOg8DNR1wro=
   dependencies:
     chalk "^2.4.2"
     core-js "^2.6.5"
@@ -2315,30 +2245,31 @@
     pretty-hrtime "^1.0.3"
     regenerator-runtime "^0.12.1"
 
-"@storybook/react@^5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/react/-/react-5.1.0-alpha.36.tgz#834f7e22709a2bb1ab4b93dc8b665b22b3637b0e"
-  integrity sha1-g09+InCaK7GrS5Pci2ZbIrNjew4=
+"@storybook/react@^5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/react/-/react-5.0.11.tgz#e131437a59d1f2fac7fbad4ab0c28a54d8a96398"
+  integrity sha1-4TFDelnR8vrH+61KsMKKVNipY5g=
   dependencies:
     "@babel/plugin-transform-react-constant-elements" "^7.2.0"
     "@babel/preset-flow" "^7.0.0"
     "@babel/preset-react" "^7.0.0"
-    "@storybook/core" "5.1.0-alpha.36"
-    "@storybook/node-logger" "5.1.0-alpha.36"
+    "@storybook/core" "5.0.11"
+    "@storybook/node-logger" "5.0.11"
+    "@storybook/theming" "5.0.11"
     "@svgr/webpack" "^4.0.3"
-    babel-plugin-named-asset-import "^0.3.1"
-    babel-plugin-react-docgen "^3.0.0"
-    babel-preset-react-app "^7.0.2"
+    babel-plugin-named-asset-import "^0.3.0"
+    babel-plugin-react-docgen "^2.0.2"
+    babel-preset-react-app "^7.0.0"
     common-tags "^1.8.0"
     core-js "^2.6.5"
     global "^4.3.2"
     lodash "^4.17.11"
     mini-css-extract-plugin "^0.5.0"
-    prop-types "^15.7.2"
-    react-dev-utils "^8.0.0"
+    prop-types "^15.6.2"
+    react-dev-utils "^7.0.1"
     regenerator-runtime "^0.12.1"
-    semver "^6.0.0"
-    webpack "^4.28.0"
+    semver "^5.6.0"
+    webpack "^4.29.0"
 
 "@storybook/router@5.0.11":
   version "5.0.11"
@@ -2351,18 +2282,6 @@
     global "^4.3.2"
     memoizerific "^1.11.3"
     qs "^6.5.2"
-
-"@storybook/router@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/router/-/router-5.1.0-alpha.36.tgz#5c79b88a0c70386be28c78edf42114609795f1b3"
-  integrity sha1-XHm4igxwOGvijHjt9CEUYJeV8bM=
-  dependencies:
-    "@reach/router" "^1.2.1"
-    "@storybook/theming" "5.1.0-alpha.36"
-    core-js "^2.6.5"
-    global "^4.3.2"
-    memoizerific "^1.11.3"
-    qs "^6.6.0"
 
 "@storybook/theming@5.0.11":
   version "5.0.11"
@@ -2384,60 +2303,44 @@
     prop-types "^15.6.2"
     react-inspector "^2.3.1"
 
-"@storybook/theming@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/theming/-/theming-5.1.0-alpha.36.tgz#3f1483cb6bdcae75ba6028fc3a0df26f7941bb5e"
-  integrity sha1-PxSDy2vcrnW6YCj8Og3yb3lBu14=
+"@storybook/ui@5.0.11":
+  version "5.0.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/ui/-/ui-5.0.11.tgz#207f767d96e40513bb3887b428a4d9a81d027051"
+  integrity sha1-IH92fZbkBRO7OIe0KKTZqB0CcFE=
   dependencies:
-    "@emotion/core" "^10.0.9"
-    "@emotion/styled" "^10.0.7"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    common-tags "^1.8.0"
-    core-js "^2.6.5"
-    deep-object-diff "^1.1.0"
-    emotion-theming "^10.0.9"
-    global "^4.3.2"
-    lodash.isequal "^4.5.0"
-    lodash.mergewith "^4.6.1"
-    memoizerific "^1.11.3"
-    polished "^3.0.0"
-    prop-types "^15.7.2"
-    react-inspector "^2.3.1"
-
-"@storybook/ui@5.1.0-alpha.36":
-  version "5.1.0-alpha.36"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@storybook/ui/-/ui-5.1.0-alpha.36.tgz#d883067bb966a7402c03310b74e9a4410dbc72f6"
-  integrity sha1-2IMGe7lmp0AsAzELdOmkQQ28cvY=
-  dependencies:
-    "@storybook/addons" "5.1.0-alpha.36"
-    "@storybook/api" "5.1.0-alpha.36"
-    "@storybook/client-logger" "5.1.0-alpha.36"
-    "@storybook/components" "5.1.0-alpha.36"
-    "@storybook/core-events" "5.1.0-alpha.36"
-    "@storybook/router" "5.1.0-alpha.36"
-    "@storybook/theming" "5.1.0-alpha.36"
+    "@storybook/addons" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/router" "5.0.11"
+    "@storybook/theming" "5.0.11"
     core-js "^2.6.5"
     fast-deep-equal "^2.0.1"
-    fuse.js "^3.4.4"
+    fuzzy-search "^3.0.1"
     global "^4.3.2"
+    history "^4.7.2"
+    keycode "^2.2.0"
     lodash.debounce "^4.0.8"
     lodash.isequal "^4.5.0"
     lodash.mergewith "^4.6.1"
     lodash.pick "^4.4.0"
-    markdown-to-jsx "^6.9.3"
+    lodash.sortby "^4.7.0"
+    lodash.throttle "^4.1.1"
+    markdown-to-jsx "^6.9.1"
     memoizerific "^1.11.3"
-    polished "^3.0.0"
-    prop-types "^15.7.2"
-    qs "^6.6.0"
-    react "^16.8.4"
-    react-dom "^16.8.4"
+    polished "^2.3.3"
+    prop-types "^15.6.2"
+    qs "^6.5.2"
+    react "^16.8.1"
+    react-dom "^16.8.1"
     react-draggable "^3.1.1"
     react-helmet-async "^0.2.0"
     react-hotkeys "2.0.0-pre4"
-    react-resize-detector "^4.0.5"
+    react-lifecycles-compat "^3.0.4"
+    react-modal "^3.8.1"
+    react-resize-detector "^3.2.1"
     recompose "^0.30.0"
-    semver "^6.0.0"
-    store2 "^2.7.1"
+    semver "^5.6.0"
     telejson "^2.1.1"
     util-deprecate "^1.0.2"
 
@@ -2446,40 +2349,80 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.0.0.tgz#5acf239cd2747b1a36ec7e708de05d914cb9b948"
   integrity sha1-Ws8jnNJ0exo27H5wjeBdkUy5uUg=
 
+"@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
+  integrity sha1-2ty2IYUDUy1ohLIQ5/PFAsqqRLE=
+
 "@svgr/babel-plugin-remove-jsx-attribute@^4.0.3":
   version "4.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-remove-jsx-attribute/-/babel-plugin-remove-jsx-attribute-4.0.3.tgz#32564b5c4d761b51e34492b6a4894196c0f75803"
   integrity sha1-MlZLXE12G1HjRJK2pIlBlsD3WAM=
+
+"@svgr/babel-plugin-remove-jsx-attribute@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-remove-jsx-attribute/-/babel-plugin-remove-jsx-attribute-4.2.0.tgz#297550b9a8c0c7337bea12bdfc8a80bb66f85abc"
+  integrity sha1-KXVQuajAxzN76hK9/IqAu2b4Wrw=
 
 "@svgr/babel-plugin-remove-jsx-empty-expression@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-remove-jsx-empty-expression/-/babel-plugin-remove-jsx-empty-expression-4.0.0.tgz#0b59338c00671cf8137eb823bd84a3efac686502"
   integrity sha1-C1kzjABnHPgTfrgjvYSj76xoZQI=
 
+"@svgr/babel-plugin-remove-jsx-empty-expression@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-remove-jsx-empty-expression/-/babel-plugin-remove-jsx-empty-expression-4.2.0.tgz#c196302f3e68eab6a05e98af9ca8570bc13131c7"
+  integrity sha1-wZYwLz5o6ragXpivnKhXC8ExMcc=
+
 "@svgr/babel-plugin-replace-jsx-attribute-value@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-replace-jsx-attribute-value/-/babel-plugin-replace-jsx-attribute-value-4.0.0.tgz#91785643540c2300f3d89e515b37af9b5ce4e695"
   integrity sha1-kXhWQ1QMIwDz2J5RWzevm1zk5pU=
+
+"@svgr/babel-plugin-replace-jsx-attribute-value@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-replace-jsx-attribute-value/-/babel-plugin-replace-jsx-attribute-value-4.2.0.tgz#310ec0775de808a6a2e4fd4268c245fd734c1165"
+  integrity sha1-MQ7Ad13oCKai5P1CaMJF/XNMEWU=
 
 "@svgr/babel-plugin-svg-dynamic-title@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-svg-dynamic-title/-/babel-plugin-svg-dynamic-title-4.0.0.tgz#eb8d50b80ba0a26f9b27c7268e2a803d90f1bc9e"
   integrity sha1-641QuAugom+bJ8cmjiqAPZDxvJ4=
 
+"@svgr/babel-plugin-svg-dynamic-title@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-svg-dynamic-title/-/babel-plugin-svg-dynamic-title-4.2.0.tgz#43f0f689a5347a894160eb51b39a109889a4df20"
+  integrity sha1-Q/D2iaU0eolBYOtRs5oQmImk3yA=
+
 "@svgr/babel-plugin-svg-em-dimensions@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-svg-em-dimensions/-/babel-plugin-svg-em-dimensions-4.0.0.tgz#0de3972c46ff1960bed765646037a3a7f9e1da3d"
   integrity sha1-DeOXLEb/GWC+12VkYDejp/nh2j0=
+
+"@svgr/babel-plugin-svg-em-dimensions@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-svg-em-dimensions/-/babel-plugin-svg-em-dimensions-4.2.0.tgz#9a94791c9a288108d20a9d2cc64cac820f141391"
+  integrity sha1-mpR5HJoogQjSCp0sxkysgg8UE5E=
 
 "@svgr/babel-plugin-transform-react-native-svg@^4.0.0":
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-transform-react-native-svg/-/babel-plugin-transform-react-native-svg-4.0.0.tgz#5e8ecc2a9870ae05fb1e553b1fe9c6b5853a1c66"
   integrity sha1-Xo7MKphwrgX7HlU7H+nGtYU6HGY=
 
+"@svgr/babel-plugin-transform-react-native-svg@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-transform-react-native-svg/-/babel-plugin-transform-react-native-svg-4.2.0.tgz#151487322843359a1ca86b21a3815fd21a88b717"
+  integrity sha1-FRSHMihDNZocqGsho4Ff0hqItxc=
+
 "@svgr/babel-plugin-transform-svg-component@^4.1.0":
   version "4.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-transform-svg-component/-/babel-plugin-transform-svg-component-4.1.0.tgz#257159e28a21ac20988b1eaa5f59d4724f37fdaa"
   integrity sha1-JXFZ4oohrCCYix6qX1nUck83/ao=
+
+"@svgr/babel-plugin-transform-svg-component@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-plugin-transform-svg-component/-/babel-plugin-transform-svg-component-4.2.0.tgz#5f1e2f886b2c85c67e76da42f0f6be1b1767b697"
+  integrity sha1-Xx4viGsshcZ+dtpC8Pa+Gxdntpc=
 
 "@svgr/babel-preset@^4.1.0":
   version "4.1.0"
@@ -2495,6 +2438,20 @@
     "@svgr/babel-plugin-transform-react-native-svg" "^4.0.0"
     "@svgr/babel-plugin-transform-svg-component" "^4.1.0"
 
+"@svgr/babel-preset@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/babel-preset/-/babel-preset-4.2.0.tgz#c9fc236445a02a8cd4e750085e51c181de00d6c5"
+  integrity sha1-yfwjZEWgKozU51AIXlHBgd4A1sU=
+  dependencies:
+    "@svgr/babel-plugin-add-jsx-attribute" "^4.2.0"
+    "@svgr/babel-plugin-remove-jsx-attribute" "^4.2.0"
+    "@svgr/babel-plugin-remove-jsx-empty-expression" "^4.2.0"
+    "@svgr/babel-plugin-replace-jsx-attribute-value" "^4.2.0"
+    "@svgr/babel-plugin-svg-dynamic-title" "^4.2.0"
+    "@svgr/babel-plugin-svg-em-dimensions" "^4.2.0"
+    "@svgr/babel-plugin-transform-react-native-svg" "^4.2.0"
+    "@svgr/babel-plugin-transform-svg-component" "^4.2.0"
+
 "@svgr/core@^4.1.0":
   version "4.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/core/-/core-4.1.0.tgz#4f8ad24fb4ab25c787c12a6bbb511c6430558f83"
@@ -2504,12 +2461,28 @@
     camelcase "^5.0.0"
     cosmiconfig "^5.0.7"
 
+"@svgr/core@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/core/-/core-4.2.0.tgz#f32ef8b9d05312aaa775896ec30ae46a6521e248"
+  integrity sha1-8y74udBTEqqndYluwwrkamUh4kg=
+  dependencies:
+    "@svgr/plugin-jsx" "^4.2.0"
+    camelcase "^5.3.1"
+    cosmiconfig "^5.2.0"
+
 "@svgr/hast-util-to-babel-ast@^4.1.0":
   version "4.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/hast-util-to-babel-ast/-/hast-util-to-babel-ast-4.1.0.tgz#a1eb0f47059769896f759f47995b636fce5d9fa4"
   integrity sha1-oesPRwWXaYlvdZ9HmVtjb85dn6Q=
   dependencies:
     "@babel/types" "^7.1.6"
+
+"@svgr/hast-util-to-babel-ast@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/hast-util-to-babel-ast/-/hast-util-to-babel-ast-4.2.0.tgz#dd743435a5f3a8e84a1da067f27b5fae3d7b6b63"
+  integrity sha1-3XQ0NaXzqOhKHaBn8ntfrj17a2M=
+  dependencies:
+    "@babel/types" "^7.4.0"
 
 "@svgr/plugin-jsx@^4.1.0":
   version "4.1.0"
@@ -2523,6 +2496,18 @@
     unified "^7.0.2"
     vfile "^3.0.1"
 
+"@svgr/plugin-jsx@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/plugin-jsx/-/plugin-jsx-4.2.0.tgz#15a91562c9b5f90640ea0bdcb2ad59d692ee7ae9"
+  integrity sha1-FakVYsm1+QZA6gvcsq1Z1pLueuk=
+  dependencies:
+    "@babel/core" "^7.4.3"
+    "@svgr/babel-preset" "^4.2.0"
+    "@svgr/hast-util-to-babel-ast" "^4.2.0"
+    rehype-parse "^6.0.0"
+    unified "^7.1.0"
+    vfile "^4.0.0"
+
 "@svgr/plugin-svgo@^4.0.3":
   version "4.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/plugin-svgo/-/plugin-svgo-4.0.3.tgz#a07ea0a736c26fa3a5440fe8e222e2e887764cab"
@@ -2532,7 +2517,16 @@
     merge-deep "^3.0.2"
     svgo "^1.1.1"
 
-"@svgr/webpack@4.1.0", "@svgr/webpack@^4.0.3":
+"@svgr/plugin-svgo@^4.2.0":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/plugin-svgo/-/plugin-svgo-4.2.0.tgz#2a594a2d3312955e75fd87dc77ae51f377c809f3"
+  integrity sha1-KllKLTMSlV51/Yfcd65R83fICfM=
+  dependencies:
+    cosmiconfig "^5.2.0"
+    merge-deep "^3.0.2"
+    svgo "^1.2.1"
+
+"@svgr/webpack@4.1.0":
   version "4.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/webpack/-/webpack-4.1.0.tgz#20c88f32f731c7b1d4711045b2b993887d731c28"
   integrity sha1-IMiPMvcxx7HUcRBFsrmTiH1zHCg=
@@ -2545,6 +2539,20 @@
     "@svgr/plugin-jsx" "^4.1.0"
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
+
+"@svgr/webpack@^4.0.3":
+  version "4.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@svgr/webpack/-/webpack-4.2.0.tgz#b7cdef42ae671a27ed4cfe118a0f2da7f4e9ebed"
+  integrity sha1-t83vQq5nGiftTP4Rig8tp/Tp6+0=
+  dependencies:
+    "@babel/core" "^7.4.3"
+    "@babel/plugin-transform-react-constant-elements" "^7.0.0"
+    "@babel/preset-env" "^7.4.3"
+    "@babel/preset-react" "^7.0.0"
+    "@svgr/core" "^4.2.0"
+    "@svgr/plugin-jsx" "^4.2.0"
+    "@svgr/plugin-svgo" "^4.2.0"
+    loader-utils "^1.2.3"
 
 "@types/babel__core@^7.1.0":
   version "7.1.1"
@@ -2727,6 +2735,11 @@
   version "2.0.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/unist/-/unist-2.0.2.tgz#5dc0a7f76809b7518c0df58689cd16a19bd751c6"
   integrity sha1-XcCn92gJt1GMDfWGic0WoZvXUcY=
+
+"@types/unist@^2.0.2":
+  version "2.0.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
+  integrity sha1-nAiGeYdvN061mD8VDUeHqm+zLX4=
 
 "@types/uuid@^3.4.4":
   version "3.4.4"
@@ -3173,15 +3186,10 @@ acorn@^5.0.0, acorn@^5.5.3, acorn@^5.6.2:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
   integrity sha1-Z6ojG/iBKXS4UjWpZ3Hra9B+onk=
 
-acorn@^6.0.1, acorn@^6.0.7:
+acorn@^6.0.1, acorn@^6.0.5, acorn@^6.0.7:
   version "6.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha1-fSWuBbuK0fm2mRCOEJTs14hK3B8=
-
-acorn@^6.0.5:
-  version "6.0.7"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/acorn/-/acorn-6.0.7.tgz#490180ce18337270232d9488a44be83d9afb7fd3"
-  integrity sha1-SQGAzhgzcnAjLZSIpEvoPZr7f9M=
 
 address@1.0.3:
   version "1.0.3"
@@ -3208,22 +3216,24 @@ agentkeepalive@^3.4.1:
     humanize-ms "^1.2.1"
 
 "airbnb-js-shims@^1 || ^2":
-  version "2.1.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/airbnb-js-shims/-/airbnb-js-shims-2.1.1.tgz#a509611480db7e6d9db62fe2acfaeb473b6842ac"
-  integrity sha1-pQlhFIDbfm2dti/irPrrRztoQqw=
+  version "2.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/airbnb-js-shims/-/airbnb-js-shims-2.2.0.tgz#46e1d9d9516f704ef736de76a3b6d484df9a96d8"
+  integrity sha1-RuHZ2VFvcE73Nt52o7bUhN+altg=
   dependencies:
     array-includes "^3.0.3"
     array.prototype.flat "^1.2.1"
     array.prototype.flatmap "^1.2.1"
-    es5-shim "^4.5.10"
-    es6-shim "^0.35.3"
+    es5-shim "^4.5.13"
+    es6-shim "^0.35.5"
     function.prototype.name "^1.1.0"
-    object.entries "^1.0.4"
-    object.fromentries "^1.0.0"
+    globalthis "^1.0.0"
+    object.entries "^1.1.0"
+    object.fromentries "^2.0.0 || ^1.0.0"
     object.getownpropertydescriptors "^2.0.3"
-    object.values "^1.0.4"
+    object.values "^1.1.0"
+    promise.allsettled "^1.0.0"
     promise.prototype.finally "^3.1.0"
-    string.prototype.matchall "^3.0.0"
+    string.prototype.matchall "^3.0.1"
     string.prototype.padend "^3.0.0"
     string.prototype.padstart "^3.0.0"
     symbol.prototype.description "^1.0.0"
@@ -3587,10 +3597,10 @@ ast-types@0.11.3:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/ast-types/-/ast-types-0.11.3.tgz#c20757fe72ee71278ea0ff3d87e5c2ca30d9edf8"
   integrity sha1-wgdX/nLucSeOoP89h+XCyjDZ7fg=
 
-ast-types@0.12.4:
-  version "0.12.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/ast-types/-/ast-types-0.12.4.tgz#71ce6383800f24efc9a1a3308f3a6e420a0974d1"
-  integrity sha1-cc5jg4APJO/JoaMwjzpuQgoJdNE=
+ast-types@0.11.7:
+  version "0.11.7"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/ast-types/-/ast-types-0.11.7.tgz#f318bf44e339db6a320be0009ded64ec1471f46c"
+  integrity sha1-8xi/ROM522oyC+AAne1k7BRx9Gw=
 
 ast-types@0.9.6:
   version "0.9.6"
@@ -3661,7 +3671,7 @@ autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-autoprefixer@^9.4.2, autoprefixer@^9.4.9, autoprefixer@^9.5.0:
+autoprefixer@^9.4.2, autoprefixer@^9.4.7, autoprefixer@^9.5.0:
   version "9.5.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/autoprefixer/-/autoprefixer-9.5.1.tgz#243b1267b67e7e947f28919d786b50d3bb0fb357"
   integrity sha1-JDsSZ7Z+fpR/KJGdeGtQ07sPs1c=
@@ -3882,7 +3892,7 @@ babel-plugin-dynamic-import-node@2.2.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-emotion@^10.0.9:
+babel-plugin-emotion@^10.0.7, babel-plugin-emotion@^10.0.9:
   version "10.0.9"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-plugin-emotion/-/babel-plugin-emotion-10.0.9.tgz#04a0404d5a4084d5296357a393d344c0f8303ae4"
   integrity sha1-BKBATVpAhNUpY1ejk9NEwPgwOuQ=
@@ -4046,18 +4056,18 @@ babel-plugin-minify-type-constructors@^0.4.3:
   dependencies:
     babel-helper-is-void-0 "^0.4.3"
 
-babel-plugin-named-asset-import@^0.3.1:
+babel-plugin-named-asset-import@^0.3.0, babel-plugin-named-asset-import@^0.3.1:
   version "0.3.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.2.tgz#20978ed446b8e1bf4a2f42d0a94c0ece85f75f4f"
   integrity sha1-IJeO1Ea44b9KL0LQqUwOzoX3X08=
 
-babel-plugin-react-docgen@^3.0.0:
-  version "3.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-plugin-react-docgen/-/babel-plugin-react-docgen-3.1.0.tgz#14b02b363a38cc9e08c871df16960d27ef92030f"
-  integrity sha1-FLArNjo4zJ4IyHHfFpYNJ++SAw8=
+babel-plugin-react-docgen@^2.0.2:
+  version "2.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-plugin-react-docgen/-/babel-plugin-react-docgen-2.0.2.tgz#3307e27414c370365710576b7fadbcaf8984d862"
+  integrity sha1-MwfidBTDcDZXEFdrf628r4mE2GI=
   dependencies:
-    lodash "^4.17.11"
-    react-docgen "^4.1.0"
+    lodash "^4.17.10"
+    react-docgen "^3.0.0"
     recast "^0.14.7"
 
 babel-plugin-syntax-jsx@^6.18.0:
@@ -4223,7 +4233,7 @@ babel-preset-jest@^24.6.0:
     babel-plugin-transform-undefined-to-void "^6.9.4"
     lodash.isplainobject "^4.0.6"
 
-babel-preset-react-app@^7.0.2:
+babel-preset-react-app@^7.0.0, babel-preset-react-app@^7.0.2:
   version "7.0.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/babel-preset-react-app/-/babel-preset-react-app-7.0.2.tgz#d01ae973edc93b9f1015cb0236dd55889a584308"
   integrity sha1-0Brpc+3JO58QFcsCNt1ViJpYQwg=
@@ -4392,12 +4402,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.3.5:
-  version "3.5.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
-  integrity sha1-fQHG+WFsmlGrD4xUmnnf5uwz76c=
-
-bluebird@^3.5.1, bluebird@^3.5.3:
+bluebird@^3.3.5, bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
   integrity sha1-1sxmFZXeMNWzr1/O3TwLPvbsVxQ=
@@ -4447,18 +4452,17 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-boxen@^3.0.0:
-  version "3.2.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/boxen/-/boxen-3.2.0.tgz#fbdff0de93636ab4450886b6ff45b92d098f45eb"
-  integrity sha1-+9/w3pNjarRFCIa2/0W5LQmPRes=
+boxen@^2.1.0:
+  version "2.1.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/boxen/-/boxen-2.1.0.tgz#8d576156e33fc26a34d6be8635fd16b1d745f0b2"
+  integrity sha1-jVdhVuM/wmo01r6GNf0WsddF8LI=
   dependencies:
     ansi-align "^3.0.0"
-    camelcase "^5.3.1"
-    chalk "^2.4.2"
-    cli-boxes "^2.2.0"
+    camelcase "^5.0.0"
+    chalk "^2.4.1"
+    cli-boxes "^1.0.0"
     string-width "^3.0.0"
     term-size "^1.2.0"
-    type-fest "^0.3.0"
     widest-line "^2.0.0"
 
 brace-expansion@^1.1.7:
@@ -4792,11 +4796,6 @@ camelcase@^5.0.0, camelcase@^5.2.0, camelcase@^5.3.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA=
 
-can-use-dom@^0.1.0:
-  version "0.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
-  integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
-
 caniuse-api@^1.5.2:
   version "1.6.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/caniuse-api/-/caniuse-api-1.6.1.tgz#b534e7c734c4f81ec5fbe8aca2ad24354b962c6c"
@@ -4928,6 +4927,15 @@ cheerio@^1.0.0-rc.2:
     lodash "^4.15.0"
     parse5 "^3.0.1"
 
+child-process-promise@^2.2.1:
+  version "2.2.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/child-process-promise/-/child-process-promise-2.2.1.tgz#4730a11ef610fad450b8f223c79d31d7bdad8074"
+  integrity sha1-RzChHvYQ+tRQuPIjx50x172tgHQ=
+  dependencies:
+    cross-spawn "^4.0.2"
+    node-version "^1.0.0"
+    promise-polyfill "^6.0.1"
+
 chokidar@^1.6.1:
   version "1.7.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -5032,10 +5040,10 @@ clean-css@4.2.x:
   dependencies:
     source-map "~0.6.0"
 
-cli-boxes@^2.2.0:
-  version "2.2.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/cli-boxes/-/cli-boxes-2.2.0.tgz#538ecae8f9c6ca508e3c3c95b453fe93cb4c168d"
-  integrity sha1-U47K6PnGylCOPDyVtFP+k8tMFo0=
+cli-boxes@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
+  integrity sha1-T6kXw+WclKAEzWH47lCdplFocUM=
 
 cli-cursor@^1.0.1, cli-cursor@^1.0.2:
   version "1.0.2"
@@ -5552,11 +5560,11 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 copy-to-clipboard@^3.0.8:
-  version "3.0.8"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/copy-to-clipboard/-/copy-to-clipboard-3.0.8.tgz#f4e82f4a8830dce4666b7eb8ded0c9bcc313aba9"
-  integrity sha1-9OgvSogw3ORma3643tDJvMMTq6k=
+  version "3.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/copy-to-clipboard/-/copy-to-clipboard-3.2.0.tgz#d2724a3ccbfed89706fac8a894872c979ac74467"
+  integrity sha1-0nJKPMv+2JcG+siolIcsl5rHRGc=
   dependencies:
-    toggle-selection "^1.0.3"
+    toggle-selection "^1.0.6"
 
 core-js-compat@^3.0.0:
   version "3.0.1"
@@ -5588,15 +5596,10 @@ core-js@^1.0.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.2, core-js@^2.6.5:
+core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7, core-js@^2.6.5:
   version "2.6.5"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
   integrity sha1-RLyNJJ5/sv9dAOA0Gn/7lPv2eJU=
-
-core-js@^2.5.7:
-  version "2.6.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/core-js/-/core-js-2.6.3.tgz#4b70938bdffdaf64931e66e2db158f0892289c49"
-  integrity sha1-S3CTi9/9r2STHmbi2xWPCJIonEk=
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -5728,6 +5731,14 @@ cross-spawn@^3.0.0:
     lru-cache "^4.0.1"
     which "^1.2.9"
 
+cross-spawn@^4.0.2:
+  version "4.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/cross-spawn/-/cross-spawn-4.0.2.tgz#7b9247621c23adfdd3856004a823cbe397424d41"
+  integrity sha1-e5JHYhwjrf3ThWAEqCPL45dCTUE=
+  dependencies:
+    lru-cache "^4.0.1"
+    which "^1.2.9"
+
 cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -5827,7 +5838,7 @@ css-loader@^0.28.7:
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
-css-loader@^2.1.1:
+css-loader@^2.1.0:
   version "2.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/css-loader/-/css-loader-2.1.1.tgz#d8254f72e412bb2238bb44dd674ffbef497333ea"
   integrity sha1-2CVPcuQSuyI4u0TdZ0/770lzM+o=
@@ -6432,7 +6443,7 @@ detect-port-alt@1.1.6:
     address "^1.0.1"
     debug "^2.6.0"
 
-detect-port@^1.3.0:
+detect-port@^1.2.3:
   version "1.3.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/detect-port/-/detect-port-1.3.0.tgz#d9c40e9accadd4df5cac6a782aefd014d573d1f1"
   integrity sha1-2cQOmsyt1N9crGp4Ku/QFNVz0fE=
@@ -6508,17 +6519,10 @@ doctrine@1.5.0:
     esutils "^2.0.2"
     isarray "^1.0.0"
 
-doctrine@^2.1.0:
+doctrine@^2.0.0, doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
   integrity sha1-XNAfwQFiG0LEzX9dGmYkNxbT850=
-  dependencies:
-    esutils "^2.0.2"
-
-doctrine@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/doctrine/-/doctrine-3.0.0.tgz#addebead72a6574db783639dc87a121773973961"
-  integrity sha1-rd6+rXKmV023g2OdyHoSF3OXOWE=
   dependencies:
     esutils "^2.0.2"
 
@@ -6736,7 +6740,7 @@ emojis-list@^2.0.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-theming@^10.0.7, emotion-theming@^10.0.9:
+emotion-theming@^10.0.7:
   version "10.0.10"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/emotion-theming/-/emotion-theming-10.0.10.tgz#efe8751119751bdc70fdc1795fe4cde0fb0cf14c"
   integrity sha1-7+h1ERl1G9xw/cF5X+TN4PsM8Uw=
@@ -6867,7 +6871,7 @@ error-ex@^1.2.0, error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-es-abstract@^1.10.0, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.7.0:
+es-abstract@^1.10.0, es-abstract@^1.13.0, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.7.0, es-abstract@^1.9.0:
   version "1.13.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es-abstract/-/es-abstract-1.13.0.tgz#ac86145fdd5099d8dd49558ccba2eaf9b88e24e9"
   integrity sha1-rIYUX91QmdjdSVWMy6Lq+biOJOk=
@@ -6879,7 +6883,7 @@ es-abstract@^1.10.0, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.7.0:
     is-regex "^1.0.4"
     object-keys "^1.0.12"
 
-es-abstract@^1.11.0, es-abstract@^1.12.0, es-abstract@^1.4.3, es-abstract@^1.9.0:
+es-abstract@^1.11.0, es-abstract@^1.12.0, es-abstract@^1.4.3:
   version "1.12.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es-abstract/-/es-abstract-1.12.0.tgz#9dbbdd27c6856f0001421ca18782d786bf8a6165"
   integrity sha1-nbvdJ8aFbwABQhyhh4LXhr+KYWU=
@@ -6899,10 +6903,10 @@ es-to-primitive@^1.1.1, es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-es5-shim@^4.5.10:
-  version "4.5.12"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es5-shim/-/es5-shim-4.5.12.tgz#508c13dda1c87dd3df1b50e69e7b96b82149b649"
-  integrity sha1-UIwT3aHIfdPfG1DmnnuWuCFJtkk=
+es5-shim@^4.5.13:
+  version "4.5.13"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es5-shim/-/es5-shim-4.5.13.tgz#5d88062de049f8969f83783f4a4884395f21d28b"
+  integrity sha1-XYgGLeBJ+Jafg3g/SkiEOV8h0os=
 
 es6-promise@^4.0.3:
   version "4.2.6"
@@ -6916,10 +6920,10 @@ es6-promisify@^5.0.0:
   dependencies:
     es6-promise "^4.0.3"
 
-es6-shim@^0.35.3:
-  version "0.35.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
-  integrity sha1-m/tzY/7//4emzbbNk+QF7DxLbyY=
+es6-shim@^0.35.5:
+  version "0.35.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/es6-shim/-/es6-shim-0.35.5.tgz#46f59dc0a84a1c5029e8ff1166ca0a902077a9ab"
+  integrity sha1-RvWdwKhKHFAp6P8RZsoKkCB3qas=
 
 es6-templates@^0.2.3:
   version "0.2.3"
@@ -7157,15 +7161,10 @@ etag@~1.8.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-eventemitter3@^3.0.0:
+eventemitter3@^3.0.0, eventemitter3@^3.1.0:
   version "3.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
   integrity sha1-LT1I+cNGaY/Og6hdfWZOmFNd9uc=
-
-eventemitter3@^3.1.0:
-  version "3.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
-  integrity sha1-CQtNbNvWRe0Qv3UNS1QHlC17oWM=
 
 events@^3.0.0:
   version "3.0.0"
@@ -7251,6 +7250,11 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
+exenv@^1.2.0:
+  version "1.2.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
+  integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
+
 exit-hook@^1.0.0:
   version "1.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/exit-hook/-/exit-hook-1.1.1.tgz#f05ca233b48c05d54fff07765df8507e95c02ff8"
@@ -7319,7 +7323,7 @@ expect@^24.7.1:
     jest-message-util "^24.7.1"
     jest-regex-util "^24.3.0"
 
-express@^4.16.2, express@^4.16.4:
+express@^4.16.2, express@^4.16.3:
   version "4.16.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/express/-/express-4.16.4.tgz#fddef61926109e24c515ea97fd2f1bdbf62df12e"
   integrity sha1-/d72GSYQniTFFeqX/S8b2/Yt8S4=
@@ -7534,6 +7538,14 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
+file-loader@1.1.11, file-loader@^1.1.5:
+  version "1.1.11"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/file-loader/-/file-loader-1.1.11.tgz#6fe886449b0f2a936e43cabaac0cdbfb369506f8"
+  integrity sha1-b+iGRJsPKpNuQ8q6rAzb+zaVBvg=
+  dependencies:
+    loader-utils "^1.0.2"
+    schema-utils "^0.4.5"
+
 file-loader@2.0.0:
   version "2.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/file-loader/-/file-loader-2.0.0.tgz#39749c82f020b9e85901dcff98e8004e6401cfde"
@@ -7541,14 +7553,6 @@ file-loader@2.0.0:
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^1.0.0"
-
-file-loader@^1.1.5:
-  version "1.1.11"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/file-loader/-/file-loader-1.1.11.tgz#6fe886449b0f2a936e43cabaac0cdbfb369506f8"
-  integrity sha1-b+iGRJsPKpNuQ8q6rAzb+zaVBvg=
-  dependencies:
-    loader-utils "^1.0.2"
-    schema-utils "^0.4.5"
 
 file-loader@^3.0.1:
   version "3.0.1"
@@ -7962,10 +7966,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-fuse.js@^3.4.4:
-  version "3.4.4"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/fuse.js/-/fuse.js-3.4.4.tgz#f98f55fcb3b595cf6a3e629c5ffaf10982103e95"
-  integrity sha1-+Y9V/LO1lc9qPmKcX/rxCYIQPpU=
+fuzzy-search@^3.0.1:
+  version "3.0.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/fuzzy-search/-/fuzzy-search-3.0.1.tgz#14a4964508a9607d6e9a88818e7ff634108260b6"
+  integrity sha1-FKSWRQipYH1umoiBjn/2NBCCYLY=
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -8214,6 +8218,15 @@ globals@^9.18.0:
   version "9.18.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
   integrity sha1-qjiWs+abSH8X4x7SFD1pqOMMLYo=
+
+globalthis@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/globalthis/-/globalthis-1.0.0.tgz#c5fb98213a9b4595f59cf3e7074f141b4169daae"
+  integrity sha1-xfuYITqbRZX1nPPnB08UG0Fp2q4=
+  dependencies:
+    define-properties "^1.1.2"
+    function-bind "^1.1.1"
+    object-keys "^1.0.12"
 
 globby@8.0.2, globby@^8.0.1:
   version "8.0.2"
@@ -8468,6 +8481,18 @@ highlight.js@~9.12.0:
   version "9.12.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
   integrity sha1-5tnb5Xy+/mB1HwKvM2GVhwyQwB4=
+
+history@^4.7.2:
+  version "4.9.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/history/-/history-4.9.0.tgz#84587c2068039ead8af769e9d6a6860a14fa1bca"
+  integrity sha1-hFh8IGgDnq2K92np1qaGChT6G8o=
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    loose-envify "^1.2.0"
+    resolve-pathname "^2.2.0"
+    tiny-invariant "^1.0.2"
+    tiny-warning "^1.0.0"
+    value-equal "^0.4.0"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -9236,7 +9261,7 @@ is-extendable@^0.1.0, is-extendable@^0.1.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
   integrity sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=
 
-is-extendable@^1.0.1:
+is-extendable@^1.0.0, is-extendable@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/is-extendable/-/is-extendable-1.0.1.tgz#a7470f9e426733d81bd81e1155264e3a3507cab4"
   integrity sha1-p0cPnkJnM9gb2B4RVSZOOjUHyrQ=
@@ -10662,6 +10687,11 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+keycode@^2.2.0:
+  version "2.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/keycode/-/keycode-2.2.0.tgz#3d0af56dc7b8b8e5cba8d0a97f107204eec22b04"
+  integrity sha1-PQr1bce4uOXLqNCpfxByBO7CKwQ=
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -11146,7 +11176,7 @@ longest@^1.0.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
   integrity sha1-MKCy2jj3N3DoKUoNIuZiXtd9AJc=
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -11208,6 +11238,11 @@ make-dir@^2.0.0, make-dir@^2.1.0:
   dependencies:
     pify "^4.0.1"
     semver "^5.6.0"
+
+make-error@^1.3.5:
+  version "1.3.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/make-error/-/make-error-1.3.5.tgz#efe4e81f6db28cadd605c70f29c831b58ef776c8"
+  integrity sha1-7+ToH22yjK3WBccPKcgxtY73dsg=
 
 make-fetch-happen@^4.0.1:
   version "4.0.1"
@@ -11280,7 +11315,7 @@ markdown-loader@^5.0.0:
     loader-utils "^1.2.3"
     marked "^0.6.0"
 
-markdown-to-jsx@^6.9.1, markdown-to-jsx@^6.9.3:
+markdown-to-jsx@^6.9.1:
   version "6.9.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/markdown-to-jsx/-/markdown-to-jsx-6.9.4.tgz#ed1e6925e643f7a0ee2fed90f28d16b4402aad09"
   integrity sha1-7R5pJeZD96DuL+2Q8o0WtEAqrQk=
@@ -11823,6 +11858,11 @@ node-fetch@^2.1.2, node-fetch@^2.3.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-fetch/-/node-fetch-2.4.1.tgz#b2e38f1117b8acbedbe0524f041fb3177188255d"
   integrity sha1-suOPERe4rL7b4FJPBB+zF3GIJV0=
 
+node-fetch@^2.2.0:
+  version "2.5.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-fetch/-/node-fetch-2.5.0.tgz#8028c49fc1191bba56a07adc6e2a954644a48501"
+  integrity sha1-gCjEn8EZG7pWoHrcbiqVRkSkhQE=
+
 node-forge@0.7.5:
   version "0.7.5"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
@@ -11959,6 +11999,11 @@ node-sass@4.8.3:
     sass-graph "^2.2.4"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
+
+node-version@^1.0.0:
+  version "1.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/node-version/-/node-version-1.2.0.tgz#34fde3ffa8e1149bd323983479dda620e1b5060d"
+  integrity sha1-NP3j/6jhFJvTI5g0ed2mIOG1Bg0=
 
 "nopt@2 || 3":
   version "3.0.6"
@@ -12233,17 +12278,7 @@ object.entries@^1.0.4, object.entries@^1.1.0:
     function-bind "^1.1.1"
     has "^1.0.3"
 
-object.fromentries@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/object.fromentries/-/object.fromentries-1.0.0.tgz#e90ec27445ec6e37f48be9af9077d9aa8bef0d40"
-  integrity sha1-6Q7CdEXsbjf0i+mvkHfZqovvDUA=
-  dependencies:
-    define-properties "^1.1.2"
-    es-abstract "^1.11.0"
-    function-bind "^1.1.1"
-    has "^1.0.1"
-
-object.fromentries@^2.0.0:
+object.fromentries@^2.0.0, "object.fromentries@^2.0.0 || ^1.0.0":
   version "2.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/object.fromentries/-/object.fromentries-2.0.0.tgz#49a543d92151f8277b3ac9600f1e930b189d30ab"
   integrity sha1-SaVD2SFR+Cd7OslgDx6TCxidMKs=
@@ -12268,6 +12303,13 @@ object.omit@^2.0.0:
   dependencies:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
+
+object.omit@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/object.omit/-/object.omit-3.0.0.tgz#0e3edc2fce2ba54df5577ff529f6d97bd8a522af"
+  integrity sha1-Dj7cL84rpU31V3/1KfbZe9ilIq8=
+  dependencies:
+    is-extendable "^1.0.0"
 
 object.pick@^1.3.0:
   version "1.3.0"
@@ -12327,13 +12369,6 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-open@^6.1.0:
-  version "6.2.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/open/-/open-6.2.0.tgz#7cf92cb961b5d8498b071e64098bf5e27f57230c"
-  integrity sha1-fPksuWG12EmLBx5kCYv14n9XIww=
-  dependencies:
-    is-wsl "^1.1.0"
-
 opencollective@1.0.3:
   version "1.0.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/opencollective/-/opencollective-1.0.3.tgz#aee6372bc28144583690c3ca8daecfc120dd0ef1"
@@ -12361,7 +12396,7 @@ opn@5.4.0:
   dependencies:
     is-wsl "^1.1.0"
 
-opn@^5.1.0:
+opn@^5.1.0, opn@^5.4.0:
   version "5.5.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
   integrity sha1-/HFk+rVtI1kExRw7J9pnWMo7m/w=
@@ -12925,19 +12960,12 @@ polished@^2.3.3:
   dependencies:
     "@babel/runtime" "^7.2.0"
 
-polished@^3.0.0:
-  version "3.2.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/polished/-/polished-3.2.0.tgz#65045e080704a6ba524fb3f32eb99d4ed2e46c91"
-  integrity sha1-ZQReCAcEprpST7PzLrmdTtLkbJE=
-  dependencies:
-    "@babel/runtime" "^7.4.2"
-
 popper.js@^1.14.1:
   version "1.14.7"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/popper.js/-/popper.js-1.14.7.tgz#e31ec06cfac6a97a53280c3e55e4e0c860e7738e"
   integrity sha1-4x7AbPrGqXpTKAw+VeTgyGDnc44=
 
-popper.js@^1.14.4, popper.js@^1.14.7:
+popper.js@^1.14.4:
   version "1.15.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
   integrity sha1-VWC5m7rXZH6fqkdca4BWYh9aT/I=
@@ -13983,6 +14011,11 @@ promise-inflight@^1.0.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
+promise-polyfill@^6.0.1:
+  version "6.1.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/promise-polyfill/-/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
+  integrity sha1-36lpQ+qcEh/KTem1hoyznTRy4Fc=
+
 promise-retry@^1.1.1:
   version "1.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/promise-retry/-/promise-retry-1.1.1.tgz#6739e968e3051da20ce6497fb2b50f6911df3d6d"
@@ -13990,6 +14023,15 @@ promise-retry@^1.1.1:
   dependencies:
     err-code "^1.0.0"
     retry "^0.10.0"
+
+promise.allsettled@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/promise.allsettled/-/promise.allsettled-1.0.1.tgz#afe4bfcc13b26e2263a97a7fbbb19b8ca6eb619c"
+  integrity sha1-r+S/zBOybiJjqXp/u7GbjKbrYZw=
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.13.0"
+    function-bind "^1.1.1"
 
 promise.prototype.finally@^3.1.0:
   version "3.1.0"
@@ -14046,15 +14088,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
-  version "15.6.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
-  integrity sha1-BdXKd7RFPphdYPx/+MhZCUpJcQI=
-  dependencies:
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -14062,6 +14096,14 @@ prop-types@^15.6.2, prop-types@^15.7.2:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.8.1"
+
+prop-types@^15.6.0, prop-types@^15.6.1:
+  version "15.6.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
+  integrity sha1-BdXKd7RFPphdYPx/+MhZCUpJcQI=
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
 
 property-information@^5.0.0, property-information@^5.0.1:
   version "5.0.1"
@@ -14172,7 +14214,7 @@ qs@6.5.2, qs@~6.5.2:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=
 
-qs@^6.5.2, qs@^6.6.0:
+qs@^6.5.2:
   version "6.7.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
@@ -14209,11 +14251,6 @@ quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
-
-raf-schd@^4.0.0:
-  version "4.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/raf-schd/-/raf-schd-4.0.0.tgz#9855756c5045ff4ed4516e14a47719387c3c907b"
-  integrity sha1-mFV1bFBF/07UUW4UpHcZOHw8kHs=
 
 raf@3.4.1, raf@^3.4.0:
   version "3.4.1"
@@ -14317,9 +14354,9 @@ react-clientside-effect@^1.2.0:
     shallowequal "^1.1.0"
 
 react-color@^2.17.0:
-  version "2.17.2"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-color/-/react-color-2.17.2.tgz#ef002cafd5ae8daf3d374b85bb44ac9d36785c0a"
-  integrity sha1-7wAsr9Wuja89N0uFu0SsnTZ4XAo=
+  version "2.17.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-color/-/react-color-2.17.3.tgz#b8556d744f95193468c7061d2aa19180118d4a48"
+  integrity sha1-uFVtdE+VGTRoxwYdKqGRgBGNSkg=
   dependencies:
     "@icons/material" "^0.2.4"
     lodash "^4.17.11"
@@ -14327,6 +14364,36 @@ react-color@^2.17.0:
     prop-types "^15.5.10"
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
+
+react-dev-utils@^7.0.0, react-dev-utils@^7.0.1:
+  version "7.0.5"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-dev-utils/-/react-dev-utils-7.0.5.tgz#cb95375d01ae71ca27b3c7616006ef7a77d14e8e"
+  integrity sha1-y5U3XQGuccons8dhYAbvenfRTo4=
+  dependencies:
+    "@babel/code-frame" "7.0.0"
+    address "1.0.3"
+    browserslist "4.4.1"
+    chalk "2.4.2"
+    cross-spawn "6.0.5"
+    detect-port-alt "1.1.6"
+    escape-string-regexp "1.0.5"
+    filesize "3.6.1"
+    find-up "3.0.0"
+    global-modules "2.0.0"
+    globby "8.0.2"
+    gzip-size "5.0.0"
+    immer "1.10.0"
+    inquirer "6.2.1"
+    is-root "2.0.0"
+    loader-utils "1.2.3"
+    opn "5.4.0"
+    pkg-up "2.0.0"
+    react-error-overlay "^5.1.4"
+    recursive-readdir "2.2.2"
+    shell-quote "1.6.1"
+    sockjs-client "1.3.0"
+    strip-ansi "5.0.0"
+    text-table "0.2.0"
 
 react-dev-utils@^8.0.0:
   version "8.0.0"
@@ -14359,20 +14426,20 @@ react-dev-utils@^8.0.0:
     strip-ansi "5.0.0"
     text-table "0.2.0"
 
-react-docgen@^4.1.0:
-  version "4.1.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-docgen/-/react-docgen-4.1.0.tgz#218887feba5b2c36af337879a27e74bda90ed7cb"
-  integrity sha1-IYiH/rpbLDavM3h5on50vakO18s=
+react-docgen@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-docgen/-/react-docgen-3.0.0.tgz#79c6e1b1870480c3c2bc1a65bede0577a11c38cd"
+  integrity sha1-ecbhsYcEgMPCvBplvt4Fd6EcOM0=
   dependencies:
-    "@babel/core" "^7.0.0"
+    "@babel/parser" "^7.1.3"
     "@babel/runtime" "^7.0.0"
     async "^2.1.4"
     commander "^2.19.0"
-    doctrine "^3.0.0"
+    doctrine "^2.0.0"
     node-dir "^0.1.10"
-    recast "^0.17.3"
+    recast "^0.16.0"
 
-react-dom@^16.5.2, react-dom@^16.8.1, react-dom@^16.8.4:
+react-dom@^16.5.2, react-dom@^16.8.1:
   version "16.8.6"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
@@ -14417,7 +14484,7 @@ react-fast-compare@^2.0.2:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha1-6EtNRVsP7BE+BALDKTUnFRlvgfk=
 
-react-focus-lock@^1.17.7, react-focus-lock@^1.18.3:
+react-focus-lock@^1.17.7:
   version "1.19.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-focus-lock/-/react-focus-lock-1.19.1.tgz#2f3429793edaefe2d077121f973ce5a3c7a0651a"
   integrity sha1-LzQpeT7a7+LQdxIflzzlo8egZRo=
@@ -14465,10 +14532,20 @@ react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha1-W7weLSkUHJ+9/tRWND/ivEMKahY=
 
-react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
+
+react-modal@^3.8.1:
+  version "3.8.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-modal/-/react-modal-3.8.1.tgz#7300f94a6f92a2e17994de0be6ccb61734464c9e"
+  integrity sha1-cwD5Sm+SouF5lN4L5sy2FzRGTJ4=
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
+    react-lifecycles-compat "^3.0.0"
+    warning "^3.0.0"
 
 react-popper-tooltip@^2.8.0:
   version "2.8.2"
@@ -14490,15 +14567,14 @@ react-popper@^1.3.3:
     typed-styles "^0.0.7"
     warning "^4.0.2"
 
-react-resize-detector@^4.0.5:
-  version "4.1.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-resize-detector/-/react-resize-detector-4.1.3.tgz#cada852b63b07453e11c9078eb571b9c4bc9d48f"
-  integrity sha1-ytqFK2OwdFPhHJB461cbnEvJ1I8=
+react-resize-detector@^3.2.1:
+  version "3.4.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-resize-detector/-/react-resize-detector-3.4.0.tgz#2ccd399958a0efe9b7c52c5db5a13d87e47cd585"
+  integrity sha1-LM05mVig7+m3xSxdtaE9h+R81YU=
   dependencies:
     lodash "^4.17.11"
     lodash-es "^4.17.11"
-    prop-types "^15.7.2"
-    raf-schd "^4.0.0"
+    prop-types "^15.6.2"
     resize-observer-polyfill "^1.5.1"
 
 react-scripts@^2.1.3:
@@ -14555,7 +14631,7 @@ react-scripts@^2.1.3:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-select@^2.2.0:
+react-select@^2.3.0:
   version "2.4.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-select/-/react-select-2.4.3.tgz#62efdf76d7e33e9bde22d907a0cc8abd0aeab656"
   integrity sha1-Yu/fdtfjPpveItkHoMyKvQrqtlY=
@@ -14589,7 +14665,7 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.5.2:
     react-is "^16.8.6"
     scheduler "^0.13.6"
 
-react-textarea-autosize@^7.0.4, react-textarea-autosize@^7.1.0:
+react-textarea-autosize@^7.0.4:
   version "7.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react-textarea-autosize/-/react-textarea-autosize-7.1.0.tgz#3132cb77e65d94417558d37c0bfe415a5afd3445"
   integrity sha1-MTLLd+ZdlEF1WNN8C/5BWlr9NEU=
@@ -14617,7 +14693,7 @@ react-transition-group@^2.5.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.5.2, react@^16.7.0, react@^16.8.1, react@^16.8.4:
+react@^16.5.2, react@^16.8.1:
   version "16.8.6"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha1-rWw6lhT9Ok6e9REX9U2IjaAfK74=
@@ -14793,14 +14869,14 @@ recast@^0.14.7:
     private "~0.1.5"
     source-map "~0.6.1"
 
-recast@^0.17.3:
-  version "0.17.6"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/recast/-/recast-0.17.6.tgz#64ae98d0d2dfb10ff92ff5fb9ffb7371823b69fa"
-  integrity sha1-ZK6Y0NLfsQ/5L/X7n/tzcYI7afo=
+recast@^0.16.0:
+  version "0.16.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/recast/-/recast-0.16.2.tgz#3796ebad5fe49ed85473b479cd6df554ad725dc2"
+  integrity sha1-N5brrV/knthUc7R5zW31VK1yXcI=
   dependencies:
-    ast-types "0.12.4"
+    ast-types "0.11.7"
     esprima "~4.0.0"
-    private "^0.1.8"
+    private "~0.1.5"
     source-map "~0.6.1"
 
 recast@~0.11.12:
@@ -15151,7 +15227,7 @@ requires-port@^1.0.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
-resize-observer-polyfill@^1.5.0, resize-observer-polyfill@^1.5.1:
+resize-observer-polyfill@^1.5.1:
   version "1.5.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
   integrity sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=
@@ -15180,6 +15256,11 @@ resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha1-SrzYUq0y3Xuqv+m0DgCjbbXzkuY=
+
+resolve-pathname@^2.2.0:
+  version "2.2.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/resolve-pathname/-/resolve-pathname-2.2.0.tgz#7e9ae21ed815fd63ab189adeee64dc831eefa879"
+  integrity sha1-fpriHtgV/WOrGJre7mTcgx7vqHk=
 
 resolve-url@^0.2.1:
   version "0.2.1"
@@ -15422,11 +15503,6 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-scrollbarwidth@^0.1.3:
-  version "0.1.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/scrollbarwidth/-/scrollbarwidth-0.1.3.tgz#1b0de64e288c38c427f4a01fe00a462a04b94fdf"
-  integrity sha1-Gw3mTiiMOMQn9KAf4ApGKgS5T98=
-
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -15643,7 +15719,7 @@ shelljs@0.7.6:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-shelljs@^0.8.3:
+shelljs@^0.8.2:
   version "0.8.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/shelljs/-/shelljs-0.8.3.tgz#a7f3319520ebf09ee81275b2368adb286659b097"
   integrity sha1-p/MxlSDr8J7oEnWyNorbKGZZsJc=
@@ -15673,27 +15749,6 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
-
-simplebar-react@^0.1.5:
-  version "0.1.6"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/simplebar-react/-/simplebar-react-0.1.6.tgz#571caee7c9f15892de847622140aaa15dff9450e"
-  integrity sha1-Vxyu58nxWJLehHYiFAqqFd/5RQ4=
-  dependencies:
-    prop-types "^15.6.1"
-    simplebar "^3.1.5"
-
-simplebar@^3.1.5:
-  version "3.1.5"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/simplebar/-/simplebar-3.1.5.tgz#257f2d0836baa250cd2a8841892a10c3c3081b17"
-  integrity sha1-JX8tCDa6olDNKohBiSoQw8MIGxc=
-  dependencies:
-    can-use-dom "^0.1.0"
-    core-js "^2.6.2"
-    lodash.debounce "^4.0.8"
-    lodash.memoize "^4.1.2"
-    lodash.throttle "^4.1.1"
-    resize-observer-polyfill "^1.5.0"
-    scrollbarwidth "^0.1.3"
 
 sisteransi@^0.1.1:
   version "0.1.1"
@@ -15891,6 +15946,13 @@ space-separated-tokens@^1.0.0:
   dependencies:
     trim "0.0.1"
 
+spawn-promise@^0.1.8:
+  version "0.1.8"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/spawn-promise/-/spawn-promise-0.1.8.tgz#a5bea98814c48f52cbe02720e7fe2d6fc3b5119a"
+  integrity sha1-pb6piBTEj1LL4Ccg5/4tb8O1EZo=
+  dependencies:
+    co "^4.6.0"
+
 spawn-sync@^1.0.15:
   version "1.0.15"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/spawn-sync/-/spawn-sync-1.0.15.tgz#b00799557eb7fb0c8376c29d44e8a1ea67e57476"
@@ -16041,11 +16103,6 @@ stealthy-require@^1.1.1:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-store2@^2.7.1:
-  version "2.7.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/store2/-/store2-2.7.1.tgz#22070b7dc04748a792fc6912a58ab99d3a21d788"
-  integrity sha1-IgcLfcBHSKeS/GkSpYq5nToh14g=
-
 storybook-readme@^5.0.2:
   version "5.0.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/storybook-readme/-/storybook-readme-5.0.2.tgz#c341f61078372976851fe93c1c4698191cff8960"
@@ -16144,12 +16201,12 @@ string-width@^3.0.0:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.0.0"
 
-string.prototype.matchall@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/string.prototype.matchall/-/string.prototype.matchall-3.0.0.tgz#66f4d8dd5c6c6cea4dffb55ec5f3184a8dd0dd59"
-  integrity sha1-ZvTY3VxsbOpN/7VexfMYSo3Q3Vk=
+string.prototype.matchall@^3.0.1:
+  version "3.0.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/string.prototype.matchall/-/string.prototype.matchall-3.0.1.tgz#5a9e0b64bcbeb336aa4814820237c2006985646d"
+  integrity sha1-Wp4LZLy+szaqSBSCAjfCAGmFZG0=
   dependencies:
-    define-properties "^1.1.2"
+    define-properties "^1.1.3"
     es-abstract "^1.12.0"
     function-bind "^1.1.1"
     has-symbols "^1.0.0"
@@ -16350,6 +16407,14 @@ supports-color@^6.0.0, supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-url-loader@^2.3.2:
+  version "2.3.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svg-url-loader/-/svg-url-loader-2.3.2.tgz#dd86b26c19fe3b914f04ea10ef39594eade04464"
+  integrity sha1-3YaybBn+O5FPBOoQ7zlZTq3gRGQ=
+  dependencies:
+    file-loader "1.1.11"
+    loader-utils "1.1.0"
+
 svgo@^0.7.0:
   version "0.7.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -16363,7 +16428,7 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-svgo@^1.0.0:
+svgo@^1.0.0, svgo@^1.2.1:
   version "1.2.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svgo/-/svgo-1.2.2.tgz#0253d34eccf2aed4ad4f283e11ee75198f9d7316"
   integrity sha1-AlPTTszyrtStTyg+Ee51GY+dcxY=
@@ -16462,7 +16527,7 @@ tar@^4, tar@^4.4.8:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-telejson@^2.1.1:
+telejson@^2.1.0, telejson@^2.1.1:
   version "2.1.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/telejson/-/telejson-2.1.1.tgz#cd8835ce90198c9341078dbe80849e39d1a2b73c"
   integrity sha1-zYg1zpAZjJNBB42+gISeOdGitzw=
@@ -16514,7 +16579,7 @@ terser-webpack-plugin@1.2.2, terser-webpack-plugin@^1.1.0:
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
 
-terser-webpack-plugin@^1.2.2:
+terser-webpack-plugin@^1.2.1:
   version "1.2.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/terser-webpack-plugin/-/terser-webpack-plugin-1.2.3.tgz#3f98bc902fac3e5d0de730869f50668561262ec8"
   integrity sha1-P5i8kC+sPl0N5zCGn1BmhWEmLsg=
@@ -16615,6 +16680,16 @@ tiny-emitter@^2.0.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha1-HRpW7fxRxD6GPLtTgqcjMONVVCM=
 
+tiny-invariant@^1.0.2:
+  version "1.0.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/tiny-invariant/-/tiny-invariant-1.0.4.tgz#346b5415fd93cb696b0c4e8a96697ff590f92463"
+  integrity sha1-NGtUFf2Ty2lrDE6Klml/9ZD5JGM=
+
+tiny-warning@^1.0.0:
+  version "1.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/tiny-warning/-/tiny-warning-1.0.2.tgz#1dfae771ee1a04396bdfde27a3adcebc6b648b28"
+  integrity sha1-Hfrnce4aBDlr394no63OvGtkiyg=
+
 tinycolor2@^1.4.1:
   version "1.4.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
@@ -16679,7 +16754,7 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-toggle-selection@^1.0.3:
+toggle-selection@^1.0.6:
   version "1.0.6"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/toggle-selection/-/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
   integrity sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
@@ -16858,11 +16933,6 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-type-fest@^0.3.0:
-  version "0.3.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/type-fest/-/type-fest-0.3.1.tgz#63d00d204e059474fe5e1b7c011112bbd1dc29e1"
-  integrity sha1-Y9ANIE4FlHT+Xht8ARESu9HcKeE=
-
 type-is@~1.6.16:
   version "1.6.18"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
@@ -16940,7 +17010,7 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.5.tgz#a9cc6cc7ce63a0a3023fc99e341b94431d405a57"
   integrity sha1-qcxsx85joKMCP8meNBuUQx1AWlc=
 
-unified@^7.0.2:
+unified@^7.0.2, unified@^7.1.0:
   version "7.1.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/unified/-/unified-7.1.0.tgz#5032f1c1ee3364bd09da12e27fdd4a7553c7be13"
   integrity sha1-UDLxwe4zZL0J2hLif91KdVPHvhM=
@@ -16992,6 +17062,13 @@ unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   version "1.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
   integrity sha1-Pzf881EnncvKdICrWIm7ioMu4cY=
+
+unist-util-stringify-position@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/unist-util-stringify-position/-/unist-util-stringify-position-2.0.0.tgz#4c452c0dbcbc509f7bcd366e9a8afd646f9d51ae"
+  integrity sha1-TEUsDby8UJ97zTZumor9ZG+dUa4=
+  dependencies:
+    "@types/unist" "^2.0.2"
 
 universal-user-agent@^2.0.0, universal-user-agent@^2.0.1:
   version "2.0.3"
@@ -17159,6 +17236,11 @@ validate-npm-package-name@^3.0.0:
   dependencies:
     builtins "^1.0.3"
 
+value-equal@^0.4.0:
+  version "0.4.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/value-equal/-/value-equal-0.4.0.tgz#c5bdd2f54ee093c04839d71ce2e4758a6890abc7"
+  integrity sha1-xb3S9U7gk8BIOdcc4uR1imiQq8c=
+
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -17185,6 +17267,14 @@ vfile-message@^1.0.0:
   dependencies:
     unist-util-stringify-position "^1.1.1"
 
+vfile-message@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/vfile-message/-/vfile-message-2.0.0.tgz#750bbb86fe545988a67e899b329bbcabb73edef6"
+  integrity sha1-dQu7hv5UWYimfombMpu8q7c+3vY=
+  dependencies:
+    "@types/unist" "^2.0.2"
+    unist-util-stringify-position "^1.1.1"
+
 vfile@^3.0.0, vfile@^3.0.1:
   version "3.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/vfile/-/vfile-3.0.1.tgz#47331d2abe3282424f4a4bb6acd20a44c4121803"
@@ -17194,6 +17284,17 @@ vfile@^3.0.0, vfile@^3.0.1:
     replace-ext "1.0.0"
     unist-util-stringify-position "^1.0.0"
     vfile-message "^1.0.0"
+
+vfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/vfile/-/vfile-4.0.0.tgz#ebf3b48af9fcde524d5e08d5f75812058a5f78ad"
+  integrity sha1-6/O0ivn83lJNXgjV91gSBYpfeK0=
+  dependencies:
+    "@types/unist" "^2.0.2"
+    is-buffer "^2.0.0"
+    replace-ext "1.0.0"
+    unist-util-stringify-position "^2.0.0"
+    vfile-message "^2.0.0"
 
 vm-browserify@0.0.4:
   version "0.0.4"
@@ -17286,7 +17387,7 @@ webpack-dev-middleware@3.4.0:
     range-parser "^1.0.3"
     webpack-log "^2.0.0"
 
-webpack-dev-middleware@^3.6.0:
+webpack-dev-middleware@^3.5.1:
   version "3.6.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/webpack-dev-middleware/-/webpack-dev-middleware-3.6.2.tgz#f37a27ad7c09cd7dc67cd97655413abaa1f55942"
   integrity sha1-83onrXwJzX3GfNl2VUE6uqH1WUI=
@@ -17333,9 +17434,9 @@ webpack-dev-server@3.1.14:
     yargs "12.0.2"
 
 webpack-hot-middleware@^2.24.3:
-  version "2.24.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/webpack-hot-middleware/-/webpack-hot-middleware-2.24.3.tgz#5bb76259a8fc0d97463ab517640ba91d3382d4a6"
-  integrity sha1-W7diWaj8DZdGOrUXZAupHTOC1KY=
+  version "2.24.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/webpack-hot-middleware/-/webpack-hot-middleware-2.24.4.tgz#0ae1eeca000c6ffdcb22eb574d0e6d7717672b0f"
+  integrity sha1-CuHuygAMb/3LIutXTQ5tdxdnKw8=
   dependencies:
     ansi-html "0.0.7"
     html-entities "^1.2.0"
@@ -17397,7 +17498,7 @@ webpack@4.28.3:
     watchpack "^1.5.0"
     webpack-sources "^1.3.0"
 
-webpack@^4.28.0:
+webpack@^4.29.0:
   version "4.30.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/webpack/-/webpack-4.30.0.tgz#aca76ef75630a22c49fcc235b39b4c57591d33a9"
   integrity sha1-rKdu91YwoixJ/MI1s5tMV1kdM6k=
