@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.4.9...@workday/canvas-kit-react-header@0.5.0) (2019-05-07)
+
+
+### Features
+
+* **header:** Expose breakpoint change event handler ([dad871d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/dad871d))
+
+
+
+
+
 ## [0.4.9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.4.8...@workday/canvas-kit-react-header@0.4.9) (2019-05-07)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-header
