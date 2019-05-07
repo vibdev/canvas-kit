@@ -63,7 +63,7 @@ const TextAreaContainer = styled('textarea')<TextAreaProps>(
         : `1px solid ${inputColors.border}`,
     boxShadow:
       error === ErrorType.Error ? `inset 0 0 0 1px ${inputColors.error.border}` : undefined,
-    '&:hover': {
+    '&:hover:not([disabled])': {
       borderColor: error === ErrorType.Error ? inputColors.error.border : inputColors.hoverBorder,
     },
   })

@@ -69,7 +69,7 @@ exports[`TextArea Snapshots error 1`] = `
   color: #a1aab3;
 }
 
-.emotion-0:hover {
+.emotion-0:hover:not([disabled]) {
   border-color: #de2e21;
 }
 
@@ -147,7 +147,7 @@ exports[`TextArea Snapshots grow 1`] = `
   color: #a1aab3;
 }
 
-.emotion-0:hover {
+.emotion-0:hover:not([disabled]) {
   border-color: #333d47;
 }
 
@@ -224,7 +224,7 @@ exports[`TextArea Snapshots renders as expected 1`] = `
   color: #a1aab3;
 }
 
-.emotion-0:hover {
+.emotion-0:hover:not([disabled]) {
   border-color: #333d47;
 }
 
