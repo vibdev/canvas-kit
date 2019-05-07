@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-tooltip",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
@@ -37,7 +37,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.4.0",
+    "@workday/canvas-kit-react-common": "^0.4.1",
     "@workday/canvas-kit-react-core": "^1.9.3",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"

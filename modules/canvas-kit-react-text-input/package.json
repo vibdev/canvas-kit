@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-text-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Canvas styled text input",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
@@ -37,7 +37,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.4.0",
+    "@workday/canvas-kit-react-common": "^0.4.1",
     "@workday/canvas-kit-react-core": "^1.9.3",
     "@workday/canvas-kit-react-icon": "^1.5.10",
     "@workday/canvas-system-icons-web": "^0.16.39",
