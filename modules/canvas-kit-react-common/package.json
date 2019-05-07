@@ -20,10 +20,11 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf dist && mkdirp dist",
-    "build:cjs": "tsc --outDir dist/commonjs --module commonjs --declaration",
-    "build:es6": "tsc --outDir dist/es6 --declaration",
-    "build": "npm-run-all clean --parallel build:cjs build:es6"
+    "clean": "rimraf dist && rimraf *.tsbuildinfo && mkdirp dist",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:es6": "tsc -p tsconfig.es6.json",
+    "build:rebuild": "npm-run-all clean --parallel build:cjs build:es6",
+    "build": "npm-run-all --parallel build:cjs build:es6"
   },
   "keywords": [
     "canvas",
@@ -37,6 +38,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
+    "@storybook/react": "^4.1.11",
     "@workday/canvas-kit-react-core": "^1.9.3",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
