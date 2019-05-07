@@ -23,7 +23,7 @@ part of Canvas.
 | [Button - Icon](modules/canvas-kit-react-button)                | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Button - Text](modules/canvas-kit-react-button)                | :white_check_mark: |      [:blue_book:](https://design.workday.com/guidelines/components/buttons)       |
 | [Card](modules/canvas-kit-react-card)                           | :white_check_mark: |                                                                                    |
-| Checkbox                                                        |                    |    [:blue_book:](https://design.workday.com/guidelines/components/check-boxes)     |
+| [Checkbox](modules/canvas-kit-react-checkbox)                   | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/check-boxes)     |
 | Color Picker                                                    |                    |                                                                                    |
 | Context Menu                                                    |                    |                                                                                    |
 | [Cookie Banner](modules/canvas-kit-react-cookie-banner)         | :white_check_mark: |                                                                                    |
@@ -37,17 +37,17 @@ part of Canvas.
 | List                                                            |                    |                                                                                    |
 | [Loading Animation](modules/canvas-kit-react-loading-animation) | :white_check_mark: |                                                                                    |
 | Numeric Input                                                   |                    |                                                                                    |
-| Menu                                                            | :white_check_mark: |                                                                                    |
+| [Menu](modules/canvas-kit-react-menu)                           | :white_check_mark: |                                                                                    |
 | [Page Header](modules/canvas-kit-react-page-header)             | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/page-header)     |
 | [Pop Up](modules/canvas-kit-react-popup)                        | :white_check_mark: |                                                                                    |
 | Progress Bar                                                    |                    |                                                                                    |
-| Radio Buttons                                                   |                    |   [:blue_book:](https://design.workday.com/guidelines/components/radio-buttons)    |
+| [Radio Button](modules/canvas-kit-react-radio)                  | :white_check_mark: |   [:blue_book:](https://design.workday.com/guidelines/components/radio-buttons)    |
 | Rich Text Editor                                                |                    |  [:blue_book:](https://design.workday.com/guidelines/components/rich-text-editor)  |
 | Slider                                                          |                    |                                                                                    |
-| [Table](modules/canvas-kit-react-table)                         | :white_check_mark: |       [:blue_book:](https://design.workday.com/guidelines/components/grids)        |
+| [Table](modules/canvas-kit-react-table)                         | :white_check_mark: |       [:blue_book:](https://design.workday.com/guidelines/components/tables)       |
 | Tabs                                                            |                    |        [:blue_book:](https://design.workday.com/guidelines/components/tabs)        |
 | Toast                                                           |                    |                                                                                    |
-| Tooltip                                                         |                    |                                                                                    |
-| Text Area                                                       |                    |                                                                                    |
-| Text Input                                                      |                    |    [:blue_book:](https://design.workday.com/guidelines/components/text-inputs)     |
+| [Tooltip](modules/canvas-kit-react-tooltip)                     | :white_check_mark: |                                                                                    |
+| [TextArea](modules/canvas-kit-react-text-area)                  | :white_check_mark: |                                                                                    |
+| [Text Input](modules/canvas-kit-react-text-input)               | :white_check_mark: |    [:blue_book:](https://design.workday.com/guidelines/components/text-inputs)     |
 | [Toggle Switch](modules/canvas-kit-react-toggle)                | :white_check_mark: |                                                                                    |  |
