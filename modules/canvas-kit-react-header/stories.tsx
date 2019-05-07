@@ -46,6 +46,10 @@ const handleSearchSubmitTest = (query: string) => {
   alert(`You searched for "${query}"!`);
 };
 
+const handleBreakpointChangeTest = (key: string) => {
+  alert(`The breakpoint key is "${key}"!`);
+};
+
 const nav = (
   <nav>
     <ul>
@@ -99,6 +103,7 @@ storiesOf('Canvas Kit/Header', module)
           menuToggle={<Avatar onClick={handleMenuClickTest} />}
           onSearchSubmit={handleSearchSubmitTest}
           breakpoint={700}
+          onBreakpointChange={handleBreakpointChangeTest}
         >
           <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
           <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
@@ -284,7 +289,11 @@ storiesOf('Canvas Kit/Header', module)
         <Avatar onClick={handleAvatarClickTest} />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
-      <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
+      <Header
+        title="Nav Collapses Later"
+        breakpoints={{sm: 320, md: 420, lg: 768}}
+        onBreakpointChange={handleBreakpointChangeTest}
+      >
         {nav}
       </Header>
       <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>
