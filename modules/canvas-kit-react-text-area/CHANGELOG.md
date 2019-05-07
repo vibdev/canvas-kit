@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-text-area/compare/@workday/canvas-kit-react-text-area@0.1.0...@workday/canvas-kit-react-text-area@0.1.1) (2019-05-07)
+
+
+### Bug Fixes
+
+* **textarea:** don't add border styles on hover when text area is disabled ([9b4428a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-text-area/commits/9b4428a))
+
+
+
+
+
 # 0.1.0 (2019-05-06)
 
 
