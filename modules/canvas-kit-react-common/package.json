@@ -42,8 +42,5 @@
     "emotion": "^9.2.12",
     "lodash": "^4.17.11",
     "react-emotion": "^9.2.12"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.123"
   }
 }
