@@ -50,11 +50,6 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
 );
 
 export default class MyComponent extends React.Component<SidePanelProps> {
-  static defaultProps = {
-    breakpoint: {
-      default: 924,
-    },
-  };
   public render() {
     const {title, onClickHandler, open, openRight, openLeft, padding} = this.props;
     let toggleButtonDirection;
