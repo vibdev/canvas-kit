@@ -7,7 +7,7 @@ import {InputProviderDecorator, SectionDecorator, controlComponent} from '../../
 import {TextInput} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Text Input', module)
+storiesOf('Text Input', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(SectionDecorator('Text Input'))
   .addDecorator(withReadme(README))
