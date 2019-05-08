@@ -58,13 +58,13 @@ Default: `depth[2]`
 
 #### `handleClose: () => void`
 
-> Callback to handle close of your Popup and any other event when the Popup is closed.
+> Callback to handle close of your Toast and any other event when the Toast is closed.
 
 ---
 
 #### `transformOrigin: TransformOrigin`
 
-> Origin from which the popup will animate from
+> Origin from which the toast will animate from
 
 Default:
 
