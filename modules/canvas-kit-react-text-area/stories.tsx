@@ -2,11 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {
-  InputProviderDecorator,
-  SectionDecorator,
-  controlComponent,
-} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator, SectionDecorator, controlComponent} from '../../utils/storybook';
 
 import {TextArea} from './index'; // tslint:disable-line:import-name
 import README from './README.md';

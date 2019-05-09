@@ -3,6 +3,7 @@ const HappyPack = require('happypack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const modulesPath = path.resolve(__dirname, '../modules');
+const utilsPath = path.resolve(__dirname, '../utils');
 
 const babelLoader = {
   loader: 'babel-loader',
@@ -24,7 +25,7 @@ const customRules = [
   {
     test: /\.tsx?$/,
     exclude: /node_modules/,
-    include: modulesPath,
+    include: [modulesPath, utilsPath],
     loader: 'happypack/loader?id=ts',
   },
   {

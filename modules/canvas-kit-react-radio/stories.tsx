@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator, ControlledComponentWrapper} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator, ControlledComponentWrapper} from '../../utils/storybook';
 
 import Radio, {RadioGroup} from './index'; // tslint:disable-line:import-name
 import README from './README.md';

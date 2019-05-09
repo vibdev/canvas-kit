@@ -37,7 +37,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@storybook/react": "^4.1.11",
+    "@types/lodash": "^4.14.125",
     "@workday/canvas-kit-react-core": "^1.9.3",
     "emotion": "^9.2.12",
     "lodash": "^4.17.11",

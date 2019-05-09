@@ -338,7 +338,7 @@ components in an `InputProvider`.
 
 ```tsx
 import * as React from 'react';
-import {InputProvider} from '@workday/canvas-kit-react-core';
+import {InputProvider} from '../../utils/storybook';
 
 <InputProvider>{/* All your components containing any Canvas components */}</InputProvider>;
 ```
@@ -411,14 +411,13 @@ cases you would like (i.e. mouse/touch/pointer input).
 
 ## Storybook Decorator
 
-We provide a
-[storybook decorator](../canvas-kit-react-common/lib/storybook/InputProviderDecorator.tsx) to wrap
-your stories in an `InputProvider` automatically.
+We provide a [storybook decorator](../../utils/storybook/InputProviderDecorator.tsx) to wrap your
+stories in an `InputProvider` automatically.
 
 Example:
 
 ```js
-import {InputProviderDecorator} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator} from '../../utils/storybook';
 
 storiesOf('My Story', module)
   .addDecorator(InputProviderDecorator)

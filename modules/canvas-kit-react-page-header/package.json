@@ -44,7 +44,6 @@
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {
-    "@workday/canvas-system-icons-web": "^1.0.1",
-    "jest-emotion": "^9.2.11"
+    "@workday/canvas-system-icons-web": "^1.0.1"
   }
 }
