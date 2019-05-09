@@ -411,9 +411,8 @@ cases you would like (i.e. mouse/touch/pointer input).
 
 ## Storybook Decorator
 
-We provide a
-[storybook decorator](../canvas-kit-react-common/lib/storybook/InputProviderDecorator.tsx) to wrap
-your stories in an `InputProvider` automatically.
+We provide a [storybook decorator](../../utils/storybook/InputProviderDecorator.tsx) to wrap your
+stories in an `InputProvider` automatically.
 
 Example:
 
