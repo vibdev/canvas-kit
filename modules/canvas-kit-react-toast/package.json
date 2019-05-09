@@ -1,7 +1,7 @@
 {
   "name": "@workday/canvas-kit-react-toast",
   "version": "0.0.0",
-  "description": "",
+  "description": "A canvas styled toast component",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
   "license": "Apache-2.0",
@@ -35,5 +35,12 @@
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
+  },
+  "dependencies": {
+    "@workday/canvas-kit-react-common": "^0.4.2",
+    "@workday/canvas-kit-react-core": "^1.9.4",
+    "@workday/canvas-kit-react-icon": "^1.5.12",
+    "emotion": "^9.2.12",
+    "react-emotion": "^9.2.12"
   }
 }
