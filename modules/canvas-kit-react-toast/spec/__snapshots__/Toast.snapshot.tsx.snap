@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toast Snapshots renders as expected 1`] = `
-.emotion-6 {
+.emotion-5 {
   width: 360px;
   min-height: 58px;
 }
 
-.emotion-6 .emotion-1 {
+.emotion-5 .emotion-1 {
   margin-right: 0;
 }
 
 .emotion-4 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1htt9yb;
-  animation: animation-1htt9yb;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -48,10 +48,10 @@ exports[`Toast Snapshots renders as expected 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-5 emotion-6"
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-4"
     role="dialog"
   >
     <div
@@ -77,8 +77,8 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 .emotion-8 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1htt9yb;
-  animation: animation-1htt9yb;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -111,16 +111,16 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   display: flex;
 }
 
-.emotion-10 {
+.emotion-9 {
   width: 360px;
   min-height: 58px;
 }
 
-.emotion-10 .emotion-5 {
+.emotion-9 .emotion-5 {
   margin-right: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   right: 12px;
   top: 12px;
@@ -275,17 +275,17 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 }
 
 <div
-  className="emotion-10 emotion-11"
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-8"
     role="dialog"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3"
     >
       <button
-        className="emotion-1"
+        className="emotion-1 emotion-2"
         onClick={[MockFunction]}
       >
         <span
@@ -321,8 +321,8 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 .emotion-10 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1htt9yb;
-  animation: animation-1htt9yb;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -355,16 +355,16 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   display: flex;
 }
 
-.emotion-12 {
+.emotion-11 {
   width: 360px;
   min-height: 58px;
 }
 
-.emotion-12 .emotion-7 {
+.emotion-11 .emotion-7 {
   margin-right: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   right: 12px;
   top: 12px;
@@ -545,17 +545,17 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-11 emotion-12"
 >
   <div
-    className="emotion-10 emotion-11"
+    className="emotion-10"
     role="dialog"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3"
     >
       <button
-        className="emotion-1"
+        className="emotion-1 emotion-2"
         onClick={[MockFunction]}
       >
         <span
@@ -597,8 +597,8 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 .emotion-11 {
   position: relative;
   background-color: #ffffff;
-  -webkit-animation: animation-1htt9yb;
-  animation: animation-1htt9yb;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
   animation-duration: 150ms;
   -webkit-animation-timing-function: ease-out;
@@ -631,16 +631,16 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   display: flex;
 }
 
-.emotion-13 {
+.emotion-12 {
   width: 360px;
   min-height: 58px;
 }
 
-.emotion-13 .emotion-8 {
+.emotion-12 .emotion-8 {
   margin-right: 24px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   right: 12px;
   top: 12px;
@@ -831,17 +831,17 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-12 emotion-13"
 >
   <div
-    className="emotion-11 emotion-12"
+    className="emotion-11"
     role="dialog"
   >
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3"
     >
       <button
-        className="emotion-1"
+        className="emotion-1 emotion-2"
         onClick={[MockFunction]}
       >
         <span
