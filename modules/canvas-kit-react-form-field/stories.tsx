@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator, ControlledComponentWrapper} from '@workday/canvas-kit-react-common';
+import {InputProviderDecorator, ControlledComponentWrapper} from '../../storybook-utils';
 import {Checkbox} from '@workday/canvas-kit-react-checkbox';
 import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 

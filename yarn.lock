@@ -2385,10 +2385,10 @@
     csstype "^2.0.0"
     indefinite-observable "^1.0.1"
 
-"@types/lodash@^4.14.123":
-  version "4.14.123"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/lodash/-/lodash-4.14.123.tgz#39be5d211478c8dd3bdae98ee75bb7efe4abfe4d"
-  integrity sha1-Ob5dIRR4yN072umO51u37+Sr/k0=
+"@types/lodash@^4.14.125":
+  version "4.14.125"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@types/lodash/-/lodash-4.14.125.tgz#b5fa71f3080a2136ba2702c390ffe528ec1e3980"
+  integrity sha1-tfpx8wgKITa6JwLDkP/lKOweOYA=
 
 "@types/node@*":
   version "10.11.7"
