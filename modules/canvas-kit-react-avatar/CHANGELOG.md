@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.16](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.15...@workday/canvas-kit-react-avatar@0.4.16) (2019-05-09)
+
+
+### Bug Fixes
+
+* **common:** move storybook utils to outside folder ([1f661b6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/1f661b6))
+
+
+
+
+
 ## [0.4.15](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.14...@workday/canvas-kit-react-avatar@0.4.15) (2019-05-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-avatar

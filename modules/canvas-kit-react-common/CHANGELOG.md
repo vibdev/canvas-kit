@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.4.1...@workday/canvas-kit-react-common@0.4.2) (2019-05-09)
+
+
+### Bug Fixes
+
+* **common:** move storybook utils to outside folder ([1f661b6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/1f661b6))
+
+
+
+
+
 ## [0.4.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.4.0...@workday/canvas-kit-react-common@0.4.1) (2019-05-07)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-common

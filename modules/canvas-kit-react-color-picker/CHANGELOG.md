@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.1.7...@workday/canvas-kit-react-color-picker@0.1.8) (2019-05-09)
+
+
+### Bug Fixes
+
+* **common:** move storybook utils to outside folder ([1f661b6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/1f661b6))
+
+
+
+
+
 ## [0.1.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.1.6...@workday/canvas-kit-react-color-picker@0.1.7) (2019-05-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-color-picker
