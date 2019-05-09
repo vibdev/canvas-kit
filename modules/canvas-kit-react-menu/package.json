@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-menu",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A container for navigation or action items",
   "homepage": "https://workdaydesign.com",
   "author": "Matthew Rust",
@@ -41,10 +41,10 @@
   },
   "dependencies": {
     "@types/uuid": "^3.4.4",
-    "@workday/canvas-kit-react-card": "^0.3.10",
-    "@workday/canvas-kit-react-common": "^0.4.2",
-    "@workday/canvas-kit-react-core": "^1.9.4",
-    "@workday/canvas-kit-react-icon": "^1.5.12",
+    "@workday/canvas-kit-react-card": "^0.3.11",
+    "@workday/canvas-kit-react-common": "^0.4.3",
+    "@workday/canvas-kit-react-core": "^1.9.5",
+    "@workday/canvas-kit-react-icon": "^1.5.13",
     "@workday/design-assets-types": "^0.2.3",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12",

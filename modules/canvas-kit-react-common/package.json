@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-common",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "A module of common utilities shared across canvas components",
   "homepage": "https://workdaydesign.com",
   "author": "Phuoc Huynh <phuoc.huynh@workday.com>",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.125",
-    "@workday/canvas-kit-react-core": "^1.9.4",
+    "@workday/canvas-kit-react-core": "^1.9.5",
     "emotion": "^9.2.12",
     "lodash": "^4.17.11",
     "react-emotion": "^9.2.12"

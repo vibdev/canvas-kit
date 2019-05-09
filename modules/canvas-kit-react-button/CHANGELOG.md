@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.10...@workday/canvas-kit-react-button@0.20.11) (2019-05-09)
+
+
+### Bug Fixes
+
+* **icon-button-toggle-group:** Fix incorrect prop type ([e3d5cda](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e3d5cda))
+
+
+
+
+
 ## [0.20.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.9...@workday/canvas-kit-react-button@0.20.10) (2019-05-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-button
