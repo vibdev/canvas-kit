@@ -28,9 +28,7 @@ import {Toast} from '@workday/canvas-kit-react-toast';
 
 // We use Popper from Material UI for our positioning
 <Popper placement={'top'} open={this.state.open} anchorEl={anchorEl}>
-  <Toast width={300} handleClose={this.handleClose}>
-    {this.props.children}
-  </Toast>
+  <Toast handleClose={this.handleClose}>{this.props.children}</Toast>
 </Popper>;
 ```
 
@@ -41,20 +39,6 @@ import {Toast} from '@workday/canvas-kit-react-toast';
 ### Required
 
 ### Optional
-
-#### `width: number | string`
-
-> Width of the toast.
-
----
-
-#### `depth: CanvasDepthValue`
-
-> Depth of the toast. Style imported from `@workday/canvas-kit-react-core`.
-
-Default: `depth[2]`
-
----
 
 #### `handleClose: () => void`
 
@@ -74,14 +58,6 @@ Default:
   vertical: 'top',
 }
 ```
-
----
-
-#### `displayDuration: number`
-
-> Indicates how long to keep the toast open
-
-Default: 0
 
 ---
 
