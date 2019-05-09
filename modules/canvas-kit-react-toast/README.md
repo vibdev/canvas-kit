@@ -46,6 +46,18 @@ import {Toast} from '@workday/canvas-kit-react-toast';
 
 ---
 
+#### `handleActionLink: () => void`
+
+> Callback to handle an action link
+
+---
+
+#### `actionLinkText: string`
+
+> The text to display for the link
+
+---
+
 #### `transformOrigin: TransformOrigin`
 
 > Origin from which the toast will animate from
@@ -61,10 +73,14 @@ Default:
 
 ---
 
-#### `hasActionLink: boolean`
+#### `toastIcon: CanvasSystemIcon`
 
-> Allows user to pass an action link to toast
+> Pass whatever I can you'd like to display on the left side of the Toast
 
-Default: 0
+---
+
+#### `iconColor: string`
+
+> The color of the icon
 
 ---
