@@ -69,7 +69,7 @@ const nav = (
   </nav>
 );
 
-storiesOf('Canvas Kit/Header', module)
+storiesOf('Header', module)
   .addDecorator(withReadme(README))
   .add('Global', () => (
     <div className="story">

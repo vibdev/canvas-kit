@@ -12,7 +12,7 @@ const handleBannerClick = (e: React.SyntheticEvent) => {
   alert(`onClick triggered`);
 };
 
-storiesOf('Canvas Kit/Banner/Alert', module)
+storiesOf('Banner/Alert', module)
   .addDecorator(withReadme(README))
   .addDecorator(withKnobs)
   .add('Full', () => (
@@ -54,7 +54,7 @@ storiesOf('Canvas Kit/Banner/Alert', module)
     </div>
   ));
 
-storiesOf('Canvas Kit/Banner/Error', module)
+storiesOf('Banner/Error', module)
   .addDecorator(withReadme(README))
   .addDecorator(withKnobs)
   .add('Full', () => (

@@ -271,7 +271,7 @@ class CustomMenuItem extends React.Component<MenuItemProps> {
   }
 }
 
-storiesOf('Canvas Kit/Menu', module)
+storiesOf('Menu', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Menu', () => (

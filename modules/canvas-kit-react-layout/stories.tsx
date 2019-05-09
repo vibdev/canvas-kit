@@ -7,7 +7,7 @@ import {Card} from '@workday/canvas-kit-react';
 import Layout from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Layout', module)
+storiesOf('Layout', module)
   .addDecorator(withReadme(README))
   .add('Grid Layout', () => (
     <div className="story">

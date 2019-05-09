@@ -7,7 +7,7 @@ export interface IconButtonToggleGroupProps {
   /**
    * React children must be of type IconButton and have at least two.
    */
-  children: React.ReactElement<IconButton>[];
+  children: React.ReactElement<IconButtonProps>[];
 
   /**
    * The value or index of the IconButton that should be toggled on.

@@ -9,7 +9,7 @@ import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 import FormField, {Label, Hint} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Form Field', module)
+storiesOf('Form Field', module)
   .addDecorator(withReadme(README))
   .add('Label', () => (
     <div className="story">
@@ -26,7 +26,7 @@ storiesOf('Canvas Kit/Form Field', module)
     </div>
   ));
 
-storiesOf('Canvas Kit/Form Field/Radio Group', module)
+storiesOf('Form Field/Radio Group', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Top Label', () => (
@@ -64,7 +64,7 @@ storiesOf('Canvas Kit/Form Field/Radio Group', module)
     </div>
   ));
 
-storiesOf('Canvas Kit/Form Field/Radio', module)
+storiesOf('Form Field/Radio', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Top Label', () => (
@@ -96,7 +96,7 @@ storiesOf('Canvas Kit/Form Field/Radio', module)
     </div>
   ));
 
-storiesOf('Canvas Kit/Form Field/Checkbox', module)
+storiesOf('Form Field/Checkbox', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Top Label', () => (

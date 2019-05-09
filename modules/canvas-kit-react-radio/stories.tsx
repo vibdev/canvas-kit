@@ -7,7 +7,7 @@ import {InputProviderDecorator, ControlledComponentWrapper} from '../../utils/st
 import Radio, {RadioGroup} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Radio', module)
+storiesOf('Radio', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (

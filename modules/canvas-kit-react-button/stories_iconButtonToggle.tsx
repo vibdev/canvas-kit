@@ -88,7 +88,7 @@ export class IconButtonToggleGroupWrapper extends React.Component<
   };
 }
 
-storiesOf('Canvas Kit/Button/Icon Button', module)
+storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
   .add('Toggleable', () => (
     <div className="story">

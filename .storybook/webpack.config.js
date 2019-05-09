@@ -88,17 +88,19 @@ const customRules = [
   },
 ];
 
-module.exports = (baseConfig, env) => {
+module.exports = ({config}) => {
+  const {rules} = config.module;
+
   // Exclude node_modules from js/babel loader
-  baseConfig.module.rules[0].exclude = /node_modules/;
+  rules[rules.length - 1].exclude = /node_modules/;
 
   // Custom rules
-  baseConfig.module.rules = baseConfig.module.rules.concat(customRules);
+  rules.push(...customRules);
 
   // Add `.ts` and `.tsx` as a resolvable extension.
-  baseConfig.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];
+  config.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];
 
-  baseConfig.plugins.push(
+  config.plugins.push(
     new HappyPack({
       id: 'ts',
       threads: 2,
@@ -120,5 +122,5 @@ module.exports = (baseConfig, env) => {
     })
   );
 
-  return baseConfig;
+  return config;
 };

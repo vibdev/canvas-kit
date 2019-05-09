@@ -6,7 +6,7 @@ import withReadme from 'storybook-readme/with-readme';
 import {LoadingAnimation, LoadingSpinner} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
-storiesOf('Canvas Kit/Loading Animation', module)
+storiesOf('Loading Animation', module)
   .addDecorator(withReadme(README))
   .add('LoadingDots', () => (
     <div className="story">

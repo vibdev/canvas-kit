@@ -13,7 +13,7 @@ const control = (child: React.ReactNode) => (
   </ControlledComponentWrapper>
 );
 
-storiesOf('Canvas Kit/Checkbox', module)
+storiesOf('Checkbox', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('Default', () => (

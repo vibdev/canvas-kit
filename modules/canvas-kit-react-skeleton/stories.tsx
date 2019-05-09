@@ -19,7 +19,7 @@ const FlexContainer = styled('div')({
   display: 'flex',
 });
 
-storiesOf('Canvas Kit/Skeleton', module)
+storiesOf('Skeleton', module)
   .addDecorator(withReadme(README))
   .add('Skeleton', () => {
     return (

@@ -11,7 +11,7 @@ import TextInput from '../canvas-kit-react-text-input';
 const hintText = 'Helpful text goes here.';
 const hintId = 'error-desc-id';
 
-storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
+storiesOf('Form Field/Text Input/Top Label', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
@@ -75,7 +75,7 @@ storiesOf('Canvas Kit/Form Field/Text Input/Top Label', module)
     </FormField>
   ));
 
-storiesOf('Canvas Kit/Form Field/Text Input/Left Label', module)
+storiesOf('Form Field/Text Input/Left Label', module)
   .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
   .add('Plain', () => (
