@@ -2804,19 +2804,19 @@
     "@webassemblyjs/wast-parser" "1.7.6"
     "@xtuc/long" "4.2.1"
 
-"@workday/canvas-accent-icons-web@^0.16.31":
-  version "0.16.31"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-accent-icons-web/-/@workday/canvas-accent-icons-web-0.16.31.tgz#f11128e4b35c8920a8e2c5c81f2959256c299c99"
-  integrity sha1-8REo5LNciSCo4sXIHylZJWwpnJk=
+"@workday/canvas-accent-icons-web@^1.0.0":
+  version "1.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-accent-icons-web/-/@workday/canvas-accent-icons-web-1.0.0.tgz#1319280354d082a935b906bb7d0d9eb5504cdb2a"
+  integrity sha1-ExkoA1TQgqk1uQa7fQ2etVBM2yo=
   dependencies:
-    "@workday/design-assets-types" "0.2.1"
+    "@workday/design-assets-types" "0.2.4"
 
-"@workday/canvas-applet-icons-web@^0.17.32":
-  version "0.17.32"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-applet-icons-web/-/@workday/canvas-applet-icons-web-0.17.32.tgz#49ec5232edd368da8eed0fbc09bb72deb2833960"
-  integrity sha1-SexSMu3TaNqO7Q+8Cbty3rKDOWA=
+"@workday/canvas-applet-icons-web@^0.17.50":
+  version "0.17.50"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-applet-icons-web/-/@workday/canvas-applet-icons-web-0.17.50.tgz#68bf4b450bb999b680154a4aae327c1ed225c1ce"
+  integrity sha1-aL9LRQu5mbaAFUpKrjJ8HtIlwc4=
   dependencies:
-    "@workday/design-assets-types" "0.2.1"
+    "@workday/design-assets-types" "0.2.4"
 
 "@workday/canvas-colors-web@^0.17.12":
   version "0.17.12"
@@ -2833,48 +2833,22 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.5.tgz#012f4c8d056132d5e22f4d5ead0266d01765d4aa"
   integrity sha1-AS9MjQVhMtXiL01erQJm0Bdl1Ko=
 
-"@workday/canvas-system-icons-web@^0.16.27":
-  version "0.16.27"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.27.tgz#c0a1b51a880aaa79bb16661c92c8ba7242bc5b9e"
-  integrity sha1-wKG1GogKqnm7FmYcksi6ckK8W54=
-  dependencies:
-    "@workday/design-assets-types" "0.2.1"
-
-"@workday/canvas-system-icons-web@^0.16.39":
-  version "0.16.39"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.39.tgz#0323f6689eed4880fb820be6d02a51943076e7bc"
-  integrity sha1-AyP2aJ7tSID7ggvm0CpRlDB257w=
-  dependencies:
-    "@workday/design-assets-types" "0.2.3"
-
-"@workday/canvas-system-icons-web@^0.16.42":
-  version "0.16.42"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-0.16.42.tgz#d6ff4fa3424369c9f8954b35743ddbb89777b5ef"
-  integrity sha1-1v9Po0JDacn4lUs1dD3buJd3te8=
-  dependencies:
-    "@workday/design-assets-types" "0.2.3"
-
-"@workday/canvas-system-icons-web@^1.0.0":
-  version "1.0.0"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-1.0.0.tgz#2177893f0b0b9537a655ea1d5bbe179f3b90d798"
-  integrity sha1-IXeJPwsLlTemVeodW74XnzuQ15g=
+"@workday/canvas-system-icons-web@^1.0.1":
+  version "1.0.1"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-1.0.1.tgz#2a035df4e3a8ef2fadd62a4fe6158166ff8d5818"
+  integrity sha1-KgNd9OOo7y+t1ipP5hWBZv+NWBg=
   dependencies:
     "@workday/design-assets-types" "0.2.4"
-
-"@workday/design-assets-types@0.2.1":
-  version "0.2.1"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/design-assets-types/-/@workday/design-assets-types-0.2.1.tgz#0a087758c6f4774e1e5714c883440a995b04efaf"
-  integrity sha1-Cgh3WMb0d04eVxTIg0QKmVsE768=
-
-"@workday/design-assets-types@0.2.3", "@workday/design-assets-types@^0.2.3":
-  version "0.2.3"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/design-assets-types/-/@workday/design-assets-types-0.2.3.tgz#bf541b9199c2b02ac72595fa98739294ff7dde21"
-  integrity sha1-v1QbkZnCsCrHJZX6mHOSlP993iE=
 
 "@workday/design-assets-types@0.2.4":
   version "0.2.4"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/design-assets-types/-/@workday/design-assets-types-0.2.4.tgz#8ea8bde3ef2b5fd48e1ecc63aa525639b5ea5138"
   integrity sha1-jqi94+8rX9SOHsxjqlJWObXqUTg=
+
+"@workday/design-assets-types@^0.2.3":
+  version "0.2.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/design-assets-types/-/@workday/design-assets-types-0.2.3.tgz#bf541b9199c2b02ac72595fa98739294ff7dde21"
+  integrity sha1-v1QbkZnCsCrHJZX6mHOSlP993iE=
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
