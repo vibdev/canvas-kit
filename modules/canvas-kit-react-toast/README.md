@@ -81,6 +81,10 @@ Default:
 
 #### `iconColor: string`
 
-> The color of the icon
+> The color of the icon You can import colors from
+
+```js
+import {iconColors} from '@workday/canvas-kit-react-core';
+```
 
 ---

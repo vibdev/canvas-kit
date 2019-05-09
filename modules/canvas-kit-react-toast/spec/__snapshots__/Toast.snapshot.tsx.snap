@@ -3,6 +3,7 @@
 exports[`Toast Snapshots renders as expected 1`] = `
 .emotion-6 {
   width: 360px;
+  min-height: 58px;
 }
 
 .emotion-6 .emotion-1 {
@@ -112,6 +113,7 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 
 .emotion-10 {
   width: 360px;
+  min-height: 58px;
 }
 
 .emotion-10 .emotion-5 {
@@ -355,6 +357,7 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 
 .emotion-12 {
   width: 360px;
+  min-height: 58px;
 }
 
 .emotion-12 .emotion-7 {
@@ -630,6 +633,7 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 
 .emotion-13 {
   width: 360px;
+  min-height: 58px;
 }
 
 .emotion-13 .emotion-8 {

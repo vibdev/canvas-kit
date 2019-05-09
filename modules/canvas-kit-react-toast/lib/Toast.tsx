@@ -22,6 +22,7 @@ const ToastContentContainer = styled('div')({
 const ToastContainer = styled('div')<Pick<ToastProps, 'handleClose'>>(
   {
     width: toastWidth,
+    minHeight: 58,
   },
   ({handleClose}) => ({
     [`${ToastContentContainer}`]: {
