@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator, SectionDecorator, controlComponent} from '../../storybook-utils';
+import {InputProviderDecorator, SectionDecorator, controlComponent} from '../../utils/storybook';
 
 import FormField from './index'; // tslint:disable-line:import-name
 import README from './README.md';

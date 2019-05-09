@@ -3,7 +3,7 @@ import * as React from 'react';
 import styled, {css} from 'react-emotion';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator} from '../../storybook-utils';
+import {InputProviderDecorator} from '../../utils/storybook';
 import canvas, {space, spacing} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
