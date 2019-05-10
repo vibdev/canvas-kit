@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.11...@workday/canvas-kit-react-button@0.20.12) (2019-05-10)
+
+
+### Bug Fixes
+
+* **TextButton:** only call onClick once and pass along buttonRef ([#356](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/issues/356)) ([b820027](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/b820027)), closes [#350](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/issues/350) [#357](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/issues/357)
+
+
+
+
+
 ## [0.20.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.10...@workday/canvas-kit-react-button@0.20.11) (2019-05-09)
 
 
