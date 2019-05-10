@@ -3,7 +3,6 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import {exclamationCircleIcon} from '@workday/canvas-system-icons-web';
 import withReadme from 'storybook-readme/with-readme';
-import {colors, iconColors} from '@workday/canvas-kit-react-core';
 import Toast from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
@@ -11,10 +10,10 @@ class ToastWrapper extends React.Component {
   public render() {
     return (
       <section>
-        <Toast iconColor={greenApple400}>
+        <Toast iconColor={'greenApple400'}>
           <div>Your workbook was successfully processed.</div>
         </Toast>
-        <Toast icon={''} onClose={() => console.warn('handle close was clicked')}>
+        <Toast icon={null} onClose={() => console.warn('handle close was clicked')}>
           You data has been successfully updated.
         </Toast>
         <Toast
@@ -22,7 +21,7 @@ class ToastWrapper extends React.Component {
           onClose={() => console.warn('test')}
           onActionClick={() => console.warn('link was clicked')}
           icon={exclamationCircleIcon}
-          iconColor={colors.cinnamon500}
+          iconColor={'cinnamon500'}
         >
           There was an error while your data was being processed.
         </Toast>
