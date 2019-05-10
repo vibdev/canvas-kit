@@ -38,19 +38,17 @@ export default class TextButton extends React.Component<TextButtonProps> {
   };
 
   public render() {
-    const {children, ...elemProps} = this.props;
+    const {buttonRef, onClick, children, ...elemProps} = this.props;
 
     return (
-      <TextButtonCon {...this.props}>
-        {elemProps.icon &&
-          elemProps.iconPosition === IconPositions.Left && (
-            <ButtonLabelIcon icon={elemProps.icon} {...this.props} />
-          )}
-        <ButtonBaseLabel {...this.props}>{children}</ButtonBaseLabel>
-        {elemProps.icon &&
-          elemProps.iconPosition === IconPositions.Right && (
-            <ButtonLabelIcon icon={elemProps.icon} {...this.props} />
-          )}
+      <TextButtonCon onClick={onClick} innerRef={buttonRef} {...elemProps}>
+        {elemProps.icon && elemProps.iconPosition === IconPositions.Left && (
+          <ButtonLabelIcon {...elemProps} />
+        )}
+        <ButtonBaseLabel {...elemProps}>{children}</ButtonBaseLabel>
+        {elemProps.icon && elemProps.iconPosition === IconPositions.Right && (
+          <ButtonLabelIcon {...elemProps} />
+        )}
       </TextButtonCon>
     );
   }

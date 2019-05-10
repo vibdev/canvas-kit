@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button, {ButtonProps} from '../lib/Button';
+import TextButton from '../lib/TextButton';
 import {mount} from 'enzyme';
 
 describe('Button', () => {
@@ -31,6 +32,21 @@ describe('Button', () => {
     const button = component.find('button');
     button.simulate('click');
     expect(cb.mock.calls.length).toBe(0);
+    component.unmount();
+  });
+});
+
+describe('TextButton', () => {
+  const cb = jest.fn();
+  afterEach(() => {
+    cb.mockReset();
+  });
+
+  test('should call a callback function', () => {
+    const component = mount(<TextButton onClick={cb}>Button Label</TextButton>);
+    const button = component.find('button span');
+    button.simulate('click');
+    expect(cb.mock.calls.length).toBe(1);
     component.unmount();
   });
 });

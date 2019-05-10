@@ -9,7 +9,7 @@ import {
   BetaButtonTypes,
   IconButtonTypes,
 } from './types';
-import {ButtonProps} from './Button';
+import {ButtonProps, BaseButtonProps} from './Button';
 import {TextButtonProps} from './TextButton';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import * as ButtonStyles from './ButtonStyles';
@@ -127,7 +127,7 @@ const ButtonLabelIconStyled = styled('span')<
   }
 );
 
-export interface ButtonLabelIconProps extends ButtonProps<AllButtonTypes> {
+export interface ButtonLabelIconProps extends BaseButtonProps<AllButtonTypes> {
   dropdown?: boolean;
 }
 

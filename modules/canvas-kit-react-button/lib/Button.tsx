@@ -10,10 +10,6 @@ import {labelDataBaseStyles} from './ButtonStyles';
 export interface BaseButtonProps<T = ButtonTypes | BetaButtonTypes>
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
-   * Button cannot be empty.
-   */
-  children: React.ReactNode;
-  /**
    * Type of button.
    */
   buttonType?: T;
@@ -37,7 +33,12 @@ export interface BaseButtonProps<T = ButtonTypes | BetaButtonTypes>
 
 export interface ButtonProps<T = ButtonTypes | BetaButtonTypes>
   extends BaseButtonProps<T>,
-    GrowthBehavior {}
+    GrowthBehavior {
+  /**
+   * Button cannot be empty.
+   */
+  children: React.ReactNode;
+}
 
 export default class Button extends React.Component<ButtonProps> {
   public static Types = ButtonTypes;
