@@ -10,13 +10,13 @@ describe('Toast Snapshots', () => {
   });
   test('renders with a close button', () => {
     const component = renderer.create(
-      <Toast handleClose={jest.fn()}>Your data has been updated.</Toast>
+      <Toast onClose={jest.fn()}>Your data has been updated.</Toast>
     );
     expect(component).toMatchSnapshot();
   });
   test('renders with an icon', () => {
     const component = renderer.create(
-      <Toast toastIcon={checkIcon} handleClose={jest.fn()}>
+      <Toast icon={checkIcon} onClose={jest.fn()}>
         Success
       </Toast>
     );
@@ -24,7 +24,7 @@ describe('Toast Snapshots', () => {
   });
   test('renders with an action link', () => {
     const component = renderer.create(
-      <Toast actionLinkText={'View More'} handleActionLink={jest.fn()} handleClose={jest.fn()}>
+      <Toast actionText={'View More'} onActionClick={jest.fn()} onClose={jest.fn()}>
         Process failed.
       </Toast>
     );

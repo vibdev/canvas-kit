@@ -1,70 +1,71 @@
 import * as React from 'react';
 import Popup, {PopupPadding} from '@workday/canvas-kit-react-popup';
-import {type, spacing} from '@workday/canvas-kit-react-core';
+import {spacing, colors} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {checkIcon} from '@workday/canvas-system-icons-web';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {TransformOrigin} from '@workday/canvas-kit-react-common';
+import {TextButton} from '@workday/canvas-kit-react-button';
 import styled from 'react-emotion';
 
 export interface ToastProps {
-  handleClose?: () => void;
-  handleActionLink?: () => void;
-  actionLinkText?: string;
-  toastIcon?: CanvasSystemIcon;
-  iconColor?: string;
+  icon: CanvasSystemIcon | undefined;
+  onClose?: () => void;
+  onActionClick?: () => void;
+  actionText?: string;
+  iconColor?: Exclude<keyof typeof colors, 'gradients' | 'primary'>;
   transformOrigin?: TransformOrigin;
 }
 const toastWidth = 360;
 
+const ToastContainer = styled('div')({
+  width: toastWidth,
+});
+
 const ToastContentContainer = styled('div')({
   display: 'flex',
 });
-const ToastContainer = styled('div')<Pick<ToastProps, 'handleClose'>>(
-  {
-    width: toastWidth,
-    minHeight: 58,
-  },
-  ({handleClose}) => ({
-    [`${ToastContentContainer}`]: {
-      marginRight: handleClose ? spacing.m : 0,
-    },
-  })
-);
 
-const ToastIconContainer = styled('div')({
+const ToastSystemIcon = styled(SystemIcon)({
   marginRight: spacing.s,
 });
 
-const ActionLink = styled('a')({
-  ...type.variant.link,
-  display: 'flex',
-  marginTop: spacing.xxxs,
+const ActionButtonContainer = styled('div')({
+  marginLeft: '-16px',
 });
 
 export default class Toast extends React.Component<ToastProps> {
+  static defaultProps = {
+    icon: checkIcon,
+  };
   public render() {
     const {
-      handleClose,
-      handleActionLink,
-      actionLinkText,
-      toastIcon,
+      onClose,
+      onActionClick,
+      actionText,
+      icon,
       iconColor,
       transformOrigin,
       ...otherProps
     } = this.props;
     return (
-      <ToastContainer {...otherProps} handleClose={handleClose}>
-        <Popup transformOrigin={transformOrigin} padding={PopupPadding.s} handleClose={handleClose}>
+      <ToastContainer {...otherProps}>
+        <Popup
+          width={toastWidth}
+          transformOrigin={transformOrigin}
+          padding={PopupPadding.s}
+          handleClose={onClose}
+        >
           <ToastContentContainer>
-            {toastIcon && (
-              <ToastIconContainer>
-                <SystemIcon color={iconColor} colorHover={''} icon={toastIcon} />
-              </ToastIconContainer>
-            )}
-            <div>
+            {icon && <ToastSystemIcon color={iconColor} colorHover={''} icon={icon} />}
+            <div style={{marginRight: onClose ? spacing.m : 0}}>
               {this.props.children}
-              {handleActionLink && (
-                <ActionLink onClick={handleActionLink}>{actionLinkText}</ActionLink>
+              {onActionClick && (
+                <ActionButtonContainer>
+                  <TextButton buttonSize={TextButton.Sizes.Small} onClick={onActionClick}>
+                    {actionText}
+                  </TextButton>
+                </ActionButtonContainer>
               )}
             </div>
           </ToastContentContainer>
