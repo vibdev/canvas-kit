@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.3...@workday/canvas-kit-react-header@0.5.4) (2019-05-10)
+
+
+### Bug Fixes
+
+* **header:** Initial Screen Size fires onBreakpointChange ([#355](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/issues/355)) ([38f0531](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/38f0531))
+
+
+
+
+
 ## [0.5.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.2...@workday/canvas-kit-react-header@0.5.3) (2019-05-09)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-header
