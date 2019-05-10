@@ -73,22 +73,24 @@ describe('GlobalHeader', () => {
     });
   });
 
-  test('getScreenSize should call onBreakpointChange event handler with current screen size', () => {
-    jest.useFakeTimers();
+  describe('onBreakpointChange', () => {
+    test('should return the default breakpoint on initialization', () => {
+      const largeBreakpoint = 30;
+      const mockFunction = jest.fn();
+      mount<GlobalHeader>(<GlobalHeader breakpoint={largeBreakpoint} onBreakpointChange={mockFunction} />);
+      expect(mockFunction).toHaveBeenCalledTimes(1);
+      expect(mockFunction).toHaveBeenCalledWith('lg');
+    });
 
-    const largeBreakpoint = 30
-    const mockFunction = jest.fn();
-    mount<GlobalHeader>(<GlobalHeader breakpoint={largeBreakpoint} onBreakpointChange={mockFunction} />);
+    test('should update the breakpoint when the screen size changes ', () => {
+      const largeBreakpoint = 30;
+      const mockFunction = jest.fn();
+      mount<GlobalHeader>(<GlobalHeader breakpoint={largeBreakpoint} onBreakpointChange={mockFunction} />);
+      mockFunction.mockReset();
 
-    window.resizeBy(25, 25);
-    expect(mockFunction).toHaveBeenCalledTimes(1);
-    expect(mockFunction).toHaveBeenCalledWith('md');
-    mockFunction.mockReset();
-
-    jest.runAllTimers();
-
-    window.resizeBy(35, 35);
-    expect(mockFunction).toHaveBeenCalledTimes(1);
-    expect(mockFunction).toHaveBeenCalledWith('lg');
+      window.resizeBy(25, 25);
+      expect(mockFunction).toHaveBeenCalledTimes(1);
+      expect(mockFunction).toHaveBeenCalledWith('md');
+    });
   });
 });

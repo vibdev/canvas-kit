@@ -203,7 +203,8 @@ Default:
 
 #### `onBreakpointChange: (BreakpointType | string) => void`
 
-> If specified, this callback is executed after the screen size changes with the new breakpoint key
+> If specified, this callback is executed after the screen size changes with the new breakpoint key. It also gets called on initialization so the consumer has the
+original breakpoint
 
 # Global Header
 
@@ -283,7 +284,8 @@ Default: `<DubLogoTitle />`
 
 #### `onBreakpointChange: (BreakpointType | string) => void`
 
-> If specified, this callback is executed after the screen size changes with the new breakpoint key
+> If specified, this callback is executed after the screen size changes with the new breakpoint key. It also gets called on initialization so the consumer has the
+original breakpoint
 
 # "Dub" Logo and Title
 

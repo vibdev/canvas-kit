@@ -66,34 +66,37 @@ describe('Header', () => {
     expect(component.instance().getScreenSize(widths.lg, breakpoints)).toBe('lg');
   });
 
-  test('changing window size should trigger onBreakpointChange event handler with current screen size', () => {
-    jest.useFakeTimers();
+  describe('onBreakpointChange', () => {
+    test('should return the default breakpoint on initialization', () => {
+      const breakpoints = {sm: 10, md: 20, lg: 30};
+      const mockFunction = jest.fn();
+      shallow<Header>(<Header breakpoints={breakpoints} onBreakpointChange={mockFunction} />);
+      expect(mockFunction).toHaveBeenCalledTimes(1);
+      expect(mockFunction).toHaveBeenCalledWith('lg');
+    });
 
-    const breakpoints = {sm: 10, md: 20, lg: 30};
-    const mockFunction = jest.fn();
-    shallow<Header>(<Header breakpoints={breakpoints} onBreakpointChange={mockFunction} />);
+    test('should update the breakpoint when the screen size changes ', () => {
+      const breakpoints = {sm: 10, md: 20, lg: 30};
+      const mockFunction = jest.fn();
+      shallow<Header>(<Header breakpoints={breakpoints} onBreakpointChange={mockFunction} />);
+      mockFunction.mockReset();
 
-    window.resizeBy(25, 25);
-    expect(mockFunction).toHaveBeenCalledTimes(1);
-    expect(mockFunction).toHaveBeenCalledWith('md');
-    mockFunction.mockReset();
+      window.resizeBy(25, 25);
+      expect(mockFunction).toHaveBeenCalledTimes(1);
+      expect(mockFunction).toHaveBeenCalledWith('md');
+    });
 
-    jest.runAllTimers();
+    test('changing window size should trigger onBreakpointChange with a custom breakpoint key', () => {
+      const breakpoints = {sm: 0, md: 1, custom: 20, lg: 600};
+      const mockFunction = jest.fn();
+      shallow<Header>(<Header breakpoints={breakpoints} onBreakpointChange={mockFunction} />);
+      mockFunction.mockReset();
 
-    window.resizeBy(35 , 35);
-    expect(mockFunction).toHaveBeenCalledTimes(1);
-    expect(mockFunction).toHaveBeenCalledWith('lg');
+      window.resizeBy(25, 25);
+      expect(mockFunction).toHaveBeenCalledTimes(1);
+      expect(mockFunction).toHaveBeenCalledWith('custom');
+    });
   })
-
-  test('changing window size should trigger onBreakpointChange with a custom breakpoint key', () => {
-    const breakpoints = {sm: 0, md: 1, custom: 20, lg: 600};
-    const mockFunction = jest.fn();
-    shallow<Header>(<Header breakpoints={breakpoints} onBreakpointChange={mockFunction} />);
-
-    window.resizeBy(25, 25);
-    expect(mockFunction).toHaveBeenCalledTimes(1);
-    expect(mockFunction).toHaveBeenCalledWith('custom');
-  });
 
   test('resize eventlisteners are throttled', () => {
     const spy = jest.spyOn(Header.prototype, 'updateScreenSize');

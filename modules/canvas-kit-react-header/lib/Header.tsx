@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import {type, spacing} from '@workday/canvas-kit-react-core';
 import {DubLogoTitle, Search, WorkdayLogoTitle} from './parts';
 import {themes} from './shared/themes';
-import {HeaderTheme, HeaderVariant, HeaderHeight, BreakpointType} from './shared/types';
+import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {IconButton, IconButtonProps} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
@@ -60,7 +60,7 @@ export interface HeaderProps {
   /**
    * An event handler function that gets called when the screen size changes to a different breakpoint key
    */
-  onBreakpointChange?: (key: BreakpointType | string) => void;
+  onBreakpointChange?: (key: string | number) => void;
 }
 
 export interface HeaderState {
@@ -342,7 +342,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         });
 
         if (this.props.onBreakpointChange) {
-          this.props.onBreakpointChange(currentScreenSize)
+          this.props.onBreakpointChange(currentScreenSize);
         }
       }
     });
@@ -350,6 +350,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateScreenSize);
+    if (this.props.onBreakpointChange) {
+      this.props.onBreakpointChange(this.state.screenSize);
+    }
   }
 
   componentWillUnmount() {
