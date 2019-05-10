@@ -57,10 +57,11 @@ cat > $packageJson << EOF
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf dist && mkdirp dist",
-    "build:cjs": "tsc --outDir dist/commonjs --module commonjs --declaration",
-    "build:es6": "tsc --outDir dist/es6 --declaration",
-    "build": "npm-run-all clean --parallel build:cjs build:es6"
+    "clean": "rimraf dist && rimraf .build-info && mkdirp dist",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:es6": "tsc -p tsconfig.es6.json",
+    "build:rebuild": "npm-run-all clean --parallel build:cjs build:es6",
+    "build": "npm-run-all --parallel build:cjs build:es6"
   },
   "keywords": [
     "canvas",
@@ -145,8 +146,37 @@ cat > $tsconfig << EOF
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories.tsx"]
 }
-
 EOF
+
+# Create tsconfig.cjs.json
+tsconfig="$path/tsconfig.cjs.json"
+echo -e "Creating ${CYAN}$tsconfig${NC}"
+cat > $tsconfig << EOF
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "outDir": "dist/commonjs",
+    "tsBuildInfoFile": "./.build-info/tsconfig.cjs.tsbuildinfo"
+  }
+}
+EOF
+
+# Create tsconfig.es6.json
+tsconfig="$path/tsconfig.es6.json"
+echo -e "Creating ${CYAN}$tsconfig${NC}"
+cat > $tsconfig << EOF
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist/es6",
+    "tsBuildInfoFile": "./.build-info/tsconfig.es6.tsbuildinfo"
+  }
+}
+EOF
+
 # Create .npmignore
 npmignore="$path/.npmignore"
 echo -e "Creating ${CYAN}$npmignore${NC}"

@@ -85,7 +85,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              sh('yarn run build')
+              sh('yarn run build:prod')
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')

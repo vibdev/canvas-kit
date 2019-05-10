@@ -3,5 +3,5 @@
   "compilerOptions": {
     "esModuleInterop": true
   },
-  "exclude": ["node_modules", "ts-tmp", "stories.tsx", "spec"]
+  "exclude": ["node_modules", "ts-tmp", "dist", "stories.tsx", "spec"]
 }

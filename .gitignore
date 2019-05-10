@@ -15,6 +15,7 @@ lerna-debug.log*
 modules/*/dist
 modules/*/ts-tmp
 build/*
+*.tsbuildinfo
 
 # intellij
 .idea
