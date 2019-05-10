@@ -187,7 +187,7 @@ exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
 `;
 
 exports[`SidePanel Snapshots renders a toggle button 1`] = `
-.emotion-4 {
+.emotion-5 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -212,12 +212,12 @@ exports[`SidePanel Snapshots renders a toggle button 1`] = `
   align-items: center;
 }
 
-.emotion-4 .emotion-3 {
+.emotion-5 .emotion-4 {
   right: px;
   left: px;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   bottom: 16px;
 }
@@ -378,14 +378,14 @@ exports[`SidePanel Snapshots renders a toggle button 1`] = `
 <div
   aria-expanded={false}
   aria-orientation="vertical"
-  className="emotion-4 emotion-5"
+  className="emotion-5 emotion-6"
   open={false}
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-3 emotion-4"
   >
     <button
-      className="emotion-1"
+      className="emotion-1 emotion-2"
       onClick={[Function]}
     >
       <span
@@ -495,7 +495,7 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
 `;
 
 exports[`SidePanel Snapshots renders side panel on the right with correct toggle button when panel is closed 1`] = `
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   bottom: 16px;
 }
@@ -653,7 +653,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   fill: transparent;
 }
 
-.emotion-4 {
+.emotion-5 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -678,7 +678,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   align-items: center;
 }
 
-.emotion-4 .emotion-3 {
+.emotion-5 .emotion-4 {
   right: px;
   left: px;
 }
@@ -686,14 +686,14 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 <div
   aria-expanded={false}
   aria-orientation="vertical"
-  className="emotion-4 emotion-5"
+  className="emotion-5 emotion-6"
   open={false}
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-3 emotion-4"
   >
     <button
-      className="emotion-1"
+      className="emotion-1 emotion-2"
       onClick={[Function]}
     >
       <span
@@ -719,7 +719,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   margin-top: 0px;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   bottom: 16px;
 }
@@ -877,7 +877,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   fill: transparent;
 }
 
-.emotion-6 {
+.emotion-7 {
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -902,7 +902,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   align-items: px;
 }
 
-.emotion-6 .emotion-5 {
+.emotion-7 .emotion-6 {
   right: px;
   left: 16px;
 }
@@ -910,7 +910,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 <div
   aria-expanded={true}
   aria-orientation="vertical"
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   open={true}
 >
   <h2
@@ -919,10 +919,10 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
     Side Panel Header
   </h2>
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <button
-      className="emotion-3"
+      className="emotion-3 emotion-4"
       onClick={[Function]}
     >
       <span
