@@ -1,3 +1,5 @@
+import colors from '@workday/canvas-colors-web';
+
 export enum BrandingColors {
   Cinnamon = 'cinnamon',
   Peach = 'peach',
@@ -24,3 +26,5 @@ export enum BrandingColors {
   Licorice = 'licorice',
   BlackPepper = 'blackPepper',
 }
+
+export type CanvasColor = Exclude<keyof typeof colors, 'gradients' | 'primary'>;

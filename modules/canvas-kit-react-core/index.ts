@@ -1,5 +1,5 @@
 import * as canvasColorsWeb from '@workday/canvas-colors-web';
-import {BrandingColors} from './lib/colors.types';
+import {BrandingColors, CanvasColor} from './lib/colors.types';
 import depth, {CanvasDepth, CanvasDepthValue} from './lib/depth';
 import spacing, {
   spacingNumbers,
@@ -45,6 +45,7 @@ export {
   CanvasSpacingNumbers,
   CanvasSpacingValue,
   CanvasType,
+  CanvasColor,
   CSSProperties,
   InputProvider,
 };
