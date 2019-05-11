@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {CSSObject} from 'create-emotion';
-import {GrowthBehavior, ErrorType, GenericStyle} from '@workday/canvas-kit-react-common';
-import {colors, inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
+import {GrowthBehavior, ErrorType, errorRing} from '@workday/canvas-kit-react-common';
+import {inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {exclamationCircleIcon, exclamationTriangleIcon} from '@workday/canvas-system-icons-web';
 import InputIconContainer from './InputIconContainer';
@@ -21,43 +20,8 @@ export interface TextInputProps
   value?: any;
 }
 
-export interface TextInputGenericStyle extends GenericStyle {
-  variants: {
-    states: {
-      error: CSSObject;
-      alert: CSSObject;
-    };
-  };
-}
-
-function getErrorStyle(error: ErrorType): CSSObject {
-  let errorBorderColor;
-
-  if (error === ErrorType.Error) {
-    errorBorderColor = inputColors.error.border;
-  } else {
-    errorBorderColor = inputColors.warning.border;
-  }
-
-  return {
-    borderColor: errorBorderColor,
-    transition: '100ms box-shadow',
-    boxShadow: `inset 0 0 0 1px ${errorBorderColor}`,
-    '&:hover': {
-      borderColor: errorBorderColor,
-    },
-    '&:focus:not([disabled])': {
-      borderColor: errorBorderColor,
-      boxShadow: `inset 0 0 0 1px ${errorBorderColor},
-        0 0 0 2px ${colors.frenchVanilla100},
-        0 0 0 4px ${inputColors.focusBorder}`,
-    },
-  };
-}
-
-export const textInputStyles: TextInputGenericStyle = {
-  classname: 'text-input',
-  styles: {
+const Input = styled('input')<TextInputProps>(
+  {
     ...type.body,
     border: `1px solid ${inputColors.border}`,
     display: 'block',
@@ -88,34 +52,14 @@ export const textInputStyles: TextInputGenericStyle = {
       },
     },
   },
-  variants: {
-    states: {
-      error: getErrorStyle(ErrorType.Error),
-      alert: getErrorStyle(ErrorType.Alert),
-    },
-  },
-};
-
-const Input = styled('input')<TextInputProps>(
-  textInputStyles.styles,
-  ({error}) => {
-    if (error === ErrorType.Error) {
-      return textInputStyles.variants.states.error;
-    } else if (error === ErrorType.Alert) {
-      return textInputStyles.variants.states.alert;
-    } else {
-      return {};
-    }
-  },
+  ({error}) => ({
+    ...errorRing(error),
+  }),
   ({hasIcon}) => {
     // Icon padding left + icon width + icon padding right
     const iconPadding = spacingNumbers.xxxs + spacingNumbers.m + spacingNumbers.xxs;
 
-    if (hasIcon) {
-      return {paddingRight: iconPadding};
-    } else {
-      return {};
-    }
+    return hasIcon ? {paddingRight: iconPadding} : {};
   },
   ({grow}) =>
     grow && {
