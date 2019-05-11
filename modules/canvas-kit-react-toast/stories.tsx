@@ -30,7 +30,7 @@ class ToastWrapper extends React.Component {
   }
 }
 
-storiesOf('Canvas Kit/Toast', module)
+storiesOf('Toast', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">

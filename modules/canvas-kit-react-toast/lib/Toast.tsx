@@ -9,7 +9,7 @@ import {TextButton} from '@workday/canvas-kit-react-button';
 import styled from 'react-emotion';
 
 export interface ToastProps {
-  icon?: CanvasSystemIcon | undefined;
+  icon?: CanvasSystemIcon;
   onClose?: () => void;
   onActionClick?: () => void;
   actionText?: string;
@@ -36,7 +36,7 @@ const ActionButtonContainer = styled('div')({
 
 export default class Toast extends React.Component<ToastProps> {
   public static defaultProps = {
-    icon: checkIcon,
+    icon: checkIcon as CanvasSystemIcon,
   };
   public render() {
     const {
