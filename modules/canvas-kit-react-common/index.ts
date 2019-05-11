@@ -1,4 +1,5 @@
 export {default as focusRing} from './lib/styles/focusRing';
+export {default as errorRing} from './lib/styles/errorRing';
 export {default as hideMouseFocus} from './lib/styles/hideMouseFocus';
 export {makeMq} from './lib/utils/makeMq';
 export {getTranslateFromOrigin} from './lib/utils/getTranslateFromOrigin';
