@@ -28,7 +28,7 @@ import {Toast} from '@workday/canvas-kit-react-toast';
 
 // We use Popper from Material UI for our positioning
 <Popper placement={'top'} open={this.state.open} anchorEl={anchorEl}>
-  <Toast handleClose={this.handleClose}>{this.props.children}</Toast>
+  <Toast onClose={this.handleClose}>{this.props.children}</Toast>
 </Popper>;
 ```
 
@@ -40,19 +40,19 @@ import {Toast} from '@workday/canvas-kit-react-toast';
 
 ### Optional
 
-#### `handleClose: () => void`
+#### `onClose: () => void`
 
 > Callback to handle close of your Toast and any other event when the Toast is closed.
 
 ---
 
-#### `handleActionLink: () => void`
+#### `onActionClick: () => void`
 
 > Callback to handle an action link
 
 ---
 
-#### `actionLinkText: string`
+#### `actionText: string`
 
 > The text to display for the link
 
@@ -73,18 +73,18 @@ Default:
 
 ---
 
-#### `toastIcon: CanvasSystemIcon`
+#### `icon: CanvasSystemIcon`
 
-> Pass whatever I can you'd like to display on the left side of the Toast
+> Pass whatever icon you'd like to display on the left side of the Toast You can import icons from
+
+```js
+import {exclamationCircleIcon, checkIcon} from '@workday/canvas-system-icons-web';
+```
 
 ---
 
 #### `iconColor: string`
 
-> The color of the icon You can import colors from
-
-```js
-import {iconColors} from '@workday/canvas-kit-react-core';
-```
+> The color of the icon
 
 ---
