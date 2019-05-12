@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toast Snapshots renders as expected 1`] = `
-.emotion-7 {
+.emotion-5 {
   width: 360px;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-221pkp;
@@ -19,7 +19,7 @@ exports[`Toast Snapshots renders as expected 1`] = `
   transform-origin: top center;
 }
 
-.emotion-5 {
+.emotion-3 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ exports[`Toast Snapshots renders as expected 1`] = `
   width: 360px;
 }
 
-.emotion-4 {
+.emotion-2 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -36,71 +36,30 @@ exports[`Toast Snapshots renders as expected 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-2 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-1 {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.emotion-1 svg {
-  display: block;
-}
-
-.emotion-1 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-1:hover .wd-icon-fill {
-  fill: px;
-}
-
-.emotion-1 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-1:hover .wd-icon-accent {
-  fill: px;
-}
-
-.emotion-1 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-1:hover .wd-icon-background {
-  fill: transparent;
-}
-
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-5 emotion-6"
 >
   <div
-    className="emotion-6"
+    className="emotion-4"
     role="dialog"
   >
     <div
-      className="emotion-5"
+      className="emotion-3"
       width={360}
     >
       <div
-        className="emotion-4"
+        className="emotion-2"
       >
         <div
-          className="emotion-2 emotion-3"
+          className="emotion-0 emotion-1"
         >
-          <span
-            className="emotion-0 emotion-1"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
           <div
             style={
               Object {
@@ -118,11 +77,11 @@ exports[`Toast Snapshots renders as expected 1`] = `
 `;
 
 exports[`Toast Snapshots renders with a close button 1`] = `
-.emotion-11 {
+.emotion-9 {
   width: 360px;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-221pkp;
@@ -136,7 +95,7 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   transform-origin: top center;
 }
 
-.emotion-9 {
+.emotion-7 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -145,7 +104,7 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   width: 360px;
 }
 
-.emotion-8 {
+.emotion-6 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -153,44 +112,11 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
 }
 
 .emotion-3 {
@@ -348,10 +274,10 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 }
 
 <div
-  className="emotion-11 emotion-12"
+  className="emotion-9 emotion-10"
 >
   <div
-    className="emotion-10"
+    className="emotion-8"
     role="dialog"
   >
     <div
@@ -372,23 +298,15 @@ exports[`Toast Snapshots renders with a close button 1`] = `
       </button>
     </div>
     <div
-      className="emotion-9"
+      className="emotion-7"
       width={360}
     >
       <div
-        className="emotion-8"
+        className="emotion-6"
       >
         <div
-          className="emotion-6 emotion-7"
+          className="emotion-4 emotion-5"
         >
-          <span
-            className="emotion-4 emotion-5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
           <div
             style={
               Object {
@@ -406,11 +324,11 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 `;
 
 exports[`Toast Snapshots renders with an action link 1`] = `
-.emotion-17 {
+.emotion-15 {
   width: 360px;
 }
 
-.emotion-16 {
+.emotion-14 {
   position: relative;
   background-color: #ffffff;
   -webkit-animation: animation-221pkp;
@@ -424,7 +342,7 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   transform-origin: top center;
 }
 
-.emotion-15 {
+.emotion-13 {
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -433,7 +351,7 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   width: 360px;
 }
 
-.emotion-14 {
+.emotion-12 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -441,44 +359,11 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
 }
 
 .emotion-3 {
@@ -635,11 +520,11 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   fill: transparent;
 }
 
-.emotion-10 {
+.emotion-8 {
   margin-left: -16px;
 }
 
-.emotion-8 {
+.emotion-6 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -671,87 +556,87 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   padding: 0 8px;
 }
 
-.emotion-8:hover:active {
+.emotion-6:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-8:disabled,
-.emotion-8:disabled:active {
+.emotion-6:disabled,
+.emotion-6:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-8:hover:not([disabled]) {
+.emotion-6:hover:not([disabled]) {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-8 span .wd-icon-fill,
-.emotion-8 span .wd-icon-accent {
+.emotion-6 span .wd-icon-fill,
+.emotion-6 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #0875e1;
 }
 
-.emotion-8:focus {
+.emotion-6:focus {
   background-color: #d7eafc;
   color: #0875e1;
 }
 
-.emotion-8:focus span .wd-icon-fill,
-.emotion-8:focus span .wd-icon-accent {
+.emotion-6:focus span .wd-icon-fill,
+.emotion-6:focus span .wd-icon-accent {
   fill: #0875e1;
 }
 
-.emotion-8:active,
-.emotion-8:focus:active,
-.emotion-8:hover:active {
+.emotion-6:active,
+.emotion-6:focus:active,
+.emotion-6:hover:active {
   background-color: transparent;
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-8:active span .wd-icon-fill,
-.emotion-8:focus:active span .wd-icon-fill,
-.emotion-8:hover:active span .wd-icon-fill,
-.emotion-8:active span .wd-icon-accent,
-.emotion-8:focus:active span .wd-icon-accent,
-.emotion-8:hover:active span .wd-icon-accent {
+.emotion-6:active span .wd-icon-fill,
+.emotion-6:focus:active span .wd-icon-fill,
+.emotion-6:hover:active span .wd-icon-fill,
+.emotion-6:active span .wd-icon-accent,
+.emotion-6:focus:active span .wd-icon-accent,
+.emotion-6:hover:active span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-8:hover {
+.emotion-6:hover {
   border-color: transparent;
   color: #005cb9;
 }
 
-.emotion-8:hover span .wd-icon-fill,
-.emotion-8:hover span .wd-icon-accent {
+.emotion-6:hover span .wd-icon-fill,
+.emotion-6:hover span .wd-icon-accent {
   fill: #005cb9;
 }
 
-.emotion-8:disabled,
-.emotion-8:active:disabled,
-.emotion-8:focus:disabled,
-.emotion-8:hover:disabled {
+.emotion-6:disabled,
+.emotion-6:active:disabled,
+.emotion-6:focus:disabled,
+.emotion-6:hover:disabled {
   background-color: transparent;
   border-color: transparent;
   color: rgba(8,117,225,0.5);
 }
 
-.emotion-8:disabled span .wd-icon-fill,
-.emotion-8:active:disabled span .wd-icon-fill,
-.emotion-8:focus:disabled span .wd-icon-fill,
-.emotion-8:hover:disabled span .wd-icon-fill,
-.emotion-8:disabled span .wd-icon-accent,
-.emotion-8:active:disabled span .wd-icon-accent,
-.emotion-8:focus:disabled span .wd-icon-accent,
-.emotion-8:hover:disabled span .wd-icon-accent {
+.emotion-6:disabled span .wd-icon-fill,
+.emotion-6:active:disabled span .wd-icon-fill,
+.emotion-6:focus:disabled span .wd-icon-fill,
+.emotion-6:hover:disabled span .wd-icon-fill,
+.emotion-6:disabled span .wd-icon-accent,
+.emotion-6:active:disabled span .wd-icon-accent,
+.emotion-6:focus:disabled span .wd-icon-accent,
+.emotion-6:hover:disabled span .wd-icon-accent {
   fill: rgba(8,117,225,0.5);
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -765,15 +650,15 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   padding: 0px;
 }
 
-.emotion-6:hover:active {
+.emotion-4:hover:active {
   background-color: transparent;
 }
 
 <div
-  className="emotion-17 emotion-18"
+  className="emotion-15 emotion-16"
 >
   <div
-    className="emotion-16"
+    className="emotion-14"
     role="dialog"
   >
     <div
@@ -794,23 +679,15 @@ exports[`Toast Snapshots renders with an action link 1`] = `
       </button>
     </div>
     <div
-      className="emotion-15"
+      className="emotion-13"
       width={360}
     >
       <div
-        className="emotion-14"
+        className="emotion-12"
       >
         <div
-          className="emotion-12 emotion-13"
+          className="emotion-10 emotion-11"
         >
-          <span
-            className="emotion-4 emotion-5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
           <div
             style={
               Object {
@@ -820,15 +697,14 @@ exports[`Toast Snapshots renders with an action link 1`] = `
           >
             Process failed.
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-8 emotion-9"
             >
               <button
-                className="emotion-8 emotion-9"
+                className="emotion-6 emotion-7"
                 onClick={[MockFunction]}
               >
                 <span
-                  className="emotion-6 emotion-7"
-                  onClick={[MockFunction]}
+                  className="emotion-4 emotion-5"
                 >
                   View More
                 </span>
@@ -885,39 +761,6 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   display: flex;
 }
 
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: px;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
-}
-
 .emotion-3 {
   position: absolute;
   right: 12px;
@@ -1069,6 +912,39 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 }
 
 .emotion-0:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-5 {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.emotion-5 svg {
+  display: block;
+}
+
+.emotion-5 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-5:hover .wd-icon-fill {
+  fill: px;
+}
+
+.emotion-5 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-5:hover .wd-icon-accent {
+  fill: px;
+}
+
+.emotion-5 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-5:hover .wd-icon-background {
   fill: transparent;
 }
 
