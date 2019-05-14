@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-layout",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Layout module for canvas-kit-react",
   "homepage": "https://workdaydesign.com",
   "author": "Chad Sahlhoff",
@@ -38,8 +38,8 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.4.4",
-    "@workday/canvas-kit-react-core": "^1.9.6",
+    "@workday/canvas-kit-react-common": "^0.4.5",
+    "@workday/canvas-kit-react-core": "^1.9.7",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
   }
