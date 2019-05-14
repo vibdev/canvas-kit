@@ -24,7 +24,8 @@
     "build:cjs": "babel --no-babelrc --plugins babel-plugin-transform-es2015-modules-commonjs dist/es6 --out-dir dist/commonjs  --copy-files",
     "build:es6": "tsc -p tsconfig.es6.json",
     "build:babel": "babel --no-babelrc --plugins babel-plugin-emotion dist --out-dir dist",
-    "build": "npm-run-all --sequential clean build:es6 build:babel build:cjs"
+    "build:rebuild": "npm-run-all clean build",
+    "build": "npm-run-all --sequential build:es6 build:babel build:cjs"
   },
   "keywords": [
     "canvas",
