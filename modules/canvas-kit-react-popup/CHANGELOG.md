@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.21](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.20...@workday/canvas-kit-react-popup@0.1.21) (2019-05-15)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-popup
+
+
+
+
+
 ## [0.1.20](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.19...@workday/canvas-kit-react-popup@0.1.20) (2019-05-14)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-popup

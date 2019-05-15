@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.9.7...@workday/canvas-kit-react-core@1.10.0) (2019-05-15)
+
+
+### Features
+
+* **core:** Export CanvasColor type to use for type checking ([93266ae](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/commits/93266ae))
+
+
+
+
+
 ## [1.9.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core/compare/@workday/canvas-kit-react-core@1.9.6...@workday/canvas-kit-react-core@1.9.7) (2019-05-14)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-core
