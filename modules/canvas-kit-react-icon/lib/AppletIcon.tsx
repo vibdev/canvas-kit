@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {colors, BrandingColors} from '@workday/canvas-kit-react-core';
+import {colors, BrandingColors, CanvasColor} from '@workday/canvas-kit-react-core';
 import {CanvasAppletIcon, CanvasIconTypes} from '@workday/design-assets-types';
 import {CSSObject} from 'create-emotion';
 import Icon from './Icon';
@@ -8,8 +8,6 @@ import {SpanProps} from './types';
 export interface AppletIconStyles {
   color?: BrandingColors;
 }
-
-type CanvasColor = Exclude<keyof typeof colors, 'gradients' | 'primary'>;
 
 export const appletIconStyles = ({
   color = BrandingColors.Blueberry,
