@@ -80,7 +80,7 @@ describe('ColorInput', () => {
     expect(
       component
         .find('div[className^="css"]')
-        .at(1) // This div the background of the color preview/checkmark bit
+        .at(2) // This div the background of the color preview/checkmark bit
         .prop('style')
     ).toHaveProperty('backgroundColor', '#123456');
   });

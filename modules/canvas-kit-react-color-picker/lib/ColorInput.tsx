@@ -1,19 +1,21 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {focusRing, GrowthBehavior} from '@workday/canvas-kit-react-common';
+import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
 import {colors, spacing, type} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor, expandHex} from './ColorUtils';
+import TextInput from '@workday/canvas-kit-react-text-input';
 
 export interface ColorInputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
     GrowthBehavior {
   value: string;
+  error?: ErrorType;
   inputRef?: React.Ref<HTMLInputElement>;
   showCheck?: boolean;
-  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValidColorChange?: (color: string) => void;
 }
 
@@ -21,34 +23,30 @@ const swatchTileSpacing = spacing.xxs;
 const swatchTileSize = 20;
 const swatchCheckIconSpacing = 8;
 const colorInputWidth = 116;
+const colorInputErrorWidth = 144;
 
-const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled' | 'grow'>>(
-  ({grow}) => ({
-    margin: spacing.zero,
-    height: spacing.xl,
-    WebkitAppearance: 'none',
-    MozAppearance: 'none',
-    borderColor: 'transparent',
-    borderRadius: '4px',
-    border: `1px solid ${colors.frenchVanilla500}`,
+const CustomHexInput = styled(TextInput)<Pick<ColorInputProps, 'disabled' | 'error' | 'grow'>>(
+  {
     boxSizing: 'border-box',
     paddingLeft: '46px',
-    paddingRight: spacing.s,
-    width: grow ? '100%' : colorInputWidth,
-    ...type.body,
-    '&:not([disabled]):focus': {
-      outline: 'none',
-      borderColor: 'transparent',
-      ...focusRing(2, 0, true, true),
+    minWidth: colorInputWidth,
+    width: colorInputWidth,
+  },
+  ({error}) =>
+    typeof error !== 'undefined' && {
+      width: colorInputErrorWidth,
     },
-  }),
+  ({grow}) =>
+    grow && {
+      minWidth: '100%',
+      width: '100%',
+    },
   ({disabled}) => ({
     backgroundColor: disabled ? colors.soap200 : '',
   })
 );
 
 const ColorInputContainer = styled('div')({
-  display: 'flex',
   position: 'relative',
 });
 
@@ -87,7 +85,6 @@ export default class ColorInput extends React.Component<ColorInputProps> {
 
     return (
       <ColorInputContainer>
-        <PoundSignPrefix>#</PoundSignPrefix>
         <CustomHexInput
           innerRef={inputRef}
           onChange={this.handleChange}
@@ -111,6 +108,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
             icon={checkSmallIcon}
           />
         ) : null}
+        <PoundSignPrefix>#</PoundSignPrefix>
       </ColorInputContainer>
     );
   }
