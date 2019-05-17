@@ -1,19 +1,19 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {focusRing, GrowthBehavior} from '@workday/canvas-kit-react-common';
-import {colors, spacing, type} from '@workday/canvas-kit-react-core';
+import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
+import {colors, spacing, type, inputColors} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor, expandHex} from './ColorUtils';
+import TextInput, {TextInputProps} from '@workday/canvas-kit-react-text-input';
 
-export interface ColorInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    GrowthBehavior {
+export interface ColorInputProps extends TextInputProps, GrowthBehavior {
   value: string;
+  error?: ErrorType;
   inputRef?: React.Ref<HTMLInputElement>;
   showCheck?: boolean;
-  onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void);
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValidColorChange?: (color: string) => void;
 }
 
@@ -21,44 +21,45 @@ const swatchTileSpacing = spacing.xxs;
 const swatchTileSize = 20;
 const swatchCheckIconSpacing = 8;
 const colorInputWidth = 116;
+const colorInputErrorWidth = 144;
 
-const CustomHexInput = styled('input')<Pick<ColorInputProps, 'disabled' | 'grow'>>(
-  ({grow}) => ({
-    margin: spacing.zero,
-    height: spacing.xl,
-    WebkitAppearance: 'none',
-    MozAppearance: 'none',
-    borderColor: 'transparent',
-    borderRadius: '4px',
-    border: `1px solid ${colors.frenchVanilla500}`,
+const CustomHexInput = styled(TextInput)<Pick<ColorInputProps, 'disabled' | 'error' | 'grow'>>(
+  {
     boxSizing: 'border-box',
     paddingLeft: '46px',
-    paddingRight: spacing.s,
-    width: grow ? '100%' : colorInputWidth,
-    ...type.body,
-    '&:not([disabled]):focus': {
-      outline: 'none',
-      borderColor: 'transparent',
-      ...focusRing(2, 0, true, true),
+    minWidth: colorInputWidth,
+    width: colorInputWidth,
+  },
+  ({error}) =>
+    typeof error !== 'undefined' && {
+      width: colorInputErrorWidth,
     },
-  }),
+  ({grow}) =>
+    grow && {
+      minWidth: '100%',
+      width: '100%',
+    },
   ({disabled}) => ({
     backgroundColor: disabled ? colors.soap200 : '',
   })
 );
 
 const ColorInputContainer = styled('div')({
-  display: 'flex',
   position: 'relative',
 });
 
-const PoundSignPrefix = styled('span')({
-  position: 'absolute',
-  left: 36,
-  top: 10,
-  ...type.body,
-  ...type.variant.hint,
-});
+const PoundSignPrefix = styled('span')<Pick<ColorInputProps, 'disabled'>>(
+  {
+    position: 'absolute',
+    left: 36,
+    top: 10,
+    ...type.body,
+    ...type.variant.hint,
+  },
+  ({disabled}) => ({
+    color: disabled ? inputColors.disabled.text : undefined,
+  })
+);
 
 const SwatchTile = styled('div')({
   position: 'absolute',
@@ -81,13 +82,24 @@ const swatchCheckIcon = css({
 });
 
 export default class ColorInput extends React.Component<ColorInputProps> {
+  static defaultProps = {
+    value: '',
+  };
+
   public render() {
-    const {showCheck, value, onChange, onValidColorChange, inputRef, ...otherProps} = this.props;
+    const {
+      showCheck,
+      value,
+      onChange,
+      onValidColorChange,
+      inputRef,
+      disabled,
+      ...otherProps
+    } = this.props;
     const formattedValue = this.formatValue(value);
 
     return (
       <ColorInputContainer>
-        <PoundSignPrefix>#</PoundSignPrefix>
         <CustomHexInput
           innerRef={inputRef}
           onChange={this.handleChange}
@@ -95,6 +107,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           placeholder="FFFFFF"
           value={formattedValue}
           spellCheck={false}
+          disabled={disabled}
           maxLength={7} // 7 to allow pasting with a hash
           {...otherProps}
         />
@@ -111,6 +124,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
             icon={checkSmallIcon}
           />
         ) : null}
+        <PoundSignPrefix disabled={disabled}>#</PoundSignPrefix>
       </ColorInputContainer>
     );
   }

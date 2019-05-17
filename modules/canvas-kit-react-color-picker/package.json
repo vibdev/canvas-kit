@@ -36,6 +36,7 @@
   ],
   "dependencies": {
     "@workday/canvas-kit-react-common": "^0.4.6",
+    "@workday/canvas-kit-react-text-input": "^0.1.7",
     "@workday/canvas-kit-react-core": "^1.10.0",
     "@workday/canvas-kit-react-icon": "^1.6.0",
     "@workday/canvas-system-icons-web": "^1.0.1",

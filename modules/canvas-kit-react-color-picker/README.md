@@ -39,17 +39,22 @@ import {ColorInput} from '@workday/canvas-kit-color-picker';
 
 ## Component Props
 
-All standard input attributes are available and can be passed to the input field.
+All props available for `TextInput` are available here. Also, all standard input attributes are
+available and can be passed to the input field.
 
 ### Required
+
+> None
+
+---
+
+### Optional
 
 #### `value: string`
 
 > The value entered by the user into the color input
 
 ---
-
-### Optional
 
 #### `inputRef: React.Ref<HTMLInputElement>`
 
@@ -76,3 +81,16 @@ All standard input attributes are available and can be passed to the input field
 > Optionally show a check icon when a custom hex color has been selected
 
 Default: `false`
+
+---
+
+#### `error: ErrorType`
+
+> The type of error to display, if any.
+
+| Type  | Description                     |
+| ----- | ------------------------------- |
+| Error | Red outline with error icon.    |
+| Alert | Yellow outline with alert icon. |
+
+Default: `undefined`
