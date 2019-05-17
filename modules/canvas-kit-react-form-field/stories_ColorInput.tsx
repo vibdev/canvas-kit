@@ -17,12 +17,12 @@ storiesOf('Form Field/Color Picker/Top Label', module)
   .addDecorator(withReadme(README))
   .add('Plain', () => (
     <FormField label="Label" inputId="input-plain">
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Disabled', () => (
     <FormField label="Label" inputId="input-disabled">
-      {controlComponent(<ColorInput value="" disabled={true} />)}
+      {controlComponent(<ColorInput disabled={true} />)}
     </FormField>
   ))
   .add('Alert', () => (
@@ -33,7 +33,7 @@ storiesOf('Form Field/Color Picker/Top Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Error', () => (
@@ -44,12 +44,12 @@ storiesOf('Form Field/Color Picker/Top Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Grow', () => (
     <FormField label="Label" inputId="input-grow" grow={true}>
-      {controlComponent(<ColorInput value="" placeholder="Placeholder" />)}
+      {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ))
   .add('Grow - Error', () => (
@@ -61,7 +61,7 @@ storiesOf('Form Field/Color Picker/Top Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" placeholder="Placeholder" />)}
+      {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ));
 
@@ -70,12 +70,12 @@ storiesOf('Form Field/Color Picker/Left Label', module)
   .addDecorator(withReadme(README))
   .add('Plain', () => (
     <FormField labelPosition={FormField.LabelPosition.Left} label="Label" inputId="input-plain">
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Disabled', () => (
     <FormField labelPosition={FormField.LabelPosition.Left} label="Label" inputId="input-disabled">
-      {controlComponent(<ColorInput value="" disabled={true} />)}
+      {controlComponent(<ColorInput disabled={true} />)}
     </FormField>
   ))
   .add('Alert', () => (
@@ -87,7 +87,7 @@ storiesOf('Form Field/Color Picker/Left Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Error', () => (
@@ -99,7 +99,7 @@ storiesOf('Form Field/Color Picker/Left Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" />)}
+      {controlComponent(<ColorInput />)}
     </FormField>
   ))
   .add('Grow', () => (
@@ -109,7 +109,7 @@ storiesOf('Form Field/Color Picker/Left Label', module)
       inputId="input-grow"
       grow={true}
     >
-      {controlComponent(<ColorInput value="" placeholder="Placeholder" />)}
+      {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ))
   .add('Grow - Error', () => (
@@ -122,6 +122,6 @@ storiesOf('Form Field/Color Picker/Left Label', module)
       hintText={hintText}
       hintId={hintId}
     >
-      {controlComponent(<ColorInput value="" placeholder="Placeholder" />)}
+      {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ));

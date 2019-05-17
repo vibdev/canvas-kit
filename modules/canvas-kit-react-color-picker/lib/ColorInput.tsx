@@ -82,6 +82,10 @@ const swatchCheckIcon = css({
 });
 
 export default class ColorInput extends React.Component<ColorInputProps> {
+  static defaultProps = {
+    value: '',
+  };
+
   public render() {
     const {
       showCheck,

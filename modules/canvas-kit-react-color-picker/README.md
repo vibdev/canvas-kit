@@ -44,13 +44,17 @@ available and can be passed to the input field.
 
 ### Required
 
+> None
+
+---
+
+### Optional
+
 #### `value: string`
 
 > The value entered by the user into the color input
 
 ---
-
-### Optional
 
 #### `inputRef: React.Ref<HTMLInputElement>`
 
