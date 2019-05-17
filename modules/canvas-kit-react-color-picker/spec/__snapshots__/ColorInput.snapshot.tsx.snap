@@ -205,17 +205,6 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   border-radius: 2px;
 }
 
-.emotion-5 {
-  position: absolute;
-  left: 36px;
-  top: 10px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #5e6a75;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-}
-
 .emotion-1 {
   font-size: 14px;
   line-height: 20px;
@@ -287,6 +276,18 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   color: #a1aab3;
 }
 
+.emotion-5 {
+  position: absolute;
+  left: 36px;
+  top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #5e6a75;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  color: #a1aab3;
+}
+
 <div
   className="emotion-7 emotion-8"
 >
@@ -314,6 +315,7 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   />
   <span
     className="emotion-5 emotion-6"
+    disabled={true}
   >
     #
   </span>
@@ -772,6 +774,7 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
   />
   <span
     className="emotion-5 emotion-6"
+    disabled={false}
   >
     #
   </span>

@@ -1,16 +1,14 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
-import {colors, spacing, type} from '@workday/canvas-kit-react-core';
+import {colors, spacing, type, inputColors} from '@workday/canvas-kit-react-core';
 import {css} from 'emotion';
 import {checkSmallIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {pickDarkOrLightColor, expandHex} from './ColorUtils';
-import TextInput from '@workday/canvas-kit-react-text-input';
+import TextInput, {TextInputProps} from '@workday/canvas-kit-react-text-input';
 
-export interface ColorInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
-    GrowthBehavior {
+export interface ColorInputProps extends TextInputProps, GrowthBehavior {
   value: string;
   error?: ErrorType;
   inputRef?: React.Ref<HTMLInputElement>;
@@ -50,13 +48,18 @@ const ColorInputContainer = styled('div')({
   position: 'relative',
 });
 
-const PoundSignPrefix = styled('span')({
-  position: 'absolute',
-  left: 36,
-  top: 10,
-  ...type.body,
-  ...type.variant.hint,
-});
+const PoundSignPrefix = styled('span')<Pick<ColorInputProps, 'disabled'>>(
+  {
+    position: 'absolute',
+    left: 36,
+    top: 10,
+    ...type.body,
+    ...type.variant.hint,
+  },
+  ({disabled}) => ({
+    color: disabled ? inputColors.disabled.text : undefined,
+  })
+);
 
 const SwatchTile = styled('div')({
   position: 'absolute',
@@ -80,7 +83,15 @@ const swatchCheckIcon = css({
 
 export default class ColorInput extends React.Component<ColorInputProps> {
   public render() {
-    const {showCheck, value, onChange, onValidColorChange, inputRef, ...otherProps} = this.props;
+    const {
+      showCheck,
+      value,
+      onChange,
+      onValidColorChange,
+      inputRef,
+      disabled,
+      ...otherProps
+    } = this.props;
     const formattedValue = this.formatValue(value);
 
     return (
@@ -92,6 +103,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           placeholder="FFFFFF"
           value={formattedValue}
           spellCheck={false}
+          disabled={disabled}
           maxLength={7} // 7 to allow pasting with a hash
           {...otherProps}
         />
@@ -108,7 +120,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
             icon={checkSmallIcon}
           />
         ) : null}
-        <PoundSignPrefix>#</PoundSignPrefix>
+        <PoundSignPrefix disabled={disabled}>#</PoundSignPrefix>
       </ColorInputContainer>
     );
   }
