@@ -11,9 +11,7 @@ class ToastWrapper extends React.Component {
   public render() {
     return (
       <section>
-        <Toast>
-          <div>Your workbook was successfully processed.</div>
-        </Toast>
+        <Toast>Your workbook was successfully processed.</Toast>
         <Toast onClose={() => console.warn('handle close was clicked')}>
           You data has been successfully updated.
         </Toast>

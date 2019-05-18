@@ -11,6 +11,7 @@ import styled from 'react-emotion';
 export interface ToastProps {
   icon: CanvasSystemIcon;
   iconColor: CanvasColor | string; // TODO: Fix
+  children: string;
   onClose?: () => void;
   onActionClick?: () => void;
   actionText?: string;
@@ -18,20 +19,27 @@ export interface ToastProps {
 }
 const toastWidth = 360;
 
-const ToastContainer = styled('div')({
+const ToastContainer = styled(Popup)({
   width: toastWidth,
 });
 
-const ToastContentContainer = styled('div')({
-  display: 'flex',
-});
+const ToastContentContainer = styled('div')<Pick<ToastProps, 'onClose'>>(
+  {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  ({onClose}) => ({
+    marginRight: onClose ? spacing.m : undefined,
+  })
+);
 
 const ToastSystemIcon = styled(SystemIcon)({
   marginRight: spacing.s,
+  alignSelf: 'start',
 });
 
-const ActionButtonContainer = styled('div')({
-  marginLeft: '-16px',
+const ActionButton = styled(TextButton)({
+  display: 'block',
 });
 
 export default class Toast extends React.Component<ToastProps> {
@@ -51,28 +59,25 @@ export default class Toast extends React.Component<ToastProps> {
       ...otherProps
     } = this.props;
     return (
-      <ToastContainer {...otherProps}>
-        <Popup
-          width={toastWidth}
-          transformOrigin={transformOrigin}
-          padding={PopupPadding.s}
-          handleClose={onClose}
-          closeIconSize={ButtonSizes.Small}
-        >
-          <ToastContentContainer>
-            {icon && <ToastSystemIcon color={iconColor} colorHover={''} icon={icon} />}
-            <div style={{marginRight: onClose ? spacing.m : 0}}>
-              {this.props.children}
-              {onActionClick && (
-                <ActionButtonContainer>
-                  <TextButton buttonSize={TextButton.Sizes.Small} onClick={onActionClick}>
-                    {actionText}
-                  </TextButton>
-                </ActionButtonContainer>
-              )}
-            </div>
-          </ToastContentContainer>
-        </Popup>
+      <ToastContainer
+        width={toastWidth}
+        transformOrigin={transformOrigin}
+        padding={PopupPadding.s}
+        handleClose={onClose}
+        closeIconSize={ButtonSizes.Small}
+        {...otherProps}
+      >
+        <ToastContentContainer onClose={onClose}>
+          {icon && <ToastSystemIcon color={iconColor} colorHover={''} icon={icon} />}
+          <div>
+            {this.props.children}
+            {onActionClick && (
+              <ActionButton buttonSize={TextButton.Sizes.Small} onClick={onActionClick}>
+                {actionText}
+              </ActionButton>
+            )}
+          </div>
+        </ToastContentContainer>
       </ToastContainer>
     );
   }
