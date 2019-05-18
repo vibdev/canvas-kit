@@ -102,3 +102,9 @@ Default:
 #### `heading: ReactNode`
 
 > Heading at the top of the card.
+
+---
+
+#### `closeIconSize: ButtonSizes`
+
+> The size of the close icon button (small or medium)

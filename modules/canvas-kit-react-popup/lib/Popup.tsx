@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Card from '@workday/canvas-kit-react-card';
 import styled from 'react-emotion';
-import {IconButton} from '@workday/canvas-kit-react-button';
+import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import {CanvasDepthValue, colors, spacing} from '@workday/canvas-kit-react-core';
 import {TransformOrigin, getTranslateFromOrigin} from '@workday/canvas-kit-react-common';
 import {xIcon} from '@workday/canvas-system-icons-web';
@@ -16,6 +16,7 @@ export enum PopupPadding {
 export interface PopupProps {
   padding: PopupPadding;
   transformOrigin: TransformOrigin;
+  closeIconSize: ButtonSizes.Small | ButtonSizes.Medium;
   handleClose?: () => void;
   width?: number | string;
   heading?: React.ReactNode;
@@ -62,6 +63,7 @@ export default class Popup extends React.Component<PopupProps> {
   static padding = PopupPadding;
   static defaultProps = {
     padding: Popup.padding.l,
+    closeIconSize: ButtonSizes.Medium,
     transformOrigin: {
       horizontal: 'center',
       vertical: 'top',
@@ -69,12 +71,17 @@ export default class Popup extends React.Component<PopupProps> {
   };
 
   public render() {
-    const {handleClose, padding, width, heading, depth, ...otherProps} = this.props;
+    const {handleClose, padding, width, heading, depth, closeIconSize, ...otherProps} = this.props;
     return (
       <Container role="dialog" {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
-            <IconButton buttonType={IconButton.Types.Plain} onClick={handleClose} icon={xIcon} />
+            <IconButton
+              buttonType={IconButton.Types.Plain}
+              buttonSize={closeIconSize}
+              onClick={handleClose}
+              icon={xIcon}
+            />
           </CloseIconContainer>
         )}
         <Card depth={depth} heading={heading} width={width} padding={padding}>
