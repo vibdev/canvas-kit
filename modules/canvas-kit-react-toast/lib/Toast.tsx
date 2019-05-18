@@ -1,18 +1,19 @@
 import * as React from 'react';
 import Popup, {PopupPadding} from '@workday/canvas-kit-react-popup';
-import {spacing, CanvasColor} from '@workday/canvas-kit-react-core';
+import {spacing, colors, CanvasColor} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {checkIcon} from '@workday/canvas-system-icons-web';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {TransformOrigin} from '@workday/canvas-kit-react-common';
 import {TextButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import styled from 'react-emotion';
 
 export interface ToastProps {
-  icon?: CanvasSystemIcon;
+  icon: CanvasSystemIcon;
+  iconColor: CanvasColor | string; // TODO: Fix
   onClose?: () => void;
   onActionClick?: () => void;
   actionText?: string;
-  iconColor?: CanvasColor;
   transformOrigin?: TransformOrigin;
 }
 const toastWidth = 360;
@@ -34,6 +35,11 @@ const ActionButtonContainer = styled('div')({
 });
 
 export default class Toast extends React.Component<ToastProps> {
+  static defaultProps = {
+    icon: checkIcon,
+    iconColor: colors.greenApple400,
+  };
+
   public render() {
     const {
       onClose,
