@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Popup, {PopupPadding} from '@workday/canvas-kit-react-popup';
-import {spacing, colors} from '@workday/canvas-kit-react-core';
+import {spacing, CanvasColor} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {TransformOrigin} from '@workday/canvas-kit-react-common';
@@ -12,7 +12,7 @@ export interface ToastProps {
   onClose?: () => void;
   onActionClick?: () => void;
   actionText?: string;
-  iconColor?: Exclude<keyof typeof colors, 'gradients' | 'primary'>;
+  iconColor?: CanvasColor;
   transformOrigin?: TransformOrigin;
 }
 const toastWidth = 360;
