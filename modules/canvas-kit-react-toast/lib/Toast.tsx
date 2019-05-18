@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Popup, {PopupPadding} from '@workday/canvas-kit-react-popup';
-import {spacing, colors, CanvasColor} from '@workday/canvas-kit-react-core';
+import {spacing, colors, type, CanvasColor} from '@workday/canvas-kit-react-core';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {checkIcon} from '@workday/canvas-system-icons-web';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {TransformOrigin} from '@workday/canvas-kit-react-common';
-import {TextButton, ButtonSizes} from '@workday/canvas-kit-react-button';
+import {ButtonSizes} from '@workday/canvas-kit-react-button';
 import styled from 'react-emotion';
 
 export interface ToastProps {
@@ -38,8 +38,13 @@ const ToastSystemIcon = styled(SystemIcon)({
   alignSelf: 'start',
 });
 
-const ActionButton = styled(TextButton)({
+const ActionButton = styled('button')({
   display: 'block',
+  border: 'none',
+  padding: 0,
+  marginTop: spacing.xxxs,
+  ...type.body2,
+  ...type.variant.link,
 });
 
 export default class Toast extends React.Component<ToastProps> {
@@ -68,14 +73,10 @@ export default class Toast extends React.Component<ToastProps> {
         {...otherProps}
       >
         <ToastContentContainer onClose={onClose}>
-          {icon && <ToastSystemIcon color={iconColor} colorHover={''} icon={icon} />}
+          {icon && <ToastSystemIcon color={iconColor} colorHover={iconColor} icon={icon} />}
           <div>
             {this.props.children}
-            {onActionClick && (
-              <ActionButton buttonSize={TextButton.Sizes.Small} onClick={onActionClick}>
-                {actionText}
-              </ActionButton>
-            )}
+            {onActionClick && <ActionButton onClick={onActionClick}>{actionText}</ActionButton>}
           </div>
         </ToastContentContainer>
       </ToastContainer>
