@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-color-preview",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Color Preview component",
   "homepage": "https://workdaydesign.com",
   "author": "Stephane Rangaya <stephane@workday.com>",
@@ -32,7 +32,8 @@
     "react",
     "components",
     "workday",
-    "color-preview"
+    "color-preview",
+    "color-picker"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
