@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {focusRing} from '@workday/canvas-kit-react-common';
+import {ErrorType, focusRing, mouseFocusBehavior} from '@workday/canvas-kit-react-common';
 import canvas, {
   colors,
   iconColors,
@@ -18,6 +18,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   label?: string;
   onChange?: (e: React.SyntheticEvent) => void;
   value?: string;
+  error?: ErrorType;
 }
 
 const checkboxBorderRadius = 2;
@@ -74,77 +75,107 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     marginLeft: '-3px',
     position: 'absolute',
     opacity: 0,
+    '&:not(:disabled)': {
+      cursor: 'pointer',
+    },
+
+    // States
+    '&:not(:checked):not(:disabled):not(:focus):hover ~ div:first-of-type': {
+      borderColor: inputColors.hoverBorder,
+    },
+    '&:checked ~ div:first-of-type': {
+      borderColor: colors.blueberry400,
+      backgroundColor: colors.blueberry400,
+    },
+    '&:disabled ~ div:first-of-type': {
+      borderColor: inputColors.disabled.border,
+      backgroundColor: inputColors.disabled.background,
+    },
+    '&:disabled:checked ~ div:first-of-type': {
+      borderColor: colors.blueberry200,
+      backgroundColor: colors.blueberry200,
+    },
+
+    // Focus
     '&:focus, &:active': {
       outline: 'none',
     },
-    '&:focus, &focus:hover': {
-      '& ~ div:first-of-type': {
-        borderColor: colors.blueberry400,
-        borderWidth: '2px',
-        zIndex: 2,
-      },
+    '&:focus ~ div:first-of-type': {
+      borderColor: colors.blueberry400,
+      borderWidth: '2px',
+      zIndex: 2,
+      boxShadow: 'none',
     },
     '&:checked:focus ~ div:first-of-type': {
-      ...focusRing(2, 2),
+      ...focusRing(2, 2, false),
     },
+    ...mouseFocusBehavior({
+      '&:focus ~ div:first-of-type': {
+        border: '1px solid ' + inputColors.border,
+        boxShadow: 'none',
+      },
+      '&:checked ~ div:first-of-type': {
+        borderColor: colors.blueberry400,
+      },
+      '&:disabled:checked ~ div:first-of-type': {
+        borderColor: colors.blueberry200,
+        backgroundColor: colors.blueberry200,
+      },
+    }),
   },
-  ({checked, disabled}) => ({
-    cursor: disabled ? undefined : 'pointer',
-    '&:focus:hover ~ div:first-of-type': {
-      borderColor: disabled ? inputColors.disabled.border : colors.blueberry400,
-    },
-    [`[data-whatinput="mouse"] &:focus ~ div:first-of-type,
-      [data-whatinput="touch"] &:focus ~ div:first-of-type,
-      [data-whatinput="pointer"] &:focus ~ div:first-of-type`]: {
-      ...focusRing(0, 0),
-      borderWidth: '1px',
-      borderColor: checked ? colors.blueberry400 : inputColors.border,
-    },
-    [`[data-whatinput="mouse"] &:hover ~ div:first-of-type`]: {
-      backgroundColor: checked
-        ? colors.blueberry400
-        : disabled
-        ? inputColors.disabled.background
-        : 'white',
-      borderColor: checked
-        ? colors.blueberry400
-        : disabled
-        ? inputColors.disabled.border
-        : inputColors.hoverBorder,
-    },
-  })
+  ({error}) => {
+    let errorRingColor;
+
+    if (error === ErrorType.Error) {
+      errorRingColor = inputColors.error.border;
+    } else if (error === ErrorType.Alert) {
+      errorRingColor = inputColors.warning.border;
+    } else {
+      return {};
+    }
+    const errorStyles = {
+      '& ~ div:first-of-type': {
+        border: `1px solid ${errorRingColor}`,
+        boxShadow: `0 0 0 1px ${errorRingColor}`,
+      },
+      '&:not(:checked):not(:disabled):not(:focus):hover ~ div:first-of-type': {
+        borderColor: errorRingColor,
+      },
+      '&:checked ~ div:first-of-type': {
+        borderColor: colors.blueberry400,
+        boxShadow: `0 0 0 2px ${colors.frenchVanilla100},
+              0 0 0 4px ${errorRingColor}`,
+      },
+    };
+    return {
+      ...errorStyles,
+      // Error rings take precedence over focus
+      ...mouseFocusBehavior({
+        ...errorStyles,
+        '&:not(:checked):focus ~ div:first-of-type': {
+          border: `1px solid ${errorRingColor}`,
+          boxShadow: `0 0 0 1px ${errorRingColor}`,
+        },
+      }),
+    };
+  }
 );
 
-const CheckboxBackground = styled('div')<CheckboxProps>(
-  {
-    alignItems: 'center',
-    backgroundColor: colors.frenchVanilla100,
-    borderRadius: checkboxBorderRadius,
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    boxSizing: 'border-box',
-    display: 'flex',
-    height: checkboxHeight,
-    justifyContent: 'center',
-    padding: '0px 2px',
-    pointerEvents: 'none',
-    position: 'absolute',
-    transition: 'border 200ms ease, background 200ms',
-    width: checkboxWidth,
-  },
-  ({checked, disabled}) => ({
-    borderColor: checked
-      ? colors.blueberry400
-      : disabled
-      ? inputColors.disabled.border
-      : inputColors.border,
-    backgroundColor: checked
-      ? colors.blueberry400
-      : disabled
-      ? inputColors.disabled.background
-      : 'white',
-  })
-);
+const CheckboxBackground = styled('div')<CheckboxProps>({
+  alignItems: 'center',
+  backgroundColor: colors.frenchVanilla100,
+  borderRadius: checkboxBorderRadius,
+  border: '1px solid ' + inputColors.border,
+  boxSizing: 'border-box',
+  display: 'flex',
+  height: checkboxHeight,
+  justifyContent: 'center',
+  padding: '0px 2px',
+  pointerEvents: 'none',
+  position: 'absolute',
+  transition: 'border 200ms ease, background 200ms',
+  width: checkboxWidth,
+});
 
 const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   {
@@ -178,13 +209,25 @@ const CheckboxLabel = styled('label')<{disabled?: boolean}>(
 );
 
 export default class Checkbox extends React.Component<CheckboxProps> {
+  static ErrorType = ErrorType;
+
   public static defaultProps = {
     checked: false,
     label: '',
   };
 
   public render() {
-    const {checked, disabled, id, inputRef, label, onChange, value, ...otherProps} = this.props;
+    const {
+      checked,
+      disabled,
+      id,
+      inputRef,
+      label,
+      onChange,
+      value,
+      error,
+      ...otherProps
+    } = this.props;
 
     return (
       <CheckboxContainer>
@@ -197,9 +240,10 @@ export default class Checkbox extends React.Component<CheckboxProps> {
             onChange={onChange}
             type="checkbox"
             value={value}
+            error={error}
             {...otherProps}
           />
-          <CheckboxBackground checked={checked} disabled={disabled}>
+          <CheckboxBackground checked={checked} disabled={disabled} error={error}>
             <CheckboxCheck checked={checked}>
               <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
             </CheckboxCheck>

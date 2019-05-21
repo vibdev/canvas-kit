@@ -28,7 +28,31 @@ storiesOf('Checkbox', module)
     <div className="story">
       <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
-        {control(<Checkbox disabled={true} id="1" label="Checkbox option" />)}
+        <Checkbox disabled={true} id="1" label="Checkbox option" />
+      </div>
+    </div>
+  ))
+  .add('Disabled Checked', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <Checkbox disabled={true} checked={true} id="1" label="Checkbox option" />
+      </div>
+    </div>
+  ))
+  .add('Alert', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        {control(<Checkbox id="1" label="Checkbox option" error={Checkbox.ErrorType.Alert} />)}
+      </div>
+    </div>
+  ))
+  .add('Error', () => (
+    <div className="story">
+      <h1 className="section-label">Checkbox</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        {control(<Checkbox id="1" label="Checkbox option" error={Checkbox.ErrorType.Error} />)}
       </div>
     </div>
   ));
