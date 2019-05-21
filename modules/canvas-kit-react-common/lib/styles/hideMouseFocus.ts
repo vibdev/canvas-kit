@@ -14,4 +14,32 @@ const hideMouseFocus: CSSObject = {
   },
 };
 
+type IndexableObject = {[key: string]: object};
+
+/*
+ * A utility that simplifies focus selectors since you can't use nested syntax for some reason. Example:
+ * [`[data-whatinput="mouse"],
+     [data-whatinput="touch"],
+     [data-whatinput="pointer"]: {
+       '& .my-selector': {
+          ...
+       }
+   },
+ */
+export const mouseFocusBehavior = (selectors: IndexableObject) => {
+  const output: IndexableObject = {};
+
+  Object.keys(selectors).map((selector, index) => {
+    selector.split(',').forEach(selectorPart => {
+      const prefixedSelector = `
+        [data-whatinput="mouse"] ${selectorPart},
+        [data-whatinput="touch"] ${selectorPart},
+        [data-whatinput="pointer"] ${selectorPart}`;
+      output[prefixedSelector] = selectors[selector];
+    });
+  });
+
+  return output;
+};
+
 export default hideMouseFocus;
