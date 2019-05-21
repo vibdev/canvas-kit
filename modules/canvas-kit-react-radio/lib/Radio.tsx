@@ -106,13 +106,13 @@ const RadioInput = styled('input')<RadioProps>(
       backgroundColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.disabled.background
-          : 'white',
+        ? inputColors.disabled.background
+        : 'white',
       borderColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.disabled.border
-          : inputColors.hoverBorder,
+        ? inputColors.disabled.border
+        : inputColors.hoverBorder,
       borderWidth: '1px',
     },
   })
@@ -139,13 +139,13 @@ const RadioBackground = styled('div')<RadioProps>(
     borderColor: checked
       ? colors.blueberry400
       : disabled
-        ? inputColors.disabled.border
-        : inputColors.border,
+      ? inputColors.disabled.border
+      : inputColors.border,
     backgroundColor: checked
       ? colors.blueberry400
       : disabled
-        ? inputColors.disabled.background
-        : 'white',
+      ? inputColors.disabled.background
+      : 'white',
   })
 );
 
@@ -157,7 +157,6 @@ const RadioCheck = styled('div')<Pick<RadioProps, 'checked'>>(
     flexDirection: 'column',
     height: radioDot,
     pointerEvents: 'none',
-    position: 'absolute',
     transition: 'transform 200ms ease, opacity 200ms ease',
     width: radioDot,
   },

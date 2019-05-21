@@ -132,7 +132,6 @@ exports[`Radio Snapshots renders as expected 1`] = `
   flex-direction: column;
   height: 8px;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -225,7 +224,6 @@ exports[`Radio Snapshots renders as expected 2`] = `
   flex-direction: column;
   height: 8px;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -464,7 +462,6 @@ exports[`Radio Snapshots renders as expected 3`] = `
   flex-direction: column;
   height: 8px;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -548,7 +545,6 @@ exports[`Radio Snapshots renders as expected 4`] = `
   flex-direction: column;
   height: 8px;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
