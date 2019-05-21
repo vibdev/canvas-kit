@@ -59,6 +59,7 @@
     "@workday/canvas-kit-react-table": "^1.1.14",
     "@workday/canvas-kit-react-text-area": "^0.1.8",
     "@workday/canvas-kit-react-text-input": "^0.1.8",
+    "@workday/canvas-kit-react-toast": "^0.0.0",
     "@workday/canvas-kit-react-toggle": "^0.1.21",
     "@workday/canvas-kit-react-tooltip": "^0.1.8"
   }
