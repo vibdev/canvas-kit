@@ -23,3 +23,4 @@ export * from '@workday/canvas-kit-react-toggle';
 export * from '@workday/canvas-kit-react-tooltip';
 export * from '@workday/canvas-kit-react-skeleton';
 export * from '@workday/canvas-kit-react-layout';
+export * from '@workday/canvas-kit-react-status-indicator';

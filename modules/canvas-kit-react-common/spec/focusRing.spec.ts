@@ -48,23 +48,4 @@ describe('memoizedFocusRing', () => {
     expect(received0).toEqual(received2);
     expect(received0).not.toBe(received2);
   });
-
-  test('first and memoized call should not be slower than two non-memoized calls', () => {
-    const memoizedT0 = performance.now();
-    for (let i = 0; i < 1000; i++) {
-      focusRing();
-    }
-    const memoizedT1 = performance.now();
-
-    const t0 = performance.now();
-    for (let i = 0; i < 1000; i++) {
-      focusRing(undefined, undefined, undefined, undefined, undefined, undefined, false);
-    }
-    const t1 = performance.now();
-
-    const memoizedTimeMilliseconds = memoizedT1 - memoizedT0;
-    const timeMilliseconds = t1 - t0;
-
-    expect(memoizedTimeMilliseconds).toBeLessThan(timeMilliseconds);
-  });
 });
