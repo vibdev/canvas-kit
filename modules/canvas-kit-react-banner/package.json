@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-banner",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Common Canvas banner component for React",
   "homepage": "https://workdaydesign.com",
   "author": "Stephane Rangaya <stephane@workday.com>",
@@ -38,7 +38,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.4.6",
+    "@workday/canvas-kit-react-common": "^0.5.0",
     "@workday/canvas-kit-react-core": "^1.10.0",
     "@workday/canvas-kit-react-icon": "^1.6.0",
     "@workday/canvas-system-icons-web": "^1.0.1",

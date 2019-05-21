@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-header",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "A Canvas-styled application header",
   "homepage": "https://workdaydesign.com",
   "author": "Lynn Chyi <lynn.chyi@workday.com>",
@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "@types/react-transition-group": "^2.0.14",
-    "@workday/canvas-kit-react-button": "^0.20.15",
-    "@workday/canvas-kit-react-common": "^0.4.6",
+    "@workday/canvas-kit-react-button": "^0.20.16",
+    "@workday/canvas-kit-react-common": "^0.5.0",
     "@workday/canvas-kit-react-core": "^1.10.0",
     "@workday/canvas-kit-react-icon": "^1.6.0",
     "@workday/canvas-system-icons-web": "^1.0.1",
@@ -51,6 +51,6 @@
     "react-transition-group": "^2.5.0"
   },
   "devDependencies": {
-    "@workday/canvas-kit-react-avatar": "^0.4.20"
+    "@workday/canvas-kit-react-avatar": "^0.4.21"
   }
 }

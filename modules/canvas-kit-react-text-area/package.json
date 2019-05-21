@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-text-area",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Canvas-styled text area",
   "homepage": "https://workdaydesign.com",
   "author": "Stephane Rangaya <stephane@workday.com>",
@@ -38,7 +38,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.4.6",
+    "@workday/canvas-kit-react-common": "^0.5.0",
     "@workday/canvas-kit-react-core": "^1.10.0",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
