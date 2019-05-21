@@ -40,11 +40,12 @@ const popupAnimation = (transformOrigin: TransformOrigin) => {
   `;
 };
 
-const Container = styled('div')<Pick<PopupProps, 'transformOrigin'>>(
+const Container = styled('div')<Pick<PopupProps, 'transformOrigin' | 'width'>>(
   {
     position: 'relative',
     backgroundColor: colors.frenchVanilla100,
   },
+  ({width}) => width && {width},
   ({transformOrigin}) => ({
     animation: popupAnimation(transformOrigin),
     animationDuration: '150ms',
@@ -82,7 +83,7 @@ export default class Popup extends React.Component<PopupProps> {
       ...otherProps
     } = this.props;
     return (
-      <Container transformOrigin={transformOrigin} role="dialog" {...otherProps}>
+      <Container transformOrigin={transformOrigin} width={width} role="dialog" {...otherProps}>
         {handleClose && (
           <CloseIconContainer>
             <IconButton
