@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toast Snapshots renders as expected 1`] = `
-.emotion-7 {
-  width: 360px;
-}
-
 .emotion-6 {
   position: relative;
   background-color: #ffffff;
+  width: 360px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -25,6 +22,7 @@ exports[`Toast Snapshots renders as expected 1`] = `
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 16px;
+  width: 360px;
 }
 
 .emotion-4 {
@@ -83,32 +81,30 @@ exports[`Toast Snapshots renders as expected 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-6"
+  role="dialog"
+  width={360}
 >
   <div
-    className="emotion-6"
-    role="dialog"
+    className="emotion-5"
+    width={360}
   >
     <div
-      className="emotion-5"
+      className="emotion-4"
     >
       <div
-        className="emotion-4"
+        className="emotion-2 emotion-3"
       >
-        <div
-          className="emotion-2 emotion-3"
-        >
-          <span
-            className="emotion-0 emotion-1"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
+        <span
+          className="emotion-0 emotion-1"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
-          />
-          <div>
-            Your data has been updated.
-          </div>
+          }
+        />
+        <div>
+          Your data has been updated.
         </div>
       </div>
     </div>
@@ -117,13 +113,10 @@ exports[`Toast Snapshots renders as expected 1`] = `
 `;
 
 exports[`Toast Snapshots renders with a close button 1`] = `
-.emotion-11 {
-  width: 360px;
-}
-
 .emotion-10 {
   position: relative;
   background-color: #ffffff;
+  width: 360px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -141,6 +134,7 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 16px;
+  width: 360px;
 }
 
 .emotion-8 {
@@ -359,50 +353,48 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 }
 
 <div
-  className="emotion-11 emotion-12"
+  className="emotion-10"
+  role="dialog"
+  width={360}
 >
   <div
-    className="emotion-10"
-    role="dialog"
+    className="emotion-3"
+  >
+    <button
+      className="emotion-1 emotion-2"
+      onClick={[MockFunction]}
+    >
+      <span
+        className="emotion-0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+  <div
+    className="emotion-9"
+    width={360}
   >
     <div
-      className="emotion-3"
+      className="emotion-8"
     >
-      <button
-        className="emotion-1 emotion-2"
-        onClick={[MockFunction]}
+      <div
+        className="emotion-6 emotion-7"
+        onClose={[MockFunction]}
       >
         <span
-          className="emotion-0"
+          className="emotion-4 emotion-5"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
           }
         />
-      </button>
-    </div>
-    <div
-      className="emotion-9"
-    >
-      <div
-        className="emotion-8"
-      >
-        <div
-          className="emotion-6 emotion-7"
-          onClose={[MockFunction]}
-        >
-          <span
-            className="emotion-4 emotion-5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
-          <div>
-            Your data has been updated.
-          </div>
+        <div>
+          Your data has been updated.
         </div>
       </div>
     </div>
@@ -411,13 +403,10 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 `;
 
 exports[`Toast Snapshots renders with an action link 1`] = `
-.emotion-13 {
-  width: 360px;
-}
-
 .emotion-12 {
   position: relative;
   background-color: #ffffff;
+  width: 360px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -435,6 +424,7 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 16px;
+  width: 360px;
 }
 
 .emotion-10 {
@@ -682,56 +672,54 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 }
 
 <div
-  className="emotion-13 emotion-14"
+  className="emotion-12"
+  role="dialog"
+  width={360}
 >
   <div
-    className="emotion-12"
-    role="dialog"
+    className="emotion-3"
+  >
+    <button
+      className="emotion-1 emotion-2"
+      onClick={[MockFunction]}
+    >
+      <span
+        className="emotion-0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+  <div
+    className="emotion-11"
+    width={360}
   >
     <div
-      className="emotion-3"
+      className="emotion-10"
     >
-      <button
-        className="emotion-1 emotion-2"
-        onClick={[MockFunction]}
+      <div
+        className="emotion-8 emotion-9"
+        onClose={[MockFunction]}
       >
         <span
-          className="emotion-0"
+          className="emotion-4 emotion-5"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
           }
         />
-      </button>
-    </div>
-    <div
-      className="emotion-11"
-    >
-      <div
-        className="emotion-10"
-      >
-        <div
-          className="emotion-8 emotion-9"
-          onClose={[MockFunction]}
-        >
-          <span
-            className="emotion-4 emotion-5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
-          <div>
-            Process failed.
-            <button
-              className="emotion-6 emotion-7"
-              onClick={[MockFunction]}
-            >
-              View More
-            </button>
-          </div>
+        <div>
+          Process failed.
+          <button
+            className="emotion-6 emotion-7"
+            onClick={[MockFunction]}
+          >
+            View More
+          </button>
         </div>
       </div>
     </div>
@@ -740,13 +728,10 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 `;
 
 exports[`Toast Snapshots renders with an icon 1`] = `
-.emotion-11 {
-  width: 360px;
-}
-
 .emotion-10 {
   position: relative;
   background-color: #ffffff;
+  width: 360px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -764,6 +749,7 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 16px;
+  width: 360px;
 }
 
 .emotion-8 {
@@ -982,50 +968,48 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 }
 
 <div
-  className="emotion-11 emotion-12"
+  className="emotion-10"
+  role="dialog"
+  width={360}
 >
   <div
-    className="emotion-10"
-    role="dialog"
+    className="emotion-3"
+  >
+    <button
+      className="emotion-1 emotion-2"
+      onClick={[MockFunction]}
+    >
+      <span
+        className="emotion-0"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+  <div
+    className="emotion-9"
+    width={360}
   >
     <div
-      className="emotion-3"
+      className="emotion-8"
     >
-      <button
-        className="emotion-1 emotion-2"
-        onClick={[MockFunction]}
+      <div
+        className="emotion-6 emotion-7"
+        onClose={[MockFunction]}
       >
         <span
-          className="emotion-0"
+          className="emotion-4 emotion-5"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
             }
           }
         />
-      </button>
-    </div>
-    <div
-      className="emotion-9"
-    >
-      <div
-        className="emotion-8"
-      >
-        <div
-          className="emotion-6 emotion-7"
-          onClose={[MockFunction]}
-        >
-          <span
-            className="emotion-4 emotion-5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-              }
-            }
-          />
-          <div>
-            Success
-          </div>
+        <div>
+          Success
         </div>
       </div>
     </div>

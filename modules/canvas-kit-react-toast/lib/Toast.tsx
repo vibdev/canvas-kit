@@ -19,10 +19,6 @@ export interface ToastProps {
 }
 const toastWidth = 360;
 
-const ToastContainer = styled('div')({
-  width: toastWidth,
-});
-
 const ToastContentContainer = styled('div')<Pick<ToastProps, 'onClose'>>(
   {
     display: 'flex',
@@ -64,23 +60,22 @@ export default class Toast extends React.Component<ToastProps> {
       ...otherProps
     } = this.props;
     return (
-      <ToastContainer>
-        <Popup
-          transformOrigin={transformOrigin}
-          padding={PopupPadding.s}
-          handleClose={onClose}
-          closeIconSize={ButtonSizes.Small}
-          {...otherProps}
-        >
-          <ToastContentContainer onClose={onClose}>
-            {icon && <ToastSystemIcon color={iconColor} colorHover={iconColor} icon={icon} />}
-            <div>
-              {this.props.children}
-              {onActionClick && <ActionButton onClick={onActionClick}>{actionText}</ActionButton>}
-            </div>
-          </ToastContentContainer>
-        </Popup>
-      </ToastContainer>
+      <Popup
+        width={toastWidth}
+        transformOrigin={transformOrigin}
+        padding={PopupPadding.s}
+        handleClose={onClose}
+        closeIconSize={ButtonSizes.Small}
+        {...otherProps}
+      >
+        <ToastContentContainer onClose={onClose}>
+          {icon && <ToastSystemIcon color={iconColor} colorHover={iconColor} icon={icon} />}
+          <div>
+            {this.props.children}
+            {onActionClick && <ActionButton onClick={onActionClick}>{actionText}</ActionButton>}
+          </div>
+        </ToastContentContainer>
+      </Popup>
     );
   }
 }
