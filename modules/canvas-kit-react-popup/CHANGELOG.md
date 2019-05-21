@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.22...@workday/canvas-kit-react-popup@0.2.0) (2019-05-21)
+
+
+### Bug Fixes
+
+* pass transformorigin ([1193154](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/1193154))
+* **popup:** Set width on container for popup as well as card ([f1e470c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/f1e470c))
+
+
+### Features
+
+* **popup:** Add support for a small close icon ([8369126](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/commits/8369126))
+
+
+
+
+
 ## [0.1.22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-popup/compare/@workday/canvas-kit-react-popup@0.1.21...@workday/canvas-kit-react-popup@0.1.22) (2019-05-21)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-popup
