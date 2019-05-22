@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import Radio, {RadioProps} from './Radio';
 import {inputColors, spacing} from '@workday/canvas-kit-react-core';
-import {ErrorType} from '@workday/canvas-kit-react-common';
+import {ErrorType, GrowthBehavior} from '@workday/canvas-kit-react-common';
 
-export interface RadioGroupProps {
+export interface RadioGroupProps extends GrowthBehavior {
   /**
    * React children must be of type Radio and have at least two.
    */
@@ -29,24 +29,30 @@ export interface RadioGroupProps {
   onChange?: (value: string | number) => void;
 }
 
-const Container = styled('div')<Pick<RadioGroupProps, 'error'>>(({error}) => {
-  let errorRingColor;
-
-  if (error === ErrorType.Error) {
-    errorRingColor = inputColors.error.border;
-  } else if (error === ErrorType.Alert) {
-    errorRingColor = inputColors.warning.border;
-  } else {
-    return {};
-  }
-  return {
+const Container = styled('div')<Pick<RadioGroupProps, 'error' | 'grow'>>(
+  {
+    display: 'inline-block',
     boxSizing: 'border-box',
-    borderRadius: 4,
-    boxShadow: `0 0 0 2px ${errorRingColor}`,
-    padding: `${spacing.xxxs} ${spacing.xxs}`,
-    margin: `-${spacing.xxxs} -${spacing.xxs}`,
-  };
-});
+  },
+  ({grow}) => grow && {width: '100%'},
+  ({error}) => {
+    let errorRingColor;
+
+    if (error === ErrorType.Error) {
+      errorRingColor = inputColors.error.border;
+    } else if (error === ErrorType.Alert) {
+      errorRingColor = inputColors.warning.border;
+    } else {
+      return {};
+    }
+    return {
+      borderRadius: 4,
+      boxShadow: `0 0 0 2px ${errorRingColor}`,
+      padding: `${spacing.xxxs} ${spacing.xxs}`,
+      margin: `-${spacing.xxxs} -${spacing.xxs}`,
+    };
+  }
+);
 
 export default class RadioGroup extends React.Component<RadioGroupProps> {
   static ErrorType = ErrorType;
@@ -56,9 +62,9 @@ export default class RadioGroup extends React.Component<RadioGroupProps> {
   };
 
   render(): React.ReactNode {
-    const {children, error, onChange, value, ...otherProps} = this.props;
+    const {children, error, onChange, value, grow, ...otherProps} = this.props;
     return (
-      <Container error={error} {...otherProps}>
+      <Container error={error} grow={grow} {...otherProps}>
         {React.Children.map(children, this.renderChild)}
       </Container>
     );
