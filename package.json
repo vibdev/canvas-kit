@@ -77,7 +77,7 @@
     "start": "node --max-old-space-size=2048 node_modules/.bin/start-storybook -p 9001 -c .storybook",
     "clean": "lerna run clean",
     "build": "lerna run build",
-    "build:prod": "lerna run build:rebuild --concurrency=1",
+    "build:rebuild": "lerna run build:rebuild",
     "publish": "yarn run build-storybook && yarn run lerna-publish",
     "create-module": "./create-module.sh",
     "precommit": "lint-staged",

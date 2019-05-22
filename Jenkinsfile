@@ -69,7 +69,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              sh('yarn install --production=false')
+              sh('yarn install --production=false --frozen-lockfile')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
 							setGheStatusChecks('ci/jenkins/tests', 'tests were not run.', 'FAIL')
@@ -85,7 +85,7 @@ timestamps {
           echo env.STAGE_NAME
           dir(repoBaseDir) {
             try {
-              sh('yarn run build:prod')
+              sh('yarn run build:rebuild --concurrency=2')
               setGheStatusChecks('ci/jenkins/build', 'build SUCCESS!', 'SUCCESS')
             } catch (Exception e) {
               setGheStatusChecks('ci/jenkins/build', 'build FAILED!', 'FAIL')
