@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/compare/@workday/canvas-kit-react-form-field@0.2.1...@workday/canvas-kit-react-form-field@0.2.2) (2019-05-22)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-form-field
+
+
+
+
+
 ## [0.2.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/compare/@workday/canvas-kit-react-form-field@0.2.0...@workday/canvas-kit-react-form-field@0.2.1) (2019-05-21)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-form-field

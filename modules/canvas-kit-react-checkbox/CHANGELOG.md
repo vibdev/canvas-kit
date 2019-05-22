@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.1.8...@workday/canvas-kit-react-checkbox@0.1.9) (2019-05-22)
+
+
+### Bug Fixes
+
+* **Checkbox,Radio:** IE11 bug ([0265ecc](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/0265ecc))
+
+
+
+
+
 ## [0.1.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.1.7...@workday/canvas-kit-react-checkbox@0.1.8) (2019-05-21)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-checkbox
