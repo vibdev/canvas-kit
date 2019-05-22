@@ -119,8 +119,8 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 100%;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -128,6 +128,10 @@ exports[`Checkbox Snapshots renders as expected 1`] = `
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+
+.emotion-3 span {
+  margin-left: -6px;
 }
 
 .emotion-2 {
@@ -249,8 +253,8 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 100%;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -258,6 +262,10 @@ exports[`Checkbox Snapshots renders as expected 2`] = `
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+
+.emotion-3 span {
+  margin-left: -6px;
 }
 
 .emotion-2 {
@@ -539,8 +547,8 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 100%;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -548,6 +556,10 @@ exports[`Checkbox Snapshots renders as expected 3`] = `
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
+}
+
+.emotion-3 span {
+  margin-left: -6px;
 }
 
 .emotion-9 {
@@ -675,8 +687,8 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 100%;
   pointer-events: none;
-  position: absolute;
   -webkit-transition: -webkit-transform 200ms ease,opacity 200ms ease;
   -webkit-transition: transform 200ms ease,opacity 200ms ease;
   transition: transform 200ms ease,opacity 200ms ease;
@@ -684,6 +696,10 @@ exports[`Checkbox Snapshots renders as expected 4`] = `
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
+}
+
+.emotion-3 span {
+  margin-left: -6px;
 }
 
 .emotion-0 {

@@ -104,13 +104,13 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       backgroundColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.disabled.background
-          : 'white',
+        ? inputColors.disabled.background
+        : 'white',
       borderColor: checked
         ? colors.blueberry400
         : disabled
-          ? inputColors.disabled.border
-          : inputColors.hoverBorder,
+        ? inputColors.disabled.border
+        : inputColors.hoverBorder,
     },
   })
 );
@@ -136,13 +136,13 @@ const CheckboxBackground = styled('div')<CheckboxProps>(
     borderColor: checked
       ? colors.blueberry400
       : disabled
-        ? inputColors.disabled.border
-        : inputColors.border,
+      ? inputColors.disabled.border
+      : inputColors.border,
     backgroundColor: checked
       ? colors.blueberry400
       : disabled
-        ? inputColors.disabled.background
-        : 'white',
+      ? inputColors.disabled.background
+      : 'white',
   })
 );
 
@@ -150,9 +150,18 @@ const CheckboxCheck = styled('div')<Pick<CheckboxProps, 'checked'>>(
   {
     display: 'flex',
     flexDirection: 'column',
+    // When using align-items: center on a flex container in the column direction,
+    // the contents of flex item, if too big, will overflow their container in IE 10-11.
+    // max-width: 100%; is a workaround
+    // https://github.com/philipwalton/flexbugs#flexbug-2
+    maxWidth: '100%',
     pointerEvents: 'none',
-    position: 'absolute',
     transition: 'transform 200ms ease, opacity 200ms ease',
+    span: {
+      // This is necessary because we're using max-width: 100% in the CheckboxCheck container
+      // in order for the Checkbox to render properly on IE 11
+      marginLeft: '-6px',
+    },
   },
   ({checked}) => ({
     opacity: checked ? 1 : 0,
