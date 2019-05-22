@@ -243,7 +243,7 @@ export default class Checkbox extends React.Component<CheckboxProps> {
             error={error}
             {...otherProps}
           />
-          <CheckboxBackground checked={checked} disabled={disabled} error={error}>
+          <CheckboxBackground checked={checked} disabled={disabled}>
             <CheckboxCheck checked={checked}>
               <SystemIcon icon={checkSmallIcon} color={iconColors.inverse} />
             </CheckboxCheck>
