@@ -94,3 +94,36 @@ Default: `false`
 | Alert | Yellow outline with alert icon. |
 
 Default: `undefined`
+
+# Color Preview
+
+A component to show a color swatch
+
+## Usage
+
+```tsx
+import * as React from 'react';
+import {ColorPreview} from '@workday/canvas-kit-color-preview';
+
+<ColorPreview value="#00FFCC" />;
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+#### `value: string`
+
+> The value entered by the user into the color input
+
+Default: `#FFFFFF`
+
+---
+
+### Optional
+
+> None

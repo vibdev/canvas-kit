@@ -11,7 +11,7 @@ describe('ColorPreview Snapshots', () => {
     const component = renderer.create(<ColorPreview value={'e6e'} />);
     expect(component).toMatchSnapshot();
   });
-  test('renders with a selected color without #', () => {
+  test('renders with a selected color with #', () => {
     const component = renderer.create(<ColorPreview value={'#e6e'} />);
     expect(component).toMatchSnapshot();
   });

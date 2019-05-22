@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '../../utils/storybook';
 
-import ColorInput from './index'; // tslint:disable-line:import-name
+import ColorInput, {ColorPreview} from './index'; // tslint:disable-line:import-name
 import README from './README.md';
 
 interface CustomColorInputWrapperState {
@@ -57,5 +57,11 @@ storiesOf('Color Picker', module)
     <div className="story">
       <h1 className="section-label">Custom Color Input</h1>
       <CustomColorInputWrapper />
+    </div>
+  ))
+  .add('Color Preview', () => (
+    <div className="story">
+      <h1 className="section-label">Custom Color Input</h1>
+      <ColorPreview value="#00FFCC" />
     </div>
   ));

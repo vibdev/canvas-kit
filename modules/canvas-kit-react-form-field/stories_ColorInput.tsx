@@ -11,7 +11,7 @@ import ColorInput from '../canvas-kit-react-color-picker';
 const hintText = 'Helpful text goes here.';
 const hintId = 'error-desc-id';
 
-storiesOf('Form Field/Color Picker/Top Label', module)
+storiesOf('Form Field/Color Picker/Color Input/Top Label', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(SectionDecorator('Color Picker'))
   .addDecorator(withReadme(README))
@@ -65,7 +65,7 @@ storiesOf('Form Field/Color Picker/Top Label', module)
     </FormField>
   ));
 
-storiesOf('Form Field/Color Picker/Left Label', module)
+storiesOf('Form Field/Color Picker/Color Input/Left Label', module)
   .addDecorator(SectionDecorator('Color Picker'))
   .addDecorator(withReadme(README))
   .add('Plain', () => (
