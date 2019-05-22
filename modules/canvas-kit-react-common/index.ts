@@ -4,3 +4,4 @@ export {makeMq} from './lib/utils/makeMq';
 export {getTranslateFromOrigin} from './lib/utils/getTranslateFromOrigin';
 export * from './lib/types';
 export * from './lib/genericStyles';
+export * from './lib/Popper';
