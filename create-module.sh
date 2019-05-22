@@ -158,6 +158,7 @@ cat > $tsconfig << EOF
     "declaration": true,
     "module": "commonjs",
     "outDir": "dist/commonjs",
+    "skipLibCheck": true,
     "tsBuildInfoFile": "./.build-info/tsconfig.cjs.tsbuildinfo"
   }
 }
