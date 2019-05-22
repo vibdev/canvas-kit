@@ -31,9 +31,9 @@ exports[`ColorPreview Snapshots renders as expected 1`] = `
   min-width: 116px;
   width: 116px;
   background-color: px;
-  pointer-events: none;
   background-color: #ffffff;
   border-color: #ffffff;
+  pointer-events: none;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -173,9 +173,9 @@ exports[`ColorPreview Snapshots renders valid empty color input 1`] = `
   min-width: 116px;
   width: 116px;
   background-color: px;
-  pointer-events: none;
   background-color: #ffffff;
   border-color: #ffffff;
+  pointer-events: none;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -315,9 +315,9 @@ exports[`ColorPreview Snapshots renders with a selected color 1`] = `
   min-width: 116px;
   width: 116px;
   background-color: px;
-  pointer-events: none;
   background-color: #ffffff;
   border-color: #ffffff;
+  pointer-events: none;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -457,9 +457,9 @@ exports[`ColorPreview Snapshots renders with a selected color with # 1`] = `
   min-width: 116px;
   width: 116px;
   background-color: px;
-  pointer-events: none;
   background-color: #ffffff;
   border-color: #ffffff;
+  pointer-events: none;
 }
 
 .emotion-2::-webkit-input-placeholder {
