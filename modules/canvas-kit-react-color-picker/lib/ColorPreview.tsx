@@ -8,9 +8,9 @@ export interface ColorPreviewProps {
 }
 
 const ColorPreviewComponent = styled(ColorInput)({
-  pointerEvents: 'none',
   backgroundColor: colors.frenchVanilla100,
   borderColor: colors.frenchVanilla100,
+  pointerEvents: 'none',
 });
 
 export default class ColorPreview extends React.Component<ColorPreviewProps> {
