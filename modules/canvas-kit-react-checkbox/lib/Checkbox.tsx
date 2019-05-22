@@ -27,7 +27,7 @@ const checkboxTapArea = spacing.m;
 const checkboxContainerHeight = checkboxTapArea + spacing.xxs;
 const checkboxLabelDistance = spacing.xs;
 const checkboxWidth = 18;
-const rippleRadius = (40 - checkboxWidth) / 2;
+const rippleRadius = (spacing.l - checkboxWidth) / 2;
 
 const CheckboxContainer = styled('div')({
   display: 'flex',
