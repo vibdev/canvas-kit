@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Radio from '../lib/Radio';
+import RadioGroup from '../lib/RadioGroup';
 import * as renderer from 'react-test-renderer';
 
 describe('Radio Snapshots', () => {
@@ -17,6 +18,15 @@ describe('Radio Snapshots', () => {
   });
   test('renders as expected', () => {
     const component = renderer.create(<Radio checked={false} disabled={false} />);
+    expect(component).toMatchSnapshot();
+  });
+  test('renders radio group with error as expected', () => {
+    const component = renderer.create(
+      <RadioGroup error={RadioGroup.ErrorType.Error}>
+        <Radio checked={true} disabled={false} />
+        <Radio checked={false} disabled={false} />
+      </RadioGroup>
+    );
     expect(component).toMatchSnapshot();
   });
 });
