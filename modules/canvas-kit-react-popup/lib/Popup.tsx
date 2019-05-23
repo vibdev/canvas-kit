@@ -24,6 +24,7 @@ export interface PopupProps {
 }
 
 const closeIconSpacing = spacing.xs;
+const closeIconSpacingSmall = 10;
 
 const popupAnimation = (transformOrigin: TransformOrigin) => {
   const translate = getTranslateFromOrigin(transformOrigin, spacing.xxs);
@@ -54,11 +55,15 @@ const Container = styled('div')<Pick<PopupProps, 'transformOrigin' | 'width'>>(
   })
 );
 
-const CloseIconContainer = styled('div')({
-  position: 'absolute',
-  right: closeIconSpacing,
-  top: closeIconSpacing,
-});
+const CloseIconContainer = styled('div')<Pick<PopupProps, 'closeIconSize'>>(
+  {
+    position: 'absolute',
+  },
+  ({closeIconSize}) => ({
+    right: closeIconSize === ButtonSizes.Small ? closeIconSpacingSmall : closeIconSpacing,
+    top: closeIconSize === ButtonSizes.Small ? closeIconSpacingSmall : closeIconSpacing,
+  })
+);
 
 export default class Popup extends React.Component<PopupProps> {
   static padding = PopupPadding;
@@ -85,7 +90,7 @@ export default class Popup extends React.Component<PopupProps> {
     return (
       <Container transformOrigin={transformOrigin} width={width} role="dialog" {...otherProps}>
         {handleClose && (
-          <CloseIconContainer>
+          <CloseIconContainer closeIconSize={closeIconSize}>
             <IconButton
               buttonType={IconButton.Types.Plain}
               buttonSize={closeIconSize}

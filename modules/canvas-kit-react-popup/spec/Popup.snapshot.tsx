@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Popup from '../lib/Popup';
 import * as renderer from 'react-test-renderer';
+import {ButtonSizes} from '@workday/canvas-kit-react';
 
 describe('Popup Snapshots', () => {
   test('renders as expected', () => {
@@ -34,6 +35,19 @@ describe('Popup Snapshots', () => {
   test('renders Popup with transformOrigin', () => {
     const component = renderer.create(
       <Popup transformOrigin={{vertical: 'top', horizontal: 'center'}} padding={Popup.padding.zero}>
+        <span>hello world</span>
+      </Popup>
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  test('renders Popup with a smaller close icon', () => {
+    const component = renderer.create(
+      <Popup
+        closeIconSize={ButtonSizes.Small}
+        transformOrigin={{vertical: 'top', horizontal: 'center'}}
+        padding={Popup.padding.zero}
+      >
         <span>hello world</span>
       </Popup>
     );
