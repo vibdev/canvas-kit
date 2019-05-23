@@ -7,6 +7,7 @@
     "spec",
     "stories.tsx",
     "stories_ColorInput.tsx",
+    "stories_ColorPreview.tsx",
     "stories_TextInput.tsx",
     "stories_TextArea.tsx"
   ]
