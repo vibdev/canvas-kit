@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.1...@workday/canvas-kit-react-toast@0.1.2) (2019-05-23)
+
+
+### Bug Fixes
+
+* adjust close icon padding and toast font size ([#381](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/issues/381)) ([c30e581](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/commits/c30e581))
+
+
+
+
+
 ## [0.1.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.0...@workday/canvas-kit-react-toast@0.1.1) (2019-05-22)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-toast
