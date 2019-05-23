@@ -29,4 +29,13 @@ describe('Radio Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders radio group with alert as expected', () => {
+    const component = renderer.create(
+      <RadioGroup error={RadioGroup.ErrorType.Alert}>
+        <Radio checked={true} disabled={false} />
+        <Radio checked={false} disabled={false} />
+      </RadioGroup>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
