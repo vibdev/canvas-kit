@@ -16,10 +16,10 @@ module.exports = {
   coverageDirectory: '<rootDir>/build/reports/jest',
   coverageThreshold: {
     global: {
-      branches: 97,
-      functions: 97,
-      lines: 97,
-      statements: 97,
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
     },
   },
   moduleFileExtensions: ['tsx', 'ts', 'js', 'jsx', 'json'],
