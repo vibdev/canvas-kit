@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import {HeaderHeight, HeaderTheme, HeaderVariant} from '../shared/types';
-import {miniWdayLogoBlue, wdayLogoWhite, wdayLogoBlue} from './_brand-assets'; // TODO: Replace with real SVGs from @workday/brand-assets
+import {miniWdayLogoBlue, wdayLogoWhite, wdayLogoBlue} from '@workday/canvas-kit-react-common'; // TODO: Replace with real SVGs from @workday/brand-assets
 import {colors, spacing} from '@workday/canvas-kit-react-core';
 import chroma from 'chroma-js';
 
