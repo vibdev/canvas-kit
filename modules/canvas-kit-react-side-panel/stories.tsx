@@ -69,7 +69,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     const {open} = this.state;
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
-      <SidePanel open={open} onClickHandler={this.onClick} title={'Side Panel Header'}>
+      <SidePanel open={open} onToggleClick={this.onClick} title={'Side Panel Header'}>
         {open ? (
           <Button buttonType={ButtonTypes.Primary}>Add New</Button>
         ) : (
@@ -127,7 +127,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   };
 }
 
-storiesOf('Canvas Kit/Side Panel', module)
+storiesOf('Side Panel', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">

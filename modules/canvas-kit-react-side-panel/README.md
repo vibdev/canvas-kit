@@ -111,7 +111,7 @@ All standard input attributes are available and can be passed to the input field
 
 ### Optional
 
-#### `onClickHandler: () => void`
+#### `onToggleClick: () => void`
 
 > Callback that handles clicking toggle button to open or close side panel.
 

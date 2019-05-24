@@ -6,7 +6,7 @@ import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
 
 export interface SidePanelProps {
   open: boolean;
-  onClickHandler?: () => void;
+  onToggleClick?: () => void;
   title?: string | React.ReactNode;
   openRight?: boolean;
   openLeft?: boolean;
@@ -51,7 +51,8 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
 
 export default class MyComponent extends React.Component<SidePanelProps> {
   public render() {
-    const {title, onClickHandler, open, openRight, openLeft, padding} = this.props;
+    const {title, onToggleClick, open, openRight, openLeft, padding} = this.props;
+
     let toggleButtonDirection;
     if (!openRight) {
       toggleButtonDirection = open ? arrowLeftIcon : arrowRightIcon;
@@ -69,13 +70,13 @@ export default class MyComponent extends React.Component<SidePanelProps> {
       >
         {title && open ? <Title>{title}</Title> : null}
         {this.props.children}
-        {onClickHandler && (
+        {onToggleClick && (
           <SidePanelToggleContainer>
             <IconButton
               buttonSize={ButtonSizes.Small}
-              onClick={onClickHandler}
+              onClick={onToggleClick}
               icon={toggleButtonDirection}
-              buttonType={IconButton.Types.Plain}
+              buttonType={IconButton.Types.Filled}
             />
           </SidePanelToggleContainer>
         )}
