@@ -338,7 +338,7 @@ components in an `InputProvider`.
 
 ```tsx
 import * as React from 'react';
-import {InputProvider} from '../../utils/storybook';
+import {InputProvider} from '../../../utils/storybook';
 
 <InputProvider>{/* All your components containing any Canvas components */}</InputProvider>;
 ```
@@ -417,7 +417,7 @@ stories in an `InputProvider` automatically.
 Example:
 
 ```js
-import {InputProviderDecorator} from '../../utils/storybook';
+import {InputProviderDecorator} from '../../../utils/storybook';
 
 storiesOf('My Story', module)
   .addDecorator(InputProviderDecorator)

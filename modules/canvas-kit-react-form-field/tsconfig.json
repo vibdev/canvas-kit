@@ -1,14 +1,4 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": [
-    "node_modules",
-    "ts-tmp",
-    "dist",
-    "spec",
-    "stories.tsx",
-    "stories_ColorInput.tsx",
-    "stories_ColorPreview.tsx",
-    "stories_TextInput.tsx",
-    "stories_TextArea.tsx"
-  ]
+  "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories"]
 }

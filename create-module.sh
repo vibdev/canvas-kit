@@ -109,16 +109,17 @@ export * from './lib/MyComponent';
 EOF
 
 # Create stories.tsx
-storiesJs="$path/stories.tsx"
+mkdir "$path/stories"
+storiesJs="$path/stories/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
-/// <reference path="../../typings.d.ts" />
-import * as React from 'react'
-import {storiesOf} from '@storybook/react'
-import withReadme from 'storybook-readme/with-readme'
+/// <reference path="../../../typings.d.ts" />
+import * as React from 'react';
+import {storiesOf} from '@storybook/react';
+import withReadme from 'storybook-readme/with-readme';
 
-import MyComponent from './index' // tslint:disable-line:import-name
-import README from './README.md'
+import MyComponent from '..';
+import README from '../README.md';
 
 storiesOf('Canvas Kit/$upperName', module)
   .addDecorator(withReadme(README))
@@ -127,7 +128,7 @@ storiesOf('Canvas Kit/$upperName', module)
       <h1 className="section-label">$upperName</h1>
       <MyComponent />
     </div>
-  ))
+  ));
 
 EOF
 
@@ -144,7 +145,7 @@ echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories.tsx"]
+  "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories"]
 }
 EOF
 
