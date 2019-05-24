@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.10...@workday/canvas-kit-react-header@0.5.11) (2019-05-24)
+
+
+### Bug Fixes
+
+* **header:** Move workday logo from header into canvas kit react common module ([#385](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/issues/385)) ([7cdffea](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/7cdffea))
+
+
+
+
+
 ## [0.5.10](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.9...@workday/canvas-kit-react-header@0.5.10) (2019-05-22)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-header
