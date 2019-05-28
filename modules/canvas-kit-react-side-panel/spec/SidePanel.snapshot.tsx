@@ -21,14 +21,14 @@ describe('SidePanel Snapshots', () => {
   });
   test('renders a toggle button', () => {
     const component = renderer.create(
-      <SidePanel onClickHandler={jest.fn} title={'Side Panel Header'} open={false} />
+      <SidePanel onToggleClick={jest.fn} title={'Side Panel Header'} open={false} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders side panel on the right with correct toggle button when panel is closed', () => {
     const component = renderer.create(
       <SidePanel
-        onClickHandler={jest.fn}
+        onToggleClick={jest.fn}
         openRight={true}
         title={'Side Panel Header'}
         open={false}
@@ -38,12 +38,7 @@ describe('SidePanel Snapshots', () => {
   });
   test('renders side panel on the right with correct toggle button when panel is open', () => {
     const component = renderer.create(
-      <SidePanel
-        onClickHandler={jest.fn}
-        openRight={true}
-        title={'Side Panel Header'}
-        open={true}
-      />
+      <SidePanel onToggleClick={jest.fn} openRight={true} title={'Side Panel Header'} open={true} />
     );
     expect(component).toMatchSnapshot();
   });
