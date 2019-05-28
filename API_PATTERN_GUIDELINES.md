@@ -1,6 +1,6 @@
 # API & Pattern Guidelines
 
-Note: This repo hasn't seen a full audit, so you may find examples that contradict these guidelines.
+Note: This repo hasn't seen a full audit, so you may find examples that contradict these guidelines. Some of the below rules are inspired by painpoints we've encountered in this project.
 
 
 ## Canvas:
@@ -18,6 +18,10 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 - Prop names should never include the component name (e.g. `type`, not `buttonType`)
 - Use the same props for the same concepts across components
+- Favor color-, position-, and size-agnostic names. For example:
+  - blueIcon can be bad because it may not be blue to everyone and changing colors or making colors variable is a breaking change.
+  - leftIcon can be bad because we can change the position with RTL or add something to the left of that, then it wouldn't make sense anymore.
+  - mediumIcon can be bad if we add another size in between... then which one is medium? Is it mediumLarge now?
 
 #### T-shirt sizes
 
@@ -44,14 +48,14 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 - Include component name unless it's a generic enum shared across components
 
 - ```
-  ButtonTypes {
+  ButtonType {
     Primary = 'primary',
     Secondary = 'secondary',
     Delete = 'delete',
   }
   ```
 
-- Exclude component in default props:
+- Exclude component in default props (`Button.Type` vs. `Button.ButtonType`):
 
   ```
   class Button extends React.Component<ButtonProps> {
@@ -74,7 +78,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 #### Event Handlers
 
 - Use standard browser events wherever possible
-- All event handlers should receive an event unless there's a good reason otherwise. This is for consumer predictability.
+- All event handlers should receive an event unless there's a good reason otherwise. This is for consumer predictability. In other words, always opt for `onChange: e => void` over `onChange: () => void` or `onChange: value => void`, etc. where possible.
 
 #### Grow Interface
 
@@ -116,18 +120,32 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 ### Prop spread behavior
 
-- (extend base elem)
-- When you spread props, you should know all the props you're spreading
-- Only spread props on one component (or create a specific prop to spread (e.g. `inputProps`))
+- Extend the interface of the primary element/component in your component (e.g. `export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>`)
+- Intentionally destructure your props so that every prop is assigned. This allows us to use spread the way I think it was intended. 
+
+```
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  type: ButtonType,
+  size: ButtonSize,
+  icon: CanvasIcon
+}
+
+// ...somewhere in your button render()
+const { type, size, icon, ...elemProps } = this.props
+<ButtonContainer type={type} size={size} icon={icon} {...elemProps} />
+```
+
+- Only spread props on one element/component (or create a specific prop to spread (e.g. `inputProps`))
 
 
 
 ### Controlled components
 
 - We opt for controlled components wherever possible.
-- We aim to manage the least amount of state within our project as possible.
-- Always stick with the default `value` and `onChange` if you can
-- Deviate where it makes sense (e.g. `checked` and `onChange` for checkboxes).
+- We aim to manage the least amount of state within our components as possible.
+- For input type components:
+  - Always stick with the default `value` and `onChange` if you can
+  - Deviate where it makes sense and/or is required (e.g. `checked` and `onChange` for checkboxes).
 
 
 
