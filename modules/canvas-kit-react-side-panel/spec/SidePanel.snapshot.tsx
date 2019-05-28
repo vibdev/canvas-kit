@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SidePanel from '../lib/SidePanel';
+import SidePanel, {SidePanelOpenDirection} from '../lib/SidePanel';
 import * as renderer from 'react-test-renderer';
 
 describe('SidePanel Snapshots', () => {
@@ -29,7 +29,7 @@ describe('SidePanel Snapshots', () => {
     const component = renderer.create(
       <SidePanel
         onToggleClick={jest.fn}
-        openRight={true}
+        openDirection={SidePanelOpenDirection.Right}
         title={'Side Panel Header'}
         open={false}
       />
@@ -38,13 +38,22 @@ describe('SidePanel Snapshots', () => {
   });
   test('renders side panel on the right with correct toggle button when panel is open', () => {
     const component = renderer.create(
-      <SidePanel onToggleClick={jest.fn} openRight={true} title={'Side Panel Header'} open={true} />
+      <SidePanel
+        onToggleClick={jest.fn}
+        openDirection={SidePanelOpenDirection.Right}
+        title={'Side Panel Header'}
+        open={true}
+      />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders side panel on the left', () => {
     const component = renderer.create(
-      <SidePanel openLeft={true} title={'Side Panel Header'} open={true} />
+      <SidePanel
+        openDirection={SidePanelOpenDirection.Left}
+        title={'Side Panel Header'}
+        open={true}
+      />
     );
     expect(component).toMatchSnapshot();
   });

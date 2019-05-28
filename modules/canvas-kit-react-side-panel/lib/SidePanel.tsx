@@ -8,9 +8,13 @@ export interface SidePanelProps {
   open: boolean;
   onToggleClick?: () => void;
   title?: string | React.ReactNode;
-  openRight?: boolean;
-  openLeft?: boolean;
+  openDirection?: SidePanelOpenDirection;
   padding?: CanvasSpacingValue;
+}
+
+export enum SidePanelOpenDirection {
+  Left,
+  Right,
 }
 
 const openSidePanelWidth = 300;
@@ -34,27 +38,34 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
     transition: 'width 150ms ease-out 0s',
     position: 'absolute',
   },
-  ({open, openRight, openLeft, padding}) => ({
+  ({open, openDirection, padding}) => ({
     boxShadow: !open ? '0 8px 16px -8px rgba(0, 0, 0, 0.16)' : '',
     backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
     width: open ? openSidePanelWidth : spacing.xl,
     padding: open ? padding || spacing.m : spacing.zero,
-    right: openRight && !openLeft ? spacing.zero : '',
-    left: openLeft && !openRight ? spacing.zero : '',
+    right:
+      openDirection === SidePanelOpenDirection.Right && !SidePanelOpenDirection.Left
+        ? spacing.zero
+        : '',
+    left:
+      openDirection === SidePanelOpenDirection.Left && !SidePanelOpenDirection.Right
+        ? spacing.zero
+        : '',
     alignItems: open ? '' : 'center',
     [`${SidePanelToggleContainer}`]: {
-      right: open && !openRight ? spacing.s : '',
-      left: openRight && open ? spacing.s : '',
+      right: open && !SidePanelOpenDirection.Right ? spacing.s : '',
+      left: openDirection === SidePanelOpenDirection.Right && open ? spacing.s : '',
     },
   })
 );
 
 export default class MyComponent extends React.Component<SidePanelProps> {
+  static SidePanelOpenDirection = SidePanelOpenDirection;
   public render() {
-    const {title, onToggleClick, open, openRight, openLeft, padding} = this.props;
+    const {title, onToggleClick, open, openDirection, padding} = this.props;
 
     let toggleButtonDirection;
-    if (!openRight) {
+    if (openDirection !== SidePanelOpenDirection.Right) {
       toggleButtonDirection = open ? arrowLeftIcon : arrowRightIcon;
     } else {
       toggleButtonDirection = open ? arrowRightIcon : arrowLeftIcon;
@@ -64,8 +75,7 @@ export default class MyComponent extends React.Component<SidePanelProps> {
         aria-expanded={open}
         aria-orientation="vertical"
         padding={padding}
-        openLeft={openLeft}
-        openRight={openRight}
+        openDirection={openDirection}
         open={open}
       >
         {title && open ? <Title>{title}</Title> : null}

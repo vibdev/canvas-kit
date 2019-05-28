@@ -6,7 +6,7 @@ surface information of either left or right side of the screen.
 ## Installation
 
 ```sh
-yarn add @workday/canvas-kit-react-side-panel
+yarn add @workday/canvas-kit-react
 ```
 
 or
@@ -32,13 +32,13 @@ import SidePanel from '@workday/canvas-kit-react-side-panel';
 
 interface SidePanelState {
   open: boolean;
-  isResponsive: boolean;
+  responsive: boolean;
 }
 
 class SidePanelExample extends React.Component<{}, SidePanelState> {
   public state = {
     open: true,
-    isResponsive: true,
+    responsive: true,
   };
   public componentDidMount() {
     window.addEventListener('resize', this.handleResize);
@@ -68,10 +68,10 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
 
   private onClick = () => {
     const threshold = window.innerWidth > 924;
-    const isResponsive = (threshold && !this.state.open) || (!threshold && this.state.open);
+    const responsive = (threshold && !this.state.open) || (!threshold && this.state.open);
     this.setState({
       open: !this.state.open,
-      isResponsive,
+      responsive,
     });
   };
 

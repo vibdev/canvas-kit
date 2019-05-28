@@ -105,7 +105,7 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
 }
 
 .emotion-2 .ezxdcmp1 {
-  right: 16px;
+  right: px;
   left: px;
 }
 
@@ -159,7 +159,7 @@ exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
 }
 
 .emotion-0 .ezxdcmp1 {
-  right: 16px;
+  right: px;
   left: px;
 }
 
@@ -413,7 +413,7 @@ exports[`SidePanel Snapshots renders as expected 1`] = `
 }
 
 .emotion-0 .ezxdcmp1 {
-  right: 16px;
+  right: px;
   left: px;
 }
 
@@ -426,15 +426,6 @@ exports[`SidePanel Snapshots renders as expected 1`] = `
 `;
 
 exports[`SidePanel Snapshots renders side panel on the left 1`] = `
-.emotion-0 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #333333;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-top: 0px;
-}
-
 .emotion-2 {
   height: 100%;
   box-sizing: border-box;
@@ -453,7 +444,7 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
   width: 300px;
   padding: 24px;
   right: px;
-  left: 0px;
+  left: px;
   -webkit-align-items: px;
   -webkit-box-align: px;
   -ms-flex-align: px;
@@ -461,8 +452,17 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
 }
 
 .emotion-2 .ezxdcmp1 {
-  right: 16px;
+  right: px;
   left: px;
+}
+
+.emotion-0 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  margin-top: 0px;
 }
 
 <div

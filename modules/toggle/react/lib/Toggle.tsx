@@ -76,6 +76,7 @@ export default class ToggleSwitch extends React.Component<ToggleProps> {
 
   public render() {
     const {checked, disabled, id, inputRef, onChange, value, ...otherProps} = this.props;
+
     return (
       <ToggleContainer>
         <ToggleInput

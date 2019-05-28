@@ -1,14 +1,14 @@
-/// <reference path="../../typings.d.ts" />
+/// <reference path="../../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
+import {InputProviderDecorator} from '../../../utils/storybook';
 import {homeIcon, starIcon, rocketIcon, plusIcon} from '@workday/canvas-system-icons-web';
 import styled from 'react-emotion';
 import {css} from 'emotion';
 
 import {colors, type} from '@workday/canvas-kit-react-core';
-import SidePanel from './index'; // tslint:disable-line:import-name
-import README from './README.md';
+import README from '../README.md';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {Header} from '@workday/canvas-kit-react-header';
 import {
@@ -20,11 +20,15 @@ import {
 } from '@workday/canvas-kit-react-button';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
 
+import SidePanel from '..'; // tslint:disable-line:import-name
+import {SidePanelOpenDirection} from '../lib/SidePanel';
+
 interface SidePanelState {
   open: boolean;
   isResponsive: boolean;
 }
 
+// TODO replace this with our list component
 const ListItem = styled('li')({
   display: 'flex',
   listStyle: 'none',
@@ -69,7 +73,12 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     const {open} = this.state;
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
-      <SidePanel open={open} onToggleClick={this.onClick} title={'Side Panel Header'}>
+      <SidePanel
+        openDirection={SidePanelOpenDirection.Right}
+        open={open}
+        onToggleClick={this.onClick}
+        title={'Side Panel Header'}
+      >
         {open ? (
           <Button buttonType={ButtonTypes.Primary}>Add New</Button>
         ) : (
@@ -128,6 +137,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
 }
 
 storiesOf('Side Panel', module)
+  .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
