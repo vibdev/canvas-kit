@@ -111,7 +111,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     },
     ...mouseFocusBehavior({
       '&:focus ~ div:first-of-type': {
-        border: '1px solid ' + inputColors.border,
+        border: `1px solid ${inputColors.border}`,
         boxShadow: 'none',
       },
       '&:checked ~ div:first-of-type': {
@@ -131,7 +131,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     } else if (error === ErrorType.Alert) {
       errorRingColor = inputColors.warning.border;
     } else {
-      return {};
+      return;
     }
     const errorStyles = {
       '& ~ div:first-of-type': {
