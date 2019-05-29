@@ -2,21 +2,12 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import {colors} from '@workday/canvas-kit-react-core';
 import {focusRing, hideMouseFocus} from '@workday/canvas-kit-react-common';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {SystemIconCircle, SystemIconCircleSize} from '@workday/canvas-kit-react-icon';
 import {userIcon} from '@workday/canvas-system-icons-web';
 
 export enum AvatarTheme {
   Light,
   Dark,
-}
-
-export enum AvatarSize {
-  xs = 16,
-  s = 24,
-  m = 32,
-  l = 40,
-  xl = 64,
-  xxl = 120,
 }
 
 export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,7 +18,7 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /**
    * An AvatarSize enum or number value indicating the size of the avatar
    */
-  size: AvatarSize | number;
+  size: SystemIconCircleSize | number;
   /**
    * The url of the users avatar photo
    */
@@ -57,15 +48,11 @@ const Container = styled('button')<AvatarProps>(
       height: '100%',
     },
   },
-  ({themeColor, size, url, onClick}) => ({
+  ({themeColor, size, onClick}) => ({
+    background: themeColor === AvatarTheme.Dark ? colors.blueberry400 : colors.soap300,
     height: size,
     width: size,
     cursor: onClick ? 'pointer' : 'default',
-    backgroundColor: url
-      ? undefined
-      : themeColor === AvatarTheme.Dark
-        ? colors.blueberry400
-        : colors.soap300,
     '&:not([disabled])': {
       '&:focus': {
         outline: 'none',
@@ -78,33 +65,27 @@ const Container = styled('button')<AvatarProps>(
 
 export default class Avatar extends React.Component<AvatarProps> {
   static ThemeColor = AvatarTheme;
-  static Size = AvatarSize;
+  static Size = SystemIconCircleSize;
+
   static defaultProps = {
     themeColor: AvatarTheme.Light,
-    size: AvatarSize.m,
+    size: SystemIconCircleSize.m,
   };
 
   render() {
-    const {buttonRef, themeColor, size, url, onClick} = this.props;
+    const {buttonRef, themeColor, size, url, onClick, ...elemProps} = this.props;
 
-    const iconColor =
-      themeColor === AvatarTheme.Dark ? colors.frenchVanilla100 : colors.licorice400;
-    const iconColorHover =
-      themeColor === AvatarTheme.Dark ? colors.blueberry100 : colors.licorice500;
-    const iconSize = size * 0.625;
-
+    const background = themeColor === AvatarTheme.Dark ? colors.blueberry400 : colors.soap300;
     return (
-      <Container {...this.props} disabled={onClick ? false : true} innerRef={buttonRef}>
-        {url ? (
-          <img src={url} />
-        ) : (
-          <SystemIcon
-            icon={userIcon}
-            color={iconColor}
-            colorHover={onClick ? iconColorHover : iconColor}
-            size={iconSize}
-          />
-        )}
+      <Container
+        {...elemProps}
+        themeColor={themeColor}
+        size={size}
+        onClick={onClick}
+        disabled={onClick ? false : true}
+        innerRef={buttonRef}
+      >
+        {url ? <img src={url} /> : <SystemIconCircle icon={userIcon} background={background} />}
       </Container>
     );
   }
