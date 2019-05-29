@@ -72,6 +72,8 @@ Default: `56`
 
 Default: `false`
 
+---
+
 # Applet Icons
 
 ## Usage
@@ -145,6 +147,8 @@ Default: `AppletIcon.Colors.Blueberry`
 > Size of the icon in `px`.
 
 Default: `92`
+
+---
 
 # System Icons
 
@@ -244,6 +248,56 @@ Default: `'transparent'`
 #### `fillHover: string`
 
 > `.wd-icon-fill` color on hover. This will override `colorHover`.
+
+---
+
+# System Icon Circle
+
+A system icon with a colored circular background. Icon color will be determined based on contrast
+against the background color provided.
+
+## Usage
+
+Use with `@workday/canvas-accent-icons-web`.
+
+```tsx
+import { colors } from '@workday/canvas-kit-react-core'
+import { SystemIconCircle } from '@workday/canvas-kit-react-icon'
+import { shieldIcon } from '@workday/canvas-accent-icons-web'
+
+<SystemIconCircle icon={shieldIcon} />
+<SystemIconCircle icon={shieldIcon} background={colors.pomegranate500} />
+```
+
+## Static Properties
+
+> None
+
+## Component Props
+
+### Required
+
+#### `icon: CanvasIcon`
+
+> Icon to display from `@workday/canvas-accent-icons-web`.
+
+### Optional
+
+#### `background: string`
+
+> Background color from `@workday/canvas-colors-web`.
+
+Default: `colors.soap300`
+
+---
+
+#### `size: SystemIconCircleSize | number`
+
+> Size of the icon.
+
+Default: `SystemIconCircleSize.l` (`40`)
+
+---
 
 # Graphics
 
