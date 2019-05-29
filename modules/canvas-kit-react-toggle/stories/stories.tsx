@@ -37,6 +37,9 @@ storiesOf('Toggle', module)
   .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Toggle</h1>
+      <h3>Default</h3>
       <ToggleSwitchWrapper />
+      <h3>Disabled</h3>
+      <Toggle disabled={true} checked={false} />
     </div>
   ));
