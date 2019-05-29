@@ -21,19 +21,21 @@ const hexToRgb = (hex: string) => {
 
 /**
  *
- * Chooses luminance color depending on the rgb value. Eventually should be replaced
- * by by Chroma 2.0
+ * Chooses luminance color depending on the rgb value of the background color.
+ * Eventually should be replaced by by Chroma 2.0
  */
-export const pickDarkOrLightColor = (color: string) => {
-  const rgbColor = hexToRgb(color);
+export const pickForegroundColor = (
+  background: string,
+  darkColor: string = colors.blackPepper600,
+  lightColor: string = colors.frenchVanilla100
+) => {
+  const rgbColor = hexToRgb(background);
   if (rgbColor) {
     const r: number = rgbColor.r;
     const g: number = rgbColor.g;
     const b: number = rgbColor.b;
     /** Based on : https://www.w3.org/TR/WCAG20-TECHS/G18.html */
-    return r * 0.299 + g * 0.587 + b * 0.114 > 186
-      ? colors.blackPepper600
-      : colors.frenchVanilla100;
+    return r * 0.299 + g * 0.587 + b * 0.114 > 186 ? darkColor : lightColor;
   } else {
     return;
   }
