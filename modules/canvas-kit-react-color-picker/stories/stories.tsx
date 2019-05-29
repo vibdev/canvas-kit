@@ -13,7 +13,7 @@ interface CustomColorInputWrapperState {
 }
 
 export default class CustomColorInputWrapper extends React.Component<
-  {},
+  {checkbox: boolean; growing?: boolean},
   CustomColorInputWrapperState
 > {
   state = {
@@ -25,14 +25,13 @@ export default class CustomColorInputWrapper extends React.Component<
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
-          showCheck={true}
+          showCheck={this.props.checkbox}
           onChange={this.onChange}
           value={this.state.color}
           onValidColorChange={this.validColorChange}
           disabled={false}
-          grow={false}
+          grow={this.props.growing}
         />
-        <h3 style={{color: this.state.validColor}}>Change My Text Color</h3>
       </div>
     );
   }
@@ -55,13 +54,21 @@ storiesOf('Color Picker', module)
   .addDecorator(withReadme(README))
   .add('Color Input', () => (
     <div className="story">
-      <h1 className="section-label">Custom Color Input</h1>
-      <CustomColorInputWrapper />
+      <h1 className="section-label">Color Input</h1>
+      <h3>Color Input</h3>
+      <CustomColorInputWrapper checkbox={true} />
+      <h3>Color Input Without Checkbox</h3>
+      <CustomColorInputWrapper checkbox={false} />
+      <h3>Color Input Disabled</h3>
+      <ColorInput value={'EEEEEE'} showCheck={true} disabled={true} grow={false} />
+      <h3>Growing Color Input</h3>
+      <CustomColorInputWrapper checkbox={true} growing={true} />
     </div>
   ))
   .add('Color Preview', () => (
     <div className="story">
-      <h1 className="section-label">Custom Color Input</h1>
+      <h1 className="section-label">Color Preview</h1>
+      <h3>Default</h3>
       <ColorPreview value="#00FFCC" />
     </div>
   ));
