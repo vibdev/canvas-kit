@@ -5,6 +5,7 @@ import {colors} from '@workday/canvas-kit-react-core';
 
 export interface ColorPreviewProps {
   value: string;
+  id?: string;
 }
 
 const ColorPreviewComponent = styled(ColorInput)({
@@ -15,6 +16,6 @@ const ColorPreviewComponent = styled(ColorInput)({
 
 export default class ColorPreview extends React.Component<ColorPreviewProps> {
   public render() {
-    return <ColorPreviewComponent value={this.props.value} readOnly={true} />;
+    return <ColorPreviewComponent id={this.props.id} value={this.props.value} readOnly={true} />;
   }
 }
