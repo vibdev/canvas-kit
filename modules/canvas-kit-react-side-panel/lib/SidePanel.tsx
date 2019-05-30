@@ -10,9 +10,9 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   onToggleClick?: () => void;
   header?: string | React.ReactNode;
   openDirection?: SidePanelOpenDirection;
-  breakpointChange?: (open: boolean) => void;
+  breakpointChange: (open: boolean) => void;
   padding?: CanvasSpacingValue;
-  breakpoint: number;
+  breakpoint?: number;
 }
 
 export interface SidePanelState {
@@ -75,14 +75,10 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   public componentDidMount() {
-    if (this.props.breakpointChange) {
-      window.addEventListener('resize', throttle(this.handleResize, 150));
-    }
+    window.addEventListener('resize', throttle(this.handleResize, 150));
   }
   public componentWillUnmount() {
-    if (this.props.breakpointChange) {
-      window.addEventListener('resize', throttle(this.handleResize, 150));
-    }
+    window.addEventListener('resize', throttle(this.handleResize, 150));
   }
 
   public render() {
@@ -121,15 +117,13 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   private handleResize = () => {
-    if (this.props.breakpointChange) {
-      const threshold = window.innerWidth > this.props.breakpoint;
-      if (this.state.responsive) {
-        if (threshold && !this.props.open) {
-          this.props.breakpointChange(true);
-        }
-        if (!threshold && this.props.open) {
-          this.props.breakpointChange(false);
-        }
+    const threshold = window.innerWidth > this.props.breakpoint;
+    if (this.state.responsive) {
+      if (threshold && !this.props.open) {
+        this.props.breakpointChange(true);
+      }
+      if (!threshold && this.props.open) {
+        this.props.breakpointChange(false);
       }
     }
   };

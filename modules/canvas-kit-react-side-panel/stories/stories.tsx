@@ -6,6 +6,7 @@ import {InputProviderDecorator} from '../../../utils/storybook';
 import {homeIcon, starIcon, rocketIcon, plusIcon} from '@workday/canvas-system-icons-web';
 import styled from 'react-emotion';
 import {css} from 'emotion';
+import {select} from '@storybook/addon-knobs';
 
 import {colors, type} from '@workday/canvas-kit-react-core';
 import README from '../README.md';
@@ -25,7 +26,6 @@ import {SidePanelOpenDirection} from '../lib/SidePanel';
 
 interface SidePanelState {
   open: boolean;
-  isResponsive: boolean;
 }
 
 // TODO replace this with our list component
@@ -58,10 +58,16 @@ const listItemClosed = css({
   marginRight: 0,
 });
 
+const label = 'open direction';
+const options = {
+  left: SidePanelOpenDirection.Left,
+  right: SidePanelOpenDirection.Right,
+};
+const defaultValue = SidePanelOpenDirection.Left;
+
 class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   public state = {
     open: true,
-    isResponsive: true,
   };
 
   public render() {
@@ -69,11 +75,11 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
       <SidePanel
-        openDirection={SidePanelOpenDirection.Left}
+        openDirection={select(label, options, defaultValue)}
         open={open}
         onToggleClick={this.onClick}
         breakpoint={800}
-        breakpointChange={this.test}
+        breakpointChange={this.handleBreakpoint}
         header={'Side Panel Header'}
       >
         {open ? (
@@ -113,7 +119,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     });
   };
 
-  private test = (open: boolean) => {
+  private handleBreakpoint = (open: boolean) => {
     this.setState({
       open: open,
     });
