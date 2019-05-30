@@ -74,6 +74,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
     }
 
     switch (buttonType) {
+      case IconButtonTypes.SquareFilled:
       default:
         return {
           '&:focus&:hover, &:focus, &:active': {
@@ -94,23 +95,20 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
         };
       case IconButtonTypes.Square:
         return {
-          '&:active': {
+          '&:focus&:hover, &:focus, &:active': {
+            backgroundColor: colors.soap300,
             ...getFillSelector(colors.blueberry400),
-            ...getAccentSelector(colors.frenchVanilla100),
+            ...getAccentSelector(colors.blueberry400),
           },
-          ...getBackgroundSelector(colors.blueberry400),
-          ...getFillSelector(colors.blueberry400),
-          ...getAccentSelector(colors.frenchVanilla100),
-        };
-      case IconButtonTypes.SquareFilled:
-        return {
-          '&:active': {
-            ...getFillSelector(colors.blueberry400),
-            ...getAccentSelector(colors.soap200),
+          '&:not([disabled]):focus': {
+            ...(toggled ? focusRing(2, 2) : {}),
           },
-          ...getBackgroundSelector(colors.blueberry400),
+          '&:hover': {
+            backgroundColor: colors.soap300,
+          },
+          backgroundColor: colors.frenchVanilla100,
           ...getFillSelector(colors.blueberry400),
-          ...getAccentSelector(colors.soap200),
+          ...getAccentSelector(colors.blueberry400),
         };
       case IconButtonTypes.Default:
         return {

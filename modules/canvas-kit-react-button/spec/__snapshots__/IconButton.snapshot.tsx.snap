@@ -397,6 +397,7 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
   background-color: #ffffff;
   border-color: #ced3d9;
   color: #333333;
+  background-color: #ffffff;
 }
 
 .emotion-1:hover:active {
@@ -486,21 +487,44 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
+.emotion-1:focus.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  background-color: #e8ebed;
+}
+
+.emotion-1:focus.emotion-1:hover:focus span .wd-icon-fill,
+.emotion-1:focus:focus span .wd-icon-fill,
 .emotion-1:active:focus span .wd-icon-fill,
+.emotion-1:focus.emotion-1:hover:hover span .wd-icon-fill,
+.emotion-1:focus:hover span .wd-icon-fill,
 .emotion-1:active:hover span .wd-icon-fill,
+.emotion-1:focus.emotion-1:hover span .wd-icon-fill,
+.emotion-1:focus span .wd-icon-fill,
 .emotion-1:active span .wd-icon-fill {
   fill: #0875e1;
 }
 
+.emotion-1:focus.emotion-1:hover:focus span .wd-icon-accent,
+.emotion-1:focus:focus span .wd-icon-accent,
 .emotion-1:active:focus span .wd-icon-accent,
+.emotion-1:focus.emotion-1:hover:hover span .wd-icon-accent,
+.emotion-1:focus:hover span .wd-icon-accent,
 .emotion-1:active:hover span .wd-icon-accent,
+.emotion-1:focus.emotion-1:hover span .wd-icon-accent,
+.emotion-1:focus span .wd-icon-accent,
 .emotion-1:active span .wd-icon-accent {
-  fill: #ffffff;
+  fill: #0875e1;
 }
 
-.emotion-1:hover span .wd-icon-background,
-.emotion-1 span .wd-icon-background {
-  fill: #0875e1;
+.emotion-1:not([disabled]):focus {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+}
+
+.emotion-1:hover {
+  background-color: #e8ebed;
 }
 
 .emotion-1:focus span .wd-icon-fill,
@@ -512,7 +536,7 @@ exports[`Icon Button Snapshots renders an icon button, toggled 1`] = `
 .emotion-1:focus span .wd-icon-accent,
 .emotion-1:hover span .wd-icon-accent,
 .emotion-1 span .wd-icon-accent {
-  fill: #ffffff;
+  fill: #0875e1;
 }
 
 <button
