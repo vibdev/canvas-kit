@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-card",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "description": "Common Canvas card component for React",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",

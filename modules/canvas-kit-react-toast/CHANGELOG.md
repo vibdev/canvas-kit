@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.3...@workday/canvas-kit-react-toast@0.1.4) (2019-05-30)
+
+
+### Bug Fixes
+
+* **Card:** background color should be white ([31955bd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/commits/31955bd))
+
+
+
+
+
 ## [0.1.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.2...@workday/canvas-kit-react-toast@0.1.3) (2019-05-24)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-toast

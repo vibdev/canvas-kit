@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.13](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.12...@workday/canvas-kit-react-menu@0.0.13) (2019-05-30)
+
+
+### Bug Fixes
+
+* **Card:** background color should be white ([31955bd](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/31955bd))
+
+
+
+
+
 ## [0.0.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.11...@workday/canvas-kit-react-menu@0.0.12) (2019-05-24)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-menu
