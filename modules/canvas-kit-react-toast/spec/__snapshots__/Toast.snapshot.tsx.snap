@@ -17,6 +17,7 @@ exports[`Toast Snapshots renders as expected 1`] = `
 }
 
 .emotion-5 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -134,6 +135,7 @@ exports[`Toast Snapshots renders with a close button 1`] = `
 }
 
 .emotion-9 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -429,6 +431,7 @@ exports[`Toast Snapshots renders with an action link 1`] = `
 }
 
 .emotion-11 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -759,6 +762,7 @@ exports[`Toast Snapshots renders with an icon 1`] = `
 }
 
 .emotion-9 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
