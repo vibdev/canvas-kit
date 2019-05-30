@@ -173,15 +173,15 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child a {
+.emotion-16 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child a {
+.emotion-16 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li a {
+.emotion-16 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -198,7 +198,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
   height: inherit;
 }
 
-.emotion-16 nav ul li a:visited {
+.emotion-16 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -714,15 +714,15 @@ exports[`App GlobalHeader Snapshots renders a header with a search bar 1`] = `
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child a {
+.emotion-16 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child a {
+.emotion-16 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li a {
+.emotion-16 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -739,7 +739,7 @@ exports[`App GlobalHeader Snapshots renders a header with a search bar 1`] = `
   height: inherit;
 }
 
-.emotion-16 nav ul li a:visited {
+.emotion-16 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -1190,15 +1190,15 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   cursor: pointer;
 }
 
-.emotion-24 nav ul li:first-child a {
+.emotion-24 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-24 nav ul li:last-child a {
+.emotion-24 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-24 nav ul li a {
+.emotion-24 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1215,7 +1215,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   height: inherit;
 }
 
-.emotion-24 nav ul li a:visited {
+.emotion-24 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -1924,15 +1924,15 @@ exports[`App GlobalHeader Snapshots renders an app header 1`] = `
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child a {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child a {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1949,7 +1949,7 @@ exports[`App GlobalHeader Snapshots renders an app header 1`] = `
   height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -2168,15 +2168,15 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   cursor: pointer;
 }
 
-.emotion-14 nav ul li:first-child a {
+.emotion-14 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-14 nav ul li:last-child a {
+.emotion-14 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-14 nav ul li a {
+.emotion-14 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2193,7 +2193,7 @@ exports[`App GlobalHeader Snapshots renders an app header width Workday Logo 1`]
   height: inherit;
 }
 
-.emotion-14 nav ul li a:visited {
+.emotion-14 nav ul li > *:visited {
   color: inherit;
 }
 

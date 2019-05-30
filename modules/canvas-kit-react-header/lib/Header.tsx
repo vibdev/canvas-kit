@@ -145,13 +145,13 @@ const navStyle = (props: HeaderProps) => {
           height: 'inherit',
           transition: `color 150ms ease-out 0s`,
           cursor: 'pointer',
-          '&:first-child a': {
+          '&:first-child > *': {
             marginLeft: 0,
           },
-          '&:last-child a': {
+          '&:last-child > *': {
             marginRight: 0,
           },
-          '& a': {
+          '& > *': {
             color: 'inherit',
             textDecoration: 'none',
             padding: `0px ${spacing.s}`,
