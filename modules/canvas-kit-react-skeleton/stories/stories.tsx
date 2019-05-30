@@ -19,43 +19,55 @@ const FlexContainer = styled('div')({
 
 storiesOf('Skeleton', module)
   .addDecorator(withReadme(README))
-  .add('Skeleton', () => {
+  .add('Complete Skeleton', () => {
     return (
-      <Skeleton>
-        <FlexContainer>
-          <SkeletonShape width={50} height={50} borderRadius={99} />
-          <Container>
-            <SkeletonHeader />
-          </Container>
-        </FlexContainer>
-        <div>
-          <SkeletonText lineCount={3} />
-        </div>
-      </Skeleton>
+      <div className="story">
+        <h1 className="section-label">Complete Skeleton</h1>
+        <Skeleton>
+          <FlexContainer>
+            <SkeletonShape width={50} height={50} borderRadius={99} />
+            <Container>
+              <SkeletonHeader />
+            </Container>
+          </FlexContainer>
+          <div>
+            <SkeletonText lineCount={3} />
+          </div>
+        </Skeleton>
+      </div>
     );
   })
-  .add('Parts/SkeletonHeader', () => {
+  .add('Skeleton Header', () => {
     return (
-      <Skeleton>
-        <SkeletonHeader />
-      </Skeleton>
+      <div className="story">
+        <h1 className="section-label">Skeleton Header</h1>
+        <Skeleton>
+          <SkeletonHeader />
+        </Skeleton>
+      </div>
     );
   })
-  .add('Parts/SkeletonShape', () => {
+  .add('Skeleton Shape', () => {
     return (
-      <Skeleton>
-        <SkeletonShape
-          width={number('width', 100)}
-          height={number('height', 100)}
-          borderRadius={number('borderRadius', 99)}
-        />
-      </Skeleton>
+      <div className="story">
+        <h1 className="section-label">Skeleton Shape</h1>
+        <Skeleton>
+          <SkeletonShape
+            width={number('width', 100)}
+            height={number('height', 100)}
+            borderRadius={number('borderRadius', 99)}
+          />
+        </Skeleton>
+      </div>
     );
   })
-  .add('Parts/SkeletonText', () => {
+  .add('Skeleton Text', () => {
     return (
-      <Skeleton>
-        <SkeletonText lineCount={number('lineCount', 2)} />
-      </Skeleton>
+      <div className="story">
+        <h1 className="section-label">Skeleton Text</h1>
+        <Skeleton>
+          <SkeletonText lineCount={number('lineCount', 2)} />
+        </Skeleton>
+      </div>
     );
   });
