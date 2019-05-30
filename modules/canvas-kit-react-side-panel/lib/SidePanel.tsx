@@ -65,14 +65,10 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
     breakpoint: 924,
   };
 
-  constructor(props: SidePanelProps) {
-    super(props);
-
-    this.state = {
-      screenSize: window.innerWidth,
-      responsive: true,
-    };
-  }
+  state = {
+    screenSize: window.innerWidth,
+    responsive: true,
+  };
 
   public componentDidMount() {
     window.addEventListener('resize', throttle(this.handleResize, 150));
@@ -96,7 +92,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         aria-expanded={open}
         aria-orientation="vertical"
         padding={padding}
-        breakpointChange={this.props.breakpointChange}
+        breakpointChange={this.handleResize}
         openDirection={openDirection}
         open={open}
         {...otherProps}
@@ -105,6 +101,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         {this.props.children}
         {onToggleClick && (
           <ToggleButtonContainer
+            aria-label={`toggle ${open ? 'closed' : 'open'}`}
             toggled={false}
             buttonSize={ButtonSizes.Small}
             onClick={this.toggleClick}
