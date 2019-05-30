@@ -53,7 +53,7 @@ const listItemOpen = css({
 });
 
 const listItemClosed = css({
-  padding: '15px 8px',
+  padding: '15px 20px',
   marginLeft: 0,
   marginRight: 0,
 });
@@ -63,21 +63,18 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     open: true,
     isResponsive: true,
   };
-  public componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-  }
-  public componentWillUnmount() {
-    window.addEventListener('resize', this.handleResize);
-  }
+
   public render() {
     const {open} = this.state;
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
       <SidePanel
-        openDirection={SidePanelOpenDirection.Right}
+        openDirection={SidePanelOpenDirection.Left}
         open={open}
         onToggleClick={this.onClick}
-        title={'Side Panel Header'}
+        breakpoint={800}
+        breakpointChange={this.test}
+        header={'Side Panel Header'}
       >
         {open ? (
           <Button buttonType={ButtonTypes.Primary}>Add New</Button>
@@ -111,28 +108,15 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   }
 
   private onClick = () => {
-    const threshold = window.innerWidth > 924;
-    const isResponsive = (threshold && !this.state.open) || (!threshold && this.state.open);
     this.setState({
       open: !this.state.open,
-      isResponsive,
     });
   };
 
-  private handleResize = () => {
-    const threshold = window.innerWidth > 924;
-    if (this.state.isResponsive) {
-      if (threshold && !this.state.open) {
-        this.setState({
-          open: true,
-        });
-      }
-      if (!threshold && this.state.open) {
-        this.setState({
-          open: false,
-        });
-      }
-    }
+  private test = (open: boolean) => {
+    this.setState({
+      open: open,
+    });
   };
 }
 

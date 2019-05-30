@@ -12,16 +12,16 @@ describe('SidePanel Snapshots', () => {
     expect(component).toMatchSnapshot();
   });
   test('renders a side panel header', () => {
-    const component = renderer.create(<SidePanel title={'Side Panel Header'} open={true} />);
+    const component = renderer.create(<SidePanel header={'Side Panel Header'} open={true} />);
     expect(component).toMatchSnapshot();
   });
   test('does not render header when side panel is closed', () => {
-    const component = renderer.create(<SidePanel title={'Side Panel Header'} open={false} />);
+    const component = renderer.create(<SidePanel header={'Side Panel Header'} open={false} />);
     expect(component).toMatchSnapshot();
   });
   test('renders a toggle button', () => {
     const component = renderer.create(
-      <SidePanel onToggleClick={jest.fn} title={'Side Panel Header'} open={false} />
+      <SidePanel onToggleClick={jest.fn} header={'Side Panel Header'} open={false} />
     );
     expect(component).toMatchSnapshot();
   });
@@ -30,7 +30,7 @@ describe('SidePanel Snapshots', () => {
       <SidePanel
         onToggleClick={jest.fn}
         openDirection={SidePanelOpenDirection.Right}
-        title={'Side Panel Header'}
+        header={'Side Panel Header'}
         open={false}
       />
     );
@@ -41,7 +41,7 @@ describe('SidePanel Snapshots', () => {
       <SidePanel
         onToggleClick={jest.fn}
         openDirection={SidePanelOpenDirection.Right}
-        title={'Side Panel Header'}
+        header={'Side Panel Header'}
         open={true}
       />
     );
@@ -51,7 +51,7 @@ describe('SidePanel Snapshots', () => {
     const component = renderer.create(
       <SidePanel
         openDirection={SidePanelOpenDirection.Left}
-        title={'Side Panel Header'}
+        header={'Side Panel Header'}
         open={true}
       />
     );
