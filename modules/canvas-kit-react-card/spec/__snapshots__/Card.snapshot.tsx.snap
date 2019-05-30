@@ -10,6 +10,7 @@ exports[`Card Snapshots renders a card with depth 1`] = `
 }
 
 .emotion-2 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -30,6 +31,7 @@ exports[`Card Snapshots renders a card with depth 1`] = `
 
 exports[`Card Snapshots renders a card with heading 1`] = `
 .emotion-4 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -80,6 +82,7 @@ exports[`Card Snapshots renders a card with height 1`] = `
 }
 
 .emotion-2 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -110,6 +113,7 @@ exports[`Card Snapshots renders a card with padding 1`] = `
 }
 
 .emotion-2 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -138,6 +142,7 @@ exports[`Card Snapshots renders a card with width 1`] = `
 }
 
 .emotion-2 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -160,6 +165,7 @@ exports[`Card Snapshots renders a card with width 1`] = `
 
 exports[`Card Snapshots renders as expected 1`] = `
 .emotion-2 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;

@@ -24,6 +24,7 @@ exports[`Popup Snapshots renders Popup with a smaller close icon 1`] = `
 }
 
 .emotion-1 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -227,6 +228,7 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
 }
 
 .emotion-6 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -285,6 +287,7 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
 }
 
 .emotion-6 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -663,6 +666,7 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
 }
 
 .emotion-6 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -725,6 +729,7 @@ exports[`Popup Snapshots renders Popup with transformOrigin 1`] = `
 }
 
 .emotion-1 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -774,6 +779,7 @@ exports[`Popup Snapshots renders Popup without close icon 1`] = `
 }
 
 .emotion-1 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -815,6 +821,7 @@ exports[`Popup Snapshots renders as expected 1`] = `
 }
 
 .emotion-1 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;

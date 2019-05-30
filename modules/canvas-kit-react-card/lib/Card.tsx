@@ -38,6 +38,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Box = styled('div')<CardProps>(
   {
+    backgroundColor: colors.frenchVanilla100,
     border: `1px solid ${colors.soap500}`,
     borderRadius: 3,
     boxSizing: 'border-box',

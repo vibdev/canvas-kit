@@ -228,6 +228,7 @@ exports[`Menu Snapshots renders a focused menu item 1`] = `
 
 exports[`Menu Snapshots renders a hidden menu 1`] = `
 .emotion-3 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -290,6 +291,7 @@ exports[`Menu Snapshots renders a hidden menu 1`] = `
 
 exports[`Menu Snapshots renders a menu with aria attributes 1`] = `
 .emotion-7 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -581,6 +583,7 @@ exports[`Menu Snapshots renders a menu with grow=true 1`] = `
 }
 
 .emotion-11 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -645,6 +648,7 @@ exports[`Menu Snapshots renders a menu with grow=true 1`] = `
 
 exports[`Menu Snapshots renders an empty menu 1`] = `
 .emotion-3 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -707,6 +711,7 @@ exports[`Menu Snapshots renders an empty menu 1`] = `
 
 exports[`Menu Snapshots renders an menu with one item 1`] = `
 .emotion-7 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -856,6 +861,7 @@ exports[`Menu Snapshots renders an menu with one item 1`] = `
 
 exports[`Menu Snapshots renders an menu with two items 1`] = `
 .emotion-11 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
@@ -1058,6 +1064,7 @@ exports[`Menu Snapshots renders an menu with two items 1`] = `
 
 exports[`Menu Snapshots renders with icon 1`] = `
 .emotion-11 {
+  background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
