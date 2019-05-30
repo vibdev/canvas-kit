@@ -131,9 +131,9 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with one button 1`] = `
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -306,9 +306,9 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -411,9 +411,9 @@ exports[`Floating Action Toolbar Snapshots renders a FAT with two buttons 1`] = 
 .emotion-6:not([disabled]):focus,
 .emotion-6:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <div
@@ -579,9 +579,9 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with one button 1
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -758,9 +758,9 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
 .emotion-2:not([disabled]):focus,
 .emotion-2:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-0 {
@@ -863,9 +863,9 @@ exports[`Floating Action Toolbar Snapshots renders a fixed FAT with two buttons 
 .emotion-6:not([disabled]):focus,
 .emotion-6:not([disabled]):active {
   border-color: #0875e1;
-  -webkit-animation: animation-cw31kw 100ms;
-  animation: animation-cw31kw 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 1px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 <div

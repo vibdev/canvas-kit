@@ -36,6 +36,14 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
         case ButtonSizes.Small:
           return {};
       }
+    } else if (buttonType === IconButtonTypes.SquareFilled) {
+      switch (buttonSize) {
+        case ButtonSizes.Medium:
+          return iconButtonStyles.variants!.sizes.medium;
+        default:
+        case ButtonSizes.Small:
+          return {};
+      }
     } else if (buttonType === IconButtonTypes.Plain) {
       switch (buttonSize) {
         default:
@@ -66,7 +74,6 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
     }
 
     switch (buttonType) {
-      case IconButtonTypes.Square:
       default:
         return {
           '&:focus&:hover, &:focus, &:active': {
@@ -84,6 +91,26 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
           borderColor: colors.blueberry400,
           ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.frenchVanilla100),
+        };
+      case IconButtonTypes.Square:
+        return {
+          '&:active': {
+            ...getFillSelector(colors.blueberry400),
+            ...getAccentSelector(colors.frenchVanilla100),
+          },
+          ...getBackgroundSelector(colors.blueberry400),
+          ...getFillSelector(colors.blueberry400),
+          ...getAccentSelector(colors.frenchVanilla100),
+        };
+      case IconButtonTypes.SquareFilled:
+        return {
+          '&:active': {
+            ...getFillSelector(colors.blueberry400),
+            ...getAccentSelector(colors.soap200),
+          },
+          ...getBackgroundSelector(colors.blueberry400),
+          ...getFillSelector(colors.blueberry400),
+          ...getAccentSelector(colors.soap200),
         };
       case IconButtonTypes.Default:
         return {

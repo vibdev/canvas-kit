@@ -326,11 +326,16 @@ export const iconButtonStyles: ButtonGenericStyle = {
     },
     types: {
       [IconButtonTypes.Square]: {
-        borderRadius: '3px',
-        borderWidth: '1px',
+        borderRadius: '4px',
         width: canvas.spacing.l,
         height: canvas.spacing.l,
         ...getButtonStateStyle(IconButtonTypes.Square),
+      },
+      [IconButtonTypes.SquareFilled]: {
+        borderRadius: '4px',
+        width: canvas.spacing.l,
+        height: canvas.spacing.l,
+        ...getButtonStateStyle(IconButtonTypes.SquareFilled),
       },
       [IconButtonTypes.Plain]: {
         ...getButtonStateStyle(IconButtonTypes.Plain),
@@ -443,7 +448,7 @@ function getButtonFocusRing(buttonType: AllButtonTypes): CSSObject {
     case ButtonTypes.Primary:
     case ButtonTypes.Secondary:
     case IconButtonTypes.Square:
-      return focusRing(1);
+    case IconButtonTypes.SquareFilled:
     case BetaButtonTypes.OutlineInverse:
       return focusRing(2, 2, true, false, buttonColors.focusRingInner, buttonColors.focusRingOuter);
     case TextButtonTypes.Default:
