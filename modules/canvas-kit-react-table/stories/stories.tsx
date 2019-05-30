@@ -6,64 +6,110 @@ import withReadme from 'storybook-readme/with-readme';
 import {Table, TableRow} from '..';
 import README from '../README.md';
 
-storiesOf('Table', module)
-  .addDecorator(withReadme(README))
-  .add('All', () => {
-    const columns = ['ID', 'Name', 'Position', 'Location'];
-    const data = [
-      {
-        data: [1, 'Aidan Brown', 'Product Manager', 'San Francisco, CA'],
-        state: undefined,
-      },
-      {
-        data: [2, 'Betty Chen', 'Product Designer', 'San Francisco, CA'],
-        state: TableRow.State.Error,
-      },
-      {
-        data: [3, 'Helen Gonzalez', 'Application Developer', 'Portland, OR'],
-        state: TableRow.State.InputError,
-      },
-      {
-        data: [4, 'Timothy May', 'VP, Product Development', 'San Francisco, CA'],
-        state: TableRow.State.Alert,
-      },
-      {
-        data: [5, 'John Hours', 'Product Manager', 'New York, New York'],
-        state: TableRow.State.InputAlert,
-      },
-      {
-        data: [6, 'Leslie Lang', 'Software Architect', 'New York, New York'],
-        state: TableRow.State.Hover,
-      },
-      {
-        data: [7, 'Mary Pratt', 'Sr. Software Architect', 'New York, New York'],
-        state: TableRow.State.Selected,
-      },
-    ];
+enum TableFilters {
+  all = 'all',
+  alerts = 'alerts',
+  errors = 'errors',
+  selected = 'selected',
+  none = 'none',
+}
 
-    const rows = data.map((row, i) => {
-      const cols = row.data.map((c, idx) => <td key={idx}>{c}</td>);
+const columns = ['ID', 'Name', 'Position', 'Location'];
+const data = [
+  {
+    data: [1, 'Aidan Brown', 'Product Manager', 'San Francisco, CA'],
+    state: undefined,
+    filter: ['all'],
+  },
+  {
+    data: [2, 'Betty Chen', 'Product Designer', 'San Francisco, CA'],
+    state: TableRow.State.Error,
+    filter: ['errors', 'all'],
+  },
+  {
+    data: [3, 'Helen Gonzalez', 'Application Developer', 'Portland, OR'],
+    state: TableRow.State.InputError,
+    filter: ['errors', 'all'],
+  },
+  {
+    data: [4, 'Timothy May', 'VP, Product Development', 'San Francisco, CA'],
+    state: TableRow.State.Alert,
+    filter: ['alerts', 'all'],
+  },
+  {
+    data: [5, 'John Hours', 'Product Manager', 'New York, New York'],
+    state: TableRow.State.InputAlert,
+    filter: ['alerts', 'all'],
+  },
+  {
+    data: [6, 'Leslie Lang', 'Software Architect', 'New York, New York'],
+    state: TableRow.State.Hover,
+    filter: ['all'],
+  },
+  {
+    data: [7, 'Mary Pratt', 'Sr. Software Architect', 'New York, New York'],
+    state: TableRow.State.Selected,
+    filter: ['selected', 'all'],
+  },
+];
 
-      return (
-        <TableRow key={i} state={row.state}>
-          {cols}
-        </TableRow>
-      );
-    });
+const createTable = (filter?: TableFilters) => {
+  const rows = data.map((row, i) => {
+    const cols = row.data.map((c, idx) => <td key={idx}>{c}</td>);
+    const rowState = row.filter.includes(filter || '') ? row.state : undefined;
 
     return (
-      <div className="story">
-        <h1 className="section-label">Table</h1>
-        <Table>
-          <thead>
-            <TableRow header={true}>
-              {columns.map((col, i) => (
-                <th key={i}>{col}</th>
-              ))}
-            </TableRow>
-          </thead>
-          <tbody>{rows}</tbody>
-        </Table>
-      </div>
+      <TableRow key={i} state={rowState}>
+        {cols}
+      </TableRow>
     );
   });
+
+  return (
+    <Table>
+      <thead>
+        <TableRow header={true}>
+          {columns.map((col, i) => (
+            <th key={i}>{col}</th>
+          ))}
+        </TableRow>
+      </thead>
+      <tbody>{rows}</tbody>
+    </Table>
+  );
+};
+
+storiesOf('Table', module)
+  .addDecorator(withReadme(README))
+  .add('Default table', () => {
+    return (
+      <div className="story">
+        <h1 className="section-label">Default table</h1>
+        {createTable()}
+      </div>
+    );
+  })
+  .add('Table with alerts', () => (
+    <div className="story">
+      <h1 className="section-label">Table with alerts</h1>
+      {createTable(TableFilters.alerts)}
+    </div>
+  ))
+  .add('Table with errors', () => (
+    <div className="story">
+      <h1 className="section-label">Table with errors</h1>
+      {createTable(TableFilters.errors)}
+    </div>
+  ))
+  .add('Table with selected rows', () => (
+    <div className="story">
+      <h1 className="section-label">Table with selected rows</h1>
+      {createTable(TableFilters.selected)}
+    </div>
+  ))
+  .add('Table with all elements', () => (
+    <div className="story">
+      <h1 className="section-label">Table with all elements</h1>
+      {createTable(TableFilters.all)}
+    </div>
+  ));
