@@ -4,15 +4,15 @@ On behalf of the Canvas team, thank you so much for your contribution to this pr
 part of the community. Before you contribute, please take a moment and look through the following
 sections:
 
-- [Code of Conduct](code-of-conduct)
-- [Getting Started](getting-started)
-- [How to Contribute](how-to-contribute)
-- [Pull Request Guidelines](pull-request-guidelines)
-- [Style Guide](style-guide)
-- [Environment Setup](feature-roadmap)
-- [Signing the CLA](signing-the-cla)
-- [Roadmap](feature-roadmap)
-- [FAQ](faq)
+- [Code of Conduct](#code-of-conduct)
+- [Getting Started](#getting-started)
+- [How to Contribute](#how-to-contribute)
+- [Pull Request Guidelines](#pull-request-guidelines)
+- [Style Guide](#style-guide)
+- [Environment Setup](#feature-roadmap)
+- [Signing the CLA](#signing-the-cla)
+- [Roadmap](#feature-roadmap)
+- [FAQ](#faq)
 
 ## Code of Conduct
 
