@@ -38,18 +38,18 @@ interface SidePanelState {
 class SidePanelExample extends React.Component<{}, SidePanelState> {
   public state = {
     open: true,
-    responsive: true,
   };
-  public componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-  }
-  public componentWillUnmount() {
-    window.addEventListener('resize', this.handleResize);
-  }
   public render() {
     const {open} = this.state;
     return (
-      <SidePanel open={open} onClickHandler={this.onClick} title={'Side Panel Header'}>
+      <SidePanel
+        openDirection={select(label, options, defaultValue)}
+        open={open}
+        onToggleClick={this.onClick}
+        breakpoint={800}
+        breakpointChange={this.handleBreakpoint}
+        header={'Side Panel Header'}
+      >
         {open ? (
           <Button buttonType={ButtonTypes.Primary}>Add New</Button>
         ) : (
@@ -67,28 +67,15 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
   }
 
   private onClick = () => {
-    const threshold = window.innerWidth > 924;
-    const responsive = (threshold && !this.state.open) || (!threshold && this.state.open);
     this.setState({
       open: !this.state.open,
-      responsive,
     });
   };
 
-  private handleResize = () => {
-    const threshold = window.innerWidth > 924;
-    if (this.state.isResponsive) {
-      if (threshold && !this.state.open) {
-        this.setState({
-          open: true,
-        });
-      }
-      if (!threshold && this.state.open) {
-        this.setState({
-          open: false,
-        });
-      }
-    }
+  private handleBreakpoint = (open: boolean) => {
+    this.setState({
+      open: open,
+    });
   };
 }
 ```
@@ -109,6 +96,13 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
+#### `breakpointChange: (open: boolean) => void;`
+
+> Callback that gets called on resize and determines when the side panel should open or close
+> depending on the size of the browser and the breakpoint set.
+
+---
+
 ### Optional
 
 #### `onToggleClick: () => void`
@@ -117,30 +111,34 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
-#### `title: string | React.ReactNode`
+#### `header: string | React.ReactNode`
 
 > Custom title or element to display as a header to the side panel.
 
 ---
 
-#### `openRight: boolean`
+#### `openDirection: SidePanelOpenDirection`
 
-> Determines if the side panel opens from the right
+> Determines from what side the side panel opens
 
----
+`SidePanelOpenDirection.Left` or `SidePanelOpenDirection.Right`
 
-#### `openLeft: boolean`
-
-> Determines if the side panel opens from the left
-
-Default: `true`
+Default: `SidePanelOpenDirection.Left`
 
 ---
 
 #### `padding: CanvasSpacingValue`
 
-> Adjust padding of the side panel.
+> Adjust padding of the side panel when it's open.
 
-Default: `24px` when it's open and `0px` when it's closed
+Default: `24px` when it's open and `16px` top and bottom when it's closed
+
+---
+
+#### `breakpoint: number`
+
+> Determines the breakpoint at which the side panel opens or closes
+
+Default: `834px`
 
 ---
