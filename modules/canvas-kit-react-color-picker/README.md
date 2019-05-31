@@ -122,14 +122,10 @@ import {ColorPreview} from '@workday/canvas-kit-color-preview';
 
 Default: `#FFFFFF`
 
-#### `id: string`
-
-> An id linked to the color preview input to be used with an associated form label
-
-Default: `undefined`
-
 ---
 
 ### Optional
 
-> None
+#### `id: string`
+
+> An id linked to the color preview input to be used with an associated form label
