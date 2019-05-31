@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {colors, spacing, type, CanvasSpacingValue} from '@workday/canvas-kit-react-core';
 import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
@@ -62,7 +63,7 @@ const SidePanelContainer = styled('div')<SidePanelProps>(({open, openDirection, 
 export default class SidePanel extends React.Component<SidePanelProps, SidePanelState> {
   static SidePanelOpenDirection = SidePanelOpenDirection;
   static defaultProps = {
-    breakpoint: 924,
+    breakpoint: 834,
   };
 
   state = {
@@ -78,14 +79,15 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   public render() {
-    const {header, onToggleClick, open, openDirection, padding, ...otherProps} = this.props;
-    let toggleButtonDirection;
-
-    if (openDirection !== SidePanelOpenDirection.Right) {
-      toggleButtonDirection = open ? arrowLeftIcon : arrowRightIcon;
-    } else {
-      toggleButtonDirection = open ? arrowRightIcon : arrowLeftIcon;
-    }
+    const {
+      header,
+      onToggleClick,
+      open,
+      openDirection,
+      padding,
+      breakpoint,
+      ...otherProps
+    } = this.props;
 
     return (
       <SidePanelContainer
@@ -105,7 +107,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
             toggled={false}
             buttonSize={ButtonSizes.Small}
             onClick={this.toggleClick}
-            icon={toggleButtonDirection}
+            icon={this.toggleButtonDirection()}
             buttonType={IconButton.Types.Filled}
           />
         )}
@@ -114,25 +116,45 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   private handleResize = () => {
-    const threshold = window.innerWidth > this.props.breakpoint;
     if (this.state.responsive) {
-      if (threshold && !this.props.open) {
+      if (this.threshold() && !this.props.open) {
         this.props.breakpointChange(true);
       }
-      if (!threshold && this.props.open) {
+      if (!this.threshold() && this.props.open) {
         this.props.breakpointChange(false);
       }
     }
   };
 
   private toggleClick = () => {
-    const threshold = window.innerWidth > this.props.breakpoint;
-    const isResponsive = (threshold && !this.props.open) || (!threshold && this.props.open);
+    const isResponsive =
+      (this.threshold() && !this.props.open) || (!this.threshold() && this.props.open);
     this.setState({
       responsive: isResponsive,
     });
     if (this.props.onToggleClick) {
       this.props.onToggleClick();
     }
+  };
+
+  private threshold = (): boolean => {
+    let threshold;
+    if (this.props.breakpoint) {
+      threshold = window.innerWidth > this.props.breakpoint;
+    } else {
+      threshold = window.innerWidth > 834;
+    }
+    return threshold;
+  };
+
+  private toggleButtonDirection = (): CanvasSystemIcon => {
+    let toggleButtonDirection;
+
+    if (this.props.openDirection !== SidePanelOpenDirection.Right) {
+      toggleButtonDirection = this.props.open ? arrowLeftIcon : arrowRightIcon;
+    } else {
+      toggleButtonDirection = this.props.open ? arrowRightIcon : arrowLeftIcon;
+    }
+    return toggleButtonDirection;
   };
 }
