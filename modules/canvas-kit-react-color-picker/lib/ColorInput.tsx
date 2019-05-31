@@ -17,7 +17,7 @@ export interface ColorInputProps extends TextInputProps, GrowthBehavior {
   error?: ErrorType;
   inputRef?: React.Ref<HTMLInputElement>;
   showCheck?: boolean;
-  placeholder?: string;
+  placeholder: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValidColorChange?: (color: string) => void;
 }
@@ -111,7 +111,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           innerRef={inputRef}
           onChange={this.handleChange}
           type="text"
-          placeholder={this.props.placeholder}
+          placeholder={placeholder}
           value={formattedValue}
           spellCheck={false}
           disabled={disabled}
