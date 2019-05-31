@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.11...@workday/canvas-kit-react-header@0.5.12) (2019-05-31)
+
+
+### Bug Fixes
+
+* **Header:** use * instead of a in nav css ([71cdf56](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/71cdf56))
+* **Header:** use a inside li in nav ([264f935](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/264f935))
+
+
+
+
+
 ## [0.5.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.10...@workday/canvas-kit-react-header@0.5.11) (2019-05-24)
 
 
