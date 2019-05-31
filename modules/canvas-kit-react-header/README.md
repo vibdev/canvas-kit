@@ -67,9 +67,9 @@ import {Button} from '@workday/canvas-kit-react-button';
 ### `nav, ul, li`
 
 > For a semantic navigation menu, this component will style a child `<nav>` element with an
-> un-ordered list inside (`<ul>`). This list can contain any number of `<li>` elements. You can
-> visually distinguish the link that your page is currently on by adding the class name: `"current"`
-> to the `<li>` element containing the current page link.
+> un-ordered list inside (`<ul>`). This list can contain any number of `<li>` elements with `<a>`
+> elements. You can visually distinguish the link that your page is currently on by adding the class
+> name: `"current"` to the `<li>` element containing the current page link.
 
 ### `SystemIcon`
 
@@ -203,8 +203,8 @@ Default:
 
 #### `onBreakpointChange: (BreakpointType | string) => void`
 
-> If specified, this callback is executed after the screen size changes with the new breakpoint key. It also gets called on initialization so the consumer has the
-original breakpoint
+> If specified, this callback is executed after the screen size changes with the new breakpoint key.
+> It also gets called on initialization so the consumer has the original breakpoint
 
 # Global Header
 
@@ -284,8 +284,8 @@ Default: `<DubLogoTitle />`
 
 #### `onBreakpointChange: (BreakpointType | string) => void`
 
-> If specified, this callback is executed after the screen size changes with the new breakpoint key. It also gets called on initialization so the consumer has the
-original breakpoint
+> If specified, this callback is executed after the screen size changes with the new breakpoint key.
+> It also gets called on initialization so the consumer has the original breakpoint
 
 # "Dub" Logo and Title
 

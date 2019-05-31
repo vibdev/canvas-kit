@@ -165,8 +165,6 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -175,21 +173,32 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -200,6 +209,10 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -417,8 +430,6 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -427,21 +438,32 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-10 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-10 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-10 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-10 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -452,6 +474,10 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 
 .emotion-10 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-10 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-10 nav ul li.current:hover,
@@ -687,8 +713,6 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -697,21 +721,32 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -722,6 +757,10 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -1076,8 +1115,6 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -1086,21 +1123,32 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
   cursor: pointer;
 }
 
-.emotion-2 nav ul li:first-child {
+.emotion-2 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-2 nav ul li:last-child {
+.emotion-2 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-2 nav ul li a {
+.emotion-2 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-2 nav ul li a:visited {
+.emotion-2 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -1111,6 +1159,10 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
 
 .emotion-2 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-2 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-2 nav ul li.current:hover,
@@ -1312,8 +1364,6 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -1322,21 +1372,32 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child {
+.emotion-16 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child {
+.emotion-16 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li a {
+.emotion-16 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-16 nav ul li a:visited {
+.emotion-16 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -1347,6 +1408,10 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 
 .emotion-16 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-16 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-16 nav ul li.current:hover,
@@ -1786,8 +1851,6 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -1796,21 +1859,32 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
   cursor: pointer;
 }
 
-.emotion-14 nav ul li:first-child {
+.emotion-14 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-14 nav ul li:last-child {
+.emotion-14 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-14 nav ul li a {
+.emotion-14 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-14 nav ul li a:visited {
+.emotion-14 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -1821,6 +1895,10 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 
 .emotion-14 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-14 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-14 nav ul li.current:hover,
@@ -2216,8 +2294,6 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -2226,21 +2302,32 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -2251,6 +2338,10 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -2468,8 +2559,6 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -2478,21 +2567,32 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -2503,6 +2603,10 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -3025,8 +3129,6 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -3035,21 +3137,32 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -3060,6 +3173,10 @@ exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -3290,8 +3407,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -3300,21 +3415,32 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -3325,6 +3451,10 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
 
 .emotion-8 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -3517,8 +3647,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -3527,21 +3655,32 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -3552,6 +3691,10 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
 
 .emotion-8 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -3794,8 +3937,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -3804,21 +3945,32 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -3829,6 +3981,10 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with white them
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -4003,8 +4159,6 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -4013,21 +4167,32 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child {
+.emotion-16 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child {
+.emotion-16 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li a {
+.emotion-16 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-16 nav ul li a:visited {
+.emotion-16 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -4038,6 +4203,10 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
 
 .emotion-16 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-16 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-16 nav ul li.current:hover,
@@ -4475,8 +4644,6 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -4485,21 +4652,32 @@ exports[`Full Header Snapshots renders a default header 1`] = `
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -4510,6 +4688,10 @@ exports[`Full Header Snapshots renders a default header 1`] = `
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -4730,8 +4912,6 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -4740,21 +4920,32 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
   cursor: pointer;
 }
 
-.emotion-10 nav ul li:first-child {
+.emotion-10 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-10 nav ul li:last-child {
+.emotion-10 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-10 nav ul li a {
+.emotion-10 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-10 nav ul li a:visited {
+.emotion-10 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -4765,6 +4956,10 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
 
 .emotion-10 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-10 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-10 nav ul li.current:hover,
@@ -5048,8 +5243,6 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -5058,21 +5251,32 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   cursor: pointer;
 }
 
-.emotion-18 nav ul li:first-child {
+.emotion-18 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-18 nav ul li:last-child {
+.emotion-18 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-18 nav ul li a {
+.emotion-18 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-18 nav ul li a:visited {
+.emotion-18 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -5083,6 +5287,10 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
 
 .emotion-18 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-18 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-18 nav ul li.current:hover,
@@ -5490,8 +5698,6 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -5500,21 +5706,32 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
   cursor: pointer;
 }
 
-.emotion-2 nav ul li:first-child {
+.emotion-2 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-2 nav ul li:last-child {
+.emotion-2 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-2 nav ul li a {
+.emotion-2 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-2 nav ul li a:visited {
+.emotion-2 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -5525,6 +5742,10 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
 
 .emotion-2 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-2 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-2 nav ul li.current:hover,
@@ -5708,8 +5929,6 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -5718,21 +5937,32 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child {
+.emotion-16 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child {
+.emotion-16 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li a {
+.emotion-16 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-16 nav ul li a:visited {
+.emotion-16 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -5743,6 +5973,10 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
 
 .emotion-16 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-16 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-16 nav ul li.current:hover,
@@ -6185,8 +6419,6 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -6195,21 +6427,32 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
   cursor: pointer;
 }
 
-.emotion-14 nav ul li:first-child {
+.emotion-14 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-14 nav ul li:last-child {
+.emotion-14 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-14 nav ul li a {
+.emotion-14 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-14 nav ul li a:visited {
+.emotion-14 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -6220,6 +6463,10 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
 
 .emotion-14 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-14 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-14 nav ul li.current:hover,
@@ -6600,8 +6847,6 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -6610,21 +6855,32 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -6635,6 +6891,10 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -6855,8 +7115,6 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -6865,21 +7123,32 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -6890,6 +7159,10 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -7415,8 +7688,6 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -7425,21 +7696,32 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -7450,6 +7732,10 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -7683,8 +7969,6 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -7693,21 +7977,32 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
   cursor: pointer;
 }
 
-.emotion-11 nav ul li:first-child {
+.emotion-11 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-11 nav ul li:last-child {
+.emotion-11 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-11 nav ul li a {
+.emotion-11 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-11 nav ul li a:visited {
+.emotion-11 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -7718,6 +8013,10 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 
 .emotion-11 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-11 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-11 nav ul li.current:hover,
@@ -8097,8 +8396,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -8107,21 +8404,32 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -8132,6 +8440,10 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
 
 .emotion-8 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -8352,8 +8664,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -8362,21 +8672,32 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -8387,6 +8708,10 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
 
 .emotion-8 nav ul li.current {
   color: #ffffff;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,
@@ -8607,8 +8932,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 16px;
-  margin: 0 4px;
   font-size: 14px;
   font-weight: 700;
   height: inherit;
@@ -8617,21 +8940,32 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
   cursor: pointer;
 }
 
-.emotion-8 nav ul li:first-child {
+.emotion-8 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-8 nav ul li:last-child {
+.emotion-8 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-8 nav ul li a {
+.emotion-8 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding: 0px 16px;
+  margin: 0 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit;
 }
 
-.emotion-8 nav ul li a:visited {
+.emotion-8 nav ul li > *:visited {
   color: inherit;
 }
 
@@ -8642,6 +8976,10 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
 
 .emotion-8 nav ul li.current {
   color: #005cb9;
+}
+
+.emotion-8 nav ul li.current a {
+  cursor: default;
 }
 
 .emotion-8 nav ul li.current:hover,

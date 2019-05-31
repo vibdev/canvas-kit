@@ -140,22 +140,25 @@ const navStyle = (props: HeaderProps) => {
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
-          padding: `0px ${spacing.s}`,
-          margin: `0 ${spacing.xxxs}`,
           fontSize: '14px',
           fontWeight: 700,
           height: 'inherit',
           transition: `color 150ms ease-out 0s`,
           cursor: 'pointer',
-          '&:first-child': {
+          '&:first-child > *': {
             marginLeft: 0,
           },
-          '&:last-child': {
+          '&:last-child > *': {
             marginRight: 0,
           },
-          '& a': {
+          '& > *': {
             color: 'inherit',
             textDecoration: 'none',
+            padding: `0px ${spacing.s}`,
+            margin: `0 ${spacing.xxxs}`,
+            display: 'flex',
+            alignItems: 'center',
+            height: 'inherit',
             '&:visited': {
               color: 'inherit', // Keeps visited links from becoming default purple
             },
@@ -165,6 +168,9 @@ const navStyle = (props: HeaderProps) => {
           },
           '&.current': {
             color: theme.currentLinkColor,
+            '& a': {
+              cursor: 'default',
+            },
             '&:hover, &:active': {
               color: theme.currentLinkColor,
             },

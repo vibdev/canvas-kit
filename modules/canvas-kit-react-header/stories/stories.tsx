@@ -54,10 +54,10 @@ const nav = (
   <nav>
     <ul>
       <li className="current">
-        <span>Discover</span>
+        <a href="#">Discover</a>
       </li>
       <li>
-        <div>Library</div>
+        <a href="#">Library</a>
       </li>
       <li>
         <Link to="#">Create</Link>
