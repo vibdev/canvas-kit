@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.6.1...@workday/canvas-kit-react-common@0.6.2) (2019-05-31)
+
+
+### Bug Fixes
+
+* **popper:** fix issues with testing environments ([#398](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/issues/398)) ([aa27af1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/aa27af1))
+
+
+
+
+
 ## [0.6.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.6.0...@workday/canvas-kit-react-common@0.6.1) (2019-05-24)
 
 
