@@ -26,7 +26,7 @@ class PopperPopup extends React.Component<{}, PopperPopupState> {
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <Button
           buttonRef={this.buttonRef}
-          buttonType={Button.Types.Delete}
+          buttonType={Button.Types.Primary}
           onClick={this.handleClick}
         >
           Toggle Popup

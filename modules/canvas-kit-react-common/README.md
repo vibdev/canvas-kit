@@ -31,6 +31,23 @@ import {Popup} from '@workday/canvas-kit-react-popup';
 </Popper>;
 ```
 
+## Testing
+
+Popper.js uses DOM calls that aren't available in JSDOM. This can cause problems with some testing
+frameworks that use JSDOM such as jest. When testing you can
+[mock out](https://github.com/FezVrasta/popper.js#how-to-use-popperjs-in-jest) these calls made by
+Popper.js.
+
+Alternatively, you can mock out the `Popper` wrapper itself. An example of how to do this in jest is
+shown below:
+
+```
+jest.mock('@workday/canvas-kit-react-common', () => ({
+  ...jest.genMockFromModule('@workday/canvas-kit-react-common'),
+  Popper: props => (props.open ? <div id="POPPER">{props.children}</div> : null),
+}));
+```
+
 ## Static Properties
 
 > None
