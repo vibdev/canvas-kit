@@ -54,21 +54,21 @@ storiesOf('Color Picker', module)
   .addDecorator(withReadme(README))
   .add('Color Input', () => (
     <div className="story">
-      <h1 className="section-label">Color Input</h1>
-      <h3>Color Input</h3>
+      <h1 className="section-label">Color Inputs</h1>
+      <h3>Standard</h3>
       <CustomColorInputWrapper checkbox={true} />
-      <h3>Color Input Without Checkbox</h3>
+      <h3>Without Checkbox</h3>
       <CustomColorInputWrapper checkbox={false} />
-      <h3>Color Input Disabled</h3>
+      <h3>Disabled</h3>
       <ColorInput value={'EEEEEE'} showCheck={true} disabled={true} grow={false} />
-      <h3>Growing Color Input</h3>
+      <h3>Growing</h3>
       <CustomColorInputWrapper checkbox={true} growing={true} />
     </div>
   ))
   .add('Color Preview', () => (
     <div className="story">
       <h1 className="section-label">Color Preview</h1>
-      <h3>Default</h3>
+      <h3>Standard</h3>
       <ColorPreview value="#00FFCC" />
     </div>
   ));

@@ -7,22 +7,61 @@ import withReadme from 'storybook-readme/with-readme';
 import Toast from '..';
 import README from '../README.md';
 
-class ToastWrapper extends React.Component {
+const toastData = {
+  success: {
+    icon: undefined,
+    iconColor: undefined,
+    messages: [
+      'Your workbook was successfully processed.',
+      'Your data has been successfully updated.',
+      'Your data has been sucessfully downloaded.',
+      'View Data',
+    ],
+  },
+  error: {
+    icon: exclamationCircleIcon,
+    iconColor: colors.cinnamon500,
+    messages: [
+      'There was an error with your workbook.',
+      'You are currently offline.',
+      'There was an error while your data was being processed.',
+      'View Error',
+    ],
+  },
+};
+
+class ToastWrapper extends React.Component<{state?: string}> {
   public render() {
+    let toastMeta;
+
+    switch (this.props.state) {
+      case 'Success':
+      default:
+        toastMeta = toastData.success;
+        break;
+      case 'Error':
+        toastMeta = toastData.error;
+        break;
+    }
+
+    const {messages} = toastMeta;
+
     return (
       <section>
-        <Toast>Your workbook was successfully processed.</Toast>
-        <Toast onClose={() => console.warn('handle close was clicked')}>
-          You data has been successfully updated.
+        <Toast icon={toastMeta.icon} iconColor={toastMeta.iconColor}>
+          {messages[0]}
+        </Toast>
+        <Toast icon={toastMeta.icon} iconColor={toastMeta.iconColor}>
+          {messages[1]}
         </Toast>
         <Toast
-          actionText={'View Error'}
+          actionText={messages[3]}
           onClose={() => console.warn('test')}
           onActionClick={() => console.warn('link was clicked')}
-          icon={exclamationCircleIcon}
-          iconColor={colors.cinnamon500}
+          icon={toastMeta.icon}
+          iconColor={toastMeta.iconColor}
         >
-          There was an error while your data was being processed.
+          {messages[2]}
         </Toast>
       </section>
     );
@@ -31,9 +70,15 @@ class ToastWrapper extends React.Component {
 
 storiesOf('Toast', module)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Successful Toast', () => (
     <div className="story">
-      <h1 className="section-label">Toast</h1>
-      <ToastWrapper />
+      <h1 className="section-label">Successful Toast</h1>
+      <ToastWrapper state={'Success'} />
+    </div>
+  ))
+  .add('Error Toast', () => (
+    <div className="story">
+      <h1 className="section-label">Error Toast</h1>
+      <ToastWrapper state={'Error'} />
     </div>
   ));

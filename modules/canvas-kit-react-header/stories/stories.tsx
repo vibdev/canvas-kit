@@ -71,9 +71,9 @@ const nav = (
 
 storiesOf('Header', module)
   .addDecorator(withReadme(README))
-  .add('Global', () => (
+  .add('Global Header', () => (
     <div className="story">
-      <h1 className="section-label">"Global" Header</h1>
+      <h1 className="section-label">Global Header</h1>
       <div className={containerStyle}>
         <GlobalHeader
           brand={
@@ -119,9 +119,9 @@ storiesOf('Header', module)
       </div>
     </div>
   ))
-  .add('Generic - Dub', () => (
+  .add('Standard Dub Header', () => (
     <div className="story">
-      <h1 className="section-label">Generic - "Dub" Header</h1>
+      <h1 className="section-label">Standard Dub Header</h1>
       <div className={containerStyle}>
         <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
@@ -206,9 +206,9 @@ storiesOf('Header', module)
       </div>
     </div>
   ))
-  .add('Generic - Full', () => (
+  .add('Standard Full Header', () => (
     <div className="story">
-      <h1 className="section-label">Generic - "Full" Header</h1>
+      <h1 className="section-label">Standard Full Header</h1>
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} />
       </div>
@@ -275,9 +275,9 @@ storiesOf('Header', module)
       </div>
     </div>
   ))
-  .add('Custom Breakpoints', () => (
+  .add('Header With Custom Breakpoints', () => (
     <div className="story">
-      <h1 className="section-label">Custom Breakpoints</h1>
+      <h1 className="section-label">Header With Custom Breakpoints</h1>
       <Header
         title="Normal Breakpoints"
         themeColor={Header.Theme.Blue}

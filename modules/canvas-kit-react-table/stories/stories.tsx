@@ -81,35 +81,35 @@ const createTable = (filter?: TableFilters) => {
 
 storiesOf('Table', module)
   .addDecorator(withReadme(README))
-  .add('Default table', () => {
+  .add('Standard Table', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Default table</h1>
+        <h1 className="section-label">Standard Table</h1>
         {createTable()}
       </div>
     );
   })
-  .add('Table with alerts', () => (
+  .add('Table With Alerts', () => (
     <div className="story">
-      <h1 className="section-label">Table with alerts</h1>
+      <h1 className="section-label">Table With Alerts</h1>
       {createTable(TableFilters.alerts)}
     </div>
   ))
-  .add('Table with errors', () => (
+  .add('Table With Errors', () => (
     <div className="story">
-      <h1 className="section-label">Table with errors</h1>
+      <h1 className="section-label">Table With Errors</h1>
       {createTable(TableFilters.errors)}
     </div>
   ))
-  .add('Table with selected rows', () => (
+  .add('Table With Selected Rows', () => (
     <div className="story">
-      <h1 className="section-label">Table with selected rows</h1>
+      <h1 className="section-label">Table With Selected Rows</h1>
       {createTable(TableFilters.selected)}
     </div>
   ))
-  .add('Table with all elements', () => (
+  .add('Table With All Elements', () => (
     <div className="story">
-      <h1 className="section-label">Table with all elements</h1>
+      <h1 className="section-label">Table With All Elements</h1>
       {createTable(TableFilters.all)}
     </div>
   ));

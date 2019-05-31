@@ -39,12 +39,12 @@ const buttonContainer = {
   },
 };
 
-storiesOf('Button/Beta', module)
+storiesOf('Buttons/Beta', module)
   .addDecorator(withReadme(README))
   .add('Primary Buttons', () => (
     <div className="story">
       <h1 className="section-label">Primary Buttons</h1>
-      <h3>Large Primary Buttons</h3>
+      <h3>Large Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Primary
       </Button>
@@ -72,7 +72,7 @@ storiesOf('Button/Beta', module)
       >
         Primary
       </Button>
-      <h3>Medium Primary Buttons</h3>
+      <h3>Medium Primary</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Primary}>
         Primary
       </Button>
@@ -96,14 +96,14 @@ storiesOf('Button/Beta', module)
       >
         Primary
       </Button>
-      <h3>Small Primary Buttons</h3>
+      <h3>Small Primary</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Primary}>
         Primary
       </Button>
       <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.Primary}>
         Primary
       </Button>
-      <h3>Growing Primary Button</h3>
+      <h3>Growing Primary</h3>
       <div className={css(buttonContainer)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary} grow={true}>
           Primary
@@ -114,7 +114,7 @@ storiesOf('Button/Beta', module)
   .add('Secondary Buttons', () => (
     <div className="story">
       <h1 className="section-label">Secondary Buttons</h1>
-      <h3>Large Secondary Buttons</h3>
+      <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Secondary
       </Button>
@@ -142,7 +142,7 @@ storiesOf('Button/Beta', module)
       >
         Secondary
       </Button>
-      <h3>Medium Secondary Buttons</h3>
+      <h3>Medium Secondary</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Secondary}>
         Secondary
       </Button>
@@ -166,14 +166,14 @@ storiesOf('Button/Beta', module)
       >
         Secondary
       </Button>
-      <h3>Small Secondary Buttons</h3>
+      <h3>Small Secondary</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Secondary}>
         Secondary
       </Button>
       <Button disabled={true} buttonSize={Button.Sizes.Small} buttonType={Button.Types.Secondary}>
         Secondary
       </Button>
-      <h3>Growing Secondary Button</h3>
+      <h3>Growing Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary} grow={true}>
         Growing Secondary
       </Button>
@@ -182,21 +182,21 @@ storiesOf('Button/Beta', module)
   .add('Delete Buttons', () => (
     <div className="story">
       <h1 className="section-label">Delete Buttons</h1>
-      <h3>Large Delete Buttons</h3>
+      <h3>Large Delete</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
         Delete
       </Button>
       <Button disabled={true} buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
         Delete
       </Button>
-      <h3>Medium Delete Buttons</h3>
+      <h3>Medium Delete</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Delete}>
         Delete
       </Button>
       <Button disabled={true} buttonSize={Button.Sizes.Medium} buttonType={Button.Types.Delete}>
         Delete
       </Button>
-      <h3>Small Delete Buttons</h3>
+      <h3>Small Delete</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.Delete}>
         Delete
       </Button>
@@ -208,7 +208,7 @@ storiesOf('Button/Beta', module)
   .add('Highlight Buttons', () => (
     <div className="story">
       <h1 className="section-label">Highlight Buttons</h1>
-      <h3>Large Highlight Buttons</h3>
+      <h3>Large Highlight</h3>
       <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon}>
         Highlight
       </Button>
@@ -223,8 +223,7 @@ storiesOf('Button/Beta', module)
       >
         Highlight
       </Button>
-
-      <h3>Medium Highlight Buttons</h3>
+      <h3>Medium Highlight</h3>
       <Button
         buttonSize={Button.Sizes.Medium}
         buttonType={Button.Types.Highlight}
@@ -249,7 +248,7 @@ storiesOf('Button/Beta', module)
       >
         Highlight
       </Button>
-      <h3>Growing Buttons</h3>
+      <h3>Growing</h3>
       <div className={css(buttonContainer)}>
         <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon} grow={true}>
           Highlight
@@ -266,12 +265,12 @@ storiesOf('Button/Beta', module)
     </div>
   ));
 
-storiesOf('Button/Beta/Text', module)
+storiesOf('Buttons/Beta/Text', module)
   .addDecorator(withReadme(README))
   .add('Text Buttons', () => (
     <div className="story">
       <h1 className="section-label">Text Buttons</h1>
-      <h3>Large Text Button</h3>
+      <h3>Large</h3>
       <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
         Text
       </TextButton>
@@ -282,7 +281,7 @@ storiesOf('Button/Beta/Text', module)
       >
         Text
       </TextButton>
-      <h3>Small Text Button</h3>
+      <h3>Small</h3>
       <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Default}>
         Text
       </TextButton>
@@ -293,9 +292,9 @@ storiesOf('Button/Beta/Text', module)
       >
         Text
       </TextButton>
-      <h3>All Caps Text Button</h3>
+      <h3>All Caps</h3>
       <TextButton buttonType={TextButton.Types.AllCaps}>All Caps</TextButton>
-      <h3>Icon Text Buttons</h3>
+      <h3>Icons</h3>
       <div className={css(buttonContainer)}>
         <TextButton
           icon={editIcon}
@@ -317,7 +316,7 @@ storiesOf('Button/Beta/Text', module)
   .add('Inverse Text Buttons', () => (
     <div className="story">
       <h1 className="section-label">Inverse Text Buttons</h1>
-      <h3>Large Inverse Text Button</h3>
+      <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
           Text
@@ -330,7 +329,7 @@ storiesOf('Button/Beta/Text', module)
           Text
         </TextButton>
       </div>
-      <h3>Small Inverse Text Button</h3>
+      <h3>Small Inverse</h3>
       <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Small} buttonType={TextButton.Types.Inverse}>
           Text
@@ -343,11 +342,11 @@ storiesOf('Button/Beta/Text', module)
           Text
         </TextButton>
       </div>
-      <h3>All Caps Inverse Text Button</h3>
+      <h3>All Caps Inverse</h3>
       <div className={css(blueBackground)}>
         <TextButton buttonType={TextButton.Types.InverseAllCaps}>All Caps</TextButton>
       </div>
-      <h3>Icon Inverse Text Buttons</h3>
+      <h3>Icons Inverse</h3>
       <div className={css(buttonContainer, blueBackground)}>
         <TextButton
           icon={editIcon}
@@ -367,12 +366,12 @@ storiesOf('Button/Beta/Text', module)
     </div>
   ));
 
-storiesOf('Button/Beta/Outline', module)
+storiesOf('Buttons/Beta/Outline', module)
   .addDecorator(withReadme(README))
   .add('Primary Outline Buttons', () => (
     <div className="story">
       <h1 className="section-label">Primary Outline Buttons</h1>
-      <h3>Large Primary Outline Buttons</h3>
+      <h3>Large Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary}>
         Outline Primary
       </Button>
@@ -400,7 +399,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Primary
       </Button>
-      <h3>Medium Primary Outline Buttons</h3>
+      <h3>Medium Primary</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlinePrimary}>
         Outline Primary
       </Button>
@@ -428,7 +427,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Primary
       </Button>
-      <h3>Small Primary Outline Buttons</h3>
+      <h3>Small Primary</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlinePrimary}>
         Outline Primary
       </Button>
@@ -439,7 +438,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Primary
       </Button>
-      <h3>Growing Primary Outline Button</h3>
+      <h3>Growing Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary} grow={true}>
         Growing Primary Outline
       </Button>
@@ -448,7 +447,7 @@ storiesOf('Button/Beta/Outline', module)
   .add('Secondary Outline Buttons', () => (
     <div className="story">
       <h1 className="section-label">Secondary Outline Buttons</h1>
-      <h3>Large Secondary Outline Buttons</h3>
+      <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
         Outline Secondary
       </Button>
@@ -476,7 +475,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Secondary
       </Button>
-      <h3>Medium Secondary Outline Buttons</h3>
+      <h3>Medium Secondary</h3>
       <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineSecondary}>
         Outline Secondary
       </Button>
@@ -504,7 +503,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Secondary
       </Button>
-      <h3>Small Secondary Outline Buttons</h3>
+      <h3>Small Secondary</h3>
       <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineSecondary}>
         Outline Secondary
       </Button>
@@ -515,7 +514,7 @@ storiesOf('Button/Beta/Outline', module)
       >
         Outline Secondary
       </Button>
-      <h3>Growing Secondary Outline Button</h3>
+      <h3>Growing Secondary</h3>
       <Button
         buttonSize={Button.Sizes.Large}
         buttonType={Button.Types.OutlineSecondary}
@@ -528,7 +527,7 @@ storiesOf('Button/Beta/Outline', module)
   .add('Inverse Outline Buttons', () => (
     <div className="story">
       <h1 className="section-label">Inverse Outline Buttons</h1>
-      <h3>Large Inverse Outline Buttons</h3>
+      <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
           Outline Inverse
@@ -558,7 +557,7 @@ storiesOf('Button/Beta/Outline', module)
           Outline Inverse
         </Button>
       </div>
-      <h3>Medium Inverse Outline Buttons</h3>
+      <h3>Medium Inverse</h3>
       <div className={css(blueBackground)}>
         <Button buttonSize={Button.Sizes.Medium} buttonType={Button.Types.OutlineInverse}>
           Outline Inverse
@@ -588,7 +587,7 @@ storiesOf('Button/Beta/Outline', module)
           Outline Inverse
         </Button>
       </div>
-      <h3>Small Inverse Outline Buttons</h3>
+      <h3>Small Inverse</h3>
       <div className={css(blueBackground)}>
         <Button buttonSize={Button.Sizes.Small} buttonType={Button.Types.OutlineInverse}>
           Outline Inverse
@@ -601,7 +600,7 @@ storiesOf('Button/Beta/Outline', module)
           Outline Inverse
         </Button>
       </div>
-      <h3>Growing Inverse Outline Button</h3>
+      <h3>Growing Inverse</h3>
       <div className={css(blueBackground)} style={{maxWidth: 'initial'}}>
         <Button
           buttonSize={Button.Sizes.Large}
@@ -614,12 +613,12 @@ storiesOf('Button/Beta/Outline', module)
     </div>
   ));
 
-storiesOf('Button/Beta/Dropdown', module)
+storiesOf('Buttons/Beta/Dropdown', module)
   .addDecorator(withReadme(README))
   .add('Primary Dropdown Buttons', () => (
     <div className="story">
       <h1 className="section-label">Primary Dropdown Buttons</h1>
-      <h3>Large Primary Dropdown Buttons</h3>
+      <h3>Large Primary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
         buttonType={DropdownButton.Types.Primary}
@@ -633,7 +632,7 @@ storiesOf('Button/Beta/Dropdown', module)
       >
         Dropdown Button
       </DropdownButton>
-      <h3>Medium Primary Dropdown Buttons</h3>
+      <h3>Medium Primary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
         buttonType={DropdownButton.Types.Primary}
@@ -652,7 +651,7 @@ storiesOf('Button/Beta/Dropdown', module)
   .add('Secondary Dropdown Buttons', () => (
     <div className="story">
       <h1 className="section-label">Secondary Dropdown Buttons</h1>
-      <h3>Large Secondary Dropdown Buttons</h3>
+      <h3>Large Secondary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
         buttonType={DropdownButton.Types.Secondary}
@@ -666,7 +665,7 @@ storiesOf('Button/Beta/Dropdown', module)
       >
         Dropdown Button
       </DropdownButton>
-      <h3>Medium Secondary Dropdown Buttons</h3>
+      <h3>Medium Secondary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Medium}
         buttonType={DropdownButton.Types.Secondary}

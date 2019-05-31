@@ -61,9 +61,9 @@ class BannerContainer extends React.Component<Props, State> {
 
 storiesOf('Cookie Banner', module)
   .addDecorator(withReadme(README))
-  .add('Full', () => (
+  .add('Standard Cookie Banner', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner</h1>
+      <h1 className="section-label">Standard Cookie Banner</h1>
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
@@ -71,9 +71,9 @@ storiesOf('Cookie Banner', module)
       />
     </div>
   ))
-  .add('Privacy Policy URL', () => (
+  .add('With Custom Notice', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner with custom notice</h1>
+      <h1 className="section-label">Cookie Banner With Custom Notice</h1>
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
@@ -94,9 +94,9 @@ storiesOf('Cookie Banner', module)
       />
     </div>
   ))
-  .add('Simple', () => (
+  .add('With No Settings', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner with no settings</h1>
+      <h1 className="section-label">Cookie Banner With No Settings</h1>
       <BannerContainer />
     </div>
   ));

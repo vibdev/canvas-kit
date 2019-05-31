@@ -7,17 +7,17 @@ import {spacing} from '@workday/canvas-kit-react-core';
 import Card from '..';
 import README from '../README.md';
 
-storiesOf('Card', module)
+storiesOf('Cards', module)
   .addDecorator(withReadme(README))
-  .add('Default', () => (
+  .add('Standard Card', () => (
     <div className="story">
-      <h1 className="section-label">Card</h1>
+      <h1 className="section-label">Standard Card</h1>
       <Card heading="Title">Card contents</Card>
     </div>
   ))
-  .add('No Padding', () => (
+  .add('Card With No Padding', () => (
     <div className="story">
-      <h1 className="section-label">Card</h1>
+      <h1 className="section-label">Card With No Padding</h1>
       <Card heading="Title" padding={spacing.zero}>
         No padding
       </Card>

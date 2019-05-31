@@ -213,7 +213,7 @@ class ContextMenu extends React.Component<{}, ControlledMenuState> {
     return (
       <ClickAwayListener onClickAway={this.handleClose}>
         <>
-          <div onContextMenu={this.handleContext}>Right Click Me</div>
+          <div onContextMenu={this.handleContext}>Right click on this text.</div>
           <Popper
             transition={true}
             keepMounted={true}
