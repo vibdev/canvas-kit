@@ -126,4 +126,6 @@ Default: `#FFFFFF`
 
 ### Optional
 
-> None
+#### `id: string`
+
+> An id linked to the color preview input to be used with an associated form label
