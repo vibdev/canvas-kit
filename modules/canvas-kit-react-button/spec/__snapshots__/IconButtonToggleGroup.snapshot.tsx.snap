@@ -54,10 +54,10 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
-  background-color: #ffffff;
+  background-color: #0875e1;
+  border-color: #0875e1;
 }
 
 .emotion-4:hover:active {
@@ -83,37 +83,23 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
   fill: #7b858f;
 }
 
-.emotion-4:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-4:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:active,
 .emotion-4:focus:active,
 .emotion-4:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-4:active span .wd-icon-fill,
-.emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill,
-.emotion-4:active span .wd-icon-accent,
-.emotion-4:focus:active span .wd-icon-accent,
-.emotion-4:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-4:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:hover span .wd-icon-fill,
@@ -125,7 +111,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:active:disabled,
 .emotion-4:focus:disabled,
 .emotion-4:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -136,12 +122,11 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:active:disabled span .wd-icon-accent,
 .emotion-4:focus:disabled span .wd-icon-accent,
 .emotion-4:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
@@ -150,7 +135,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:focus.emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #e8ebed;
+  background-color: #0875e1;
 }
 
 .emotion-4:focus.emotion-4:hover:focus span .wd-icon-fill,
@@ -162,7 +147,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:focus.emotion-4:hover span .wd-icon-fill,
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:active span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:focus.emotion-4:hover:focus span .wd-icon-accent,
@@ -174,29 +159,29 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-4:focus.emotion-4:hover span .wd-icon-accent,
 .emotion-4:focus span .wd-icon-accent,
 .emotion-4:active span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:not([disabled]):focus {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-4:hover {
-  background-color: #e8ebed;
+  background-color: #005cb9;
 }
 
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:hover span .wd-icon-fill,
 .emotion-4 span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:focus span .wd-icon-accent,
 .emotion-4:hover span .wd-icon-accent,
 .emotion-4 span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-0 {
@@ -258,9 +243,8 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
 }
 
 .emotion-1:hover:active {
@@ -286,37 +270,23 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
   fill: #7b858f;
 }
 
-.emotion-1:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-1:focus span .wd-icon-fill,
 .emotion-1:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-1:active span .wd-icon-fill,
-.emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill,
-.emotion-1:active span .wd-icon-accent,
-.emotion-1:focus:active span .wd-icon-accent,
-.emotion-1:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -328,7 +298,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -339,12 +309,11 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with RTL true, with disabled
 .emotion-1:active:disabled span .wd-icon-accent,
 .emotion-1:focus:disabled span .wd-icon-accent,
 .emotion-1:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
@@ -471,10 +440,10 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
-  background-color: #ffffff;
+  background-color: #0875e1;
+  border-color: #0875e1;
 }
 
 .emotion-4:hover:active {
@@ -500,37 +469,23 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
   fill: #7b858f;
 }
 
-.emotion-4:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-4:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:active,
 .emotion-4:focus:active,
 .emotion-4:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-4:active span .wd-icon-fill,
-.emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill,
-.emotion-4:active span .wd-icon-accent,
-.emotion-4:focus:active span .wd-icon-accent,
-.emotion-4:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-4:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:hover span .wd-icon-fill,
@@ -542,7 +497,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:active:disabled,
 .emotion-4:focus:disabled,
 .emotion-4:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -553,12 +508,11 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:active:disabled span .wd-icon-accent,
 .emotion-4:focus:disabled span .wd-icon-accent,
 .emotion-4:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
@@ -567,7 +521,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:focus.emotion-4:hover,
 .emotion-4:focus,
 .emotion-4:active {
-  background-color: #e8ebed;
+  background-color: #0875e1;
 }
 
 .emotion-4:focus.emotion-4:hover:focus span .wd-icon-fill,
@@ -579,7 +533,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:focus.emotion-4:hover span .wd-icon-fill,
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:active span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:focus.emotion-4:hover:focus span .wd-icon-accent,
@@ -591,29 +545,29 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-4:focus.emotion-4:hover span .wd-icon-accent,
 .emotion-4:focus span .wd-icon-accent,
 .emotion-4:active span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:not([disabled]):focus {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-4:hover {
-  background-color: #e8ebed;
+  background-color: #005cb9;
 }
 
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:hover span .wd-icon-fill,
 .emotion-4 span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-4:focus span .wd-icon-accent,
 .emotion-4:hover span .wd-icon-accent,
 .emotion-4 span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-0 {
@@ -675,9 +629,8 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
 }
 
 .emotion-1:hover:active {
@@ -703,37 +656,23 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
   fill: #7b858f;
 }
 
-.emotion-1:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-1:focus span .wd-icon-fill,
 .emotion-1:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-1:active span .wd-icon-fill,
-.emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill,
-.emotion-1:active span .wd-icon-accent,
-.emotion-1:focus:active span .wd-icon-accent,
-.emotion-1:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -745,7 +684,7 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -756,12 +695,11 @@ exports[`Icon Toggle Button Snapshot Toggle buttons with more than two items (us
 .emotion-1:active:disabled span .wd-icon-accent,
 .emotion-1:focus:disabled span .wd-icon-accent,
 .emotion-1:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
@@ -887,10 +825,10 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
-  background-color: #ffffff;
+  background-color: #0875e1;
+  border-color: #0875e1;
 }
 
 .emotion-1:hover:active {
@@ -916,37 +854,23 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
   fill: #7b858f;
 }
 
-.emotion-1:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-1:focus span .wd-icon-fill,
 .emotion-1:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-1:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-1:active span .wd-icon-fill,
-.emotion-1:focus:active span .wd-icon-fill,
-.emotion-1:hover:active span .wd-icon-fill,
-.emotion-1:active span .wd-icon-accent,
-.emotion-1:focus:active span .wd-icon-accent,
-.emotion-1:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -958,7 +882,7 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:active:disabled,
 .emotion-1:focus:disabled,
 .emotion-1:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-1:disabled span .wd-icon-fill,
@@ -969,12 +893,11 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:active:disabled span .wd-icon-accent,
 .emotion-1:focus:disabled span .wd-icon-accent,
 .emotion-1:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
@@ -983,7 +906,7 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:focus.emotion-1:hover,
 .emotion-1:focus,
 .emotion-1:active {
-  background-color: #e8ebed;
+  background-color: #0875e1;
 }
 
 .emotion-1:focus.emotion-1:hover:focus span .wd-icon-fill,
@@ -995,7 +918,7 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:focus.emotion-1:hover span .wd-icon-fill,
 .emotion-1:focus span .wd-icon-fill,
 .emotion-1:active span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-1:focus.emotion-1:hover:focus span .wd-icon-accent,
@@ -1007,29 +930,29 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-1:focus.emotion-1:hover span .wd-icon-accent,
 .emotion-1:focus span .wd-icon-accent,
 .emotion-1:active span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-1:not([disabled]):focus {
-  -webkit-animation: animation-os2b9x 100ms;
-  animation: animation-os2b9x 100ms;
-  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
 .emotion-1:hover {
-  background-color: #e8ebed;
+  background-color: #005cb9;
 }
 
 .emotion-1:focus span .wd-icon-fill,
 .emotion-1:hover span .wd-icon-fill,
 .emotion-1 span .wd-icon-fill {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-1:focus span .wd-icon-accent,
 .emotion-1:hover span .wd-icon-accent,
 .emotion-1 span .wd-icon-accent {
-  fill: #0875e1;
+  fill: #ffffff;
 }
 
 .emotion-0 {
@@ -1091,9 +1014,8 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
   border-radius: 4px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: #f0f1f2;
   border-color: #ced3d9;
-  color: #333333;
 }
 
 .emotion-4:hover:active {
@@ -1119,37 +1041,23 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
   fill: #7b858f;
 }
 
-.emotion-4:focus {
-  background-color: #e8ebed;
-  border-color: #005cb9;
-}
-
 .emotion-4:focus span .wd-icon-fill,
 .emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
 .emotion-4:hover:focus {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:active,
 .emotion-4:focus:active,
 .emotion-4:hover:active {
-  background-color: #e8ebed;
-}
-
-.emotion-4:active span .wd-icon-fill,
-.emotion-4:focus:active span .wd-icon-fill,
-.emotion-4:hover:active span .wd-icon-fill,
-.emotion-4:active span .wd-icon-accent,
-.emotion-4:focus:active span .wd-icon-accent,
-.emotion-4:hover:active span .wd-icon-accent {
-  fill: #0875e1;
+  background-color: #ced3d9;
 }
 
 .emotion-4:hover {
-  background-color: #e8ebed;
+  background-color: #dfe2e6;
 }
 
 .emotion-4:hover span .wd-icon-fill,
@@ -1161,7 +1069,7 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-4:active:disabled,
 .emotion-4:focus:disabled,
 .emotion-4:hover:disabled {
-  background-color: #ffffff;
+  background-color: #f6f7f8;
 }
 
 .emotion-4:disabled span .wd-icon-fill,
@@ -1172,12 +1080,11 @@ exports[`Icon Toggle Button Snapshot two buttons render as expected (w/ first se
 .emotion-4:active:disabled span .wd-icon-accent,
 .emotion-4:focus:disabled span .wd-icon-accent,
 .emotion-4:hover:disabled span .wd-icon-accent {
-  fill: #f0f1f2;
+  fill: #b9c0c7;
 }
 
 .emotion-4:not([disabled]):focus,
 .emotion-4:not([disabled]):active {
-  border-color: #005cb9;
   -webkit-animation: animation-os2b9x 100ms;
   animation: animation-os2b9x 100ms;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;

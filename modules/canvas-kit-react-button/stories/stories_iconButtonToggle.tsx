@@ -119,7 +119,6 @@ storiesOf('Button/Icon Button', module)
         <IconButtonToggleGroup>
           <IconButton
             icon={listViewIcon}
-            buttonType={IconButton.Types.SquareFilled}
             onClick={e => {
               alert("Here's your click event target: " + e.currentTarget);
             }}
@@ -131,53 +130,20 @@ storiesOf('Button/Icon Button', module)
       <h3>Four buttons</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={listViewIcon}
-            value="list-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={worksheetsIcon}
-            value="table-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={deviceTabletIcon}
-            value="device-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={percentageIcon}
-            value="percent-view"
-          />
+          <IconButton icon={listViewIcon} value="list-view" />
+          <IconButton icon={worksheetsIcon} value="table-view" />
+          <IconButton icon={deviceTabletIcon} value="device-view" />
+          <IconButton icon={percentageIcon} value="percent-view" />
         </IconButtonToggleGroup>
       </IconButtonToggleGroupWrapper>
 
       <h3>RTL - w/ initial selected item & disabled item</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup isRTL={true} value="table-view">
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={listViewIcon}
-            value="list-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={worksheetsIcon}
-            value="table-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={deviceTabletIcon}
-            value="device-view"
-          />
-          <IconButton
-            buttonType={IconButton.Types.SquareFilled}
-            icon={percentageIcon}
-            value="percent-view"
-            disabled={true}
-          />
+          <IconButton icon={listViewIcon} value="list-view" />
+          <IconButton icon={worksheetsIcon} value="table-view" />
+          <IconButton icon={deviceTabletIcon} value="device-view" />
+          <IconButton icon={percentageIcon} value="percent-view" disabled={true} />
         </IconButtonToggleGroup>
       </IconButtonToggleGroupWrapper>
     </div>

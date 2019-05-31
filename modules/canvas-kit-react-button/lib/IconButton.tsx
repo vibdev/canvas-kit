@@ -83,7 +83,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
             ...getAccentSelector(colors.frenchVanilla100),
           },
           '&:not([disabled]):focus': {
-            ...(toggled ? focusRing(2, 0) : {}),
+            ...(toggled ? focusRing(2, 2) : {}),
           },
           '&:hover': {
             backgroundColor: colors.blueberry500,
@@ -185,7 +185,7 @@ export default class IconButton extends React.Component<IconButtonProps> {
   public static Sizes = ButtonSizes;
 
   static defaultProps = {
-    buttonType: IconButtonTypes.Square,
+    buttonType: IconButtonTypes.SquareFilled,
     toggled: undefined,
   };
 
