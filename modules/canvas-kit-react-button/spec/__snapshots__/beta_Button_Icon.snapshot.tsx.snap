@@ -381,7 +381,7 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
 }
 
 .emotion-1:focus {
-  background-color: #f0f1f2;
+  background-color: #e8ebed;
   border-color: #005cb9;
 }
 
@@ -391,13 +391,13 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
 }
 
 .emotion-1:hover:focus {
-  background-color: #dfe2e6;
+  background-color: #e8ebed;
 }
 
 .emotion-1:active,
 .emotion-1:focus:active,
 .emotion-1:hover:active {
-  background-color: #ced3d9;
+  background-color: #e8ebed;
 }
 
 .emotion-1:active span .wd-icon-fill,
@@ -406,11 +406,11 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
 .emotion-1:active span .wd-icon-accent,
 .emotion-1:focus:active span .wd-icon-accent,
 .emotion-1:hover:active span .wd-icon-accent {
-  fill: #333d47;
+  fill: #0875e1;
 }
 
 .emotion-1:hover {
-  background-color: #dfe2e6;
+  background-color: #e8ebed;
 }
 
 .emotion-1:hover span .wd-icon-fill,
@@ -439,9 +439,9 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
 .emotion-1:not([disabled]):focus,
 .emotion-1:not([disabled]):active {
   border-color: #005cb9;
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-1:focus.emotion-1:hover,
@@ -475,9 +475,9 @@ exports[`Button (Icon) Snapshots renders a default icon button, toggled on 1`] =
 }
 
 .emotion-1:not([disabled]):focus {
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+  -webkit-animation: animation-os2b9x 100ms;
+  animation: animation-os2b9x 100ms;
+  box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
 .emotion-1:hover {

@@ -83,7 +83,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
             ...getAccentSelector(colors.frenchVanilla100),
           },
           '&:not([disabled]):focus': {
-            ...(toggled ? focusRing(2, 2) : {}),
+            ...(toggled ? focusRing(2, 0) : {}),
           },
           '&:hover': {
             backgroundColor: colors.blueberry500,
@@ -101,7 +101,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
             ...getAccentSelector(colors.blueberry400),
           },
           '&:not([disabled]):focus': {
-            ...(toggled ? focusRing(2, 2) : {}),
+            ...(toggled ? focusRing(2, 0) : {}),
           },
           '&:hover': {
             backgroundColor: colors.soap300,
