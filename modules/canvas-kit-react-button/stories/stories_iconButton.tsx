@@ -3,15 +3,25 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {activityStreamIcon, boldIcon, xIcon} from '@workday/canvas-system-icons-web';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
+import {
+  activityStreamIcon,
+  listViewIcon,
+  worksheetsIcon,
+  deviceTabletIcon,
+  percentageIcon,
+} from '@workday/canvas-system-icons-web';
 
-import {IconButton} from '..';
+import {
+  IconButton,
+  IconButtonToggleGroup,
+  IconButtonToggleGroupProps,
+  IconButtonTypes,
+} from '../dist/es6';
+
 import README from '../README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
 
-// TODO (beta button): remove this story, edit storybook config to not accept stories*.tsx
 const blueBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',
@@ -21,117 +31,294 @@ const blueBackground: CSSObject = {
   padding: '24px',
   maxWidth: 'max-content',
   borderRadius: '3px',
+  button: {
+    margin: '0 12px',
+  },
 };
 
-const plainSection: CSSObject = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '120px',
-  justifyContent: 'space-between',
-};
+// Wrapper to add state mgmt to IconButtons
+interface ToggleIconButtonWrapperState {
+  isToggled: boolean;
+}
 
-storiesOf('Button/Icon Button', module)
-  .addDecorator(withReadme(README))
-  .add('Clickable', () => (
-    <div className="story">
-      <h1 className="section-label">Icon Buttons</h1>
-      <h3>Square Icon Buttons</h3>
+interface ToggleIconButtonWrapperProps {
+  buttonType: IconButtonTypes;
+}
+
+export class ToggleIconButtonWrapper extends React.Component<
+  ToggleIconButtonWrapperProps,
+  ToggleIconButtonWrapperState
+> {
+  state = {
+    isToggled: false,
+  };
+
+  public render() {
+    return (
       <IconButton
-        icon={boldIcon}
+        toggled={this.state.isToggled}
+        buttonType={this.props.buttonType}
+        onClick={this.handleToggle}
+        icon={activityStreamIcon}
+      />
+    );
+  }
+
+  public handleToggle = () => {
+    this.setState({isToggled: !this.state.isToggled});
+  };
+}
+
+// Wrapper to add state mgmt to IconButtonToggleGroups
+interface IconButtonToggleGroupWrapperState {
+  selectedValue: string | number;
+}
+
+export class IconButtonToggleGroupWrapper extends React.Component<
+  {},
+  IconButtonToggleGroupWrapperState
+> {
+  state = {
+    selectedValue: '',
+  };
+
+  public render() {
+    const child = this.props.children as React.ReactElement<IconButtonToggleGroupProps>;
+    return React.cloneElement(child, {
+      value: this.state.selectedValue === '' ? child.props.value : this.state.selectedValue,
+      onChange: this.handleToggle,
+    });
+  }
+
+  public handleToggle = (selectedValue: string | number) => {
+    this.setState({selectedValue});
+  };
+}
+
+storiesOf('Buttons/Icon Buttons', module)
+  .addDecorator(withReadme(README))
+  .add('Square Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Square Icon Buttons</h1>
+      <h3>Medium Square</h3>
+      <IconButton
+        icon={activityStreamIcon}
         buttonSize={IconButton.Sizes.Medium}
         buttonType={IconButton.Types.Square}
       />
-      <br />
-      <IconButton icon={boldIcon} buttonType={IconButton.Types.Square} />
-      <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.Square}>
-        <SystemIcon icon={boldIcon} />
-      </IconButton>
-      <h3>Square Filled Icon Buttons</h3>
       <IconButton
-        icon={boldIcon}
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        disabled={true}
+        buttonType={IconButton.Types.Square}
+      />
+      <h3>Small Square</h3>
+      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Small} />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        disabled={true}
+        buttonType={IconButton.Types.Square}
+      />
+      <h3>Toggleable Square</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
+    </div>
+  ))
+  .add('Square Filled Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Square Filled Icon Buttons</h1>
+      <h3>Medium Square</h3>
+      <IconButton
+        icon={activityStreamIcon}
         buttonSize={IconButton.Sizes.Medium}
         buttonType={IconButton.Types.SquareFilled}
       />
-      <br />
-      <IconButton icon={boldIcon} buttonType={IconButton.Types.SquareFilled} />
-      <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.SquareFilled}>
-        <SystemIcon icon={boldIcon} />
-      </IconButton>
-      <h3>Plain Icon Buttons</h3>
-      <div className={css(plainSection)}>
-        <IconButton buttonType={IconButton.Types.Plain}>
-          <SystemIcon icon={xIcon} />
-        </IconButton>
-        <br />
-        <IconButton buttonType={IconButton.Types.Plain} buttonSize={IconButton.Sizes.Small}>
-          <SystemIcon icon={xIcon} />
-        </IconButton>
-        <br />
-        <IconButton disabled={true} buttonType={IconButton.Types.Plain}>
-          <SystemIcon icon={xIcon} />
-        </IconButton>
-      </div>
-      <h3>Default Icon Buttons</h3>
-      <IconButton buttonType={IconButton.Types.Default}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <br />
-      <IconButton buttonType={IconButton.Types.Default} buttonSize={IconButton.Sizes.Small}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.Default}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <h3>Filled Icon Buttons</h3>
-      <IconButton buttonType={IconButton.Types.Filled}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <br />
-      <IconButton buttonType={IconButton.Types.Filled} buttonSize={IconButton.Sizes.Small}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <br />
-      <IconButton disabled={true} buttonType={IconButton.Types.Filled}>
-        <SystemIcon icon={activityStreamIcon} />
-      </IconButton>
-      <h3>Inverse Icon Buttons</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        disabled={true}
+        buttonType={IconButton.Types.SquareFilled}
+      />
+      <h3>Small Square</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        buttonType={IconButton.Types.SquareFilled}
+      />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        disabled={true}
+        buttonType={IconButton.Types.SquareFilled}
+      />
+      <h3>Toggleable Square</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.SquareFilled} />
+    </div>
+  ))
+  .add('Plain Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Plain Icon Buttons</h1>
+      <h3>Medium Plain</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Plain}
+      />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Plain}
+        disabled={true}
+      />
+      <h3>Small Plain</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        buttonType={IconButton.Types.Plain}
+      />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        disabled={true}
+        buttonType={IconButton.Types.Plain}
+      />
+      <h3>Toggleable Plain</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
+    </div>
+  ))
+  .add('Filled Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Filled Icon Buttons</h1>
+      <h3>Medium Filled</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Filled}
+      />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Filled}
+        disabled={true}
+      />
+      <h3>Small Filled</h3>
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        buttonType={IconButton.Types.Filled}
+      />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        disabled={true}
+        buttonType={IconButton.Types.Filled}
+      />
+      <h3>Toggleable Filled</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Filled} />
+    </div>
+  ))
+  .add('Inverse Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Inverse Icon Buttons</h1>
+      <h3>Medium Inverse</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.Inverse}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Medium}
+          buttonType={IconButton.Types.Inverse}
+        />
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Medium}
+          buttonType={IconButton.Types.Inverse}
+          disabled={true}
+        />
       </div>
-      <br />
+      <h3>Small Inverse</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.Inverse} buttonSize={IconButton.Sizes.Small}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Small}
+          buttonType={IconButton.Types.Inverse}
+        />
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Small}
+          disabled={true}
+          buttonType={IconButton.Types.Inverse}
+        />
       </div>
-      <br />
+      <h3>Toggleable Inverse</h3>
       <div className={css(blueBackground)}>
-        <IconButton disabled={true} buttonType={IconButton.Types.Inverse}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <ToggleIconButtonWrapper buttonType={IconButton.Types.Inverse} />
       </div>
-      <h3>Inverse Filled Icon Buttons</h3>
+    </div>
+  ))
+  .add('Inverse Filled Icon Buttons', () => (
+    <div className="story">
+      <h1 className="section-label">Inverse Filled Icon Buttons</h1>
+      <h3>Medium Inverse Filled</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.InverseFilled}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Medium}
+          buttonType={IconButton.Types.InverseFilled}
+        />
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Medium}
+          buttonType={IconButton.Types.InverseFilled}
+          disabled={true}
+        />
       </div>
-      <br />
+      <h3>Small Inverse Filled</h3>
       <div className={css(blueBackground)}>
-        <IconButton buttonType={IconButton.Types.InverseFilled} buttonSize={IconButton.Sizes.Small}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Small}
+          buttonType={IconButton.Types.InverseFilled}
+        />
+        <IconButton
+          icon={activityStreamIcon}
+          buttonSize={IconButton.Sizes.Small}
+          disabled={true}
+          buttonType={IconButton.Types.InverseFilled}
+        />
       </div>
-      <br />
+      <h3>Toggleable Inverse Filled</h3>
       <div className={css(blueBackground)}>
-        <IconButton disabled={true} buttonType={IconButton.Types.InverseFilled}>
-          <SystemIcon icon={activityStreamIcon} />
-        </IconButton>
+        <ToggleIconButtonWrapper buttonType={IconButton.Types.InverseFilled} />
       </div>
+    </div>
+  ))
+  .add('Icon Button Groups', () => (
+    <div className="story">
+      <h1 className="section-label">Icon Button Groups</h1>
+      <h3>With Three Buttons</h3>
+      <IconButtonToggleGroupWrapper>
+        <IconButtonToggleGroup>
+          <IconButton icon={listViewIcon} />
+          <IconButton icon={worksheetsIcon} />
+          <IconButton icon={percentageIcon} disabled={true} />
+        </IconButtonToggleGroup>
+      </IconButtonToggleGroupWrapper>
+      <h3>With Four Buttons</h3>
+      <IconButtonToggleGroupWrapper>
+        <IconButtonToggleGroup>
+          <IconButton icon={listViewIcon} value="list-view" />
+          <IconButton icon={worksheetsIcon} value="table-view" />
+          <IconButton icon={deviceTabletIcon} value="device-view" />
+          <IconButton icon={percentageIcon} value="percent-view" disabled={true} />
+        </IconButtonToggleGroup>
+      </IconButtonToggleGroupWrapper>
+      <h3>Right To Left With Four Buttons</h3>
+      <IconButtonToggleGroupWrapper>
+        <IconButtonToggleGroup isRTL={true} value="table-view">
+          <IconButton icon={listViewIcon} value="list-view" />
+          <IconButton icon={worksheetsIcon} value="table-view" />
+          <IconButton icon={deviceTabletIcon} value="device-view" />
+          <IconButton icon={percentageIcon} value="percent-view" disabled={true} />
+        </IconButtonToggleGroup>
+      </IconButtonToggleGroupWrapper>
     </div>
   ));
