@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-radio/compare/@workday/canvas-kit-react-radio@0.1.12...@workday/canvas-kit-react-radio@0.2.0) (2019-06-03)
+
+
+### Features
+
+* **radio:** Add error & alert support to radio group ([c0d1f67](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-radio/commits/c0d1f67))
+* **radio:** Add grow support to radio group ([54177ca](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-radio/commits/54177ca))
+
+
+
+
+
 ## [0.1.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-radio/compare/@workday/canvas-kit-react-radio@0.1.11...@workday/canvas-kit-react-radio@0.1.12) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-radio

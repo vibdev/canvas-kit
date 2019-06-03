@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.6.3...@workday/canvas-kit-react-common@0.7.0) (2019-06-03)
+
+
+### Features
+
+* **common:** Add error ring helper ([2ffa374](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/2ffa374))
+* **common:** Add helper for adding mouseFocusBehavior ([e501a73](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/e501a73))
+
+
+
+
+
 ## [0.6.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.6.2...@workday/canvas-kit-react-common@0.6.3) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-common

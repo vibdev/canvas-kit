@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.1.13...@workday/canvas-kit-react-checkbox@0.2.0) (2019-06-03)
+
+
+### Bug Fixes
+
+* **checkbox:** Address nit comments ([d8a4d82](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/d8a4d82))
+
+
+### Features
+
+* **checkbox:** Add support for errors & alerts ([8fcd376](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/8fcd376))
+
+
+
+
+
 ## [0.1.13](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.1.12...@workday/canvas-kit-react-checkbox@0.1.13) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-checkbox
