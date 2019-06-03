@@ -23,4 +23,28 @@ describe('Checkbox Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('error renders as expected', () => {
+    const component = renderer.create(
+      <Checkbox error={Checkbox.ErrorType.Error} checked={false} disabled={false} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('checked error renders as expected', () => {
+    const component = renderer.create(
+      <Checkbox error={Checkbox.ErrorType.Error} checked={true} disabled={false} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('alert renders as expected', () => {
+    const component = renderer.create(
+      <Checkbox error={Checkbox.ErrorType.Alert} checked={false} disabled={false} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('checked alert renders as expected', () => {
+    const component = renderer.create(
+      <Checkbox error={Checkbox.ErrorType.Alert} checked={true} disabled={false} />
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

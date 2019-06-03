@@ -25,7 +25,7 @@ const radioTapArea = spacing.m;
 const radioContainerHeight = radioTapArea + spacing.xxs;
 const radioLabelDistance = spacing.xs;
 const radioWidth = 18;
-const rippleRadius = (40 - radioWidth) / 2;
+const rippleRadius = (spacing.l - radioWidth) / 2;
 
 const RadioContainer = styled('div')({
   display: 'flex',

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import {GrowthBehavior, ErrorType} from '@workday/canvas-kit-react-common';
+import {GrowthBehavior, ErrorType, errorRing} from '@workday/canvas-kit-react-common';
 import {inputColors, spacingNumbers, type} from '@workday/canvas-kit-react-core';
 
 export interface TextAreaProps
@@ -54,18 +54,12 @@ const TextAreaContainer = styled('textarea')<TextAreaProps>(
       },
     },
   },
-  ({resize, grow, error}) => ({
+  ({error}) => ({
+    ...errorRing(error),
+  }),
+  ({resize, grow}) => ({
     width: grow ? '100%' : undefined,
     resize: grow ? TextAreaResizeDirection.Vertical : resize,
-    border:
-      error === ErrorType.Error
-        ? `1px solid ${inputColors.error.border}`
-        : `1px solid ${inputColors.border}`,
-    boxShadow:
-      error === ErrorType.Error ? `inset 0 0 0 1px ${inputColors.error.border}` : undefined,
-    '&:hover:not([disabled])': {
-      borderColor: error === ErrorType.Error ? inputColors.error.border : inputColors.hoverBorder,
-    },
   })
 );
 

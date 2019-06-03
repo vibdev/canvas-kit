@@ -180,3 +180,24 @@ import FormField from '@workday/canvas-kit-react-form-field';
 
 > If specified, will be passed as the common `name` prop to all `Radio` children. This enables you
 > to avoid specifying `name` on each child.
+
+---
+
+#### `grow: boolean`
+
+> If true, the button will grow to its container's width.
+
+Default: `false`
+
+---
+
+#### `error: ErrorType`
+
+> The type of error to display, if any.
+
+| Type  | Description                     |
+| ----- | ------------------------------- |
+| Error | Red outline with error icon.    |
+| Alert | Yellow outline with alert icon. |
+
+Default: `undefined`

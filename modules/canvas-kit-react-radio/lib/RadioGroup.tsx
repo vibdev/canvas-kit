@@ -1,8 +1,10 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import Radio, {RadioProps} from './Radio';
+import {inputColors, spacing} from '@workday/canvas-kit-react-core';
+import {ErrorType, GrowthBehavior} from '@workday/canvas-kit-react-common';
 
-export interface RadioGroupProps {
+export interface RadioGroupProps extends GrowthBehavior {
   /**
    * React children must be of type Radio and have at least two.
    */
@@ -17,6 +19,8 @@ export interface RadioGroupProps {
 
   name?: string;
 
+  error?: ErrorType;
+
   /**
    * Callback function when a button is selected, optional.
    * If the selected button has a value, it will be returned.
@@ -25,16 +29,45 @@ export interface RadioGroupProps {
   onChange?: (value: string | number) => void;
 }
 
-const Container = styled('div')({});
+const Container = styled('div')<Pick<RadioGroupProps, 'error' | 'grow'>>(
+  {
+    display: 'inline-block',
+    boxSizing: 'border-box',
+  },
+  ({grow}) => grow && {width: '100%'},
+  ({error}) => {
+    let errorRingColor;
+
+    if (error === ErrorType.Error) {
+      errorRingColor = inputColors.error.border;
+    } else if (error === ErrorType.Alert) {
+      errorRingColor = inputColors.warning.border;
+    } else {
+      return {};
+    }
+    return {
+      borderRadius: 4,
+      boxShadow: `0 0 0 2px ${errorRingColor}`,
+      padding: `2px ${spacing.xxs}`,
+      margin: `-2px -${spacing.xxs}`,
+    };
+  }
+);
 
 export default class RadioGroup extends React.Component<RadioGroupProps> {
+  static ErrorType = ErrorType;
+
   static defaultProps = {
     value: 0,
   };
 
   render(): React.ReactNode {
-    const children = this.props.children;
-    return <Container>{React.Children.map(children, this.renderChild)}</Container>;
+    const {children, error, onChange, value, grow, ...otherProps} = this.props;
+    return (
+      <Container error={error} grow={grow} {...otherProps}>
+        {React.Children.map(children, this.renderChild)}
+      </Container>
+    );
   }
 
   private renderChild = (child: React.ReactElement<RadioProps>, index: number): React.ReactNode => {
