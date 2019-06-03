@@ -129,9 +129,9 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
 storiesOf('Side Panel', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Default', () => (
+  .add('Standard', () => (
     <div className="story">
-      <h1 className="section-label">Side Panel</h1>
+      <h1 className="section-label">Standard Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>
         <div>
           <SidePanel header={'Side Panel Header'} open={true} />
@@ -139,9 +139,9 @@ storiesOf('Side Panel', module)
       </div>
     </div>
   ))
-  .add('Collapsed', () => (
+  .add('Side Panel Collapsed', () => (
     <div className="story">
-      <h1 className="section-label">Side Panel</h1>
+      <h1 className="section-label">Side Panel Collapsed</h1>
       <div style={{height: '67vh', position: 'relative'}}>
         <div>
           <SidePanel open={false} />
@@ -151,7 +151,7 @@ storiesOf('Side Panel', module)
   ))
   .add('Configurable Side Panel', () => (
     <div className="story">
-      <h1 className="section-label">Side Panel</h1>
+      <h1 className="section-label">Configurable Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>
         <Header brandUrl="#">
           <Avatar
