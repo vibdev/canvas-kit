@@ -47,7 +47,7 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
         open={open}
         onToggleClick={this.onClick}
         breakpoint={800}
-        breakpointChange={this.handleBreakpoint}
+        onBreakpointChange={this.handleBreakpoint}
         header={'Side Panel Header'}
       >
         {open ? (
@@ -96,7 +96,7 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
-#### `breakpointChange: (open: boolean) => void;`
+#### `onBreakpointChange: (open: boolean) => void;`
 
 > Callback that gets called on resize and determines when the side panel should open or close
 > depending on the size of the browser and the breakpoint set.
