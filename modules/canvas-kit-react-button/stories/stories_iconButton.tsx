@@ -36,11 +36,15 @@ storiesOf('Button/Icon Button', module)
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
       <h3>Square Icon Buttons</h3>
-      <IconButton icon={boldIcon} buttonSize={IconButton.Sizes.Medium} />
+      <IconButton
+        icon={boldIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Square}
+      />
       <br />
-      <IconButton icon={boldIcon} />
+      <IconButton icon={boldIcon} buttonType={IconButton.Types.Square} />
       <br />
-      <IconButton disabled={true}>
+      <IconButton disabled={true} buttonType={IconButton.Types.Square}>
         <SystemIcon icon={boldIcon} />
       </IconButton>
       <h3>Square Filled Icon Buttons</h3>

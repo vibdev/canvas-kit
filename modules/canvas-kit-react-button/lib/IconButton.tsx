@@ -28,15 +28,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
   ({buttonSize, buttonType}) => {
-    if (buttonType === IconButtonTypes.Square) {
-      switch (buttonSize) {
-        case ButtonSizes.Medium:
-          return iconButtonStyles.variants!.sizes.medium;
-        default:
-        case ButtonSizes.Small:
-          return {};
-      }
-    } else if (buttonType === IconButtonTypes.SquareFilled) {
+    if (buttonType === IconButtonTypes.Square || buttonType === IconButtonTypes.SquareFilled) {
       switch (buttonSize) {
         case ButtonSizes.Medium:
           return iconButtonStyles.variants!.sizes.medium;
@@ -95,15 +87,15 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
         };
       case IconButtonTypes.Square:
         return {
-          '&:focus&:hover, &:focus, &:active': {
-            backgroundColor: colors.soap300,
+          '&:focus:hover, &:focus, &:active': {
+            backgroundColor: 'transparent',
             ...getFillSelector(colors.blueberry400),
             ...getAccentSelector(colors.blueberry400),
           },
           '&:not([disabled]):focus': {
             ...(toggled ? focusRing(2, 0) : {}),
           },
-          '&:hover': {
+          '&:hover, &:focus:hover': {
             backgroundColor: colors.soap300,
           },
           backgroundColor: colors.frenchVanilla100,
