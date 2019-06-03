@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.25](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.24...@workday/canvas-kit-react-avatar@0.4.25) (2019-06-03)
+
+
+### Bug Fixes
+
+* **avatar:** Pass size through to SystemIconCircle ([7a9478b](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/7a9478b))
+
+
+
+
+
 ## [0.4.24](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.23...@workday/canvas-kit-react-avatar@0.4.24) (2019-05-31)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-avatar

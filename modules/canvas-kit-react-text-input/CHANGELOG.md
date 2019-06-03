@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-text-input/compare/@workday/canvas-kit-react-text-input@0.1.11...@workday/canvas-kit-react-text-input@0.1.12) (2019-06-03)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-text-input
+
+
+
+
+
 ## [0.1.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-text-input/compare/@workday/canvas-kit-react-text-input@0.1.10...@workday/canvas-kit-react-text-input@0.1.11) (2019-05-31)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-text-input

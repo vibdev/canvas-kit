@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-cookie-banner",
-  "version": "0.4.30",
+  "version": "0.4.31",
   "description": "Canvas styled cookie banner",
   "homepage": "https://workdaydesign.com",
   "author": "Joseph Le <joseph.le@workday.com>",
@@ -38,7 +38,7 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-button": "^0.20.19",
+    "@workday/canvas-kit-react-button": "^0.20.20",
     "@workday/canvas-kit-react-core": "^1.10.2",
     "emotion": "^9.2.10",
     "react-emotion": "^9.2.10"
