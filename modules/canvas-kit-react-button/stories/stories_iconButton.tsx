@@ -95,11 +95,11 @@ export class IconButtonToggleGroupWrapper extends React.Component<
   };
 }
 
-storiesOf('Buttons/Icon Buttons', module)
+storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
-  .add('Square Icon Buttons', () => (
+  .add('Square Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Square Icon Buttons</h1>
+      <h1 className="section-label">Square Icon Button</h1>
       <h3>Medium Square</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -124,9 +124,9 @@ storiesOf('Buttons/Icon Buttons', module)
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
     </div>
   ))
-  .add('Square Filled Icon Buttons', () => (
+  .add('Square Filled Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Square Filled Icon Buttons</h1>
+      <h1 className="section-label">Square Filled Icon Button</h1>
       <h3>Medium Square</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -155,9 +155,9 @@ storiesOf('Buttons/Icon Buttons', module)
       <ToggleIconButtonWrapper buttonType={IconButton.Types.SquareFilled} />
     </div>
   ))
-  .add('Plain Icon Buttons', () => (
+  .add('Plain Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Plain Icon Buttons</h1>
+      <h1 className="section-label">Plain Icon Button</h1>
       <h3>Medium Plain</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -186,9 +186,9 @@ storiesOf('Buttons/Icon Buttons', module)
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
     </div>
   ))
-  .add('Filled Icon Buttons', () => (
+  .add('Filled Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Filled Icon Buttons</h1>
+      <h1 className="section-label">Filled Icon Button</h1>
       <h3>Medium Filled</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -217,9 +217,9 @@ storiesOf('Buttons/Icon Buttons', module)
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Filled} />
     </div>
   ))
-  .add('Inverse Icon Buttons', () => (
+  .add('Inverse Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Icon Buttons</h1>
+      <h1 className="section-label">Inverse Icon Button</h1>
       <h3>Medium Inverse</h3>
       <div className={css(blueBackground)}>
         <IconButton
@@ -254,9 +254,9 @@ storiesOf('Buttons/Icon Buttons', module)
       </div>
     </div>
   ))
-  .add('Inverse Filled Icon Buttons', () => (
+  .add('Inverse Filled Icon Button', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Filled Icon Buttons</h1>
+      <h1 className="section-label">Inverse Filled Icon Button</h1>
       <h3>Medium Inverse Filled</h3>
       <div className={css(blueBackground)}>
         <IconButton
@@ -291,9 +291,9 @@ storiesOf('Buttons/Icon Buttons', module)
       </div>
     </div>
   ))
-  .add('Icon Button Groups', () => (
+  .add('Icon Button Group', () => (
     <div className="story">
-      <h1 className="section-label">Icon Button Groups</h1>
+      <h1 className="section-label">Icon Button Group</h1>
       <h3>With Three Buttons</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>

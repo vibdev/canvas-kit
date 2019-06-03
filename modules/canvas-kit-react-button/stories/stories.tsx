@@ -6,11 +6,11 @@ import withReadme from 'storybook-readme/with-readme';
 import {Button} from '..';
 import README from '../README.md';
 
-storiesOf('Buttons', module)
+storiesOf('Button', module)
   .addDecorator(withReadme(README))
-  .add('Primary Buttons', () => (
+  .add('Primary Button', () => (
     <div className="story">
-      <h1 className="section-label">Primary Buttons</h1>
+      <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
       <Button buttonType={Button.Types.Primary}>Primary Button</Button>
       <Button buttonType={Button.Types.Primary} disabled={true}>
@@ -36,9 +36,9 @@ storiesOf('Buttons', module)
       </Button>
     </div>
   ))
-  .add('Secondary Buttons', () => (
+  .add('Secondary Button', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Buttons</h1>
+      <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonType={Button.Types.Secondary}>Secondary Button</Button>
       <Button buttonType={Button.Types.Secondary} disabled={true}>
@@ -64,9 +64,9 @@ storiesOf('Buttons', module)
       </Button>
     </div>
   ))
-  .add('Delete Buttons', () => (
+  .add('Delete Button', () => (
     <div className="story">
-      <h1 className="section-label">Delete Buttons</h1>
+      <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>
       <Button buttonType={Button.Types.Delete}>Delete Button</Button>
       <Button buttonType={Button.Types.Delete} disabled={true}>

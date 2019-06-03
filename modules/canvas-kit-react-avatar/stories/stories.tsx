@@ -9,12 +9,12 @@ import README from '../README.md';
 
 const IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png';
 
-storiesOf('Avatars', module)
+storiesOf('Avatar', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Light Avatars', () => (
+  .add('Light Avatar', () => (
     <div className="story">
-      <h1 className="section-label">Light Avatars</h1>
+      <h1 className="section-label">Light Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} />
       <h3>Extra Large</h3>
@@ -29,9 +29,9 @@ storiesOf('Avatars', module)
       <Avatar size={Avatar.Size.xs} />
     </div>
   ))
-  .add('Dark Avatars', () => (
+  .add('Dark Avatar', () => (
     <div className="story">
-      <h1 className="section-label">Dark Avatars</h1>
+      <h1 className="section-label">Dark Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} themeColor={Avatar.ThemeColor.Dark} />
       <h3>Extra Large</h3>
@@ -46,9 +46,9 @@ storiesOf('Avatars', module)
       <Avatar size={Avatar.Size.xs} themeColor={Avatar.ThemeColor.Dark} />
     </div>
   ))
-  .add('Image Avatars', () => (
+  .add('Image Avatar', () => (
     <div className="story">
-      <h1 className="section-label">Image Avatars</h1>
+      <h1 className="section-label">Image Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} url={IMAGE_URL} />
       <h3>Extra Large</h3>

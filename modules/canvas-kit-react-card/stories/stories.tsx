@@ -7,7 +7,7 @@ import {spacing} from '@workday/canvas-kit-react-core';
 import Card from '..';
 import README from '../README.md';
 
-storiesOf('Cards', module)
+storiesOf('Card', module)
   .addDecorator(withReadme(README))
   .add('Default Card', () => (
     <div className="story">

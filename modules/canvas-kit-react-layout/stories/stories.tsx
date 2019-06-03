@@ -7,7 +7,7 @@ import {Card} from '@workday/canvas-kit-react';
 import Layout from '..';
 import README from '../README.md';
 
-storiesOf('Layouts', module)
+storiesOf('Layout', module)
   .addDecorator(withReadme(README))
   .add('Page Layout', () => (
     <div className="story">

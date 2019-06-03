@@ -39,11 +39,11 @@ const buttonContainer = {
   },
 };
 
-storiesOf('Buttons/Beta', module)
+storiesOf('Button/Beta', module)
   .addDecorator(withReadme(README))
-  .add('Primary Buttons', () => (
+  .add('Primary Button', () => (
     <div className="story">
-      <h1 className="section-label">Primary Buttons</h1>
+      <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Primary
@@ -111,9 +111,9 @@ storiesOf('Buttons/Beta', module)
       </div>
     </div>
   ))
-  .add('Secondary Buttons', () => (
+  .add('Secondary Button', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Buttons</h1>
+      <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Secondary
@@ -179,9 +179,9 @@ storiesOf('Buttons/Beta', module)
       </Button>
     </div>
   ))
-  .add('Delete Buttons', () => (
+  .add('Delete Button', () => (
     <div className="story">
-      <h1 className="section-label">Delete Buttons</h1>
+      <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
         Delete
@@ -205,9 +205,9 @@ storiesOf('Buttons/Beta', module)
       </Button>
     </div>
   ))
-  .add('Highlight Buttons', () => (
+  .add('Highlight Button', () => (
     <div className="story">
-      <h1 className="section-label">Highlight Buttons</h1>
+      <h1 className="section-label">Highlight Button</h1>
       <h3>Large Highlight</h3>
       <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon}>
         Highlight
@@ -265,11 +265,11 @@ storiesOf('Buttons/Beta', module)
     </div>
   ));
 
-storiesOf('Buttons/Beta/Text', module)
+storiesOf('Button/Beta/Text', module)
   .addDecorator(withReadme(README))
-  .add('Text Buttons', () => (
+  .add('Text Button', () => (
     <div className="story">
-      <h1 className="section-label">Text Buttons</h1>
+      <h1 className="section-label">Text Button</h1>
       <h3>Large</h3>
       <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
         Text
@@ -313,9 +313,9 @@ storiesOf('Buttons/Beta/Text', module)
       </div>
     </div>
   ))
-  .add('Inverse Text Buttons', () => (
+  .add('Inverse Text Button', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Text Buttons</h1>
+      <h1 className="section-label">Inverse Text Button</h1>
       <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
@@ -366,9 +366,9 @@ storiesOf('Buttons/Beta/Text', module)
     </div>
   ));
 
-storiesOf('Buttons/Beta/Outline', module)
+storiesOf('Button/Beta/Outline', module)
   .addDecorator(withReadme(README))
-  .add('Primary Outline Buttons', () => (
+  .add('Primary Outline Button', () => (
     <div className="story">
       <h1 className="section-label">Primary Outline Buttons</h1>
       <h3>Large Primary</h3>
@@ -444,9 +444,9 @@ storiesOf('Buttons/Beta/Outline', module)
       </Button>
     </div>
   ))
-  .add('Secondary Outline Buttons', () => (
+  .add('Secondary Outline Button', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Outline Buttons</h1>
+      <h1 className="section-label">Secondary Outline Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
         Outline Secondary
@@ -524,9 +524,9 @@ storiesOf('Buttons/Beta/Outline', module)
       </Button>
     </div>
   ))
-  .add('Inverse Outline Buttons', () => (
+  .add('Inverse Outline Button', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Outline Buttons</h1>
+      <h1 className="section-label">Inverse Outline Button</h1>
       <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
@@ -613,11 +613,11 @@ storiesOf('Buttons/Beta/Outline', module)
     </div>
   ));
 
-storiesOf('Buttons/Beta/Dropdown', module)
+storiesOf('Button/Beta/Dropdown', module)
   .addDecorator(withReadme(README))
-  .add('Primary Dropdown Buttons', () => (
+  .add('Primary Dropdown Button', () => (
     <div className="story">
-      <h1 className="section-label">Primary Dropdown Buttons</h1>
+      <h1 className="section-label">Primary Dropdown Button</h1>
       <h3>Large Primary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
@@ -648,9 +648,9 @@ storiesOf('Buttons/Beta/Dropdown', module)
       </DropdownButton>
     </div>
   ))
-  .add('Secondary Dropdown Buttons', () => (
+  .add('Secondary Dropdown Button', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Dropdown Buttons</h1>
+      <h1 className="section-label">Secondary Dropdown Button</h1>
       <h3>Large Secondary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
