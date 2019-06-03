@@ -13,7 +13,7 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   openDirection?: SidePanelOpenDirection;
   onBreakpointChange?: (open: boolean) => void;
   padding?: CanvasSpacingValue;
-  breakpoint?: number;
+  breakpoint: number;
 }
 
 export interface SidePanelState {
