@@ -318,7 +318,18 @@ import { badgeAchievementGraphic } from '@workday/canvas-graphics-web'
 
 ## Static Properties
 
-> None
+#### `Size: SystemIconCircleSize`
+
+> The size of the circle background. The icon will scale to fit.
+
+| Size | Pixels |
+| ---- | ------ |
+| xs   | 16     |
+| s    | 24     |
+| m    | 32     |
+| l    | 40     |
+| xl   | 64     |
+| xxl  | 120    |
 
 ## Component Props
 
