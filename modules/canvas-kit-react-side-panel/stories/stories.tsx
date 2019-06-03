@@ -79,7 +79,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
         open={open}
         onToggleClick={this.onClick}
         breakpoint={800}
-        breakpointChange={this.handleBreakpoint}
+        onBreakpointChange={this.handleBreakpoint}
         header={'Side Panel Header'}
       >
         {open ? (
@@ -129,7 +129,27 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
 storiesOf('Side Panel', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('All', () => (
+  .add('Default', () => (
+    <div className="story">
+      <h1 className="section-label">Side Panel</h1>
+      <div style={{height: '67vh', position: 'relative'}}>
+        <div>
+          <SidePanel header={'Side Panel Header'} open={true} />
+        </div>
+      </div>
+    </div>
+  ))
+  .add('Collapsed', () => (
+    <div className="story">
+      <h1 className="section-label">Side Panel</h1>
+      <div style={{height: '67vh', position: 'relative'}}>
+        <div>
+          <SidePanel open={false} />
+        </div>
+      </div>
+    </div>
+  ))
+  .add('Configurable Side Panel', () => (
     <div className="story">
       <h1 className="section-label">Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>

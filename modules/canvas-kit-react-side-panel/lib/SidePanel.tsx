@@ -11,7 +11,7 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   onToggleClick?: () => void;
   header?: string | React.ReactNode;
   openDirection?: SidePanelOpenDirection;
-  breakpointChange: (open: boolean) => void;
+  onBreakpointChange?: (open: boolean) => void;
   padding?: CanvasSpacingValue;
   breakpoint?: number;
 }
@@ -61,7 +61,7 @@ const SidePanelContainer = styled('div')<SidePanelProps>(({open, openDirection, 
 });
 
 export default class SidePanel extends React.Component<SidePanelProps, SidePanelState> {
-  static SidePanelOpenDirection = SidePanelOpenDirection;
+  static OpenDirection = SidePanelOpenDirection;
   static defaultProps = {
     breakpoint: 834,
   };
@@ -85,16 +85,15 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
       open,
       openDirection,
       padding,
-      breakpoint,
+      onBreakpointChange,
       ...otherProps
     } = this.props;
-
     return (
       <SidePanelContainer
         aria-expanded={open}
         aria-orientation="vertical"
         padding={padding}
-        breakpointChange={this.handleResize}
+        onBreakpointChange={onBreakpointChange ? this.handleResize : undefined}
         openDirection={openDirection}
         open={open}
         {...otherProps}
@@ -116,19 +115,21 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   private handleResize = () => {
-    if (this.state.responsive) {
-      if (this.threshold() && !this.props.open) {
-        this.props.breakpointChange(true);
-      }
-      if (!this.threshold() && this.props.open) {
-        this.props.breakpointChange(false);
-      }
+    if (!this.props.onBreakpointChange) {
+      return;
+    }
+
+    if (window.innerWidth > this.props.breakpoint && !this.props.open) {
+      this.props.onBreakpointChange(true);
+    }
+    if (window.innerWidth <= this.props.breakpoint && this.props.open) {
+      this.props.onBreakpointChange(false);
     }
   };
 
   private toggleClick = () => {
-    const isResponsive =
-      (this.threshold() && !this.props.open) || (!this.threshold() && this.props.open);
+    const threshold = window.innerWidth > this.props.breakpoint;
+    const isResponsive = (threshold && !this.props.open) || (!threshold && this.props.open);
     this.setState({
       responsive: isResponsive,
     });
@@ -137,24 +138,11 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
     }
   };
 
-  private threshold = (): boolean => {
-    let threshold;
-    if (this.props.breakpoint) {
-      threshold = window.innerWidth > this.props.breakpoint;
-    } else {
-      threshold = window.innerWidth > 834;
-    }
-    return threshold;
-  };
-
   private toggleButtonDirection = (): CanvasSystemIcon => {
-    let toggleButtonDirection;
-
     if (this.props.openDirection !== SidePanelOpenDirection.Right) {
-      toggleButtonDirection = this.props.open ? arrowLeftIcon : arrowRightIcon;
+      return this.props.open ? arrowLeftIcon : arrowRightIcon;
     } else {
-      toggleButtonDirection = this.props.open ? arrowRightIcon : arrowLeftIcon;
+      return this.props.open ? arrowRightIcon : arrowLeftIcon;
     }
-    return toggleButtonDirection;
   };
 }

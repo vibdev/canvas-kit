@@ -4,30 +4,41 @@ import * as renderer from 'react-test-renderer';
 
 describe('SidePanel Snapshots', () => {
   test('renders as expected', () => {
-    const component = renderer.create(<SidePanel breakpointChange={jest.fn()} open={true} />);
+    const component = renderer.create(<SidePanel onBreakpointChange={jest.fn()} open={true} />);
     expect(component).toMatchSnapshot();
   });
   test('renders a closed side panel', () => {
-    const component = renderer.create(<SidePanel breakpointChange={jest.fn()} open={false} />);
+    const component = renderer.create(<SidePanel onBreakpointChange={jest.fn()} open={false} />);
     expect(component).toMatchSnapshot();
   });
   test('renders a side panel header', () => {
     const component = renderer.create(
-      <SidePanel breakpointChange={jest.fn()} header={'Side Panel Header'} open={true} />
+      <SidePanel onBreakpointChange={jest.fn()} header={'Side Panel Header'} open={true} />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders a side panel from the right', () => {
+    const component = renderer.create(
+      <SidePanel
+        openDirection={SidePanelOpenDirection.Right}
+        onBreakpointChange={jest.fn()}
+        header={'Side Panel Header'}
+        open={true}
+      />
     );
     expect(component).toMatchSnapshot();
   });
   test('does not render header when side panel is closed', () => {
     const component = renderer.create(
-      <SidePanel breakpointChange={jest.fn()} header={'Side Panel Header'} open={false} />
+      <SidePanel onBreakpointChange={jest.fn()} header={'Side Panel Header'} open={false} />
     );
     expect(component).toMatchSnapshot();
   });
   test('renders a toggle button', () => {
     const component = renderer.create(
       <SidePanel
-        breakpointChange={jest.fn()}
-        onToggleClick={jest.fn}
+        onBreakpointChange={jest.fn()}
+        onToggleClick={jest.fn()}
         header={'Side Panel Header'}
         open={false}
       />
@@ -37,7 +48,7 @@ describe('SidePanel Snapshots', () => {
   test('renders side panel on the right with correct toggle button when panel is closed', () => {
     const component = renderer.create(
       <SidePanel
-        breakpointChange={jest.fn()}
+        onBreakpointChange={jest.fn()}
         onToggleClick={jest.fn}
         openDirection={SidePanelOpenDirection.Right}
         header={'Side Panel Header'}
@@ -49,7 +60,7 @@ describe('SidePanel Snapshots', () => {
   test('renders side panel on the right with correct toggle button when panel is open', () => {
     const component = renderer.create(
       <SidePanel
-        breakpointChange={jest.fn()}
+        onBreakpointChange={jest.fn()}
         onToggleClick={jest.fn}
         openDirection={SidePanelOpenDirection.Right}
         header={'Side Panel Header'}
@@ -61,7 +72,7 @@ describe('SidePanel Snapshots', () => {
   test('renders side panel on the left', () => {
     const component = renderer.create(
       <SidePanel
-        breakpointChange={jest.fn()}
+        onBreakpointChange={jest.fn()}
         openDirection={SidePanelOpenDirection.Left}
         header={'Side Panel Header'}
         open={true}
@@ -71,7 +82,7 @@ describe('SidePanel Snapshots', () => {
   });
   test('renders a side panel with children elements', () => {
     const component = renderer.create(
-      <SidePanel breakpointChange={jest.fn()} open={true}>
+      <SidePanel onBreakpointChange={jest.fn()} open={true}>
         <ul>
           <li>Home</li>
           <li>Favorites</li>
