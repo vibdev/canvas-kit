@@ -7,11 +7,12 @@ import {Card} from '@workday/canvas-kit-react';
 import Layout from '..';
 import README from '../README.md';
 
-storiesOf('Layout', module)
+storiesOf('Layouts', module)
   .addDecorator(withReadme(README))
-  .add('Grid Layout', () => (
+  .add('Page Layout', () => (
     <div className="story">
-      <h1 className="section-label">Full Page</h1>
+      <h1 className="section-label">Page Layout</h1>
+      <h3>Full Page</h3>
       <div>
         <Layout gutter={0}>
           <Layout.Column spacing={0}>
@@ -19,7 +20,7 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Full Page with gutter & spacing</h1>
+      <h3>Full Page with gutter & spacing</h3>
       <div>
         <Layout>
           <Layout.Column>
@@ -27,7 +28,7 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Full Page with a max width</h1>
+      <h3>Full Page with a max width</h3>
       <div>
         <Layout capWidth={true}>
           <Layout.Column>
@@ -35,7 +36,12 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Column Layouts</h1>
+    </div>
+  ))
+  .add('12 Column Layout', () => (
+    <div className="story">
+      <h1 className="section-label">12 Column Layouts</h1>
+      <h3>12 Columns</h3>
       <div>
         <Layout>
           <Layout.Column>
@@ -76,7 +82,7 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">12 Column Grid Widths</h1>
+      <h3>12 Column Grid Widths</h3>
       <div>
         <Layout>
           <Layout.Column columns={4}>
@@ -87,7 +93,7 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Fixed Column Widths</h1>
+      <h3>Fixed Column Widths</h3>
       <div>
         <Layout>
           <Layout.Column width={'400px'}>
@@ -98,7 +104,7 @@ storiesOf('Layout', module)
           </Layout.Column>
         </Layout>
       </div>
-      <h1 className="section-label">Custom Spacing</h1>
+      <h3>Custom Spacing</h3>
       <div>
         <Layout spacing={60}>
           <Layout.Column spacing={0}>
