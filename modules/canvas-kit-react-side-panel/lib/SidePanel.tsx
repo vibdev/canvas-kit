@@ -90,7 +90,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
     } = this.props;
     return (
       <SidePanelContainer
-        aria-expanded={open}
+        role="region"
         aria-orientation="vertical"
         padding={padding}
         onBreakpointChange={onBreakpointChange ? this.handleResize : undefined}
@@ -102,7 +102,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         {this.props.children}
         {onToggleClick && (
           <ToggleButtonContainer
-            aria-label={`toggle ${open ? 'closed' : 'open'}`}
+            aria-label={`${open ? 'hide navigation' : 'show navigation'}`}
             toggled={false}
             buttonSize={ButtonSizes.Small}
             onClick={this.toggleClick}

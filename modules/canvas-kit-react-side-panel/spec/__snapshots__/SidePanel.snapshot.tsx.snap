@@ -32,11 +32,11 @@ exports[`SidePanel Snapshots does not render header when side panel is closed 1`
 }
 
 <div
-  aria-expanded={false}
   aria-orientation="vertical"
   className="emotion-0 emotion-1"
   onBreakpointChange={[Function]}
   open={false}
+  role="region"
 />
 `;
 
@@ -72,11 +72,11 @@ exports[`SidePanel Snapshots renders a closed side panel 1`] = `
 }
 
 <div
-  aria-expanded={false}
   aria-orientation="vertical"
   className="emotion-0 emotion-1"
   onBreakpointChange={[Function]}
   open={false}
+  role="region"
 />
 `;
 
@@ -121,11 +121,11 @@ exports[`SidePanel Snapshots renders a side panel from the right 1`] = `
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-2 emotion-3"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 >
   <h2
     className="emotion-0 emotion-1"
@@ -176,11 +176,11 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-2 emotion-3"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 >
   <h2
     className="emotion-0 emotion-1"
@@ -222,11 +222,11 @@ exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-0 emotion-1"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 >
   <ul>
     <li>
@@ -417,14 +417,14 @@ exports[`SidePanel Snapshots renders a toggle button 1`] = `
 }
 
 <div
-  aria-expanded={false}
   aria-orientation="vertical"
   className="emotion-4 emotion-5"
   onBreakpointChange={[Function]}
   open={false}
+  role="region"
 >
   <button
-    aria-label="toggle open"
+    aria-label="show navigation"
     aria-pressed={false}
     className="emotion-1 emotion-2 emotion-3"
     onClick={[Function]}
@@ -473,11 +473,11 @@ exports[`SidePanel Snapshots renders as expected 1`] = `
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-0 emotion-1"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 />
 `;
 
@@ -522,11 +522,11 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-2 emotion-3"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 >
   <h2
     className="emotion-0 emotion-1"
@@ -708,14 +708,14 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 }
 
 <div
-  aria-expanded={false}
   aria-orientation="vertical"
   className="emotion-4 emotion-5"
   onBreakpointChange={[Function]}
   open={false}
+  role="region"
 >
   <button
-    aria-label="toggle open"
+    aria-label="show navigation"
     aria-pressed={false}
     className="emotion-1 emotion-2 emotion-3"
     onClick={[Function]}
@@ -913,11 +913,11 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 }
 
 <div
-  aria-expanded={true}
   aria-orientation="vertical"
   className="emotion-6 emotion-7"
   onBreakpointChange={[Function]}
   open={true}
+  role="region"
 >
   <h2
     className="emotion-0 emotion-1"
@@ -925,7 +925,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
     Side Panel Header
   </h2>
   <button
-    aria-label="toggle closed"
+    aria-label="hide navigation"
     aria-pressed={false}
     className="emotion-3 emotion-4 emotion-5"
     onClick={[Function]}
