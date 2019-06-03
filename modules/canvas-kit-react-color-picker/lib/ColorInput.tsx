@@ -34,6 +34,9 @@ const CustomHexInput = styled(TextInput)<Pick<ColorInputProps, 'disabled' | 'err
     paddingLeft: '46px',
     minWidth: colorInputWidth,
     width: colorInputWidth,
+    '&:focus::placeholder': {
+      color: 'transparent',
+    },
   },
   ({error}) =>
     typeof error !== 'undefined' && {
