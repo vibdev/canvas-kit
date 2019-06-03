@@ -8,7 +8,7 @@ import {benefitsIcon} from '@workday/canvas-applet-icons-web';
 import {activityStreamIcon} from '@workday/canvas-system-icons-web';
 import {CanvasGraphic, CanvasIconTypes} from '@workday/design-assets-types';
 
-import {AccentIcon, AppletIcon, SystemIcon, Graphic} from '..';
+import {AccentIcon, AppletIcon, SystemIcon, SystemIconCircle, Graphic} from '..';
 import README from '../README.md';
 
 const graphicExample: CanvasGraphic = {
@@ -64,6 +64,8 @@ storiesOf('Icon', module)
       />
       <br />
       <SystemIcon icon={activityStreamIcon} size={48} />
+      <SystemIconCircle icon={activityStreamIcon} />
+      <SystemIconCircle icon={activityStreamIcon} background={colors.blueberry400} />
     </div>
   ))
   .add('Graphic', () => (
