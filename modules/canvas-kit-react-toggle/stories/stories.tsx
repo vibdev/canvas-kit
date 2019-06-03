@@ -34,9 +34,9 @@ class ToggleSwitchWrapper extends React.Component<{}, ToggleSwitchWrapperState> 
 
 storiesOf('Toggle', module)
   .addDecorator(withReadme(README))
-  .add('Standard Toggle', () => (
+  .add('Default Toggle', () => (
     <div className="story">
-      <h1 className="section-label">Standard Toggle</h1>
+      <h1 className="section-label">Default Toggle</h1>
       <h3>Default</h3>
       <ToggleSwitchWrapper />
       <h3>Disabled Toggle</h3>

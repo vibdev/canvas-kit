@@ -119,9 +119,9 @@ storiesOf('Header', module)
       </div>
     </div>
   ))
-  .add('Standard Dub Header', () => (
+  .add('Dub Header', () => (
     <div className="story">
-      <h1 className="section-label">Standard Dub Header</h1>
+      <h1 className="section-label">Dub Header</h1>
       <div className={containerStyle}>
         <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
@@ -206,9 +206,9 @@ storiesOf('Header', module)
       </div>
     </div>
   ))
-  .add('Standard Full Header', () => (
+  .add('Full Header', () => (
     <div className="story">
-      <h1 className="section-label">Standard Full Header</h1>
+      <h1 className="section-label">Full Header</h1>
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} />
       </div>

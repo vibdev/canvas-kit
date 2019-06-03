@@ -9,9 +9,9 @@ import README from '../README.md';
 
 storiesOf('Cards', module)
   .addDecorator(withReadme(README))
-  .add('Standard Card', () => (
+  .add('Default Card', () => (
     <div className="story">
-      <h1 className="section-label">Standard Card</h1>
+      <h1 className="section-label">Default Card</h1>
       <Card heading="Title">Card contents</Card>
     </div>
   ))

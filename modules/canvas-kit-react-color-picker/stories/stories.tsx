@@ -55,7 +55,7 @@ storiesOf('Color Picker', module)
   .add('Color Input', () => (
     <div className="story">
       <h1 className="section-label">Color Inputs</h1>
-      <h3>Standard</h3>
+      <h3>Default</h3>
       <CustomColorInputWrapper checkbox={true} />
       <h3>Without Checkbox</h3>
       <CustomColorInputWrapper checkbox={false} />
@@ -68,7 +68,7 @@ storiesOf('Color Picker', module)
   .add('Color Preview', () => (
     <div className="story">
       <h1 className="section-label">Color Preview</h1>
-      <h3>Standard</h3>
+      <h3>Default</h3>
       <ColorPreview value="#00FFCC" />
     </div>
   ));

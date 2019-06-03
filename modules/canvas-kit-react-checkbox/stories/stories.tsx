@@ -16,11 +16,7 @@ const control = (child: React.ReactNode) => (
 storiesOf('Checkbox', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-<<<<<<< HEAD
   .add('Default Checkbox', () => (
-=======
-  .add('Standard Checkbox', () => (
->>>>>>> docs(titles): updated storybook titles
     <div className="story">
       <h1 className="section-label">Default Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
