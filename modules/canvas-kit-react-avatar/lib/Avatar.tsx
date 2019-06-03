@@ -85,7 +85,11 @@ export default class Avatar extends React.Component<AvatarProps> {
         disabled={onClick ? false : true}
         innerRef={buttonRef}
       >
-        {url ? <img src={url} /> : <SystemIconCircle icon={userIcon} background={background} />}
+        {url ? (
+          <img src={url} />
+        ) : (
+          <SystemIconCircle icon={userIcon} background={background} size={size} />
+        )}
       </Container>
     );
   }
