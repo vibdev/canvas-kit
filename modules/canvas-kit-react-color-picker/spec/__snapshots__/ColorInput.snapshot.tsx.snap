@@ -81,6 +81,22 @@ exports[`ColorInput Snapshots renders a dark checkIcon if hex value is light 1`]
   color: #a1aab3;
 }
 
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-3 {
   position: absolute;
   cursor: pointer;
@@ -276,6 +292,22 @@ exports[`ColorInput Snapshots renders a disabled input 1`] = `
   color: #a1aab3;
 }
 
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-5 {
   position: absolute;
   left: 36px;
@@ -401,6 +433,22 @@ exports[`ColorInput Snapshots renders a light checkIcon if hex value is dark 1`]
 
 .emotion-1:disabled::placeholder {
   color: #a1aab3;
+}
+
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
 }
 
 .emotion-3 {
@@ -584,6 +632,22 @@ exports[`ColorInput Snapshots renders as expected 1`] = `
   color: #a1aab3;
 }
 
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-3 {
   position: absolute;
   cursor: pointer;
@@ -720,6 +784,22 @@ exports[`ColorInput Snapshots renders valid empty color input 1`] = `
 
 .emotion-1:disabled::placeholder {
   color: #a1aab3;
+}
+
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
 }
 
 .emotion-3 {
@@ -862,6 +942,22 @@ exports[`ColorInput Snapshots renders with a selected color 1`] = `
   color: #a1aab3;
 }
 
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-3 {
   position: absolute;
   cursor: pointer;
@@ -998,6 +1094,22 @@ exports[`ColorInput Snapshots renders with a selected color without # 1`] = `
 
 .emotion-1:disabled::placeholder {
   color: #a1aab3;
+}
+
+.emotion-1:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-1:focus::placeholder {
+  color: transparent;
 }
 
 .emotion-3 {

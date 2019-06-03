@@ -16,6 +16,13 @@ const ColorPreviewComponent = styled(ColorInput)({
 
 export default class ColorPreview extends React.Component<ColorPreviewProps> {
   public render() {
-    return <ColorPreviewComponent id={this.props.id} value={this.props.value} readOnly={true} />;
+    return (
+      <ColorPreviewComponent
+        id={this.props.id}
+        value={this.props.value}
+        readOnly={true}
+        placeholder=""
+      />
+    );
   }
 }

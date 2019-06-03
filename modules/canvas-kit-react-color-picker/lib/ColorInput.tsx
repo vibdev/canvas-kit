@@ -17,6 +17,7 @@ export interface ColorInputProps extends TextInputProps, GrowthBehavior {
   error?: ErrorType;
   inputRef?: React.Ref<HTMLInputElement>;
   showCheck?: boolean;
+  placeholder: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onValidColorChange?: (color: string) => void;
 }
@@ -33,6 +34,9 @@ const CustomHexInput = styled(TextInput)<Pick<ColorInputProps, 'disabled' | 'err
     paddingLeft: '46px',
     minWidth: colorInputWidth,
     width: colorInputWidth,
+    '&:focus::placeholder': {
+      color: 'transparent',
+    },
   },
   ({error}) =>
     typeof error !== 'undefined' && {
@@ -88,6 +92,7 @@ const swatchCheckIcon = css({
 export default class ColorInput extends React.Component<ColorInputProps> {
   static defaultProps = {
     value: '',
+    placeholder: 'FFFFFF',
   };
 
   public render() {
@@ -98,6 +103,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
       onValidColorChange,
       inputRef,
       disabled,
+      placeholder,
       ...otherProps
     } = this.props;
     const formattedValue = this.formatValue(value);
@@ -108,7 +114,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
           innerRef={inputRef}
           onChange={this.handleChange}
           type="text"
-          placeholder="FFFFFF"
+          placeholder={placeholder}
           value={formattedValue}
           spellCheck={false}
           disabled={disabled}

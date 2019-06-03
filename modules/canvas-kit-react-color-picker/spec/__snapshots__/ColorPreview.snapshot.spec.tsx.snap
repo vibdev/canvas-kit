@@ -84,6 +84,22 @@ exports[`ColorPreview Snapshots renders as expected 1`] = `
   color: #a1aab3;
 }
 
+.emotion-2:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-4 {
   position: absolute;
   cursor: pointer;
@@ -119,7 +135,7 @@ exports[`ColorPreview Snapshots renders as expected 1`] = `
       className="emotion-0 emotion-1 emotion-2"
       maxLength={7}
       onChange={[Function]}
-      placeholder="FFFFFF"
+      placeholder=""
       readOnly={true}
       spellCheck={false}
       type="text"
@@ -226,6 +242,22 @@ exports[`ColorPreview Snapshots renders valid empty color input 1`] = `
   color: #a1aab3;
 }
 
+.emotion-2:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-4 {
   position: absolute;
   cursor: pointer;
@@ -261,7 +293,7 @@ exports[`ColorPreview Snapshots renders valid empty color input 1`] = `
       className="emotion-0 emotion-1 emotion-2"
       maxLength={7}
       onChange={[Function]}
-      placeholder="FFFFFF"
+      placeholder=""
       readOnly={true}
       spellCheck={false}
       type="text"
@@ -368,6 +400,22 @@ exports[`ColorPreview Snapshots renders with a selected color 1`] = `
   color: #a1aab3;
 }
 
+.emotion-2:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-4 {
   position: absolute;
   cursor: pointer;
@@ -403,7 +451,7 @@ exports[`ColorPreview Snapshots renders with a selected color 1`] = `
       className="emotion-0 emotion-1 emotion-2"
       maxLength={7}
       onChange={[Function]}
-      placeholder="FFFFFF"
+      placeholder=""
       readOnly={true}
       spellCheck={false}
       type="text"
@@ -510,6 +558,22 @@ exports[`ColorPreview Snapshots renders with a selected color with # 1`] = `
   color: #a1aab3;
 }
 
+.emotion-2:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-2:focus::placeholder {
+  color: transparent;
+}
+
 .emotion-4 {
   position: absolute;
   cursor: pointer;
@@ -545,7 +609,7 @@ exports[`ColorPreview Snapshots renders with a selected color with # 1`] = `
       className="emotion-0 emotion-1 emotion-2"
       maxLength={7}
       onChange={[Function]}
-      placeholder="FFFFFF"
+      placeholder=""
       readOnly={true}
       spellCheck={false}
       type="text"
