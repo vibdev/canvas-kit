@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import throttle from 'lodash/throttle';
+
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {colors, spacing, type, CanvasSpacingValue} from '@workday/canvas-kit-react-core';
 import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
 import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
-import throttle from 'lodash/throttle';
 
 export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean;
@@ -33,11 +34,6 @@ const Header = styled('h2')({
   marginTop: spacing.zero,
 });
 
-const ToggleButtonContainer = styled(IconButton)({
-  position: 'absolute',
-  bottom: spacing.s,
-});
-
 const SidePanelContainer = styled('div')<SidePanelProps>(({open, openDirection, padding}) => {
   return {
     height: '100%',
@@ -53,12 +49,33 @@ const SidePanelContainer = styled('div')<SidePanelProps>(({open, openDirection, 
     backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
     width: open ? openSidePanelWidth : spacing.xxl,
     padding: open ? padding || spacing.m : `${spacing.s} 0`,
-    [`${ToggleButtonContainer}`]: {
-      right: open && openDirection !== SidePanelOpenDirection.Right ? spacing.s : '',
-      left: openDirection === SidePanelOpenDirection.Right && open ? spacing.s : '',
-    },
   };
 });
+
+const ToggleButtonContainer = styled(IconButton)<Pick<SidePanelProps, 'openDirection'>>(
+  {
+    position: 'absolute',
+    bottom: spacing.s,
+  },
+  ({openDirection}) => ({
+    right: openDirection === SidePanelOpenDirection.Left ? spacing.s : '',
+    left: openDirection === SidePanelOpenDirection.Right ? spacing.s : '',
+  })
+);
+
+const SidePanelFooter = styled('div')<Pick<SidePanelProps, 'open'>>(
+  {
+    position: 'absolute',
+    bottom: '0',
+    width: openSidePanelWidth,
+    height: 120,
+    left: 0,
+    background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #FFFFFF 100%)',
+  },
+  ({open}) => ({
+    width: open ? openSidePanelWidth : spacing.xxl,
+  })
+);
 
 export default class SidePanel extends React.Component<SidePanelProps, SidePanelState> {
   static OpenDirection = SidePanelOpenDirection;
@@ -88,28 +105,32 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
       onBreakpointChange,
       ...otherProps
     } = this.props;
+
     return (
       <SidePanelContainer
         role="region"
         aria-orientation="vertical"
         padding={padding}
-        onBreakpointChange={onBreakpointChange ? this.handleResize : undefined}
+        onBreakpointChange={this.handleResize}
         openDirection={openDirection}
         open={open}
         {...otherProps}
       >
         {header && open ? <Header>{header}</Header> : null}
         {this.props.children}
-        {onToggleClick && (
-          <ToggleButtonContainer
-            aria-label={`${open ? 'hide navigation' : 'show navigation'}`}
-            toggled={false}
-            buttonSize={ButtonSizes.Small}
-            onClick={this.toggleClick}
-            icon={this.toggleButtonDirection()}
-            buttonType={IconButton.Types.Filled}
-          />
-        )}
+        <SidePanelFooter open={open}>
+          {onToggleClick && (
+            <ToggleButtonContainer
+              openDirection={openDirection}
+              aria-label={`${open ? 'hide navigation' : 'show navigation'}`}
+              toggled={false}
+              buttonSize={ButtonSizes.Small}
+              onClick={this.toggleClick}
+              icon={this.toggleButtonDirection()}
+              buttonType={IconButton.Types.Filled}
+            />
+          )}
+        </SidePanelFooter>
       </SidePanelContainer>
     );
   }

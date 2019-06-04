@@ -45,6 +45,10 @@ describe('SidePanel Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders standard side panel', () => {
+    const component = renderer.create(<SidePanel open={true} />);
+    expect(component).toMatchSnapshot();
+  });
   test('renders side panel on the right with correct toggle button when panel is closed', () => {
     const component = renderer.create(
       <SidePanel

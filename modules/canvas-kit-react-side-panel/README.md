@@ -32,7 +32,6 @@ import SidePanel from '@workday/canvas-kit-react-side-panel';
 
 interface SidePanelState {
   open: boolean;
-  responsive: boolean;
 }
 
 class SidePanelExample extends React.Component<{}, SidePanelState> {
@@ -96,12 +95,6 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
-#### `breakpoint: number`
-
-> The width at which the window size must be in order for `onBreakPointChange` to fire.
-
-Default: `834px`
-
 #### `onBreakpointChange: (open: boolean) => void;`
 
 > A function that is called when the screen size changes and reaches `breakpoint`. For example, if
@@ -141,3 +134,9 @@ Default: `SidePanelOpenDirection.Left`
 Default: `24px` when it's open and `16px` top and bottom when it's closed
 
 ---
+
+#### `breakpoint: number`
+
+> The width at which the window size must be in order for `onBreakPointChange` to fire.
+
+Default: `834px`

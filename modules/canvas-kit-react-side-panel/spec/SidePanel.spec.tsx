@@ -9,7 +9,7 @@ describe('SidePanel', () => {
     cb.mockReset();
   });
 
-  test('should call a callback function', () => {
+  test('should call a callback function onToggleClick', () => {
     const component = mount(
       <SidePanel open={true} onToggleClick={cb}>
         Hello World
