@@ -1,7 +1,7 @@
 {
   "name": "@workday/canvas-kit-react-side-panel",
   "version": "0.0.0",
-  "description": "",
+  "description": "A side panel that is Canvas compliant.",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
   "license": "Apache-2.0",

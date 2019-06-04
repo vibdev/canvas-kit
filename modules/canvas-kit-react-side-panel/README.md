@@ -1,7 +1,7 @@
 # Canvas Kit Side Panel
 
-Side Panel component that provides a container for navigating elements. It also provides a way to
-surface information of either left or right side of the screen.
+A component that provides a container for navigation elements. It provides options to be opened from
+either the left or right side of the screen.
 
 ## Installation
 
@@ -12,7 +12,7 @@ yarn add @workday/canvas-kit-react
 or
 
 ```sh
-yarn add @workday/canvas-kit-side-panel
+yarn add @workday/canvas-kit-react-side-panel
 ```
 
 # Side Panel
@@ -98,14 +98,15 @@ All standard input attributes are available and can be passed to the input field
 
 #### `breakpoint: number`
 
-> Determines the breakpoint at which the side panel opens or closes
+> The width at which the window size must be in order for `onBreakPointChange` to fire.
 
 Default: `834px`
 
 #### `onBreakpointChange: (open: boolean) => void;`
 
-> Callback that gets called on resize and determines when the side panel should open or close
-> depending on the size of the browser and the breakpoint set.
+> A function that is called when the screen size changes and reaches `breakpoint`. For example, if
+> the user has their window at 1000px of width, and then resizes, this will get called when the
+> window size reaches the value of the `breakpoint` prop.
 
 ---
 

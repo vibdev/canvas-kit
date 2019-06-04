@@ -13,7 +13,7 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   openDirection?: SidePanelOpenDirection;
   onBreakpointChange?: (open: boolean) => void;
   padding?: CanvasSpacingValue;
-  breakpoint: number;
+  breakpoint?: number;
 }
 
 export interface SidePanelState {
@@ -115,7 +115,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   }
 
   private handleResize = () => {
-    if (!this.props.onBreakpointChange) {
+    if (!this.props.onBreakpointChange || !this.props.breakpoint) {
       return;
     }
 
@@ -128,6 +128,10 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
   };
 
   private toggleClick = () => {
+    if (!this.props.breakpoint) {
+      return;
+    }
+
     const threshold = window.innerWidth > this.props.breakpoint;
     const isResponsive = (threshold && !this.props.open) || (!threshold && this.props.open);
     this.setState({

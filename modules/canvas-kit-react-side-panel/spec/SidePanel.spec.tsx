@@ -2,7 +2,8 @@ import * as React from 'react';
 import {mount} from 'enzyme';
 
 import SidePanel from '../lib/SidePanel';
-describe('Popup', () => {
+
+describe('SidePanel', () => {
   const cb = jest.fn();
   afterEach(() => {
     cb.mockReset();
