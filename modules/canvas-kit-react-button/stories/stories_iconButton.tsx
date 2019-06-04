@@ -97,6 +97,37 @@ export class IconButtonToggleGroupWrapper extends React.Component<
 
 storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
+  .add('Default Icon Button', () => (
+    <div className="story">
+      <h1 className="section-label">Default Icon Button</h1>
+      <h3>Medium Default</h3>
+      <IconButton
+        buttonType={IconButton.Types.Default}
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+      />
+      <IconButton
+        buttonType={IconButton.Types.Default}
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        disabled={true}
+      />
+      <h3>Small Default</h3>
+      <IconButton
+        buttonType={IconButton.Types.Default}
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+      />
+      <IconButton
+        buttonType={IconButton.Types.Default}
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        disabled={true}
+      />
+      <h3>Toggleable Default</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
+    </div>
+  ))
   .add('Square Icon Button', () => (
     <div className="story">
       <h1 className="section-label">Square Icon Button</h1>
@@ -113,7 +144,11 @@ storiesOf('Button/Icon Button', module)
         buttonType={IconButton.Types.Square}
       />
       <h3>Small Square</h3>
-      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Small} />
+      <IconButton
+        icon={activityStreamIcon}
+        buttonSize={IconButton.Sizes.Small}
+        buttonType={IconButton.Types.Square}
+      />
       <IconButton
         icon={activityStreamIcon}
         buttonSize={IconButton.Sizes.Small}
@@ -183,7 +218,7 @@ storiesOf('Button/Icon Button', module)
         buttonType={IconButton.Types.Plain}
       />
       <h3>Toggleable Plain</h3>
-      <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.Plain} />
     </div>
   ))
   .add('Filled Icon Button', () => (
