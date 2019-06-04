@@ -27,7 +27,7 @@ storiesOf('Radio', module)
   ))
   .add('Error', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
+      <h1 className="section-label">Radio Error</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ControlledComponentWrapper>
           <RadioGroup error={RadioGroup.ErrorType.Error} name="contact">
@@ -40,9 +40,24 @@ storiesOf('Radio', module)
       </div>
     </div>
   ))
-  .add('Grow - Alert', () => (
+  .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
+      <h1 className="section-label">Radio Alert</h1>
+      <div style={{textAlign: 'left', marginBottom: '24px'}}>
+        <ControlledComponentWrapper>
+          <RadioGroup error={RadioGroup.ErrorType.Alert} name="contact">
+            <Radio id="1" value="email" label="E-mail" />
+            <Radio id="2" value="phone" label="Phone" />
+            <Radio id="3" value="fax" label="Fax (disabled)" disabled={true} />
+            <Radio id="4" value="mail" label="Mail" />
+          </RadioGroup>
+        </ControlledComponentWrapper>
+      </div>
+    </div>
+  ))
+  .add('Alert With Grow', () => (
+    <div className="story">
+      <h1 className="section-label">Radio Alert With Grow</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ControlledComponentWrapper>
           <RadioGroup error={RadioGroup.ErrorType.Alert} grow={true} name="contact">
