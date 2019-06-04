@@ -63,7 +63,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
 
 storiesOf('Tooltip', module)
   .addDecorator(withReadme(README))
-  .add('Default Tooltip', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Tooltip</h1>
       <TooltipWrapper />

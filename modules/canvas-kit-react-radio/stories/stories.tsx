@@ -10,7 +10,7 @@ import README from '../README.md';
 storiesOf('Radio', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Default Radio', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>

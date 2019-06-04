@@ -81,7 +81,7 @@ const createTable = (filter?: TableFilters) => {
 
 storiesOf('Table', module)
   .addDecorator(withReadme(README))
-  .add('Default Table', () => {
+  .add('Default', () => {
     return (
       <div className="story">
         <h1 className="section-label">Default Table</h1>

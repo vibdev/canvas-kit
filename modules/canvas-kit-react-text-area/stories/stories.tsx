@@ -11,7 +11,7 @@ storiesOf('Text Area', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(SectionDecorator('Text Area'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => controlComponent(<TextArea id="input-plain" />))
+  .add('Default', () => controlComponent(<TextArea id="input-plain" />))
   .add('With placeholder', () =>
     controlComponent(<TextArea id="input-placeholder" placeholder="Placeholder" />)
   )

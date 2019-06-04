@@ -274,7 +274,7 @@ class CustomMenuItem extends React.Component<MenuItemProps> {
 storiesOf('Menu', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Default Menu', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Menu</h1>
       <Menu grow={true} onSelect={action(`onSelect menu`)}>

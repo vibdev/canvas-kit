@@ -9,7 +9,7 @@ import README from '../README.md';
 
 storiesOf('Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
-  .add('Default Floating Action Toolbar', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Floating Action Toolbar</h1>
       <FloatingActionToolbar>

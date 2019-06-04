@@ -61,7 +61,7 @@ class BannerContainer extends React.Component<Props, State> {
 
 storiesOf('Cookie Banner', module)
   .addDecorator(withReadme(README))
-  .add('Default Cookie Banner', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Cookie Banner</h1>
       <BannerContainer

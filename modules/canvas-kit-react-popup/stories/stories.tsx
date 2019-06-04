@@ -75,7 +75,7 @@ class PopupWrapper extends React.Component<{}, PopupWrapperState> {
 
 storiesOf('Popup', module)
   .addDecorator(withReadme(README))
-  .add('Default Popup', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Default Popup</h1>
       <PopupWrapper />
