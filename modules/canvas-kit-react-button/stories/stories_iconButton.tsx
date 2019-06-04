@@ -16,7 +16,7 @@ import {
   IconButtonToggleGroup,
   IconButtonToggleGroupProps,
   IconButtonTypes,
-} from '../dist/es6';
+} from '../index';
 
 import README from '../README.md';
 import {css} from 'emotion';
