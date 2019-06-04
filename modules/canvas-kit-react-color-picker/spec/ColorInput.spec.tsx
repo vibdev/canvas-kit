@@ -87,6 +87,6 @@ describe('ColorInput', () => {
   test('should set inputRef as reference to native input', () => {
     const ref = React.createRef<HTMLInputElement>();
     mount(<ColorInput inputRef={ref} value={''} />);
-    expect(ref.current.tagName.toUpperCase()).toBe('INPUT');
+    expect(ref.current && ref.current.tagName && ref.current.tagName.toUpperCase()).toBe('INPUT');
   });
 });
