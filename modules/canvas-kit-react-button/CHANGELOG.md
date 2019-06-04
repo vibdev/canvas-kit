@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.21...@workday/canvas-kit-react-button@0.21.0) (2019-06-04)
+
+
+### Bug Fixes
+
+* **icon-button:** Minor cleanup ([238a9f5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/238a9f5))
+
+
+### Features
+
+* **Button:** improve square button ([6ad329c](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/6ad329c))
+* **Button:** match specs colors ([e0bd6a2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/e0bd6a2))
+* **Button:** support formatting icon button ([d3f4a7d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/d3f4a7d))
+* **Button:** update from feedback ([55b48a2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/commits/55b48a2))
+
+
+
+
+
 ## [0.20.21](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-button/compare/@workday/canvas-kit-react-button@0.20.20...@workday/canvas-kit-react-button@0.20.21) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-button

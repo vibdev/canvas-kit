@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.4.32...@workday/canvas-kit-react-cookie-banner@0.5.0) (2019-06-04)
+
+
+### Features
+
+* **Button:** match specs colors ([e0bd6a2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/e0bd6a2))
+* **Button:** support formatting icon button ([d3f4a7d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/commits/d3f4a7d))
+
+
+
+
+
 ## [0.4.32](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-cookie-banner/compare/@workday/canvas-kit-react-cookie-banner@0.4.31...@workday/canvas-kit-react-cookie-banner@0.4.32) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-cookie-banner

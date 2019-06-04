@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.7.32...@workday/canvas-kit-react-fat@0.8.0) (2019-06-04)
+
+
+### Features
+
+* **Button:** match specs colors ([e0bd6a2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/e0bd6a2))
+* **Button:** support formatting icon button ([d3f4a7d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/commits/d3f4a7d))
+
+
+
+
+
 ## [0.7.32](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.7.31...@workday/canvas-kit-react-fat@0.7.32) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-fat
