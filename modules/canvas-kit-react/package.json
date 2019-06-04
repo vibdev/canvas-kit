@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react",
-  "version": "1.6.14",
+  "version": "1.6.15",
   "description": "The parent module that contains all Workday Canvas Kit React components",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -41,7 +41,7 @@
     "@workday/canvas-kit-react-button": "^0.20.21",
     "@workday/canvas-kit-react-card": "^0.3.17",
     "@workday/canvas-kit-react-checkbox": "^0.2.0",
-    "@workday/canvas-kit-react-color-picker": "^0.3.5",
+    "@workday/canvas-kit-react-color-picker": "^0.4.0",
     "@workday/canvas-kit-react-common": "^0.7.0",
     "@workday/canvas-kit-react-cookie-banner": "^0.4.32",
     "@workday/canvas-kit-react-core": "^1.10.2",

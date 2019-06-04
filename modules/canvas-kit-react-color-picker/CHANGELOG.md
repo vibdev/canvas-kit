@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.3.5...@workday/canvas-kit-react-color-picker@0.4.0) (2019-06-04)
+
+
+### Features
+
+* **ColorInput:** allow a placeholder to be passed as a prop ([70b2c72](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/70b2c72))
+* **ColorInput:** code clean up ([97aea62](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/97aea62))
+* **ColorInput:** placeholder disappears when input in focus ([4993c72](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/4993c72))
+* **ColorPreview:** update component tests ([160543e](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/160543e))
+* **ColorPreview:** update component to match required props in ColorInput ([084a4d6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/084a4d6))
+
+
+
+
+
 ## [0.3.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.3.4...@workday/canvas-kit-react-color-picker@0.3.5) (2019-06-03)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-color-picker
