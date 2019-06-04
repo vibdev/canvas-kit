@@ -14,7 +14,7 @@ storiesOf('Page Header', module)
   .add('Product Page Header', () => (
     <div className="story">
       <h1 className="section-label">Product Page Header</h1>
-      <PageHeader title="Marketing Context" marketing={true}>
+      <PageHeader title="Product Context">
         <a href="#">
           <SystemIcon icon={exportIcon} />
         </a>
