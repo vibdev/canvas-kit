@@ -96,6 +96,12 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
+#### `breakpoint: number`
+
+> Determines the breakpoint at which the side panel opens or closes
+
+Default: `834px`
+
 #### `onBreakpointChange: (open: boolean) => void;`
 
 > Callback that gets called on resize and determines when the side panel should open or close
@@ -132,13 +138,5 @@ Default: `SidePanelOpenDirection.Left`
 > Adjust padding of the side panel when it's open.
 
 Default: `24px` when it's open and `16px` top and bottom when it's closed
-
----
-
-#### `breakpoint: number`
-
-> Determines the breakpoint at which the side panel opens or closes
-
-Default: `834px`
 
 ---
