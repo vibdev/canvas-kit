@@ -49,26 +49,40 @@ export default class CustomColorInputWrapper extends React.Component<
   };
 }
 
+storiesOf('Color Picker/Color Input', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Default', () => (
+    <div className="story">
+      <h1 className="section-label">Default Color Input</h1>
+      <CustomColorInputWrapper checkbox={true} />
+    </div>
+  ))
+  .add('Disabled', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Disabled</h1>
+      <ColorInput value={'EEEEEE'} showCheck={true} disabled={true} grow={false} />
+    </div>
+  ))
+  .add('Without Checkbox', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Without Checkbox</h1>
+      <CustomColorInputWrapper checkbox={false} />
+    </div>
+  ))
+  .add('Growing', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Growing</h1>
+      <ColorInput grow={true} />
+    </div>
+  ));
+
 storiesOf('Color Picker', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Color Input', () => (
-    <div className="story">
-      <h1 className="section-label">Color Inputs</h1>
-      <h3>Default</h3>
-      <CustomColorInputWrapper checkbox={true} />
-      <h3>Without Checkbox</h3>
-      <CustomColorInputWrapper checkbox={false} />
-      <h3>Disabled</h3>
-      <ColorInput value={'EEEEEE'} showCheck={true} disabled={true} grow={false} />
-      <h3>Growing</h3>
-      <CustomColorInputWrapper checkbox={true} growing={true} />
-    </div>
-  ))
   .add('Color Preview', () => (
     <div className="story">
       <h1 className="section-label">Color Preview</h1>
-      <h3>Default</h3>
       <ColorPreview value="#00FFCC" />
     </div>
   ));
