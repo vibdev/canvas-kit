@@ -29,6 +29,7 @@ export enum BetaButtonTypes {
 
 export enum IconButtonTypes {
   Square = 'square',
+  SquareFilled = 'squareFilled',
   Plain = 'plain',
   Default = 'default',
   Filled = 'filled',

@@ -31,4 +31,21 @@ describe('Icon Button Snapshots', () => {
     const component = renderer.create(<IconButton toggled={true} icon={activityStreamIcon} />);
     expect(component).toMatchSnapshot();
   });
+
+  test('renders various icon types', () => {
+    const component = renderer.create(
+      <>
+        <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.Square} />
+        <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.SquareFilled} />
+        <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.Plain} />
+        <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.Default} />
+        <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.Filled} />
+        <div style={{background: '#000'}}>
+          <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.Inverse} />
+          <IconButton icon={activityStreamIcon} buttonType={IconButton.Types.InverseFilled} />
+        </div>
+      </>
+    );
+    expect(component).toMatchSnapshot();
+  });
 });

@@ -154,7 +154,8 @@ Default: `IconButtonTypes.Square`
 
 | Theme           | Description                                      |
 | --------------- | ------------------------------------------------ |
-| `Square`        | Square, gray background, dark gray icon          |
+| `Square`        | Square, white background, dark gray icon         |
+| `SquareFilled`  | Square, gray background, dark gray icon          |
 | `Plain`         | Dark gray icon                                   |
 | `Default`       | Circular, dark gray icon                         |
 | `Filled`        | Circular, gray background, dark gray icon        |

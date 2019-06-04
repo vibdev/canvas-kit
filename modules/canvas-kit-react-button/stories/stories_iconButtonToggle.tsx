@@ -94,6 +94,8 @@ storiesOf('Button/Icon Button', module)
       <h1 className="section-label">Toggleable Icon Button</h1>
       <h3>Square Icon Buttons</h3>
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
+      <h3>Square Filled Icon Buttons</h3>
+      <ToggleIconButtonWrapper buttonType={IconButton.Types.SquareFilled} />
 
       <h3>Default Icon Buttons</h3>
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Default} />
@@ -121,7 +123,7 @@ storiesOf('Button/Icon Button', module)
               alert("Here's your click event target: " + e.currentTarget);
             }}
           />
-          <IconButton icon={worksheetsIcon} />
+          <IconButton buttonType={IconButton.Types.SquareFilled} icon={worksheetsIcon} />
         </IconButtonToggleGroup>
       </IconButtonToggleGroupWrapper>
 

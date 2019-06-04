@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {activityStreamIcon, xIcon} from '@workday/canvas-system-icons-web';
+import {activityStreamIcon, boldIcon, xIcon} from '@workday/canvas-system-icons-web';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 
 import {IconButton} from '..';
@@ -36,12 +36,28 @@ storiesOf('Button/Icon Button', module)
     <div className="story">
       <h1 className="section-label">Icon Buttons</h1>
       <h3>Square Icon Buttons</h3>
-      <IconButton icon={activityStreamIcon} buttonSize={IconButton.Sizes.Medium} />
+      <IconButton
+        icon={boldIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.Square}
+      />
       <br />
-      <IconButton icon={activityStreamIcon} />
+      <IconButton icon={boldIcon} buttonType={IconButton.Types.Square} />
       <br />
-      <IconButton disabled={true}>
-        <SystemIcon icon={activityStreamIcon} />
+      <IconButton disabled={true} buttonType={IconButton.Types.Square}>
+        <SystemIcon icon={boldIcon} />
+      </IconButton>
+      <h3>Square Filled Icon Buttons</h3>
+      <IconButton
+        icon={boldIcon}
+        buttonSize={IconButton.Sizes.Medium}
+        buttonType={IconButton.Types.SquareFilled}
+      />
+      <br />
+      <IconButton icon={boldIcon} buttonType={IconButton.Types.SquareFilled} />
+      <br />
+      <IconButton disabled={true} buttonType={IconButton.Types.SquareFilled}>
+        <SystemIcon icon={boldIcon} />
       </IconButton>
       <h3>Plain Icon Buttons</h3>
       <div className={css(plainSection)}>

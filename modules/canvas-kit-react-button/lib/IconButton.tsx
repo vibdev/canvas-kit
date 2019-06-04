@@ -28,7 +28,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
   iconButtonStyles.styles,
   ({buttonType}) => getButtonStyle(iconButtonStyles, buttonType),
   ({buttonSize, buttonType}) => {
-    if (buttonType === IconButtonTypes.Square) {
+    if (buttonType === IconButtonTypes.Square || buttonType === IconButtonTypes.SquareFilled) {
       switch (buttonSize) {
         case ButtonSizes.Medium:
           return iconButtonStyles.variants!.sizes.medium;
@@ -66,7 +66,7 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
     }
 
     switch (buttonType) {
-      case IconButtonTypes.Square:
+      case IconButtonTypes.SquareFilled:
       default:
         return {
           '&:focus&:hover, &:focus, &:active': {
@@ -84,6 +84,23 @@ export const IconButtonCon = styled('button')<IconButtonProps>(
           borderColor: colors.blueberry400,
           ...getFillSelector(colors.frenchVanilla100),
           ...getAccentSelector(colors.frenchVanilla100),
+        };
+      case IconButtonTypes.Square:
+        return {
+          '&:focus:hover, &:focus, &:active': {
+            backgroundColor: 'transparent',
+            ...getFillSelector(colors.blueberry400),
+            ...getAccentSelector(colors.blueberry400),
+          },
+          '&:not([disabled]):focus': {
+            ...(toggled ? focusRing(2, 0) : {}),
+          },
+          '&:hover, &:focus:hover': {
+            backgroundColor: colors.soap300,
+          },
+          backgroundColor: colors.frenchVanilla100,
+          ...getFillSelector(colors.blueberry400),
+          ...getAccentSelector(colors.blueberry400),
         };
       case IconButtonTypes.Default:
         return {
@@ -160,7 +177,7 @@ export default class IconButton extends React.Component<IconButtonProps> {
   public static Sizes = ButtonSizes;
 
   static defaultProps = {
-    buttonType: IconButtonTypes.Square,
+    buttonType: IconButtonTypes.SquareFilled,
     toggled: undefined,
   };
 

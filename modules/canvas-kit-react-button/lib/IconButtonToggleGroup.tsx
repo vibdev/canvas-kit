@@ -32,6 +32,7 @@ export interface IconButtonToggleGroupProps {
 const Container = styled('div')({
   [IconButtonCon as any]: {
     borderRadius: 0,
+    borderWidth: '1px',
     marginLeft: '-1px',
     '&:first-child': {
       borderTopLeftRadius: spacing.xxxs,
