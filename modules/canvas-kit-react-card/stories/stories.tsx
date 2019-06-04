@@ -15,7 +15,7 @@ storiesOf('Card', module)
       <Card heading="Title">Card contents</Card>
     </div>
   ))
-  .add('Card With No Padding', () => (
+  .add('With No Padding', () => (
     <div className="story">
       <h1 className="section-label">Card With No Padding</h1>
       <Card heading="Title" padding={spacing.zero}>

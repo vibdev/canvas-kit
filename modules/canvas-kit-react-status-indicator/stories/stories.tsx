@@ -45,7 +45,7 @@ storiesOf('Status Indicator', module)
       <StatusIndicator type={StatusIndicator.Type.Transparent} label={'transparent'} />
     </div>
   ))
-  .add('Status Indicator With Icon', () => (
+  .add('With Icon', () => (
     <div className="story">
       <h1 className="section-label">Status Indicator With Icon</h1>
       <StatusIndicator

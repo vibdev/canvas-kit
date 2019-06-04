@@ -9,9 +9,9 @@ import README from '../README.md';
 
 storiesOf('Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
-  .add('With Two Buttons', () => (
+  .add('Default Floating Action Toolbar', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar With Two Buttons</h1>
+      <h1 className="section-label">Default Floating Action Toolbar</h1>
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>

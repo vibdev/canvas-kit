@@ -89,25 +89,25 @@ storiesOf('Table', module)
       </div>
     );
   })
-  .add('Table With Alerts', () => (
+  .add('With Alerts', () => (
     <div className="story">
       <h1 className="section-label">Table With Alerts</h1>
       {createTable(TableFilters.alerts)}
     </div>
   ))
-  .add('Table With Errors', () => (
+  .add('With Errors', () => (
     <div className="story">
       <h1 className="section-label">Table With Errors</h1>
       {createTable(TableFilters.errors)}
     </div>
   ))
-  .add('Table With Selected Rows', () => (
+  .add('With Selected Rows', () => (
     <div className="story">
       <h1 className="section-label">Table With Selected Rows</h1>
       {createTable(TableFilters.selected)}
     </div>
   ))
-  .add('Table With All Elements', () => (
+  .add('With All Elements', () => (
     <div className="story">
       <h1 className="section-label">Table With All Elements</h1>
       {createTable(TableFilters.all)}
