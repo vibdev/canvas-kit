@@ -326,9 +326,9 @@ storiesOf('Button/Icon Button', module)
       </div>
     </div>
   ))
-  .add('Icon Button Group', () => (
+  .add('Icon Button Toggle Group', () => (
     <div className="story">
-      <h1 className="section-label">Icon Button Group</h1>
+      <h1 className="section-label">Icon Button Toggle Group</h1>
       <h3>With Three Buttons</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>
