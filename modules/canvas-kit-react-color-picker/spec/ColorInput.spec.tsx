@@ -84,4 +84,9 @@ describe('ColorInput', () => {
         .prop('style')
     ).toHaveProperty('backgroundColor', '#123456');
   });
+  test('should set inputRef as reference to native input', () => {
+    const ref = React.createRef<HTMLInputElement>();
+    const component = mount(<ColorInput inputRef={ref} value={''} />);
+    expect(ref.current.tagName.toUpperCase()).toBe('INPUT');
+  });
 });
