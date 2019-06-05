@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.5.0...@workday/canvas-kit-react-color-picker@0.5.1) (2019-06-05)
+
+
+### Bug Fixes
+
+* pass right inputRef to color input ([ab1feb2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/ab1feb2))
+
+
+
+
+
 # [0.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.4.0...@workday/canvas-kit-react-color-picker@0.5.0) (2019-06-05)
 
 
