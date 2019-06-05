@@ -42,19 +42,8 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 #### Enum naming
 
 - Singular
-
 - PascalCase
-
-- Include component name unless it's a generic enum shared across components
-
-- ```
-  ButtonType {
-    Primary = 'primary',
-    Secondary = 'secondary',
-    Delete = 'delete',
-  }
-  ```
-
+- Include component name unless it's a generic enum shared across components. Since we export our enums, this prevents naming clashes.
 - Exclude component in default props (`Button.Type` vs. `Button.ButtonType`):
 
   ```
@@ -66,11 +55,6 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   // Results in
   Button.Type.Primary
   ```
-
-#### Ref naming
-
-- When providing a ref, indicate what element it's tied to (generally by using the type of element if it's descriptive enough for your component). E.g. `inputRef`
-
 
 
 ## Patterns:
@@ -118,10 +102,10 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 
 
-### Prop spread behavior
+#### Prop spread behavior
 
 - Extend the interface of the primary element/component in your component (e.g. `export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>`)
-- Intentionally destructure your props so that every prop is assigned. This allows us to use spread the way I think it was intended. 
+- Intentionally destructure your props so that every prop is assigned. This allows you to use spread the way it was intended. 
 
 ```
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -139,17 +123,24 @@ const { type, size, icon, ...elemProps } = this.props
 
 
 
-### Controlled components
+#### Controlled components
 
 - We opt for controlled components wherever possible.
 - We aim to manage the least amount of state within our components as possible.
 - For input type components:
   - Always stick with the default `value` and `onChange` if you can
   - Deviate where it makes sense and/or is required (e.g. `checked` and `onChange` for checkboxes).
+  
+  
+
+#### Ref usage
+
+- When a consumer [needs a reference to an underlying element](https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs) (to manage focus, check DOM ancestors, etc.), use emotion components' `innerRef` prop. Note: with emotion 10, this[ will change to `ref`](https://medium.com/emotion-js/announcing-emotion-10-f1a4b17b8ccd#71bb)
+- When providing a ref prop, indicate what element it's tied to (generally by using the type of element if it's descriptive enough for your component). E.g. `inputRef`
 
 
 
-### Accessibility
+#### Accessibility
 
 - Use aria labels where required
 - Ensure full keyboard navigation
@@ -158,7 +149,7 @@ const { type, size, icon, ...elemProps } = this.props
 
 
 
-### Child mapping
+#### Child mapping
 
 - We often add or augment props to React children within our components. Use `React.Children.map` along with `React.cloneElement()`
 - Use `React.isValidElement()` if you want to make sure it's a React component and not a regular DOM node.
@@ -169,17 +160,33 @@ const { type, size, icon, ...elemProps } = this.props
 
 #### Logic Flow
 
-- Ifs vs. Switch
-- Nested Ternaries
-- Using this.x in functions vs. passing in
+- If vs. Switch: use switch statements when code branching is determined by the value of a single variable or expression.
+- Nested Ternaries: maximum two levels and only if it's very obvious. If you have two or more levels, try rewriting it as if/else statements and compare the complexity.
+- Opt for [pure functions](https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c) wherever possible. They make unit testing easier and always behave as expected. Because React can be a bit of a magic black box, sometimes `this.x` values are not what you expect.
 
+```
+foo(number, bar) => {
+  return number * bar
+}
+
+foo(this.number, this.bar);
+
+// is a much better option than
+
+foo() => {
+  return this.number * this.bar
+}
+
+foo();
+```
 
 
 ## Code Style:
 
 #### Default Props
 
-- Any prop included in `defaultProps` should be typed as required in the component interface. However, it can still be documented as optional in the README.
+- Use defaultProps whenever you find yourself checking for the existence of something before executing branching logic. It significantly reduces conditionals, facilitating easier testing and less bugs.
+- Any prop included in `defaultProps` should be typed as required in the component interface. However, it can still be documented as optional in the README. You can find more details [here](https://stackoverflow.com/questions/37282159/default-property-value-in-react-component-using-typescript)
 
 #### Class Function Binding
 
@@ -196,19 +203,35 @@ const { type, size, icon, ...elemProps } = this.props
 
 - Always initialize styled components outside of your render function. Failing to do this will result in a big performance hit.
 - When specifying the props a styled component can accept, it is up to you do define how restrictive you should be. You can accept any prop that the component accepts (e.g. `styled('div')<ComponentProps>`) or only accept a subset (e.g. `styled('div')<Pick<ComponentProps, 'someProp' | 'anotherProp'>>`)
-- We generally prefer the use of `styled` components over using the `css` function. However,  `css` can be handy for some basic styling.
+- We generally prefer the use of `styled` components over using the `css` function. However, `css` can be handy for some basic styling.
 
+#### Exports
 
+- Import the component most closely tied with the name of the package as the default, but also as a named export
+- Export everything else as a named export (`export * from ...`). Consider the naming of the things you're exporting (interfaces, enums, etc.) so you don't encounter any clashes.
+```
+// inside MyComponent/index.ts
+import MyComponent from './lib/MyComponent';
+import AnotherComponent from './lib/AnotherComponent';
 
-- WD-C guide
-- 
-- 
-- File Organization & Exports
-
-
+export default MyComponent;
+export {MyComponent, AnotherComponent};
+export * from './lib/MyComponent';
+export * from './lib/AnotherComponent';
+```
 
 ## Documentation:
 
-- Storybook structure (duplicative & referenceable)
-- 
+#### Readme
+- Follow our README template
+- Outline static properties (e.g. `Button.Type`), required props, and optional props
+- Usage example should be as standalone as possible. As long as it's not too complex, this snippet should be a working implementation so consumers can copy/paste
+
+#### Storybook structure
+- Always opt for the most referenceable code in your stories. Storybook helps us test, but many consumers use it as an example of how to implement components. 
+- Avoid helper functions to reduce duplication that make it harder to parse.
+- Avoid sharing wrappers, components, etc. from other story files. 
+- Essentially, try to keep each example as standalone and referencable as possible. 
+
+
 
