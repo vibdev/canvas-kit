@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.7.0...@workday/canvas-kit-react-common@0.7.1) (2019-06-05)
+
+
+### Bug Fixes
+
+* **common:** remove lodash types from deps ([#410](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/issues/410)) ([1f54353](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/1f54353))
+
+
+
+
+
 # [0.7.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.6.3...@workday/canvas-kit-react-common@0.7.0) (2019-06-03)
 
 
