@@ -12,7 +12,7 @@ const IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/design-assets-internal/ava
 storiesOf('Avatar', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Light Avatar', () => (
+  .add('Light', () => (
     <div className="story">
       <h1 className="section-label">Light Avatar</h1>
       <h3>Extra-Extra Large</h3>
@@ -29,7 +29,7 @@ storiesOf('Avatar', module)
       <Avatar size={Avatar.Size.xs} />
     </div>
   ))
-  .add('Dark Avatar', () => (
+  .add('Dark', () => (
     <div className="story">
       <h1 className="section-label">Dark Avatar</h1>
       <h3>Extra-Extra Large</h3>
@@ -46,7 +46,7 @@ storiesOf('Avatar', module)
       <Avatar size={Avatar.Size.xs} themeColor={Avatar.ThemeColor.Dark} />
     </div>
   ))
-  .add('Image Avatar', () => (
+  .add('Image', () => (
     <div className="story">
       <h1 className="section-label">Image Avatar</h1>
       <h3>Extra-Extra Large</h3>

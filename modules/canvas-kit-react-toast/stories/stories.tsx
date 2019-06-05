@@ -70,13 +70,13 @@ class ToastWrapper extends React.Component<{state?: string}> {
 
 storiesOf('Toast', module)
   .addDecorator(withReadme(README))
-  .add('Successful Toast', () => (
+  .add('Successful', () => (
     <div className="story">
       <h1 className="section-label">Successful Toast</h1>
       <ToastWrapper state={'Success'} />
     </div>
   ))
-  .add('Error Toast', () => (
+  .add('Error', () => (
     <div className="story">
       <h1 className="section-label">Error Toast</h1>
       <ToastWrapper state={'Error'} />

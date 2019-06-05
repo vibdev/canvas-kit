@@ -41,7 +41,7 @@ const buttonContainer = {
 
 storiesOf('Button/Beta', module)
   .addDecorator(withReadme(README))
-  .add('Primary Button', () => (
+  .add('Primary', () => (
     <div className="story">
       <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
@@ -111,7 +111,7 @@ storiesOf('Button/Beta', module)
       </div>
     </div>
   ))
-  .add('Secondary Button', () => (
+  .add('Secondary', () => (
     <div className="story">
       <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
@@ -179,7 +179,7 @@ storiesOf('Button/Beta', module)
       </Button>
     </div>
   ))
-  .add('Delete Button', () => (
+  .add('Delete', () => (
     <div className="story">
       <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>
@@ -205,7 +205,7 @@ storiesOf('Button/Beta', module)
       </Button>
     </div>
   ))
-  .add('Highlight Button', () => (
+  .add('Highlight', () => (
     <div className="story">
       <h1 className="section-label">Highlight Button</h1>
       <h3>Large Highlight</h3>
@@ -267,7 +267,7 @@ storiesOf('Button/Beta', module)
 
 storiesOf('Button/Beta/Text', module)
   .addDecorator(withReadme(README))
-  .add('Text Button', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Text Button</h1>
       <h3>Large</h3>
@@ -313,7 +313,7 @@ storiesOf('Button/Beta/Text', module)
       </div>
     </div>
   ))
-  .add('Inverse Text Button', () => (
+  .add('Inverse', () => (
     <div className="story">
       <h1 className="section-label">Inverse Text Button</h1>
       <h3>Large Inverse</h3>
@@ -368,7 +368,7 @@ storiesOf('Button/Beta/Text', module)
 
 storiesOf('Button/Beta/Outline', module)
   .addDecorator(withReadme(README))
-  .add('Primary Outline Button', () => (
+  .add('Primary', () => (
     <div className="story">
       <h1 className="section-label">Primary Outline Buttons</h1>
       <h3>Large Primary</h3>
@@ -444,7 +444,7 @@ storiesOf('Button/Beta/Outline', module)
       </Button>
     </div>
   ))
-  .add('Secondary Outline Button', () => (
+  .add('Secondary', () => (
     <div className="story">
       <h1 className="section-label">Secondary Outline Button</h1>
       <h3>Large Secondary</h3>
@@ -524,7 +524,7 @@ storiesOf('Button/Beta/Outline', module)
       </Button>
     </div>
   ))
-  .add('Inverse Outline Button', () => (
+  .add('Inverse', () => (
     <div className="story">
       <h1 className="section-label">Inverse Outline Button</h1>
       <h3>Large Inverse</h3>
@@ -615,7 +615,7 @@ storiesOf('Button/Beta/Outline', module)
 
 storiesOf('Button/Beta/Dropdown', module)
   .addDecorator(withReadme(README))
-  .add('Primary Dropdown Button', () => (
+  .add('Primary', () => (
     <div className="story">
       <h1 className="section-label">Primary Dropdown Button</h1>
       <h3>Large Primary</h3>
@@ -648,7 +648,7 @@ storiesOf('Button/Beta/Dropdown', module)
       </DropdownButton>
     </div>
   ))
-  .add('Secondary Dropdown Button', () => (
+  .add('Secondary', () => (
     <div className="story">
       <h1 className="section-label">Secondary Dropdown Button</h1>
       <h3>Large Secondary</h3>

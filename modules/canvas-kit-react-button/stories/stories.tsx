@@ -8,7 +8,7 @@ import README from '../README.md';
 
 storiesOf('Button', module)
   .addDecorator(withReadme(README))
-  .add('Primary Button', () => (
+  .add('Primary', () => (
     <div className="story">
       <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
@@ -36,7 +36,7 @@ storiesOf('Button', module)
       </Button>
     </div>
   ))
-  .add('Secondary Button', () => (
+  .add('Secondary', () => (
     <div className="story">
       <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
@@ -64,7 +64,7 @@ storiesOf('Button', module)
       </Button>
     </div>
   ))
-  .add('Delete Button', () => (
+  .add('Delete', () => (
     <div className="story">
       <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>

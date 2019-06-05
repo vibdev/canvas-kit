@@ -19,7 +19,7 @@ const FlexContainer = styled('div')({
 
 storiesOf('Skeleton', module)
   .addDecorator(withReadme(README))
-  .add('Complete Skeleton', () => {
+  .add('Complete', () => {
     return (
       <div className="story">
         <h1 className="section-label">Complete Skeleton</h1>
@@ -37,7 +37,7 @@ storiesOf('Skeleton', module)
       </div>
     );
   })
-  .add('Skeleton Header', () => {
+  .add('Header', () => {
     return (
       <div className="story">
         <h1 className="section-label">Skeleton Header</h1>
@@ -47,7 +47,7 @@ storiesOf('Skeleton', module)
       </div>
     );
   })
-  .add('Skeleton Shape', () => {
+  .add('Shape', () => {
     return (
       <div className="story">
         <h1 className="section-label">Skeleton Shape</h1>
@@ -61,7 +61,7 @@ storiesOf('Skeleton', module)
       </div>
     );
   })
-  .add('Skeleton Text', () => {
+  .add('Text', () => {
     return (
       <div className="story">
         <h1 className="section-label">Skeleton Text</h1>
