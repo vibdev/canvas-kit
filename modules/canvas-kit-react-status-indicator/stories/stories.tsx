@@ -9,9 +9,9 @@ import README from '../README.md';
 
 storiesOf('Status Indicator', module)
   .addDecorator(withReadme(README))
-  .add('Regular', () => (
+  .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Status Indicator</h1>
+      <h1 className="section-label">Default Status Indicator</h1>
       <StatusIndicator type={StatusIndicator.Type.Gray} label={'unpublished unpublished'} />
       <StatusIndicator
         type={StatusIndicator.Type.Gray}
@@ -47,7 +47,7 @@ storiesOf('Status Indicator', module)
   ))
   .add('With Icon', () => (
     <div className="story">
-      <h1 className="section-label">Status Indicator</h1>
+      <h1 className="section-label">Status Indicator With Icon</h1>
       <StatusIndicator
         type={StatusIndicator.Type.Gray}
         label={'unpublished unpublished'}

@@ -18,7 +18,7 @@ storiesOf('Checkbox', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
+      <h1 className="section-label">Default Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         {control(<Checkbox id="1" label="Checkbox option" />)}
       </div>
@@ -26,7 +26,7 @@ storiesOf('Checkbox', module)
   ))
   .add('Disabled', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
+      <h1 className="section-label">Disabled Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <Checkbox disabled={true} id="1" label="Checkbox option" />
       </div>
@@ -34,7 +34,7 @@ storiesOf('Checkbox', module)
   ))
   .add('Disabled Checked', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
+      <h1 className="section-label">Disabled Checkbox With Check</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <Checkbox disabled={true} checked={true} id="1" label="Checkbox option" />
       </div>
@@ -42,7 +42,7 @@ storiesOf('Checkbox', module)
   ))
   .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
+      <h1 className="section-label">Checkbox Alert</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         {control(<Checkbox id="1" label="Checkbox option" error={Checkbox.ErrorType.Alert} />)}
       </div>
@@ -50,7 +50,7 @@ storiesOf('Checkbox', module)
   ))
   .add('Error', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
+      <h1 className="section-label">Checkbox Error</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         {control(<Checkbox id="1" label="Checkbox option" error={Checkbox.ErrorType.Error} />)}
       </div>

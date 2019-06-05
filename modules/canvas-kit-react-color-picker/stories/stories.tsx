@@ -13,7 +13,7 @@ interface CustomColorInputWrapperState {
 }
 
 export default class CustomColorInputWrapper extends React.Component<
-  {},
+  {checkbox: boolean; growing?: boolean},
   CustomColorInputWrapperState
 > {
   state = {
@@ -25,14 +25,13 @@ export default class CustomColorInputWrapper extends React.Component<
     return (
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <ColorInput
-          showCheck={true}
+          showCheck={this.props.checkbox}
           onChange={this.onChange}
           value={this.state.color}
           onValidColorChange={this.validColorChange}
           disabled={false}
-          grow={false}
+          grow={this.props.growing}
         />
-        <h3 style={{color: this.state.validColor}}>Change My Text Color</h3>
       </div>
     );
   }
@@ -50,18 +49,40 @@ export default class CustomColorInputWrapper extends React.Component<
   };
 }
 
+storiesOf('Color Picker/Color Input', module)
+  .addDecorator(InputProviderDecorator)
+  .addDecorator(withReadme(README))
+  .add('Default', () => (
+    <div className="story">
+      <h1 className="section-label">Default Color Input</h1>
+      <CustomColorInputWrapper checkbox={true} />
+    </div>
+  ))
+  .add('Disabled', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Disabled</h1>
+      <ColorInput value={'EEEEEE'} showCheck={true} disabled={true} grow={false} />
+    </div>
+  ))
+  .add('Without Checkbox', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Without Checkbox</h1>
+      <CustomColorInputWrapper checkbox={false} />
+    </div>
+  ))
+  .add('Growing', () => (
+    <div className="story">
+      <h1 className="section-label">Color Input Growing</h1>
+      <ColorInput grow={true} />
+    </div>
+  ));
+
 storiesOf('Color Picker', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Color Input', () => (
-    <div className="story">
-      <h1 className="section-label">Custom Color Input</h1>
-      <CustomColorInputWrapper />
-    </div>
-  ))
   .add('Color Preview', () => (
     <div className="story">
-      <h1 className="section-label">Custom Color Input</h1>
+      <h1 className="section-label">Color Preview</h1>
       <ColorPreview value="#00FFCC" />
     </div>
   ));

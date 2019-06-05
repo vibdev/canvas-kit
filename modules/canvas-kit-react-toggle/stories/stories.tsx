@@ -36,7 +36,13 @@ storiesOf('Toggle', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Toggle</h1>
+      <h1 className="section-label">Default Toggle</h1>
       <ToggleSwitchWrapper />
+    </div>
+  ))
+  .add('Disabled', () => (
+    <div className="story">
+      <h1 className="section-label">Toggle Disabled</h1>
+      <Toggle disabled={true} checked={false} />
     </div>
   ));

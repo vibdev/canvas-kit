@@ -9,18 +9,18 @@ import README from '../README.md';
 
 storiesOf('Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
-  .add('Two Button', () => (
+  .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar</h1>
+      <h1 className="section-label">Default Floating Action Toolbar</h1>
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
       </FloatingActionToolbar>
     </div>
   ))
-  .add('Three Button', () => (
+  .add('With Three Buttons', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar</h1>
+      <h1 className="section-label">Floating Action Toolbar With Three Buttons</h1>
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
@@ -28,18 +28,18 @@ storiesOf('Floating Action Toolbar', module)
       </FloatingActionToolbar>
     </div>
   ))
-  .add('Two Button - Fixed', () => (
+  .add('With Two Buttons Fixed', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar - Fixed</h1>
+      <h1 className="section-label">Floating Action Toolbar With Two Buttons Fixed</h1>
       <FloatingActionToolbar fixed={true}>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
       </FloatingActionToolbar>
     </div>
   ))
-  .add('Three Button - Fixed', () => (
+  .add('With Three Buttons Fixed', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar - Fixed</h1>
+      <h1 className="section-label">Floating Action Toolbar With Three Buttons Fixed</h1>
       <FloatingActionToolbar fixed={true}>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>

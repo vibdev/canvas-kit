@@ -11,13 +11,13 @@ storiesOf('Card', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Card</h1>
+      <h1 className="section-label">Default Card</h1>
       <Card heading="Title">Card contents</Card>
     </div>
   ))
-  .add('No Padding', () => (
+  .add('With No Padding', () => (
     <div className="story">
-      <h1 className="section-label">Card</h1>
+      <h1 className="section-label">Card With No Padding</h1>
       <Card heading="Title" padding={spacing.zero}>
         No padding
       </Card>

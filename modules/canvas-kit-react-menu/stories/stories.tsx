@@ -213,7 +213,7 @@ class ContextMenu extends React.Component<{}, ControlledMenuState> {
     return (
       <ClickAwayListener onClickAway={this.handleClose}>
         <>
-          <div onContextMenu={this.handleContext}>Right Click Me</div>
+          <div onContextMenu={this.handleContext}>Right click on this text.</div>
           <Popper
             transition={true}
             keepMounted={true}
@@ -274,9 +274,9 @@ class CustomMenuItem extends React.Component<MenuItemProps> {
 storiesOf('Menu', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Menu', () => (
+  .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Menu</h1>
+      <h1 className="section-label">Default Menu</h1>
       <Menu grow={true} onSelect={action(`onSelect menu`)}>
         {createMenuItems().map(buildItem)}
       </Menu>
@@ -284,30 +284,30 @@ storiesOf('Menu', module)
   ))
   .add('With Icons', () => (
     <div className="story">
-      <h1 className="section-label">With Icons</h1>
+      <h1 className="section-label">Menu With Icons</h1>
       <Menu width={250}>{createMenuItems(true).map(buildItem)}</Menu>
     </div>
   ))
-  .add('Control Button', () => {
+  .add('With Control Button', () => {
     return (
       <div className="story">
-        <h1 className="section-label">With External Controls</h1>
+        <h1 className="section-label">Menu With Control Button</h1>
         <ControlledMenu />
       </div>
     );
   })
-  .add('Context Menu', () => {
+  .add('With Context Menu', () => {
     return (
       <div className="story">
-        <h1 className="section-label">As Context Menu</h1>
+        <h1 className="section-label">Menu With Context Menu</h1>
         <ContextMenu />
       </div>
     );
   })
-  .add('Custom Menu Item', () => {
+  .add('With Custom Menu Item', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Custom Menu Item</h1>
+        <h1 className="section-label">Menu With Custom Menu Item</h1>
         <Menu id="customMenu">
           <CustomMenuItem id="customMenu-0" onClick={action(`custom callback 1`)}>
             First

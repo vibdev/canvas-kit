@@ -29,7 +29,7 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
     const {open} = this.state;
     return (
       <div>
-        <h3>Hover on the icon</h3>
+        <h3>Hover over the icon.</h3>
         <div
           style={{display: 'inline-flex'}}
           ref={this.tooltipRef}
@@ -65,7 +65,7 @@ storiesOf('Tooltip', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Tooltip</h1>
+      <h1 className="section-label">Default Tooltip</h1>
       <TooltipWrapper />
     </div>
   ));
