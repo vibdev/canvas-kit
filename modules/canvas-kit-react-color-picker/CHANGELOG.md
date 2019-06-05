@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.4.0...@workday/canvas-kit-react-color-picker@0.5.0) (2019-06-05)
+
+
+### Features
+
+* **ColorInput:** fix alignment of the color tile on IE11 ([8f32efa](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/commits/8f32efa))
+
+
+
+
+
 # [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.3.5...@workday/canvas-kit-react-color-picker@0.4.0) (2019-06-04)
 
 
