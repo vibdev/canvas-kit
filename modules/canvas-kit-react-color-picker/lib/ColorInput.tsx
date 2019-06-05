@@ -78,6 +78,7 @@ const SwatchTile = styled('div')({
   bottom: spacing.zero,
   left: swatchTileSpacing,
   margin: 'auto',
+  marginTop: '10px', // Fix vertical alignment on IE11
   boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.25)',
   pointerEvents: 'none',
   borderRadius: '2px',
