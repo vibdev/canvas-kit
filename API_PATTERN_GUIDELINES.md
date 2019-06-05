@@ -10,6 +10,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   - Depth (e.g. `canvas.depth[2]`)
   - Type (e.g. `...canvas.type.h1`). Always start from a type hierarchy level and override if needed.
 - Use the provided types (e.g. `CanvasSpacingValue`, `CanvasSpacingNumber`, etc.) to restrict prop values
+- Check out the [`@workday/canvas-kit-react-core` README](https://ghe.megaleo.com/design/canvas-kit-react/blob/master/modules/canvas-kit-react-core/README.md) for the latest and greatest Canvas helpers.
   
 
 ## Naming:
