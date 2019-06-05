@@ -112,7 +112,7 @@ export default class ColorInput extends React.Component<ColorInputProps> {
     return (
       <ColorInputContainer>
         <CustomHexInput
-          innerRef={inputRef}
+          inputRef={inputRef}
           onChange={this.handleChange}
           type="text"
           placeholder={placeholder}
