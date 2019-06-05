@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.8.0...@workday/canvas-kit-react-fat@0.8.1) (2019-06-05)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-fat
+
+
+
+
+
 # [0.8.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-fat/compare/@workday/canvas-kit-react-fat@0.7.32...@workday/canvas-kit-react-fat@0.8.0) (2019-06-04)
 
 
