@@ -66,6 +66,20 @@ Canvas Kit relies on the
 By formalizing our commit message format, this allows us to easily generate changelogs and scan
 through the commit history. It also automates [semantic versioning](http://semver.org/).
 
+#### Commit Descriptions
+> **DO**
+- Explain the additions/edits/fixes made in your staged changes. If you cannot describe it within ~50 characters, you should be breaking it into multiple commits
+- Use the imperative mood (e.g. "fixed", not "fix")
+- Start with a verb
+- Use the body of the commit if more context is needed
+- If you have similar/identical commits one after another (i.e. snapshot updates), consider using `--amend` or squashing.
+
+> **DON'T**
+- Don't use generic messages (e.g. "fix: Clean up code", "fix: Address review feedback", etc.)
+- Don't describe the problem that was being solved (e.g. "fix: State was broken")
+- Don't be too brief. Avoid one word descriptions. Anyone with context should have a good idea of what your commit does without having to look at it.
+- Don't end with a period
+
 ### Automation on commit
 
 Upon commit, [lint-staged](https://github.com/okonet/lint-staged) will run your staged code through
