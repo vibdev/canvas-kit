@@ -178,9 +178,7 @@ export default class MenuItem extends React.Component<MenuItemProps> {
           isFocused={!!isFocused}
           {...elemProps}
         >
-          {icon && iconProps && (
-            <StyledSystemIcon {...iconProps} />
-          )}
+          {icon && iconProps && <StyledSystemIcon {...iconProps} />}
           <LabelContainer>{children}</LabelContainer>
           {secondaryIcon && secondaryIconProps && (
             <SecondaryStyledSystemIcon {...secondaryIconProps} />

@@ -7,7 +7,7 @@ import styled from 'react-emotion';
 import {css, cx} from 'emotion';
 import chroma from 'chroma-js';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
-
+import {MenuItem} from '../../../menu/react/index';
 import {Avatar} from '../../../avatar/react/index';
 import {SystemIcon} from '../../../icon/react/index';
 import {colors, spacing} from '../../../core/react/index';
@@ -20,6 +20,7 @@ import bgImg from '../static/workday-bg.jpg';
 const containerStyle = css({
   backgroundColor: colors.soap100,
   padding: spacing.m,
+  position: 'relative',
 });
 
 const backgroundStyle = css({
@@ -38,6 +39,10 @@ const Link = styled('a')<{to: string}>({});
 
 const handleSearchSubmitTest = (query: string) => {
   action(`You searched for:`)(query);
+};
+
+const handleSearchInputChangeTest = (query: string) => {
+  action(`Current query will be:`)(query);
 };
 
 const nav = (
@@ -59,43 +64,71 @@ const nav = (
   </nav>
 );
 
+interface HeaderWithAutocompleteState {
+  currentQuery: string;
+}
+class HeaderWithAutocompleteSearch extends React.Component<{}, HeaderWithAutocompleteState> {
+  state = {
+    currentQuery: '',
+  };
+
+  autocompleteCallback = (query: string) => {
+    this.setState({currentQuery: query});
+  };
+
+  render() {
+    const autocompleteResult = (textModifier: string) => (
+      <MenuItem onClick={action(`Went to link Result ${textModifier}`)}>
+        Result {textModifier}
+      </MenuItem>
+    );
+    return (
+      <GlobalHeader
+        brand={
+          <a href="#">
+            <DubLogoTitle themeColor={Header.Theme.White} />
+          </a>
+        }
+        menuToggle={
+          <Avatar
+            onClick={action(`Menu clicked`)}
+            url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
+          />
+        }
+        onSearchSubmit={handleSearchSubmitTest}
+        onSearchInputChange={this.autocompleteCallback}
+        searchAutocompleteItems={Array.apply(null, Array(this.state.currentQuery.length))
+          .map((x: any, i: string) => autocompleteResult(i))
+          .splice(0, 5)}
+      >
+        <IconButton
+          icon={notificationsIcon}
+          buttonType={IconButton.Types.Default}
+          title="Notifications"
+          aria-label="Notifications"
+        />
+        <IconButton
+          icon={inboxIcon}
+          buttonType={IconButton.Types.Default}
+          title="Inbox"
+          aria-label="Inbox"
+        />
+        <Avatar
+          onClick={action(`Avatar clicked`)}
+          url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
+          altText="Profile"
+        />
+      </GlobalHeader>
+    );
+  }
+}
+
 storiesOf('Header', module)
   .addDecorator(withReadme(README))
   .add('Global Header', () => (
     <div className="story">
-      <div className={containerStyle}>
-        <GlobalHeader
-          brand={
-            <a href="#">
-              <DubLogoTitle themeColor={Header.Theme.White} />
-            </a>
-          }
-          menuToggle={
-            <Avatar
-              onClick={action(`Menu clicked`)}
-              url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
-            />
-          }
-          onSearchSubmit={handleSearchSubmitTest}
-        >
-          <IconButton
-            icon={notificationsIcon}
-            buttonType={IconButton.Types.Default}
-            title="Notifications"
-            aria-label="Notifications"
-          />
-          <IconButton
-            icon={inboxIcon}
-            buttonType={IconButton.Types.Default}
-            title="Inbox"
-            aria-label="Inbox"
-          />
-          <Avatar
-            onClick={action(`Avatar clicked`)}
-            url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
-            altText="Profile"
-          />
-        </GlobalHeader>
+      <div className={containerStyle} style={{zIndex: 100}}>
+        <HeaderWithAutocompleteSearch />
       </div>
       <div className={containerStyle}>
         <GlobalHeader
@@ -172,6 +205,7 @@ storiesOf('Header', module)
           brandUrl="#"
           onMenuClick={action(`Menu clicked`)}
           onSearchSubmit={handleSearchSubmitTest}
+          onSearchInputChange={handleSearchInputChangeTest}
         >
           {nav}
           <IconButton
@@ -300,7 +334,7 @@ storiesOf('Header', module)
             title="Notifications"
             aria-label="Notifications"
           />
-        <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
           <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
       </div>

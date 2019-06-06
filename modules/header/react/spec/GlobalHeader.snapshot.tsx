@@ -44,14 +44,16 @@ describe('App GlobalHeader Snapshots', () => {
   });
 
   test('renders a header with a search bar', () => {
-    const tree = renderer.create(<GlobalHeader onSearchSubmit={cb} />).toJSON();
+    const tree = renderer
+      .create(<GlobalHeader accessibleId={'snap'} onSearchSubmit={cb} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('renders a header with content with a search bar', () => {
     const tree = renderer
       .create(
-        <GlobalHeader onSearchSubmit={cb}>
+        <GlobalHeader accessibleId={'snap'} onSearchSubmit={cb}>
           <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Plain} />
           <IconButton icon={inboxIcon} buttonType={IconButton.Types.Plain} />
           <Avatar />

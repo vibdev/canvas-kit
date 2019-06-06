@@ -2,7 +2,6 @@
 
 exports[`Dub Header Snapshots renders a default header 1`] = `
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -267,7 +266,6 @@ exports[`Dub Header Snapshots renders a default header 1`] = `
 
 exports[`Dub Header Snapshots renders a default header with title 1`] = `
 .emotion-12 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -550,7 +548,6 @@ exports[`Dub Header Snapshots renders a default header with title 1`] = `
 
 exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton children 1`] = `
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -974,7 +971,6 @@ exports[`Dub Header Snapshots renders a header with SystemIcon and IconButton ch
 
 exports[`Dub Header Snapshots renders a header with a custom brand element 1`] = `
 .emotion-4 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1200,8 +1196,7 @@ exports[`Dub Header Snapshots renders a header with a custom brand element 1`] =
 `;
 
 exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
-.emotion-18 {
-  overflow: hidden;
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1255,16 +1250,16 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   line-height: 0;
 }
 
-.emotion-16 {
+.emotion-20 {
   margin-right: 24px;
 }
 
-.emotion-16 > .canvas-header--menu-icon {
+.emotion-20 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-16 {
+  .emotion-20 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1281,21 +1276,21 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
     margin-right: 24px;
   }
 
-  .emotion-16 > * {
+  .emotion-20 > * {
     margin-left: 16px;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-16 > *:last-child {
+  .emotion-20 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1304,7 +1299,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-16 {
+  .emotion-20 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -1312,7 +1307,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   }
 }
 
-.emotion-16 nav {
+.emotion-20 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1329,7 +1324,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   margin-left: 40px;
 }
 
-.emotion-16 nav ul {
+.emotion-20 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1349,11 +1344,11 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   height: inherit;
 }
 
-.emotion-16 nav ul:hover {
+.emotion-20 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-16 nav ul li {
+.emotion-20 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -1372,15 +1367,15 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child > * {
+.emotion-20 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child > * {
+.emotion-20 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li > * {
+.emotion-20 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1397,29 +1392,29 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   height: inherit;
 }
 
-.emotion-16 nav ul li > *:visited {
+.emotion-20 nav ul li > *:visited {
   color: inherit;
 }
 
-.emotion-16 nav ul li:hover,
-.emotion-16 nav ul li:active {
+.emotion-20 nav ul li:hover,
+.emotion-20 nav ul li:active {
   color: #333333;
 }
 
-.emotion-16 nav ul li.current {
+.emotion-20 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-16 nav ul li.current a {
+.emotion-20 nav ul li.current a {
   cursor: default;
 }
 
-.emotion-16 nav ul li.current:hover,
-.emotion-16 nav ul li.current:active {
+.emotion-20 nav ul li.current:hover,
+.emotion-20 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-16 nav ul li.current:after {
+.emotion-20 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1430,39 +1425,7 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-11 {
-  display: inline-block;
-}
-
-.emotion-11 svg {
-  display: block;
-}
-
-.emotion-11 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-11:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-14 {
+.emotion-18 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -1484,39 +1447,55 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   max-width: 480px;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
+  z-index: 3;
 }
 
-.emotion-8 svg {
+.emotion-9 svg {
   display: block;
 }
 
-.emotion-8 .wd-icon-fill {
+.emotion-9 .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-8:hover .wd-icon-fill {
+.emotion-9:hover .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-8 .wd-icon-accent {
+.emotion-9 .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-8:hover .wd-icon-accent {
+.emotion-9:hover .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-8 .wd-icon-background {
+.emotion-9 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-8:hover .wd-icon-background {
+.emotion-9:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-9 {
+.emotion-10 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  -webkit-clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.emotion-12 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -1524,87 +1503,122 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 40px;
+  height: 40px;
   max-width: 480px;
   min-width: 120px;
   width: 100%;
-  height: 40px;
   border-radius: 4px;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: none;
   -webkit-transition: background 150ms;
   transition: background 150ms;
+  z-index: 2;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-9::-webkit-search-cancel-button {
+.emotion-12::-webkit-search-cancel-button {
   display: none;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9::placeholder {
+.emotion-12::placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus,
-.emotion-9:not([disabled]):active {
+.emotion-12:not([disabled]):focus,
+.emotion-12:not([disabled]):active {
   outline: none;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-9:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-9:not([disabled]):active::-webkit-input-placeholder {
+.emotion-12:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-12:not([disabled]):active::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::-moz-placeholder,
-.emotion-9:not([disabled]):active::-moz-placeholder {
+.emotion-12:not([disabled]):focus::-moz-placeholder,
+.emotion-12:not([disabled]):active::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus:-ms-input-placeholder,
-.emotion-9:not([disabled]):active:-ms-input-placeholder {
+.emotion-12:not([disabled]):focus:-ms-input-placeholder,
+.emotion-12:not([disabled]):active:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::placeholder,
-.emotion-9:not([disabled]):active::placeholder {
+.emotion-12:not([disabled]):focus::placeholder,
+.emotion-12:not([disabled]):active::placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):hover {
+.emotion-12:not([disabled]):hover {
   background: #e8ebed;
 }
 
-.emotion-12 {
+.emotion-16 {
   border-radius: 24px;
   height: 24px;
   margin-left: -32px;
   margin-right: 8px;
   width: 24px;
+  z-index: 3;
   display: none;
 }
 
-.emotion-12:hover {
+.emotion-16:hover {
   cursor: pointer;
 }
 
+.emotion-15 {
+  display: inline-block;
+  z-index: 3;
+}
+
+.emotion-15 svg {
+  display: block;
+}
+
+.emotion-15 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-15:hover .wd-icon-background {
+  fill: transparent;
+}
+
 <div
-  className="emotion-18 emotion-19"
+  className="emotion-22 emotion-23"
 >
   <div
     className="emotion-6 emotion-7"
@@ -1632,12 +1646,12 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
     </span>
   </div>
   <form
-    className="emotion-14 emotion-15"
+    className="emotion-18 emotion-19"
     onSubmit={[Function]}
     placeholder="Search"
   >
     <span
-      className="emotion-8"
+      className="emotion-8 emotion-9"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -1653,25 +1667,34 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
         }
       }
     />
+    <label
+      className="emotion-10 emotion-11"
+      htmlFor="snap-label"
+    >
+      Search
+    </label>
     <input
-      className="emotion-9 emotion-10"
+      className="emotion-12 emotion-13"
+      id="snap-label"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       placeholder="Search"
+      role="search"
       type="search"
       value=""
     />
     <span
       aria-label="Reset Search Input"
-      className="reset-input emotion-12 emotion-13"
+      className="reset-input emotion-16 emotion-17"
       onClick={[Function]}
       value=""
     >
       <span
-        className="emotion-11"
+        className="emotion-8 emotion-15"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -1681,14 +1704,13 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
     </span>
   </form>
   <div
-    className="emotion-16 emotion-17"
+    className="emotion-20 emotion-21"
   />
 </div>
 `;
 
 exports[`Dub Header Snapshots renders a header with content with a search bar 1`] = `
 .emotion-16 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2131,7 +2153,6 @@ exports[`Dub Header Snapshots renders a header with content with a search bar 1`
 
 exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2396,7 +2417,6 @@ exports[`Dub Header Snapshots renders a header with custom breakpoints 1`] = `
 
 exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2820,7 +2840,6 @@ exports[`Dub Header Snapshots renders a header with nav elements 1`] = `
 
 exports[`Dub Header Snapshots renders a header with nav elements 2`] = `
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3274,7 +3293,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with blue theme
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3714,7 +3732,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3774,7 +3791,6 @@ exports[`Dub Header Snapshots renders themed headers: <Header /> with transparen
 
 exports[`Dub Header Snapshots renders themed headers: <Header /> with white theme applied 1`] = `
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4050,16 +4066,16 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   display: inline-block;
 }
 
-.emotion-16 {
+.emotion-20 {
   margin-right: 24px;
 }
 
-.emotion-16 > .canvas-header--menu-icon {
+.emotion-20 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-16 {
+  .emotion-20 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4076,21 +4092,21 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
     margin-right: 24px;
   }
 
-  .emotion-16 > * {
+  .emotion-20 > * {
     margin-left: 16px;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-16 > *:last-child {
+  .emotion-20 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4099,7 +4115,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
 }
 
 @media (min-width:1120px) {
-  .emotion-16 {
+  .emotion-20 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -4107,7 +4123,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   }
 }
 
-.emotion-16 nav {
+.emotion-20 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4124,7 +4140,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   margin-left: 40px;
 }
 
-.emotion-16 nav ul {
+.emotion-20 nav ul {
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4144,11 +4160,11 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   height: inherit;
 }
 
-.emotion-16 nav ul:hover {
+.emotion-20 nav ul:hover {
   color: rgba(255,255,255,0.5);
 }
 
-.emotion-16 nav ul li {
+.emotion-20 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -4167,15 +4183,15 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child > * {
+.emotion-20 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child > * {
+.emotion-20 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li > * {
+.emotion-20 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4192,29 +4208,29 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   height: inherit;
 }
 
-.emotion-16 nav ul li > *:visited {
+.emotion-20 nav ul li > *:visited {
   color: inherit;
 }
 
-.emotion-16 nav ul li:hover,
-.emotion-16 nav ul li:active {
+.emotion-20 nav ul li:hover,
+.emotion-20 nav ul li:active {
   color: #ffffff;
 }
 
-.emotion-16 nav ul li.current {
+.emotion-20 nav ul li.current {
   color: #ffffff;
 }
 
-.emotion-16 nav ul li.current a {
+.emotion-20 nav ul li.current a {
   cursor: default;
 }
 
-.emotion-16 nav ul li.current:hover,
-.emotion-16 nav ul li.current:active {
+.emotion-20 nav ul li.current:hover,
+.emotion-20 nav ul li.current:active {
   color: #ffffff;
 }
 
-.emotion-16 nav ul li.current:after {
+.emotion-20 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4225,39 +4241,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-11 {
-  display: inline-block;
-}
-
-.emotion-11 svg {
-  display: block;
-}
-
-.emotion-11 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-11:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-14 {
+.emotion-18 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -4279,17 +4263,66 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   max-width: 480px;
 }
 
-.emotion-12 {
+.emotion-10 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  -webkit-clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.emotion-16 {
   border-radius: 24px;
   height: 24px;
   margin-left: -32px;
   margin-right: 8px;
   width: 24px;
+  z-index: 3;
   display: none;
 }
 
-.emotion-12:hover {
+.emotion-16:hover {
   cursor: pointer;
+}
+
+.emotion-15 {
+  display: inline-block;
+  z-index: 3;
+}
+
+.emotion-15 svg {
+  display: block;
+}
+
+.emotion-15 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-15:hover .wd-icon-background {
+  fill: transparent;
 }
 
 .emotion-2 {
@@ -4313,8 +4346,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   line-height: 0;
 }
 
-.emotion-18 {
-  overflow: hidden;
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4338,39 +4370,40 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   color: #ffffff;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
+  z-index: 3;
 }
 
-.emotion-8 svg {
+.emotion-9 svg {
   display: block;
 }
 
-.emotion-8 .wd-icon-fill {
+.emotion-9 .wd-icon-fill {
   fill: #ffffff;
 }
 
-.emotion-8:hover .wd-icon-fill {
+.emotion-9:hover .wd-icon-fill {
   fill: #ffffff;
 }
 
-.emotion-8 .wd-icon-accent {
+.emotion-9 .wd-icon-accent {
   fill: #ffffff;
 }
 
-.emotion-8:hover .wd-icon-accent {
+.emotion-9:hover .wd-icon-accent {
   fill: #ffffff;
 }
 
-.emotion-8 .wd-icon-background {
+.emotion-9 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-8:hover .wd-icon-background {
+.emotion-9:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-9 {
+.emotion-12 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -4378,69 +4411,70 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 40px;
+  height: 40px;
   max-width: 480px;
   min-width: 120px;
   width: 100%;
-  height: 40px;
   border-radius: 4px;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: none;
   -webkit-transition: background 150ms;
   transition: background 150ms;
+  z-index: 2;
   background: rgba(0,0,0,0.2);
   color: #ffffff;
 }
 
-.emotion-9::-webkit-search-cancel-button {
+.emotion-12::-webkit-search-cancel-button {
   display: none;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: #ffffff;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.emotion-9::placeholder {
+.emotion-12::placeholder {
   color: #ffffff;
 }
 
-.emotion-9:not([disabled]):focus,
-.emotion-9:not([disabled]):active {
+.emotion-12:not([disabled]):focus,
+.emotion-12:not([disabled]):active {
   outline: none;
   background: #ffffff;
   color: #494949;
 }
 
-.emotion-9:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-9:not([disabled]):active::-webkit-input-placeholder {
+.emotion-12:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-12:not([disabled]):active::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::-moz-placeholder,
-.emotion-9:not([disabled]):active::-moz-placeholder {
+.emotion-12:not([disabled]):focus::-moz-placeholder,
+.emotion-12:not([disabled]):active::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus:-ms-input-placeholder,
-.emotion-9:not([disabled]):active:-ms-input-placeholder {
+.emotion-12:not([disabled]):focus:-ms-input-placeholder,
+.emotion-12:not([disabled]):active:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::placeholder,
-.emotion-9:not([disabled]):active::placeholder {
+.emotion-12:not([disabled]):focus::placeholder,
+.emotion-12:not([disabled]):active::placeholder {
   color: #5e6a75;
 }
 
 <div
-  className="emotion-18 emotion-19"
+  className="emotion-22 emotion-23"
 >
   <div
     className="emotion-6 emotion-7"
@@ -4468,12 +4502,12 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
     </span>
   </div>
   <form
-    className="emotion-14 emotion-15"
+    className="emotion-18 emotion-19"
     onSubmit={[Function]}
     placeholder="Search"
   >
     <span
-      className="emotion-8"
+      className="emotion-8 emotion-9"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -4489,25 +4523,34 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
         }
       }
     />
+    <label
+      className="emotion-10 emotion-11"
+      htmlFor="snap-label"
+    >
+      Search
+    </label>
     <input
-      className="emotion-9 emotion-10"
+      className="emotion-12 emotion-13"
+      id="snap-label"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       placeholder="Search"
+      role="search"
       type="search"
       value=""
     />
     <span
       aria-label="Reset Search Input"
-      className="reset-input emotion-12 emotion-13"
+      className="reset-input emotion-16 emotion-17"
       onClick={[Function]}
       value=""
     >
       <span
-        className="emotion-11"
+        className="emotion-8 emotion-15"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -4517,7 +4560,7 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
     </span>
   </form>
   <div
-    className="emotion-16 emotion-17"
+    className="emotion-20 emotion-21"
   />
 </div>
 `;
@@ -4711,7 +4754,6 @@ exports[`Full Header Snapshots renders a default header 1`] = `
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4979,7 +5021,6 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
 }
 
 .emotion-12 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5079,8 +5120,7 @@ exports[`Full Header Snapshots renders a default header with title 1`] = `
 `;
 
 exports[`Full Header Snapshots renders a header in a lg screen with search 1`] = `
-.emotion-20 {
-  overflow: hidden;
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5134,16 +5174,16 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   line-height: 0;
 }
 
-.emotion-18 {
+.emotion-22 {
   margin-right: 24px;
 }
 
-.emotion-18 > .canvas-header--menu-icon {
+.emotion-22 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-18 {
+  .emotion-22 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5160,21 +5200,21 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
     margin-right: 24px;
   }
 
-  .emotion-18 > * {
+  .emotion-22 > * {
     margin-left: 16px;
   }
 
-  .emotion-18 > *:not(.canvas-header--menu-icon) {
+  .emotion-22 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-18 > *:last-child {
+  .emotion-22 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-18 > *:not(.canvas-header--menu-icon) {
+  .emotion-22 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5183,7 +5223,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
 }
 
 @media (min-width:1120px) {
-  .emotion-18 {
+  .emotion-22 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -5191,7 +5231,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   }
 }
 
-.emotion-18 nav {
+.emotion-22 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5208,7 +5248,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   margin-left: 40px;
 }
 
-.emotion-18 nav ul {
+.emotion-22 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5228,11 +5268,11 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   height: inherit;
 }
 
-.emotion-18 nav ul:hover {
+.emotion-22 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-18 nav ul li {
+.emotion-22 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -5251,15 +5291,15 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   cursor: pointer;
 }
 
-.emotion-18 nav ul li:first-child > * {
+.emotion-22 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-18 nav ul li:last-child > * {
+.emotion-22 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-18 nav ul li > * {
+.emotion-22 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5276,29 +5316,29 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   height: inherit;
 }
 
-.emotion-18 nav ul li > *:visited {
+.emotion-22 nav ul li > *:visited {
   color: inherit;
 }
 
-.emotion-18 nav ul li:hover,
-.emotion-18 nav ul li:active {
+.emotion-22 nav ul li:hover,
+.emotion-22 nav ul li:active {
   color: #333333;
 }
 
-.emotion-18 nav ul li.current {
+.emotion-22 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-18 nav ul li.current a {
+.emotion-22 nav ul li.current a {
   cursor: default;
 }
 
-.emotion-18 nav ul li.current:hover,
-.emotion-18 nav ul li.current:active {
+.emotion-22 nav ul li.current:hover,
+.emotion-22 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-18 nav ul li.current:after {
+.emotion-22 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5309,39 +5349,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-13 {
-  display: inline-block;
-}
-
-.emotion-13 svg {
-  display: block;
-}
-
-.emotion-13 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-13:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-13 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-13:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-13 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-13:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-16 {
+.emotion-20 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -5363,39 +5371,55 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   max-width: 480px;
 }
 
-.emotion-10 {
+.emotion-11 {
   display: inline-block;
+  z-index: 3;
 }
 
-.emotion-10 svg {
+.emotion-11 svg {
   display: block;
 }
 
-.emotion-10 .wd-icon-fill {
+.emotion-11 .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-10:hover .wd-icon-fill {
+.emotion-11:hover .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-10 .wd-icon-accent {
+.emotion-11 .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-10:hover .wd-icon-accent {
+.emotion-11:hover .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-10 .wd-icon-background {
+.emotion-11 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-10:hover .wd-icon-background {
+.emotion-11:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-11 {
+.emotion-12 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  -webkit-clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.emotion-14 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -5403,83 +5427,118 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 40px;
+  height: 40px;
   max-width: 480px;
   min-width: 120px;
   width: 100%;
-  height: 40px;
   border-radius: 4px;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: none;
   -webkit-transition: background 150ms;
   transition: background 150ms;
+  z-index: 2;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-11::-webkit-search-cancel-button {
+.emotion-14::-webkit-search-cancel-button {
   display: none;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11::placeholder {
+.emotion-14::placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:not([disabled]):focus,
-.emotion-11:not([disabled]):active {
+.emotion-14:not([disabled]):focus,
+.emotion-14:not([disabled]):active {
   outline: none;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-11:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-11:not([disabled]):active::-webkit-input-placeholder {
+.emotion-14:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-14:not([disabled]):active::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:not([disabled]):focus::-moz-placeholder,
-.emotion-11:not([disabled]):active::-moz-placeholder {
+.emotion-14:not([disabled]):focus::-moz-placeholder,
+.emotion-14:not([disabled]):active::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:not([disabled]):focus:-ms-input-placeholder,
-.emotion-11:not([disabled]):active:-ms-input-placeholder {
+.emotion-14:not([disabled]):focus:-ms-input-placeholder,
+.emotion-14:not([disabled]):active:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:not([disabled]):focus::placeholder,
-.emotion-11:not([disabled]):active::placeholder {
+.emotion-14:not([disabled]):focus::placeholder,
+.emotion-14:not([disabled]):active::placeholder {
   color: #5e6a75;
 }
 
-.emotion-11:not([disabled]):hover {
+.emotion-14:not([disabled]):hover {
   background: #e8ebed;
 }
 
-.emotion-14 {
+.emotion-18 {
   border-radius: 24px;
   height: 24px;
   margin-left: -32px;
   margin-right: 8px;
   width: 24px;
+  z-index: 3;
   display: none;
 }
 
-.emotion-14:hover {
+.emotion-18:hover {
   cursor: pointer;
+}
+
+.emotion-17 {
+  display: inline-block;
+  z-index: 3;
+}
+
+.emotion-17 svg {
+  display: block;
+}
+
+.emotion-17 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-17:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-17 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-17:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-17 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-17:hover .wd-icon-background {
+  fill: transparent;
 }
 
 .emotion-6:hover {
@@ -5493,7 +5552,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
 }
 
 <div
-  className="emotion-20 emotion-21"
+  className="emotion-24 emotion-25"
 >
   <div
     className="emotion-8 emotion-9"
@@ -5526,12 +5585,12 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
     </a>
   </div>
   <form
-    className="emotion-16 emotion-17"
+    className="emotion-20 emotion-21"
     onSubmit={[Function]}
     placeholder="Search"
   >
     <span
-      className="emotion-10"
+      className="emotion-10 emotion-11"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -5547,25 +5606,34 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
         }
       }
     />
+    <label
+      className="emotion-12 emotion-13"
+      htmlFor="snap-label"
+    >
+      Search
+    </label>
     <input
-      className="emotion-11 emotion-12"
+      className="emotion-14 emotion-15"
+      id="snap-label"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       placeholder="Search"
+      role="search"
       type="search"
       value=""
     />
     <span
       aria-label="Reset Search Input"
-      className="reset-input emotion-14 emotion-15"
+      className="reset-input emotion-18 emotion-19"
       onClick={[Function]}
       value=""
     >
       <span
-        className="emotion-13"
+        className="emotion-10 emotion-17"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -5575,7 +5643,7 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
     </span>
   </form>
   <div
-    className="emotion-18 emotion-19"
+    className="emotion-22 emotion-23"
   />
 </div>
 `;
@@ -5765,7 +5833,6 @@ exports[`Full Header Snapshots renders a header with a custom brand element 1`] 
 }
 
 .emotion-4 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5820,16 +5887,16 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   display: inline-block;
 }
 
-.emotion-16 {
+.emotion-20 {
   margin-right: 24px;
 }
 
-.emotion-16 > .canvas-header--menu-icon {
+.emotion-20 > .canvas-header--menu-icon {
   cursor: pointer;
 }
 
 @media (min-width:320px) {
-  .emotion-16 {
+  .emotion-20 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5846,21 +5913,21 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
     margin-right: 24px;
   }
 
-  .emotion-16 > * {
+  .emotion-20 > * {
     margin-left: 16px;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .emotion-16 > *:last-child {
+  .emotion-20 > *:last-child {
     margin-right: 0;
   }
 
-  .emotion-16 > *:not(.canvas-header--menu-icon) {
+  .emotion-20 > *:not(.canvas-header--menu-icon) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5869,7 +5936,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
 }
 
 @media (min-width:1120px) {
-  .emotion-16 {
+  .emotion-20 {
     -webkit-box-flex: unset;
     -webkit-flex-grow: unset;
     -ms-flex-positive: unset;
@@ -5877,7 +5944,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   }
 }
 
-.emotion-16 nav {
+.emotion-20 nav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5894,7 +5961,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   margin-left: 40px;
 }
 
-.emotion-16 nav ul {
+.emotion-20 nav ul {
   color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5914,11 +5981,11 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   height: inherit;
 }
 
-.emotion-16 nav ul:hover {
+.emotion-20 nav ul:hover {
   color: #7b858f;
 }
 
-.emotion-16 nav ul li {
+.emotion-20 nav ul li {
   box-sizing: border-box;
   position: relative;
   display: -webkit-box;
@@ -5937,15 +6004,15 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   cursor: pointer;
 }
 
-.emotion-16 nav ul li:first-child > * {
+.emotion-20 nav ul li:first-child > * {
   margin-left: 0;
 }
 
-.emotion-16 nav ul li:last-child > * {
+.emotion-20 nav ul li:last-child > * {
   margin-right: 0;
 }
 
-.emotion-16 nav ul li > * {
+.emotion-20 nav ul li > * {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5962,29 +6029,29 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   height: inherit;
 }
 
-.emotion-16 nav ul li > *:visited {
+.emotion-20 nav ul li > *:visited {
   color: inherit;
 }
 
-.emotion-16 nav ul li:hover,
-.emotion-16 nav ul li:active {
+.emotion-20 nav ul li:hover,
+.emotion-20 nav ul li:active {
   color: #333333;
 }
 
-.emotion-16 nav ul li.current {
+.emotion-20 nav ul li.current {
   color: #005cb9;
 }
 
-.emotion-16 nav ul li.current a {
+.emotion-20 nav ul li.current a {
   cursor: default;
 }
 
-.emotion-16 nav ul li.current:hover,
-.emotion-16 nav ul li.current:active {
+.emotion-20 nav ul li.current:hover,
+.emotion-20 nav ul li.current:active {
   color: #005cb9;
 }
 
-.emotion-16 nav ul li.current:after {
+.emotion-20 nav ul li.current:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5995,39 +6062,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   border-radius: 3px 3px 0 0;
 }
 
-.emotion-11 {
-  display: inline-block;
-}
-
-.emotion-11 svg {
-  display: block;
-}
-
-.emotion-11 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-11:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-11 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-11:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-14 {
+.emotion-18 {
   position: relative;
   margin-left: 24px;
   -webkit-box-flex: 1;
@@ -6049,39 +6084,55 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   max-width: 480px;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
+  z-index: 3;
 }
 
-.emotion-8 svg {
+.emotion-9 svg {
   display: block;
 }
 
-.emotion-8 .wd-icon-fill {
+.emotion-9 .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-8:hover .wd-icon-fill {
+.emotion-9:hover .wd-icon-fill {
   fill: #7b858f;
 }
 
-.emotion-8 .wd-icon-accent {
+.emotion-9 .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-8:hover .wd-icon-accent {
+.emotion-9:hover .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-8 .wd-icon-background {
+.emotion-9 .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-8:hover .wd-icon-background {
+.emotion-9:hover .wd-icon-background {
   fill: transparent;
 }
 
-.emotion-9 {
+.emotion-10 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  -webkit-clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.emotion-12 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -6089,87 +6140,121 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
   padding: 12px;
   padding-left: 40px;
+  height: 40px;
   max-width: 480px;
   min-width: 120px;
   width: 100%;
-  height: 40px;
   border-radius: 4px;
   box-sizing: border-box;
   border: none;
   -webkit-appearance: none;
   -webkit-transition: background 150ms;
   transition: background 150ms;
+  z-index: 2;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-9::-webkit-search-cancel-button {
+.emotion-12::-webkit-search-cancel-button {
   display: none;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9::placeholder {
+.emotion-12::placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus,
-.emotion-9:not([disabled]):active {
+.emotion-12:not([disabled]):focus,
+.emotion-12:not([disabled]):active {
   outline: none;
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
   background: #f0f1f2;
   color: #494949;
 }
 
-.emotion-9:not([disabled]):focus::-webkit-input-placeholder,
-.emotion-9:not([disabled]):active::-webkit-input-placeholder {
+.emotion-12:not([disabled]):focus::-webkit-input-placeholder,
+.emotion-12:not([disabled]):active::-webkit-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::-moz-placeholder,
-.emotion-9:not([disabled]):active::-moz-placeholder {
+.emotion-12:not([disabled]):focus::-moz-placeholder,
+.emotion-12:not([disabled]):active::-moz-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus:-ms-input-placeholder,
-.emotion-9:not([disabled]):active:-ms-input-placeholder {
+.emotion-12:not([disabled]):focus:-ms-input-placeholder,
+.emotion-12:not([disabled]):active:-ms-input-placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):focus::placeholder,
-.emotion-9:not([disabled]):active::placeholder {
+.emotion-12:not([disabled]):focus::placeholder,
+.emotion-12:not([disabled]):active::placeholder {
   color: #5e6a75;
 }
 
-.emotion-9:not([disabled]):hover {
+.emotion-12:not([disabled]):hover {
   background: #e8ebed;
 }
 
-.emotion-12 {
+.emotion-16 {
   border-radius: 24px;
   height: 24px;
   margin-left: -32px;
   margin-right: 8px;
   width: 24px;
+  z-index: 3;
   display: none;
 }
 
-.emotion-12:hover {
+.emotion-16:hover {
   cursor: pointer;
 }
 
-.emotion-18 {
-  overflow: hidden;
+.emotion-15 {
+  display: inline-block;
+  z-index: 3;
+}
+
+.emotion-15 svg {
+  display: block;
+}
+
+.emotion-15 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-15:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-15 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-15:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6215,7 +6300,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
 }
 
 <div
-  className="emotion-18 emotion-19"
+  className="emotion-22 emotion-23"
 >
   <div
     className="emotion-6 emotion-7"
@@ -6243,12 +6328,12 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
     </span>
   </div>
   <form
-    className="emotion-14 emotion-15"
+    className="emotion-18 emotion-19"
     onSubmit={[Function]}
     placeholder="Search"
   >
     <span
-      className="emotion-8"
+      className="emotion-8 emotion-9"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-search wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.32 15.906l2.859 2.858a.5.5 0 0 1 .003.717l-.7.7a.5.5 0 0 1-.718-.002l-2.858-2.86a8 8 0 1 1 1.414-1.414zM11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -6264,25 +6349,34 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
         }
       }
     />
+    <label
+      className="emotion-10 emotion-11"
+      htmlFor="snap-label"
+    >
+      Search
+    </label>
     <input
-      className="emotion-9 emotion-10"
+      className="emotion-12 emotion-13"
+      id="snap-label"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       placeholder="Search"
+      role="search"
       type="search"
       value=""
     />
     <span
       aria-label="Reset Search Input"
-      className="reset-input emotion-12 emotion-13"
+      className="reset-input emotion-16 emotion-17"
       onClick={[Function]}
       value=""
     >
       <span
-        className="emotion-11"
+        className="emotion-8 emotion-15"
         dangerouslySetInnerHTML={
           Object {
             "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x-small wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.783 12l-3.661 3.661a.414.414 0 0 0 .001.588l.628.628a.414.414 0 0 0 .588.001L12 13.217l3.661 3.661a.414.414 0 0 0 .588-.001l.628-.628a.414.414 0 0 0 .001-.588L13.217 12l3.661-3.661a.414.414 0 0 0-.001-.588l-.628-.628a.414.414 0 0 0-.588-.001L12 10.783 8.339 7.122a.414.414 0 0 0-.588.001l-.628.628a.414.414 0 0 0-.001.588L10.783 12z\\" class=\\"wd-icon-fill\\"/></g></svg>",
@@ -6292,7 +6386,7 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
     </span>
   </form>
   <div
-    className="emotion-16 emotion-17"
+    className="emotion-20 emotion-21"
   />
 </div>
 `;
@@ -6539,7 +6633,6 @@ exports[`Full Header Snapshots renders a header with content with a search bar 1
 }
 
 .emotion-16 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6914,7 +7007,6 @@ exports[`Full Header Snapshots renders a header with custom breakpoints 1`] = `
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7328,7 +7420,6 @@ exports[`Full Header Snapshots renders a header with nav elements 1`] = `
 }
 
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7755,7 +7846,6 @@ exports[`Full Header Snapshots renders a header with nav elements 2`] = `
 }
 
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8182,7 +8272,6 @@ exports[`Full Header Snapshots renders a header with system icon children 1`] = 
 }
 
 .emotion-13 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8484,7 +8573,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with blue them
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8752,7 +8840,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with transpare
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8999,7 +9086,6 @@ exports[`Full Header Snapshots renders themed headers: <Header /> with white the
 }
 
 .emotion-10 {
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

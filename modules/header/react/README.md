@@ -6,7 +6,6 @@ For a full suite of examples, have a look at the [Header Stories](./stories.tsx)
 
 ## Coming Soon
 
-- Search Support
 - Mobile Expanded Nav
 
 ## Installation
@@ -222,11 +221,15 @@ The Global Header (or App Header) is used for Workday applications.
 import {GlobalHeader, DubLogoTitle} from '@workday/canvas-kit-react-header';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
 import {IconButton} from '@workday/canvas-kit-react-button';
+import {MenuItem} from '@workday/canvas-kit-react-menu';
 import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
 
 const HeaderBrand = () => <DubLogoTitle themeColor={Header.Theme.White} />
 const HeaderAvatar = () => <Avatar onClick={handleMenuClick} url="https://my.cdn.amazonaws.com/assets/avatar_pic.png" />
 const handleSearchSubmit = query => console.log("Submitted query: ", query)
+const handleSearchInputChange = currentQuery => console.log("The current search bar value: ", currentQuery)
+const autocompleteAheadItems = [<MenuItem onClick={console.log("Clicked typeahead item")} />]
+const myId = 'my-unique-header'
 const openMenu = e => console.log("Menu opened")
 const handleBreakpointChange = key => console.log(`Breakpoint change: ${key}`)
 
@@ -240,6 +243,9 @@ const handleBreakpointChange = key => console.log(`Breakpoint change: ${key}`)
   menuToggle={<HeaderAvatar />}
   onMenuClick={openMenu}
   onSearchSubmit={handleSearchSubmit}
+  onSearchInputChange={handleSearchInputChange}
+  searchAutocompleteItems={autocompleteAheadItems}
+  accessibleId={myId}
   breakpoint={720}
   onBreakpointChange={handleBreakpointChange}
 >
@@ -283,10 +289,25 @@ Default: `justifyIcon` from `@workday/canvas-system-icons-web`
 
 Default: `<DubLogoTitle />`
 
-#### `onSearchSubmit: React.ReactNode`
+#### `onSearchSubmit: (queryString) => void`
 
-> A function that accepts a `React.SyntheticEvent` for when the user submits from the search input.
-> A search input will not be rendered if this is not provided.
+> A function that accepts a callback for when the user submits from the search input. A search input
+> will not be rendered if this is not provided.
+
+#### `onSearchInputChange: (queryString) => void`
+
+> A function that accepts a callback for when the user types in the search input.
+
+#### `searchAutocompleteItems: React.ReactElement<MenuItemProps>[]`
+
+> When the search input is focused it will create a dropdown menu with these MenuItems. This array
+> is usually updated based on the onSearchInputChange callback.
+
+#### `accessibleId: string`
+
+> A unique id for the header that is used for aria and html id attributes.
+
+Default: `A unique uuid based string`
 
 #### `onBreakpointChange: (BreakpointType | string) => void`
 

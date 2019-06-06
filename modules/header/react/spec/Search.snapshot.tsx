@@ -10,27 +10,33 @@ describe('Header Search Snapshots', () => {
   });
 
   test('Renders a collapsed search bar', () => {
-    const component = renderer.create(<Search collapse={true} />);
+    const component = renderer.create(<Search accessibleId={'snap'} collapse={true} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('Renders a search bar with a value', () => {
-    const component = renderer.create(<Search value="Hello World" />);
+    const component = renderer.create(<Search accessibleId={'snap'} value="Hello World" />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('Renders a search bar with a value', () => {
-    const component = renderer.create(<Search value="Hello World" />);
+    const component = renderer.create(<Search accessibleId={'snap'} value="Hello World" />);
     expect(component).toMatchSnapshot();
   });
 
   test('renders themed search bars', () => {
     const tree = {
-      blue: renderer.create(<Search themeColor={Header.Theme.Blue} />).toJSON(),
-      transparent: renderer.create(<Search themeColor={Header.Theme.Transparent} />).toJSON(),
-      white: renderer.create(<Search themeColor={Header.Theme.White} />).toJSON(),
+      blue: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.Blue} />)
+        .toJSON(),
+      transparent: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.Transparent} />)
+        .toJSON(),
+      white: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.White} />)
+        .toJSON(),
     };
 
     expect(tree.blue).toMatchSnapshot('<Search /> with blue theme applied');
@@ -40,9 +46,15 @@ describe('Header Search Snapshots', () => {
 
   test('renders themed search bars', () => {
     const tree = {
-      blue: renderer.create(<Search themeColor={Header.Theme.Blue} />).toJSON(),
-      transparent: renderer.create(<Search themeColor={Header.Theme.Transparent} />).toJSON(),
-      white: renderer.create(<Search themeColor={Header.Theme.White} />).toJSON(),
+      blue: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.Blue} />)
+        .toJSON(),
+      transparent: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.Transparent} />)
+        .toJSON(),
+      white: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.White} />)
+        .toJSON(),
     };
     expect(tree.blue).toMatchSnapshot('<Search /> with blue theme applied');
     expect(tree.transparent).toMatchSnapshot('<Search /> with transparent theme applied');
@@ -51,14 +63,35 @@ describe('Header Search Snapshots', () => {
 
   test('renders themed, collapsed search bars', () => {
     const tree = {
-      blue: renderer.create(<Search themeColor={Header.Theme.Blue} collapse={true} />).toJSON(),
-      transparent: renderer
-        .create(<Search themeColor={Header.Theme.Transparent} collapse={true} />)
+      blue: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.Blue} collapse={true} />)
         .toJSON(),
-      white: renderer.create(<Search themeColor={Header.Theme.White} collapse={true} />).toJSON(),
+      transparent: renderer
+        .create(
+          <Search accessibleId={'snap'} themeColor={Header.Theme.Transparent} collapse={true} />
+        )
+        .toJSON(),
+      white: renderer
+        .create(<Search accessibleId={'snap'} themeColor={Header.Theme.White} collapse={true} />)
+        .toJSON(),
     };
     expect(tree.blue).toMatchSnapshot('<Search /> with blue theme applied');
     expect(tree.transparent).toMatchSnapshot('<Search /> with transparent theme applied');
     expect(tree.white).toMatchSnapshot('<Search /> with white theme applied');
+  });
+
+  test('renders autocomplete normal and collapsed', () => {
+    const tree = {
+      normal: renderer
+        .create(<Search accessibleId={'snap'} autocompleteItems={[<div key="1" />]} />)
+        .toJSON(),
+      collapse: renderer
+        .create(
+          <Search accessibleId={'snap'} autocompleteItems={[<div key="1" />]} collapse={true} />
+        )
+        .toJSON(),
+    };
+    expect(tree.normal).toMatchSnapshot('<Search /> with autocomplete');
+    expect(tree.collapse).toMatchSnapshot('<Search /> with autocomplete collapsed');
   });
 });

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Header from './Header';
 import {HeaderVariant, BreakpointType} from './shared/types';
 import {DubLogoTitle} from './parts';
+import {MenuItemProps} from '@workday/canvas-kit-react-menu';
 
 export interface GlobalHeaderProps {
   /**
@@ -21,6 +22,14 @@ export interface GlobalHeaderProps {
    */
   onSearchSubmit?: (query: string) => void;
   /**
+   * An function that gets called and passed the current input value when the search form value changes
+   */
+  onSearchInputChange?: (query: string) => void;
+  /**
+   * An array of menu items to show under the search bar, primarily used for autocompletion of queries
+   */
+  searchAutocompleteItems?: React.ReactElement<MenuItemProps>[];
+  /**
    * An object that allows for custom specified breakpoint
    */
   breakpoint: number;
@@ -28,6 +37,10 @@ export interface GlobalHeaderProps {
    * An event handler function that gets called when the screen size changes to a different breakpoint key
    */
   onBreakpointChange?: (key: BreakpointType | string) => void;
+  /**
+   * Custom id for the search autocomplete accessibility
+   */
+  accessibleId?: string;
 }
 
 export default class GlobalHeader extends React.Component<GlobalHeaderProps> {
@@ -46,10 +59,13 @@ export default class GlobalHeader extends React.Component<GlobalHeaderProps> {
         brand={this.props.brand}
         menuToggle={this.props.menuToggle}
         onSearchSubmit={this.props.onSearchSubmit}
+        onSearchInputChange={this.props.onSearchInputChange}
+        searchAutocompleteItems={this.props.searchAutocompleteItems}
         onMenuClick={this.props.onMenuClick}
         variant={HeaderVariant.Global}
         breakpoints={breakpoints}
         onBreakpointChange={this.props.onBreakpointChange}
+        accessibleId={this.props.accessibleId}
       >
         {this.props.children}
       </Header>
