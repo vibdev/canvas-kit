@@ -19,10 +19,10 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 - Prop names should never include the component name (e.g. `type`, not `buttonType`)
 - Use the same props for the same concepts across components
-- Favor color-, position-, and size-agnostic names. For example:
-  - blueIcon can be bad because it may not be blue to everyone and changing colors or making colors variable is a breaking change.
-  - leftIcon can be bad because we can change the position with RTL or add something to the left of that, then it wouldn't make sense anymore.
-  - mediumIcon can be bad if we add another size in between... then which one is medium? Is it mediumLarge now?
+- Avoid names that reference color, position, and size. For example:
+  - `blueIcon` can be bad because it may not be blue to everyone and changing colors or making colors variable is a breaking change.
+  - `leftIcon` can be bad because we can change the position with RTL or add something to the left of that, then it wouldn't make sense anymore.
+  - `mediumIcon` can be bad if we add another size in between... then which one is medium? Is it mediumLarge now?
 
 #### T-shirt sizes
 
@@ -33,21 +33,23 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 - Default - normal state/color for use on light background
 - Inverse - inverted colors for use on a dark background
-- *Note:* If you encounter somewhere you need another theme type, please let us know so we can document it.
+- *Note:* If you encounter somewhere you need another theme type, please let us know so we can document it
 
 #### Event Handlers
 
-- Always use standard `on<Event>`  naming (`onClick`, `onChange`, etc.)
-- Only use a descriptor if there is already a handler for that type of event (e.g. `onChange`, `onValidColorChange`)
+- Always use standard `on{Descriptor}{Event}`  naming (`onClick`, `onChange`, `onBreakpointChange`, etc.)
+- Only use a descriptor if:
+  - You need more context
+  - There is already a handler for that type of event (e.g. `onChange`, `onValidColorChange`)
 
 #### Enum naming
 
 - Singular
 - PascalCase
-- Include component name unless it's a generic enum shared across components. Since we export our enums, this prevents naming clashes.
-- Exclude component in default props (`Button.Type` vs. `Button.ButtonType`):
+- Include component name unless it's a generic enum shared across components. Since we export our enums, this prevents naming clashes
+- Exclude component name in static class variables (`Button.Type` vs. `Button.ButtonType`):
 
-  ```
+  ```tsx
   class Button extends React.Component<ButtonProps> {
     public static Type = ButtonType;
     public static Size = ButtonSize;
@@ -63,7 +65,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 #### Event Handlers
 
 - Use standard browser events wherever possible
-- All event handlers should receive an event unless there's a good reason otherwise. This is for consumer predictability. In other words, always opt for `onChange: e => void` over `onChange: () => void` or `onChange: value => void`, etc. where possible.
+- All event handlers should receive an event unless there's a good reason otherwise. This is for consumer predictability. In other words, always opt for `onChange: e => void` over `onChange: () => void` or `onChange: value => void`, etc.
 
 #### Grow Interface
 
@@ -75,7 +77,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 - Expose enums you expect to be commonly used on the class to reduce imports.
 
-  ```
+  ```tsx
   class Button extends React.Component<ButtonProps> {
     public static Type = ButtonType;
     public static Size = ButtonSize;
@@ -85,14 +87,15 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   <Button type={Button.Type.Primary} />
   ```
 
-- Ensure you leave out the component name for the static variable so it's not repeated (e.g. `Button.ButtonType.Primary`)
+- Ensure you leave out the component name for the static variable so it's not repeated (e.g. `Button.Type.Primary`, not `Button.ButtonType.Primary`)
 
 #### Input Provider
 
 - All Canvas Kit components should support a wrapping `InputProvider` component to provide the cleanest experience for mouse users. Read the docs [here](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-core#input-provider). 
-- Make sure you provide fully accessible styling by default, and only override for mouse usage (see below).
+- Do not use `InputProvider` within your components. It is meant to be a higher order component wrapping a whole application of Canvas components
+- Make sure you provide fully accessible styling by default, and only override for mouse usage.
 
-```
+```tsx
 [`[data-whatinput='mouse'] &:focus,
   [data-whatinput='touch'] &:focus,
   [data-whatinput='pointer'] &:focus`]: {
@@ -108,7 +111,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 - Extend the interface of the primary element/component in your component (e.g. `export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>`)
 - Intentionally destructure your props so that every prop is assigned. This allows you to use spread the way it was intended. 
 
-```
+```tsx
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   type: ButtonType,
   size: ButtonSize,
@@ -145,7 +148,7 @@ const { type, size, icon, ...elemProps } = this.props
 
 - Use aria labels where required
 - Ensure full keyboard navigation
-- Check whether tabbing is enough or whether other keyboard navigation is required (e.g. arrow keys)
+- Check whether tabbing is enough or whether additional keyboard navigation is required (e.g. arrow keys)
 - When in doubt, ask an expert!
 
 
@@ -154,18 +157,17 @@ const { type, size, icon, ...elemProps } = this.props
 
 - We often add or augment props to React children within our components. Use `React.Children.map` along with `React.cloneElement()`
 - Use `React.isValidElement()` if you want to make sure it's a React component and not a regular DOM node.
-- If you're adding any event handlers, make sure you also support existing ones
-- _**Note:** We should maybe add a helper for this?_
+- If you're adding any event handlers to the children, make sure you also support existing ones
 
 
 
 #### Logic Flow
 
 - If vs. Switch: use switch statements when code branching is determined by the value of a single variable or expression.
-- Nested Ternaries: maximum two levels and only if it's very obvious. If you have two or more levels, try rewriting it as if/else statements and compare the complexity.
+- Nested Ternaries: maximum two levels and only if it's very obvious. If you have two or more levels, try rewriting it as if/else statements and compare the complexity & scanability.
 - Opt for [pure functions](https://medium.com/@jamesjefferyuk/javascript-what-are-pure-functions-4d4d5392d49c) wherever possible. They make unit testing easier and always behave as expected. Because React can be a bit of a magic black box, sometimes `this.x` values are not what you expect.
 
-```
+```ts
 foo(number, bar) => {
   return number * bar
 }
@@ -186,7 +188,7 @@ foo();
 
 #### Default Props
 
-- Use defaultProps whenever you find yourself checking for the existence of something before executing branching logic. It significantly reduces conditionals, facilitating easier testing and less bugs.
+- Use `defaultProps` whenever you find yourself checking for the existence of something before executing branching logic. It significantly reduces conditionals, facilitating easier testing and less bugs.
 - Any prop included in `defaultProps` should be typed as required in the component interface. However, it can still be documented as optional in the README. You can find more details [here](https://stackoverflow.com/questions/37282159/default-property-value-in-react-component-using-typescript)
 
 #### Class Function Binding
@@ -208,9 +210,11 @@ foo();
 
 #### Exports
 
-- Import the component most closely tied with the name of the package as the default, but also as a named export
+- Export the component most closely tied with the name of the package as the default
+- Also export the above component as a named export
 - Export everything else as a named export (`export * from ...`). Consider the naming of the things you're exporting (interfaces, enums, etc.) so you don't encounter any clashes.
-```
+
+```ts
 // inside MyComponent/index.ts
 import MyComponent from './lib/MyComponent';
 import AnotherComponent from './lib/AnotherComponent';
