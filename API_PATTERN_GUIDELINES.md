@@ -2,8 +2,36 @@
 
 Note: This repo hasn't seen a full audit, so you may find examples that contradict these guidelines. Some of the below rules are inspired by painpoints we've encountered in this project.
 
+- [Canvas](#canvas)
+- [Naming](#naming)
+    + [Props](#props)
+    + [T-shirt sizes](#t-shirt-sizes)
+    + [Theme types](#theme-types)
+    + [Event Handlers](#event-handlers)
+    + [Enums](#enums)
+- [Patterns](#patterns)
+    + [Event Handlers](#event-handlers-1)
+    + [Grow Interface](#grow-interface)
+    + [Static Class Variables](#static-class-variables)
+    + [Input Provider](#input-provider)
+    + [Prop spread behavior](#prop-spread-behavior)
+    + [Controlled components](#controlled-components)
+    + [Ref usage](#ref-usage)
+    + [Accessibility](#accessibility)
+    + [Child mapping](#child-mapping)
+    + [Logic Flow](#logic-flow)
+- [Code Style](#code-style)
+    + [Default Props](#default-props)
+    + [Class Function Binding](#class-function-binding)
+    + [Element Choice](#element-choice)
+    + [Styled components](#styled-components)
+    + [Exports](#exports)
+- [Documentation](#documentation)
+    + [Readme](#readme)
+    + [Storybook structure](#storybook-structure)
 
-## Canvas:
+
+## Canvas
 
 - Ensure you're always using the Canvas primitives and enums wherever possible for things like:
   - Spacing (e.g. `canvas.spacing.s`)
@@ -13,9 +41,9 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 - Check out the [`@workday/canvas-kit-react-core` README](https://ghe.megaleo.com/design/canvas-kit-react/blob/master/modules/canvas-kit-react-core/README.md) for the latest and greatest Canvas helpers.
   
 
-## Naming:
+## Naming
 
-#### Prop naming
+#### Props
 
 - Prop names should never include the component name (e.g. `type`, not `buttonType`)
 - Use the same props for the same concepts across components
@@ -42,7 +70,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   - You need more context
   - There is already a handler for that type of event (e.g. `onChange`, `onValidColorChange`)
 
-#### Enum naming
+#### Enums
 
 - Singular
 - PascalCase
@@ -60,7 +88,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   ```
 
 
-## Patterns:
+## Patterns
 
 #### Event Handlers
 
@@ -184,7 +212,7 @@ foo();
 ```
 
 
-## Code Style:
+## Code Style
 
 #### Default Props
 
@@ -225,7 +253,7 @@ export * from './lib/MyComponent';
 export * from './lib/AnotherComponent';
 ```
 
-## Documentation:
+## Documentation
 
 #### Readme
 - Follow our README template
