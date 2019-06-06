@@ -5,7 +5,7 @@ import throttle from 'lodash/throttle';
 import {CanvasSystemIcon} from '@workday/design-assets-types';
 import {colors, spacing, type, CanvasSpacingValue} from '@workday/canvas-kit-react-core';
 import {IconButton, ButtonSizes} from '@workday/canvas-kit-react-button';
-import {arrowLeftIcon, arrowRightIcon} from '@workday/canvas-system-icons-web';
+import {chevronLeftIcon, chevronRightIcon} from '@workday/canvas-system-icons-web';
 
 export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean;
@@ -15,10 +15,10 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   onBreakpointChange?: (open: boolean) => void;
   padding?: CanvasSpacingValue;
   breakpoint?: number;
+  openWidth?: number;
 }
 
 export interface SidePanelState {
-  responsive: boolean;
   screenSize: number;
 }
 
@@ -27,30 +27,41 @@ export enum SidePanelOpenDirection {
   Right,
 }
 
-const openSidePanelWidth = 300;
-
 const Header = styled('h2')({
   ...type.h2,
   marginTop: spacing.zero,
 });
 
-const SidePanelContainer = styled('div')<SidePanelProps>(({open, openDirection, padding}) => {
-  return {
+const ChildrenContainer = styled('div')({
+  zIndex: 1, // show above SidePanelFooter when screen is small vertically
+});
+
+const SidePanelContainer = styled('div')<SidePanelProps>(
+  {
+    overflow: 'hidden',
     height: '100%',
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
     transition: 'width 150ms ease-out 0s',
     position: 'absolute',
-    right: openDirection === SidePanelOpenDirection.Right ? spacing.zero : '',
-    left: openDirection === SidePanelOpenDirection.Left ? spacing.zero : '',
+  },
+  ({open}) => ({
     alignItems: open ? '' : 'center',
     boxShadow: !open ? '0 8px 16px -8px rgba(0, 0, 0, 0.16)' : '',
     backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
-    width: open ? openSidePanelWidth : spacing.xxl,
+  }),
+  ({open, openWidth}) => ({
+    width: open ? openWidth : spacing.xxl,
+  }),
+  ({open, padding}) => ({
     padding: open ? padding || spacing.m : `${spacing.s} 0`,
-  };
-});
+  }),
+  ({openDirection}) => ({
+    right: openDirection === SidePanelOpenDirection.Right ? spacing.zero : '',
+    left: openDirection === SidePanelOpenDirection.Left ? spacing.zero : '',
+  })
+);
 
 const ToggleButtonContainer = styled(IconButton)<Pick<SidePanelProps, 'openDirection'>>(
   {
@@ -63,29 +74,29 @@ const ToggleButtonContainer = styled(IconButton)<Pick<SidePanelProps, 'openDirec
   })
 );
 
-const SidePanelFooter = styled('div')<Pick<SidePanelProps, 'open'>>(
+const SidePanelFooter = styled('div')<Pick<SidePanelProps, 'open' | 'openWidth'>>(
   {
     position: 'absolute',
     bottom: '0',
-    width: openSidePanelWidth,
     height: 120,
     left: 0,
     background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, #FFFFFF 100%)',
   },
-  ({open}) => ({
-    width: open ? openSidePanelWidth : spacing.xxl,
+  ({open, openWidth}) => ({
+    width: open ? openWidth : spacing.xxl,
   })
 );
 
 export default class SidePanel extends React.Component<SidePanelProps, SidePanelState> {
   static OpenDirection = SidePanelOpenDirection;
   static defaultProps = {
-    breakpoint: 834,
+    breakpoint: 768,
+    openWidth: 300,
+    openDirection: SidePanelOpenDirection.Left,
   };
 
   state = {
     screenSize: window.innerWidth,
-    responsive: true,
   };
 
   public componentDidMount() {
@@ -103,6 +114,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
       openDirection,
       padding,
       onBreakpointChange,
+      openWidth,
       ...otherProps
     } = this.props;
 
@@ -113,19 +125,22 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         padding={padding}
         onBreakpointChange={this.handleResize}
         openDirection={openDirection}
+        openWidth={openWidth}
         open={open}
         {...otherProps}
       >
-        {header && open ? <Header>{header}</Header> : null}
-        {this.props.children}
-        <SidePanelFooter open={open}>
+        <ChildrenContainer>
+          {header && open ? <Header>{header}</Header> : null}
+          {this.props.children}
+        </ChildrenContainer>
+        <SidePanelFooter openWidth={openWidth} open={open}>
           {onToggleClick && (
             <ToggleButtonContainer
               openDirection={openDirection}
               aria-label={`${open ? 'hide navigation' : 'show navigation'}`}
               toggled={false}
               buttonSize={ButtonSizes.Small}
-              onClick={this.toggleClick}
+              onClick={this.onToggleClick}
               icon={this.toggleButtonDirection()}
               buttonType={IconButton.Types.Filled}
             />
@@ -148,16 +163,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
     }
   };
 
-  private toggleClick = () => {
-    if (!this.props.breakpoint) {
-      return;
-    }
-
-    const threshold = window.innerWidth > this.props.breakpoint;
-    const isResponsive = (threshold && !this.props.open) || (!threshold && this.props.open);
-    this.setState({
-      responsive: isResponsive,
-    });
+  private onToggleClick = () => {
     if (this.props.onToggleClick) {
       this.props.onToggleClick();
     }
@@ -165,9 +171,9 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
 
   private toggleButtonDirection = (): CanvasSystemIcon => {
     if (this.props.openDirection !== SidePanelOpenDirection.Right) {
-      return this.props.open ? arrowLeftIcon : arrowRightIcon;
+      return this.props.open ? chevronLeftIcon : chevronRightIcon;
     } else {
-      return this.props.open ? arrowRightIcon : arrowLeftIcon;
+      return this.props.open ? chevronRightIcon : chevronLeftIcon;
     }
   };
 }

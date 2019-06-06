@@ -84,6 +84,10 @@ describe('SidePanel Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  test('renders side panel with a different width', () => {
+    const component = renderer.create(<SidePanel openWidth={900} open={true} />);
+    expect(component).toMatchSnapshot();
+  });
   test('renders a side panel with children elements', () => {
     const component = renderer.create(
       <SidePanel onBreakpointChange={jest.fn()} open={true}>

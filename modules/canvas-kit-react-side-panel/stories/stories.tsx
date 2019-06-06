@@ -6,7 +6,7 @@ import {InputProviderDecorator} from '../../../utils/storybook';
 import {homeIcon, starIcon, rocketIcon, plusIcon} from '@workday/canvas-system-icons-web';
 import styled from 'react-emotion';
 import {css} from 'emotion';
-import {select} from '@storybook/addon-knobs';
+import {select, number} from '@storybook/addon-knobs';
 
 import {colors, type} from '@workday/canvas-kit-react-core';
 import README from '../README.md';
@@ -21,14 +21,14 @@ import {
 } from '@workday/canvas-kit-react-button';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
 
-import SidePanel from '..'; // tslint:disable-line:import-name
-import {SidePanelOpenDirection} from '../lib/SidePanel';
+// import SidePanel from '..'; // tslint:disable-line:import-name
+// import {SidePanelOpenDirection} from '../lib/SidePanel';
+import SidePanel, {SidePanelOpenDirection} from '../lib/SidePanel';
 
 interface SidePanelState {
   open: boolean;
 }
 
-// TODO replace this with our list component
 const ListItem = styled('li')({
   display: 'flex',
   listStyle: 'none',
@@ -58,12 +58,25 @@ const listItemClosed = css({
   marginRight: 0,
 });
 
-const label = 'open direction';
+const AddButton = styled(IconButton)({
+  margin: '0 20px',
+});
+
+// SidePanel Open Direction Knob
+const label = 'Open Direction';
 const options = {
   left: SidePanelOpenDirection.Left,
   right: SidePanelOpenDirection.Right,
 };
 const defaultValue = SidePanelOpenDirection.Left;
+
+// SidePanel Breakpoint Knob
+const breakpointLabel = 'Breakpoint';
+const breakpointDefaultValue = 768;
+
+// SidePanel Open Width Knob
+const openWidthLabel = 'Open Width';
+const openWidthDefaultValue = 300;
 
 class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   public state = {
@@ -75,20 +88,26 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
       <SidePanel
+        openWidth={number(openWidthLabel, openWidthDefaultValue)}
         openDirection={select(label, options, defaultValue)}
         open={open}
         onToggleClick={this.onClick}
-        breakpoint={800}
+        breakpoint={number(breakpointLabel, breakpointDefaultValue)}
         onBreakpointChange={this.handleBreakpoint}
         header={'Side Panel Header'}
       >
         {open ? (
           <Button buttonType={ButtonTypes.Primary}>Add New</Button>
         ) : (
-          <IconButton buttonSize={ButtonSizes.Small} buttonType={IconButtonTypes.Filled}>
+          <AddButton
+            toggled={false}
+            buttonSize={ButtonSizes.Small}
+            buttonType={IconButtonTypes.Filled}
+          >
             <SystemIcon icon={plusIcon} />
-          </IconButton>
+          </AddButton>
         )}
+        {/* TODO replace this with our list component */}
         <UnorderedList>
           <ListItem className={listItemStyles}>
             <span>
@@ -129,27 +148,21 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
 storiesOf('Side Panel', module)
   .addDecorator(InputProviderDecorator)
   .addDecorator(withReadme(README))
-  .add('Standard', () => (
+  .add('Default', () => (
     <div className="story">
       <h1 className="section-label">Standard Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>
         <div>
-          <SidePanel header={'Side Panel Header'} open={true} />
+          <SidePanel
+            onToggleClick={() => console.warn('clicked')}
+            header={'Side Panel Header'}
+            open={true}
+          />
         </div>
       </div>
     </div>
   ))
-  .add('Side Panel Collapsed', () => (
-    <div className="story">
-      <h1 className="section-label">Side Panel Collapsed</h1>
-      <div style={{height: '67vh', position: 'relative'}}>
-        <div>
-          <SidePanel open={false} />
-        </div>
-      </div>
-    </div>
-  ))
-  .add('Configurable Side Panel', () => (
+  .add('Configurable', () => (
     <div className="story">
       <h1 className="section-label">Configurable Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>

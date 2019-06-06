@@ -28,7 +28,7 @@ import {
   IconButtonTypes,
   ButtonSizes,
 } from '@workday/canvas-kit-react-button';
-import SidePanel from '@workday/canvas-kit-react-side-panel';
+import SidePanel, {SidePanelOpenDirection} from '@workday/canvas-kit-react-side-panel';
 
 interface SidePanelState {
   open: boolean;
@@ -42,7 +42,7 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
     const {open} = this.state;
     return (
       <SidePanel
-        openDirection={select(label, options, defaultValue)}
+        openDirection={SidePanelOpenDirection.Left}
         open={open}
         onToggleClick={this.onClick}
         breakpoint={800}
@@ -81,11 +81,15 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
 
 ## Static Properties
 
-> None
+#### `OpenDirection: SidePanelOpenDirection`
+
+```tsx
+<SidePanel open={true} openDirection={SidePanelOpenDirection.Left} />
+```
+
+---
 
 ## Component Props
-
-All standard input attributes are available and can be passed to the input field.
 
 ### Required
 
@@ -95,6 +99,8 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
+### Optional
+
 #### `onBreakpointChange: (open: boolean) => void;`
 
 > A function that is called when the screen size changes and reaches `breakpoint`. For example, if
@@ -103,11 +109,10 @@ All standard input attributes are available and can be passed to the input field
 
 ---
 
-### Optional
-
 #### `onToggleClick: () => void`
 
-> Callback that handles clicking toggle button to open or close side panel.
+> Callback that handles clicking toggle button to open or close the side panel. The toggle button
+> will only show if this prop is defined.
 
 ---
 
@@ -131,12 +136,20 @@ Default: `SidePanelOpenDirection.Left`
 
 > Adjust padding of the side panel when it's open.
 
-Default: `24px` when it's open and `16px` top and bottom when it's closed
+Default: `24px`
 
 ---
 
 #### `breakpoint: number`
 
-> The width at which the window size must be in order for `onBreakPointChange` to fire.
+> The width at which the window size must be in order for `onBreakPointChange` to fire. Default
+> value based on Ipad Landscape:
+> https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
 
-Default: `834px`
+Default: `768px`
+
+#### `openWidth: number`
+
+> Determines the width of the side panel when it's open.
+
+Default: `300px`

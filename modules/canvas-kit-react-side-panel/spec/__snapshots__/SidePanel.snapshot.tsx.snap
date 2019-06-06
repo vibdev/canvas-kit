@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SidePanel Snapshots does not render header when side panel is closed 1`] = `
-.emotion-2 {
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-4 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -14,8 +19,6 @@ exports[`SidePanel Snapshots does not render header when side panel is closed 1`
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: px;
-  left: px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -24,12 +27,13 @@ exports[`SidePanel Snapshots does not render header when side panel is closed 1`
   background-color: #ffffff;
   width: 64px;
   padding: 16px 0;
+  right: px;
+  left: 0px;
 }
 
-.emotion-0 {
+.emotion-2 {
   position: absolute;
   bottom: 0px;
-  width: 300px;
   height: 120px;
   left: 0;
   background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
@@ -38,20 +42,28 @@ exports[`SidePanel Snapshots does not render header when side panel is closed 1`
 
 <div
   aria-orientation="vertical"
-  className="emotion-2 emotion-3"
+  className="emotion-4 emotion-5"
   onBreakpointChange={[Function]}
   open={false}
   role="region"
 >
   <div
     className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-2 emotion-3"
     open={false}
   />
 </div>
 `;
 
 exports[`SidePanel Snapshots renders a closed side panel 1`] = `
-.emotion-2 {
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-4 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -64,8 +76,6 @@ exports[`SidePanel Snapshots renders a closed side panel 1`] = `
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: px;
-  left: px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -74,12 +84,13 @@ exports[`SidePanel Snapshots renders a closed side panel 1`] = `
   background-color: #ffffff;
   width: 64px;
   padding: 16px 0;
+  right: px;
+  left: 0px;
 }
 
-.emotion-0 {
+.emotion-2 {
   position: absolute;
   bottom: 0px;
-  width: 300px;
   height: 120px;
   left: 0;
   background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
@@ -88,13 +99,16 @@ exports[`SidePanel Snapshots renders a closed side panel 1`] = `
 
 <div
   aria-orientation="vertical"
-  className="emotion-2 emotion-3"
+  className="emotion-4 emotion-5"
   onBreakpointChange={[Function]}
   open={false}
   role="region"
 >
   <div
     className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-2 emotion-3"
     open={false}
   />
 </div>
@@ -102,9 +116,12 @@ exports[`SidePanel Snapshots renders a closed side panel 1`] = `
 
 exports[`SidePanel Snapshots renders a side panel from the right 1`] = `
 .emotion-2 {
+  z-index: 1;
+}
+
+.emotion-4 {
   position: absolute;
   bottom: 0px;
-  width: 300px;
   height: 120px;
   left: 0;
   background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
@@ -120,7 +137,8 @@ exports[`SidePanel Snapshots renders a side panel from the right 1`] = `
   margin-top: 0px;
 }
 
-.emotion-4 {
+.emotion-6 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -133,8 +151,6 @@ exports[`SidePanel Snapshots renders a side panel from the right 1`] = `
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: 0px;
-  left: px;
   -webkit-align-items: px;
   -webkit-box-align: px;
   -ms-flex-align: px;
@@ -143,29 +159,36 @@ exports[`SidePanel Snapshots renders a side panel from the right 1`] = `
   background-color: #f6f7f8;
   width: 300px;
   padding: 24px;
+  right: 0px;
+  left: px;
 }
 
 <div
   aria-orientation="vertical"
-  className="emotion-4 emotion-5"
+  className="emotion-6 emotion-7"
   onBreakpointChange={[Function]}
   open={true}
   role="region"
 >
-  <h2
-    className="emotion-0 emotion-1"
-  >
-    Side Panel Header
-  </h2>
   <div
     className="emotion-2 emotion-3"
+  >
+    <h2
+      className="emotion-0 emotion-1"
+    >
+      Side Panel Header
+    </h2>
+  </div>
+  <div
+    className="emotion-4 emotion-5"
     open={true}
   />
 </div>
 `;
 
 exports[`SidePanel Snapshots renders a side panel header 1`] = `
-.emotion-4 {
+.emotion-6 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -178,8 +201,6 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: px;
-  left: px;
   -webkit-align-items: px;
   -webkit-box-align: px;
   -ms-flex-align: px;
@@ -188,12 +209,17 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
   background-color: #f6f7f8;
   width: 300px;
   padding: 24px;
+  right: px;
+  left: 0px;
 }
 
 .emotion-2 {
+  z-index: 1;
+}
+
+.emotion-4 {
   position: absolute;
   bottom: 0px;
-  width: 300px;
   height: 120px;
   left: 0;
   background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
@@ -211,25 +237,30 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
 
 <div
   aria-orientation="vertical"
-  className="emotion-4 emotion-5"
+  className="emotion-6 emotion-7"
   onBreakpointChange={[Function]}
   open={true}
   role="region"
 >
-  <h2
-    className="emotion-0 emotion-1"
-  >
-    Side Panel Header
-  </h2>
   <div
     className="emotion-2 emotion-3"
+  >
+    <h2
+      className="emotion-0 emotion-1"
+    >
+      Side Panel Header
+    </h2>
+  </div>
+  <div
+    className="emotion-4 emotion-5"
     open={true}
   />
 </div>
 `;
 
 exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
-.emotion-2 {
+.emotion-4 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -242,8 +273,6 @@ exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: px;
-  left: px;
   -webkit-align-items: px;
   -webkit-box-align: px;
   -ms-flex-align: px;
@@ -252,347 +281,21 @@ exports[`SidePanel Snapshots renders a side panel with children elements 1`] = `
   background-color: #f6f7f8;
   width: 300px;
   padding: 24px;
-}
-
-.emotion-0 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 300px;
-}
-
-<div
-  aria-orientation="vertical"
-  className="emotion-2 emotion-3"
-  onBreakpointChange={[Function]}
-  open={true}
-  role="region"
->
-  <ul>
-    <li>
-      Home
-    </li>
-    <li>
-      Favorites
-    </li>
-    <li>
-      Recents
-    </li>
-    <li>
-      Trash
-    </li>
-  </ul>
-  <div
-    className="emotion-0 emotion-1"
-    open={true}
-  />
-</div>
-`;
-
-exports[`SidePanel Snapshots renders a toggle button 1`] = `
-.emotion-6 {
-  height: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-transition: width 150ms ease-out 0s;
-  transition: width 150ms ease-out 0s;
-  position: absolute;
-  right: px;
-  left: px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.16);
-  background-color: #ffffff;
-  width: 64px;
-  padding: 16px 0;
-}
-
-.emotion-4 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 64px;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 13px;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  box-shadow: none;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  -webkit-transition: all 120ms linear;
-  transition: all 120ms linear;
-  border-width: 0px;
-  background-color: #f0f1f2;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  bottom: 16px;
-  right: px;
-  left: px;
-}
-
-.emotion-2:hover:active {
-  -webkit-transition-duration: 40ms;
-  transition-duration: 40ms;
-}
-
-.emotion-2:disabled,
-.emotion-2:disabled:active {
-  cursor: default;
-  box-shadow: none;
-}
-
-.emotion-2 .wd-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-2 span .wd-icon-fill,
-.emotion-2 span .wd-icon-accent {
-  -webkit-transition: fill 120ms ease-in;
-  transition: fill 120ms ease-in;
-  fill: #7b858f;
-}
-
-.emotion-2:focus span .wd-icon-fill,
-.emotion-2:focus span .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-2:hover:focus {
-  background-color: #dfe2e6;
-}
-
-.emotion-2:active,
-.emotion-2:focus:active,
-.emotion-2:hover:active {
-  background-color: #ced3d9;
-}
-
-.emotion-2:hover {
-  background-color: #dfe2e6;
-}
-
-.emotion-2:hover span .wd-icon-fill,
-.emotion-2:hover span .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-2:disabled,
-.emotion-2:active:disabled,
-.emotion-2:focus:disabled,
-.emotion-2:hover:disabled {
-  background-color: #f6f7f8;
-}
-
-.emotion-2:disabled span .wd-icon-fill,
-.emotion-2:active:disabled span .wd-icon-fill,
-.emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill,
-.emotion-2:disabled span .wd-icon-accent,
-.emotion-2:active:disabled span .wd-icon-accent,
-.emotion-2:focus:disabled span .wd-icon-accent,
-.emotion-2:hover:disabled span .wd-icon-accent {
-  fill: #b9c0c7;
-}
-
-.emotion-2:not([disabled]):focus,
-.emotion-2:not([disabled]):active {
-  -webkit-animation: animation-1h1pob6 100ms;
-  animation: animation-1h1pob6 100ms;
-  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
-}
-
-.emotion-2 span svg {
-  width: 20px;
-  height: 20px;
-}
-
-.emotion-0 {
-  display: inline-block;
-}
-
-.emotion-0 svg {
-  display: block;
-}
-
-.emotion-0 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-0:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-0 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-0:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-0 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-0:hover .wd-icon-background {
-  fill: transparent;
-}
-
-<div
-  aria-orientation="vertical"
-  className="emotion-6 emotion-7"
-  onBreakpointChange={[Function]}
-  open={false}
-  role="region"
->
-  <div
-    className="emotion-4 emotion-5"
-    open={false}
-  >
-    <button
-      aria-label="show navigation"
-      aria-pressed={false}
-      className="emotion-1 emotion-2 emotion-3"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-arrow-right wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.525 5.263a.506.506 0 0 1 .003-.71l.7-.701a.495.495 0 0 1 .711-.003l7.778 7.777a.498.498 0 0 1 .144.352.48.48 0 0 1-.144.356l-7.778 7.778a.506.506 0 0 1-.71-.003l-.701-.7a.495.495 0 0 1-.003-.711l5.702-5.703H4.6a.505.505 0 0 1-.5-.505v-.99c0-.29.224-.505.5-.505h11.657l-5.732-5.732z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-          }
-        }
-      />
-    </button>
-  </div>
-</div>
-`;
-
-exports[`SidePanel Snapshots renders as expected 1`] = `
-.emotion-2 {
-  height: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-transition: width 150ms ease-out 0s;
-  transition: width 150ms ease-out 0s;
-  position: absolute;
-  right: px;
-  left: px;
-  -webkit-align-items: px;
-  -webkit-box-align: px;
-  -ms-flex-align: px;
-  align-items: px;
-  box-shadow: px;
-  background-color: #f6f7f8;
-  width: 300px;
-  padding: 24px;
-}
-
-.emotion-0 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 300px;
-}
-
-<div
-  aria-orientation="vertical"
-  className="emotion-2 emotion-3"
-  onBreakpointChange={[Function]}
-  open={true}
-  role="region"
->
-  <div
-    className="emotion-0 emotion-1"
-    open={true}
-  />
-</div>
-`;
-
-exports[`SidePanel Snapshots renders side panel on the left 1`] = `
-.emotion-2 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 300px;
-}
-
-.emotion-0 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #333333;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-top: 0px;
-}
-
-.emotion-4 {
-  height: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-transition: width 150ms ease-out 0s;
-  transition: width 150ms ease-out 0s;
-  position: absolute;
   right: px;
   left: 0px;
-  -webkit-align-items: px;
-  -webkit-box-align: px;
-  -ms-flex-align: px;
-  align-items: px;
-  box-shadow: px;
-  background-color: #f6f7f8;
+}
+
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
   width: 300px;
-  padding: 24px;
 }
 
 <div
@@ -602,11 +305,24 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
   open={true}
   role="region"
 >
-  <h2
+  <div
     className="emotion-0 emotion-1"
   >
-    Side Panel Header
-  </h2>
+    <ul>
+      <li>
+        Home
+      </li>
+      <li>
+        Favorites
+      </li>
+      <li>
+        Recents
+      </li>
+      <li>
+        Trash
+      </li>
+    </ul>
+  </div>
   <div
     className="emotion-2 emotion-3"
     open={true}
@@ -614,50 +330,13 @@ exports[`SidePanel Snapshots renders side panel on the left 1`] = `
 </div>
 `;
 
-exports[`SidePanel Snapshots renders side panel on the right with correct toggle button when panel is closed 1`] = `
-.emotion-4 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 64px;
-}
-
+exports[`SidePanel Snapshots renders a toggle button 1`] = `
 .emotion-0 {
-  display: inline-block;
+  z-index: 1;
 }
 
-.emotion-0 svg {
-  display: block;
-}
-
-.emotion-0 .wd-icon-fill {
-  fill: #7b858f;
-}
-
-.emotion-0:hover .wd-icon-fill {
-  fill: #333d47;
-}
-
-.emotion-0 .wd-icon-accent {
-  fill: #7b858f;
-}
-
-.emotion-0:hover .wd-icon-accent {
-  fill: #333d47;
-}
-
-.emotion-0 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-0:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-6 {
+.emotion-8 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -670,8 +349,6 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: 0px;
-  left: px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -680,9 +357,20 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   background-color: #ffffff;
   width: 64px;
   padding: 16px 0;
+  right: px;
+  left: 0px;
 }
 
-.emotion-2 {
+.emotion-6 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 64px;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -711,160 +399,85 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   height: 32px;
   position: absolute;
   bottom: 16px;
-  right: px;
-  left: 16px;
+  right: 16px;
+  left: px;
 }
 
-.emotion-2:hover:active {
+.emotion-4:hover:active {
   -webkit-transition-duration: 40ms;
   transition-duration: 40ms;
 }
 
-.emotion-2:disabled,
-.emotion-2:disabled:active {
+.emotion-4:disabled,
+.emotion-4:disabled:active {
   cursor: default;
   box-shadow: none;
 }
 
-.emotion-2 .wd-icon {
+.emotion-4 .wd-icon {
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-2 span .wd-icon-fill,
-.emotion-2 span .wd-icon-accent {
+.emotion-4 span .wd-icon-fill,
+.emotion-4 span .wd-icon-accent {
   -webkit-transition: fill 120ms ease-in;
   transition: fill 120ms ease-in;
   fill: #7b858f;
 }
 
-.emotion-2:focus span .wd-icon-fill,
-.emotion-2:focus span .wd-icon-accent {
+.emotion-4:focus span .wd-icon-fill,
+.emotion-4:focus span .wd-icon-accent {
   fill: #7b858f;
 }
 
-.emotion-2:hover:focus {
+.emotion-4:hover:focus {
   background-color: #dfe2e6;
 }
 
-.emotion-2:active,
-.emotion-2:focus:active,
-.emotion-2:hover:active {
+.emotion-4:active,
+.emotion-4:focus:active,
+.emotion-4:hover:active {
   background-color: #ced3d9;
 }
 
-.emotion-2:hover {
+.emotion-4:hover {
   background-color: #dfe2e6;
 }
 
-.emotion-2:hover span .wd-icon-fill,
-.emotion-2:hover span .wd-icon-accent {
+.emotion-4:hover span .wd-icon-fill,
+.emotion-4:hover span .wd-icon-accent {
   fill: #333d47;
 }
 
-.emotion-2:disabled,
-.emotion-2:active:disabled,
-.emotion-2:focus:disabled,
-.emotion-2:hover:disabled {
+.emotion-4:disabled,
+.emotion-4:active:disabled,
+.emotion-4:focus:disabled,
+.emotion-4:hover:disabled {
   background-color: #f6f7f8;
 }
 
-.emotion-2:disabled span .wd-icon-fill,
-.emotion-2:active:disabled span .wd-icon-fill,
-.emotion-2:focus:disabled span .wd-icon-fill,
-.emotion-2:hover:disabled span .wd-icon-fill,
-.emotion-2:disabled span .wd-icon-accent,
-.emotion-2:active:disabled span .wd-icon-accent,
-.emotion-2:focus:disabled span .wd-icon-accent,
-.emotion-2:hover:disabled span .wd-icon-accent {
+.emotion-4:disabled span .wd-icon-fill,
+.emotion-4:active:disabled span .wd-icon-fill,
+.emotion-4:focus:disabled span .wd-icon-fill,
+.emotion-4:hover:disabled span .wd-icon-fill,
+.emotion-4:disabled span .wd-icon-accent,
+.emotion-4:active:disabled span .wd-icon-accent,
+.emotion-4:focus:disabled span .wd-icon-accent,
+.emotion-4:hover:disabled span .wd-icon-accent {
   fill: #b9c0c7;
 }
 
-.emotion-2:not([disabled]):focus,
-.emotion-2:not([disabled]):active {
+.emotion-4:not([disabled]):focus,
+.emotion-4:not([disabled]):active {
   -webkit-animation: animation-1h1pob6 100ms;
   animation: animation-1h1pob6 100ms;
   box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
 }
 
-.emotion-2 span svg {
+.emotion-4 span svg {
   width: 20px;
   height: 20px;
-}
-
-<div
-  aria-orientation="vertical"
-  className="emotion-6 emotion-7"
-  onBreakpointChange={[Function]}
-  open={false}
-  role="region"
->
-  <div
-    className="emotion-4 emotion-5"
-    open={false}
-  >
-    <button
-      aria-label="show navigation"
-      aria-pressed={false}
-      className="emotion-1 emotion-2 emotion-3"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-arrow-left wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M13.436 5.263a.506.506 0 0 0-.003-.71l-.7-.701a.495.495 0 0 0-.71-.003l-7.779 7.777a.498.498 0 0 0-.144.352.48.48 0 0 0 .144.356l7.778 7.778a.506.506 0 0 0 .71-.003l.701-.7a.495.495 0 0 0 .003-.711l-5.702-5.703H19.36c.273 0 .5-.226.5-.505v-.99a.495.495 0 0 0-.5-.505H7.704l5.732-5.732z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-          }
-        }
-      />
-    </button>
-  </div>
-</div>
-`;
-
-exports[`SidePanel Snapshots renders side panel on the right with correct toggle button when panel is open 1`] = `
-.emotion-6 {
-  position: absolute;
-  bottom: 0px;
-  width: 300px;
-  height: 120px;
-  left: 0;
-  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
-  width: 300px;
-}
-
-.emotion-0 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  color: #333333;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-top: 0px;
-}
-
-.emotion-8 {
-  height: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-transition: width 150ms ease-out 0s;
-  transition: width 150ms ease-out 0s;
-  position: absolute;
-  right: 0px;
-  left: px;
-  -webkit-align-items: px;
-  -webkit-box-align: px;
-  -ms-flex-align: px;
-  align-items: px;
-  box-shadow: px;
-  background-color: #f6f7f8;
-  width: 300px;
-  padding: 24px;
 }
 
 .emotion-2 {
@@ -897,6 +510,240 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 
 .emotion-2:hover .wd-icon-background {
   fill: transparent;
+}
+
+<div
+  aria-orientation="vertical"
+  className="emotion-8 emotion-9"
+  onBreakpointChange={[Function]}
+  open={false}
+  role="region"
+>
+  <div
+    className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-6 emotion-7"
+    open={false}
+  >
+    <button
+      aria-label="show navigation"
+      aria-pressed={false}
+      className="emotion-3 emotion-4 emotion-5"
+      onClick={[Function]}
+    >
+      <span
+        className="emotion-2"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-chevron-right wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.108 13.098l.748-.748a.493.493 0 0 0 .001-.7L9.346 3.142a.499.499 0 0 0-.701.002l-.748.747a.493.493 0 0 0-.002.7L15.305 12l-7.41 7.406a.498.498 0 0 0 .002.7l.748.749a.494.494 0 0 0 .7 0l7.763-7.756z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SidePanel Snapshots renders as expected 1`] = `
+.emotion-4 {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: width 150ms ease-out 0s;
+  transition: width 150ms ease-out 0s;
+  position: absolute;
+  -webkit-align-items: px;
+  -webkit-box-align: px;
+  -ms-flex-align: px;
+  align-items: px;
+  box-shadow: px;
+  background-color: #f6f7f8;
+  width: 300px;
+  padding: 24px;
+  right: px;
+  left: 0px;
+}
+
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 300px;
+}
+
+<div
+  aria-orientation="vertical"
+  className="emotion-4 emotion-5"
+  onBreakpointChange={[Function]}
+  open={true}
+  role="region"
+>
+  <div
+    className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-2 emotion-3"
+    open={true}
+  />
+</div>
+`;
+
+exports[`SidePanel Snapshots renders side panel on the left 1`] = `
+.emotion-6 {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: width 150ms ease-out 0s;
+  transition: width 150ms ease-out 0s;
+  position: absolute;
+  -webkit-align-items: px;
+  -webkit-box-align: px;
+  -ms-flex-align: px;
+  align-items: px;
+  box-shadow: px;
+  background-color: #f6f7f8;
+  width: 300px;
+  padding: 24px;
+  right: px;
+  left: 0px;
+}
+
+.emotion-2 {
+  z-index: 1;
+}
+
+.emotion-4 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 300px;
+}
+
+.emotion-0 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  margin-top: 0px;
+}
+
+<div
+  aria-orientation="vertical"
+  className="emotion-6 emotion-7"
+  onBreakpointChange={[Function]}
+  open={true}
+  role="region"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <h2
+      className="emotion-0 emotion-1"
+    >
+      Side Panel Header
+    </h2>
+  </div>
+  <div
+    className="emotion-4 emotion-5"
+    open={true}
+  />
+</div>
+`;
+
+exports[`SidePanel Snapshots renders side panel on the right with correct toggle button when panel is closed 1`] = `
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-6 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 64px;
+}
+
+.emotion-2 {
+  display: inline-block;
+}
+
+.emotion-2 svg {
+  display: block;
+}
+
+.emotion-2 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-2:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-2 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-2:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-2 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-2:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-8 {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: width 150ms ease-out 0s;
+  transition: width 150ms ease-out 0s;
+  position: absolute;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.16);
+  background-color: #ffffff;
+  width: 64px;
+  padding: 16px 0;
+  right: 0px;
+  left: px;
 }
 
 .emotion-4 {
@@ -1013,20 +860,18 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
   aria-orientation="vertical"
   className="emotion-8 emotion-9"
   onBreakpointChange={[Function]}
-  open={true}
+  open={false}
   role="region"
 >
-  <h2
+  <div
     className="emotion-0 emotion-1"
-  >
-    Side Panel Header
-  </h2>
+  />
   <div
     className="emotion-6 emotion-7"
-    open={true}
+    open={false}
   >
     <button
-      aria-label="hide navigation"
+      aria-label="show navigation"
       aria-pressed={false}
       className="emotion-3 emotion-4 emotion-5"
       onClick={[Function]}
@@ -1035,7 +880,7 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
         className="emotion-2"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-arrow-right wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M10.525 5.263a.506.506 0 0 1 .003-.71l.7-.701a.495.495 0 0 1 .711-.003l7.778 7.777a.498.498 0 0 1 .144.352.48.48 0 0 1-.144.356l-7.778 7.778a.506.506 0 0 1-.71-.003l-.701-.7a.495.495 0 0 1-.003-.711l5.702-5.703H4.6a.505.505 0 0 1-.5-.505v-.99c0-.29.224-.505.5-.505h11.657l-5.732-5.732z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-chevron-left wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M6.895 13.098l-.748-.748a.493.493 0 0 1-.002-.7l8.512-8.507a.499.499 0 0 1 .7.002l.749.747a.493.493 0 0 1 .001.7L8.697 12l7.41 7.406c.19.19.193.507-.001.7l-.748.749a.494.494 0 0 1-.701 0l-7.762-7.756z\\" class=\\"wd-icon-fill\\"/></g></svg>",
           }
         }
       />
@@ -1044,8 +889,31 @@ exports[`SidePanel Snapshots renders side panel on the right with correct toggle
 </div>
 `;
 
-exports[`SidePanel Snapshots renders standard side panel 1`] = `
+exports[`SidePanel Snapshots renders side panel on the right with correct toggle button when panel is open 1`] = `
 .emotion-2 {
+  z-index: 1;
+}
+
+.emotion-8 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 300px;
+}
+
+.emotion-0 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+  margin-top: 0px;
+}
+
+.emotion-10 {
+  overflow: hidden;
   height: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -1058,8 +926,6 @@ exports[`SidePanel Snapshots renders standard side panel 1`] = `
   -webkit-transition: width 150ms ease-out 0s;
   transition: width 150ms ease-out 0s;
   position: absolute;
-  right: px;
-  left: px;
   -webkit-align-items: px;
   -webkit-box-align: px;
   -ms-flex-align: px;
@@ -1068,12 +934,282 @@ exports[`SidePanel Snapshots renders standard side panel 1`] = `
   background-color: #f6f7f8;
   width: 300px;
   padding: 24px;
+  right: 0px;
+  left: px;
+}
+
+.emotion-4 {
+  display: inline-block;
+}
+
+.emotion-4 svg {
+  display: block;
+}
+
+.emotion-4 .wd-icon-fill {
+  fill: #7b858f;
+}
+
+.emotion-4:hover .wd-icon-fill {
+  fill: #333d47;
+}
+
+.emotion-4 .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-4:hover .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-4 .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-4:hover .wd-icon-background {
+  fill: transparent;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  box-shadow: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 120ms linear;
+  transition: all 120ms linear;
+  border-width: 0px;
+  background-color: #f0f1f2;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 16px;
+  right: px;
+  left: 16px;
+}
+
+.emotion-6:hover:active {
+  -webkit-transition-duration: 40ms;
+  transition-duration: 40ms;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active {
+  cursor: default;
+  box-shadow: none;
+}
+
+.emotion-6 .wd-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 span .wd-icon-fill,
+.emotion-6 span .wd-icon-accent {
+  -webkit-transition: fill 120ms ease-in;
+  transition: fill 120ms ease-in;
+  fill: #7b858f;
+}
+
+.emotion-6:focus span .wd-icon-fill,
+.emotion-6:focus span .wd-icon-accent {
+  fill: #7b858f;
+}
+
+.emotion-6:hover:focus {
+  background-color: #dfe2e6;
+}
+
+.emotion-6:active,
+.emotion-6:focus:active,
+.emotion-6:hover:active {
+  background-color: #ced3d9;
+}
+
+.emotion-6:hover {
+  background-color: #dfe2e6;
+}
+
+.emotion-6:hover span .wd-icon-fill,
+.emotion-6:hover span .wd-icon-accent {
+  fill: #333d47;
+}
+
+.emotion-6:disabled,
+.emotion-6:active:disabled,
+.emotion-6:focus:disabled,
+.emotion-6:hover:disabled {
+  background-color: #f6f7f8;
+}
+
+.emotion-6:disabled span .wd-icon-fill,
+.emotion-6:active:disabled span .wd-icon-fill,
+.emotion-6:focus:disabled span .wd-icon-fill,
+.emotion-6:hover:disabled span .wd-icon-fill,
+.emotion-6:disabled span .wd-icon-accent,
+.emotion-6:active:disabled span .wd-icon-accent,
+.emotion-6:focus:disabled span .wd-icon-accent,
+.emotion-6:hover:disabled span .wd-icon-accent {
+  fill: #b9c0c7;
+}
+
+.emotion-6:not([disabled]):focus,
+.emotion-6:not([disabled]):active {
+  -webkit-animation: animation-1h1pob6 100ms;
+  animation: animation-1h1pob6 100ms;
+  box-shadow: 0 0 0 2px #ffffff,0 0 0 4px #0875e1;
+}
+
+.emotion-6 span svg {
+  width: 20px;
+  height: 20px;
+}
+
+<div
+  aria-orientation="vertical"
+  className="emotion-10 emotion-11"
+  onBreakpointChange={[Function]}
+  open={true}
+  role="region"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <h2
+      className="emotion-0 emotion-1"
+    >
+      Side Panel Header
+    </h2>
+  </div>
+  <div
+    className="emotion-8 emotion-9"
+    open={true}
+  >
+    <button
+      aria-label="hide navigation"
+      aria-pressed={false}
+      className="emotion-5 emotion-6 emotion-7"
+      onClick={[Function]}
+    >
+      <span
+        className="emotion-4"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-chevron-right wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path fill-rule=\\"nonzero\\" d=\\"M17.108 13.098l.748-.748a.493.493 0 0 0 .001-.7L9.346 3.142a.499.499 0 0 0-.701.002l-.748.747a.493.493 0 0 0-.002.7L15.305 12l-7.41 7.406a.498.498 0 0 0 .002.7l.748.749a.494.494 0 0 0 .7 0l7.763-7.756z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SidePanel Snapshots renders side panel with a different width 1`] = `
+.emotion-0 {
+  z-index: 1;
+}
+
+.emotion-4 {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: width 150ms ease-out 0s;
+  transition: width 150ms ease-out 0s;
+  position: absolute;
+  -webkit-align-items: px;
+  -webkit-box-align: px;
+  -ms-flex-align: px;
+  align-items: px;
+  box-shadow: px;
+  background-color: #f6f7f8;
+  width: 900px;
+  padding: 24px;
+  right: px;
+  left: 0px;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  left: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
+  width: 900px;
+}
+
+<div
+  aria-orientation="vertical"
+  className="emotion-4 emotion-5"
+  onBreakpointChange={[Function]}
+  open={true}
+  role="region"
+>
+  <div
+    className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-2 emotion-3"
+    open={true}
+  />
+</div>
+`;
+
+exports[`SidePanel Snapshots renders standard side panel 1`] = `
+.emotion-4 {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: width 150ms ease-out 0s;
+  transition: width 150ms ease-out 0s;
+  position: absolute;
+  -webkit-align-items: px;
+  -webkit-box-align: px;
+  -ms-flex-align: px;
+  align-items: px;
+  box-shadow: px;
+  background-color: #f6f7f8;
+  width: 300px;
+  padding: 24px;
+  right: px;
+  left: 0px;
 }
 
 .emotion-0 {
+  z-index: 1;
+}
+
+.emotion-2 {
   position: absolute;
   bottom: 0px;
-  width: 300px;
   height: 120px;
   left: 0;
   background: linear-gradient(180deg,rgba(255,255,255,0.0001) 0%,#FFFFFF 100%);
@@ -1082,13 +1218,16 @@ exports[`SidePanel Snapshots renders standard side panel 1`] = `
 
 <div
   aria-orientation="vertical"
-  className="emotion-2 emotion-3"
+  className="emotion-4 emotion-5"
   onBreakpointChange={[Function]}
   open={true}
   role="region"
 >
   <div
     className="emotion-0 emotion-1"
+  />
+  <div
+    className="emotion-2 emotion-3"
     open={true}
   />
 </div>
