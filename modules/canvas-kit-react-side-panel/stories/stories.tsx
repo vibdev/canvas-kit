@@ -56,6 +56,7 @@ const listItemClosed = css({
   padding: '15px 20px',
   marginLeft: 0,
   marginRight: 0,
+  justifyContent: 'center',
 });
 
 const AddButton = styled(IconButton)({
@@ -167,14 +168,12 @@ storiesOf('Side Panel', module)
     <div className="story">
       <h1 className="section-label">Standard Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>
-        <div>
-          <SidePanel
-            sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
-            onToggleClick={() => console.warn('clicked')}
-            header={'Side Panel Header'}
-            open={true}
-          />
-        </div>
+        <SidePanel
+          sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
+          onToggleClick={() => console.warn('clicked')}
+          header={'Side Panel Header'}
+          open={true}
+        />
       </div>
     </div>
   ))
@@ -190,9 +189,7 @@ storiesOf('Side Panel', module)
           />
           <Button buttonType={Button.Types.Primary}>Sign Up</Button>
         </Header>
-        <div>
-          <SidePanelWrapper />
-        </div>
+        <SidePanelWrapper />
       </div>
     </div>
   ));
