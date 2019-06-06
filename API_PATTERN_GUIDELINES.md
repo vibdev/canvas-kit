@@ -5,8 +5,8 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 - [Canvas](#canvas)
 - [Naming](#naming)
     + [Props](#props)
-    + [T-shirt sizes](#t-shirt-sizes)
-    + [Theme types](#theme-types)
+    + [T-shirt Sizes](#t-shirt-sizes)
+    + [Theme Types](#theme-types)
     + [Event Handlers](#event-handlers)
     + [Enums](#enums)
 - [Patterns](#patterns)
@@ -14,21 +14,21 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
     + [Grow Interface](#grow-interface)
     + [Static Class Variables](#static-class-variables)
     + [Input Provider](#input-provider)
-    + [Prop spread behavior](#prop-spread-behavior)
-    + [Controlled components](#controlled-components)
-    + [Ref usage](#ref-usage)
+    + [Prop Spread Behavior](#prop-spread-behavior)
+    + [Controlled Components](#controlled-components)
+    + [Ref Usage](#ref-usage)
     + [Accessibility](#accessibility)
-    + [Child mapping](#child-mapping)
+    + [Child Mapping](#child-mapping)
     + [Logic Flow](#logic-flow)
 - [Code Style](#code-style)
     + [Default Props](#default-props)
     + [Class Function Binding](#class-function-binding)
     + [Element Choice](#element-choice)
-    + [Styled components](#styled-components)
+    + [Styled Components](#styled-components)
     + [Exports](#exports)
 - [Documentation](#documentation)
     + [Readme](#readme)
-    + [Storybook structure](#storybook-structure)
+    + [Storybook Structure](#storybook-structure)
 
 
 ## Canvas
@@ -52,12 +52,12 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
   - `leftIcon` can be bad because we can change the position with RTL or add something to the left of that, then it wouldn't make sense anymore.
   - `mediumIcon` can be bad if we add another size in between... then which one is medium? Is it mediumLarge now?
 
-#### T-shirt sizes
+#### T-shirt Sizes
 
 - Always use the shortest enumeration (`xs, s, m, l, xl`, etc.)
 - **Do not** use longer versions (e.g. `sm`)
 
-#### Theme types
+#### Theme Types
 
 - Default - normal state/color for use on light background
 - Inverse - inverted colors for use on a dark background
@@ -134,7 +134,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
 
 
 
-#### Prop spread behavior
+#### Prop Spread Behavior
 
 - Extend the interface of the primary element/component in your component (e.g. `export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>`)
 - Intentionally destructure your props so that every prop is assigned. This allows you to use spread the way it was intended. 
@@ -155,7 +155,7 @@ const { type, size, icon, ...elemProps } = this.props
 
 
 
-#### Controlled components
+#### Controlled Components
 
 - We opt for controlled components wherever possible.
 - We aim to manage the least amount of state within our components as possible.
@@ -165,7 +165,7 @@ const { type, size, icon, ...elemProps } = this.props
   
   
 
-#### Ref usage
+#### Ref Usage
 
 - When a consumer [needs a reference to an underlying element](https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs) (to manage focus, check DOM ancestors, etc.), use emotion components' `innerRef` prop. Note: with emotion 10, this[ will change to `ref`](https://medium.com/emotion-js/announcing-emotion-10-f1a4b17b8ccd#71bb)
 - When providing a ref prop, indicate what element it's tied to (generally by using the type of element if it's descriptive enough for your component). E.g. `inputRef`
@@ -181,7 +181,7 @@ const { type, size, icon, ...elemProps } = this.props
 
 
 
-#### Child mapping
+#### Child Mapping
 
 - We often add or augment props to React children within our components. Use `React.Children.map` along with `React.cloneElement()`
 - Use `React.isValidElement()` if you want to make sure it's a React component and not a regular DOM node.
@@ -230,7 +230,7 @@ foo();
 - Use the correct native element wherever possible. This enables us to get as much behavior for free from the browser.
 - For example, if something peforms an action on a click, it should generally use a `button` to get keypress handling for free.
 
-#### Styled components
+#### Styled Components
 
 - Always initialize styled components outside of your render function. Failing to do this will result in a big performance hit.
 - When specifying the props a styled component can accept, it is up to you do define how restrictive you should be. You can accept any prop that the component accepts (e.g. `styled('div')<ComponentProps>`) or only accept a subset (e.g. `styled('div')<Pick<ComponentProps, 'someProp' | 'anotherProp'>>`)
@@ -260,7 +260,7 @@ export * from './lib/AnotherComponent';
 - Outline static properties (e.g. `Button.Type`), required props, and optional props
 - Usage example should be as standalone as possible. As long as it's not too complex, this snippet should be a working implementation so consumers can copy/paste
 
-#### Storybook structure
+#### Storybook Structure
 - Always opt for the most referenceable code in your stories. Storybook helps us test, but many consumers use it as an example of how to implement components. 
 - Avoid helper functions to reduce duplication that make it harder to parse.
 - Avoid sharing wrappers, components, etc. from other story files. 
