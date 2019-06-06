@@ -71,7 +71,6 @@ const childrenSpacing = spacing.s;
 
 const HeaderShell = styled('div')<HeaderProps>(
   {
-    overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
     boxSizing: 'border-box',

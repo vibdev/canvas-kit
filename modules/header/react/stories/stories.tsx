@@ -1,6 +1,7 @@
 /// <reference path="../../../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
+import {action} from '@storybook/addon-actions';
 import withReadme from 'storybook-readme/with-readme';
 import styled from 'react-emotion';
 import {css, cx} from 'emotion';
@@ -35,16 +36,8 @@ const backgroundStyle = css({
 // Simulate a React Router link
 const Link = styled('a')<{to: string}>({});
 
-const handleMenuClickTest = (e: React.SyntheticEvent) => {
-  alert(`Menu clicked!`);
-};
-
-const handleAvatarClickTest = (e: React.SyntheticEvent) => {
-  alert(`Avatar clicked!`);
-};
-
 const handleSearchSubmitTest = (query: string) => {
-  alert(`You searched for "${query}"!`);
+  action(`You searched for:`)(query);
 };
 
 const nav = (
@@ -79,7 +72,7 @@ storiesOf('Header', module)
           }
           menuToggle={
             <Avatar
-              onClick={handleMenuClickTest}
+              onClick={action(`Menu clicked`)}
               url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
             />
           }
@@ -98,7 +91,7 @@ storiesOf('Header', module)
             aria-label="Inbox"
           />
           <Avatar
-            onClick={handleAvatarClickTest}
+            onClick={action(`Avatar clicked`)}
             url="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
             altText="Profile"
           />
@@ -107,7 +100,7 @@ storiesOf('Header', module)
       <div className={containerStyle}>
         <GlobalHeader
           brand={<WorkdayLogoTitle variant={HeaderVariant.Global} />}
-          menuToggle={<Avatar onClick={handleMenuClickTest} />}
+          menuToggle={<Avatar onClick={action(`Menu clicked`)} />}
           onSearchSubmit={handleSearchSubmitTest}
           breakpoint={700}
         >
@@ -123,11 +116,11 @@ storiesOf('Header', module)
             title="Inbox"
             aria-label="Inbox"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
         </GlobalHeader>
       </div>
       <div className={containerStyle}>
-        <GlobalHeader onSearchSubmit={handleSearchSubmitTest} onMenuClick={handleMenuClickTest}>
+        <GlobalHeader onSearchSubmit={handleSearchSubmitTest} onMenuClick={action(`Menu clicked`)}>
           <IconButton
             icon={notificationsIcon}
             buttonType={IconButton.Types.Default}
@@ -140,7 +133,7 @@ storiesOf('Header', module)
             title="Inbox"
             aria-label="Inbox"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
         </GlobalHeader>
       </div>
     </div>
@@ -168,7 +161,7 @@ storiesOf('Header', module)
             title="Inbox"
             aria-label="Inbox"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
         </Header>
       </div>
       <br />
@@ -177,7 +170,7 @@ storiesOf('Header', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          onMenuClick={handleMenuClickTest}
+          onMenuClick={action(`Menu clicked`)}
           onSearchSubmit={handleSearchSubmitTest}
         >
           {nav}
@@ -187,7 +180,7 @@ storiesOf('Header', module)
             title="Notifications"
             aria-label="Notifications"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
           <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
       </div>
@@ -298,7 +291,7 @@ storiesOf('Header', module)
           title="Kitchen Sink"
           themeColor={Header.Theme.Blue}
           brandUrl="#"
-          onMenuClick={handleMenuClickTest}
+          onMenuClick={action(`Menu clicked`)}
         >
           {nav}
           <IconButton
@@ -307,7 +300,7 @@ storiesOf('Header', module)
             title="Notifications"
             aria-label="Notifications"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+        <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
           <Button buttonType={Button.Types.Primary}>Download</Button>
         </Header>
       </div>
@@ -321,7 +314,7 @@ storiesOf('Header', module)
             title="Notifications"
             aria-label="Notifications"
           />
-          <Avatar onClick={handleAvatarClickTest} />
+          <Avatar onClick={action(`Avatar clicked`)} />
         </Header>
       </div>
       <br />
@@ -339,7 +332,7 @@ storiesOf('Header', module)
             title="Notifications"
             aria-label="Notifications"
           />
-          <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+          <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
         </Header>
       </div>
       <br />
@@ -375,7 +368,7 @@ storiesOf('Header', module)
         title="Normal Breakpoints"
         themeColor={Header.Theme.Blue}
         brandUrl="#"
-        onMenuClick={handleMenuClickTest}
+        onMenuClick={action(`Menu clicked`)}
       >
         {nav}
         <IconButton
@@ -384,7 +377,7 @@ storiesOf('Header', module)
           title="Notifications"
           aria-label="Notifications"
         />
-        <Avatar onClick={handleAvatarClickTest} altText="Profile" />
+        <Avatar onClick={action(`Avatar clicked`)} altText="Profile" />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
       <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
@@ -393,7 +386,7 @@ storiesOf('Header', module)
       <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>
         {nav}
         <IconButton buttonType={IconButton.Types.Default} icon={notificationsIcon} />
-        <Avatar onClick={handleAvatarClickTest} />
+        <Avatar onClick={action(`Avatar clicked`)} />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
       <Header
