@@ -16,6 +16,7 @@ export interface SidePanelProps extends React.HTMLAttributes<HTMLDivElement> {
   padding?: CanvasSpacingValue;
   breakpoint?: number;
   openWidth?: number;
+  sidePanelBackgroundColor?: SidePanelBackgroundColor;
 }
 
 export interface SidePanelState {
@@ -27,12 +28,19 @@ export enum SidePanelOpenDirection {
   Right,
 }
 
+export enum SidePanelBackgroundColor {
+  White,
+  Transparent,
+  Grey,
+}
+
 const Header = styled('h2')({
   ...type.h2,
   marginTop: spacing.zero,
 });
 
 const ChildrenContainer = styled('div')({
+  transition: 'none',
   zIndex: 1, // show above SidePanelFooter when screen is small vertically
 });
 
@@ -49,8 +57,22 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
   ({open}) => ({
     alignItems: open ? '' : 'center',
     boxShadow: !open ? '0 8px 16px -8px rgba(0, 0, 0, 0.16)' : '',
-    backgroundColor: open ? colors.soap100 : colors.frenchVanilla100,
   }),
+  ({open, sidePanelBackgroundColor}) => {
+    let openBackgroundColor;
+    if (sidePanelBackgroundColor === SidePanelBackgroundColor.White) {
+      openBackgroundColor = colors.frenchVanilla100;
+    } else if (sidePanelBackgroundColor === SidePanelBackgroundColor.Transparent) {
+      openBackgroundColor = 'transparent';
+    } else if (sidePanelBackgroundColor === SidePanelBackgroundColor.Grey) {
+      openBackgroundColor = colors.soap100;
+    } else {
+      return;
+    }
+    return {
+      backgroundColor: open ? openBackgroundColor : colors.frenchVanilla100,
+    };
+  },
   ({open, openWidth}) => ({
     width: open ? openWidth : spacing.xxl,
   }),
@@ -93,6 +115,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
     breakpoint: 768,
     openWidth: 300,
     openDirection: SidePanelOpenDirection.Left,
+    sidePanelBackgroundColor: SidePanelBackgroundColor.White,
   };
 
   state = {
@@ -115,6 +138,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
       padding,
       onBreakpointChange,
       openWidth,
+      sidePanelBackgroundColor,
       ...otherProps
     } = this.props;
 
@@ -126,6 +150,7 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         onBreakpointChange={this.handleResize}
         openDirection={openDirection}
         openWidth={openWidth}
+        sidePanelBackgroundColor={sidePanelBackgroundColor}
         open={open}
         {...otherProps}
       >

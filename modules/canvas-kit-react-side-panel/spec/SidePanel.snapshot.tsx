@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SidePanel, {SidePanelOpenDirection} from '../lib/SidePanel';
+import SidePanel, {SidePanelOpenDirection, SidePanelBackgroundColor} from '../lib/SidePanel';
 import * as renderer from 'react-test-renderer';
 
 describe('SidePanel Snapshots', () => {
@@ -24,6 +24,18 @@ describe('SidePanel Snapshots', () => {
         onBreakpointChange={jest.fn()}
         header={'Side Panel Header'}
         open={true}
+      />
+    );
+    expect(component).toMatchSnapshot();
+  });
+  test('renders a side panel with a grey background when open', () => {
+    const component = renderer.create(
+      <SidePanel
+        openDirection={SidePanelOpenDirection.Right}
+        onBreakpointChange={jest.fn()}
+        header={'Side Panel Header'}
+        open={true}
+        sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
       />
     );
     expect(component).toMatchSnapshot();

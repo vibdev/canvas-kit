@@ -23,7 +23,7 @@ import {Avatar} from '@workday/canvas-kit-react-avatar';
 
 // import SidePanel from '..'; // tslint:disable-line:import-name
 // import {SidePanelOpenDirection} from '../lib/SidePanel';
-import SidePanel, {SidePanelOpenDirection} from '../lib/SidePanel';
+import SidePanel, {SidePanelOpenDirection, SidePanelBackgroundColor} from '../lib/SidePanel';
 
 interface SidePanelState {
   open: boolean;
@@ -78,6 +78,15 @@ const breakpointDefaultValue = 768;
 const openWidthLabel = 'Open Width';
 const openWidthDefaultValue = 300;
 
+// SidePanel Open Background Color
+const openBackgroundColorLabel = 'Open Background Color';
+const openBackgroundColorOptions = {
+  white: SidePanelBackgroundColor.White,
+  grey: SidePanelBackgroundColor.Grey,
+  transparent: SidePanelBackgroundColor.Transparent,
+};
+const openBackgroundColorDefault = SidePanelBackgroundColor.Grey;
+
 class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   public state = {
     open: true,
@@ -88,6 +97,11 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
     const listItemStyles = open ? listItemOpen : listItemClosed;
     return (
       <SidePanel
+        sidePanelBackgroundColor={select(
+          openBackgroundColorLabel,
+          openBackgroundColorOptions,
+          openBackgroundColorDefault
+        )}
         openWidth={number(openWidthLabel, openWidthDefaultValue)}
         openDirection={select(label, options, defaultValue)}
         open={open}
@@ -139,6 +153,7 @@ class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   };
 
   private handleBreakpoint = (open: boolean) => {
+    console.warn('called');
     this.setState({
       open: open,
     });
@@ -154,6 +169,7 @@ storiesOf('Side Panel', module)
       <div style={{height: '67vh', position: 'relative'}}>
         <div>
           <SidePanel
+            sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
             onToggleClick={() => console.warn('clicked')}
             header={'Side Panel Header'}
             open={true}

@@ -28,7 +28,10 @@ import {
   IconButtonTypes,
   ButtonSizes,
 } from '@workday/canvas-kit-react-button';
-import SidePanel, {SidePanelOpenDirection} from '@workday/canvas-kit-react-side-panel';
+import SidePanel, {
+  SidePanelOpenDirection,
+  SidePanelBackgroundColor,
+} from '@workday/canvas-kit-react-side-panel';
 
 interface SidePanelState {
   open: boolean;
@@ -42,6 +45,7 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
     const {open} = this.state;
     return (
       <SidePanel
+        sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
         openDirection={SidePanelOpenDirection.Left}
         open={open}
         onToggleClick={this.onClick}
@@ -119,6 +123,17 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
 #### `header: string | React.ReactNode`
 
 > Custom title or element to display as a header to the side panel.
+
+---
+
+#### `sidePanelBackgroundColor: SidePanelBackgroundColor`
+
+> Determines the background color of the side panel when it's `open`
+
+`SidePanelBackgroundColor.White` or `SidePanelBackgroundColor.Grey` or
+`SidePanelBackgroundColor.Transparent`
+
+Default: `SidePanelBackgroundColor.White`
 
 ---
 
