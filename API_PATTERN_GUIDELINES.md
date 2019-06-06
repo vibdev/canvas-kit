@@ -27,7 +27,7 @@ Note: This repo hasn't seen a full audit, so you may find examples that contradi
     + [Styled Components](#styled-components)
     + [Exports](#exports)
 - [Documentation](#documentation)
-    + [Readme](#readme)
+    + [Readmes](#readmes)
     + [Storybook Structure](#storybook-structure)
 
 
@@ -255,7 +255,7 @@ export * from './lib/AnotherComponent';
 
 ## Documentation
 
-#### Readme
+#### Readmes
 - Follow our README template
 - Outline static properties (e.g. `Button.Type`), required props, and optional props
 - Usage example should be as standalone as possible. As long as it's not too complex, this snippet should be a working implementation so consumers can copy/paste
