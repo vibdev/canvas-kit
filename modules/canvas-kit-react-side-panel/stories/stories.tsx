@@ -20,10 +20,7 @@ import {
   ButtonSizes,
 } from '@workday/canvas-kit-react-button';
 import {Avatar} from '@workday/canvas-kit-react-avatar';
-
-// import SidePanel from '..'; // tslint:disable-line:import-name
-// import {SidePanelOpenDirection} from '../lib/SidePanel';
-import SidePanel, {SidePanelOpenDirection, SidePanelBackgroundColor} from '../lib/SidePanel';
+import SidePanel, {SidePanelOpenDirection, SidePanelBackgroundColor} from '..';
 
 interface SidePanelState {
   open: boolean;
