@@ -1,8 +1,8 @@
-/// <reference path="../../../typings.d.ts" />
+/// <reference path="../../../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {InputProviderDecorator} from '../../../utils/storybook';
+import {InputProviderDecorator} from '../../../../utils/storybook';
 import {homeIcon, starIcon, rocketIcon, plusIcon} from '@workday/canvas-system-icons-web';
 import styled from 'react-emotion';
 import {css} from 'emotion';

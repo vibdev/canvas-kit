@@ -23,6 +23,7 @@ export * from '@workday/canvas-kit-react-text-input';
 export * from '@workday/canvas-kit-react-toast';
 export * from '@workday/canvas-kit-react-toggle';
 export * from '@workday/canvas-kit-react-tooltip';
+export * from '@workday/canvas-kit-react-side-panel';
 export * from '@workday/canvas-kit-react-skeleton';
 export * from '@workday/canvas-kit-react-layout';
 export * from '@workday/canvas-kit-react-status-indicator';
