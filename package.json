@@ -111,6 +111,6 @@
     }
   },
   "workspaces": [
-    "modules/*"
+    "modules/**"
   ]
 }

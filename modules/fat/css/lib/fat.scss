@@ -1,0 +1,48 @@
+.wdc-fat {
+  border-top: $wdc-fat-border;
+  background: $wdc-fat-bg;
+  padding: $wdc-fat-padding;
+  box-shadow: $wdc-fat-box-shadow;
+}
+
+.wdc-fat-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.wdc-fat-container {
+  display: inline-block;
+  padding: $wdc-fat-container-padding;
+
+  *:not(:first-child) {
+    margin-left: $wdc-fat-item-spacing;
+  }
+}
+
+@media (max-width: 575px) {
+  .wdc-fat {
+    padding: $wdc-fat-padding-mobile;
+  }
+
+  .wdc-fat-container {
+    display: flex;
+    padding: $wdc-fat-container-padding-mobile;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    * {
+      flex: 1;
+
+      &:not(:first-child) {
+        margin-right: $wdc-fat-item-spacing;
+        margin-left: 0;
+      }
+    }
+
+    .wdc-fat-container-item-natural {
+      flex: none;
+    }
+  }
+}

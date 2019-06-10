@@ -15,10 +15,11 @@ NC='\033[0m' # No Color
 # Get module name
 read -p "Module name (@workday/canvas-kit-react-<NAME>): " name
 
-path="./modules/canvas-kit-react-$name"
+path="./modules/$name"
+reactPath="$path/react"
 
 if [ -d "$path" ]; then
-  echo -e "${RED}Module with name 'canvas-kit-react-$name' already exists."
+  echo -e "${RED}Module with name '$name' already exists."
   exit 1
 fi
 
@@ -30,9 +31,10 @@ upperName="$(tr '[:lower:]' '[:upper:]' <<< ${name:0:1})${name:1}"
 # Create module directory
 echo -e "\nCreating ${CYAN}$path${NC}"
 mkdir $path
+mkdir $reactPath
 
 # Create package.json
-packageJson="$path/package.json"
+packageJson="$reactPath/package.json"
 echo -e "Creating ${CYAN}$packageJson${NC}"
 cat > $packageJson << EOF
 {
@@ -48,7 +50,7 @@ cat > $packageJson << EOF
   "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-$name"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/$name"
   },
   "files": [
     "dist/",
@@ -78,8 +80,8 @@ cat > $packageJson << EOF
 EOF
 
 # Create lib/MyComponent.tsx
-mkdir "$path/lib"
-componentTsx="$path/lib/MyComponent.tsx"
+mkdir "$reactPath/lib"
+componentTsx="$reactPath/lib/MyComponent.tsx"
 echo -e "Creating ${CYAN}$componentTsx${NC}"
 cat > $componentTsx << EOF
 import * as React from 'react'
@@ -97,7 +99,7 @@ export default class MyComponent extends React.Component {
 EOF
 
 # Create index.ts
-indexTs="$path/index.ts"
+indexTs="$reactPath/index.ts"
 echo -e "Creating ${CYAN}$indexTs${NC}"
 cat > $indexTs << EOF
 import MyComponent from './lib/MyComponent';
@@ -109,11 +111,11 @@ export * from './lib/MyComponent';
 EOF
 
 # Create stories.tsx
-mkdir "$path/stories"
-storiesJs="$path/stories/stories.tsx"
+mkdir "$reactPath/stories"
+storiesJs="$reactPath/stories/stories.tsx"
 echo -e "Creating ${CYAN}$storiesJs${NC}"
 cat > $storiesJs << EOF
-/// <reference path="../../../typings.d.ts" />
+/// <reference path="../../../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
@@ -133,24 +135,24 @@ storiesOf('Canvas Kit/$upperName', module)
 EOF
 
 # Create README.md
-readme="$path/README.md"
+readme="$reactPath/README.md"
 echo -e "Creating ${CYAN}$readme${NC}"
 cat > $readme << EOF
 # Canvas Kit $upperName
 EOF
 
 # Create tsconfig.json
-tsconfig="$path/tsconfig.json"
+tsconfig="$reactPath/tsconfig.json"
 echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "exclude": ["node_modules", "ts-tmp", "dist", "spec", "stories"]
 }
 EOF
 
 # Create tsconfig.cjs.json
-tsconfig="$path/tsconfig.cjs.json"
+tsconfig="$reactPath/tsconfig.cjs.json"
 echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
@@ -166,7 +168,7 @@ cat > $tsconfig << EOF
 EOF
 
 # Create tsconfig.es6.json
-tsconfig="$path/tsconfig.es6.json"
+tsconfig="$reactPath/tsconfig.es6.json"
 echo -e "Creating ${CYAN}$tsconfig${NC}"
 cat > $tsconfig << EOF
 {
@@ -180,7 +182,7 @@ cat > $tsconfig << EOF
 EOF
 
 # Create .npmignore
-npmignore="$path/.npmignore"
+npmignore="$reactPath/.npmignore"
 echo -e "Creating ${CYAN}$npmignore${NC}"
 cat > $npmignore << EOF
 tsconfig.json

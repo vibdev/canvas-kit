@@ -1,9 +1,9 @@
 import {configure, addDecorator, addParameters} from '@storybook/react';
 import {withKnobs} from '@storybook/addon-knobs/react';
 import {injectGlobal} from 'emotion';
-import fonts from '../modules/canvas-kit-react-fonts';
+import fonts from '../modules/fonts/react';
 import {create} from '@storybook/theming';
-import {commonColors, typeColors, fontFamily} from '../modules/canvas-kit-react-core';
+import {commonColors, typeColors, fontFamily} from '../modules/core/react';
 
 const req = require.context('../modules', true, /stories.*\.tsx?$/);
 

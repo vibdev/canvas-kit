@@ -88,14 +88,12 @@ const customRules = [
   },
 ];
 
-module.exports = ({config}) => {
-  const {rules} = config.module;
+module.exports = async ({config}) => {
+  // Remove any scss/sass rules that ship with storybook
+  config.module.rules = config.module.rules.filter(rule => !/scss|sass/.test(rule.test.toString()));
 
-  // Exclude node_modules from js/babel loader
-  rules[rules.length - 1].exclude = /node_modules/;
-
-  // Custom rules
-  rules.push(...customRules);
+  // Add our custom rules
+  config.module.rules.push(...customRules);
 
   // Add `.ts` and `.tsx` as a resolvable extension.
   config.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx'];

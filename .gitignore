@@ -12,8 +12,8 @@ lerna-debug.log*
 .cache
 
 # build
-modules/*/dist
-modules/*/ts-tmp
+modules/**/dist
+modules/**/ts-tmp
 build/*
 *.tsbuildinfo
 

@@ -1,0 +1,18 @@
+@import '~@workday/canvas-kit-css-core/index.scss';
+
+.demo-fat-container {
+  padding: 20px;
+  background: $wdc-color-soap-100;
+}
+
+.demo-fat-custom {
+  position: relative;
+  width: inherit;
+  margin: 20px;
+}
+
+.demo-fat-custom-mobile {
+  position: relative;
+  width: 320px;
+  margin: 10px;
+}

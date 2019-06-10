@@ -3083,10 +3083,20 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.12.tgz#2827004f8d1214e8ed28b7b3527adf1a7ce42a10"
   integrity sha1-KCcAT40SFOjtKLezUnrfGnzkKhA=
 
+"@workday/canvas-colors-web@^0.17.13":
+  version "0.17.13"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-colors-web/-/@workday/canvas-colors-web-0.17.13.tgz#fea14ff2429bc0ce104aaf174edbf5eee137e4e9"
+  integrity sha1-/qFP8kKbwM4QSq8XTtv17uE35Ok=
+
 "@workday/canvas-depth-web@^0.16.3":
   version "0.16.3"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.3.tgz#a8d89f7e46e60c1e91de6bba59145a146e7dcc64"
   integrity sha1-qNiffkbmDB6R3mu6WRRaFG59zGQ=
+
+"@workday/canvas-depth-web@^0.16.4":
+  version "0.16.4"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.4.tgz#3714a1a955055386a2b70cc05852162b1e056bf2"
+  integrity sha1-NxShqVUFU4aitwzAWFIWKx4Fa/I=
 
 "@workday/canvas-space-web@^0.15.5":
   version "0.15.5"
@@ -3097,6 +3107,13 @@
   version "1.0.1"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-1.0.1.tgz#2a035df4e3a8ef2fadd62a4fe6158166ff8d5818"
   integrity sha1-KgNd9OOo7y+t1ipP5hWBZv+NWBg=
+  dependencies:
+    "@workday/design-assets-types" "0.2.4"
+
+"@workday/canvas-system-icons-web@^1.0.2":
+  version "1.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-system-icons-web/-/@workday/canvas-system-icons-web-1.0.2.tgz#5a4d45bbb92d55b9fc8ae78b2b7305213411ded3"
+  integrity sha1-Wk1Fu7ktVbn8iueLK3MFITQR3tM=
   dependencies:
     "@workday/design-assets-types" "0.2.4"
 
@@ -16407,6 +16424,11 @@ supports-color@^6.0.0, supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-injector@^1.1.3:
+  version "1.1.3"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svg-injector/-/svg-injector-1.1.3.tgz#8fba18d7419e5f818e712c4f82d83ee357610e61"
+  integrity sha1-j7oY10GeX4GOcSxPgtg+41dhDmE=
+
 svg-url-loader@^2.3.2:
   version "2.3.2"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/svg-url-loader/-/svg-url-loader-2.3.2.tgz#dd86b26c19fe3b914f04ea10ef39594eade04464"
@@ -16729,6 +16751,11 @@ to-fast-properties@^2.0.0:
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
+to-no-case@^1.0.0:
+  version "1.0.2"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/to-no-case/-/to-no-case-1.0.2.tgz#c722907164ef6b178132c8e69930212d1b4aa16a"
+  integrity sha1-xyKQcWTvaxeBMsjmmTAhLRtKoWo=
+
 to-object-path@^0.3.0:
   version "0.3.0"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/to-object-path/-/to-object-path-0.3.0.tgz#297588b7b0e7e0ac08e04e672f85c1f4999e17af"
@@ -16753,6 +16780,20 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+to-slug-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/to-slug-case/-/to-slug-case-1.0.0.tgz#92acde53471055a33c830719e8eb78387206d813"
+  integrity sha1-kqzeU0cQVaM8gwcZ6Ot4OHIG2BM=
+  dependencies:
+    to-space-case "^1.0.0"
+
+to-space-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/to-space-case/-/to-space-case-1.0.0.tgz#b052daafb1b2b29dc770cea0163e5ec0ebc9fc17"
+  integrity sha1-sFLar7Gysp3HcM6gFj5ewOvJ/Bc=
+  dependencies:
+    to-no-case "^1.0.0"
 
 toggle-selection@^1.0.6:
   version "1.0.6"
