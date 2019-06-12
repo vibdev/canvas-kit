@@ -89,6 +89,11 @@ const customRules = [
 ];
 
 module.exports = async ({config}) => {
+  // Exclude all node_modules from babel-loader
+  config.module.rules
+    .find(rule => /mjs\|jsx/.test(rule.test.toString()))
+    .exclude.push(/node_modules/);
+
   // Remove any scss/sass rules that ship with storybook
   config.module.rules = config.module.rules.filter(rule => !/scss|sass/.test(rule.test.toString()));
 
