@@ -31,7 +31,7 @@ export enum SidePanelOpenDirection {
 export enum SidePanelBackgroundColor {
   White,
   Transparent,
-  Grey,
+  Gray,
 }
 
 const closedWidth = spacing.xxl;
@@ -62,7 +62,7 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
       case SidePanelBackgroundColor.Transparent:
         openBackgroundColor = 'transparent';
         break;
-      case SidePanelBackgroundColor.Grey:
+      case SidePanelBackgroundColor.Gray:
         openBackgroundColor = colors.soap100;
         break;
       case SidePanelBackgroundColor.White:

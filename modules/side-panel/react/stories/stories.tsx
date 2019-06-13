@@ -81,10 +81,10 @@ const openWidthDefaultValue = 300;
 const openBackgroundColorLabel = 'Open Background Color';
 const openBackgroundColorOptions = {
   white: SidePanelBackgroundColor.White,
-  grey: SidePanelBackgroundColor.Grey,
+  Gray: SidePanelBackgroundColor.Gray,
   transparent: SidePanelBackgroundColor.Transparent,
 };
-const openBackgroundColorDefault = SidePanelBackgroundColor.Grey;
+const openBackgroundColorDefault = SidePanelBackgroundColor.Gray;
 
 class SidePanelWrapper extends React.Component<{}, SidePanelState> {
   public state = {
@@ -167,7 +167,7 @@ storiesOf('Side Panel', module)
       <h1 className="section-label">Standard Side Panel</h1>
       <div style={{height: '67vh', position: 'relative'}}>
         <SidePanel
-          sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
+          sidePanelBackgroundColor={SidePanelBackgroundColor.Gray}
           onToggleClick={() => console.warn('clicked')}
           header={'Side Panel Header'}
           open={true}

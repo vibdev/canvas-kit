@@ -28,14 +28,14 @@ describe('SidePanel Snapshots', () => {
     );
     expect(component).toMatchSnapshot();
   });
-  test('renders a side panel with a grey background when open', () => {
+  test('renders a side panel with a Gray background when open', () => {
     const component = renderer.create(
       <SidePanel
         openDirection={SidePanelOpenDirection.Right}
         onBreakpointChange={jest.fn()}
         header={'Side Panel Header'}
         open={true}
-        sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
+        sidePanelBackgroundColor={SidePanelBackgroundColor.Gray}
       />
     );
     expect(component).toMatchSnapshot();

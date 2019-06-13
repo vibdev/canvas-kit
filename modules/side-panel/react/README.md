@@ -45,7 +45,7 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
     const {open} = this.state;
     return (
       <SidePanel
-        sidePanelBackgroundColor={SidePanelBackgroundColor.Grey}
+        sidePanelBackgroundColor={SidePanelBackgroundColor.Gray}
         openDirection={SidePanelOpenDirection.Left}
         open={open}
         onToggleClick={this.onClick}
@@ -130,7 +130,7 @@ class SidePanelExample extends React.Component<{}, SidePanelState> {
 
 > Determines the background color of the side panel when it's `open`
 
-`SidePanelBackgroundColor.White` or `SidePanelBackgroundColor.Grey` or
+`SidePanelBackgroundColor.White` or `SidePanelBackgroundColor.Gray` or
 `SidePanelBackgroundColor.Transparent`
 
 Default: `SidePanelBackgroundColor.White`

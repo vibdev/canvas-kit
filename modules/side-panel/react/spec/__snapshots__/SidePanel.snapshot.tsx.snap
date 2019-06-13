@@ -266,7 +266,7 @@ exports[`SidePanel Snapshots renders a side panel header 1`] = `
 </div>
 `;
 
-exports[`SidePanel Snapshots renders a side panel with a grey background when open 1`] = `
+exports[`SidePanel Snapshots renders a side panel with a Gray background when open 1`] = `
 .emotion-2 {
   -webkit-transition: none;
   transition: none;
