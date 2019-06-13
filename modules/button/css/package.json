@@ -2,8 +2,7 @@
   "name": "@workday/canvas-kit-css-button",
   "version": "1.4.0",
   "description": "The button css for canvas-kit-css",
-  "homepage": "https://design.workday.com",
-  "author": "Alex Nicholls",
+  "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
   "files": [
     "dist",

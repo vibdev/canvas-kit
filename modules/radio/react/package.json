@@ -2,7 +2,7 @@
   "name": "@workday/canvas-kit-react-radio",
   "version": "0.2.5",
   "description": "A Canvas-styled radio",
-  "homepage": "https://workdaydesign.com",
+  "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
