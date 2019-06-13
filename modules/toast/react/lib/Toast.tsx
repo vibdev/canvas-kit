@@ -44,6 +44,11 @@ const ActionButton = styled('button')({
   ...type.variant.link,
 });
 
+const Message = styled('div')({
+  wordBreak: 'break-word',
+  wordWrap: 'break-word',
+});
+
 export default class Toast extends React.Component<ToastProps> {
   static defaultProps = {
     icon: checkIcon,
@@ -71,10 +76,10 @@ export default class Toast extends React.Component<ToastProps> {
       >
         <ToastContentContainer onClose={onClose}>
           {icon && <ToastSystemIcon color={iconColor} colorHover={iconColor} icon={icon} />}
-          <div>
+          <Message>
             {this.props.children}
             {onActionClick && <ActionButton onClick={onActionClick}>{actionText}</ActionButton>}
-          </div>
+          </Message>
         </ToastContentContainer>
       </Popup>
     );
