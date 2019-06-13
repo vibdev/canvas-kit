@@ -52,11 +52,12 @@ describe('SidePanel', () => {
         Hello World
       </SidePanel>
     );
-    const sidePanel = component.find('button');
-    sidePanel.simulate('click');
+    const toggleButton = component.find('button');
+    toggleButton.simulate('click');
     expect(cb.mock.calls.length).toBe(1);
     component.unmount();
   });
+
   test('should call onBreakpointChange when below the breakpoint and side panel is open', () => {
     const mockFunction = jest.fn();
     const component = mount(
@@ -68,6 +69,7 @@ describe('SidePanel', () => {
     expect(mockFunction).toHaveBeenCalledTimes(1);
     component.unmount();
   });
+
   test('should call onBreakpointChange when above the breakpoint and side panel is closed', () => {
     const mockFunction = jest.fn();
     const component = mount(

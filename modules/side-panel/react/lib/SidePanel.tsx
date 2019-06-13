@@ -57,15 +57,20 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
   }),
   ({open, sidePanelBackgroundColor}) => {
     let openBackgroundColor;
-    if (sidePanelBackgroundColor === SidePanelBackgroundColor.White) {
-      openBackgroundColor = colors.frenchVanilla100;
-    } else if (sidePanelBackgroundColor === SidePanelBackgroundColor.Transparent) {
-      openBackgroundColor = 'transparent';
-    } else if (sidePanelBackgroundColor === SidePanelBackgroundColor.Grey) {
-      openBackgroundColor = colors.soap100;
-    } else {
-      return;
+
+    switch (sidePanelBackgroundColor) {
+      case SidePanelBackgroundColor.Transparent:
+        openBackgroundColor = 'transparent';
+        break;
+      case SidePanelBackgroundColor.Grey:
+        openBackgroundColor = colors.soap100;
+        break;
+      case SidePanelBackgroundColor.White:
+      default:
+        openBackgroundColor = colors.frenchVanilla100;
+        break;
     }
+
     return {
       backgroundColor: open ? openBackgroundColor : colors.frenchVanilla100,
     };
