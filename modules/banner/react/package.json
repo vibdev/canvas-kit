@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-banner",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Common Canvas banner component for React",
   "homepage": "https://workdaydesign.com",
   "author": "Stephane Rangaya <stephane@workday.com>",

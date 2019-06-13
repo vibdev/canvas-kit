@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.13](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.12...@workday/canvas-kit-react-toast@0.1.13) (2019-06-13)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-toast
+
+
+
+
+
 ## [0.1.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-toast/compare/@workday/canvas-kit-react-toast@0.1.11...@workday/canvas-kit-react-toast@0.1.12) (2019-06-13)
 
 

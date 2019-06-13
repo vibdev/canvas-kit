@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-menu",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "A container for navigation or action items",
   "homepage": "https://workdaydesign.com",
   "author": "Matthew Rust",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@types/uuid": "^3.4.4",
-    "@workday/canvas-kit-react-card": "^0.3.19",
+    "@workday/canvas-kit-react-card": "^0.3.20",
     "@workday/canvas-kit-react-common": "^0.7.2",
     "@workday/canvas-kit-react-core": "^1.10.3",
     "@workday/canvas-kit-react-icon": "^1.7.4",

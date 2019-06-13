@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react",
-  "version": "1.6.22",
+  "version": "1.6.23",
   "description": "The parent module that contains all Workday Canvas Kit React components",
   "homepage": "https://workdaydesign.com",
   "author": "Alex Nicholls",
@@ -37,9 +37,9 @@
   },
   "dependencies": {
     "@workday/canvas-kit-react-avatar": "^0.4.30",
-    "@workday/canvas-kit-react-banner": "^0.1.18",
+    "@workday/canvas-kit-react-banner": "^0.1.19",
     "@workday/canvas-kit-react-button": "^0.21.4",
-    "@workday/canvas-kit-react-card": "^0.3.19",
+    "@workday/canvas-kit-react-card": "^0.3.20",
     "@workday/canvas-kit-react-checkbox": "^0.2.4",
     "@workday/canvas-kit-react-color-picker": "^0.5.5",
     "@workday/canvas-kit-react-common": "^0.7.2",
@@ -53,14 +53,14 @@
     "@workday/canvas-kit-react-layout": "^0.1.15",
     "@workday/canvas-kit-react-loading-animation": "^0.4.14",
     "@workday/canvas-kit-react-page-header": "^0.2.30",
-    "@workday/canvas-kit-react-popup": "^0.2.12",
+    "@workday/canvas-kit-react-popup": "^0.2.13",
     "@workday/canvas-kit-react-radio": "^0.2.3",
     "@workday/canvas-kit-react-skeleton": "^0.0.22",
     "@workday/canvas-kit-react-status-indicator": "^0.1.10",
     "@workday/canvas-kit-react-table": "^1.1.18",
     "@workday/canvas-kit-react-text-area": "^0.1.16",
     "@workday/canvas-kit-react-text-input": "^0.1.17",
-    "@workday/canvas-kit-react-toast": "^0.1.12",
+    "@workday/canvas-kit-react-toast": "^0.1.13",
     "@workday/canvas-kit-react-toggle": "^0.1.29",
     "@workday/canvas-kit-react-tooltip": "^0.1.16"
   }
