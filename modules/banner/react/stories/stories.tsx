@@ -4,9 +4,8 @@ import {storiesOf} from '@storybook/react';
 import {withKnobs, select, text} from '@storybook/addon-knobs/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import Banner from '..';
+import Banner, {BannerVariant, BannerTheme} from '../index';
 import README from '../README.md';
-import {BannerVariant, BannerTheme} from '../lib/types';
 
 const handleBannerClick = (e: React.SyntheticEvent) => {
   alert(`onClick triggered`);
