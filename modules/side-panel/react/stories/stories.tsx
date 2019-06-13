@@ -57,7 +57,8 @@ const listItemClosed = css({
 });
 
 const AddButton = styled(IconButton)({
-  margin: '0 20px',
+  margin: '0 auto',
+  display: 'block',
 });
 
 // SidePanel Open Direction Knob

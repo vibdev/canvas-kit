@@ -34,14 +34,11 @@ export enum SidePanelBackgroundColor {
   Grey,
 }
 
+const closedWidth = spacing.xxl;
+
 const Header = styled('h2')({
   ...type.h2,
   marginTop: spacing.zero,
-});
-
-const ChildrenContainer = styled('div')({
-  transition: 'none',
-  zIndex: 1, // show above SidePanelFooter when screen is small vertically
 });
 
 const SidePanelContainer = styled('div')<SidePanelProps>(
@@ -51,7 +48,7 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
-    transition: 'width 150ms ease-out 0s',
+    transition: 'width 200ms ease',
     position: 'absolute',
   },
   ({open}) => ({
@@ -74,7 +71,7 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
     };
   },
   ({open, openWidth}) => ({
-    width: open ? openWidth : spacing.xxl,
+    width: open ? openWidth : closedWidth,
   }),
   ({open, padding}) => ({
     padding: open ? padding || spacing.m : `${spacing.s} 0`,
@@ -85,7 +82,18 @@ const SidePanelContainer = styled('div')<SidePanelProps>(
   })
 );
 
-const ToggleButtonContainer = styled(IconButton)<Pick<SidePanelProps, 'openDirection'>>(
+const ChildrenContainer = styled('div')<Pick<SidePanelProps, 'openWidth'>>(
+  {
+    transition: 'none',
+    overflow: 'hidden',
+    zIndex: 1, // show above SidePanelFooter when screen is small vertically
+  },
+  ({openWidth}) => ({
+    width: openWidth,
+  })
+);
+
+const ToggleButton = styled(IconButton)<Pick<SidePanelProps, 'openDirection'>>(
   {
     position: 'absolute',
     bottom: spacing.s,
@@ -154,13 +162,13 @@ export default class SidePanel extends React.Component<SidePanelProps, SidePanel
         open={open}
         {...otherProps}
       >
-        <ChildrenContainer>
+        <ChildrenContainer openWidth={openWidth}>
           {header && open ? <Header>{header}</Header> : null}
           {this.props.children}
         </ChildrenContainer>
         <SidePanelFooter openWidth={openWidth} open={open}>
           {onToggleClick && (
-            <ToggleButtonContainer
+            <ToggleButton
               openDirection={openDirection}
               aria-label={`${open ? 'hide navigation' : 'show navigation'}`}
               toggled={false}
