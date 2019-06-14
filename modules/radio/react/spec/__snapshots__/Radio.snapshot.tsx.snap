@@ -924,10 +924,22 @@ exports[`Radio Snapshots renders radio group with alert as expected 1`] = `
 .emotion-20 {
   display: inline-block;
   box-sizing: border-box;
+  border: 1px solid #c06c00;
+  -webkit-transition: 100ms box-shadow;
+  transition: 100ms box-shadow;
+  box-shadow: inset 0 0 0 2px #ffa126;
   border-radius: 4px;
-  box-shadow: 0 0 0 2px #ffa126;
   padding: 2px 8px;
   margin: -2px -8px;
+}
+
+.emotion-20:hover {
+  border-color: #c06c00;
+}
+
+.emotion-20:focus:not([disabled]) {
+  border-color: #c06c00;
+  box-shadow: inset 0 0 0 2px #ffa126, 0 0 0 2px #ffffff, 0 0 0 4px #0875e1;
 }
 
 <div
@@ -1244,10 +1256,17 @@ exports[`Radio Snapshots renders radio group with error as expected 1`] = `
 .emotion-20 {
   display: inline-block;
   box-sizing: border-box;
+  border: none;
+  -webkit-transition: 100ms box-shadow;
+  transition: 100ms box-shadow;
+  box-shadow: inset 0 0 0 2px #de2e21;
   border-radius: 4px;
-  box-shadow: 0 0 0 2px #de2e21;
   padding: 2px 8px;
   margin: -2px -8px;
+}
+
+.emotion-20:focus:not([disabled]) {
+  box-shadow: inset 0 0 0 2px #de2e21, 0 0 0 2px #ffffff, 0 0 0 4px #0875e1;
 }
 
 <div

@@ -125,14 +125,17 @@ const CheckboxInput = styled('input')<CheckboxProps>(
   },
   ({error}) => {
     let errorRingColor;
+    let errorRingBorderColor;
 
     if (error === ErrorType.Error) {
       errorRingColor = inputColors.error.border;
     } else if (error === ErrorType.Alert) {
       errorRingColor = inputColors.warning.border;
+      errorRingBorderColor = colors.cantaloupe600;
     } else {
       return;
     }
+
     const errorStyles = {
       '& ~ div:first-of-type': {
         border: `1px solid ${errorRingColor}`,
@@ -144,7 +147,8 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       '&:checked ~ div:first-of-type': {
         borderColor: colors.blueberry400,
         boxShadow: `0 0 0 2px ${colors.frenchVanilla100},
-              0 0 0 4px ${errorRingColor}`,
+              0 0 0 4px ${errorRingColor} ${errorRingBorderColor &&
+          `, 0 0 0 5px ${errorRingBorderColor}`}`,
       },
     };
     return {
