@@ -11,8 +11,6 @@ storiesOf('CSS/Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar</h1>
-
       <div className="demo-fat-container">
         <div className="wdc-fat demo-fat-custom">
           <div className="wdc-fat-container">

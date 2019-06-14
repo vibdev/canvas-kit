@@ -4,7 +4,7 @@ import styled, {css} from 'react-emotion';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '../../../../utils/storybook';
-import canvas, {space, spacing} from '..';
+import canvas, {space, spacing} from '../index';
 import README from '../README.md';
 
 export const inverseStyle = {
@@ -75,7 +75,6 @@ storiesOf('Core', module)
 
     return (
       <div className="story">
-        <h1 className="section-label">Space</h1>
         <div>
           <Box style={{border: '1px solid #eee'}} p={spacing.xl} pb={64} m={40} mx={10}>
             Margin and Padding
@@ -97,7 +96,6 @@ storiesOf('Core', module)
 
     return (
       <div className="story">
-        <h1 className="section-label">Depth</h1>
         <div style={{display: 'flex'}}>
           <Card style={canvas.depth.inset}>Depth -1</Card>
           <Card style={canvas.depth['1']}>Depth 1</Card>
@@ -111,7 +109,6 @@ storiesOf('Core', module)
   .add('Type', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Type</h1>
         <section>
           <h1 style={canvas.type.dataViz1}>Data Viz 1 Header</h1>
           <h1 style={canvas.type.dataViz2}>Data Viz 2 Header</h1>
@@ -123,7 +120,6 @@ storiesOf('Core', module)
   .add('Type (Beta)', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Type (Beta)</h1>
         <section>
           <h1 style={canvas.beta_type.brand1}>Brand 1 Header</h1>
           <h1 style={canvas.beta_type.brand2}>Brand 2 Header</h1>

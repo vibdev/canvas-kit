@@ -10,7 +10,7 @@ import {
   activityStreamIcon,
 } from '@workday/canvas-system-icons-web';
 
-import {beta_Button as Button, DropdownButton, TextButton} from '..';
+import {beta_Button as Button, DropdownButton, TextButton} from '../index';
 import README from '../README.md';
 import {css} from 'emotion';
 import {CSSObject} from 'create-emotion';
@@ -21,13 +21,14 @@ const blueBackground: CSSObject = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  flexWrap: 'wrap',
   backgroundColor: '#0875e1',
   margin: '0 10px',
-  padding: '24px',
+  padding: '12px',
   maxWidth: 'max-content',
   borderRadius: '3px',
   button: {
-    margin: '0 12px',
+    margin: '12px',
   },
 };
 
@@ -43,7 +44,6 @@ storiesOf('Button/Beta', module)
   .addDecorator(withReadme(README))
   .add('Primary', () => (
     <div className="story">
-      <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Primary}>
         Primary
@@ -113,7 +113,6 @@ storiesOf('Button/Beta', module)
   ))
   .add('Secondary', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Secondary}>
         Secondary
@@ -181,7 +180,6 @@ storiesOf('Button/Beta', module)
   ))
   .add('Delete', () => (
     <div className="story">
-      <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.Delete}>
         Delete
@@ -207,7 +205,6 @@ storiesOf('Button/Beta', module)
   ))
   .add('Highlight', () => (
     <div className="story">
-      <h1 className="section-label">Highlight Button</h1>
       <h3>Large Highlight</h3>
       <Button buttonType={Button.Types.Highlight} icon={activityStreamIcon}>
         Highlight
@@ -269,7 +266,6 @@ storiesOf('Button/Beta/Text', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Text Button</h1>
       <h3>Large</h3>
       <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Default}>
         Text
@@ -315,7 +311,6 @@ storiesOf('Button/Beta/Text', module)
   ))
   .add('Inverse', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Text Button</h1>
       <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <TextButton buttonSize={TextButton.Sizes.Large} buttonType={TextButton.Types.Inverse}>
@@ -370,7 +365,6 @@ storiesOf('Button/Beta/Outline', module)
   .addDecorator(withReadme(README))
   .add('Primary', () => (
     <div className="story">
-      <h1 className="section-label">Primary Outline Buttons</h1>
       <h3>Large Primary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlinePrimary}>
         Outline Primary
@@ -446,7 +440,6 @@ storiesOf('Button/Beta/Outline', module)
   ))
   .add('Secondary', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Outline Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineSecondary}>
         Outline Secondary
@@ -526,7 +519,6 @@ storiesOf('Button/Beta/Outline', module)
   ))
   .add('Inverse', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Outline Button</h1>
       <h3>Large Inverse</h3>
       <div className={css(blueBackground)}>
         <Button buttonSize={Button.Sizes.Large} buttonType={Button.Types.OutlineInverse}>
@@ -617,7 +609,6 @@ storiesOf('Button/Beta/Dropdown', module)
   .addDecorator(withReadme(README))
   .add('Primary', () => (
     <div className="story">
-      <h1 className="section-label">Primary Dropdown Button</h1>
       <h3>Large Primary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}
@@ -650,7 +641,6 @@ storiesOf('Button/Beta/Dropdown', module)
   ))
   .add('Secondary', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Dropdown Button</h1>
       <h3>Large Secondary</h3>
       <DropdownButton
         buttonSize={DropdownButton.Sizes.Large}

@@ -4,10 +4,10 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {action} from '@storybook/addon-actions';
 import styled, {css} from 'react-emotion';
-import {Button} from '@workday/canvas-kit-react-button';
-import {type} from '@workday/canvas-kit-react-core';
 
-import CookieBanner from '..';
+import {Button} from '../../../button/react/index';
+import {type} from '../../../core/react/index';
+import CookieBanner from '../index';
 import README from '../README.md';
 
 interface Props {
@@ -63,7 +63,6 @@ storiesOf('Cookie Banner', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Cookie Banner</h1>
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
@@ -73,7 +72,6 @@ storiesOf('Cookie Banner', module)
   ))
   .add('With Custom Notice', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner With Custom Notice</h1>
       <BannerContainer
         bannerProps={{
           onClickSettings: action('click-settings'),
@@ -96,7 +94,6 @@ storiesOf('Cookie Banner', module)
   ))
   .add('With No Settings', () => (
     <div className="story">
-      <h1 className="section-label">Cookie Banner With No Settings</h1>
       <BannerContainer />
     </div>
   ));

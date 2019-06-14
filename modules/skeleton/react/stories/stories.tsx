@@ -1,10 +1,12 @@
 /// <reference path="../../../../typings.d.ts" />
 import * as React from 'react';
+import styled from 'react-emotion';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import styled from 'react-emotion';
-import Skeleton, {SkeletonShape, SkeletonText, SkeletonHeader} from '..';
 import {number} from '@storybook/addon-knobs';
+
+import Skeleton, {SkeletonShape, SkeletonText, SkeletonHeader} from '../index';
+
 import README from '../README.md';
 
 const Container = styled('span')({
@@ -22,7 +24,6 @@ storiesOf('Skeleton', module)
   .add('Complete', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Complete Skeleton</h1>
         <Skeleton>
           <FlexContainer>
             <SkeletonShape width={50} height={50} borderRadius={99} />
@@ -40,7 +41,6 @@ storiesOf('Skeleton', module)
   .add('Header', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Skeleton Header</h1>
         <Skeleton>
           <SkeletonHeader />
         </Skeleton>
@@ -50,7 +50,6 @@ storiesOf('Skeleton', module)
   .add('Shape', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Skeleton Shape</h1>
         <Skeleton>
           <SkeletonShape
             width={number('width', 100)}
@@ -64,7 +63,6 @@ storiesOf('Skeleton', module)
   .add('Text', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Skeleton Text</h1>
         <Skeleton>
           <SkeletonText lineCount={number('lineCount', 2)} />
         </Skeleton>

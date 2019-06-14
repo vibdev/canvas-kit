@@ -4,8 +4,8 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import Popper from '@material-ui/core/Popper';
 
-import {beta_Button as Button} from '@workday/canvas-kit-react-button';
-import {Popup} from '..';
+import {Button} from '@workday/canvas-kit-react-button';
+import {Popup} from '../index';
 import README from '../README.md';
 
 interface PopupWrapperState {
@@ -77,7 +77,6 @@ storiesOf('Popup', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Popup</h1>
       <PopupWrapper />
     </div>
   ));

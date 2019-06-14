@@ -4,14 +4,13 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {uploadCloudIcon} from '@workday/canvas-system-icons-web';
 
-import StatusIndicator from '..';
+import StatusIndicator from '../index';
 import README from '../README.md';
 
 storiesOf('Status Indicator', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Status Indicator</h1>
       <StatusIndicator type={StatusIndicator.Type.Gray} label={'unpublished unpublished'} />
       <StatusIndicator
         type={StatusIndicator.Type.Gray}
@@ -47,7 +46,6 @@ storiesOf('Status Indicator', module)
   ))
   .add('With Icon', () => (
     <div className="story">
-      <h1 className="section-label">Status Indicator With Icon</h1>
       <StatusIndicator
         type={StatusIndicator.Type.Gray}
         label={'unpublished unpublished'}

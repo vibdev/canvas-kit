@@ -1,10 +1,11 @@
 /// <reference path="../../../../typings.d.ts" />
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import {colors} from '@workday/canvas-kit-react-core';
 import {exclamationCircleIcon} from '@workday/canvas-system-icons-web';
 import withReadme from 'storybook-readme/with-readme';
-import Toast from '..';
+
+import {colors} from '../../../core/react/index';
+import Toast from '../index';
 import README from '../README.md';
 
 const toastData = {
@@ -72,13 +73,11 @@ storiesOf('Toast', module)
   .addDecorator(withReadme(README))
   .add('Successful', () => (
     <div className="story">
-      <h1 className="section-label">Successful Toast</h1>
       <ToastWrapper state={'Success'} />
     </div>
   ))
   .add('Error', () => (
     <div className="story">
-      <h1 className="section-label">Error Toast</h1>
       <ToastWrapper state={'Error'} />
     </div>
   ));

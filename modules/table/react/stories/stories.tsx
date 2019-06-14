@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {Table, TableRow} from '..';
+import {Table, TableRow} from '../index';
 import README from '../README.md';
 
 enum TableFilters {
@@ -82,34 +82,11 @@ const createTable = (filter?: TableFilters) => {
 storiesOf('Table', module)
   .addDecorator(withReadme(README))
   .add('Default', () => {
-    return (
-      <div className="story">
-        <h1 className="section-label">Default Table</h1>
-        {createTable()}
-      </div>
-    );
+    return <div className="story">{createTable()}</div>;
   })
-  .add('With Alerts', () => (
-    <div className="story">
-      <h1 className="section-label">Table With Alerts</h1>
-      {createTable(TableFilters.alerts)}
-    </div>
-  ))
-  .add('With Errors', () => (
-    <div className="story">
-      <h1 className="section-label">Table With Errors</h1>
-      {createTable(TableFilters.errors)}
-    </div>
-  ))
+  .add('With Alerts', () => <div className="story">{createTable(TableFilters.alerts)}</div>)
+  .add('With Errors', () => <div className="story">{createTable(TableFilters.errors)}</div>)
   .add('With Selected Rows', () => (
-    <div className="story">
-      <h1 className="section-label">Table With Selected Rows</h1>
-      {createTable(TableFilters.selected)}
-    </div>
+    <div className="story">{createTable(TableFilters.selected)}</div>
   ))
-  .add('With All Elements', () => (
-    <div className="story">
-      <h1 className="section-label">Table With All Elements</h1>
-      {createTable(TableFilters.all)}
-    </div>
-  ));
+  .add('With All Elements', () => <div className="story">{createTable(TableFilters.all)}</div>);

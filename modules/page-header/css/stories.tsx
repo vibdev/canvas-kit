@@ -10,8 +10,6 @@ storiesOf('CSS/Page Header', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Page-header</h1>
-
       <header className="wdc-page-header">
         <div className="wdc-page-header-container">
           <h2 className="wdc-page-header-title">Page Title</h2>

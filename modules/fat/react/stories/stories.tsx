@@ -2,16 +2,15 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {Button, ButtonTypes} from '@workday/canvas-kit-react-button';
 
-import {FloatingActionToolbar} from '..';
+import {Button, ButtonTypes} from '../../../button/react/index';
+import {FloatingActionToolbar} from '../index';
 import README from '../README.md';
 
 storiesOf('Floating Action Toolbar', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Floating Action Toolbar</h1>
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
@@ -20,7 +19,6 @@ storiesOf('Floating Action Toolbar', module)
   ))
   .add('With Three Buttons', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar With Three Buttons</h1>
       <FloatingActionToolbar>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
@@ -30,7 +28,6 @@ storiesOf('Floating Action Toolbar', module)
   ))
   .add('With Two Buttons Fixed', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar With Two Buttons Fixed</h1>
       <FloatingActionToolbar fixed={true}>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>
@@ -39,7 +36,6 @@ storiesOf('Floating Action Toolbar', module)
   ))
   .add('With Three Buttons Fixed', () => (
     <div className="story">
-      <h1 className="section-label">Floating Action Toolbar With Three Buttons Fixed</h1>
       <FloatingActionToolbar fixed={true}>
         <Button buttonType={ButtonTypes.Primary}>Button</Button>
         <Button>Button</Button>

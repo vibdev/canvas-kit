@@ -3,7 +3,7 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import Toggle from '..';
+import Toggle from '../index';
 import README from '../README.md';
 
 interface ToggleSwitchWrapperState {
@@ -36,13 +36,11 @@ storiesOf('Toggle', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Toggle</h1>
       <ToggleSwitchWrapper />
     </div>
   ))
   .add('Disabled', () => (
     <div className="story">
-      <h1 className="section-label">Toggle Disabled</h1>
       <Toggle disabled={true} checked={false} />
     </div>
   ));

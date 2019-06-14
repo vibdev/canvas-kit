@@ -276,7 +276,6 @@ storiesOf('Menu', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Menu</h1>
       <Menu grow={true} onSelect={action(`onSelect menu`)}>
         {createMenuItems().map(buildItem)}
       </Menu>
@@ -284,14 +283,12 @@ storiesOf('Menu', module)
   ))
   .add('With Icons', () => (
     <div className="story">
-      <h1 className="section-label">Menu With Icons</h1>
       <Menu width={250}>{createMenuItems(true).map(buildItem)}</Menu>
     </div>
   ))
   .add('With Control Button', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Menu With Control Button</h1>
         <ControlledMenu />
       </div>
     );
@@ -299,7 +296,6 @@ storiesOf('Menu', module)
   .add('With Context Menu', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Menu With Context Menu</h1>
         <ContextMenu />
       </div>
     );
@@ -307,7 +303,6 @@ storiesOf('Menu', module)
   .add('With Custom Menu Item', () => {
     return (
       <div className="story">
-        <h1 className="section-label">Menu With Custom Menu Item</h1>
         <Menu id="customMenu">
           <CustomMenuItem id="customMenu-0" onClick={action(`custom callback 1`)}>
             First

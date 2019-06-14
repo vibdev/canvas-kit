@@ -99,7 +99,6 @@ storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Icon Button</h1>
       <h3>Medium Default</h3>
       <IconButton
         buttonType={IconButton.Types.Default}
@@ -130,7 +129,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Square', () => (
     <div className="story">
-      <h1 className="section-label">Square Icon Button</h1>
       <h3>Medium Square</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -161,7 +159,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Square Filled', () => (
     <div className="story">
-      <h1 className="section-label">Square Filled Icon Button</h1>
       <h3>Medium Square</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -192,7 +189,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Plain', () => (
     <div className="story">
-      <h1 className="section-label">Plain Icon Button</h1>
       <h3>Medium Plain</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -223,7 +219,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Filled', () => (
     <div className="story">
-      <h1 className="section-label">Filled Icon Button</h1>
       <h3>Medium Filled</h3>
       <IconButton
         icon={activityStreamIcon}
@@ -254,7 +249,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Inverse', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Icon Button</h1>
       <h3>Medium Inverse</h3>
       <div className={css(blueBackground)}>
         <IconButton
@@ -291,7 +285,6 @@ storiesOf('Button/Icon Button', module)
   ))
   .add('Inverse Filled', () => (
     <div className="story">
-      <h1 className="section-label">Inverse Filled Icon Button</h1>
       <h3>Medium Inverse Filled</h3>
       <div className={css(blueBackground)}>
         <IconButton
@@ -331,7 +324,6 @@ storiesOf('Button/Icon Button Toggle Group', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Icon Button Toggle Group</h1>
       <h3>With Three Buttons</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>

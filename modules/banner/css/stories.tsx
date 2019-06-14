@@ -9,8 +9,6 @@ storiesOf('CSS/Errors and Alerts', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Errors and Alerts</h1>
-
       <div>
         {/* Chinese - Simplified (Low Count) */}
         <section>

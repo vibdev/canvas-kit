@@ -8,7 +8,6 @@ storiesOf('CSS/Loading Animations', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Loading Animations</h1>
       <div className="wdc-loading-spinner">
         <span />
       </div>

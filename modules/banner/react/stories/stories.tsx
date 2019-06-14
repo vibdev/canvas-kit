@@ -16,7 +16,6 @@ storiesOf('Banner/Alert', module)
   .addDecorator(withKnobs)
   .add('Full', () => (
     <div className="story">
-      <h1 className="section-label">Banner Alert Full</h1>
       <Banner
         onClick={handleBannerClick}
         label={text('label', '3 Alerts')}
@@ -35,7 +34,6 @@ storiesOf('Banner/Alert', module)
   ))
   .add('Sticky', () => (
     <div className="story">
-      <h1 className="section-label">Banner Alert Sticky</h1>
       <Banner
         onClick={handleBannerClick}
         label={text('label', '3 Alerts')}
@@ -58,7 +56,6 @@ storiesOf('Banner/Error', module)
   .addDecorator(withKnobs)
   .add('Full', () => (
     <div className="story">
-      <h1 className="section-label">Banner Error Full</h1>
       <Banner
         onClick={handleBannerClick}
         label={text('label', '3 Errors')}
@@ -77,7 +74,6 @@ storiesOf('Banner/Error', module)
   ))
   .add('Sticky', () => (
     <div className="story">
-      <h1 className="section-label">Banner Error Sticky</h1>
       <Banner
         onClick={handleBannerClick}
         label={text('label', '3 Errors')}

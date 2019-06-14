@@ -10,8 +10,6 @@ storiesOf('CSS/Table', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Tables</h1>
-
       <div>
         <div className="wdc-table-meta">
           <div className="wdc-table-info">
@@ -136,8 +134,6 @@ storiesOf('CSS/Table', module)
   ))
   .add('Errors', () => (
     <div className="story">
-      <h1 className="section-label">Tables - Errors</h1>
-
       <div>
         <table className="wdc-table">
           <thead>

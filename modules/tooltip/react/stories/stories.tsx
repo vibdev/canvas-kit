@@ -3,10 +3,10 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import Popper from '@material-ui/core/Popper';
-import {IconButton} from '@workday/canvas-kit-react-button';
 import {xIcon} from '@workday/canvas-system-icons-web';
 
-import Tooltip from '..';
+import {IconButton} from '../../../button/react/index';
+import Tooltip from '../index';
 import README from '../README.md';
 
 interface TooltipWrapperState {
@@ -65,7 +65,6 @@ storiesOf('Tooltip', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Default Tooltip</h1>
       <TooltipWrapper />
     </div>
   ));

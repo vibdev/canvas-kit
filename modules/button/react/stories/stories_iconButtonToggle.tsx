@@ -11,7 +11,12 @@ import {
   percentageIcon,
 } from '@workday/canvas-system-icons-web';
 
-import {IconButton, IconButtonToggleGroup, IconButtonToggleGroupProps, IconButtonTypes} from '..';
+import {
+  IconButton,
+  IconButtonToggleGroup,
+  IconButtonToggleGroupProps,
+  IconButtonTypes,
+} from '../index';
 
 import README from '../README.md';
 import {css} from 'emotion';
@@ -91,7 +96,6 @@ storiesOf('Button/Icon Button', module)
   .addDecorator(withReadme(README))
   .add('Toggleable', () => (
     <div className="story">
-      <h1 className="section-label">Toggleable Icon Button</h1>
       <h3>Square Icon Buttons</h3>
       <ToggleIconButtonWrapper buttonType={IconButton.Types.Square} />
 
@@ -111,8 +115,7 @@ storiesOf('Button/Icon Button', module)
         <ToggleIconButtonWrapper buttonType={IconButton.Types.InverseFilled} />
       </div>
 
-      <h1 className="section-label">Icon Button Toggle Group</h1>
-      <h3>Two buttons</h3>
+      <h3>Two buttons Grouped</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>
           <IconButton
@@ -125,7 +128,7 @@ storiesOf('Button/Icon Button', module)
         </IconButtonToggleGroup>
       </IconButtonToggleGroupWrapper>
 
-      <h3>Four buttons</h3>
+      <h3>Four buttons Grouped</h3>
       <IconButtonToggleGroupWrapper>
         <IconButtonToggleGroup>
           <IconButton icon={listViewIcon} value="list-view" />

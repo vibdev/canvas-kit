@@ -3,9 +3,9 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator, ControlledComponentWrapper} from '../../../../utils/storybook';
-import {Radio, RadioGroup} from '@workday/canvas-kit-react-radio';
 
-import FormField from '..';
+import {Radio, RadioGroup} from '../../../radio/react/index';
+import FormField from '../index';
 import README from '../README.md';
 
 const hintText = 'Helpful text goes here.';
@@ -16,7 +16,6 @@ storiesOf('Form Field/Radio/Top Label/Radio Group', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" useFieldset={true}>
           <ControlledComponentWrapper>
@@ -33,7 +32,6 @@ storiesOf('Form Field/Radio/Top Label/Radio Group', module)
   ))
   .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -54,9 +52,8 @@ storiesOf('Form Field/Radio/Top Label/Radio Group', module)
       </div>
     </div>
   ))
-  .add('Error - Grow', () => (
+  .add('Error with Grow', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -84,7 +81,6 @@ storiesOf('Form Field/Radio/Top Label/Radio', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label">
           <ControlledComponentWrapper
@@ -102,7 +98,6 @@ storiesOf('Form Field/Radio/Left Label/Radio Group', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" useFieldset={true} labelPosition={FormField.LabelPosition.Left}>
           <ControlledComponentWrapper>
@@ -119,7 +114,6 @@ storiesOf('Form Field/Radio/Left Label/Radio Group', module)
   ))
   .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -141,9 +135,8 @@ storiesOf('Form Field/Radio/Left Label/Radio Group', module)
       </div>
     </div>
   ))
-  .add('Error - Grow', () => (
+  .add('Error with Grow', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -172,7 +165,6 @@ storiesOf('Form Field/Radio/Left Label/Radio', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Radio</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" labelPosition={FormField.LabelPosition.Left}>
           <ControlledComponentWrapper

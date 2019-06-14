@@ -3,9 +3,9 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {beta_Button as Button} from '@workday/canvas-kit-react-button';
-import {Popup} from '@workday/canvas-kit-react-popup';
-import {Popper} from '..';
+import {beta_Button as Button} from '../../../button/react/index';
+import {Popup} from '../../../popup/react/index';
+import {Popper} from '../index';
 import README from '../README.md';
 
 interface PopperPopupState {
@@ -53,7 +53,6 @@ storiesOf('Common', module)
   .addDecorator(withReadme(README))
   .add('Popper', () => (
     <div className="story">
-      <h1 className="section-label">Popper</h1>
       <PopperPopup />
     </div>
   ));

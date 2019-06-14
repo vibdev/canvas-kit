@@ -9,8 +9,6 @@ storiesOf('CSS/Popup', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Popups</h1>
-
       <section className="popup-demo-section">
         <div className="wdc-type popup-demo">
           <div className="wdc-popup">

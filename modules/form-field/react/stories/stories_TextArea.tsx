@@ -2,24 +2,19 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {
-  InputProviderDecorator,
-  SectionDecorator,
-  controlComponent,
-} from '../../../../utils/storybook';
+import {InputProviderDecorator, controlComponent} from '../../../../utils/storybook';
 
-import FormField from '..';
+import {TextArea} from '../../../text-area/react/index';
+import FormField from '../index';
 import README from '../README.md';
-import {TextArea} from '@workday/canvas-kit-react-text-area';
 
 const hintText = 'Helpful text goes here.';
 const hintId = 'error-desc-id';
 
 storiesOf('Form Field/TextArea/Top Label', module)
   .addDecorator(InputProviderDecorator)
-  .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => (
+  .add('Default', () => (
     <FormField label="Label" inputId="textarea-plain">
       {controlComponent(<TextArea />)}
     </FormField>
@@ -66,7 +61,7 @@ storiesOf('Form Field/TextArea/Top Label', module)
       {controlComponent(<TextArea placeholder="Placeholder" />)}
     </FormField>
   ))
-  .add('Grow - Error', () => (
+  .add('Grow with Error', () => (
     <FormField
       label="Label"
       inputId="textarea-grow-error"
@@ -80,9 +75,8 @@ storiesOf('Form Field/TextArea/Top Label', module)
   ));
 
 storiesOf('Form Field/TextArea/Left Label', module)
-  .addDecorator(SectionDecorator('Text Field'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => (
+  .add('Default', () => (
     <FormField labelPosition={FormField.LabelPosition.Left} label="Label" inputId="textarea-plain">
       {controlComponent(<TextArea />)}
     </FormField>
@@ -148,7 +142,7 @@ storiesOf('Form Field/TextArea/Left Label', module)
       {controlComponent(<TextArea placeholder="Placeholder" />)}
     </FormField>
   ))
-  .add('Grow - Error', () => (
+  .add('Grow with Error', () => (
     <FormField
       labelPosition={FormField.LabelPosition.Left}
       label="Label"

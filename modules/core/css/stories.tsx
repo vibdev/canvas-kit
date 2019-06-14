@@ -17,7 +17,7 @@ storiesOf('CSS/Core', module)
 
     return (
       <div className="story">
-        <h1 className="section-label">Type Hierarchy</h1>
+        <h3>Type Hierarchy</h3>
 
         <section className="wdc-type">
           <h1 className="wdc-type-data-viz-1">Data Viz 1</h1>
@@ -53,7 +53,7 @@ storiesOf('CSS/Core', module)
           </p>
         </section>
 
-        <h1 className="section-label">Type Variations</h1>
+        <h3>Type Variations</h3>
 
         <section className="wdc-type">
           <div>
@@ -90,8 +90,6 @@ storiesOf('CSS/Core', module)
 
     return (
       <div className="story">
-        <h1 className="section-label">Depth</h1>
-
         <div style={{display: 'flex'}}>
           <div className="wdc-depth-inset" style={cardStyle}>
             <h4 className="wdc-type-h5">Depth -1</h4>
@@ -117,7 +115,7 @@ storiesOf('CSS/Core', module)
   .addDecorator(withReadme(README))
   .add('Cards', () => (
     <div className="story">
-      <h1 className="section-label">Cards</h1>
+      <h2>Cards</h2>
       <section>
         <div className="wdc-card-container">
           <div className="wdc-card-3">
@@ -267,8 +265,6 @@ storiesOf('CSS/Core', module)
   .addDecorator(withReadme(README))
   .add('Accessibility', () => (
     <div className="story">
-      <h1 className="section-label">Accessibility</h1>
-
       <div className="wdc-type">
         <div>
           <button tabIndex={0}>Default Behavior</button>

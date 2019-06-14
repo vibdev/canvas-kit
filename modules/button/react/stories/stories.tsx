@@ -3,14 +3,13 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 
-import {Button} from '..';
+import {Button} from '../index';
 import README from '../README.md';
 
 storiesOf('Button', module)
   .addDecorator(withReadme(README))
   .add('Primary', () => (
     <div className="story">
-      <h1 className="section-label">Primary Button</h1>
       <h3>Large Primary</h3>
       <Button buttonType={Button.Types.Primary}>Primary Button</Button>
       <Button buttonType={Button.Types.Primary} disabled={true}>
@@ -38,7 +37,6 @@ storiesOf('Button', module)
   ))
   .add('Secondary', () => (
     <div className="story">
-      <h1 className="section-label">Secondary Button</h1>
       <h3>Large Secondary</h3>
       <Button buttonType={Button.Types.Secondary}>Secondary Button</Button>
       <Button buttonType={Button.Types.Secondary} disabled={true}>
@@ -66,7 +64,6 @@ storiesOf('Button', module)
   ))
   .add('Delete', () => (
     <div className="story">
-      <h1 className="section-label">Delete Button</h1>
       <h3>Large Delete</h3>
       <Button buttonType={Button.Types.Delete}>Delete Button</Button>
       <Button buttonType={Button.Types.Delete} disabled={true}>

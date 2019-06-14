@@ -4,7 +4,7 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator} from '../../../../utils/storybook';
 
-import Avatar from '..';
+import Avatar from '../index';
 import README from '../README.md';
 
 const IMAGE_URL = 'https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png';
@@ -14,7 +14,6 @@ storiesOf('Avatar', module)
   .addDecorator(withReadme(README))
   .add('Light', () => (
     <div className="story">
-      <h1 className="section-label">Light Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} />
       <h3>Extra Large</h3>
@@ -31,7 +30,6 @@ storiesOf('Avatar', module)
   ))
   .add('Dark', () => (
     <div className="story">
-      <h1 className="section-label">Dark Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} themeColor={Avatar.ThemeColor.Dark} />
       <h3>Extra Large</h3>
@@ -48,7 +46,6 @@ storiesOf('Avatar', module)
   ))
   .add('Image', () => (
     <div className="story">
-      <h1 className="section-label">Image Avatar</h1>
       <h3>Extra-Extra Large</h3>
       <Avatar size={Avatar.Size.xxl} url={IMAGE_URL} />
       <h3>Extra Large</h3>

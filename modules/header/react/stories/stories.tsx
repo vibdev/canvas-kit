@@ -4,16 +4,17 @@ import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import styled from 'react-emotion';
 import {css, cx} from 'emotion';
-import {GlobalHeader, Header, DubLogoTitle, WorkdayLogoTitle} from '..';
-import {Avatar} from '@workday/canvas-kit-react-avatar';
-import {SystemIcon} from '@workday/canvas-kit-react-icon';
-import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
-import {colors, spacing} from '@workday/canvas-kit-react-core';
-import {Button, IconButton} from '@workday/canvas-kit-react-button';
 import chroma from 'chroma-js';
+import {notificationsIcon, inboxIcon} from '@workday/canvas-system-icons-web';
+
+import {Avatar} from '../../../avatar/react/index';
+import {SystemIcon} from '../../../icon/react/index';
+import {colors, spacing} from '../../../core/react/index';
+import {Button, IconButton} from '../../../button/react/index';
+import {GlobalHeader, Header, DubLogoTitle, WorkdayLogoTitle, HeaderVariant} from '../index';
+
 import README from '../README.md';
 import bgImg from '../static/workday-bg.jpg';
-import {HeaderVariant} from '../lib/shared/types';
 
 const containerStyle = css({
   backgroundColor: colors.soap100,
@@ -46,10 +47,6 @@ const handleSearchSubmitTest = (query: string) => {
   alert(`You searched for "${query}"!`);
 };
 
-const handleBreakpointChangeTest = (key: string) => {
-  alert(`The breakpoint key is "${key}"!`);
-};
-
 const nav = (
   <nav>
     <ul>
@@ -73,7 +70,6 @@ storiesOf('Header', module)
   .addDecorator(withReadme(README))
   .add('Global Header', () => (
     <div className="story">
-      <h1 className="section-label">Global Header</h1>
       <div className={containerStyle}>
         <GlobalHeader
           brand={
@@ -103,7 +99,6 @@ storiesOf('Header', module)
           menuToggle={<Avatar onClick={handleMenuClickTest} />}
           onSearchSubmit={handleSearchSubmitTest}
           breakpoint={700}
-          onBreakpointChange={handleBreakpointChangeTest}
         >
           <IconButton icon={notificationsIcon} buttonType={IconButton.Types.Default} />
           <IconButton icon={inboxIcon} buttonType={IconButton.Types.Default} />
@@ -121,7 +116,6 @@ storiesOf('Header', module)
   ))
   .add('Dub Header', () => (
     <div className="story">
-      <h1 className="section-label">Dub Header</h1>
       <div className={containerStyle}>
         <Header title="Required" onSearchSubmit={handleSearchSubmitTest} />
       </div>
@@ -208,7 +202,6 @@ storiesOf('Header', module)
   ))
   .add('Full Header', () => (
     <div className="story">
-      <h1 className="section-label">Full Header</h1>
       <div className={containerStyle}>
         <Header variant={Header.Variant.Full} />
       </div>
@@ -277,7 +270,6 @@ storiesOf('Header', module)
   ))
   .add('Header With Custom Breakpoints', () => (
     <div className="story">
-      <h1 className="section-label">Header With Custom Breakpoints</h1>
       <Header
         title="Normal Breakpoints"
         themeColor={Header.Theme.Blue}
@@ -289,11 +281,7 @@ storiesOf('Header', module)
         <Avatar onClick={handleAvatarClickTest} />
         <Button buttonType={Button.Types.Primary}>Download</Button>
       </Header>
-      <Header
-        title="Nav Collapses Later"
-        breakpoints={{sm: 320, md: 420, lg: 768}}
-        onBreakpointChange={handleBreakpointChangeTest}
-      >
+      <Header title="Nav Collapses Later" breakpoints={{sm: 320, md: 420, lg: 768}}>
         {nav}
       </Header>
       <Header title="Nav Collapses Earlier" breakpoints={{sm: 320, md: 768, lg: 1280}}>

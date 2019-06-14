@@ -147,6 +147,8 @@ const formFields = (
 
 const errorFields = (
   <div>
+    <h2>Text Inputs</h2>
+
     <div className="wdc-form-field-wrapper wdc-form-field-error">
       <label htmlFor="textinput-error" className="wdc-form-label wdc-form-label-required">
         Input Label - Error
@@ -427,22 +429,16 @@ storiesOf('CSS/Form', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Form Fields</h1>
-
       <div className="wdc-form">{formFields}</div>
     </div>
   ))
   .add('Inline Labels', () => (
     <div className="story">
-      <h1 className="section-label">Form Fields w/ Inline Labels</h1>
-
       <div className="wdc-form wdc-form-inline-labels">{formFields}</div>
     </div>
   ))
   .add('States', () => (
     <div className="story">
-      <h1 className="section-label">Form Field States</h1>
-
       <h2>Hover</h2>
       <div className="wdc-form wdc-form-inline-labels">
         <div className="wdc-form-field-wrapper">
@@ -625,14 +621,18 @@ storiesOf('CSS/Form', module)
         </div>
       </div>
 
-      <h2>disabled={true}</h2>
+      <h2>
+        disabled=
+        {true}
+      </h2>
       <div className="wdc-form wdc-form-inline-labels">
         <div className="wdc-form-field-wrapper">
           <label
             htmlFor="textinput-disabled={true}"
             className="wdc-form-label wdc-form-label-required"
           >
-            disabled={true} Input Label
+            disabled=
+            {true} Input Label
           </label>
           <div className="wdc-form-field">
             <input
@@ -647,7 +647,8 @@ storiesOf('CSS/Form', module)
 
         <div className="wdc-form-field-wrapper">
           <label htmlFor="textarea-disabled={true}" className="wdc-form-label">
-            disabled={true} Textarea Label
+            disabled=
+            {true} Textarea Label
           </label>
           <div className="wdc-form-field">
             <textarea
@@ -661,7 +662,8 @@ storiesOf('CSS/Form', module)
 
         <div className="wdc-form-field-wrapper">
           <label htmlFor="select-disabled={true}" className="wdc-form-label">
-            disabled={true} Select Label
+            disabled=
+            {true} Select Label
           </label>
           <div className="wdc-form-field">
             <select
@@ -689,7 +691,8 @@ storiesOf('CSS/Form', module)
               disabled={true}
             />
             <label htmlFor="checkbox-disabled={true}" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -705,7 +708,8 @@ storiesOf('CSS/Form', module)
               disabled={true}
             />
             <label htmlFor="checkbox-checked-disabled={true}-checked" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -723,20 +727,25 @@ storiesOf('CSS/Form', module)
               disabled={true}
             />
             <label htmlFor="radio-disabled={true}" className="wdc-form-label">
-              Option - disabled={true}
+              Option - disabled=
+              {true}
             </label>
           </div>
         </div>
       </div>
 
-      <h2>disabled={true} with class</h2>
+      <h2>
+        disabled=
+        {true} with class
+      </h2>
       <div className="wdc-form wdc-form-inline-labels">
         <div className="wdc-form-field-wrapper">
           <label
             htmlFor="textinput-disabled={true}-class"
             className="wdc-form-label wdc-form-label-required"
           >
-            disabled={true} Input Label
+            disabled=
+            {true} Input Label
           </label>
           <div className="wdc-form-field">
             <input
@@ -750,7 +759,8 @@ storiesOf('CSS/Form', module)
 
         <div className="wdc-form-field-wrapper">
           <label htmlFor="textarea-disabled={true}-class" className="wdc-form-label">
-            disabled={true} Textarea Label
+            disabled=
+            {true} Textarea Label
           </label>
           <div className="wdc-form-field">
             <textarea
@@ -763,7 +773,8 @@ storiesOf('CSS/Form', module)
 
         <div className="wdc-form-field-wrapper">
           <label htmlFor="select-disabled={true}-class" className="wdc-form-label">
-            disabled={true} Select Label
+            disabled=
+            {true} Select Label
           </label>
           <div className="wdc-form-field">
             <select
@@ -789,7 +800,8 @@ storiesOf('CSS/Form', module)
               id="checkbox-disabled={true}-class"
             />
             <label htmlFor="checkbox-disabled={true}-class" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -804,7 +816,8 @@ storiesOf('CSS/Form', module)
               readOnly={true}
             />
             <label htmlFor="checkbox-checked-disabled={true}-class" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -821,7 +834,8 @@ storiesOf('CSS/Form', module)
               id="radio-disabled={true}-class"
             />
             <label htmlFor="radio-disabled={true}-class" className="wdc-form-label">
-              Option - disabled={true}
+              Option - disabled=
+              {true}
             </label>
           </div>
         </div>
@@ -854,7 +868,8 @@ storiesOf('CSS/Form', module)
               disabled={true}
             />
             <label htmlFor="checkbox-checked-disabled={true}" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -872,7 +887,8 @@ storiesOf('CSS/Form', module)
               defaultChecked={true}
             />
             <label htmlFor="radio-checked" className="wdc-form-label">
-              Option - disabled={true}
+              Option - disabled=
+              {true}
             </label>
           </div>
         </div>
@@ -903,7 +919,8 @@ storiesOf('CSS/Form', module)
               disabled={true}
             />
             <label htmlFor="checkbox-checked-class-disabled={true}" className="wdc-form-label">
-              disabled={true} Checkbox Label
+              disabled=
+              {true} Checkbox Label
             </label>
           </div>
         </div>
@@ -929,19 +946,11 @@ storiesOf('CSS/Form', module)
   ))
   .add('Errors', () => (
     <div className="story">
-      <h1 className="section-label">Form Field Errors</h1>
-
-      <h2>Text Inputs</h2>
-
       <div className="wdc-form">{errorFields}</div>
     </div>
   ))
   .add('Errors w/ Inline Labels', () => (
     <div className="story">
-      <h1 className="section-label">Form Field Errors w/ Inline Labels</h1>
-
-      <h2>Text Inputs</h2>
-
       <div className="wdc-form wdc-form-inline-labels">{errorFields}</div>
     </div>
   ));

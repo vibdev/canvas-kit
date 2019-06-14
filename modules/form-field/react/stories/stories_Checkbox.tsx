@@ -3,9 +3,9 @@ import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
 import {InputProviderDecorator, ControlledComponentWrapper} from '../../../../utils/storybook';
-import {Checkbox} from '@workday/canvas-kit-react-checkbox';
 
-import FormField from '..';
+import {Checkbox} from '../../../checkbox/react/index';
+import FormField from '../index';
 import README from '../README.md';
 
 const control = (child: React.ReactNode) => (
@@ -22,7 +22,6 @@ storiesOf('Form Field/Checkbox/Top Label', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" inputId="my-checkbox-field">
           {control(<Checkbox id="1" label="Checkbox option" />)}
@@ -32,7 +31,6 @@ storiesOf('Form Field/Checkbox/Top Label', module)
   ))
   .add('Disabled', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField label="Label" inputId="my-checkbox-field">
           {control(<Checkbox id="1" label="Checkbox option" disabled={true} />)}
@@ -42,7 +40,6 @@ storiesOf('Form Field/Checkbox/Top Label', module)
   ))
   .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -58,7 +55,6 @@ storiesOf('Form Field/Checkbox/Top Label', module)
   ))
   .add('Error', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -78,7 +74,6 @@ storiesOf('Form Field/Checkbox/Left Label', module)
   .addDecorator(withReadme(README))
   .add('Default', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -92,7 +87,6 @@ storiesOf('Form Field/Checkbox/Left Label', module)
   ))
   .add('Disabled', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -106,7 +100,6 @@ storiesOf('Form Field/Checkbox/Left Label', module)
   ))
   .add('Alert', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"
@@ -123,7 +116,6 @@ storiesOf('Form Field/Checkbox/Left Label', module)
   ))
   .add('Error', () => (
     <div className="story">
-      <h1 className="section-label">Checkbox</h1>
       <div style={{textAlign: 'left', marginBottom: '24px'}}>
         <FormField
           label="Label"

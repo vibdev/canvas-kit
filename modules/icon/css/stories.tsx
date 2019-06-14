@@ -41,8 +41,6 @@ storiesOf('CSS/Icon', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Icon</h1>
-
       <IconDemo />
     </div>
   ));

@@ -10,8 +10,6 @@ storiesOf('CSS/Button', module)
   .addDecorator(withReadme(README))
   .add('All', () => (
     <div className="story">
-      <h1 className="section-label">Buttons</h1>
-
       <section>
         <button className="wdc-btn wdc-btn-primary">Primary</button>
         <button className="wdc-btn">Secondary</button>
@@ -90,8 +88,6 @@ storiesOf('CSS/Button', module)
   ))
   .add('States', () => (
     <div className="story">
-      <h1 className="section-label">Button States</h1>
-
       <h2>Hover</h2>
       <section>
         <button className="wdc-btn wdc-btn-primary wdc-btn-hover">Primary</button>

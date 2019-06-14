@@ -2,16 +2,15 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {Card} from '@workday/canvas-kit-react';
 
-import Layout from '..';
+import {Card} from '../../../card/react/index';
+import Layout from '../index';
 import README from '../README.md';
 
 storiesOf('Layout', module)
   .addDecorator(withReadme(README))
   .add('Page Layout', () => (
     <div className="story">
-      <h1 className="section-label">Page Layout</h1>
       <h3>Full Page</h3>
       <div>
         <Layout gutter={0}>
@@ -40,7 +39,6 @@ storiesOf('Layout', module)
   ))
   .add('12 Column Layout', () => (
     <div className="story">
-      <h1 className="section-label">12 Column Layouts</h1>
       <h3>12 Columns</h3>
       <div>
         <Layout>

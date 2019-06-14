@@ -2,24 +2,19 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
 import withReadme from 'storybook-readme/with-readme';
-import {
-  InputProviderDecorator,
-  SectionDecorator,
-  controlComponent,
-} from '../../../../utils/storybook';
+import {InputProviderDecorator, controlComponent} from '../../../../utils/storybook';
 
-import FormField from '..';
+import {ColorInput} from '../../../color-picker/react/index';
+import FormField from '../index';
 import README from '../README.md';
-import {ColorInput} from '@workday/canvas-kit-react-color-picker';
 
 const hintText = 'Helpful text goes here.';
 const hintId = 'error-desc-id';
 
 storiesOf('Form Field/Color Picker/Color Input/Top Label', module)
   .addDecorator(InputProviderDecorator)
-  .addDecorator(SectionDecorator('Color Picker'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => (
+  .add('Default', () => (
     <FormField label="Label" inputId="input-plain">
       {controlComponent(<ColorInput />)}
     </FormField>
@@ -56,7 +51,7 @@ storiesOf('Form Field/Color Picker/Color Input/Top Label', module)
       {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ))
-  .add('Grow - Error', () => (
+  .add('Grow with Error', () => (
     <FormField
       label="Label"
       inputId="input-grow-error"
@@ -70,9 +65,8 @@ storiesOf('Form Field/Color Picker/Color Input/Top Label', module)
   ));
 
 storiesOf('Form Field/Color Picker/Color Input/Left Label', module)
-  .addDecorator(SectionDecorator('Color Picker'))
   .addDecorator(withReadme(README))
-  .add('Plain', () => (
+  .add('Default', () => (
     <FormField labelPosition={FormField.LabelPosition.Left} label="Label" inputId="input-plain">
       {controlComponent(<ColorInput />)}
     </FormField>
@@ -116,7 +110,7 @@ storiesOf('Form Field/Color Picker/Color Input/Left Label', module)
       {controlComponent(<ColorInput placeholder="Placeholder" />)}
     </FormField>
   ))
-  .add('Grow - Error', () => (
+  .add('Grow with Error', () => (
     <FormField
       labelPosition={FormField.LabelPosition.Left}
       label="Label"
