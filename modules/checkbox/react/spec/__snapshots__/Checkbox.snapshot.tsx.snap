@@ -719,7 +719,7 @@ exports[`Checkbox Snapshots checked error renders as expected 1`] = `
 
 .emotion-0:checked ~ div:first-of-type {
   border-color: #0875e1;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21 undefined;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21;
 }
 
 [data-whatinput="mouse"] .emotion-0 ~ div:first-of-type,
@@ -739,7 +739,7 @@ exports[`Checkbox Snapshots checked error renders as expected 1`] = `
 [data-whatinput="touch"] .emotion-0:checked ~ div:first-of-type,
 [data-whatinput="pointer"] .emotion-0:checked ~ div:first-of-type {
   border-color: #0875e1;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21 undefined;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21;
 }
 
 [data-whatinput="mouse"] .emotion-0:not(:checked):focus ~ div:first-of-type,
@@ -981,7 +981,7 @@ exports[`Checkbox Snapshots error renders as expected 1`] = `
 
 .emotion-0:checked ~ div:first-of-type {
   border-color: #0875e1;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21 undefined;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21;
 }
 
 [data-whatinput="mouse"] .emotion-0 ~ div:first-of-type,
@@ -1001,7 +1001,7 @@ exports[`Checkbox Snapshots error renders as expected 1`] = `
 [data-whatinput="touch"] .emotion-0:checked ~ div:first-of-type,
 [data-whatinput="pointer"] .emotion-0:checked ~ div:first-of-type {
   border-color: #0875e1;
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21 undefined;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #de2e21;
 }
 
 [data-whatinput="mouse"] .emotion-0:not(:checked):focus ~ div:first-of-type,
