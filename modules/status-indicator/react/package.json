@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-status-indicator",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Canvas-styled status indicator",
   "homepage": "https://workdaydesign.com",
   "author": "Ajay Sagar",
@@ -38,9 +38,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.7.2",
-    "@workday/canvas-kit-react-core": "^1.10.3",
-    "@workday/canvas-kit-react-icon": "^1.7.4",
+    "@workday/canvas-kit-react-common": "^0.7.3",
+    "@workday/canvas-kit-react-core": "^1.10.4",
+    "@workday/canvas-kit-react-icon": "^1.7.5",
     "@workday/design-assets-types": "^0.2.4",
     "emotion": "^9.2.6",
     "react-emotion": "^9.2.6"
