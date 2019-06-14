@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Snapshots renders a large Avatar 1`] = `
+exports[`Avatar Snapshots renders a large Avatar 1`] = `
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -112,6 +112,7 @@ exports[`Button Snapshots renders a large Avatar 1`] = `
 }
 
 <button
+  aria-label="Avatar"
   className="emotion-2 emotion-3"
   disabled={true}
   size={64}
@@ -132,7 +133,7 @@ exports[`Button Snapshots renders a large Avatar 1`] = `
 </button>
 `;
 
-exports[`Button Snapshots renders a large avatar with a photo 1`] = `
+exports[`Avatar Snapshots renders a large avatar with a photo 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -179,17 +180,19 @@ exports[`Button Snapshots renders a large avatar with a photo 1`] = `
 }
 
 <button
+  aria-label="Avatar"
   className="emotion-0 emotion-1"
   disabled={true}
   size={64}
 >
   <img
+    alt="Avatar"
     src="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
   />
 </button>
 `;
 
-exports[`Button Snapshots renders a large, dark Avatar 1`] = `
+exports[`Avatar Snapshots renders a large, dark Avatar 1`] = `
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -301,6 +304,7 @@ exports[`Button Snapshots renders a large, dark Avatar 1`] = `
 }
 
 <button
+  aria-label="Avatar"
   className="emotion-2 emotion-3"
   disabled={true}
   size={64}
@@ -321,7 +325,7 @@ exports[`Button Snapshots renders a large, dark Avatar 1`] = `
 </button>
 `;
 
-exports[`Button Snapshots renders an avatar with a photo 1`] = `
+exports[`Avatar Snapshots renders an avatar with a photo 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -368,17 +372,19 @@ exports[`Button Snapshots renders an avatar with a photo 1`] = `
 }
 
 <button
+  aria-label="Avatar"
   className="emotion-0 emotion-1"
   disabled={true}
   size={32}
 >
   <img
+    alt="Avatar"
     src="https://s3-us-west-2.amazonaws.com/design-assets-internal/avatars/lmcneil.png"
   />
 </button>
 `;
 
-exports[`Button Snapshots renders as expected 1`] = `
+exports[`Avatar Snapshots renders as expected 1`] = `
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -490,6 +496,7 @@ exports[`Button Snapshots renders as expected 1`] = `
 }
 
 <button
+  aria-label="Avatar"
   className="emotion-2 emotion-3"
   disabled={true}
   size={32}

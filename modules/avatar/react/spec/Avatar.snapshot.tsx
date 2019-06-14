@@ -2,7 +2,7 @@ import * as React from 'react';
 import Avatar from '../lib/Avatar';
 import * as renderer from 'react-test-renderer';
 
-describe('Button Snapshots', () => {
+describe('Avatar Snapshots', () => {
   test('renders as expected', () => {
     const component = renderer.create(<Avatar>Button</Avatar>);
     expect(component).toMatchSnapshot();

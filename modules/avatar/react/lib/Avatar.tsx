@@ -20,6 +20,10 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    */
   size: SystemIconCircleSize | number;
   /**
+   * Text describing what the avatar is showing
+   */
+  altText: string;
+  /**
    * The url of the users avatar photo
    */
   url?: string;
@@ -33,7 +37,7 @@ export interface AvatarProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   buttonRef?: React.Ref<HTMLButtonElement>;
 }
 
-const Container = styled('button')<AvatarProps>(
+const Container = styled('button')<Omit<AvatarProps, 'altText'>>(
   {
     display: 'flex',
     alignItems: 'center',
@@ -70,10 +74,11 @@ export default class Avatar extends React.Component<AvatarProps> {
   static defaultProps = {
     themeColor: AvatarTheme.Light,
     size: SystemIconCircleSize.m,
+    altText: 'Avatar',
   };
 
   render() {
-    const {buttonRef, themeColor, size, url, onClick, ...elemProps} = this.props;
+    const {buttonRef, themeColor, altText, size, url, onClick, ...elemProps} = this.props;
 
     const background = themeColor === AvatarTheme.Dark ? colors.blueberry400 : colors.soap300;
     return (
@@ -84,9 +89,10 @@ export default class Avatar extends React.Component<AvatarProps> {
         onClick={onClick}
         disabled={onClick ? false : true}
         innerRef={buttonRef}
+        aria-label={altText}
       >
         {url ? (
-          <img src={url} />
+          <img src={url} alt={altText} />
         ) : (
           <SystemIconCircle icon={userIcon} background={background} size={size} />
         )}

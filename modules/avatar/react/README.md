@@ -92,6 +92,12 @@ Default: `AvatarSize.m`
 
 ---
 
+#### `altText: string`
+
+> Text describing what the avatar is showing.
+
+---
+
 #### `url: string`
 
 > The URL of the user's photo. Expects a square (1:1) photo.

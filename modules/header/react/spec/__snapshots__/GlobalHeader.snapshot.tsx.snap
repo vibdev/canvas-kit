@@ -552,6 +552,7 @@ exports[`App GlobalHeader Snapshots renders a header with SystemIcon and IconBut
       />
     </button>
     <button
+      aria-label="Avatar"
       className="emotion-16"
       disabled={true}
       size={32}
@@ -1795,6 +1796,7 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
       />
     </button>
     <button
+      aria-label="Avatar"
       className="emotion-24"
       disabled={true}
       size={32}
