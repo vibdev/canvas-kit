@@ -147,8 +147,9 @@ const CheckboxInput = styled('input')<CheckboxProps>(
       '&:checked ~ div:first-of-type': {
         borderColor: colors.blueberry400,
         boxShadow: `0 0 0 2px ${colors.frenchVanilla100},
-              0 0 0 4px ${errorRingColor} ${errorRingBorderColor &&
-          `, 0 0 0 5px ${errorRingBorderColor}`}`,
+              0 0 0 4px ${errorRingColor} ${
+          errorRingBorderColor ? `, 0 0 0 5px ${errorRingBorderColor}` : ''
+        }`,
       },
     };
     return {
