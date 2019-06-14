@@ -15,7 +15,7 @@ setEnv.cdn('beta')
 def awsProfileStorybook = "jenkinsprs"
 
 timestamps {
-  provisionPod(dockerImage: 'docker-dev-artifactory.workday.com/design/jenkins-slaves/node8-awscli') {
+  provisionPod(dockerImage: 'docker-dev-artifactory.workday.com/design/jenkins-slaves/node8-awscli', memReq: '8Gi', memLimit: '8Gi') {
     node(getNames()) {
       ifBranch.isMaster {
         properties ([
