@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.32](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.31...@workday/canvas-kit-react-avatar@0.4.32) (2019-06-14)
+
+
+### Bug Fixes
+
+* **avatar:** give avatar an accessible label and install jest-axe ([#427](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/issues/427)) ([1a4b580](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/commits/1a4b580))
+
+
+
+
+
 ## [0.4.31](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-avatar/compare/@workday/canvas-kit-react-avatar@0.4.30...@workday/canvas-kit-react-avatar@0.4.31) (2019-06-14)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-avatar
