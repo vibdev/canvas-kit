@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import Radio, {RadioProps} from './Radio';
 import {spacing, inputColors, colors} from '@workday/canvas-kit-react-core';
-import {ErrorType, GrowthBehavior, errorRing} from '@workday/canvas-kit-react-common';
+import {ErrorType, GrowthBehavior} from '@workday/canvas-kit-react-common';
 
 export interface RadioGroupProps extends GrowthBehavior {
   /**
