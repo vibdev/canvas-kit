@@ -25,7 +25,6 @@ fi
 
 # Get module info
 read -p "Module description: " description
-read -p "Author: " author
 upperName="$(tr '[:lower:]' '[:upper:]' <<< ${name:0:1})${name:1}"
 
 # Create module directory
@@ -41,8 +40,7 @@ cat > $packageJson << EOF
   "name": "@workday/canvas-kit-react-$name",
   "version": "0.0.0",
   "description": "$description",
-  "homepage": "https://workdaydesign.com",
-  "author": "$author",
+  "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
   "module": "dist/es6/index.js",
@@ -188,6 +186,10 @@ tsconfig.json
 yarn.lock
 
 EOF
+
+# Copy LICENSE
+echo -e "Adding License file to ${CYAN}$reactPath{NC}"
+cp LICENSE $reactPath
 
 # Install deps using Yarn workspaces (instead of Lerna bootstrap)
 echo -e "\nInstalling dependencies\n"

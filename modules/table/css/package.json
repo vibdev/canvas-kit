@@ -2,8 +2,7 @@
   "name": "@workday/canvas-kit-css-table",
   "version": "1.1.5",
   "description": "Table CSS for Canvas kit",
-  "homepage": "https://design.workday.com",
-  "author": "Joseph Le <joseph.le@workday.com>",
+  "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
   "files": [
     "dist",
