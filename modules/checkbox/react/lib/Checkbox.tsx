@@ -159,7 +159,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
         ...errorStyles,
         '&:not(:checked):focus ~ div:first-of-type': {
           border: `1px solid ${errorRingColor}`,
-          boxShadow: `0 0 0 1px ${errorRingColor}`,
+          boxShadow: `0 0 0 1px ${errorRingColor}, 0 0 0 2px ${errorRingBorderColor}`,
         },
       }),
     };
