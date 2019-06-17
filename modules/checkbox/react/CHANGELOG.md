@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.5...@workday/canvas-kit-react-checkbox@0.2.6) (2019-06-17)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-checkbox
+
+
+
+
+
 ## [0.2.5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.4...@workday/canvas-kit-react-checkbox@0.2.5) (2019-06-14)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-checkbox

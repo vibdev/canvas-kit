@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.16](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/compare/@workday/canvas-kit-react-loading-animation@0.4.15...@workday/canvas-kit-react-loading-animation@0.4.16) (2019-06-17)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-loading-animation
+
+
+
+
+
 ## [0.4.15](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-loading-animation/compare/@workday/canvas-kit-react-loading-animation@0.4.14...@workday/canvas-kit-react-loading-animation@0.4.15) (2019-06-14)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-loading-animation
