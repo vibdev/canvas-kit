@@ -139,7 +139,9 @@ const CheckboxInput = styled('input')<CheckboxProps>(
     const errorStyles = {
       '& ~ div:first-of-type': {
         border: `1px solid ${errorRingColor}`,
-        boxShadow: `0 0 0 1px ${errorRingColor}`,
+        boxShadow: `0 0 0 1px ${errorRingColor} ${
+          errorRingBorderColor ? `, 0 0 0 2px ${errorRingBorderColor}` : ''
+        }`,
       },
       '&:not(:checked):not(:disabled):not(:focus):hover ~ div:first-of-type': {
         borderColor: errorRingColor,
