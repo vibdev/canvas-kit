@@ -125,26 +125,31 @@ const CheckboxInput = styled('input')<CheckboxProps>(
   },
   ({error}) => {
     let errorRingColor;
+    let errorRingBorderColor = 'transparent';
 
     if (error === ErrorType.Error) {
       errorRingColor = inputColors.error.border;
     } else if (error === ErrorType.Alert) {
       errorRingColor = inputColors.warning.border;
+      errorRingBorderColor = colors.cantaloupe600;
     } else {
       return;
     }
+
     const errorStyles = {
       '& ~ div:first-of-type': {
         border: `1px solid ${errorRingColor}`,
-        boxShadow: `0 0 0 1px ${errorRingColor}`,
+        boxShadow: `0 0 0 1px ${errorRingColor}, 0 0 0 2px ${errorRingBorderColor}`,
       },
       '&:not(:checked):not(:disabled):not(:focus):hover ~ div:first-of-type': {
         borderColor: errorRingColor,
       },
       '&:checked ~ div:first-of-type': {
         borderColor: colors.blueberry400,
-        boxShadow: `0 0 0 2px ${colors.frenchVanilla100},
-              0 0 0 4px ${errorRingColor}`,
+        boxShadow: `
+            0 0 0 2px ${colors.frenchVanilla100},
+            0 0 0 4px ${errorRingColor},
+            0 0 0 5px ${errorRingBorderColor}`,
       },
     };
     return {
@@ -154,7 +159,7 @@ const CheckboxInput = styled('input')<CheckboxProps>(
         ...errorStyles,
         '&:not(:checked):focus ~ div:first-of-type': {
           border: `1px solid ${errorRingColor}`,
-          boxShadow: `0 0 0 1px ${errorRingColor}`,
+          boxShadow: `0 0 0 1px ${errorRingColor}, 0 0 0 2px ${errorRingBorderColor}`,
         },
       }),
     };
