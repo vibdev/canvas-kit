@@ -187,6 +187,10 @@ yarn.lock
 
 EOF
 
+# Copy LICENSE
+echo -e "Adding License file to ${CYAN}$reactPath{NC}"
+cp LICENSE $reactPath
+
 # Install deps using Yarn workspaces (instead of Lerna bootstrap)
 echo -e "\nInstalling dependencies\n"
 yarn
