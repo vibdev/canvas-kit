@@ -380,7 +380,9 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   width={360}
 >
   <div
+    aria-label="Close"
     className="emotion-3"
+    title="Close"
   >
     <button
       className="emotion-1 emotion-2"
@@ -711,7 +713,9 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   width={360}
 >
   <div
+    aria-label="Close"
     className="emotion-3"
+    title="Close"
   >
     <button
       className="emotion-1 emotion-2"
@@ -1019,7 +1023,9 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   width={360}
 >
   <div
+    aria-label="Close"
     className="emotion-3"
+    title="Close"
   >
     <button
       className="emotion-1 emotion-2"
