@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.6.27...@workday/canvas-kit-react@1.7.0) (2019-06-17)
+
+
+### Bug Fixes
+
+* move module into react folder ([f2cf5f2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/f2cf5f2))
+
+
+### Features
+
+* **sidepanel:** add side panel as exported module and update read me ([86854e5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/86854e5))
+
+
+
+
+
 ## [1.6.27](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.6.26...@workday/canvas-kit-react@1.6.27) (2019-06-17)
 
 **Note:** Version bump only for package @workday/canvas-kit-react

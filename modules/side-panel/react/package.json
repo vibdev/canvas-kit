@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-side-panel",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Canvas-styled side panel",
   "homepage": "https://workdaydesign.com",
   "author": "Manuel Carrera",
@@ -35,11 +35,11 @@
     "side-panel"
   ],
   "dependencies": {
-    "lodash": "^4.17.11",
     "@workday/canvas-kit-react-button": "^0.20.7",
     "@workday/canvas-kit-react-core": "^1.9.3",
     "@workday/canvas-system-icons-web": "^0.16.39",
     "emotion": "^9.2.12",
+    "lodash": "^4.17.11",
     "react-emotion": "^9.2.12"
   },
   "peerDependencies": {
