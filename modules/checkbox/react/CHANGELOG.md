@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.8...@workday/canvas-kit-react-checkbox@0.3.0) (2019-06-18)
+
+
+### Features
+
+* **Checkbox:** fix checkbox off by 1px when focused ([aae8ed6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/aae8ed6))
+
+
+
+
+
 ## [0.2.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.7...@workday/canvas-kit-react-checkbox@0.2.8) (2019-06-18)
 
 
