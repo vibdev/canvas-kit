@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-fat",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "description": "Canvas floating action toolbar component",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
@@ -42,6 +42,6 @@
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {
-    "@workday/canvas-kit-react-button": "^0.21.8"
+    "@workday/canvas-kit-react-button": "^0.21.9"
   }
 }

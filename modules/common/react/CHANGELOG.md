@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.7.6...@workday/canvas-kit-react-common@0.7.7) (2019-06-18)
+
+
+### Bug Fixes
+
+* **ErrorRing:** fix boxshadow width ([94f1ac2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/94f1ac2))
+* **ErrorRing:** switch border to inset box-shadow for alert error ring ([6b27a20](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/commits/6b27a20))
+
+
+
+
+
 ## [0.7.6](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-common/compare/@workday/canvas-kit-react-common@0.7.5...@workday/canvas-kit-react-common@0.7.6) (2019-06-18)
 
 
