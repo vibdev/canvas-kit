@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.8](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.7...@workday/canvas-kit-react-checkbox@0.2.8) (2019-06-18)
+
+
+### Bug Fixes
+
+* update error and alert states to be accessible ([58be4f1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/58be4f1))
+* **checkbox:** Add missing box-shadow when unchecked for mouse behavior ([5584f35](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/5584f35))
+* **checkbox:** update alert style for unselected checkbox ([4354004](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/commits/4354004))
+
+
+
+
+
 ## [0.2.7](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-checkbox/compare/@workday/canvas-kit-react-checkbox@0.2.6...@workday/canvas-kit-react-checkbox@0.2.7) (2019-06-17)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-checkbox
