@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.7.3...@workday/canvas-kit-react@1.7.4) (2019-06-18)
+
+
+### Bug Fixes
+
+* add side panel to main package ([2ea75af](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/2ea75af))
+* update version and remove prop for styles ([832de43](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/832de43))
+* **universal-module:** Alphabetical order deps ([161b8ad](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/161b8ad))
+
+
+
+
+
 ## [1.7.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.7.2...@workday/canvas-kit-react@1.7.3) (2019-06-18)
 
 **Note:** Version bump only for package @workday/canvas-kit-react
