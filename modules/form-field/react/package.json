@@ -43,8 +43,15 @@
     "react-emotion": "^9.2.12"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@workday/canvas-kit-react-checkbox": "^0.3.1",
     "@workday/canvas-kit-react-radio": "^0.2.8",
     "@workday/canvas-kit-react-text-input": "^0.1.22"
+=======
+    "@workday/canvas-kit-react-checkbox": "^0.3.0",
+    "@workday/canvas-kit-react-radio": "^0.2.7",
+    "@workday/canvas-kit-react-select": "^0.0.1",
+    "@workday/canvas-kit-react-text-input": "^0.1.21"
+>>>>>>> feat(Select): move stories to form field and add to packages
   }
 }
