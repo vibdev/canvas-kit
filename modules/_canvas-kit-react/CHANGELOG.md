@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.7.4...@workday/canvas-kit-react@1.8.0) (2019-06-19)
+
+
+### Features
+
+* **Select:** move stories to form field and add to packages ([564d33d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/commits/564d33d))
+
+
+
+
+
 ## [1.7.4](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.7.3...@workday/canvas-kit-react@1.7.4) (2019-06-18)
 
 

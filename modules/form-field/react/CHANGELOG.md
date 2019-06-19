@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/compare/@workday/canvas-kit-react-form-field@0.3.14...@workday/canvas-kit-react-form-field@0.4.0) (2019-06-19)
+
+
+### Features
+
+* **Select:** fix from feedback and new folder structure ([cc24691](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/commits/cc24691))
+* **Select:** move stories to form field and add to packages ([564d33d](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/commits/564d33d))
+* **Select:** resolve conflicts ([48f7d17](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/commits/48f7d17))
+
+
+
+
+
 ## [0.3.14](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common/compare/@workday/canvas-kit-react-form-field@0.3.13...@workday/canvas-kit-react-form-field@0.3.14) (2019-06-18)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-form-field
