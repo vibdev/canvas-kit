@@ -1,7 +1,7 @@
 {
-  "name": "@workday/canvas-kit-react-form-field",
-  "version": "0.3.14",
-  "description": "Form field component to wrap inputs",
+  "name": "@workday/canvas-kit-react-select",
+  "version": "0.0.1",
+  "description": "Select Element",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
   "main": "dist/commonjs/index.js",
@@ -10,7 +10,7 @@
   "types": "dist/es6/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-input-common"
+    "url": "https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-select"
   },
   "files": [
     "dist/",
@@ -31,21 +31,17 @@
     "react",
     "components",
     "workday",
-    "input-common"
+    "select"
   ],
   "peerDependencies": {
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.7.7",
+    "@workday/canvas-kit-react-common": "^0.7.6",
     "@workday/canvas-kit-react-core": "^1.10.6",
+    "@workday/canvas-kit-react-icon": "^1.7.8",
+    "@workday/canvas-system-icons-web": "^1.0.1",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12"
-  },
-  "devDependencies": {
-    "@workday/canvas-kit-react-checkbox": "^0.3.1",
-    "@workday/canvas-kit-react-radio": "^0.2.8",
-    "@workday/canvas-kit-react-select": "^0.0.1",
-    "@workday/canvas-kit-react-text-input": "^0.1.22"
   }
 }
