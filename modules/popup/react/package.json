@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-popup",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Popup to display some content on top of another",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
