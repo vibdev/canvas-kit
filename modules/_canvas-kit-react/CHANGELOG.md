@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.8.1...@workday/canvas-kit-react@1.8.2) (2019-06-20)
+
+**Note:** Version bump only for package @workday/canvas-kit-react
+
+
+
+
+
 ## [1.8.1](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react/compare/@workday/canvas-kit-react@1.8.0...@workday/canvas-kit-react@1.8.1) (2019-06-20)
 
 **Note:** Version bump only for package @workday/canvas-kit-react

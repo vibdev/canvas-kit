@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.24](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.3.23...@workday/canvas-kit-react-card@0.3.24) (2019-06-20)
+
+
+### Bug Fixes
+
+* broad stroke accessibility fixes ([9803412](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/commits/9803412))
+
+
+
+
+
 ## [0.3.23](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-card/compare/@workday/canvas-kit-react-card@0.3.22...@workday/canvas-kit-react-card@0.3.23) (2019-06-17)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-card

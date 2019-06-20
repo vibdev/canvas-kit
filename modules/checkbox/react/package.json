@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-checkbox",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A Canvas-styled checkbox input",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
@@ -37,9 +37,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.7.7",
+    "@workday/canvas-kit-react-common": "^0.7.8",
     "@workday/canvas-kit-react-core": "^1.10.6",
-    "@workday/canvas-kit-react-icon": "^1.7.9",
+    "@workday/canvas-kit-react-icon": "^1.7.10",
     "@workday/canvas-system-icons-web": "^1.0.1",
     "emotion": "^9.2.12",
     "react-emotion": "^9.2.12",

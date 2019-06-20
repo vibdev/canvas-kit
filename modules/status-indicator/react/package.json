@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-status-indicator",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Canvas-styled status indicator",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",
@@ -37,9 +37,9 @@
     "react": ">= 15 < 17"
   },
   "dependencies": {
-    "@workday/canvas-kit-react-common": "^0.7.7",
+    "@workday/canvas-kit-react-common": "^0.7.8",
     "@workday/canvas-kit-react-core": "^1.10.6",
-    "@workday/canvas-kit-react-icon": "^1.7.9",
+    "@workday/canvas-kit-react-icon": "^1.7.10",
     "@workday/design-assets-types": "^0.2.4",
     "emotion": "^9.2.6",
     "react-emotion": "^9.2.6"
