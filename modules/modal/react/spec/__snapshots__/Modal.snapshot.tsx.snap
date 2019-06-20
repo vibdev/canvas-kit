@@ -1,39 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Toast Snapshots renders as expected 1`] = `
-.emotion-8 {
-  position: relative;
-  width: 360px;
-  -webkit-animation: animation-221pkp;
-  animation: animation-221pkp;
-  -webkit-animation-duration: 150ms;
-  animation-duration: 150ms;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
-  transform-origin: top center;
-}
-
-.emotion-7 {
-  background-color: #ffffff;
-  border: 1px solid #ced3d9;
-  border-radius: 3px;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
-  padding: 16px;
-  width: 360px;
-}
-
-.emotion-6 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-}
-
-.emotion-4 {
+exports[`Modal Snapshots renders Modal with a different width 1`] = `
+.emotion-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,92 +15,28 @@ exports[`Toast Snapshots renders as expected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 13px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.emotion-0 {
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-}
-
-.emotion-1 {
-  display: inline-block;
-  margin-right: 16px;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-1 svg {
-  display: block;
-}
-
-.emotion-1 .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-1:hover .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-1 .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-1:hover .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-1 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-1:hover .wd-icon-background {
-  fill: transparent;
 }
 
 .emotion-2 {
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
-<div
-  className="emotion-8"
-  role="dialog"
-  width={360}
->
-  <div
-    className="emotion-7"
-    width={360}
-  >
-    <div
-      className="emotion-6"
-    >
-      <div
-        className="emotion-4 emotion-5"
-      >
-        <span
-          className="emotion-0 emotion-1"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-            }
-          }
-        />
-        <div
-          className="emotion-2 emotion-3"
-        >
-          Your data has been updated.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Toast Snapshots renders with a close button 1`] = `
-.emotion-12 {
   position: relative;
-  width: 360px;
+  width: 800px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -139,17 +48,82 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   transform-origin: top center;
 }
 
-.emotion-11 {
+.emotion-1 {
   background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
-  padding: 16px;
-  width: 360px;
+  padding: 32px;
+  width: 800px;
 }
 
-.emotion-10 {
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-2"
+    role="dialog"
+    width="800px"
+  >
+    <div
+      className="emotion-1"
+      width="800px"
+    >
+      <div
+        className="emotion-0"
+      >
+        <span>
+          hello world
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders Modal with children elements 1`] = `
+.emotion-7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.emotion-6 {
+  position: relative;
+  width: 440px;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -157,51 +131,10 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-6 {
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
 .emotion-3 {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -229,9 +162,9 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -6px;
-  width: 32px;
-  height: 32px;
+  margin: -8px;
+  width: 40px;
+  height: 40px;
 }
 
 .emotion-1:hover:active {
@@ -320,11 +253,6 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-.emotion-1 span svg {
-  width: 20px;
-  height: 20px;
-}
-
 .emotion-0 {
   display: inline-block;
 }
@@ -357,7 +285,65 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   fill: transparent;
 }
 
-.emotion-8 {
+.emotion-5 {
+  background-color: #ffffff;
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 0px;
+  width: 440px;
+}
+
+<div
+  className="emotion-7 emotion-8"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-6"
+    role="dialog"
+    width="440px"
+  >
+    <div
+      className="emotion-3"
+    >
+      <button
+        className="emotion-1 emotion-2"
+        onClick={[MockFunction]}
+      >
+        <span
+          className="emotion-0"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+            }
+          }
+        />
+      </button>
+    </div>
+    <div
+      className="emotion-5"
+      width="440px"
+    >
+      <div
+        className="emotion-4"
+      >
+        <span>
+          hello world
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders Modal with close icon 1`] = `
+.emotion-7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,70 +352,20 @@ exports[`Toast Snapshots renders with a close button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-right: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
 }
 
-<div
-  className="emotion-12"
-  role="dialog"
-  width={360}
->
-  <div
-    className="emotion-3"
-  >
-    <button
-      className="emotion-1 emotion-2"
-      onClick={[MockFunction]}
-    >
-      <span
-        className="emotion-0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-          }
-        }
-      />
-    </button>
-  </div>
-  <div
-    className="emotion-11"
-    width={360}
-  >
-    <div
-      className="emotion-10"
-    >
-      <div
-        className="emotion-8 emotion-9"
-        onClose={[MockFunction]}
-      >
-        <span
-          className="emotion-4 emotion-5"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-            }
-          }
-        />
-        <div
-          className="emotion-6 emotion-7"
-        >
-          Your data has been updated.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Toast Snapshots renders with an action link 1`] = `
-.emotion-14 {
+.emotion-6 {
   position: relative;
-  width: 360px;
+  width: 440px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -441,17 +377,17 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   transform-origin: top center;
 }
 
-.emotion-13 {
+.emotion-5 {
   background-color: #ffffff;
   border: 1px solid #ced3d9;
   border-radius: 3px;
   box-sizing: border-box;
   box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
   padding: 16px;
-  width: 360px;
+  width: 440px;
 }
 
-.emotion-12 {
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -459,51 +395,10 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-8 {
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
 .emotion-3 {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -531,9 +426,9 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -6px;
-  width: 32px;
-  height: 32px;
+  margin: -8px;
+  width: 40px;
+  height: 40px;
 }
 
 .emotion-1:hover:active {
@@ -622,11 +517,6 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-.emotion-1 span svg {
-  width: 20px;
-  height: 20px;
-}
-
 .emotion-0 {
   display: inline-block;
 }
@@ -659,7 +549,51 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   fill: transparent;
 }
 
-.emotion-10 {
+<div
+  className="emotion-7 emotion-8"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-6"
+    role="dialog"
+    width="440px"
+  >
+    <div
+      className="emotion-3"
+    >
+      <button
+        className="emotion-1 emotion-2"
+        onClick={[MockFunction]}
+      >
+        <span
+          className="emotion-0"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+            }
+          }
+        />
+      </button>
+    </div>
+    <div
+      className="emotion-5"
+      width="440px"
+    >
+      <div
+        className="emotion-4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders Modal with different padding 1`] = `
+.emotion-7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -668,105 +602,20 @@ exports[`Toast Snapshots renders with an action link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #494949;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-right: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
 }
 
 .emotion-6 {
-  display: block;
-  border: none;
-  padding: 0;
-  margin-top: 4px;
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #0875e1;
-  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-6:hover,
-.emotion-6:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  color: #0875e1;
-}
-
-.emotion-6:focus {
-  background: #d7eafc;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  outline: 2px solid #d7eafc;
-}
-
-<div
-  className="emotion-14"
-  role="dialog"
-  width={360}
->
-  <div
-    className="emotion-3"
-  >
-    <button
-      className="emotion-1 emotion-2"
-      onClick={[MockFunction]}
-    >
-      <span
-        className="emotion-0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-          }
-        }
-      />
-    </button>
-  </div>
-  <div
-    className="emotion-13"
-    width={360}
-  >
-    <div
-      className="emotion-12"
-    >
-      <div
-        className="emotion-10 emotion-11"
-        onClose={[MockFunction]}
-      >
-        <span
-          className="emotion-4 emotion-5"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-            }
-          }
-        />
-        <div
-          className="emotion-8 emotion-9"
-        >
-          Process failed.
-          <button
-            className="emotion-6 emotion-7"
-            onClick={[MockFunction]}
-          >
-            View More
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Toast Snapshots renders with an icon 1`] = `
-.emotion-12 {
   position: relative;
-  width: 360px;
+  width: 440px;
   -webkit-animation: animation-221pkp;
   animation: animation-221pkp;
   -webkit-animation-duration: 150ms;
@@ -778,17 +627,7 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   transform-origin: top center;
 }
 
-.emotion-11 {
-  background-color: #ffffff;
-  border: 1px solid #ced3d9;
-  border-radius: 3px;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
-  padding: 16px;
-  width: 360px;
-}
-
-.emotion-10 {
+.emotion-4 {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -796,51 +635,10 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
-.emotion-5 {
-  display: inline-block;
-  margin-right: 16px;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-5 svg {
-  display: block;
-}
-
-.emotion-5 .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-fill {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5:hover .wd-icon-accent {
-  fill: #43c463;
-}
-
-.emotion-5 .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-5:hover .wd-icon-background {
-  fill: transparent;
-}
-
-.emotion-6 {
-  word-break: break-word;
-  word-wrap: break-word;
-}
-
 .emotion-3 {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 12px;
+  top: 12px;
 }
 
 .emotion-1 {
@@ -868,9 +666,9 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   transition: all 120ms linear;
   border-width: 0px;
   background-color: transparent;
-  margin: -6px;
-  width: 32px;
-  height: 32px;
+  margin: -8px;
+  width: 40px;
+  height: 40px;
 }
 
 .emotion-1:hover:active {
@@ -959,11 +757,6 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   box-shadow: 0 0 0 0px #ffffff,0 0 0 2px #0875e1;
 }
 
-.emotion-1 span svg {
-  width: 20px;
-  height: 20px;
-}
-
 .emotion-0 {
   display: inline-block;
 }
@@ -996,7 +789,61 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   fill: transparent;
 }
 
-.emotion-8 {
+.emotion-5 {
+  background-color: #ffffff;
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 32px;
+  width: 440px;
+}
+
+<div
+  className="emotion-7 emotion-8"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-6"
+    role="dialog"
+    width="440px"
+  >
+    <div
+      className="emotion-3"
+    >
+      <button
+        className="emotion-1 emotion-2"
+        onClick={[MockFunction]}
+      >
+        <span
+          className="emotion-0"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
+            }
+          }
+        />
+      </button>
+    </div>
+    <div
+      className="emotion-5"
+      width="440px"
+    >
+      <div
+        className="emotion-4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders Modal with transformOrigin 1`] = `
+.emotion-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1005,61 +852,231 @@ exports[`Toast Snapshots renders with an icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 13px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 440px;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.emotion-0 {
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #494949;
   font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
-  margin-right: 24px;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 0px;
+  width: 440px;
 }
 
 <div
-  className="emotion-12"
-  role="dialog"
-  width={360}
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
 >
   <div
-    className="emotion-3"
-  >
-    <button
-      className="emotion-1 emotion-2"
-      onClick={[MockFunction]}
-    >
-      <span
-        className="emotion-0"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-x wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M5.996 4.582a.5.5 0 0 0-.717-.003l-.7.7a.504.504 0 0 0 .003.717L10.586 12l-6.004 6.004a.5.5 0 0 0-.003.717l.7.7c.197.197.514.2.717-.003L12 13.414l6.004 6.004a.5.5 0 0 0 .717.003l.7-.7a.504.504 0 0 0-.003-.717L13.414 12l6.004-6.004a.5.5 0 0 0 .003-.717l-.7-.7a.504.504 0 0 0-.717.003L12 10.586 5.996 4.582z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-          }
-        }
-      />
-    </button>
-  </div>
-  <div
-    className="emotion-11"
-    width={360}
+    className="emotion-2"
+    role="dialog"
+    width="440px"
   >
     <div
-      className="emotion-10"
+      className="emotion-1"
+      width="440px"
     >
       <div
-        className="emotion-8 emotion-9"
-        onClose={[MockFunction]}
+        className="emotion-0"
       >
-        <span
-          className="emotion-4 emotion-5"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" class=\\"wd-icon-check wd-icon\\" focusable=\\"false\\" role=\\"presentation\\" viewBox=\\"0 0 24 24\\"><g fill-rule=\\"evenodd\\" class=\\"wd-icon-container\\"><path d=\\"M8.657 15.85l10.26-10.26a.49.49 0 0 1 .703.01l.7.7a.495.495 0 0 1 .01.704L9.005 18.33a.488.488 0 0 1-.692.002L8.3 18.32l-4.946-4.946a.495.495 0 0 1 .003-.711l.7-.7a.507.507 0 0 1 .711-.004l3.889 3.89z\\" class=\\"wd-icon-fill\\"/></g></svg>",
-            }
-          }
-        />
-        <div
-          className="emotion-6 emotion-7"
-        >
-          Success
-        </div>
+        <span>
+          hello world
+        </span>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders Modal without close icon 1`] = `
+.emotion-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 440px;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.emotion-0 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 0px;
+  width: 440px;
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-2"
+    role="dialog"
+    width="440px"
+  >
+    <div
+      className="emotion-1"
+      width="440px"
+    >
+      <div
+        className="emotion-0"
+      >
+        <span>
+          hello world
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal Snapshots renders as expected 1`] = `
+.emotion-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  -webkit-animation-name: animation-h2u5si;
+  animation-name: animation-h2u5si;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 440px;
+  -webkit-animation: animation-221pkp;
+  animation: animation-221pkp;
+  -webkit-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  border: 1px solid #ced3d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 440px;
+}
+
+.emotion-0 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #494949;
+  font-family: "Roboto","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-2"
+    role="dialog"
+    width="440px"
+  >
+    <div
+      className="emotion-1"
+      width="440px"
+    >
+      <div
+        className="emotion-0"
+      />
     </div>
   </div>
 </div>
