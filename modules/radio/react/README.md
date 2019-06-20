@@ -45,6 +45,17 @@ import FormField from '@workday/canvas-kit-react-form-field';
 </FormField>;
 ```
 
+If use inside a FormField doesn't work for your use case, you can use the `aria-labelledBy`
+attribute.
+
+```tsx
+import * as React from 'react';
+import Radio from '@workday/canvas-kit-react-radio';
+<label id="123">Label</label>
+...
+<Radio checked={checked} onChange={this.handleCheck} aria-labelledBy="123" />;
+```
+
 ## Static Properties
 
 > None
@@ -78,7 +89,7 @@ Default: `false`
 > The HTML attribute `id` for the underlying radio input and label component. This is required if
 > `label` is defined.
 
----
+Default: A uniquely generated id
 
 #### `label: string`
 

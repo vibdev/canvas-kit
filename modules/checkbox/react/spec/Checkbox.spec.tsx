@@ -1,6 +1,9 @@
 import * as React from 'react';
 import {mount} from 'enzyme';
 import Checkbox from '../lib/Checkbox';
+import ReactDOMServer from 'react-dom/server';
+import {axe} from 'jest-axe';
+import FormField from '@workday/canvas-kit-react-form-field';
 
 describe('Checkbox', () => {
   const cb = jest.fn();
@@ -39,5 +42,26 @@ describe('Checkbox', () => {
 
     expect(cb.mock.calls.length).toBe(1);
     component.unmount();
+  });
+});
+
+describe('Checkbox Accessibility', () => {
+  test('Checkbox should pass axe DOM accessibility guidelines', async () => {
+    const html = ReactDOMServer.renderToString(<Checkbox id={'123'} label={'Label'} />);
+    expect(await axe(html)).toHaveNoViolations();
+  });
+
+  test('Checkbox without a defined id should pass axe DOM accessibility guidelines', async () => {
+    const html = ReactDOMServer.renderToString(<Checkbox label={'Label'} />);
+    expect(await axe(html)).toHaveNoViolations();
+  });
+
+  test('Checkbox wrapped in a FormField should pass axe DOM accessibility guidelines', async () => {
+    const html = ReactDOMServer.renderToString(
+      <FormField label="My Field" inputId="my-checkbox-field">
+        <Checkbox disabled={false} checked={true} id="my-checkbox-field" />;
+      </FormField>
+    );
+    expect(await axe(html)).toHaveNoViolations();
   });
 });

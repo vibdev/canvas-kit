@@ -38,10 +38,10 @@ class TooltipWrapper extends React.Component<{}, TooltipWrapperState> {
           onFocus={this.open}
           onBlur={this.close}
         >
-          <IconButton buttonType={IconButton.Types.Default} icon={xIcon} />
+          <IconButton buttonType={IconButton.Types.Default} icon={xIcon} aria-labelledBy={'123'} />
         </div>
         <Popper open={open} anchorEl={this.state.anchorEl} placement={'top'}>
-          <Tooltip>Close</Tooltip>
+          <Tooltip id={'123'}>Close</Tooltip>
         </Popper>
       </div>
     );

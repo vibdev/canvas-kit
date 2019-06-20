@@ -242,8 +242,10 @@ exports[`Popup Snapshots renders Popup with children elements 1`] = `
     className="emotion-3 emotion-4"
   >
     <button
+      aria-label="Close"
       className="emotion-1 emotion-2"
       onClick={[MockFunction]}
+      title="Close"
     >
       <span
         className="emotion-0"
@@ -462,8 +464,10 @@ exports[`Popup Snapshots renders Popup with close icon 1`] = `
     className="emotion-3 emotion-4"
   >
     <button
+      aria-label="Close"
       className="emotion-1 emotion-2"
       onClick={[MockFunction]}
+      title="Close"
     >
       <span
         className="emotion-0"
@@ -678,8 +682,10 @@ exports[`Popup Snapshots renders Popup with different padding 1`] = `
     className="emotion-3 emotion-4"
   >
     <button
+      aria-label="Close"
       className="emotion-1 emotion-2"
       onClick={[MockFunction]}
+      title="Close"
     >
       <span
         className="emotion-0"
