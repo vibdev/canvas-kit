@@ -55,7 +55,8 @@ import {Button} from '@workday/canvas-kit-react-button';
   <IconButton
     icon={notificationsIcon}
     buttonType={IconButton.Types.Default}
-    altText="Notifications"
+    title="Notifications"
+    aria-label="Notifications"
   />
   <Avatar
     onClick={() => {
