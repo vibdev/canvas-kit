@@ -52,6 +52,7 @@
     "@workday/canvas-kit-react-icon": "^1.7.10",
     "@workday/canvas-kit-react-layout": "^0.1.21",
     "@workday/canvas-kit-react-loading-animation": "^0.4.17",
+    "@workday/canvas-kit-react-modal": "^0.0.2",
     "@workday/canvas-kit-react-page-header": "^0.2.36",
     "@workday/canvas-kit-react-popup": "^0.2.20",
     "@workday/canvas-kit-react-radio": "^0.2.9",

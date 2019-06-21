@@ -3310,19 +3310,6 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.4.tgz#3714a1a955055386a2b70cc05852162b1e056bf2"
   integrity sha1-NxShqVUFU4aitwzAWFIWKx4Fa/I=
 
-"@workday/canvas-kit-react-button@^0.20.7":
-  version "0.20.21"
-  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-kit-react-button/-/@workday/canvas-kit-react-button-0.20.21.tgz#9a53417615268a0a213769d6461a986fe2946404"
-  integrity sha1-mlNBdhUmigohN2nWRhqYb+KUZAQ=
-  dependencies:
-    "@workday/canvas-kit-react-common" "^0.7.0"
-    "@workday/canvas-kit-react-core" "^1.10.2"
-    "@workday/canvas-kit-react-icon" "^1.7.1"
-    "@workday/canvas-system-icons-web" "^1.0.1"
-    "@workday/design-assets-types" "^0.2.3"
-    emotion "^9.2.6"
-    react-emotion "^9.2.6"
-
 "@workday/canvas-space-web@^0.15.5":
   version "0.15.5"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.5.tgz#012f4c8d056132d5e22f4d5ead0266d01765d4aa"
