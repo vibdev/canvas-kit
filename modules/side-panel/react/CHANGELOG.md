@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-side-panel/compare/@workday/canvas-kit-react-side-panel@0.0.2...@workday/canvas-kit-react-side-panel@0.0.3) (2019-06-21)
+
+
+### Bug Fixes
+
+* **side-panel:** update button dep ([fa57a0a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-side-panel/commits/fa57a0a))
+
+
+
+
+
 ## [0.0.2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-side-panel/compare/@workday/canvas-kit-react-side-panel@0.0.1...@workday/canvas-kit-react-side-panel@0.0.2) (2019-06-18)
 
 
