@@ -229,3 +229,11 @@ Default: `false`
 > Allow you to disable a menu item so it is not clickable.
 
 Default: `false`
+
+---
+
+#### `role: string`
+
+> Allow you to override the role of the item, e.g. you can use this element as a option in a combobox.
+
+Default: `menuItem`

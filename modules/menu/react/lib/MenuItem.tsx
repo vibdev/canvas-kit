@@ -21,6 +21,8 @@ export interface MenuItemProps {
   hasDivider?: boolean;
   isDisabled?: boolean;
   isFocused?: boolean;
+  role?: string;
+  useAriaSelected?: boolean;
 }
 
 const Item = styled('li')<Pick<MenuItemProps, 'isDisabled' | 'isFocused'>>(
@@ -42,12 +44,10 @@ const Item = styled('li')<Pick<MenuItemProps, 'isDisabled' | 'isFocused'>>(
   ({isFocused, isDisabled}) => {
     if (isFocused) {
       return {
-        '[role="menu"]:focus > &': {
-          backgroundColor: isDisabled ? colors.blueberry200 : commonColors.focusBackground,
-          color: typeColors.inverse,
-          'span .wd-icon-fill': {
-            fill: iconColors.inverse,
-          },
+        backgroundColor: isDisabled ? colors.blueberry200 : commonColors.focusBackground,
+        color: typeColors.inverse,
+        'span .wd-icon-fill': {
+          fill: iconColors.inverse,
         },
         [`[data-whatinput='mouse'] &,
           [data-whatinput='touch'] &,
@@ -115,6 +115,10 @@ const SecondaryStyledSystemIcon = styled(StyledSystemIcon)({
 });
 
 export default class MenuItem extends React.Component<MenuItemProps> {
+  static defaultProps = {
+    role: 'menuItem',
+  };
+
   render(): React.ReactNode {
     const {
       onClick,
@@ -125,6 +129,7 @@ export default class MenuItem extends React.Component<MenuItemProps> {
       isFocused,
       label,
       hasDivider,
+      useAriaSelected,
       ...otherProps
     } = this.props;
     const iconProp: SystemIconProps = {
@@ -139,13 +144,13 @@ export default class MenuItem extends React.Component<MenuItemProps> {
       <>
         {hasDivider && <Divider />}
         <Item
-          role="menuItem"
           tabIndex={-1}
           aria-label={label}
           onClick={event => this.handleClick(event)}
           aria-disabled={!!isDisabled}
           isDisabled={!!isDisabled}
           isFocused={!!isFocused}
+          aria-selected={useAriaSelected && !!isFocused}
           {...otherProps}
         >
           {icon && <StyledSystemIcon {...iconProp} />}
