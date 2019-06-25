@@ -2,8 +2,6 @@
 
 A set of components to create headers for various Workday applications and sites.
 
-For a full suite of examples, have a look at the [Header Stories](./stories.tsx).
-
 ## Coming Soon
 
 - Mobile Expanded Nav
