@@ -42,7 +42,26 @@ const Item = styled('li')<Pick<MenuItemProps, 'isDisabled' | 'isFocused'>>(
     },
   },
   ({isFocused, isDisabled}) => {
-    if (isFocused) {
+    if (!isFocused && !isDisabled) {
+      return {
+        backgroundColor: 'inherit',
+        '&:hover': {
+          backgroundColor: commonColors.hoverBackground,
+          color: colors.blackPepper300,
+          '.wd-icon-fill': {
+            fill: iconColors.hover,
+          },
+        },
+      }
+    } else if (isDisabled && !isFocused) {
+      return {
+        color: colors.licorice100,
+        cursor: 'default',
+        '&:hover .wd-icon-fill': {
+          fill: iconColors.disabled,
+        },
+      };
+    } else { // Is focused or focused and disabled
       return {
         backgroundColor: isDisabled ? colors.blueberry200 : commonColors.focusBackground,
         color: typeColors.inverse,
@@ -62,25 +81,6 @@ const Item = styled('li')<Pick<MenuItemProps, 'isDisabled' | 'isFocused'>>(
           },
           '.wd-icon-fill': {
             fill: iconColors.standard,
-          },
-        },
-      };
-    } else if (isDisabled) {
-      return {
-        color: colors.licorice100,
-        cursor: 'default',
-        '&:hover .wd-icon-fill, & .wd-icon-fill': {
-          fill: iconColors.disabled,
-        },
-      };
-    } else {
-      return {
-        backgroundColor: 'inherit',
-        '&:hover': {
-          backgroundColor: commonColors.hoverBackground,
-          color: colors.blackPepper300,
-          '.wd-icon-fill': {
-            fill: iconColors.hover,
           },
         },
       };
@@ -114,6 +114,36 @@ const SecondaryStyledSystemIcon = styled(StyledSystemIcon)({
   justifyContent: `flex-end`,
 });
 
+let iconProps: SystemIconProps | null = null;
+let secondaryIconProps: SystemIconProps | null = null;
+const setIconProps = (
+  icon?: CanvasSystemIcon,
+  isDisabled?: boolean,
+  isFocused?: boolean
+): SystemIconProps | null => {
+  if (!icon) {
+    return null;
+  }
+  let props: SystemIconProps = {
+    icon: icon,
+    size: iconSize,
+  };
+  if (isDisabled) {
+    props = {
+      ...props,
+      fillHover: iconColors.disabled,
+      fill: iconColors.disabled,
+    };
+  }
+  if (isFocused) {
+    props = {
+      ...props,
+      fillHover: iconColors.inverse,
+    };
+  }
+  return props;
+};
+
 export default class MenuItem extends React.Component<MenuItemProps> {
   static defaultProps = {
     role: 'menuItem',
@@ -132,14 +162,10 @@ export default class MenuItem extends React.Component<MenuItemProps> {
       useAriaSelected,
       ...otherProps
     } = this.props;
-    const iconProp: SystemIconProps = {
-      icon: this.props.icon!,
-      size: iconSize,
-    };
-    const secondaryIconProp: SystemIconProps = {
-      icon: this.props.secondaryIcon!,
-      size: iconSize,
-    };
+
+    iconProps = setIconProps(icon, isDisabled, isFocused);
+    secondaryIconProps = setIconProps(secondaryIcon, isDisabled, isFocused);
+
     return (
       <>
         {hasDivider && <Divider />}
@@ -153,9 +179,9 @@ export default class MenuItem extends React.Component<MenuItemProps> {
           aria-selected={useAriaSelected && !!isFocused}
           {...otherProps}
         >
-          {icon && <StyledSystemIcon {...iconProp} />}
+          {icon && iconProps && <StyledSystemIcon {...iconProps} />}
           <LabelContainer>{children}</LabelContainer>
-          {secondaryIcon && <SecondaryStyledSystemIcon {...secondaryIconProp} />}
+          {secondaryIcon && secondaryIconProps && <SecondaryStyledSystemIcon {...secondaryIconProps} />}
         </Item>
       </>
     );
