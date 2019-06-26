@@ -1,7 +1,7 @@
 ---
 name: 💬 Questions / Help
 label: 'question'
-about: 
+about: Please note that this issue tracker is not a help form and this issue will be closed
 ---
 
 ## 💬 Questions and Help
