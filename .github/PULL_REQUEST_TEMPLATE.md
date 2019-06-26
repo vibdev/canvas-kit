@@ -23,4 +23,4 @@
 
 ## Additional References
 
-<!-- Upload screenshots of the final component, add references to component specification files from Sketch, or any other artifacts that would help a reviewer understand the choices you made in the PR. -->
+<!-- Upload screenshots of the final component or any other artifacts that would help a reviewer understand the choices you made in the PR. -->
