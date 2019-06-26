@@ -17,7 +17,7 @@
 - [ ] code follows the
       [style guide](https://ghe.megaleo.com/UIC/wd-components/blob/master/docs/STYLEGUIDE.md)
 - [ ] code has been documented and, if applicable, usage described in README.md
-- [ ] module has been added to `canvas-kit-react`, if applicable
+- [ ] module has been added to `canvas-kit-react` and/or `canvas-kit-css` universal modules, if applicable
 - [ ] design approved final implementation 
 - [ ] a11y approved final implementation
 
