@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.28](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.27...@workday/canvas-kit-react-menu@0.0.28) (2019-06-26)
+
+
+### Bug Fixes
+
+* **menu:** Allow aria role of menu item to be overridden for use in comboboxes etc ([cbbf163](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/cbbf163))
+* **menu:** Fix broken links in readme ([b27f0c2](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/b27f0c2))
+* **menu:** Menu state bugs [#354](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/issues/354) ([93cf3b5](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/93cf3b5))
+* **menu:** Update props to allow for standard html attributes ([f8879d9](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/f8879d9))
+
+
+
+
+
 ## [0.0.27](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.26...@workday/canvas-kit-react-menu@0.0.27) (2019-06-20)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-menu
