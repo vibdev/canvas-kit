@@ -6,7 +6,6 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "ignoreChanges": ["modules/**/css/**"],
       "logLevel": "warn",
       "message": "chore(release): Publish [ci skip]",
       "registry": "https://artifactory.workday.com/artifactory/api/npm/npm-virtual",
