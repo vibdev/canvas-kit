@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-menu",
-  "version": "0.0.28",
+  "version": "0.1.0",
   "description": "A container for navigation or action items",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",

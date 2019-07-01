@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.27...@workday/canvas-kit-react-header@0.6.0) (2019-07-01)
+
+
+### Bug Fixes
+
+* **header:** Allow overflow on header for dropdowns ([bfa9f7a](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/bfa9f7a))
+* **header:** Fix broken links in readme ([802c534](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/802c534))
+* **header:** Fix only spread props to form element ([908ff64](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/908ff64))
+
+
+### Features
+
+* **header:** Allow users to pass in a search input change callback and typeahead listbox ([583acba](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/commits/583acba))
+
+
+
+
+
 ## [0.5.27](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-header/compare/@workday/canvas-kit-react-header@0.5.26...@workday/canvas-kit-react-header@0.5.27) (2019-06-20)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-header

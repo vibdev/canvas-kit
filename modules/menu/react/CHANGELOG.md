@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.28...@workday/canvas-kit-react-menu@0.1.0) (2019-07-01)
+
+
+### Features
+
+* **header:** Allow users to pass in a search input change callback and typeahead listbox ([583acba](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/commits/583acba))
+
+
+
+
+
 ## [0.0.28](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-menu/compare/@workday/canvas-kit-react-menu@0.0.27...@workday/canvas-kit-react-menu@0.0.28) (2019-06-26)
 
 
