@@ -3310,6 +3310,20 @@
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-depth-web/-/@workday/canvas-depth-web-0.16.4.tgz#3714a1a955055386a2b70cc05852162b1e056bf2"
   integrity sha1-NxShqVUFU4aitwzAWFIWKx4Fa/I=
 
+"@workday/canvas-kit-react-menu@^0.0.28":
+  version "0.0.28"
+  resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-kit-react-menu/-/@workday/canvas-kit-react-menu-0.0.28.tgz#85d2ddc5eae04ad4284a6b8d6862b592764b3b5b"
+  integrity sha1-hdLdxergStQoSmuNaGK1knZLO1s=
+  dependencies:
+    "@workday/canvas-kit-react-card" "^0.3.24"
+    "@workday/canvas-kit-react-common" "^0.7.8"
+    "@workday/canvas-kit-react-core" "^1.10.6"
+    "@workday/canvas-kit-react-icon" "^1.7.10"
+    "@workday/design-assets-types" "^0.2.3"
+    emotion "^9.2.12"
+    react-emotion "^9.2.12"
+    uuid "^3.3.2"
+
 "@workday/canvas-space-web@^0.15.5":
   version "0.15.5"
   resolved "https://artifactory.workday.com/artifactory/api/npm/npm-virtual/@workday/canvas-space-web/-/@workday/canvas-space-web-0.15.5.tgz#012f4c8d056132d5e22f4d5ead0266d01765d4aa"

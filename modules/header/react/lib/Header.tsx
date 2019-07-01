@@ -8,6 +8,7 @@ import {HeaderTheme, HeaderVariant, HeaderHeight} from './shared/types';
 import {IconButton, IconButtonProps} from '@workday/canvas-kit-react-button';
 import {SystemIcon, SystemIconProps} from '@workday/canvas-kit-react-icon';
 import {justifyIcon} from '@workday/canvas-system-icons-web';
+import {MenuItemProps} from '@workday/canvas-kit-react-menu';
 import throttle from 'lodash/throttle';
 import {makeMq} from '@workday/canvas-kit-react-common';
 
@@ -49,6 +50,14 @@ export interface HeaderProps {
    */
   onSearchSubmit?: (query: string) => void;
   /**
+   * An function that gets called and passed the current input value when the search form value changes
+   */
+  onSearchInputChange?: (query: string) => void;
+  /**
+   * An array of menu items to show under the search bar, primarily used for autocompletion of queries
+   */
+  searchAutocompleteItems?: React.ReactElement<MenuItemProps>[];
+  /**
    * An object that allows for custom specified breakpoints (sm, md, lg)
    */
   breakpoints: {
@@ -61,6 +70,10 @@ export interface HeaderProps {
    * An event handler function that gets called when the screen size changes to a different breakpoint key
    */
   onBreakpointChange?: (key: string | number) => void;
+  /**
+   * Custom id for the search autocomplete accessibility
+   */
+  accessibleId?: string;
 }
 
 export interface HeaderState {
@@ -71,7 +84,6 @@ const childrenSpacing = spacing.s;
 
 const HeaderShell = styled('div')<HeaderProps>(
   {
-    overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
     boxSizing: 'border-box',
@@ -439,7 +451,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
-    const {onBreakpointChange, onMenuClick, onSearchSubmit, ...props} = this.props;
+    const {
+      onBreakpointChange,
+      onMenuClick,
+      onSearchSubmit,
+      onSearchInputChange,
+      searchAutocompleteItems,
+      ...props
+    } = this.props;
 
     /* Push everything to the right if:
        - on tablet and mobile screens
@@ -478,10 +497,13 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         {onSearchSubmit && (
           <Search
             onSearchSubmit={onSearchSubmit}
+            onValueChange={onSearchInputChange}
+            autocompleteItems={searchAutocompleteItems}
             rightAlign={!this.props.children}
             themeColor={this.props.themeColor}
             collapse={collapseSearch}
             placeholder="Search"
+            accessibleId={this.props.accessibleId}
           />
         )}
         <ChildrenSlot {...props} centeredNav={centeredNav}>

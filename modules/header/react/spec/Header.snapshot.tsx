@@ -84,14 +84,14 @@ describe('Dub Header Snapshots', () => {
   });
 
   test('renders a header with a search bar', () => {
-    const tree = renderer.create(<Header onSearchSubmit={cb} />).toJSON();
+    const tree = renderer.create(<Header accessibleId={'snap'} onSearchSubmit={cb} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('renders a header with content with a search bar', () => {
     const tree = renderer
       .create(
-        <Header onSearchSubmit={cb}>
+        <Header accessibleId={'snap'} onSearchSubmit={cb}>
           <IconButton icon={notificationsIcon} />
         </Header>
       )
@@ -178,7 +178,7 @@ describe('Full Header Snapshots', () => {
 
   test('renders a header with a search bar', () => {
     const tree = renderer
-      .create(<Header variant={Header.Variant.Full} onSearchSubmit={cb} />)
+      .create(<Header accessibleId={'snap'} variant={Header.Variant.Full} onSearchSubmit={cb} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -186,7 +186,12 @@ describe('Full Header Snapshots', () => {
   test('renders a blue header with a search bar and no children', () => {
     const tree = renderer
       .create(
-        <Header variant={Header.Variant.Full} themeColor={Header.Theme.Blue} onSearchSubmit={cb} />
+        <Header
+          accessibleId={'snap'}
+          variant={Header.Variant.Full}
+          themeColor={Header.Theme.Blue}
+          onSearchSubmit={cb}
+        />
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -195,7 +200,12 @@ describe('Full Header Snapshots', () => {
   test('renders a header with content with a search bar', () => {
     const tree = renderer
       .create(
-        <Header variant={Header.Variant.Full} themeColor={Header.Theme.Blue} onSearchSubmit={cb}>
+        <Header
+          accessibleId={'snap'}
+          variant={Header.Variant.Full}
+          themeColor={Header.Theme.Blue}
+          onSearchSubmit={cb}
+        >
           <IconButton icon={notificationsIcon} />
         </Header>
       )
@@ -209,6 +219,7 @@ describe('Full Header Snapshots', () => {
     const tree = renderer
       .create(
         <Header
+          accessibleId={'snap'}
           brandUrl={'http://test'}
           onSearchSubmit={() => {
             return;

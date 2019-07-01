@@ -1,15 +1,25 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import uuid from 'uuid/v4';
 import {CSSObject} from 'create-emotion';
 import {CSSTransition} from 'react-transition-group';
 import {HeaderHeight, HeaderTheme} from '../shared/types';
-import {colors, spacing, spacingNumbers, type} from '@workday/canvas-kit-react-core';
+import {
+  colors,
+  depth,
+  spacing,
+  spacingNumbers,
+  type,
+  commonColors,
+} from '@workday/canvas-kit-react-core';
 import {focusRing} from '@workday/canvas-kit-react-common';
 import {SystemIcon} from '@workday/canvas-kit-react-icon';
 import {IconButton} from '@workday/canvas-kit-react-button';
+import {MenuItemProps} from '@workday/canvas-kit-react-menu';
+import {Card} from '@workday/canvas-kit-react-card';
 import {searchIcon, xIcon, xSmallIcon} from '@workday/canvas-system-icons-web';
 
-export type SearchProps = {
+export interface SearchProps extends React.HTMLAttributes<HTMLFormElement> {
   /**
    * The theme of the header the search input is being rendered in
    */
@@ -34,18 +44,32 @@ export type SearchProps = {
    * An function that gets called and passed the current input value when the search form is submitted
    */
   onSearchSubmit?: (query: string) => void;
-};
+  /**
+   * An function that gets called and passed the current input value when the search form value changes
+   */
+  onValueChange?: (query: string) => void;
+  /**
+   * An array of menu items to show under the search bar, primarily used for autocompletion of queries
+   */
+  autocompleteItems?: React.ReactElement<MenuItemProps>[];
+  /**
+   * Custom id for the search autocomplete accessibility
+   */
+  accessibleId: string;
+}
 
 export interface SearchState {
   mobileToggle: boolean;
   value: string;
   focused: boolean;
   hovered: boolean;
+  showingAutocomplete: boolean;
+  selectedAutocompleteIndex: number | null;
 }
 
 const mobileTransitionDuration = 250;
 
-const SearchContainer = styled('form')<SearchProps>(
+const SearchContainer = styled('form')<Pick<SearchProps, 'rightAlign' | 'collapse'>>(
   {
     position: 'relative',
     marginLeft: spacing.m,
@@ -91,20 +115,50 @@ const SearchContainer = styled('form')<SearchProps>(
   }
 );
 
-const SearchInput = styled('input')<SearchProps>(
+const accessibleHide: CSSObject = {
+  clip: 'rect(1px, 1px, 1px, 1px)', // Deprecated but still used by most browsers, clip-path will be taking its place soon.
+  clipPath: 'polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px)',
+  position: 'absolute',
+  overflow: 'hidden',
+  wordWrap: 'normal',
+  height: '1px',
+  width: '1px',
+  margin: '-1px',
+  padding: 0,
+  border: 0,
+};
+
+const Label = styled('label')({
+  ...accessibleHide,
+});
+
+const Status = styled('div')({
+  ...accessibleHide,
+});
+
+const searchHeight = 40;
+const searchWidth: CSSObject = {
+  maxWidth: '480px',
+  minWidth: spacingNumbers.xs * 10,
+  width: '100%',
+};
+const searchWidthSmall = {
+  maxWidth: 'unset',
+  width: `calc(100% - ${spacing.l} - ${spacing.xl})`,
+};
+const SearchInput = styled('input')<Pick<SearchProps, 'themeColor' | 'collapse'>>(
   type.body,
   {
     padding: spacing.xs,
     paddingLeft: spacing.xl,
-    maxWidth: '480px',
-    minWidth: spacingNumbers.xs * 10,
-    width: '100%',
-    height: '40px',
+    height: `${searchHeight}px`,
+    ...searchWidth,
     borderRadius: '4px',
     boxSizing: 'border-box',
     border: 'none',
     WebkitAppearance: 'none',
     transition: 'background 150ms',
+    zIndex: 2,
     '&::-webkit-search-cancel-button': {
       display: 'none',
     },
@@ -136,8 +190,7 @@ const SearchInput = styled('input')<SearchProps>(
           background: 'transparent',
           padding: `${spacing.xs} 0`,
           margin: `${spacing.xs} ${spacing.s}`,
-          maxWidth: 'unset',
-          width: `calc(100% - ${spacing.l} - ${spacing.xl})`,
+          ...searchWidthSmall,
           '&::-webkit-search-cancel-button': {
             display: 'none',
           },
@@ -170,6 +223,7 @@ const SearchReset = styled('span')<Pick<SearchState, 'value'>>(
     marginLeft: -(24 + 8),
     marginRight: 8,
     width: 24,
+    zIndex: 3,
     '&:hover': {
       cursor: 'pointer',
     },
@@ -179,66 +233,223 @@ const SearchReset = styled('span')<Pick<SearchState, 'value'>>(
   })
 );
 
+const MenuContainer = styled(Card)<Pick<SearchProps, 'collapse'>>(
+  {
+    position: 'absolute',
+    zIndex: 1,
+    left: 0,
+    top: `${searchHeight}px`,
+    borderRadius: '0 0 3px 3px',
+    background: commonColors.background,
+    border: `none`,
+    ...searchWidth,
+  },
+  ({collapse}) => {
+    if (collapse) {
+      return {
+        marginTop: spacing.m,
+      };
+    } else {
+      return {};
+    }
+  }
+);
+
+const SearchIcon = styled(SystemIcon)({
+  zIndex: 3,
+});
+
+const Autocomplete = styled('ul')({
+  padding: 0,
+  margin: `${spacing.xxs} 0`,
+});
+
+const listBoxIdPart = `listbox`;
+const labelIdPart = `label`;
+const optionIdPart = `option`;
+type FormAttributes = React.FormHTMLAttributes<HTMLFormElement>;
+type InputAttributes = React.InputHTMLAttributes<HTMLInputElement>;
+
+const buildAutocompleteMenu = (
+  id: string,
+  showMenu: boolean,
+  listItems: React.ReactElement<MenuItemProps>[],
+  listItemCallback: (e: React.SyntheticEvent, itemProps: MenuItemProps) => void,
+  selectedIndex: number | null,
+  isCollapsed: boolean
+): React.ReactNode | false =>
+  showMenu && (
+    <MenuContainer collapse={isCollapsed} padding={spacing.zero} depth={depth[1]}>
+      <Autocomplete
+        role="listbox"
+        id={`${id}-${listBoxIdPart}`}
+        aria-labelledby={`${id}-${labelIdPart}`}
+      >
+        {listItems.map((listboxItem: React.ReactElement<MenuItemProps>, index) => (
+          <React.Fragment key={index}>
+            {React.cloneElement(listboxItem, {
+              id: `${id}-${optionIdPart}-${index}`,
+              role: 'option',
+              isFocused: selectedIndex === index,
+              'aria-selected': selectedIndex === index,
+              onClick: (event: React.MouseEvent) => {
+                event.preventDefault();
+                listItemCallback(event, listboxItem.props);
+              },
+            })}
+          </React.Fragment>
+        ))}
+      </Autocomplete>
+    </MenuContainer>
+  );
+
 export class Search extends React.Component<SearchProps, SearchState> {
   static defaultProps = {
     themeColor: HeaderTheme.White,
     headerHeight: HeaderHeight.Small,
     placeholder: 'Search',
+    accessibleId: `header-search-box-${uuid()}`,
   };
 
   private inputRef: React.RefObject<HTMLInputElement>;
+  private formRef: React.RefObject<HTMLFormElement>;
 
   constructor(props: SearchProps) {
     super(props);
     this.inputRef = React.createRef();
-    this.onSearchSubmit = this.onSearchSubmit.bind(this);
-    this.openMobileSearch = this.openMobileSearch.bind(this);
-    this.closeMobileSearch = this.closeMobileSearch.bind(this);
-    this.focusInput = this.focusInput.bind(this);
+    this.formRef = React.createRef();
     this.state = {
       mobileToggle: false,
       focused: false,
       hovered: false,
       value: this.props.value ? this.props.value : '',
+      showingAutocomplete:
+        !!this.props.autocompleteItems && this.props.autocompleteItems.length > 0,
+      selectedAutocompleteIndex: null,
     };
   }
 
-  onSearchSubmit(e: React.SyntheticEvent) {
-    e.preventDefault();
-    if (this.props.onSearchSubmit) {
-      this.props.onSearchSubmit(this.inputRef.current!.value);
+  componentDidUpdate(prevProps: SearchProps, prevState: SearchState) {
+    if (this.state.value !== prevState.value && this.props.onValueChange) {
+      this.props.onValueChange(this.state.value);
+    }
+    const listboxOrFocusChanged =
+      this.props.autocompleteItems !== prevProps.autocompleteItems ||
+      this.state.focused !== prevState.focused;
+    if (this.props.autocompleteItems && listboxOrFocusChanged) {
+      this.setState({
+        showingAutocomplete: this.props.autocompleteItems.length > 0 && this.state.focused,
+      });
     }
   }
 
-  openMobileSearch(e: React.SyntheticEvent) {
+  handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    this.setState({showingAutocomplete: false, mobileToggle: false});
+    if (this.props.onSearchSubmit && this.inputRef.current) {
+      this.props.onSearchSubmit(this.inputRef.current.value);
+    }
+  };
+
+  openMobileSearch = (e: React.SyntheticEvent) => {
     this.setState({mobileToggle: true});
-  }
+  };
 
-  closeMobileSearch(e: React.SyntheticEvent) {
+  closeMobileSearch = (e: React.SyntheticEvent) => {
     this.setState({mobileToggle: false});
-  }
+  };
 
-  focusInput() {
-    this.inputRef.current!.focus();
-  }
+  focusInput = () => {
+    if (this.inputRef.current) {
+      this.inputRef.current.focus();
+    }
+  };
 
-  setFocused(focus: boolean) {
-    this.setState({focused: focus});
-  }
+  setFocused = (event: React.FocusEvent) => {
+    if (event.type === 'blur' && this.formRef.current) {
+      let target: EventTarget | null = event.relatedTarget;
+      if (target === null) {
+        // IE11 swaps related and active target before it fires the blur event
+        target = document.activeElement;
+      }
 
-  handleHover(hover: boolean) {
+      if (target && this.formRef.current.contains(target as Element)) {
+        return;
+      }
+    }
+
+    this.setState({focused: event.type === 'focus'});
+  };
+
+  handleHover = (hover: boolean) => {
     this.setState({hovered: hover});
-  }
+  };
 
-  handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    this.setState({value: e.target.value});
+  handleAutocompleteClick = (event: React.SyntheticEvent, menuItemProps: MenuItemProps): void => {
+    if (menuItemProps.isDisabled) {
+      return;
+    }
+    this.setState({showingAutocomplete: false});
+    if (menuItemProps.onClick) {
+      menuItemProps.onClick(event);
+    }
+  };
+
+  handleKeyboardShortcuts = (event: React.KeyboardEvent): void => {
+    if (event.ctrlKey || event.altKey || event.metaKey || !this.props.autocompleteItems) {
+      return;
+    }
+    const currentIndex = this.state.selectedAutocompleteIndex;
+    const autoCompleteItemCount = this.props.autocompleteItems.length;
+    const firstItem = 0;
+    const lastItem = autoCompleteItemCount - 1;
+    let nextIndex = null;
+
+    switch (event.key) {
+      case 'ArrowUp':
+        const upIndex = currentIndex != null ? currentIndex - 1 : lastItem;
+        nextIndex = upIndex < 0 ? lastItem : upIndex;
+        break;
+
+      case 'ArrowDown':
+        const downIndex = currentIndex != null ? currentIndex + 1 : firstItem;
+        nextIndex = downIndex >= autoCompleteItemCount ? firstItem : downIndex;
+        break;
+
+      case 'Escape':
+        this.setState({value: ''});
+        break;
+
+      case 'Enter':
+        if (this.state.selectedAutocompleteIndex != null) {
+          const item = this.props.autocompleteItems[this.state.selectedAutocompleteIndex];
+          this.handleAutocompleteClick(event, item.props);
+          event.stopPropagation();
+          event.preventDefault();
+        }
+        break;
+
+      default:
+    }
+    this.setState({selectedAutocompleteIndex: nextIndex});
+  };
+
+  handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    this.setState({value: event.target.value});
   };
 
   resetSearchInput = (): void => {
     this.setState({value: ''});
+    this.focusInput();
   };
 
-  _renderCollapsed() {
+  buildStatusString = (listCount: number): string => {
+    return `There ${listCount === 1 ? 'is' : 'are'} ${listCount} suggestion${
+      listCount === 1 ? '' : 's'
+    }.`;
+  };
+
+  _renderCollapsed(wrapperProps: FormAttributes, inputProps: InputAttributes) {
     const iconButtonType =
       this.props.themeColor === HeaderTheme.White
         ? IconButton.Types.Default
@@ -255,7 +466,18 @@ export class Search extends React.Component<SearchProps, SearchState> {
       cursor: 'pointer',
     };
 
-    const {onSearchSubmit, ...props} = this.props;
+    const {
+      themeColor,
+      placeholder,
+      value,
+      rightAlign,
+      collapse,
+      onSearchSubmit,
+      onValueChange,
+      autocompleteItems,
+      accessibleId,
+      ...elemProps
+    } = this.props;
 
     return (
       <React.Fragment>
@@ -274,14 +496,33 @@ export class Search extends React.Component<SearchProps, SearchState> {
           mountOnEnter={true}
           unmountOnExit={true}
         >
-          <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
+          <SearchContainer
+            {...elemProps}
+            {...wrapperProps}
+            collapse={collapse}
+            rightAlign={rightAlign}
+            onSubmit={this.handleSubmit}
+            innerRef={this.formRef}
+          >
+            {autocompleteItems && (
+              <Status role="status" aria-live="polite">
+                {this.state.showingAutocomplete && this.buildStatusString(autocompleteItems.length)}
+              </Status>
+            )}
+            <Label htmlFor={`${accessibleId}-${labelIdPart}`}>Search</Label>
             <SearchInput
-              {...props}
+              {...inputProps}
+              placeholder={placeholder}
+              id={`${accessibleId}-${labelIdPart}`}
+              themeColor={themeColor}
+              collapse={collapse}
               type="search"
+              role="search"
               innerRef={this.inputRef}
-              onFocus={this.setFocused.bind(this, true)}
-              onBlur={this.setFocused.bind(this, false)}
+              onFocus={this.setFocused}
+              onBlur={this.setFocused}
               onChange={this.handleSearchInputChange}
+              onKeyDown={this.handleKeyboardShortcuts}
               value={this.state.value}
             />
             <IconButton
@@ -291,6 +532,14 @@ export class Search extends React.Component<SearchProps, SearchState> {
               style={{...iconStyle, ...closeIconStyle}}
               onClick={this.closeMobileSearch}
             />
+            {buildAutocompleteMenu(
+              this.props.accessibleId,
+              this.state.showingAutocomplete,
+              this.props.autocompleteItems || [],
+              this.handleAutocompleteClick,
+              this.state.selectedAutocompleteIndex,
+              !!this.props.collapse
+            )}
           </SearchContainer>
         </CSSTransition>
       </React.Fragment>
@@ -298,47 +547,96 @@ export class Search extends React.Component<SearchProps, SearchState> {
   }
 
   render() {
-    const {onSearchSubmit, ...props} = this.props;
+    const {
+      themeColor,
+      placeholder,
+      value,
+      rightAlign,
+      collapse,
+      onSearchSubmit,
+      onValueChange,
+      autocompleteItems,
+      accessibleId,
+      ...elemProps
+    } = this.props;
 
-    if (props.collapse) {
-      return this._renderCollapsed();
+    let autocompleteWrapperProps: FormAttributes = {};
+    let autocompleteInputProps: InputAttributes = {};
+    if (autocompleteItems) {
+      autocompleteWrapperProps = {
+        role: 'combobox',
+        'aria-haspopup': 'listbox',
+        'aria-owns': `${accessibleId}-${listBoxIdPart}`,
+        'aria-expanded': autocompleteItems && autocompleteItems.length > 0,
+      };
+      autocompleteInputProps = {
+        'aria-autocomplete': 'list',
+        'aria-controls': `${accessibleId}-${listBoxIdPart}`,
+        'aria-activedescendant':
+          this.state.selectedAutocompleteIndex != null
+            ? `${accessibleId}-${optionIdPart}-${this.state.selectedAutocompleteIndex}`
+            : '',
+      };
+    }
+
+    if (collapse) {
+      return this._renderCollapsed(autocompleteWrapperProps, autocompleteInputProps);
     }
 
     const iconColor =
-      this.state.hovered && this.state.focused && props.themeColor === HeaderTheme.White
+      this.state.hovered && this.state.focused && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.hovered && this.state.focused
         ? colors.licorice500
-        : this.state.focused && props.themeColor === HeaderTheme.White
+        : this.state.focused && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.focused
         ? colors.licorice500
-        : this.state.hovered && props.themeColor === HeaderTheme.White
+        : this.state.hovered && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.hovered
         ? colors.frenchVanilla100
-        : props.themeColor === HeaderTheme.White
+        : themeColor === HeaderTheme.White
         ? colors.licorice200
         : colors.frenchVanilla100;
 
     return (
-      <SearchContainer onSubmit={this.onSearchSubmit} {...props}>
-        <SystemIcon
+      <SearchContainer
+        innerRef={this.formRef}
+        onSubmit={this.handleSubmit}
+        collapse={collapse}
+        rightAlign={rightAlign}
+        {...autocompleteWrapperProps}
+        {...elemProps}
+      >
+        <SearchIcon
           icon={searchIcon}
           style={{...iconStyle, pointerEvents: 'none'}}
           color={iconColor}
           colorHover={iconColor}
         />
+        {autocompleteItems && (
+          <Status role="status" aria-live="polite">
+            {this.state.showingAutocomplete && this.buildStatusString(autocompleteItems.length)}
+          </Status>
+        )}
+        <Label htmlFor={`${accessibleId}-${labelIdPart}`}>Search</Label>
         <SearchInput
-          {...props}
+          {...autocompleteInputProps}
+          placeholder={placeholder}
+          id={`${accessibleId}-${labelIdPart}`}
           type="search"
+          role="search"
           value={this.state.value}
           innerRef={this.inputRef}
           onMouseEnter={() => this.handleHover(true)}
           onMouseLeave={() => this.handleHover(false)}
           onChange={this.handleSearchInputChange}
-          onFocus={this.setFocused.bind(this, true)}
-          onBlur={this.setFocused.bind(this, false)}
+          onKeyDown={this.handleKeyboardShortcuts}
+          onFocus={this.setFocused}
+          onBlur={this.setFocused}
+          collapse={collapse}
+          themeColor={themeColor}
         />
         <SearchReset
           aria-label="Reset Search Input"
@@ -346,12 +644,20 @@ export class Search extends React.Component<SearchProps, SearchState> {
           value={this.state.value}
           onClick={this.resetSearchInput}
         >
-          <SystemIcon
+          <SearchIcon
             icon={xSmallIcon}
             color={colors.licorice200}
             colorHover={colors.licorice500}
           />
         </SearchReset>
+        {buildAutocompleteMenu(
+          accessibleId,
+          this.state.showingAutocomplete,
+          autocompleteItems || [],
+          this.handleAutocompleteClick,
+          this.state.selectedAutocompleteIndex,
+          !!collapse
+        )}
       </SearchContainer>
     );
   }
