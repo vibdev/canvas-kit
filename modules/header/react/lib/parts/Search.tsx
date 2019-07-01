@@ -19,7 +19,7 @@ import {MenuItemProps} from '@workday/canvas-kit-react-menu';
 import {Card} from '@workday/canvas-kit-react-card';
 import {searchIcon, xIcon, xSmallIcon} from '@workday/canvas-system-icons-web';
 
-export type SearchProps = {
+export interface SearchProps extends React.HTMLAttributes<HTMLFormElement> {
   /**
    * The theme of the header the search input is being rendered in
    */
@@ -56,7 +56,7 @@ export type SearchProps = {
    * Custom id for the search autocomplete accessibility
    */
   accessibleId: string;
-};
+}
 
 export interface SearchState {
   mobileToggle: boolean;
@@ -69,7 +69,7 @@ export interface SearchState {
 
 const mobileTransitionDuration = 250;
 
-const SearchContainer = styled('form')<SearchProps>(
+const SearchContainer = styled('form')<Pick<SearchProps, 'rightAlign' | 'collapse'>>(
   {
     position: 'relative',
     marginLeft: spacing.m,
@@ -146,7 +146,7 @@ const searchWidthSmall = {
   maxWidth: 'unset',
   width: `calc(100% - ${spacing.l} - ${spacing.xl})`,
 };
-const SearchInput = styled('input')<SearchProps>(
+const SearchInput = styled('input')<Pick<SearchProps, 'themeColor' | 'collapse'>>(
   type.body,
   {
     padding: spacing.xs,
@@ -279,14 +279,12 @@ const buildAutocompleteMenu = (
   isCollapsed: boolean
 ): React.ReactNode | false =>
   showMenu && (
-    <MenuContainer
-      id={`${id}-${listBoxIdPart}`}
-      aria-labelledby={`${id}-${labelIdPart}`}
-      collapse={isCollapsed}
-      padding={spacing.zero}
-      depth={depth[1]}
-    >
-      <Autocomplete role="listbox">
+    <MenuContainer collapse={isCollapsed} padding={spacing.zero} depth={depth[1]}>
+      <Autocomplete
+        role="listbox"
+        id={`${id}-${listBoxIdPart}`}
+        aria-labelledby={`${id}-${labelIdPart}`}
+      >
         {listItems.map((listboxItem: React.ReactElement<MenuItemProps>, index) => (
           <React.Fragment key={index}>
             {React.cloneElement(listboxItem, {
@@ -468,7 +466,18 @@ export class Search extends React.Component<SearchProps, SearchState> {
       cursor: 'pointer',
     };
 
-    const {onSearchSubmit, onValueChange, ...props} = this.props;
+    const {
+      themeColor,
+      placeholder,
+      value,
+      rightAlign,
+      collapse,
+      onSearchSubmit,
+      onValueChange,
+      autocompleteItems,
+      accessibleId,
+      ...elemProps
+    } = this.props;
 
     return (
       <React.Fragment>
@@ -488,22 +497,25 @@ export class Search extends React.Component<SearchProps, SearchState> {
           unmountOnExit={true}
         >
           <SearchContainer
-            {...props}
+            {...elemProps}
             {...wrapperProps}
+            collapse={collapse}
+            rightAlign={rightAlign}
             onSubmit={this.handleSubmit}
             innerRef={this.formRef}
           >
-            {props.autocompleteItems && (
+            {autocompleteItems && (
               <Status role="status" aria-live="polite">
-                {this.state.showingAutocomplete &&
-                  this.buildStatusString(props.autocompleteItems.length)}
+                {this.state.showingAutocomplete && this.buildStatusString(autocompleteItems.length)}
               </Status>
             )}
-            <Label htmlFor={`${props.accessibleId}-${labelIdPart}`}>Search</Label>
+            <Label htmlFor={`${accessibleId}-${labelIdPart}`}>Search</Label>
             <SearchInput
-              {...props}
               {...inputProps}
-              id={`${props.accessibleId}-${labelIdPart}`}
+              placeholder={placeholder}
+              id={`${accessibleId}-${labelIdPart}`}
+              themeColor={themeColor}
+              collapse={collapse}
               type="search"
               role="search"
               innerRef={this.inputRef}
@@ -535,45 +547,56 @@ export class Search extends React.Component<SearchProps, SearchState> {
   }
 
   render() {
-    const {onSearchSubmit, onValueChange, ...props} = this.props;
+    const {
+      themeColor,
+      placeholder,
+      value,
+      rightAlign,
+      collapse,
+      onSearchSubmit,
+      onValueChange,
+      autocompleteItems,
+      accessibleId,
+      ...elemProps
+    } = this.props;
 
     let autocompleteWrapperProps: FormAttributes = {};
     let autocompleteInputProps: InputAttributes = {};
-    if (props.autocompleteItems) {
+    if (autocompleteItems) {
       autocompleteWrapperProps = {
         role: 'combobox',
         'aria-haspopup': 'listbox',
-        'aria-owns': `${props.accessibleId}-${listBoxIdPart}`,
-        'aria-expanded': props.autocompleteItems && props.autocompleteItems.length > 0,
+        'aria-owns': `${accessibleId}-${listBoxIdPart}`,
+        'aria-expanded': autocompleteItems && autocompleteItems.length > 0,
       };
       autocompleteInputProps = {
         'aria-autocomplete': 'list',
-        'aria-controls': `${props.accessibleId}-${listBoxIdPart}`,
+        'aria-controls': `${accessibleId}-${listBoxIdPart}`,
         'aria-activedescendant':
           this.state.selectedAutocompleteIndex != null
-            ? `${props.accessibleId}-${optionIdPart}-${this.state.selectedAutocompleteIndex}`
+            ? `${accessibleId}-${optionIdPart}-${this.state.selectedAutocompleteIndex}`
             : '',
       };
     }
 
-    if (props.collapse) {
+    if (collapse) {
       return this._renderCollapsed(autocompleteWrapperProps, autocompleteInputProps);
     }
 
     const iconColor =
-      this.state.hovered && this.state.focused && props.themeColor === HeaderTheme.White
+      this.state.hovered && this.state.focused && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.hovered && this.state.focused
         ? colors.licorice500
-        : this.state.focused && props.themeColor === HeaderTheme.White
+        : this.state.focused && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.focused
         ? colors.licorice500
-        : this.state.hovered && props.themeColor === HeaderTheme.White
+        : this.state.hovered && themeColor === HeaderTheme.White
         ? colors.licorice500
         : this.state.hovered
         ? colors.frenchVanilla100
-        : props.themeColor === HeaderTheme.White
+        : themeColor === HeaderTheme.White
         ? colors.licorice200
         : colors.frenchVanilla100;
 
@@ -581,8 +604,10 @@ export class Search extends React.Component<SearchProps, SearchState> {
       <SearchContainer
         innerRef={this.formRef}
         onSubmit={this.handleSubmit}
+        collapse={collapse}
+        rightAlign={rightAlign}
         {...autocompleteWrapperProps}
-        {...props}
+        {...elemProps}
       >
         <SearchIcon
           icon={searchIcon}
@@ -590,17 +615,16 @@ export class Search extends React.Component<SearchProps, SearchState> {
           color={iconColor}
           colorHover={iconColor}
         />
-        {props.autocompleteItems && (
+        {autocompleteItems && (
           <Status role="status" aria-live="polite">
-            {this.state.showingAutocomplete &&
-              this.buildStatusString(props.autocompleteItems.length)}
+            {this.state.showingAutocomplete && this.buildStatusString(autocompleteItems.length)}
           </Status>
         )}
-        <Label htmlFor={`${props.accessibleId}-${labelIdPart}`}>Search</Label>
+        <Label htmlFor={`${accessibleId}-${labelIdPart}`}>Search</Label>
         <SearchInput
-          {...props}
           {...autocompleteInputProps}
-          id={`${props.accessibleId}-${labelIdPart}`}
+          placeholder={placeholder}
+          id={`${accessibleId}-${labelIdPart}`}
           type="search"
           role="search"
           value={this.state.value}
@@ -611,6 +635,8 @@ export class Search extends React.Component<SearchProps, SearchState> {
           onKeyDown={this.handleKeyboardShortcuts}
           onFocus={this.setFocused}
           onBlur={this.setFocused}
+          collapse={collapse}
+          themeColor={themeColor}
         />
         <SearchReset
           aria-label="Reset Search Input"
@@ -625,12 +651,12 @@ export class Search extends React.Component<SearchProps, SearchState> {
           />
         </SearchReset>
         {buildAutocompleteMenu(
-          props.accessibleId,
+          accessibleId,
           this.state.showingAutocomplete,
-          props.autocompleteItems || [],
+          autocompleteItems || [],
           this.handleAutocompleteClick,
           this.state.selectedAutocompleteIndex,
-          !!props.collapse
+          !!collapse
         )}
       </SearchContainer>
     );

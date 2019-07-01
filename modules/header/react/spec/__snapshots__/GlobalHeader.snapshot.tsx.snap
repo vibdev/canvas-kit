@@ -1024,7 +1024,6 @@ exports[`App GlobalHeader Snapshots renders a header with a search bar 1`] = `
   <form
     className="emotion-18 emotion-19"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-8 emotion-9"
@@ -1788,7 +1787,6 @@ exports[`App GlobalHeader Snapshots renders a header with content with a search 
   <form
     className="emotion-18 emotion-19"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-8 emotion-9"

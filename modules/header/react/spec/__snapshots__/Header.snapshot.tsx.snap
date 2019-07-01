@@ -1648,7 +1648,6 @@ exports[`Dub Header Snapshots renders a header with a search bar 1`] = `
   <form
     className="emotion-18 emotion-19"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-8 emotion-9"
@@ -4504,7 +4503,6 @@ exports[`Full Header Snapshots renders a blue header with a search bar and no ch
   <form
     className="emotion-18 emotion-19"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-8 emotion-9"
@@ -5587,7 +5585,6 @@ exports[`Full Header Snapshots renders a header in a lg screen with search 1`] =
   <form
     className="emotion-20 emotion-21"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-10 emotion-11"
@@ -6330,7 +6327,6 @@ exports[`Full Header Snapshots renders a header with a search bar 1`] = `
   <form
     className="emotion-18 emotion-19"
     onSubmit={[Function]}
-    placeholder="Search"
   >
     <span
       className="emotion-8 emotion-9"

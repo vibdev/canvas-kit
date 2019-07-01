@@ -359,8 +359,6 @@ exports[`Header Search Snapshots Renders a search bar with a value 1`] = `
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
-  value="Hello World"
 >
   <span
     className="emotion-0 emotion-1"
@@ -608,8 +606,6 @@ exports[`Header Search Snapshots Renders a search bar with a value 2`] = `
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
-  value="Hello World"
 >
   <span
     className="emotion-0 emotion-1"
@@ -892,7 +888,6 @@ exports[`Header Search Snapshots renders autocomplete normal and collapsed: <Sea
   aria-owns="snap-listbox"
   className="emotion-17 emotion-18"
   onSubmit={[Function]}
-  placeholder="Search"
   role="combobox"
 >
   <span
@@ -958,15 +953,15 @@ exports[`Header Search Snapshots renders autocomplete normal and collapsed: <Sea
     />
   </span>
   <div
-    aria-labelledby="snap-label"
     className="emotion-15 emotion-16"
-    id="snap-listbox"
   >
     <div
       className="emotion-14"
     >
       <ul
+        aria-labelledby="snap-label"
         className="emotion-12 emotion-13"
+        id="snap-listbox"
         role="listbox"
       >
         <div
@@ -1336,7 +1331,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
@@ -1579,7 +1573,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with blu
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
@@ -1822,7 +1815,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
@@ -2065,7 +2057,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with tra
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
@@ -2313,7 +2304,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
@@ -2561,7 +2551,6 @@ exports[`Header Search Snapshots renders themed search bars: <Search /> with whi
 <form
   className="emotion-10 emotion-11"
   onSubmit={[Function]}
-  placeholder="Search"
 >
   <span
     className="emotion-0 emotion-1"
