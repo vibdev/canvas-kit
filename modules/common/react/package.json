@@ -1,6 +1,6 @@
 {
   "name": "@workday/canvas-kit-react-common",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "A module of common utilities shared across canvas components",
   "author": "Workday, Inc. (https://www.workday.com)",
   "license": "Apache-2.0",

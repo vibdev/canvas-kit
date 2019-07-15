@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.23](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-tooltip/compare/@workday/canvas-kit-react-tooltip@0.1.22...@workday/canvas-kit-react-tooltip@0.1.23) (2019-07-15)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-tooltip
+
+
+
+
+
 ## [0.1.22](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-tooltip/compare/@workday/canvas-kit-react-tooltip@0.1.21...@workday/canvas-kit-react-tooltip@0.1.22) (2019-06-20)
 
 

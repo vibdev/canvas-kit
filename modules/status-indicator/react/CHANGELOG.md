@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.17](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-status-indicator/compare/@workday/canvas-kit-react-status-indicator@0.1.16...@workday/canvas-kit-react-status-indicator@0.1.17) (2019-07-15)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-status-indicator
+
+
+
+
+
 ## [0.1.16](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-status-indicator/compare/@workday/canvas-kit-react-status-indicator@0.1.15...@workday/canvas-kit-react-status-indicator@0.1.16) (2019-06-20)
 
 **Note:** Version bump only for package @workday/canvas-kit-react-status-indicator

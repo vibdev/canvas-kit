@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.12](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.5.11...@workday/canvas-kit-react-color-picker@0.5.12) (2019-07-15)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-color-picker
+
+
+
+
+
 ## [0.5.11](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-color-picker/compare/@workday/canvas-kit-react-color-picker@0.5.10...@workday/canvas-kit-react-color-picker@0.5.11) (2019-06-20)
 
 

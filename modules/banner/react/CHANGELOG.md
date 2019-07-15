@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.26](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-banner/compare/@workday/canvas-kit-react-banner@0.1.25...@workday/canvas-kit-react-banner@0.1.26) (2019-07-15)
+
+**Note:** Version bump only for package @workday/canvas-kit-react-banner
+
+
+
+
+
 ## [0.1.25](https://ghe.megaleo.com/design/canvas-kit-react/tree/master/modules/canvas-kit-react-banner/compare/@workday/canvas-kit-react-banner@0.1.24...@workday/canvas-kit-react-banner@0.1.25) (2019-06-20)
 
 
