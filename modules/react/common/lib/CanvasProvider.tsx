@@ -4,10 +4,13 @@ import {InputProvider} from './InputProvider';
 import {defaultCanvasTheme, PartialEmotionCanvasTheme, useTheme} from './theming';
 import {brand} from '@workday/canvas-tokens-web';
 import {cache} from '@emotion/css';
+import createCache from '@emotion/cache';
 import {createStyles} from '@workday/canvas-kit-styling';
 
 export interface CanvasProviderProps {
   theme?: PartialEmotionCanvasTheme;
+  nonce?: string;
+  cssKey?: string;
 }
 
 // copied from brand/_variables.css
@@ -85,12 +88,23 @@ export const useCanvasThemeToCssVars = (
 
 export const CanvasProvider = ({
   children,
+  nonce,
+  cssKey,
   theme = {canvas: defaultCanvasTheme},
   ...props
 }: CanvasProviderProps & React.HTMLAttributes<HTMLElement>) => {
   const elemProps = useCanvasThemeToCssVars(theme, props);
+  let emotionCache: ReturnType<typeof createCache>;
+  if (cssKey || nonce) {
+    emotionCache = createCache({
+      key: cssKey ?? 'ckr',
+      nonce,
+    });
+  } else {
+    emotionCache = cache;
+  }
   return (
-    <CacheProvider value={cache}>
+    <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme as Theme}>
         <InputProvider />
         <div
